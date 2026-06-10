@@ -7,7 +7,7 @@
      - network-first      → datos dinámicos (clima Open-Meteo)
    ============================================================ */
 
-const CACHE_VERSION = 'labateca-v6';
+const CACHE_VERSION = 'labateca-v7';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE   = `${CACHE_VERSION}-images`;
 const DATA_CACHE    = `${CACHE_VERSION}-data`;
@@ -60,11 +60,8 @@ self.addEventListener('fetch', event => {
   // Solo interceptar GET
   if (request.method !== 'GET') return;
 
-  // 1. API de clima (Open-Meteo) → network-first
-  if (url.hostname === 'api.open-meteo.com') {
-    event.respondWith(networkFirst(request, DATA_CACHE));
-    return;
-  }
+  // 1. API de clima (Open-Meteo) → sin interceptar, el browser lo maneja directo
+  if (url.hostname === 'api.open-meteo.com') return;
 
   // 2. Imágenes de Cloudinary → stale-while-revalidate
   if (url.hostname.includes('cloudinary.com')) {
