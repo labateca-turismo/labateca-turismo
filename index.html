@@ -570,11 +570,14 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;
 .drawer-close{width:40px;height:40px;border-radius:50%;background:var(--cream-2);display:grid;place-items:center;color:var(--forest);transition:all .25s}
 .drawer-close:hover{background:var(--forest);color:var(--cream);transform:rotate(90deg)}
 .drawer-body{flex:1;overflow-y:auto;padding:20px 26px}
-.route-item{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px dashed var(--line)}
-.route-num{width:30px;height:30px;border-radius:50%;background:var(--forest);color:var(--cream);
-  display:grid;place-items:center;font-weight:800;font-size:.85rem;flex-shrink:0;font-family:"Hanken Grotesk"}
-.route-item b{display:block;color:var(--forest);font-family:"Fraunces";font-size:1.02rem;line-height:1.15}
-.route-item span{font-size:.78rem;color:var(--ink-mut)}
+.route-item{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px dashed var(--line)}
+.route-num{width:26px;height:26px;border-radius:50%;background:var(--forest);color:var(--cream);
+  display:grid;place-items:center;font-weight:800;font-size:.78rem;flex-shrink:0;font-family:"Hanken Grotesk"}
+.route-thumb{width:52px;height:52px;border-radius:10px;object-fit:cover;flex-shrink:0;background:var(--cream-2)}
+.route-ph{width:52px;height:52px;border-radius:10px;flex-shrink:0;background:var(--cream-2);display:grid;place-items:center;color:var(--forest);opacity:.5}
+.route-ph svg{width:22px;height:22px}
+.route-item b{display:block;color:var(--forest);font-family:"Fraunces";font-size:1rem;line-height:1.2}
+.route-item span{font-size:.76rem;color:var(--ink-mut)}
 .route-item .rm{margin-left:auto;color:var(--clay);width:30px;height:30px;border-radius:8px;display:grid;place-items:center;transition:background .2s}
 .route-item .rm:hover{background:rgba(189,93,52,.12)}
 .route-item .rm svg{width:18px;height:18px}
@@ -1731,9 +1734,18 @@ function renderDrawer(){
   }
   body.innerHTML=route.map((id,idx)=>{
     const p=PLACES.find(x=>x.id===id); if(!p) return "";
+    const firstPhoto=(p.fotos&&p.fotos.length)?p.fotos[0]:(p.img||'');
+    const photoUrl=firstPhoto?(firstPhoto.startsWith('http')?firstPhoto:cldUrl(firstPhoto)):'';
+    const thumb=photoUrl
+      ?`<img class="route-thumb" src="${photoUrl}" alt="${placeName(p)}" loading="lazy">`
+      :`<div class="route-ph">${IC.cam}</div>`;
+    const dist=(p.dist||{})[lang]||'';
+    const dific=(p.dificultad||p.diff||{})[lang]||'';
+    const meta=[dist,dific].filter(Boolean).join(' · ');
     return `<div class="route-item">
       <span class="route-num">${idx+1}</span>
-      <span style="flex:1"><b>${placeName(p)}</b><span>${(p.dist||{})[lang]||''} · ${(p.dificultad||p.diff||{})[lang]||''}</span></span>
+      ${thumb}
+      <span style="flex:1;min-width:0"><b>${placeName(p)}</b><span>${meta}</span></span>
       <button class="rm" onclick="toggleRoute('${p.id}')" aria-label="Quitar">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
