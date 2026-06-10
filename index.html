@@ -214,12 +214,18 @@ header.scrolled .brand-name{color:var(--forest)}
   background:rgba(251,248,241,.7);backdrop-filter:blur(10px);border:1px solid var(--line);
   border-radius:var(--r-xl);padding:30px;box-shadow:var(--shadow-md);
 }
-.weather-card{display:flex;align-items:center;gap:18px;padding-bottom:24px;margin-bottom:24px;border-bottom:1px dashed var(--line)}
+.weather-card{padding-bottom:24px;margin-bottom:24px;border-bottom:1px dashed var(--line)}
+.weather-main{display:flex;align-items:center;gap:18px;margin-bottom:6px}
 .weather-icon{font-size:3.4rem;line-height:1;filter:drop-shadow(0 4px 10px rgba(22,53,42,.18))}
 .weather-temp{font-family:"Fraunces";font-size:3.2rem;font-weight:600;color:var(--forest);line-height:1}
 .weather-temp .deg{font-size:1.6rem;color:var(--clay);vertical-align:super}
-.weather-meta{font-size:.85rem;color:var(--ink-mut);font-weight:600}
-.weather-place{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);font-weight:800;margin-top:4px}
+.weather-feels{font-size:.82rem;color:var(--ink-mut);font-weight:600;margin-top:4px}
+.weather-condition{font-size:.9rem;font-weight:700;color:var(--forest-2);margin-bottom:12px}
+.weather-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.weather-chip{display:inline-flex;align-items:center;gap:4px;font-size:.78rem;font-weight:700;background:rgba(22,53,42,.07);color:var(--forest);border-radius:99px;padding:4px 10px;white-space:nowrap}
+.weather-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px}
+.weather-place{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);font-weight:800}
+.weather-updated{font-size:.7rem;color:var(--ink-mut)}
 .weather-loading{font-size:.8rem;color:var(--ink-mut);font-style:italic}
 
 .stat-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
@@ -879,11 +885,23 @@ if ('serviceWorker' in navigator) {
 
     <div class="hero-panel reveal d2">
       <div class="weather-card">
-        <div class="weather-icon" id="wIcon">⛅</div>
-        <div style="flex:1">
-          <div class="weather-temp"><span id="wTemp">20</span><span class="deg">°C</span></div>
-          <div class="weather-meta" id="wMeta"><span class="weather-loading" data-i18n="w_loading">Consultando clima…</span></div>
-          <div class="weather-place" data-i18n="w_place">Clima en Labateca</div>
+        <div class="weather-main">
+          <div class="weather-icon" id="wIcon">⛅</div>
+          <div>
+            <div class="weather-temp"><span id="wTemp">20</span><span class="deg">°C</span></div>
+            <div class="weather-feels" id="wFeels"></div>
+          </div>
+        </div>
+        <div class="weather-condition" id="wCondition"><span data-i18n="w_loading">Consultando clima…</span></div>
+        <div class="weather-chips">
+          <span class="weather-chip" id="wHumidity">💧 —%</span>
+          <span class="weather-chip" id="wRain">🌧 — mm</span>
+          <span class="weather-chip" id="wWind">💨 — km/h</span>
+          <span class="weather-chip" id="wUV">☀️ UV —</span>
+        </div>
+        <div class="weather-footer">
+          <span class="weather-place" data-i18n="w_place">Clima en Labateca</span>
+          <span class="weather-updated" id="wUpdated"></span>
         </div>
       </div>
       <div class="stat-grid">
@@ -1420,7 +1438,7 @@ const I18N = {
     hero_tag:"Donde la montaña guarda volcanes de Dios",
     hero_lead:"Cascadas de hasta 100 metros, café de altura y el Páramo de Santurbán. Una perla escondida del suroriente nortesantandereano, lista para descubrirse.",
     hero_btn1:"Explorar lugares", hero_btn2:"Ver mapa",
-    w_loading:"Consultando clima…", w_place:"Clima en Labateca",
+    w_loading:"Consultando clima…", w_place:"Clima en Labateca", w_feels:"Sensación",
     stat_alt:"m.s.n.m.", stat_dist:"km a Cúcuta", stat_temp:"Promedio",
     dist_btn:"Calcular distancia desde mi ubicación",
     dist_locating:"Ubicándote…",
@@ -1487,7 +1505,7 @@ const I18N = {
     hero_tag:"Where the mountains keep God's volcanoes",
     hero_lead:"Waterfalls up to 100 meters tall, high-altitude coffee and the Santurbán Páramo. A hidden gem of southeastern Norte de Santander, waiting to be discovered.",
     hero_btn1:"Explore places", hero_btn2:"View map",
-    w_loading:"Checking weather…", w_place:"Weather in Labateca",
+    w_loading:"Checking weather…", w_place:"Weather in Labateca", w_feels:"Feels like",
     stat_alt:"m.a.s.l.", stat_dist:"km to Cúcuta", stat_temp:"Average",
     dist_btn:"Calculate distance from my location",
     dist_locating:"Locating you…",
@@ -1890,26 +1908,42 @@ const WCODE={
 let lastWeather=null;
 async function loadWeather(){
   const {lat,lng}=CONFIG.townCoords;
-  const url=`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&timezone=America/Bogota`;
+  const url=`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation,uv_index,cloud_cover&timezone=America/Bogota`;
   try{
     const r=await fetch(url); if(!r.ok) throw 0;
     const d=await r.json(); const c=d.current;
-    lastWeather={temp:Math.round(c.temperature_2m),code:c.weather_code,hum:c.relative_humidity_2m,wind:Math.round(c.wind_speed_10m)};
+    lastWeather={
+      temp:Math.round(c.temperature_2m),
+      feels:Math.round(c.apparent_temperature),
+      code:c.weather_code,
+      hum:c.relative_humidity_2m,
+      wind:Math.round(c.wind_speed_10m),
+      rain:c.precipitation??0,
+      uv:Math.round(c.uv_index??0),
+      cloud:c.cloud_cover??0
+    };
     paintWeather();
   }catch(e){
-    // respaldo: promedio climático conocido
     document.getElementById("wTemp").textContent="20";
     document.getElementById("wIcon").textContent="⛅";
-    document.getElementById("wMeta").textContent = lang==="es"?"Clima templado de montaña":"Mild mountain climate";
+    document.getElementById("wCondition").textContent=lang==="es"?"Clima templado de montaña":"Mild mountain climate";
   }
 }
 function paintWeather(){
   if(!lastWeather) return;
   const w=WCODE[lastWeather.code]||WCODE[2];
-  document.getElementById("wTemp").textContent=lastWeather.temp;
+  const lw=lastWeather;
   document.getElementById("wIcon").textContent=w.e;
-  const humTxt=lang==="es"?"humedad":"humidity";
-  document.getElementById("wMeta").textContent=`${w[lang]} · ${lastWeather.hum}% ${humTxt}`;
+  document.getElementById("wTemp").textContent=lw.temp;
+  document.getElementById("wFeels").textContent=`${t('w_feels')}: ${lw.feels}°C`;
+  document.getElementById("wCondition").textContent=w[lang];
+  document.getElementById("wHumidity").textContent=`💧 ${lw.hum}%`;
+  document.getElementById("wRain").textContent=`🌧 ${lw.rain} mm`;
+  document.getElementById("wWind").textContent=`💨 ${lw.wind} km/h`;
+  document.getElementById("wUV").textContent=`☀️ UV ${lw.uv}`;
+  const now=new Date();
+  const timeStr=now.toLocaleTimeString(lang==="es"?'es-CO':'en-US',{hour:'2-digit',minute:'2-digit'});
+  document.getElementById("wUpdated").textContent=lang==="es"?`Act. ${timeStr}`:`Upd. ${timeStr}`;
 }
 
 /* ============================================================
@@ -2658,6 +2692,9 @@ function init(){
     document.documentElement.classList.add('js-anim');
     document.querySelectorAll(".reveal").forEach(el => io.observe(el));
   }, 200);
+
+  // Fallback: garantiza que ningún elemento .reveal quede invisible si IntersectionObserver falla
+  setTimeout(()=>{ document.querySelectorAll('.reveal:not(.in)').forEach(el=>el.classList.add('in')); }, 3500);
 
   // 3. Cargar datos JSON en paralelo (no bloquea el render inicial)
   fetch('/data/places.json')
