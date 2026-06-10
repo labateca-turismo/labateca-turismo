@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Fondo completo sin bordes redondeados (maskable: el sistema recorta) -->
+  <rect width="512" height="512" fill="#16352a"/>
+  <!-- Zona segura: contenido dentro de 409x409 centrado (80% de 512) -->
+  <!-- Montañas (dorado) — dentro de zona segura -->
+  <path d="M102 390 L200 210 L270 310 L350 165 L410 390 Z" fill="#d4a23f"/>
+  <!-- Sol/Volcán (terracota) -->
+  <circle cx="350" cy="148" r="40" fill="#bd5d34"/>
+  <!-- Base verde -->
+  <path d="M102 390 Q256 355 410 390 L410 425 Q256 390 102 425 Z" fill="#2d6149"/>
+</svg>

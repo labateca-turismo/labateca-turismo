@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Carteles QR · Labateca Turismo</title>
+
+<!-- QR Code library (vanilla, sin dependencias) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<!-- Fuentes -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;700;800&display=swap" rel="stylesheet"/>
+
+<style>
+/* ── TOKENS ── */
+:root{
+  --forest:#16352a; --forest-2:#1f4a39; --forest-3:#2d6149;
+  --clay:#bd5d34;   --gold:#d4a23f;     --cream:#f6efe3;
+  --paper:#fbf8f1;  --ink:#1d1a15;      --line:#e2d8c4;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Hanken Grotesk",system-ui,sans-serif;background:#f0ebe0;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+/* ── HEADER PANEL ── */
+.panel{
+  background:var(--forest);color:var(--cream);
+  padding:20px 24px;display:flex;align-items:center;
+  justify-content:space-between;flex-wrap:wrap;gap:16px;
+  position:sticky;top:0;z-index:100;
+  box-shadow:0 4px 20px rgba(0,0,0,.25);
+}
+.panel-left{display:flex;align-items:center;gap:14px}
+.logo{width:44px;height:44px;flex-shrink:0}
+.panel-title{font-family:"Fraunces",serif;font-size:1.2rem;font-weight:600}
+.panel-sub{font-size:.75rem;opacity:.65;margin-top:2px}
+.panel-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+.btn{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:.85rem;
+  padding:10px 18px;border-radius:99px;cursor:pointer;border:none;font-family:inherit;transition:all .25s var(--ease)}
+.btn-primary{background:var(--gold);color:var(--forest)}
+.btn-primary:hover{background:#e6c574;transform:translateY(-2px)}
+.btn-ghost{background:rgba(246,239,227,.12);color:var(--cream);border:1.5px solid rgba(246,239,227,.25)}
+.btn-ghost:hover{background:rgba(246,239,227,.22)}
+.btn svg{width:15px;height:15px}
+
+/* ── CONTROLES ── */
+.controls{
+  background:var(--paper);border-bottom:1px solid var(--line);
+  padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.ctrl-label{font-size:.8rem;font-weight:700;color:var(--forest)}
+.size-toggle{display:flex;gap:6px}
+.size-btn{padding:7px 14px;border-radius:8px;font-weight:700;font-size:.78rem;cursor:pointer;
+  background:var(--cream);border:1.5px solid var(--line);color:var(--ink);font-family:inherit;transition:all .2s}
+.size-btn.active{background:var(--forest);color:var(--cream);border-color:var(--forest)}
+.filter-group{display:flex;gap:6px;flex-wrap:wrap}
+.filter-btn{padding:6px 12px;border-radius:99px;font-weight:700;font-size:.75rem;cursor:pointer;
+  background:var(--cream);border:1.5px solid var(--line);color:var(--ink);font-family:inherit;transition:all .2s}
+.filter-btn.active{background:var(--clay);color:#fff;border-color:var(--clay)}
+#countInfo{font-size:.78rem;color:#6a6357;margin-left:auto}
+
+/* ── GRID DE CARTELES ── */
+.grid{
+  padding:24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:20px;
+}
+
+/* ── CARTEL INDIVIDUAL ── */
+.cartel{
+  background:var(--paper);border-radius:16px;overflow:hidden;
+  box-shadow:0 4px 18px -4px rgba(22,53,42,.2);
+  border:1px solid var(--line);
+  display:flex;flex-direction:column;
+  transition:transform .3s var(--ease),box-shadow .3s;
+  page-break-inside:avoid;break-inside:avoid;
+}
+.cartel:hover{transform:translateY(-4px);box-shadow:0 12px 32px -8px rgba(22,53,42,.3)}
+
+.cartel-header{
+  padding:14px 16px 12px;
+  background:var(--forest);
+  display:flex;align-items:center;gap:10px;
+}
+.cartel-cat-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.cartel-cat-label{font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,239,227,.7)}
+.cartel-name{font-family:"Fraunces",serif;font-size:1.05rem;color:var(--cream);line-height:1.15;margin-top:4px}
+.cartel-name-en{font-size:.78rem;color:rgba(246,239,227,.55);font-style:italic;margin-top:2px}
+
+.cartel-qr{
+  padding:16px;display:flex;justify-content:center;align-items:center;
+  background:white;flex:1;
+}
+.cartel-qr canvas,.cartel-qr img{border-radius:8px}
+
+.cartel-footer{
+  padding:10px 14px 12px;
+  border-top:1px solid var(--line);
+  text-align:center;
+}
+.cartel-url{font-size:.65rem;color:#888;font-family:"Hanken Grotesk",monospace;word-break:break-all;line-height:1.4}
+.cartel-scan{font-size:.7rem;font-weight:700;color:var(--forest);margin-bottom:4px;display:block}
+
+/* ── EMPTY STATE ── */
+.empty{text-align:center;padding:60px 20px;color:#888;grid-column:1/-1}
+.loading{text-align:center;padding:40px;color:var(--forest);grid-column:1/-1;font-weight:700}
+
+/* ── COLORES POR CATEGORÍA ── */
+.cat-naturaleza  .cartel-header{background:#1f4a39}
+.cat-cultura     .cartel-header{background:#8b3a1a}
+.cat-gastronomia .cartel-header{background:#7a5c1e}
+.cat-hospedaje   .cartel-header{background:#1a3a5c}
+
+.cat-naturaleza  .cartel-cat-dot{background:#6fcf97}
+.cat-cultura     .cartel-cat-dot{background:#f2994a}
+.cat-gastronomia .cartel-cat-dot{background:#f2c94c}
+.cat-hospedaje   .cartel-cat-dot{background:#56cef2}
+
+/* ── TAMAÑOS ── */
+.grid.size-sm{grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+.grid.size-lg{grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+.size-sm .cartel-name{font-size:.9rem}
+.size-sm .cartel-qr{padding:10px}
+.size-lg .cartel-name{font-size:1.2rem}
+.size-lg .cartel-url{font-size:.7rem}
+
+/* ── PRINT ── */
+@media print{
+  .panel,.controls{display:none!important}
+  body{background:white}
+  .grid{
+    padding:0;gap:10mm;
+    grid-template-columns:repeat(2,1fr)!important;
+  }
+  .cartel{box-shadow:none;border:1.5px solid #ccc;page-break-inside:avoid}
+  .cartel:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="panel">
+  <div class="panel-left">
+    <svg class="logo" viewBox="0 0 100 100">
+      <rect width="100" height="100" rx="22" fill="#2d6149"/>
+      <path d="M14 72 L36 36 L52 58 L66 28 L86 72 Z" fill="#d4a23f"/>
+      <circle cx="66" cy="24" r="9" fill="#bd5d34"/>
+    </svg>
+    <div>
+      <div class="panel-title">Carteles QR · Labateca Turismo</div>
+      <div class="panel-sub">Imprime y pega en cada atractivo del municipio</div>
+    </div>
+  </div>
+  <div class="panel-actions">
+    <button class="btn btn-ghost" onclick="window.location.href='/'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Volver al sitio
+    </button>
+    <button class="btn btn-primary" onclick="window.print()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      Imprimir carteles
+    </button>
+  </div>
+</div>
+
+<!-- CONTROLES -->
+<div class="controls">
+  <span class="ctrl-label">Categoría:</span>
+  <div class="filter-group" id="filterGroup">
+    <button class="filter-btn active" data-cat="all" onclick="setFilter('all',this)">Todos</button>
+    <button class="filter-btn" data-cat="naturaleza"  onclick="setFilter('naturaleza',this)"  style="--c:#1f4a39">Naturaleza</button>
+    <button class="filter-btn" data-cat="cultura"     onclick="setFilter('cultura',this)"     style="--c:#8b3a1a">Cultura</button>
+    <button class="filter-btn" data-cat="gastronomia" onclick="setFilter('gastronomia',this)" style="--c:#7a5c1e">Gastronomía</button>
+    <button class="filter-btn" data-cat="hospedaje"   onclick="setFilter('hospedaje',this)"   style="--c:#1a3a5c">Hospedaje</button>
+  </div>
+
+  <span class="ctrl-label" style="margin-left:8px">Tamaño:</span>
+  <div class="size-toggle">
+    <button class="size-btn" onclick="setSize('sm',this)">Pequeño</button>
+    <button class="size-btn active" onclick="setSize('md',this)">Normal</button>
+    <button class="size-btn" onclick="setSize('lg',this)">Grande</button>
+  </div>
+
+  <span id="countInfo">Cargando…</span>
+</div>
+
+<!-- GRID -->
+<div class="grid" id="grid">
+  <div class="loading">Generando carteles QR…</div>
+</div>
+
+<script>
+// ── Configuración ──────────────────────────────────────────
+// Cambia BASE_URL cuando publiques el sitio
+const BASE_URL = window.location.hostname === 'localhost'
+  ? `http://${window.location.host}`
+  : 'https://labateca-turismo.co';  // ← tu dominio final
+
+const CAT_LABELS = {
+  naturaleza:  'Naturaleza',
+  cultura:     'Cultura',
+  gastronomia: 'Gastronomía',
+  hospedaje:   'Hospedaje'
+};
+
+const CAT_COLORS = {
+  naturaleza:  '#1f4a39',
+  cultura:     '#8b3a1a',
+  gastronomia: '#7a5c1e',
+  hospedaje:   '#1a3a5c'
+};
+
+// ── Estado ────────────────────────────────────────────────
+let PLACES  = [];
+let activeFilter = 'all';
+let activeSize   = 'md';
+
+// ── Cargar lugares ────────────────────────────────────────
+fetch('/data/places.json')
+  .then(r => r.json())
+  .then(json => {
+    PLACES = json.lugares || [];
+    renderGrid();
+    document.getElementById('countInfo').textContent =
+      PLACES.length + ' lugares cargados';
+  })
+  .catch(err => {
+    document.getElementById('grid').innerHTML =
+      '<div class="empty">No se pudo cargar places.json.<br>Asegúrate de correr desde http://localhost:8000/qr.html</div>';
+  });
+
+// ── Render ────────────────────────────────────────────────
+function renderGrid() {
+  const grid = document.getElementById('grid');
+  grid.className = 'grid' + (activeSize === 'md' ? '' : ' size-' + activeSize);
+
+  const list = activeFilter === 'all'
+    ? PLACES
+    : PLACES.filter(p => (p.categoria || p.cat) === activeFilter);
+
+  document.getElementById('countInfo').textContent =
+    list.length + ' de ' + PLACES.length + ' lugares';
+
+  if (!list.length) {
+    grid.innerHTML = '<div class="empty">No hay lugares en esta categoría.</div>';
+    return;
+  }
+
+  grid.innerHTML = '';
+
+  list.forEach(p => {
+    const cat     = p.categoria || p.cat || 'naturaleza';
+    const nameEs  = (p.nombre || p.name || {}).es || p.id;
+    const nameEn  = (p.nombre || p.name || {}).en || '';
+    const qrUrl   = BASE_URL + '/?lugar=' + encodeURIComponent(p.id);
+    const qrSize  = activeSize === 'sm' ? 140 : activeSize === 'lg' ? 200 : 160;
+
+    const card = document.createElement('div');
+    card.className = 'cartel cat-' + cat;
+    card.innerHTML = `
+      <div class="cartel-header">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;gap:7px">
+            <span class="cartel-cat-dot"></span>
+            <span class="cartel-cat-label">${CAT_LABELS[cat] || cat}</span>
+          </div>
+          <div class="cartel-name">${nameEs}</div>
+          ${nameEn ? '<div class="cartel-name-en">' + nameEn + '</div>' : ''}
+        </div>
+      </div>
+      <div class="cartel-qr" id="qr_${p.id}"></div>
+      <div class="cartel-footer">
+        <span class="cartel-scan">📱 Escanea para ver la ficha</span>
+        <div class="cartel-url">${qrUrl}</div>
+      </div>`;
+
+    grid.appendChild(card);
+
+    // Generar QR
+    new QRCode(document.getElementById('qr_' + p.id), {
+      text:           qrUrl,
+      width:          qrSize,
+      height:         qrSize,
+      colorDark:      CAT_COLORS[cat] || '#16352a',
+      colorLight:     '#ffffff',
+      correctLevel:   QRCode.CorrectLevel.M
+    });
+  });
+}
+
+// ── Controles ─────────────────────────────────────────────
+function setFilter(cat, btn) {
+  activeFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderGrid();
+}
+
+function setSize(sz, btn) {
+  activeSize = sz;
+  document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderGrid();
+}
+</script>
+</body>
+</html>

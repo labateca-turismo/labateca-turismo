@@ -1,0 +1,12 @@
+# Archivos de depuración temporal
+debug.html
+debug2.html
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Dependencias Node (si se agrega script de optimización de imágenes)
+node_modules/
+fotos-originales/
+fotos-web/

@@ -1,0 +1,52 @@
+{
+  "name": "Labateca · Volcanes de Dios",
+  "short_name": "Labateca",
+  "description": "Guía turística de Labateca, Norte de Santander. Cascadas, café, páramo y cultura chitarera.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#16352a",
+  "background_color": "#fbf8f1",
+  "lang": "es-CO",
+  "categories": ["travel", "tourism", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Explorar lugares",
+      "short_name": "Lugares",
+      "description": "Ver todos los lugares turísticos de Labateca",
+      "url": "/#lugares",
+      "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Ver mapa",
+      "short_name": "Mapa",
+      "description": "Mapa interactivo de Labateca",
+      "url": "/#mapa",
+      "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/icons/screenshot-wide.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "Guía turística de Labateca"
+    }
+  ]
+}

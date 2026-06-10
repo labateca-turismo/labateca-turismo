@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sin conexión · Labateca</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2316352a'/><path d='M18 70 L38 38 L52 58 L66 30 L84 70 Z' fill='%23d4a23f'/><circle cx='66' cy='26' r='8' fill='%23bd5d34'/></svg>" />
+<style>
+  :root {
+    --forest: #16352a;
+    --forest-2: #1f4a39;
+    --clay: #bd5d34;
+    --gold: #d4a23f;
+    --cream: #f6efe3;
+    --paper: #fbf8f1;
+    --ink-mut: #6a6357;
+    --ease: cubic-bezier(.2,.7,.2,1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    height: 100%;
+    font-family: "Hanken Grotesk", system-ui, sans-serif;
+    background: var(--paper);
+    color: var(--forest);
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+  }
+  .card {
+    max-width: 460px;
+    width: 100%;
+    background: white;
+    border: 1px solid #e2d8c4;
+    border-radius: 28px;
+    padding: clamp(32px, 6vw, 56px) clamp(24px, 5vw, 48px);
+    box-shadow: 0 20px 50px -15px rgba(22,53,42,.18);
+  }
+  .icon-wrap {
+    width: 80px; height: 80px;
+    background: var(--forest);
+    border-radius: 22px;
+    display: grid; place-items: center;
+    margin: 0 auto 28px;
+  }
+  .icon-wrap svg { width: 40px; height: 40px; }
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    color: var(--forest);
+    margin-bottom: 12px;
+    line-height: 1.1;
+  }
+  .sub {
+    font-size: 1rem;
+    color: var(--ink-mut);
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+  .sub strong { color: var(--forest); font-weight: 700; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px;
+    font-weight: 700; font-size: .97rem;
+    padding: 15px 28px; border-radius: 99px;
+    background: var(--forest); color: var(--cream);
+    border: none; cursor: pointer; font-family: inherit;
+    transition: all .3s var(--ease);
+    box-shadow: 0 8px 24px -8px rgba(22,53,42,.35);
+  }
+  .btn:hover { background: var(--forest-2); transform: translateY(-2px); }
+  .btn svg { width: 18px; height: 18px; }
+  .label {
+    display: block;
+    margin-top: 20px;
+    font-size: .82rem;
+    color: var(--ink-mut);
+    font-weight: 600;
+    letter-spacing: .04em;
+  }
+  .divider {
+    border: none; border-top: 1px dashed #e2d8c4;
+    margin: 28px 0;
+  }
+  .tip {
+    font-size: .88rem; color: var(--ink-mut); line-height: 1.55;
+  }
+  .tip b { color: var(--clay); }
+</style>
+<!-- Fuentes (pueden no cargar offline — el stack del sistema es el respaldo) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<div class="card">
+  <div class="icon-wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#d4a23f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 21l4-12 5 6 4-9 5 15z"/>
+    </svg>
+  </div>
+
+  <h1 id="title">Sin conexión</h1>
+  <p class="sub" id="sub">
+    Parece que no tienes internet ahora mismo.<br>
+    Si ya visitaste <strong>Labateca · Volcanes de Dios</strong> antes,<br>
+    la guía puede estar guardada en tu dispositivo.
+  </p>
+
+  <button class="btn" onclick="location.href='/'">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.88"/>
+    </svg>
+    <span id="btn-text">Intentar de nuevo</span>
+  </button>
+
+  <span class="label" id="label">o navega sin conexión si ya cargaste la app</span>
+
+  <hr class="divider" />
+
+  <p class="tip" id="tip">
+    <b>Consejo:</b> instala Labateca Turismo como app en tu celular para tener
+    los lugares, el mapa y la guía disponibles sin internet.
+  </p>
+</div>
+
+<script>
+  // Detectar idioma guardado en localStorage
+  try {
+    const l = JSON.parse(localStorage.getItem('lab_lang')) || 'es';
+    if (l === 'en') {
+      document.documentElement.lang = 'en';
+      document.getElementById('title').textContent = 'No connection';
+      document.getElementById('sub').innerHTML =
+        "It looks like you're offline right now.<br>If you've visited <strong>Labateca · Volcanes de Dios</strong> before,<br>the guide may be saved on your device.";
+      document.getElementById('btn-text').textContent = 'Try again';
+      document.getElementById('label').textContent = 'or browse offline if you already loaded the app';
+      document.getElementById('tip').innerHTML =
+        '<b>Tip:</b> install Labateca Tourism as an app on your phone to have places, map and guide available without internet.';
+    }
+  } catch(e) {}
+</script>
+</body>
+</html>

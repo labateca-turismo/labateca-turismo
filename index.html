@@ -1,0 +1,2705 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ====== SEO BÁSICO ====== -->
+<title>Labateca · Volcanes de Dios | Guía turística de Norte de Santander</title>
+<meta name="description" content="Descubre Labateca, Norte de Santander: cascadas, café, el Páramo de Santurbán y su templo colonial. Mapas, clima en vivo, distancias, tiempos y recomendaciones para tu viaje." />
+<meta name="keywords" content="Labateca, Norte de Santander, turismo, Cascada La Lirgua, Páramo de Santurbán, café, ecoturismo, Colombia, qué hacer en Labateca" />
+<meta name="author" content="Labateca Turismo" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#16352a" />
+<link rel="canonical" href="https://www.labateca-turismo.co/" />
+
+<!-- ====== OPEN GRAPH (al compartir en WhatsApp / Facebook) ====== -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_CO" />
+<meta property="og:title" content="Labateca · Volcanes de Dios" />
+<meta property="og:description" content="Cascadas de hasta 100 m, café de exportación y el Páramo de Santurbán. Tu guía completa para visitar Labateca, Norte de Santander." />
+<meta property="og:site_name" content="Labateca Turismo" />
+<meta property="og:url" content="https://www.labateca-turismo.co/" />
+
+<!-- ====== TWITTER CARD ====== -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Labateca · Volcanes de Dios" />
+<meta name="twitter:description" content="Tu guía completa para visitar Labateca, Norte de Santander: cascadas, café y montaña." />
+
+<!-- ====== FAVICON (SVG en línea) ====== -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2316352a'/><path d='M18 70 L38 38 L52 58 L66 30 L84 70 Z' fill='%23d4a23f'/><circle cx='66' cy='26' r='8' fill='%23bd5d34'/></svg>" />
+
+<!-- ====== PWA ====== -->
+<link rel="manifest" href="/manifest.json" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Labateca" />
+<link rel="apple-touch-icon" href="/icons/icon-maskable.svg" />
+
+<!-- ====== DATOS ESTRUCTURADOS (Schema.org) ====== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristDestination",
+  "name": "Labateca",
+  "alternateName": "Volcanes de Dios",
+  "description": "Municipio del suroriente de Norte de Santander, Colombia. Reconocido por su café, sus cascadas ecoturísticas y el Páramo de Santurbán.",
+  "url": "https://www.labateca-turismo.co/",
+  "touristType": ["Ecoturismo", "Turismo cultural", "Turismo de naturaleza"],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 7.3167,
+    "longitude": -72.4833
+  },
+  "containedInPlace": {
+    "@type": "AdministrativeArea",
+    "name": "Norte de Santander, Colombia"
+  }
+}
+</script>
+
+<!-- ====== TIPOGRAFÍA ====== -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Hanken+Grotesk:wght@300..800&display=swap" rel="stylesheet" />
+
+<!-- ====== MAPA (Leaflet) ====== -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+
+<!-- ====== PDF (jsPDF — carga diferida, solo cuando el usuario pide el PDF) ====== -->
+<!-- Se inyecta dinámicamente en generatePDF() para no afectar la carga inicial -->
+
+<style>
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --forest:#16352a;
+  --forest-2:#1f4a39;
+  --forest-3:#2d6149;
+  --clay:#bd5d34;
+  --clay-soft:#d8835e;
+  --gold:#d4a23f;
+  --gold-soft:#e6c574;
+  --cream:#f6efe3;
+  --cream-2:#efe5d3;
+  --paper:#fbf8f1;
+  --ink:#1d1a15;
+  --ink-soft:#56514447;
+  --ink-mut:#6a6357;
+  --line:#e2d8c4;
+  --shadow-sm:0 1px 2px rgba(29,26,21,.06), 0 4px 14px rgba(29,26,21,.05);
+  --shadow-md:0 10px 30px -10px rgba(22,53,42,.28), 0 4px 12px rgba(29,26,21,.06);
+  --shadow-lg:0 30px 60px -20px rgba(22,53,42,.40);
+  --r-sm:10px; --r-md:18px; --r-lg:28px; --r-xl:38px;
+  --maxw:1200px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"Hanken Grotesk",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.65;
+  font-size:17px;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+/* sutil textura de grano sobre todo el fondo */
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+::selection{background:var(--gold);color:var(--forest)}
+
+h1,h2,h3,h4{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.07;letter-spacing:-.02em}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,48px);position:relative;z-index:1}
+.eyebrow{
+  font-family:"Hanken Grotesk";font-weight:700;font-size:.78rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--clay);display:inline-flex;align-items:center;gap:.6em;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--clay);display:inline-block;border-radius:2px}
+
+/* ============================================================
+   HEADER / NAV
+   ============================================================ */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  transition:background .4s var(--ease), box-shadow .4s var(--ease), padding .4s var(--ease);
+  padding:18px 0;
+}
+header.scrolled{
+  background:rgba(251,248,241,.86);backdrop-filter:blur(14px) saturate(1.4);
+  box-shadow:0 1px 0 var(--line), 0 6px 24px -16px rgba(22,53,42,.5);padding:12px 0;
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.brand-mark{width:42px;height:42px;flex-shrink:0;filter:drop-shadow(0 4px 8px rgba(22,53,42,.2))}
+.brand-name{font-family:"Fraunces";font-weight:600;font-size:1.35rem;color:var(--forest);letter-spacing:-.02em;line-height:1}
+.brand-sub{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);font-weight:700}
+header.scrolled .brand-name{color:var(--forest)}
+
+.nav-links{display:flex;align-items:center;gap:6px;list-style:none}
+.nav-links a{
+  font-weight:600;font-size:.93rem;color:var(--forest);padding:9px 14px;border-radius:99px;
+  position:relative;transition:color .25s, background .25s;
+}
+.nav-links a:hover{background:rgba(45,97,73,.10);color:var(--forest-2)}
+
+.nav-tools{display:flex;align-items:center;gap:10px}
+.lang-toggle{
+  display:flex;align-items:center;background:var(--cream-2);border:1px solid var(--line);
+  border-radius:99px;padding:3px;font-weight:700;font-size:.78rem;letter-spacing:.04em;
+}
+.lang-toggle button{padding:5px 11px;border-radius:99px;color:var(--ink-mut);transition:all .25s}
+.lang-toggle button.active{background:var(--forest);color:var(--cream)}
+
+.icon-btn{
+  position:relative;width:42px;height:42px;display:grid;place-items:center;border-radius:50%;
+  background:var(--cream-2);border:1px solid var(--line);color:var(--forest);transition:all .25s var(--ease);
+}
+.icon-btn:hover{background:var(--forest);color:var(--cream);transform:translateY(-2px)}
+.icon-btn .badge{
+  position:absolute;top:-4px;right:-4px;min-width:19px;height:19px;padding:0 5px;border-radius:99px;
+  background:var(--clay);color:#fff;font-size:.68rem;font-weight:800;display:grid;place-items:center;
+  font-family:"Hanken Grotesk";transform:scale(0);transition:transform .3s var(--ease);border:2px solid var(--paper);
+}
+.icon-btn .badge.show{transform:scale(1)}
+.hamburger{display:none}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;min-height:100svh;display:flex;align-items:center;padding-top:120px;
+  background:
+    radial-gradient(120% 80% at 80% -10%, rgba(212,162,63,.22), transparent 55%),
+    radial-gradient(90% 70% at -10% 110%, rgba(45,97,73,.18), transparent 50%),
+    linear-gradient(170deg, var(--cream) 0%, var(--paper) 60%);
+  overflow:hidden;
+}
+.hero-mountains{position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;z-index:0;opacity:.9}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;position:relative;z-index:2}
+.hero-copy{max-width:640px}
+.hero h1{
+  font-size:clamp(3.4rem,9vw,7.2rem);font-weight:600;color:var(--forest);margin:18px 0 4px;
+  line-height:.92;
+}
+.hero h1 .accent{font-style:italic;font-weight:400;color:var(--clay)}
+.hero-tag{
+  font-family:"Fraunces";font-style:italic;font-size:clamp(1.15rem,2.6vw,1.7rem);color:var(--forest-3);
+  font-weight:400;margin-bottom:22px;display:block;
+}
+.hero-lead{font-size:1.12rem;color:var(--ink-mut);max-width:520px;margin-bottom:30px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+
+.btn{
+  display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.97rem;
+  padding:15px 26px;border-radius:99px;transition:all .3s var(--ease);letter-spacing:.01em;
+}
+.btn-primary{background:var(--forest);color:var(--cream);box-shadow:var(--shadow-md)}
+.btn-primary:hover{background:var(--forest-2);transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.btn-ghost{background:transparent;color:var(--forest);border:1.5px solid var(--forest)}
+.btn-ghost:hover{background:var(--forest);color:var(--cream);transform:translateY(-3px)}
+.btn svg{width:18px;height:18px}
+
+/* tarjeta de clima + stats */
+.hero-panel{
+  background:rgba(251,248,241,.7);backdrop-filter:blur(10px);border:1px solid var(--line);
+  border-radius:var(--r-xl);padding:30px;box-shadow:var(--shadow-md);
+}
+.weather-card{display:flex;align-items:center;gap:18px;padding-bottom:24px;margin-bottom:24px;border-bottom:1px dashed var(--line)}
+.weather-icon{font-size:3.4rem;line-height:1;filter:drop-shadow(0 4px 10px rgba(22,53,42,.18))}
+.weather-temp{font-family:"Fraunces";font-size:3.2rem;font-weight:600;color:var(--forest);line-height:1}
+.weather-temp .deg{font-size:1.6rem;color:var(--clay);vertical-align:super}
+.weather-meta{font-size:.85rem;color:var(--ink-mut);font-weight:600}
+.weather-place{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);font-weight:800;margin-top:4px}
+.weather-loading{font-size:.8rem;color:var(--ink-mut);font-style:italic}
+
+.stat-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.stat{text-align:center}
+.stat-num{font-family:"Fraunces";font-size:1.7rem;font-weight:600;color:var(--forest);line-height:1}
+.stat-lbl{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mut);font-weight:700;margin-top:5px}
+
+/* distancia dinámica desde la ubicación del visitante */
+.distance-card{margin-top:22px;padding-top:22px;border-top:1px dashed var(--line)}
+.dist-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;
+  background:var(--clay);color:#fff;font-weight:700;font-size:.9rem;padding:13px 18px;border-radius:14px;
+  transition:all .3s var(--ease);box-shadow:var(--shadow-sm);text-align:center;line-height:1.25}
+.dist-btn:hover{background:var(--clay-soft);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.dist-btn:disabled{opacity:.7;cursor:wait;transform:none}
+.dist-btn svg{width:18px;height:18px;flex-shrink:0}
+.dist-result{text-align:center;animation:distIn .45s var(--ease)}
+.dist-line{font-size:1rem;color:var(--ink-mut);margin-bottom:10px;line-height:1.4}
+.dist-line b{font-family:"Fraunces";font-size:1.7rem;color:var(--forest);font-weight:600;display:inline-block;vertical-align:middle}
+.dist-route{display:inline-flex;align-items:center;gap:6px;color:var(--clay);font-weight:700;font-size:.9rem;
+  padding:9px 16px;border:1.5px solid var(--clay);border-radius:99px;transition:all .25s var(--ease)}
+.dist-route:hover{background:var(--clay);color:#fff;transform:translateY(-2px)}
+.dist-route svg{width:15px;height:15px}
+.dist-err{color:var(--clay);font-size:.88rem;font-weight:600;display:block}
+.dist-retry{margin-top:8px;color:var(--forest);font-weight:700;font-size:.85rem;text-decoration:underline}
+@keyframes distIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ============================================================
+   SECCIONES GENERAL
+   ============================================================ */
+section{padding:clamp(70px,11vw,130px) 0;position:relative}
+.sec-head{max-width:680px;margin-bottom:54px}
+.sec-head h2{font-size:clamp(2.2rem,5.5vw,3.7rem);color:var(--forest);margin:14px 0 18px}
+.sec-head p{font-size:1.1rem;color:var(--ink-mut)}
+
+/* SOBRE EL PUEBLO */
+.about{background:linear-gradient(180deg,var(--paper),var(--cream) 100%)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,80px);align-items:center}
+.about-text h2{font-size:clamp(2rem,5vw,3.2rem);color:var(--forest);margin:14px 0 22px}
+.about-text p{color:var(--ink-mut);margin-bottom:18px;font-size:1.06rem}
+.about-text strong{color:var(--forest-2);font-weight:700}
+.fact-list{list-style:none;display:grid;gap:16px;margin-top:8px}
+.fact-list li{display:flex;gap:16px;align-items:flex-start}
+.fact-ic{flex-shrink:0;width:46px;height:46px;border-radius:14px;background:var(--forest);color:var(--gold-soft);
+  display:grid;place-items:center;box-shadow:var(--shadow-sm)}
+.fact-ic svg{width:22px;height:22px}
+.fact-list b{display:block;color:var(--forest);font-family:"Fraunces";font-size:1.15rem;font-weight:600}
+.fact-list span{font-size:.92rem;color:var(--ink-mut)}
+
+.about-visual{
+  position:relative;aspect-ratio:4/5;border-radius:var(--r-xl);overflow:hidden;
+  background:linear-gradient(160deg,var(--forest-2),var(--forest));box-shadow:var(--shadow-lg);
+  display:grid;place-items:center;color:var(--cream);text-align:center;padding:40px;
+}
+.about-visual svg.topo{position:absolute;inset:0;width:100%;height:100%;opacity:.16}
+.about-visual .vquote{position:relative;z-index:2}
+.about-visual .vquote .q{font-family:"Fraunces";font-style:italic;font-size:clamp(1.6rem,3.5vw,2.4rem);line-height:1.2;font-weight:400}
+.about-visual .vquote .qs{margin-top:18px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft);font-weight:800}
+
+/* ============================================================
+   LUGARES
+   ============================================================ */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+.chip{
+  padding:10px 20px;border-radius:99px;font-weight:700;font-size:.88rem;color:var(--forest);
+  background:var(--cream-2);border:1.5px solid var(--line);transition:all .25s var(--ease);
+  display:inline-flex;align-items:center;gap:7px;
+}
+.chip:hover{border-color:var(--forest-3);transform:translateY(-2px)}
+.chip.active{background:var(--forest);color:var(--cream);border-color:var(--forest)}
+.chip .ct{font-size:.74rem;opacity:.7;font-weight:800}
+
+.places-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:26px}
+.place-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:var(--shadow-sm);transition:transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s;
+  display:flex;flex-direction:column;position:relative;
+}
+.place-card:hover{transform:translateY(-7px);box-shadow:var(--shadow-lg);border-color:var(--forest-3)}
+.pc-media{
+  aspect-ratio:16/10;position:relative;overflow:hidden;background:var(--cream-2);
+  display:grid;place-items:center;
+}
+.pc-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.place-card:hover .pc-media img{transform:scale(1.06)}
+/* placeholder elegante cuando no hay foto */
+.pc-ph{position:absolute;inset:0;display:grid;place-items:center;gap:10px;color:var(--forest-3);
+  background:
+    repeating-linear-gradient(135deg, rgba(45,97,73,.05) 0 14px, transparent 14px 28px),
+    linear-gradient(160deg, var(--cream), var(--cream-2));
+  text-align:center;padding:20px}
+.pc-ph svg{width:40px;height:40px;opacity:.55}
+.pc-ph small{font-size:.74rem;font-weight:700;letter-spacing:.04em;color:var(--ink-mut);max-width:80%}
+.pc-badge{position:absolute;top:12px;left:12px;background:rgba(22,53,42,.92);color:var(--cream);
+  font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:99px;backdrop-filter:blur(4px)}
+.pc-verify{position:absolute;top:12px;left:12px;background:var(--gold);color:var(--forest);}
+.pc-fav{position:absolute;top:11px;right:11px;width:38px;height:38px;border-radius:50%;
+  background:rgba(251,248,241,.92);display:grid;place-items:center;backdrop-filter:blur(4px);
+  box-shadow:var(--shadow-sm);transition:transform .25s var(--ease)}
+.pc-fav:hover{transform:scale(1.12)}
+.pc-fav svg{width:20px;height:20px;fill:none;stroke:var(--clay);stroke-width:2;transition:fill .25s}
+.pc-fav.on svg{fill:var(--clay);stroke:var(--clay)}
+
+.pc-body{padding:22px;display:flex;flex-direction:column;flex:1}
+.pc-cat{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);margin-bottom:6px}
+.pc-title{font-size:1.32rem;color:var(--forest);margin-bottom:9px;line-height:1.1}
+.pc-desc{font-size:.93rem;color:var(--ink-mut);margin-bottom:16px;flex:1}
+.pc-stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.pc-stat{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:700;color:var(--forest-2);
+  background:var(--cream);border:1px solid var(--line);padding:6px 11px;border-radius:99px}
+.pc-stat svg{width:14px;height:14px;opacity:.75}
+.pc-actions{display:flex;gap:9px;margin-top:auto}
+.pc-btn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;font-weight:700;
+  font-size:.84rem;padding:11px;border-radius:12px;transition:all .25s var(--ease)}
+.pc-btn.map{background:var(--forest);color:var(--cream)}
+.pc-btn.map:hover{background:var(--forest-2)}
+.pc-btn.route{background:var(--cream-2);color:var(--forest);border:1.5px solid var(--line)}
+.pc-btn.route:hover{border-color:var(--forest-3)}
+.pc-btn.route.added{background:var(--clay);color:#fff;border-color:var(--clay)}
+.pc-btn svg{width:15px;height:15px}
+.pc-note{font-size:.74rem;color:var(--gold);font-weight:700;margin-top:12px;display:flex;gap:6px;align-items:center}
+.pc-note svg{width:14px;height:14px;flex-shrink:0}
+.empty-state{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--ink-mut)}
+
+/* ============================================================
+   MAPA
+   ============================================================ */
+.map-sec{background:var(--forest);color:var(--cream);position:relative;overflow:hidden}
+.map-sec .eyebrow{color:var(--gold-soft)}
+.map-sec .eyebrow::before{background:var(--gold-soft)}
+.map-sec .sec-head h2{color:var(--cream)}
+.map-sec .sec-head p{color:rgba(246,239,227,.75)}
+#map{height:520px;width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-lg);
+  border:6px solid rgba(246,239,227,.1);background:var(--forest-2);z-index:1}
+.leaflet-popup-content-wrapper{border-radius:14px;font-family:"Hanken Grotesk"}
+.leaflet-popup-content{margin:14px 16px}
+.map-pop b{font-family:"Fraunces";color:var(--forest);font-size:1.05rem;display:block;margin-bottom:4px}
+.map-pop a{color:var(--clay);font-weight:700;font-size:.85rem;display:inline-flex;gap:5px;align-items:center;margin-top:6px}
+.map-pop .map-pop-stats{font-size:.82rem;color:var(--ink-mut);margin-top:4px;display:block;line-height:1.5}
+.map-pop .map-pop-rec{font-size:.8rem;color:var(--ink-mut);margin-top:5px;font-style:italic;display:block;line-height:1.45}
+.map-fallback{display:none;padding:60px 30px;text-align:center;color:rgba(246,239,227,.8);
+  border:2px dashed rgba(246,239,227,.2);border-radius:var(--r-lg)}
+
+/* ── TOGGLE DE MAPA ── */
+.map-tabs{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap}
+.map-tab{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 22px;border-radius:99px;font-weight:700;font-size:.88rem;
+  color:rgba(246,239,227,.72);background:rgba(246,239,227,.08);
+  border:1.5px solid rgba(246,239,227,.15);transition:all .3s var(--ease);
+  cursor:pointer;font-family:inherit;
+}
+.map-tab:hover{background:rgba(246,239,227,.14);color:var(--cream)}
+.map-tab.active{background:var(--gold);color:var(--forest);border-color:var(--gold)}
+.map-tab svg{width:16px;height:16px;flex-shrink:0}
+
+/* ── MAPA ILUSTRADO ── */
+#map-ilustrado{
+  height:520px;width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-lg);
+  border:6px solid rgba(246,239,227,.1);background:var(--forest-2);z-index:1;
+  display:none;
+}
+/* Cursor pointer sobre la imagen del mapa ilustrado */
+#map-ilustrado .leaflet-image-layer{cursor:default}
+
+/* Nota informativa bajo el mapa ilustrado */
+.map-note{
+  margin-top:16px;display:flex;align-items:center;gap:8px;
+  font-size:.84rem;color:rgba(246,239,227,.62);font-weight:600;
+}
+.map-note svg{width:15px;height:15px;flex-shrink:0;opacity:.7}
+
+@media(max-width:760px){
+  #map-ilustrado{height:400px}
+}
+
+/* ============================================================
+   GALERÍA
+   ============================================================ */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:16px}
+.gal{position:relative;border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm);
+  transition:transform .4s var(--ease), box-shadow .4s;cursor:default}
+.gal:hover{transform:scale(1.02);box-shadow:var(--shadow-lg);z-index:2}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal.big{grid-column:span 2;grid-row:span 2}
+.gal.tall{grid-row:span 2}
+.gal.wide{grid-column:span 2}
+.gal-ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:18px;color:var(--cream);
+  background:linear-gradient(150deg,var(--forest-3),var(--forest))}
+.gal-ph.alt{background:linear-gradient(150deg,var(--clay-soft),var(--clay))}
+.gal-ph.gold{background:linear-gradient(150deg,var(--gold-soft),var(--gold));color:var(--forest)}
+.gal-ph svg{width:30px;height:30px;opacity:.7;margin-bottom:8px}
+.gal-ph small{font-size:.76rem;font-weight:700;letter-spacing:.04em}
+.gal-cap{position:absolute;left:0;right:0;bottom:0;padding:14px;
+  background:linear-gradient(0deg,rgba(22,53,42,.85),transparent);
+  color:var(--cream);font-weight:700;font-size:.85rem;opacity:0;transition:opacity .3s;z-index:2}
+.gal:hover .gal-cap{opacity:1}
+
+/* ============================================================
+   RUTAS TEMÁTICAS
+   ============================================================ */
+@keyframes cardIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.rutas-sec{background:linear-gradient(180deg,var(--cream) 0%,var(--paper) 100%)}
+.rutas-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+
+.ruta-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);
+  overflow:hidden;box-shadow:var(--shadow-sm);
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .3s;
+  display:flex;flex-direction:column;position:relative;
+}
+.ruta-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--ruta-color,var(--forest-3))}
+
+/* Acento de color superior */
+.ruta-accent{height:5px;width:100%;background:var(--ruta-color,var(--forest))}
+
+.ruta-body{padding:24px;display:flex;flex-direction:column;flex:1;gap:14px}
+
+.ruta-icon{
+  width:52px;height:52px;border-radius:16px;
+  background:var(--ruta-color-soft,var(--cream-2));
+  display:grid;place-items:center;font-size:1.6rem;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.ruta-name{
+  font-family:"Fraunces",serif;font-size:1.28rem;font-weight:600;
+  color:var(--forest);line-height:1.1;
+}
+.ruta-desc{font-size:.9rem;color:var(--ink-mut);line-height:1.6;flex:1}
+
+.ruta-meta{
+  display:flex;flex-wrap:wrap;gap:8px;
+}
+.ruta-chip{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.75rem;font-weight:700;
+  padding:5px 10px;border-radius:99px;
+  background:var(--cream-2);color:var(--forest-2);
+  border:1px solid var(--line);
+}
+.ruta-chip svg{width:12px;height:12px;opacity:.7}
+.ruta-chip.dif{background:var(--ruta-color-soft,var(--cream));color:var(--ruta-color,var(--forest))}
+
+.ruta-lugares-count{
+  font-size:.8rem;font-weight:700;color:var(--ruta-color,var(--forest));
+  display:flex;align-items:center;gap:6px;
+}
+.ruta-lugares-count::before{
+  content:"";display:inline-block;width:8px;height:8px;
+  border-radius:50%;background:var(--ruta-color,var(--forest));
+}
+
+.ruta-btn{
+  margin-top:auto;width:100%;display:inline-flex;align-items:center;
+  justify-content:center;gap:8px;
+  padding:13px;border-radius:12px;font-weight:700;font-size:.9rem;
+  background:var(--ruta-color,var(--forest));color:#fff;
+  transition:all .25s var(--ease);border:none;font-family:inherit;cursor:pointer;
+}
+.ruta-btn:hover{filter:brightness(1.12);transform:translateY(-2px)}
+.ruta-btn svg{width:16px;height:16px}
+
+/* Rec al expandirse (hover) */
+.ruta-rec{
+  font-size:.8rem;color:var(--ink-mut);line-height:1.5;font-style:italic;
+  padding-top:10px;border-top:1px dashed var(--line);display:none;
+}
+.ruta-card:hover .ruta-rec{display:block}
+
+/* ============================================================
+   CONTACTO
+   ============================================================ */
+.contact{background:linear-gradient(180deg,var(--cream),var(--paper))}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,70px);align-items:start}
+.contact-info h2{font-size:clamp(2rem,5vw,3.2rem);color:var(--forest);margin:14px 0 18px}
+.contact-info p{color:var(--ink-mut);margin-bottom:30px;font-size:1.06rem}
+.contact-channels{display:grid;gap:14px}
+.channel{display:flex;align-items:center;gap:16px;padding:18px 20px;background:var(--paper);
+  border:1px solid var(--line);border-radius:var(--r-md);transition:all .3s var(--ease)}
+.channel:hover{transform:translateX(6px);box-shadow:var(--shadow-md);border-color:var(--forest-3)}
+.channel-ic{width:48px;height:48px;border-radius:14px;flex-shrink:0;display:grid;place-items:center;color:#fff}
+.channel-ic.wa{background:#25D366}
+.channel-ic.mail{background:var(--clay)}
+.channel-ic.loc{background:var(--forest)}
+.channel-ic svg{width:24px;height:24px}
+.channel b{display:block;font-family:"Fraunces";color:var(--forest);font-size:1.08rem}
+.channel span{font-size:.9rem;color:var(--ink-mut)}
+
+.contact-form{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-xl);
+  padding:clamp(26px,4vw,40px);box-shadow:var(--shadow-md)}
+.fld{margin-bottom:18px}
+.fld label{display:block;font-weight:700;font-size:.85rem;color:var(--forest);margin-bottom:7px;letter-spacing:.02em}
+.fld input,.fld textarea,.fld select{
+  width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;
+  font-family:inherit;font-size:.97rem;color:var(--ink);background:var(--cream);transition:all .25s;
+}
+.fld input:focus,.fld textarea:focus,.fld select:focus{
+  outline:none;border-color:var(--forest-3);background:var(--paper);box-shadow:0 0 0 4px rgba(45,97,73,.12)
+}
+.fld textarea{resize:vertical;min-height:120px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-msg{padding:14px 16px;border-radius:12px;font-weight:700;font-size:.9rem;margin-top:16px;display:none}
+.form-msg.ok{display:block;background:rgba(45,97,73,.12);color:var(--forest-2);border:1px solid var(--forest-3)}
+.form-msg.err{display:block;background:rgba(189,93,52,.12);color:var(--clay);border:1px solid var(--clay)}
+.btn-submit{width:100%;justify-content:center;margin-top:4px}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{background:var(--forest);color:var(--cream);padding:70px 0 30px;position:relative;overflow:hidden}
+footer::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;
+  background:linear-gradient(90deg,var(--clay),var(--gold),var(--clay))}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;margin-bottom:48px}
+.foot-brand .brand-name{color:var(--cream)}
+.foot-about{color:rgba(246,239,227,.7);margin-top:16px;font-size:.94rem;max-width:340px}
+.foot-col h4{font-family:"Fraunces";color:var(--gold-soft);font-size:1.1rem;margin-bottom:18px;font-weight:600}
+.foot-col ul{list-style:none;display:grid;gap:11px}
+.foot-col a{color:rgba(246,239,227,.78);font-size:.93rem;transition:color .25s,padding .25s}
+.foot-col a:hover{color:var(--gold-soft);padding-left:5px}
+.socials{display:flex;gap:12px;margin-top:20px}
+.soc{width:44px;height:44px;border-radius:50%;background:rgba(246,239,227,.08);display:grid;place-items:center;
+  color:var(--cream);transition:all .3s var(--ease);border:1px solid rgba(246,239,227,.12)}
+.soc:hover{background:var(--gold);color:var(--forest);transform:translateY(-4px)}
+.soc svg{width:20px;height:20px}
+.foot-bottom{border-top:1px solid rgba(246,239,227,.12);padding-top:26px;display:flex;
+  justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.84rem;color:rgba(246,239,227,.6)}
+.foot-bottom a{color:var(--gold-soft);font-weight:600}
+
+/* ============================================================
+   DRAWER "MI RUTA"
+   ============================================================ */
+.drawer-overlay{position:fixed;inset:0;background:rgba(22,53,42,.5);backdrop-filter:blur(3px);
+  z-index:2000;opacity:0;visibility:hidden;transition:all .35s var(--ease)}
+.drawer-overlay.open{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,90vw);background:var(--paper);z-index:2001;
+  transform:translateX(100%);transition:transform .4s var(--ease);box-shadow:var(--shadow-lg);
+  display:flex;flex-direction:column}
+.drawer.open{transform:translateX(0)}
+.drawer-head{padding:24px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.drawer-head h3{font-size:1.5rem;color:var(--forest);display:flex;align-items:center;gap:10px}
+.drawer-head .cnt{font-size:.8rem;background:var(--clay);color:#fff;border-radius:99px;padding:2px 9px;font-family:"Hanken Grotesk";font-weight:800}
+.drawer-close{width:40px;height:40px;border-radius:50%;background:var(--cream-2);display:grid;place-items:center;color:var(--forest);transition:all .25s}
+.drawer-close:hover{background:var(--forest);color:var(--cream);transform:rotate(90deg)}
+.drawer-body{flex:1;overflow-y:auto;padding:20px 26px}
+.route-item{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px dashed var(--line)}
+.route-num{width:30px;height:30px;border-radius:50%;background:var(--forest);color:var(--cream);
+  display:grid;place-items:center;font-weight:800;font-size:.85rem;flex-shrink:0;font-family:"Hanken Grotesk"}
+.route-item b{display:block;color:var(--forest);font-family:"Fraunces";font-size:1.02rem;line-height:1.15}
+.route-item span{font-size:.78rem;color:var(--ink-mut)}
+.route-item .rm{margin-left:auto;color:var(--clay);width:30px;height:30px;border-radius:8px;display:grid;place-items:center;transition:background .2s}
+.route-item .rm:hover{background:rgba(189,93,52,.12)}
+.route-item .rm svg{width:18px;height:18px}
+.drawer-empty{text-align:center;color:var(--ink-mut);padding:50px 16px}
+.drawer-empty svg{width:54px;height:54px;opacity:.3;margin-bottom:14px}
+.drawer-foot{padding:20px 26px;border-top:1px solid var(--line);background:var(--cream)}
+.drawer-foot .btn{width:100%;justify-content:center}
+.drawer-foot .clear{width:100%;text-align:center;margin-top:12px;color:var(--ink-mut);font-weight:700;font-size:.85rem}
+.drawer-foot .clear:hover{color:var(--clay)}
+
+/* reveal on scroll — visible por defecto (progressive enhancement) */
+.reveal{opacity:1;transform:none}
+.js-anim .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease), transform .7s var(--ease)}
+.js-anim .reveal.in{opacity:1;transform:none}
+.js-anim .reveal.d1{transition-delay:.06s}.js-anim .reveal.d2{transition-delay:.12s}
+.js-anim .reveal.d3{transition-delay:.18s}.js-anim .reveal.d4{transition-delay:.24s}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-panel{max-width:480px}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .about-visual{aspect-ratio:16/10;order:-1}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .gallery-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:760px){
+  body{font-size:16px}
+  .hamburger{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--cream-2);border:1px solid var(--line);color:var(--forest)}
+  .hamburger svg{width:24px;height:24px}
+  .nav-links{
+    position:fixed;top:0;right:0;bottom:0;width:min(300px,82vw);background:var(--paper);
+    flex-direction:column;align-items:stretch;gap:6px;padding:90px 24px 30px;z-index:999;
+    transform:translateX(100%);transition:transform .4s var(--ease);box-shadow:var(--shadow-lg);
+  }
+  .nav-links.open{transform:translateX(0)}
+  .nav-links a{padding:14px 16px;font-size:1.05rem;border-radius:12px}
+  .nav-links a:hover{background:var(--cream-2)}
+  .form-row{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .foot-bottom{flex-direction:column;text-align:center}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+  .gal.big{grid-column:span 2;grid-row:span 1}
+  #map{height:400px}
+}
+@media(max-width:420px){
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .stat:last-child{grid-column:1/-1}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+#lightbox{
+  position:fixed;inset:0;z-index:3000;
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;
+  animation:lbIn .22s var(--ease);
+}
+#lightbox[hidden]{display:none!important}
+@keyframes lbIn{from{opacity:0}to{opacity:1}}
+
+.lb-bg{
+  position:absolute;inset:0;
+  background:rgba(13,22,18,.93);
+  backdrop-filter:blur(10px) saturate(1.2);
+  cursor:pointer;
+}
+.lb-inner{
+  position:relative;z-index:1;
+  max-width:min(960px,100%);width:100%;
+  display:flex;flex-direction:column;align-items:center;gap:16px;
+  pointer-events:none;
+}
+.lb-inner>*{pointer-events:auto}
+
+#lbImg{
+  max-height:calc(100svh - 160px);max-width:100%;
+  object-fit:contain;border-radius:14px;
+  box-shadow:0 24px 64px rgba(0,0,0,.55);
+  display:block;transition:opacity .25s;
+}
+#lbImg.loading{opacity:.4}
+
+/* Placeholder cuando no hay fotos */
+.lb-ph{
+  width:100%;max-width:640px;aspect-ratio:16/9;
+  border-radius:14px;
+  background:linear-gradient(155deg,var(--forest-3),var(--forest));
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:14px;color:var(--gold-soft);
+  text-align:center;padding:40px;
+}
+.lb-ph svg{width:48px;height:48px;opacity:.5}
+.lb-ph p{font-family:"Fraunces",serif;font-size:1.1rem;font-weight:400;font-style:italic;color:var(--cream);opacity:.75;margin:0}
+
+.lb-caption{
+  text-align:center;max-width:600px;
+  display:flex;flex-direction:column;align-items:center;gap:5px;
+}
+.lb-caption strong{
+  font-family:"Fraunces",serif;font-size:1.15rem;font-weight:600;
+  color:var(--cream);line-height:1.1;
+}
+.lb-caption .lb-rec{
+  font-size:.87rem;color:rgba(246,239,227,.68);line-height:1.55;
+  max-width:480px;
+}
+.lb-caption .lb-counter{
+  font-size:.75rem;color:rgba(246,239,227,.4);letter-spacing:.06em;margin-top:2px;
+}
+
+/* Botones nav y cerrar */
+.lb-close{
+  position:fixed;top:16px;right:18px;z-index:2;
+  width:46px;height:46px;border-radius:50%;
+  background:rgba(246,239,227,.13);border:1.5px solid rgba(246,239,227,.2);
+  color:var(--cream);font-size:1.5rem;display:grid;place-items:center;
+  transition:all .25s var(--ease);line-height:1;
+}
+.lb-close:hover{background:rgba(246,239,227,.28);transform:rotate(90deg)}
+
+.lb-nav{
+  position:fixed;top:50%;transform:translateY(-50%);z-index:2;
+  width:50px;height:50px;border-radius:50%;
+  background:rgba(246,239,227,.13);border:1.5px solid rgba(246,239,227,.2);
+  color:var(--cream);display:grid;place-items:center;
+  transition:all .25s var(--ease);
+}
+.lb-nav:hover{background:rgba(246,239,227,.28);scale:1.08}
+.lb-nav svg{width:20px;height:20px}
+.lb-prev{left:14px}
+.lb-next{right:14px}
+.lb-nav[hidden]{display:none}
+
+/* Galería: cursor pointer sobre items clicables */
+.gal[role="button"]{cursor:pointer}
+.gal[role="button"]:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* Tarjeta: media clicable */
+.pc-media[role="button"]{cursor:zoom-in}
+.pc-media[role="button"]:focus-visible{outline:3px solid var(--forest-3);outline-offset:-3px}
+
+@media(max-width:600px){
+  .lb-nav{display:none}  /* swipe en móvil */
+  #lightbox{padding:10px}
+  #lbImg{border-radius:10px}
+}
+
+/* ============================================================
+   CHAT IA FLOTANTE
+   ============================================================ */
+#chat-toggle{
+  position:fixed;bottom:24px;right:24px;z-index:2500;
+  width:56px;height:56px;border-radius:50%;
+  background:var(--forest);color:var(--cream);
+  box-shadow:0 8px 28px -6px rgba(22,53,42,.45);
+  display:grid;place-items:center;cursor:pointer;border:none;
+  font-family:inherit;transition:all .3s var(--ease);
+}
+#chat-toggle:hover{background:var(--forest-2);transform:translateY(-3px) scale(1.05)}
+#chat-toggle svg{width:24px;height:24px}
+
+#chat-panel{
+  position:fixed;bottom:92px;right:24px;z-index:2400;
+  width:min(380px,calc(100vw - 48px));
+  background:var(--paper);border-radius:var(--r-xl);
+  box-shadow:var(--shadow-lg);border:1px solid var(--line);
+  display:flex;flex-direction:column;
+  transform:translateY(20px) scale(.97);opacity:0;pointer-events:none;
+  transition:all .3s var(--ease);
+  max-height:calc(100svh - 120px);
+}
+#chat-panel.open{transform:translateY(0) scale(1);opacity:1;pointer-events:auto}
+
+.chat-head{
+  padding:16px 20px;background:var(--forest);color:var(--cream);
+  border-radius:var(--r-xl) var(--r-xl) 0 0;
+  display:flex;align-items:center;gap:12px;flex-shrink:0;
+}
+.chat-head-icon{width:36px;height:36px;border-radius:50%;background:rgba(212,162,63,.22);display:grid;place-items:center;flex-shrink:0}
+.chat-head-info{flex:1}
+.chat-head-info strong{display:block;font-family:"Fraunces",serif;font-size:1rem}
+.chat-head-info small{font-size:.72rem;opacity:.65}
+.chat-close{width:32px;height:32px;border-radius:50%;background:rgba(246,239,227,.13);color:var(--cream);display:grid;place-items:center;cursor:pointer;border:none;transition:background .2s;flex-shrink:0}
+.chat-close:hover{background:rgba(246,239,227,.28)}
+
+.chat-messages{flex:1;overflow-y:auto;padding:14px 16px;display:flex;flex-direction:column;gap:10px;min-height:180px;max-height:300px}
+.chat-msg{max-width:86%;font-size:.88rem;line-height:1.55;padding:10px 13px;border-radius:14px;animation:msgIn .22s ease both}
+@keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.chat-msg.user{align-self:flex-end;background:var(--forest);color:var(--cream);border-bottom-right-radius:4px}
+.chat-msg.ai{align-self:flex-start;background:var(--cream-2);color:var(--ink);border:1px solid var(--line);border-bottom-left-radius:4px}
+.chat-msg.typing{align-self:flex-start;background:var(--cream-2);border:1px solid var(--line);border-bottom-left-radius:4px;padding:12px 14px}
+
+.typing-dots{display:flex;gap:5px;align-items:center}
+.typing-dots span{width:7px;height:7px;border-radius:50%;background:var(--ink-mut);animation:dot .9s infinite both}
+.typing-dots span:nth-child(2){animation-delay:.2s}
+.typing-dots span:nth-child(3){animation-delay:.4s}
+@keyframes dot{0%,80%,100%{transform:scale(.65);opacity:.35}40%{transform:scale(1);opacity:1}}
+
+.chat-suggestions{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 12px;flex-shrink:0}
+.chat-sug{font-size:.75rem;font-weight:700;padding:5px 11px;border-radius:99px;background:var(--cream-2);color:var(--forest);border:1px solid var(--line);cursor:pointer;font-family:inherit;transition:all .2s}
+.chat-sug:hover{background:var(--forest);color:var(--cream)}
+
+.chat-input-area{padding:10px 14px 14px;border-top:1px solid var(--line);display:flex;gap:9px;align-items:flex-end;flex-shrink:0}
+.chat-input{flex:1;padding:10px 13px;border-radius:20px;border:1.5px solid var(--line);background:var(--cream);font-family:inherit;font-size:.88rem;color:var(--ink);resize:none;max-height:100px;overflow-y:auto;transition:border-color .2s;line-height:1.45}
+.chat-input:focus{outline:none;border-color:var(--forest-3)}
+.chat-send{width:38px;height:38px;border-radius:50%;background:var(--forest);color:var(--cream);display:grid;place-items:center;cursor:pointer;border:none;flex-shrink:0;transition:all .2s}
+.chat-send:hover{background:var(--forest-2);transform:scale(1.05)}
+.chat-send:disabled{opacity:.45;cursor:default;transform:none}
+.chat-send svg{width:15px;height:15px}
+
+@media(max-width:480px){
+  #chat-panel{bottom:80px;right:12px;width:calc(100vw - 24px)}
+  #chat-toggle{bottom:16px;right:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- Desregistrar cualquier Service Worker viejo para garantizar HTML fresco en desarrollo -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations()
+    .then(regs => regs.forEach(r => r.unregister()))
+    .catch(() => {});
+}
+</script>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#inicio" class="brand" aria-label="Labateca - Inicio">
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+        <rect width="100" height="100" rx="24" fill="#16352a"/>
+        <path d="M14 72 L36 36 L52 58 L66 28 L86 72 Z" fill="#d4a23f"/>
+        <circle cx="66" cy="24" r="9" fill="#bd5d34"/>
+        <path d="M14 72 Q50 64 86 72 L86 80 Q50 72 14 80 Z" fill="#2d6149"/>
+      </svg>
+      <span>
+        <span class="brand-name">Labateca</span><br>
+        <span class="brand-sub" data-i18n="brand_sub">Volcanes de Dios</span>
+      </span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio" data-i18n="nav_home">Inicio</a></li>
+      <li><a href="#pueblo" data-i18n="nav_about">El pueblo</a></li>
+      <li><a href="#lugares" data-i18n="nav_places">Lugares</a></li>
+      <li><a href="#rutas" data-i18n="nav_routes">Rutas</a></li>
+      <li><a href="#mapa" data-i18n="nav_map">Mapa</a></li>
+      <li><a href="#galeria" data-i18n="nav_gallery">Galería</a></li>
+      <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
+    </ul>
+
+    <div class="nav-tools">
+      <div class="lang-toggle" role="group" aria-label="Idioma">
+        <button id="langEs" class="active" onclick="setLang('es')">ES</button>
+        <button id="langEn" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="icon-btn" onclick="openDrawer()" aria-label="Mi ruta" title="Mi ruta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M6 16V8a4 4 0 0 1 4-4h4"/><path d="M18 8v8a4 4 0 0 1-4 4h-1"/></svg>
+        <span class="badge" id="routeBadge">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="inicio">
+  <svg class="hero-mountains" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="#2d6149" fill-opacity="0.35" d="M0,256 L120,234 C240,213,480,171,720,176 C960,181,1200,235,1320,261 L1440,288 L1440,320 L0,320 Z"/>
+    <path fill="#1f4a39" fill-opacity="0.5" d="M0,288 L180,256 C360,224,720,160,1080,176 C1260,184,1380,224,1440,240 L1440,320 L0,320 Z"/>
+    <path fill="#16352a" d="M0,300 L240,272 C480,244,960,220,1200,256 C1320,274,1400,290,1440,298 L1440,320 L0,320 Z"/>
+  </svg>
+
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal" data-i18n="hero_eyebrow">Norte de Santander · Colombia</span>
+      <h1 class="reveal d1">Labateca<span class="accent">.</span></h1>
+      <span class="hero-tag reveal d1" data-i18n="hero_tag">Donde la montaña guarda volcanes de Dios</span>
+      <p class="hero-lead reveal d2" data-i18n="hero_lead">Cascadas de hasta 100 metros, café de altura y el Páramo de Santurbán. Una perla escondida del suroriente nortesantandereano, lista para descubrirse.</p>
+      <div class="hero-cta reveal d3">
+        <a href="#lugares" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span data-i18n="hero_btn1">Explorar lugares</span>
+        </a>
+        <a href="#mapa" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+          <span data-i18n="hero_btn2">Ver mapa</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-panel reveal d2">
+      <div class="weather-card">
+        <div class="weather-icon" id="wIcon">⛅</div>
+        <div style="flex:1">
+          <div class="weather-temp"><span id="wTemp">20</span><span class="deg">°C</span></div>
+          <div class="weather-meta" id="wMeta"><span class="weather-loading" data-i18n="w_loading">Consultando clima…</span></div>
+          <div class="weather-place" data-i18n="w_place">Clima en Labateca</div>
+        </div>
+      </div>
+      <div class="stat-grid">
+        <div class="stat"><div class="stat-num">1.566</div><div class="stat-lbl" data-i18n="stat_alt">m.s.n.m.</div></div>
+        <div class="stat"><div class="stat-num">113</div><div class="stat-lbl" data-i18n="stat_dist">km a Cúcuta</div></div>
+        <div class="stat"><div class="stat-num">~20°</div><div class="stat-lbl" data-i18n="stat_temp">Promedio</div></div>
+      </div>
+
+      <div class="distance-card">
+        <button id="distBtn" class="dist-btn" onclick="calcDistance()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.2 7.8 13.4 13.4 7.8 16.2 10.6 10.6 16.2 7.8"/></svg>
+          <span data-i18n="dist_btn">Calcular distancia desde mi ubicación</span>
+        </button>
+        <div id="distResult" class="dist-result" hidden>
+          <div class="dist-line">
+            <span data-i18n="dist_pre">Estás a</span> <b id="distKm">—</b> km <span data-i18n="dist_post">de Labateca (en línea recta)</span>
+          </div>
+          <a id="distRoute" class="dist-route" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            <span data-i18n="dist_route">Ver ruta y tiempo en Google Maps</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SOBRE EL PUEBLO
+     ============================================================ -->
+<section class="about" id="pueblo">
+  <div class="wrap about-grid">
+    <div class="about-text reveal">
+      <span class="eyebrow" data-i18n="about_eyebrow">El pueblo</span>
+      <h2 data-i18n="about_title">Una perla del suroriente</h2>
+      <p data-i18n="about_p1"><strong>Labateca</strong> —“volcanes de Dios” en lengua chitarera— es un municipio de montaña reconocido por su café, su ganadería y unas cascadas ecoturísticas que no envidian nada a destinos más famosos.</p>
+      <p data-i18n="about_p2">Más de 2.000 hectáreas de su territorio forman parte del <strong>Páramo de Santurbán</strong>, una de las grandes fábricas de agua de Norte de Santander. Su templo colonial guarda el lienzo original de la Virgen de las Angustias y una pila bautismal tallada en piedra.</p>
+      <ul class="fact-list">
+        <li>
+          <span class="fact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l4-12 5 6 4-9 5 15z"/></svg></span>
+          <span><b data-i18n="fact1_t">Naturaleza viva</b><span data-i18n="fact1_d">Cascadas, ríos y páramo a pocos minutos del casco urbano.</span></span>
+        </li>
+        <li>
+          <span class="fact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></span>
+          <span><b data-i18n="fact2_t">Café de altura</b><span data-i18n="fact2_d">Junto con Toledo, tierra de café orgánico tipo exportación.</span></span>
+        </li>
+        <li>
+          <span class="fact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></span>
+          <span><b data-i18n="fact3_t">Herencia colonial</b><span data-i18n="fact3_d">Templo de Nuestra Señora de las Angustias y parque principal.</span></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="about-visual reveal d2">
+      <svg class="topo" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="#f6efe3" stroke-width="1.5">
+          <path d="M-20 100 Q120 60 200 110 T420 90"/>
+          <path d="M-20 160 Q120 120 200 170 T420 150"/>
+          <path d="M-20 220 Q120 180 200 230 T420 210"/>
+          <path d="M-20 280 Q120 240 200 290 T420 270"/>
+          <path d="M-20 340 Q120 300 200 350 T420 330"/>
+          <path d="M-20 400 Q120 360 200 410 T420 390"/>
+        </g>
+      </svg>
+      <div class="vquote">
+        <div class="q" data-i18n="quote">“De verdes altares se visten tus cerros, figurando murallas de recio color.”</div>
+        <div class="qs" data-i18n="quote_src">— Himno de Labateca</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LUGARES
+     ============================================================ -->
+<section id="lugares">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="places_eyebrow">Qué visitar</span>
+      <h2 data-i18n="places_title">Lugares para descubrir</h2>
+      <p data-i18n="places_sub">Filtra por categoría, guarda tus favoritos ♥ y arma tu ruta. Toca “Cómo llegar” para abrir Google Maps.</p>
+    </div>
+
+    <div class="filters reveal d1" id="filters"></div>
+    <div class="places-grid" id="placesGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RUTAS TEMÁTICAS
+     ============================================================ -->
+<section class=”rutas-sec” id=”rutas”>
+  <div class=”wrap”>
+    <div class=”sec-head”>
+      <span class=”eyebrow” data-i18n=”rutas_eyebrow”>Planes listos</span>
+      <h2 data-i18n=”rutas_title”>Rutas sugeridas</h2>
+      <p data-i18n=”rutas_sub”>Elige una ruta y se cargará automáticamente en tu planificador. Puedes añadir o quitar lugares a tu gusto.</p>
+    </div>
+    <div class=”rutas-grid” id=”rutasGrid”></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MAPA
+     ============================================================ -->
+<section class=”map-sec” id=”mapa”>
+  <div class=”wrap”>
+    <div class=”sec-head reveal”>
+      <span class=”eyebrow” data-i18n=”map_eyebrow”>Ubícate</span>
+      <h2 data-i18n=”map_title”>Todo Labateca en un mapa</h2>
+      <p data-i18n=”map_sub”>Explora cada lugar, mira las distancias y abre la navegación con un toque.</p>
+    </div>
+
+    <!-- Toggle: Mapa real | Mapa ilustrado -->
+    <div class=”map-tabs reveal d1”>
+      <button class=”map-tab active” id=”tabMapReal” onclick=”switchMap('real')”>
+        <svg viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2” stroke-linecap=”round” stroke-linejoin=”round”><polygon points=”3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21”/><line x1=”9” y1=”3” x2=”9” y2=”18”/><line x1=”15” y1=”6” x2=”15” y2=”21”/></svg>
+        <span data-i18n=”map_tab_real”>Mapa real</span>
+      </button>
+      <button class=”map-tab” id=”tabMapIlustrado” onclick=”switchMap('ilustrado')”>
+        <svg viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2” stroke-linecap=”round” stroke-linejoin=”round”><path d=”M12 2L2 7l10 5 10-5-10-5z”/><path d=”M2 17l10 5 10-5”/><path d=”M2 12l10 5 10-5”/></svg>
+        <span data-i18n=”map_tab_ilustrado”>Mapa ilustrado</span>
+      </button>
+    </div>
+
+    <!-- Mapa real (Leaflet + OSM) -->
+    <div id=”map” class=”reveal d1”></div>
+
+    <!-- Mapa ilustrado (Leaflet CRS.Simple + imagen) -->
+    <div id=”map-ilustrado”></div>
+
+    <!-- Nota bajo el mapa ilustrado -->
+    <div class=”map-note” id=”mapIlustradoNote” style=”display:none”>
+      <svg viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2” stroke-linecap=”round” stroke-linejoin=”round”><circle cx=”12” cy=”12” r=”10”/><line x1=”12” y1=”8” x2=”12” y2=”12”/><line x1=”12” y1=”16” x2=”12.01” y2=”16”/></svg>
+      <span data-i18n=”map_ilustrado_note”>Mapa artístico de referencia · toca un punto para ver la ficha · “Cómo llegar” abre Google Maps con la ubicación real</span>
+    </div>
+
+    <div class=”map-fallback” id=”mapFallback” data-i18n=”map_fallback”>El mapa interactivo se cargará cuando publiques el sitio. Mientras tanto, cada lugar tiene su botón “Cómo llegar”.</div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALERÍA
+     ============================================================ -->
+<section id="galeria">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="gal_eyebrow">Postales</span>
+      <h2 data-i18n="gal_title">Galería</h2>
+      <p data-i18n="gal_sub">Reemplaza estos espacios por tus propias fotos (mejor calidad y sin problemas de derechos).</p>
+    </div>
+    <div class="gallery-grid reveal d1" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACTO
+     ============================================================ -->
+<section class="contact" id="contacto">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <span class="eyebrow" data-i18n="contact_eyebrow">Hablemos</span>
+      <h2 data-i18n="contact_title">¿Planeas tu visita?</h2>
+      <p data-i18n="contact_sub">Escríbenos para recomendaciones, guías locales o información de hospedaje. Respondemos por el canal que prefieras.</p>
+      <div class="contact-channels">
+        <a class="channel" id="chWhatsapp" target="_blank" rel="noopener">
+          <span class="channel-ic wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.207zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg></span>
+          <span><b>WhatsApp</b><span data-i18n="ch_wa">Respuesta rápida · toca para chatear</span></span>
+        </a>
+        <a class="channel" id="chMail">
+          <span class="channel-ic mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></span>
+          <span><b data-i18n="ch_mail_t">Correo</b><span id="mailText">hola@labateca-turismo.co</span></span>
+        </a>
+        <a class="channel" id="chLoc" target="_blank" rel="noopener">
+          <span class="channel-ic loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span><b data-i18n="ch_loc_t">Cómo llegar</b><span data-i18n="ch_loc_d">Parque Principal de Labateca</span></span>
+        </a>
+        <!-- Botón descarga guía PDF -->
+        <button class="channel" onclick="generatePDF()" style="background:none;border:none;cursor:pointer;width:100%;text-align:left;font-family:inherit">
+          <span class="channel-ic" style="background:var(--forest)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </span>
+          <span><b data-i18n="pdf_btn">Descargar guía PDF</b><span data-i18n="pdf_sub" id="pdfStatus">Guía completa de lugares · sin conexión</span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="contact-form reveal d1">
+      <form id="contactForm">
+        <div class="fld">
+          <label for="name" data-i18n="f_name">Nombre</label>
+          <input type="text" id="name" name="name" required data-i18n-ph="f_name_ph" placeholder="Tu nombre" />
+        </div>
+        <div class="form-row">
+          <div class="fld">
+            <label for="email" data-i18n="f_email">Correo</label>
+            <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com" />
+          </div>
+          <div class="fld">
+            <label for="topic" data-i18n="f_topic">Tema</label>
+            <select id="topic" name="topic">
+              <option data-i18n="f_topic1">Recomendaciones de viaje</option>
+              <option data-i18n="f_topic2">Hospedaje</option>
+              <option data-i18n="f_topic3">Guía local</option>
+              <option data-i18n="f_topic4">Otro</option>
+            </select>
+          </div>
+        </div>
+        <div class="fld">
+          <label for="message" data-i18n="f_msg">Mensaje</label>
+          <textarea id="message" name="message" required data-i18n-ph="f_msg_ph" placeholder="Cuéntanos qué te gustaría conocer…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <span data-i18n="f_send">Enviar mensaje</span>
+        </button>
+        <div class="form-msg" id="formMsg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer id="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#2d6149"/><path d="M14 72 L36 36 L52 58 L66 28 L86 72 Z" fill="#d4a23f"/><circle cx="66" cy="24" r="9" fill="#bd5d34"/></svg>
+          <span><span class="brand-name">Labateca</span><br><span class="brand-sub">Volcanes de Dios</span></span>
+        </div>
+        <p class="foot-about" data-i18n="foot_about">Guía turística comunitaria de Labateca, Norte de Santander. Hecha por y para quienes aman este rincón de montaña.</p>
+        <div class="socials">
+          <a class="soc" id="socIg" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="soc" id="socFb" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a class="soc" id="socTk" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.8a4.8 4.8 0 0 1-3.3-1.6 4.8 4.8 0 0 1-1.2-2.7h-3.3v13.3a2.7 2.7 0 1 1-2-2.6V7.6a6 6 0 1 0 5.3 6V9a8 8 0 0 0 4.5 1.4z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="foot_explore">Explora</h4>
+        <ul>
+          <li><a href="#pueblo" data-i18n="nav_about">El pueblo</a></li>
+          <li><a href="#lugares" data-i18n="nav_places">Lugares</a></li>
+          <li><a href="#mapa" data-i18n="nav_map">Mapa</a></li>
+          <li><a href="#galeria" data-i18n="nav_gallery">Galería</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="foot_useful">Útil</h4>
+        <ul>
+          <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
+          <li><a id="footWa" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a id="footMap" target="_blank" rel="noopener" data-i18n="foot_directions">Cómo llegar</a></li>
+          <li><a href="/qr.html" data-i18n="foot_qr">Carteles QR</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n="foot_rights">© <span id="year"></span> Labateca Turismo · Hecho con cariño en la montaña</span>
+      <span data-i18n="foot_data">Datos verificados localmente · algunos por confirmar</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     CHAT IA FLOTANTE
+     ============================================================ -->
+<button id="chat-toggle" onclick="toggleChat()" aria-label="Asistente de viaje IA" title="Guía Labateca IA">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+</button>
+
+<div id="chat-panel" role="dialog" aria-labelledby="chatPanelTitle" aria-hidden="true">
+  <div class="chat-head">
+    <div class="chat-head-icon">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#d4a23f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l4-12 5 6 4-9 5 15z"/></svg>
+    </div>
+    <div class="chat-head-info">
+      <strong id="chatPanelTitle" data-i18n="chat_title">Guía Labateca IA</strong>
+      <small data-i18n="chat_subtitle">Pregúntame lo que quieras</small>
+    </div>
+    <button class="chat-close" onclick="toggleChat(false)" aria-label="Cerrar chat">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg ai" id="chatWelcome" data-i18n="chat_welcome">
+      ¡Hola! Soy tu guía virtual de Labateca. Puedo ayudarte con lugares para visitar, cómo llegar, qué comer y mucho más. ¿En qué te ayudo?
+    </div>
+  </div>
+
+  <div class="chat-suggestions" id="chatSuggestions">
+    <button class="chat-sug" onclick="sendSuggestion(this)" data-i18n="chat_sug1">¿Qué hacer en Labateca?</button>
+    <button class="chat-sug" onclick="sendSuggestion(this)" data-i18n="chat_sug2">¿Cómo llegar desde Cúcuta?</button>
+    <button class="chat-sug" onclick="sendSuggestion(this)" data-i18n="chat_sug3">¿Qué comer?</button>
+  </div>
+
+  <div class="chat-input-area">
+    <textarea class="chat-input" id="chatInput" rows="1"
+      data-i18n-ph="chat_placeholder"
+      placeholder="Escribe tu pregunta…"
+      onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendChat()}"
+      oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,100)+'px'"></textarea>
+    <button class="chat-send" id="chatSend" onclick="sendChat()" aria-label="Enviar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- ============================================================
+     LIGHTBOX
+     ============================================================ -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbTitle" hidden>
+  <!-- Fondo clicable para cerrar -->
+  <div class="lb-bg" onclick="closeLightbox()" aria-hidden="true"></div>
+
+  <!-- Botón cerrar -->
+  <button class="lb-close" id="lbClose" onclick="closeLightbox()" aria-label="Cerrar galería">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+
+  <!-- Navegación anterior/siguiente -->
+  <button class="lb-nav lb-prev" id="lbPrev" onclick="lightboxNav(-1)" aria-label="Foto anterior" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="lb-nav lb-next" id="lbNext" onclick="lightboxNav(1)" aria-label="Foto siguiente" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+
+  <!-- Contenido -->
+  <div class="lb-inner">
+    <!-- Imagen o placeholder (se pinta en paintLightbox) -->
+    <div id="lbMedia"></div>
+
+    <!-- Leyenda -->
+    <div class="lb-caption">
+      <strong id="lbTitle"></strong>
+      <span class="lb-rec" id="lbRec"></span>
+      <span class="lb-counter" id="lbCounter"></span>
+    </div>
+  </div>
+</div>
+
+<!-- DRAWER MI RUTA -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+<aside class="drawer" id="drawer" aria-label="Mi ruta">
+  <div class="drawer-head">
+    <h3><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#16352a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M6 16V8a4 4 0 0 1 4-4h4"/><path d="M18 8v8a4 4 0 0 1-4 4h-1"/></svg><span data-i18n="route_title">Mi ruta</span> <span class="cnt" id="drawerCount">0</span></h3>
+    <button class="drawer-close" onclick="closeDrawer()" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+  <div class="drawer-foot">
+    <a class="btn btn-primary" id="routeMapsBtn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+      <span data-i18n="route_open">Ver ruta en Google Maps</span>
+    </a>
+    <button class="clear" onclick="clearRoute()" data-i18n="route_clear">Vaciar ruta</button>
+  </div>
+</aside>
+
+<!-- ============================================================
+     LEAFLET JS
+     ============================================================ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+/* ============================================================
+   ⚙️ CONFIGURACIÓN — EDITA SOLO ESTO PARA PERSONALIZAR
+   ============================================================ */
+const CONFIG = {
+  // Número de WhatsApp en formato internacional, SIN "+" ni espacios
+  whatsapp: "573000000000",
+  // Correo de contacto
+  email: "hola@labateca-turismo.co",
+  // Clave gratuita de Web3Forms (https://web3forms.com) para recibir el formulario por correo.
+  // Mientras no la pongas, el formulario enviará por WhatsApp automáticamente.
+  web3formsKey: "TU_ACCESS_KEY",
+  // Cloud name de Cloudinary (https://cloudinary.com — cuenta gratuita).
+  // Ponlo cuando tengas las fotos subidas. Mientras esté vacío, se muestran placeholders.
+  cloudName: "",
+  // URL del Worker de IA (Cloudflare Workers AI)
+  chatWorkerUrl: "https://labateca-chat.jr22caceres.workers.dev",
+  // Centro del pueblo (Parque Principal) — coordenadas del casco urbano
+  townCoords: { lat: 7.3167, lng: -72.4833 },
+  // Redes sociales (pon tus enlaces; deja "#" si aún no tienes)
+  social: {
+    instagram: "#",
+    facebook: "#",
+    tiktok: "#"
+  }
+};
+
+/* ============================================================
+   🖼️ CLOUDINARY HELPER
+   cldUrl(publicId, transform) → URL optimizada lista para <img>
+   Ejemplo: cldUrl("labateca/lirgua-01", "w_640,h_400,c_fill,f_auto,q_auto")
+   Si cloudName está vacío o publicId es vacío, devuelve "".
+   ============================================================ */
+function cldUrl(publicId, transform) {
+  if (!publicId || !CONFIG.cloudName) return '';
+  const tr = transform || 'w_640,h_400,c_fill,f_auto,q_auto';
+  return `https://res.cloudinary.com/${CONFIG.cloudName}/image/upload/${tr}/${publicId}`;
+}
+
+/* ============================================================
+   📍 DATOS DE LUGARES — cargados desde data/places.json
+   El array se llena en init() vía fetch.
+   Schema: id, categoria, verified, coordsApprox, lat, lng,
+           mapaX, mapaY, telefono, nombre{es,en}, desc{es,en},
+           comoLlegar{es,en}, dist{es,en}, tiempo{es,en},
+           dificultad{es,en}, recomendacion{es,en}, fotos[]
+   ============================================================ */
+let PLACES = [];
+
+/* ── BLOQUE ELIMINADO: los datos viven ahora en data/places.json ──
+   Si necesitas un respaldo local de emergencia, copia aquí el JSON.
+const _PLACES_FALLBACK = [
+  {
+    id:"templo", cat:"cultura", verified:true, coordsApprox:false,
+    lat:7.3167, lng:-72.4833, phone:"",
+    name:{es:"Templo Nuestra Señora de las Angustias", en:"Our Lady of Sorrows Church"},
+    desc:{es:"Templo parroquial colonial que custodia el lienzo original de la Virgen y una pila bautismal tallada en piedra. El corazón espiritual e histórico del pueblo.",
+          en:"Colonial parish church that safeguards the original canvas of the Virgin and a stone-carved baptismal font. The town's spiritual and historic heart."},
+    dist:{es:"En el casco urbano", en:"In town center"},
+    time:{es:"Llegada inmediata", en:"Right there"},
+    diff:{es:"Acceso fácil", en:"Easy access"},
+    rec:{es:"Pregunta por los horarios de misa para entrar a verlo por dentro.", en:"Ask for mass times to see the interior."}
+  },
+  {
+    id:"parque", cat:"cultura", verified:true, coordsApprox:false,
+    lat:7.3165, lng:-72.4835, phone:"",
+    name:{es:"Parque Principal", en:"Main Square"},
+    desc:{es:"El punto de encuentro de Labateca, rodeado de la arquitectura tradicional, el busto del Libertador y el monumento La Columna. Ideal para empezar el recorrido.",
+          en:"Labateca's gathering point, surrounded by traditional architecture, the Liberator's bust and La Columna monument. The perfect place to start."},
+    dist:{es:"Centro del pueblo", en:"Town center"},
+    time:{es:"Punto de partida", en:"Starting point"},
+    diff:{es:"Acceso fácil", en:"Easy access"},
+    rec:{es:"Por las tardes es el mejor momento para tomar fotos con buena luz.", en:"Late afternoon offers the best light for photos."}
+  },
+  {
+    id:"casa-cultura", cat:"cultura", verified:true, coordsApprox:true,
+    lat:7.3169, lng:-72.4830, phone:"",
+    name:{es:"Casa de la Cultura", en:"House of Culture"},
+    desc:{es:"Espacio dedicado a la memoria y las tradiciones del municipio. Un buen lugar para entender la historia chitarera y la identidad labatecana.",
+          en:"A space dedicated to the town's memory and traditions. A great spot to grasp the Chitarera heritage and Labateca's identity."},
+    dist:{es:"A pasos del parque", en:"Steps from the square"},
+    time:{es:"2 min a pie", en:"2 min walk"},
+    diff:{es:"Acceso fácil", en:"Easy access"},
+    rec:{es:"Verifica días de apertura con la Alcaldía antes de ir.", en:"Check opening days with the town hall first."}
+  },
+  {
+    id:"lirgua", cat:"naturaleza", verified:true, coordsApprox:true,
+    lat:7.305, lng:-72.470, phone:"",
+    name:{es:"Cascada La Lirgua", en:"La Lirgua Waterfall"},
+    desc:{es:"La joya ecoturística de Labateca: una imponente cascada rodeada de naturaleza exuberante. Una de las caídas de agua más fotografiadas de la región.",
+          en:"Labateca's ecotourism jewel: an imposing waterfall surrounded by lush nature. One of the most photographed falls in the region."},
+    dist:{es:"~7 km del pueblo", en:"~7 km from town"},
+    time:{es:"Carro + caminata", en:"Car + hike"},
+    diff:{es:"Dificultad media", en:"Moderate"},
+    rec:{es:"Ve con guía local, lleva calzado antideslizante y sal temprano.", en:"Go with a local guide, wear non-slip shoes and start early."}
+  },
+  {
+    id:"laguna-negra", cat:"naturaleza", verified:false, coordsApprox:true,
+    lat:7.290, lng:-72.450, phone:"",
+    name:{es:"Laguna Negra", en:"Black Lagoon"},
+    desc:{es:"Una laguna de montaña enclavada en el entorno del páramo, de aguas oscuras y quietas. Un paraje de altura para los amantes del senderismo.",
+          en:"A mountain lagoon set in the páramo, with dark, still waters. A high-altitude spot for hiking lovers."},
+    dist:{es:"Zona de páramo", en:"Páramo area"},
+    time:{es:"Por confirmar", en:"To be confirmed"},
+    diff:{es:"Dificultad alta", en:"Challenging"},
+    rec:{es:"Requiere guía y buena condición física. Clima frío del páramo.", en:"Requires a guide and good fitness. Cold páramo weather."}
+  },
+  {
+    id:"santurban", cat:"naturaleza", verified:true, coordsApprox:true,
+    lat:7.270, lng:-72.440, phone:"",
+    name:{es:"Páramo de Santurbán (sector Labateca)", en:"Santurbán Páramo (Labateca sector)"},
+    desc:{es:"Más de 2.000 hectáreas del municipio pertenecen a este ecosistema único, fábrica de agua de Norte de Santander, con frailejones y biodiversidad de altura.",
+          en:"Over 2,000 hectares of the municipality belong to this unique ecosystem, a water factory for Norte de Santander, with frailejones and high-altitude biodiversity."},
+    dist:{es:"Zona alta del municipio", en:"Upper municipality"},
+    time:{es:"Excursión de día", en:"Full-day trip"},
+    diff:{es:"Dificultad alta", en:"Challenging"},
+    rec:{es:"Solo con guía autorizado. Abrígate: temperaturas muy bajas.", en:"Authorized guide only. Dress warm: very low temperatures."}
+  },
+  {
+    id:"cafe", cat:"gastronomia", verified:false, coordsApprox:true,
+    lat:7.320, lng:-72.490, phone:"",
+    name:{es:"Ruta del Café", en:"Coffee Route"},
+    desc:{es:"Labateca y Toledo son tierra de café orgánico tipo exportación. Visita una finca cafetera para vivir el proceso del grano y probarlo recién tostado.",
+          en:"Labateca and Toledo are land of organic export-grade coffee. Visit a coffee farm to experience the bean's journey and taste it freshly roasted."},
+    dist:{es:"Veredas cercanas", en:"Nearby countryside"},
+    time:{es:"Por coordinar", en:"To arrange"},
+    diff:{es:"Acceso medio", en:"Moderate access"},
+    rec:{es:"Espacio para una finca de la comunidad. Coordina la visita con anticipación.", en:"Spot for a community farm. Arrange the visit in advance."}
+  },
+  {
+    id:"dulces", cat:"gastronomia", verified:true, coordsApprox:true,
+    lat:7.3166, lng:-72.4837, phone:"",
+    name:{es:"Dulces y sabores típicos", en:"Local sweets & flavors"},
+    desc:{es:"No te vayas sin probar el arequipe de café, el quesillo de ahuyama, los bocadillos, el guarapo de frutas y las hayacas de maíz. Pura tradición nortesantandereana.",
+          en:"Don't leave without trying coffee arequipe, squash quesillo, bocadillos, fruit guarapo and corn hayacas. Pure regional tradition."},
+    dist:{es:"En el pueblo", en:"In town"},
+    time:{es:"Cuando quieras", en:"Anytime"},
+    diff:{es:"Acceso fácil", en:"Easy access"},
+    rec:{es:"Pregunta en las tiendas del parque por los productos del día.", en:"Ask the shops around the square for the day's treats."}
+  },
+  {
+    id:"hospedaje", cat:"hospedaje", verified:false, coordsApprox:true,
+    lat:7.3163, lng:-72.4832, phone:"",
+    name:{es:"Hospedaje local", en:"Local lodging"},
+    desc:{es:"Espacio reservado para los hospedajes, posadas y fincas turísticas de Labateca. Si tienes uno, ¡este es tu lugar en la guía!",
+          en:"A space reserved for Labateca's lodges, inns and tourist farms. If you run one, this is your spot in the guide!"},
+    dist:{es:"Por definir", en:"To be defined"},
+    time:{es:"—", en:"—"},
+    diff:{es:"—", en:"—"},
+    rec:{es:"Aporte de la comunidad: agrega aquí los datos de tu negocio.", en:"Community contribution: add your business details here."}
+  }
+];
+── FIN BLOQUE ELIMINADO ── */
+
+/* ============================================================
+   🌐 TRADUCCIONES (ES / EN)
+   ============================================================ */
+const I18N = {
+  es:{
+    brand_sub:"Volcanes de Dios",
+    nav_home:"Inicio", nav_about:"El pueblo", nav_places:"Lugares", nav_map:"Mapa", nav_gallery:"Galería", nav_contact:"Contacto",
+    hero_eyebrow:"Norte de Santander · Colombia",
+    hero_tag:"Donde la montaña guarda volcanes de Dios",
+    hero_lead:"Cascadas de hasta 100 metros, café de altura y el Páramo de Santurbán. Una perla escondida del suroriente nortesantandereano, lista para descubrirse.",
+    hero_btn1:"Explorar lugares", hero_btn2:"Ver mapa",
+    w_loading:"Consultando clima…", w_place:"Clima en Labateca",
+    stat_alt:"m.s.n.m.", stat_dist:"km a Cúcuta", stat_temp:"Promedio",
+    dist_btn:"Calcular distancia desde mi ubicación",
+    dist_locating:"Ubicándote…",
+    dist_pre:"Estás a", dist_post:"de Labateca (en línea recta)",
+    dist_route:"Ver ruta y tiempo en Google Maps",
+    dist_denied:"No pudimos acceder a tu ubicación. Activa los permisos de ubicación e inténtalo de nuevo.",
+    dist_unsupported:"Tu navegador no permite geolocalización. Usa el botón “Cómo llegar”.",
+    dist_retry:"Reintentar",
+    about_eyebrow:"El pueblo", about_title:"Una perla del suroriente",
+    about_p1:"<strong>Labateca</strong> —“volcanes de Dios” en lengua chitarera— es un municipio de montaña reconocido por su café, su ganadería y unas cascadas ecoturísticas que no envidian nada a destinos más famosos.",
+    about_p2:"Más de 2.000 hectáreas de su territorio forman parte del <strong>Páramo de Santurbán</strong>, una de las grandes fábricas de agua de Norte de Santander. Su templo colonial guarda el lienzo original de la Virgen de las Angustias y una pila bautismal tallada en piedra.",
+    fact1_t:"Naturaleza viva", fact1_d:"Cascadas, ríos y páramo a pocos minutos del casco urbano.",
+    fact2_t:"Café de altura", fact2_d:"Junto con Toledo, tierra de café orgánico tipo exportación.",
+    fact3_t:"Herencia colonial", fact3_d:"Templo de Nuestra Señora de las Angustias y parque principal.",
+    quote:"“De verdes altares se visten tus cerros, figurando murallas de recio color.”", quote_src:"— Himno de Labateca",
+    places_eyebrow:”Qué visitar”, places_title:”Lugares para descubrir”,
+    places_sub:”Filtra por categoría, guarda tus favoritos ♥ y arma tu ruta. Toca “Cómo llegar” para abrir Google Maps.”,
+    rutas_eyebrow:”Planes listos”, rutas_title:”Rutas sugeridas”,
+    rutas_sub:”Elige una ruta y se cargará automáticamente en tu planificador. Puedes añadir o quitar lugares a tu gusto.”,
+    rutas_btn:”Usar esta ruta”, rutas_btn_active:”✓ Ruta cargada”,
+    rutas_lugares:”lugares”, rutas_duracion:”Duración”, rutas_dificultad:”Dificultad”,
+    nav_routes:”Rutas”,
+    map_eyebrow:”Ubícate”, map_title:”Todo Labateca en un mapa”, map_sub:”Explora cada lugar, mira las distancias y abre la navegación con un toque.”,
+    map_tab_real:”Mapa real”, map_tab_ilustrado:”Mapa ilustrado”,
+    map_ilustrado_note:”Mapa artístico de referencia · toca un punto para ver la ficha · \”Cómo llegar\” abre Google Maps con la ubicación real”,
+    map_fallback:”El mapa interactivo se cargará cuando publiques el sitio. Mientras tanto, cada lugar tiene su botón “Cómo llegar”.”,
+    gal_eyebrow:"Postales", gal_title:"Galería", gal_sub:"Reemplaza estos espacios por tus propias fotos (mejor calidad y sin problemas de derechos).",
+    contact_eyebrow:"Hablemos", contact_title:"¿Planeas tu visita?",
+    contact_sub:"Escríbenos para recomendaciones, guías locales o información de hospedaje. Respondemos por el canal que prefieras.",
+    pdf_btn:"Descargar guía PDF", pdf_sub:"Guía completa de lugares · sin conexión",
+    pdf_generating:"Generando PDF…", pdf_done:"¡PDF listo! Revisa tus descargas.",
+    ch_wa:"Respuesta rápida · toca para chatear", ch_mail_t:"Correo",
+    ch_loc_t:"Cómo llegar", ch_loc_d:"Parque Principal de Labateca",
+    f_name:"Nombre", f_name_ph:"Tu nombre", f_email:"Correo", f_topic:"Tema",
+    f_topic1:"Recomendaciones de viaje", f_topic2:"Hospedaje", f_topic3:"Guía local", f_topic4:"Otro",
+    f_msg:"Mensaje", f_msg_ph:"Cuéntanos qué te gustaría conocer…", f_send:"Enviar mensaje",
+    foot_about:"Guía turística comunitaria de Labateca, Norte de Santander. Hecha por y para quienes aman este rincón de montaña.",
+    foot_explore:"Explora", foot_useful:"Útil", foot_directions:"Cómo llegar",
+    foot_qr:"Carteles QR",
+    foot_rights:"Labateca Turismo · Hecho con cariño en la montaña", foot_data:"Datos verificados localmente · algunos por confirmar",
+    route_title:"Mi ruta", route_open:"Ver ruta en Google Maps", route_clear:"Vaciar ruta",
+    cta_how:"Cómo llegar", cta_add:"Agregar", cta_added:"En ruta",
+    fil_all:"Todos", fil_naturaleza:"Naturaleza", fil_cultura:"Cultura", fil_gastronomia:"Gastronomía", fil_hospedaje:"Hospedaje", fil_fav:"♥ Favoritos",
+    verify_badge:"Por verificar", approx_note:"Ubicación aproximada — por confirmar en campo",
+    route_empty:"Tu ruta está vacía. Toca “Agregar” en los lugares que quieras visitar.",
+    fav_empty:"Aún no tienes favoritos. Toca el ♥ en un lugar para guardarlo.",
+    msg_ok:"¡Gracias! Tu mensaje fue enviado. Te responderemos pronto.",
+    msg_wa:"Te llevamos a WhatsApp para enviar tu mensaje…",
+    msg_err:"Hubo un problema. Escríbenos por WhatsApp y con gusto te ayudamos.",
+    ph_photo:"Tu foto aquí",
+    lb_close:"Cerrar galería", lb_prev:"Foto anterior", lb_next:"Foto siguiente",
+    lb_of:"de", lb_no_photo:"Foto próximamente", lb_open:"Ver fotos",
+    gal_click_hint:"Toca para ver la ficha del lugar",
+    chat_title:"Guía Labateca IA", chat_subtitle:"Pregúntame lo que quieras",
+    chat_welcome:"¡Hola! Soy tu guía virtual de Labateca. Puedo ayudarte con lugares para visitar, cómo llegar, qué comer y mucho más. ¿En qué te ayudo?",
+    chat_placeholder:"Escribe tu pregunta…",
+    chat_sug1:"¿Qué hacer en Labateca?", chat_sug2:"¿Cómo llegar desde Cúcuta?", chat_sug3:"¿Qué comer?",
+    chat_error:"No pude conectarme ahora. <a href='{{wa}}' target='_blank' style='color:var(--clay);font-weight:700'>Escríbenos por WhatsApp</a> y te ayudamos."
+  },
+  en:{
+    brand_sub:"God's Volcanoes",
+    nav_home:"Home", nav_about:"The town", nav_places:"Places", nav_map:"Map", nav_gallery:"Gallery", nav_contact:"Contact",
+    hero_eyebrow:"Norte de Santander · Colombia",
+    hero_tag:"Where the mountains keep God's volcanoes",
+    hero_lead:"Waterfalls up to 100 meters tall, high-altitude coffee and the Santurbán Páramo. A hidden gem of southeastern Norte de Santander, waiting to be discovered.",
+    hero_btn1:"Explore places", hero_btn2:"View map",
+    w_loading:"Checking weather…", w_place:"Weather in Labateca",
+    stat_alt:"m.a.s.l.", stat_dist:"km to Cúcuta", stat_temp:"Average",
+    dist_btn:"Calculate distance from my location",
+    dist_locating:"Locating you…",
+    dist_pre:"You're", dist_post:"from Labateca (straight line)",
+    dist_route:"See route & time on Google Maps",
+    dist_denied:"We couldn't access your location. Enable location permissions and try again.",
+    dist_unsupported:"Your browser doesn't support geolocation. Use the “Directions” button.",
+    dist_retry:"Try again",
+    about_eyebrow:"The town", about_title:"A gem of the southeast",
+    about_p1:"<strong>Labateca</strong> —“God's volcanoes” in the Chitarera tongue— is a mountain town known for its coffee, cattle and ecotourism waterfalls that rival far more famous destinations.",
+    about_p2:"Over 2,000 hectares of its territory belong to the <strong>Santurbán Páramo</strong>, one of the great water factories of Norte de Santander. Its colonial church guards the original canvas of the Virgin of Sorrows and a stone-carved baptismal font.",
+    fact1_t:"Living nature", fact1_d:"Waterfalls, rivers and páramo just minutes from town.",
+    fact2_t:"Highland coffee", fact2_d:"Alongside Toledo, a land of organic export-grade coffee.",
+    fact3_t:"Colonial heritage", fact3_d:"Our Lady of Sorrows church and the main square.",
+    quote:"“Your hills dress in green altars, shaping walls of mighty color.”", quote_src:"— Anthem of Labateca",
+    places_eyebrow:”What to see”, places_title:”Places to discover”,
+    places_sub:”Filter by category, save your favorites ♥ and build your route. Tap “Directions” to open Google Maps.”,
+    rutas_eyebrow:”Ready-made plans”, rutas_title:”Suggested routes”,
+    rutas_sub:”Pick a route and it loads automatically into your planner. Add or remove places as you wish.”,
+    rutas_btn:”Use this route”, rutas_btn_active:”✓ Route loaded”,
+    rutas_lugares:”places”, rutas_duracion:”Duration”, rutas_dificultad:”Difficulty”,
+    nav_routes:”Routes”,
+    map_eyebrow:”Find your way”, map_title:”All of Labateca on one map”, map_sub:”Explore every place, check distances and launch navigation with one tap.”,
+    map_tab_real:”Real map”, map_tab_ilustrado:”Illustrated map”,
+    map_ilustrado_note:”Artistic reference map · tap a dot to see the place card · \”Directions\” opens Google Maps with the real location”,
+    map_fallback:”The interactive map will load once you publish the site. Meanwhile, every place has its own “Directions” button.”,
+    gal_eyebrow:"Postcards", gal_title:"Gallery", gal_sub:"Replace these slots with your own photos (better quality and no copyright issues).",
+    contact_eyebrow:"Let's talk", contact_title:"Planning your visit?",
+    contact_sub:"Write to us for recommendations, local guides or lodging info. We'll reply through whichever channel you prefer.",
+    pdf_btn:"Download PDF guide", pdf_sub:"Full place guide · offline ready",
+    pdf_generating:"Generating PDF…", pdf_done:"PDF ready! Check your downloads.",
+    ch_wa:"Quick reply · tap to chat", ch_mail_t:"Email",
+    ch_loc_t:"Directions", ch_loc_d:"Labateca Main Square",
+    f_name:"Name", f_name_ph:"Your name", f_email:"Email", f_topic:"Topic",
+    f_topic1:"Travel recommendations", f_topic2:"Lodging", f_topic3:"Local guide", f_topic4:"Other",
+    f_msg:"Message", f_msg_ph:"Tell us what you'd like to discover…", f_send:"Send message",
+    foot_about:"A community travel guide to Labateca, Norte de Santander. Made by and for those who love this mountain corner.",
+    foot_explore:"Explore", foot_useful:"Useful", foot_directions:"Directions",
+    foot_qr:"QR Posters",
+    foot_rights:"Labateca Tourism · Made with love in the mountains", foot_data:"Locally verified data · some still to confirm",
+    route_title:"My route", route_open:"Open route in Google Maps", route_clear:"Clear route",
+    cta_how:"Directions", cta_add:"Add", cta_added:"In route",
+    fil_all:"All", fil_naturaleza:"Nature", fil_cultura:"Culture", fil_gastronomia:"Food", fil_hospedaje:"Lodging", fil_fav:"♥ Favorites",
+    verify_badge:"To verify", approx_note:"Approximate location — confirm on site",
+    route_empty:"Your route is empty. Tap “Add” on the places you'd like to visit.",
+    fav_empty:"No favorites yet. Tap the ♥ on a place to save it.",
+    msg_ok:"Thank you! Your message was sent. We'll get back to you soon.",
+    msg_wa:"Taking you to WhatsApp to send your message…",
+    msg_err:"Something went wrong. Reach us on WhatsApp and we'll gladly help.",
+    ph_photo:"Your photo here",
+    lb_close:"Close gallery", lb_prev:"Previous photo", lb_next:"Next photo",
+    lb_of:"of", lb_no_photo:"Photo coming soon", lb_open:"View photos",
+    gal_click_hint:"Tap to see the place card",
+    chat_title:"Labateca AI Guide", chat_subtitle:"Ask me anything",
+    chat_welcome:"Hi! I'm your Labateca virtual guide. I can help you with places to visit, how to get there, what to eat and much more. How can I help?",
+    chat_placeholder:"Type your question…",
+    chat_sug1:"What to do in Labateca?", chat_sug2:"How to get from Cúcuta?", chat_sug3:"What to eat?",
+    chat_error:"Could not connect right now. <a href='{{wa}}' target='_blank' style='color:var(--clay);font-weight:700'>Write us on WhatsApp</a> and we'll help you."
+  }
+};
+
+/* fotos sugeridas para la galería (subjects) */
+const GALLERY = [
+  {key:"big",  cls:"gal-ph",     cap:{es:"Cascada La Lirgua", en:"La Lirgua Waterfall"}},
+  {key:"",     cls:"gal-ph alt", cap:{es:"Templo colonial", en:"Colonial church"}},
+  {key:"",     cls:"gal-ph gold",cap:{es:"Café de Labateca", en:"Labateca coffee"}},
+  {key:"tall", cls:"gal-ph",     cap:{es:"Páramo de Santurbán", en:"Santurbán Páramo"}},
+  {key:"",     cls:"gal-ph alt", cap:{es:"Parque principal", en:"Main square"}},
+  {key:"wide", cls:"gal-ph gold",cap:{es:"Paisaje de montaña", en:"Mountain landscape"}},
+  {key:"",     cls:"gal-ph",     cap:{es:"Ríos y quebradas", en:"Rivers & streams"}}
+];
+
+/* ============================================================
+   ESTADO + ALMACENAMIENTO (con respaldo en memoria)
+   ============================================================ */
+let lang = "es";
+let activeFilter = "all";
+const memStore = {};
+const store = {
+  get(k){ try{ const v=localStorage.getItem(k); return v?JSON.parse(v):memStore[k]??null; }catch(e){ return memStore[k]??null; } },
+  set(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){ memStore[k]=v; } }
+};
+let favorites = store.get("lab_favs") || [];
+let route = store.get("lab_route") || [];
+
+const t = (k)=> (I18N[lang][k] ?? k);
+const placeName = (p)=> (p.nombre || p.name || {})[lang] || '';
+
+/* ============================================================
+   ÍCONOS SVG reutilizables
+   ============================================================ */
+const IC = {
+  pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>',
+  clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  hill:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M3 20l6-9 4 5 3-4 5 8"/></svg>',
+  cam:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>',
+  heart:'<svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>',
+  navi:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>',
+  plus:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>',
+  check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>',
+  warn:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>'
+};
+const CATS = ["all","naturaleza","cultura","gastronomia","hospedaje","fav"];
+
+/* ============================================================
+   RENDER FILTROS
+   ============================================================ */
+function renderFilters(){
+  const wrap = document.getElementById("filters");
+  wrap.innerHTML = CATS.map(c=>{
+    let count;
+    if(c==="all") count = PLACES.length;
+    else if(c==="fav") count = favorites.length;
+    else count = PLACES.filter(p=>(p.categoria||p.cat)===c).length;
+    return `<button class="chip ${activeFilter===c?'active':''}" onclick="setFilter('${c}')">
+      ${t('fil_'+c)} <span class="ct">${count}</span></button>`;
+  }).join("");
+}
+function setFilter(c){ activeFilter=c; renderFilters(); renderPlaces(); }
+
+/* ============================================================
+   RENDER LUGARES
+   ============================================================ */
+function renderPlaces(){
+  const grid = document.getElementById("placesGrid");
+  let list = PLACES.slice();
+  if(activeFilter==="fav") list = list.filter(p=>favorites.includes(p.id));
+  else if(activeFilter!=="all") list = list.filter(p=>(p.categoria||p.cat)===activeFilter);
+
+  if(!list.length){
+    grid.innerHTML = `<div class="empty-state">${activeFilter==='fav'?t('fav_empty'):'—'}</div>`;
+    return;
+  }
+
+  grid.innerHTML = list.map(p=>{
+    const isFav   = favorites.includes(p.id);
+    const inRoute = route.includes(p.id);
+    const cat     = p.categoria || p.cat;
+    const gmaps   = `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`;
+
+    // Foto: schema nuevo usa fotos[] (IDs Cloudinary), schema legacy usa img
+    const firstPhoto = (p.fotos && p.fotos.length) ? p.fotos[0] : (p.img || '');
+    const photoUrl   = firstPhoto
+      ? (firstPhoto.startsWith('http') ? firstPhoto : cldUrl(firstPhoto))
+      : '';
+    const media = photoUrl
+      ? `<img src="${photoUrl}" alt="${placeName(p)}" loading="lazy">`
+      : `<div class="pc-ph">${IC.cam}<small>${placeName(p)}</small></div>`;
+
+    const badge = p.verified
+      ? `<span class="pc-badge">${t('fil_'+cat)}</span>`
+      : `<span class="pc-badge pc-verify">${IC.warn} ${t('verify_badge')}</span>`;
+    const note = p.coordsApprox
+      ? `<div class="pc-note">${IC.warn}<span>${t('approx_note')}</span></div>` : "";
+
+    // Campos: soporte schema nuevo (nombre/tiempo/dificultad) y legacy (name/time/diff)
+    const desc     = (p.desc||{})[lang] || '';
+    const dist     = (p.dist||{})[lang] || '';
+    const tiempo   = (p.tiempo||p.time||{})[lang] || '';
+    const dific    = (p.dificultad||p.diff||{})[lang] || '';
+
+    return `
+    <article class="place-card">
+      <div class="pc-media" role="button" tabindex="0"
+           onclick="if(!event.target.closest('.pc-fav'))openLightbox('${p.id}')"
+           onkeydown="if((event.key==='Enter'||event.key===' ')&&!event.target.closest('.pc-fav')){event.preventDefault();openLightbox('${p.id}')}"
+           aria-label="${t('lb_open')}: ${placeName(p)}">
+        ${media}
+        ${badge}
+        <button class="pc-fav ${isFav?'on':''}" onclick="toggleFav('${p.id}')" aria-label="Favorito" title="Favorito">${IC.heart}</button>
+      </div>
+      <div class="pc-body">
+        <div class="pc-cat">${t('fil_'+cat)}</div>
+        <h3 class="pc-title">${placeName(p)}</h3>
+        <p class="pc-desc">${desc}</p>
+        <div class="pc-stats">
+          <span class="pc-stat">${IC.pin}${dist}</span>
+          <span class="pc-stat">${IC.clock}${tiempo}</span>
+          <span class="pc-stat">${IC.hill}${dific}</span>
+        </div>
+        <div class="pc-actions">
+          <a class="pc-btn map" href="${gmaps}" target="_blank" rel="noopener">${IC.navi}${t('cta_how')}</a>
+          <button class="pc-btn route ${inRoute?'added':''}" onclick="toggleRoute('${p.id}')">
+            ${inRoute?IC.check:IC.plus}${inRoute?t('cta_added'):t('cta_add')}
+          </button>
+        </div>
+        ${note}
+      </div>
+    </article>`;
+  }).join("");
+}
+
+/* ============================================================
+   FAVORITOS + RUTA
+   ============================================================ */
+function toggleFav(id){
+  const i = favorites.indexOf(id);
+  if(i>-1) favorites.splice(i,1); else favorites.push(id);
+  store.set("lab_favs",favorites);
+  renderFilters(); renderPlaces();
+}
+function toggleRoute(id){
+  const i = route.indexOf(id);
+  if(i>-1) route.splice(i,1); else route.push(id);
+  store.set("lab_route",route);
+  renderPlaces(); renderDrawer(); updateBadges();
+}
+function clearRoute(){ route=[]; store.set("lab_route",route); renderPlaces(); renderDrawer(); updateBadges(); }
+
+function updateBadges(){
+  const b=document.getElementById("routeBadge");
+  b.textContent=route.length; b.classList.toggle("show",route.length>0);
+  document.getElementById("drawerCount").textContent=route.length;
+}
+
+function renderDrawer(){
+  const body=document.getElementById("drawerBody");
+  const btn=document.getElementById("routeMapsBtn");
+  if(!route.length){
+    body.innerHTML=`<div class="drawer-empty">${IC.navi}<p>${t('route_empty')}</p></div>`;
+    btn.style.opacity=".5"; btn.style.pointerEvents="none"; btn.removeAttribute("href");
+    return;
+  }
+  body.innerHTML=route.map((id,idx)=>{
+    const p=PLACES.find(x=>x.id===id); if(!p) return "";
+    return `<div class="route-item">
+      <span class="route-num">${idx+1}</span>
+      <span style="flex:1"><b>${placeName(p)}</b><span>${(p.dist||{})[lang]||''} · ${(p.dificultad||p.diff||{})[lang]||''}</span></span>
+      <button class="rm" onclick="toggleRoute('${p.id}')" aria-label="Quitar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>`;
+  }).join("");
+  // ruta de Google Maps: del pueblo a través de cada parada
+  const stops=route.map(id=>{const p=PLACES.find(x=>x.id===id);return `${p.lat},${p.lng}`;});
+  const dir=`https://www.google.com/maps/dir/${CONFIG.townCoords.lat},${CONFIG.townCoords.lng}/${stops.join("/")}`;
+  btn.style.opacity="1"; btn.style.pointerEvents="auto"; btn.setAttribute("href",dir);
+}
+
+function openDrawer(){ document.getElementById("drawer").classList.add("open"); document.getElementById("drawerOverlay").classList.add("open"); }
+function closeDrawer(){ document.getElementById("drawer").classList.remove("open"); document.getElementById("drawerOverlay").classList.remove("open"); }
+
+/* ============================================================
+   GALERÍA
+   Alimentada de PLACES (fotos reales si existen, placeholder si no).
+   Cada item es clicable y abre el lightbox del lugar.
+   ============================================================ */
+function renderGallery(){
+  const grid = document.getElementById("galleryGrid");
+
+  // Si PLACES no cargó aún, mostrar skeleton de la galería estática
+  if (!PLACES.length) {
+    grid.innerHTML = GALLERY.map(g =>
+      `<div class="gal ${g.key}"><div class="${g.cls}">${IC.cam}<small>${t('ph_photo')}</small></div>
+       <div class="gal-cap">${g.cap[lang]}</div></div>`
+    ).join(""); return;
+  }
+
+  // Layout de 7 celdas (igual que el grid original)
+  const LAYOUT = ['big','','','tall','','wide',''];
+  const PH_CLS  = ['gal-ph','gal-ph alt','gal-ph gold','gal-ph','gal-ph alt','gal-ph gold','gal-ph'];
+
+  // Tomar los primeros 7 lugares
+  const items = PLACES.slice(0, 7);
+
+  grid.innerHTML = items.map((p, i) => {
+    const firstPhoto = p.fotos && p.fotos.length ? p.fotos[0] : '';
+    const url        = firstPhoto ? cldUrl(firstPhoto, 'w_800,h_500,c_fill,f_auto,q_auto') : '';
+    const caption    = placeName(p);
+
+    const inner = url
+      ? `<img src="${url}" alt="${caption}" loading="lazy">`
+      : `<div class="${PH_CLS[i]}">${IC.cam}<small>${caption}</small></div>`;
+
+    return `<div class="gal ${LAYOUT[i]||''}"
+      role="button" tabindex="0"
+      onclick="openLightbox('${p.id}')"
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('${p.id}')}"
+      aria-label="${t('lb_open')}: ${caption}">
+      ${inner}
+      <div class="gal-cap">${caption}</div>
+    </div>`;
+  }).join("");
+}
+
+/* ============================================================
+   RUTAS TEMÁTICAS
+   ============================================================ */
+let RUTAS = [];
+
+async function loadRutas() {
+  try {
+    const res  = await fetch('/data/rutas.json');
+    const json = await res.json();
+    RUTAS = Array.isArray(json.rutas) ? json.rutas : [];
+    renderRutas();
+  } catch(e) {
+    console.warn('[Labateca] No se pudo cargar rutas.json:', e.message);
+  }
+}
+
+function renderRutas() {
+  const grid = document.getElementById('rutasGrid');
+  if (!grid || !RUTAS.length) return;
+
+  grid.innerHTML = RUTAS.map((r, i) => {
+    const nombre   = r.nombre[lang]      || r.nombre.es;
+    const desc     = r.desc[lang]        || r.desc.es;
+    const duracion = r.duracion[lang]    || r.duracion.es;
+    const dific    = r.dificultad[lang]  || r.dificultad.es;
+    const rec      = r.recomendacion[lang] || r.recomendacion.es || '';
+    const nLugares = r.lugares.length;
+
+    // Cuántos de los lugares de esta ruta ya están en "Mi ruta"
+    const yaEnRuta = r.lugares.every(id => route.includes(id));
+
+    return `
+    <div class="ruta-card" style="--ruta-color:${r.color};--ruta-color-soft:${r.colorSoft};animation:cardIn .4s var(--ease) both;animation-delay:${i * 0.08}s">
+      <div class="ruta-accent"></div>
+      <div class="ruta-body">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+          <div class="ruta-icon">${r.icono}</div>
+          <div class="ruta-lugares-count">${nLugares} ${t('rutas_lugares')}</div>
+        </div>
+        <div class="ruta-name">${nombre}</div>
+        <div class="ruta-desc">${desc}</div>
+        <div class="ruta-meta">
+          <span class="ruta-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            ${duracion}
+          </span>
+          <span class="ruta-chip dif">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M3 20l6-9 4 5 3-4 5 8"/></svg>
+            ${dific}
+          </span>
+        </div>
+        ${rec ? `<div class="ruta-rec">${rec}</div>` : ''}
+        <button class="ruta-btn" onclick="applyRoute('${r.id}')" aria-label="${t('rutas_btn')}: ${nombre}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M6 16V8a4 4 0 0 1 4-4h4"/><path d="M18 8v8a4 4 0 0 1-4 4h-1"/></svg>
+          <span id="rutaBtn_${r.id}">${yaEnRuta ? t('rutas_btn_active') : t('rutas_btn')}</span>
+        </button>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Las cards usan animación CSS propia (cardIn) — no necesitan IntersectionObserver
+}
+
+function applyRoute(rutaId) {
+  const ruta = RUTAS.find(r => r.id === rutaId);
+  if (!ruta) return;
+
+  // Reemplazar la ruta actual con los lugares de esta ruta
+  route = [...ruta.lugares];
+  store.set('lab_route', route);
+
+  // Actualizar UI
+  renderPlaces();
+  renderDrawer();
+  updateBadges();
+  renderRutas(); // refrescar estado del botón
+
+  // Abrir el drawer para que el usuario lo vea
+  openDrawer();
+}
+
+/* ============================================================
+   i18n: aplicar idioma
+   ============================================================ */
+function applyI18n(){
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const k=el.getAttribute("data-i18n");
+    if(I18N[lang][k]!==undefined) el.innerHTML=I18N[lang][k];
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el=>{
+    const k=el.getAttribute("data-i18n-ph");
+    if(I18N[lang][k]!==undefined) el.setAttribute("placeholder",I18N[lang][k]);
+  });
+}
+function setLang(l){
+  lang=l; store.set("lab_lang",l);
+  document.getElementById("langEs").classList.toggle("active",l==="es");
+  document.getElementById("langEn").classList.toggle("active",l==="en");
+  applyI18n(); renderFilters(); renderPlaces(); renderGallery(); renderDrawer(); renderRutas();
+}
+
+/* ============================================================
+   CLIMA EN VIVO (Open-Meteo, sin API key)
+   ============================================================ */
+const WCODE={
+  0:{e:"☀️",es:"Despejado",en:"Clear"},1:{e:"🌤️",es:"Mayormente despejado",en:"Mostly clear"},
+  2:{e:"⛅",es:"Parcialmente nublado",en:"Partly cloudy"},3:{e:"☁️",es:"Nublado",en:"Cloudy"},
+  45:{e:"🌫️",es:"Neblina",en:"Fog"},48:{e:"🌫️",es:"Neblina",en:"Fog"},
+  51:{e:"🌦️",es:"Llovizna",en:"Drizzle"},53:{e:"🌦️",es:"Llovizna",en:"Drizzle"},55:{e:"🌦️",es:"Llovizna",en:"Drizzle"},
+  61:{e:"🌧️",es:"Lluvia ligera",en:"Light rain"},63:{e:"🌧️",es:"Lluvia",en:"Rain"},65:{e:"🌧️",es:"Lluvia fuerte",en:"Heavy rain"},
+  80:{e:"🌧️",es:"Chubascos",en:"Showers"},81:{e:"🌧️",es:"Chubascos",en:"Showers"},82:{e:"⛈️",es:"Chubascos fuertes",en:"Heavy showers"},
+  95:{e:"⛈️",es:"Tormenta",en:"Thunderstorm"},96:{e:"⛈️",es:"Tormenta",en:"Thunderstorm"}
+};
+let lastWeather=null;
+async function loadWeather(){
+  const {lat,lng}=CONFIG.townCoords;
+  const url=`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&timezone=America/Bogota`;
+  try{
+    const r=await fetch(url); if(!r.ok) throw 0;
+    const d=await r.json(); const c=d.current;
+    lastWeather={temp:Math.round(c.temperature_2m),code:c.weather_code,hum:c.relative_humidity_2m,wind:Math.round(c.wind_speed_10m)};
+    paintWeather();
+  }catch(e){
+    // respaldo: promedio climático conocido
+    document.getElementById("wTemp").textContent="20";
+    document.getElementById("wIcon").textContent="⛅";
+    document.getElementById("wMeta").textContent = lang==="es"?"Clima templado de montaña":"Mild mountain climate";
+  }
+}
+function paintWeather(){
+  if(!lastWeather) return;
+  const w=WCODE[lastWeather.code]||WCODE[2];
+  document.getElementById("wTemp").textContent=lastWeather.temp;
+  document.getElementById("wIcon").textContent=w.e;
+  const humTxt=lang==="es"?"humedad":"humidity";
+  document.getElementById("wMeta").textContent=`${w[lang]} · ${lastWeather.hum}% ${humTxt}`;
+}
+
+/* ============================================================
+   DISTANCIA EN TIEMPO REAL desde la ubicación del visitante
+   (Geolocation API + fórmula de Haversine, sin API key)
+   ============================================================ */
+function haversineKm(lat1,lng1,lat2,lng2){
+  const R=6371, toRad=d=>d*Math.PI/180;
+  const dLat=toRad(lat2-lat1), dLng=toRad(lng2-lng1);
+  const a=Math.sin(dLat/2)**2 + Math.cos(toRad(lat1))*Math.cos(toRad(lat2))*Math.sin(dLng/2)**2;
+  return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+}
+function showDistError(msg){
+  const res=document.getElementById("distResult");
+  const btn=document.getElementById("distBtn");
+  btn.disabled=false;
+  btn.querySelector("span").textContent=t('dist_btn');
+  res.hidden=false;
+  res.innerHTML=`<span class="dist-err">${msg}</span><button class="dist-retry" onclick="calcDistance()">${t('dist_retry')}</button>`;
+}
+function calcDistance(){
+  const btn=document.getElementById("distBtn");
+  const res=document.getElementById("distResult");
+  if(!("geolocation" in navigator)){ showDistError(t('dist_unsupported')); return; }
+  btn.disabled=true;
+  btn.querySelector("span") && (btn.querySelector("span").textContent=t('dist_locating'));
+  navigator.geolocation.getCurrentPosition(
+    pos=>{
+      const {latitude,longitude}=pos.coords;
+      const km=Math.round(haversineKm(latitude,longitude,CONFIG.townCoords.lat,CONFIG.townCoords.lng));
+      const dir=`https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=${CONFIG.townCoords.lat},${CONFIG.townCoords.lng}&travelmode=driving`;
+      // reconstruimos el resultado (por si venía de un error previo)
+      res.innerHTML=`
+        <div class="dist-line"><span data-i18n="dist_pre">${t('dist_pre')}</span> <b id="distKm">${km}</b> km <span data-i18n="dist_post">${t('dist_post')}</span></div>
+        <a id="distRoute" class="dist-route" href="${dir}" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          <span data-i18n="dist_route">${t('dist_route')}</span>
+        </a>`;
+      res.hidden=false;
+      btn.style.display="none";
+    },
+    err=>{ showDistError(t('dist_denied')); },
+    {enableHighAccuracy:false, timeout:10000, maximumAge:60000}
+  );
+}
+
+/* ============================================================
+   FORMULARIO (Web3Forms + respaldo WhatsApp)
+   ============================================================ */
+function buildWaLink(text){ return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`; }
+
+document.getElementById("contactForm").addEventListener("submit", async (e)=>{
+  e.preventDefault();
+  const msgBox=document.getElementById("formMsg");
+  const data={
+    name:document.getElementById("name").value,
+    email:document.getElementById("email").value,
+    topic:document.getElementById("topic").value,
+    message:document.getElementById("message").value
+  };
+  const waText=`Hola Labateca Turismo 👋\n\nNombre: ${data.name}\nCorreo: ${data.email}\nTema: ${data.topic}\nMensaje: ${data.message}`;
+
+  // Si no hay clave Web3Forms, enviamos por WhatsApp directamente
+  if(!CONFIG.web3formsKey || CONFIG.web3formsKey==="TU_ACCESS_KEY"){
+    msgBox.className="form-msg ok"; msgBox.textContent=t('msg_wa');
+    setTimeout(()=>window.open(buildWaLink(waText),"_blank"),700);
+    return;
+  }
+  try{
+    const r=await fetch("https://api.web3forms.com/submit",{
+      method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
+      body:JSON.stringify({access_key:CONFIG.web3formsKey,subject:`Labateca Turismo · ${data.topic}`,...data})
+    });
+    const out=await r.json();
+    if(out.success){ msgBox.className="form-msg ok"; msgBox.textContent=t('msg_ok'); e.target.reset(); }
+    else throw 0;
+  }catch(err){
+    msgBox.className="form-msg err"; msgBox.textContent=t('msg_err');
+    setTimeout(()=>window.open(buildWaLink(waText),"_blank"),1200);
+  }
+});
+
+/* ============================================================
+   MAPA (Leaflet) con respaldo
+   ============================================================ */
+function initMap(){
+  if(typeof L==="undefined"){ // librería bloqueada
+    document.getElementById("map").style.display="none";
+    document.getElementById("mapFallback").style.display="block";
+    return;
+  }
+  try{
+    const {lat,lng}=CONFIG.townCoords;
+    const map=L.map("map",{scrollWheelZoom:false}).setView([lat,lng],13);
+    window._leafletMapReal = map;
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
+      maxZoom:18, attribution:'© OpenStreetMap'
+    }).addTo(map);
+
+    const icon=L.divIcon({
+      className:"",html:`<div style="width:30px;height:30px;background:#bd5d34;border:3px solid #fbf8f1;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 4px 10px rgba(0,0,0,.3)"></div>`,
+      iconSize:[30,30],iconAnchor:[15,28]
+    });
+    const townIcon=L.divIcon({
+      className:"",html:`<div style="width:34px;height:34px;background:#16352a;border:3px solid #d4a23f;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,.35)"></div>`,
+      iconSize:[34,34],iconAnchor:[17,17]
+    });
+
+    L.marker([lat,lng],{icon:townIcon}).addTo(map)
+      .bindPopup(`<div class="map-pop"><b>Labateca</b>${lang==="es"?"Parque Principal":"Main Square"}</div>`);
+
+    const group=[[lat,lng]];
+    PLACES.forEach(p=>{
+      const gmaps=`https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`;
+      L.marker([p.lat,p.lng],{icon}).addTo(map)
+        .bindPopup(`<div class="map-pop"><b>${placeName(p)}</b>${(p.dist||{})[lang]||''} · ${(p.dificultad||p.diff||{})[lang]||''}<br><a href="${gmaps}" target="_blank" rel="noopener">${IC.navi} ${t('cta_how')}</a></div>`);
+      group.push([p.lat,p.lng]);
+    });
+    map.fitBounds(group,{padding:[50,50]});
+    setTimeout(()=>map.invalidateSize(),300);
+  }catch(e){
+    document.getElementById("map").style.display="none";
+    document.getElementById("mapFallback").style.display="block";
+  }
+}
+
+/* ============================================================
+   TOGGLE MAPA REAL ↔ MAPA ILUSTRADO
+   ============================================================ */
+let _mapIlustradoInited = false;
+
+function switchMap(type) {
+  const isReal = type === 'real';
+  // Mostrar/ocultar contenedores
+  document.getElementById("map").style.display           = isReal ? '' : 'none';
+  document.getElementById("map-ilustrado").style.display = isReal ? 'none' : '';
+  document.getElementById("mapIlustradoNote").style.display = isReal ? 'none' : '';
+  // Actualizar tabs
+  document.getElementById("tabMapReal").classList.toggle("active", isReal);
+  document.getElementById("tabMapIlustrado").classList.toggle("active", !isReal);
+  // Inicializar mapa ilustrado solo una vez (al primer clic)
+  if (!isReal && !_mapIlustradoInited) {
+    initMapIlustrado();
+    _mapIlustradoInited = true;
+  }
+  // Forzar re-render del mapa activo (Leaflet necesita invalidateSize tras display:block)
+  if (isReal && window._leafletMapReal) {
+    setTimeout(() => window._leafletMapReal.invalidateSize(), 60);
+  }
+  if (!isReal && window._leafletMapIlustrado) {
+    setTimeout(() => window._leafletMapIlustrado.invalidateSize(), 60);
+  }
+}
+
+/* ============================================================
+   MAPA ILUSTRADO (Leaflet CRS.Simple + imagen artística)
+   IMPORTANTE: es estático — sin GPS encima del dibujo.
+   Las coordenadas reales se delegan a Google Maps.
+   ============================================================ */
+function initMapIlustrado() {
+  if (typeof L === 'undefined') return;
+  try {
+    // Dimensiones del canvas del mapa ilustrado (coinciden con el SVG)
+    const IMG_W = 1000, IMG_H = 700;
+    // En CRS.Simple: [lat, lng] = [filaDesdeAbajo, columna]
+    // Para pixel de pantalla (x, y): lat = IMG_H - y, lng = x
+    const bounds = [[0, 0], [IMG_H, IMG_W]];
+
+    const mapIl = L.map('map-ilustrado', {
+      crs: L.CRS.Simple,
+      minZoom: -2,
+      maxZoom: 2,
+      zoomSnap: 0.25,
+      zoomDelta: 0.5,
+      attributionControl: false,
+      zoomControl: true
+    });
+    window._leafletMapIlustrado = mapIl;
+
+    // Imagen base del mapa ilustrado
+    L.imageOverlay('/images/mapa-ilustrado-placeholder.svg', bounds, {
+      interactive: false
+    }).addTo(mapIl);
+    mapIl.fitBounds(bounds, { padding: [10, 10] });
+
+    // Icono personalizado para los marcadores del mapa ilustrado
+    const iconBase = (color) => L.divIcon({
+      className: '',
+      html: `<div style="
+        width:18px;height:18px;
+        background:${color};
+        border:2.5px solid #fbf8f1;
+        border-radius:50%;
+        box-shadow:0 2px 8px rgba(0,0,0,.4);
+        cursor:pointer;
+        transition:transform .2s;
+      "></div>`,
+      iconSize: [18, 18],
+      iconAnchor: [9, 9],
+      popupAnchor: [0, -12]
+    });
+
+    // Colores por categoría
+    const CAT_COLOR = {
+      naturaleza:  '#2d6149',
+      cultura:     '#bd5d34',
+      gastronomia: '#d4a23f',
+      hospedaje:   '#7bb3d4'
+    };
+
+    // Dibujar marcadores
+    PLACES.forEach(p => {
+      // Necesitamos mapaX y mapaY para posicionar en el ilustrado
+      if (p.mapaX == null || p.mapaY == null) return;
+
+      // Conversión: pixel (x=mapaX, y=mapaY) → Leaflet [lat, lng]
+      const latlng = [IMG_H - p.mapaY, p.mapaX];
+      const cat    = p.categoria || p.cat || 'naturaleza';
+      const color  = CAT_COLOR[cat] || '#bd5d34';
+      const gmaps  = `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`;
+
+      const nombre   = placeName(p);
+      const dist     = (p.dist        || {})[lang] || '';
+      const dific    = (p.dificultad  || p.diff || {})[lang] || '';
+      const rec      = (p.recomendacion || p.rec || {})[lang] || '';
+      const catLabel = t('fil_' + cat);
+      const notaVerif= !p.verified
+        ? `<span style="display:inline-block;margin-top:5px;font-size:.72rem;background:#d4a23f;color:#16352a;padding:2px 7px;border-radius:99px;font-weight:800">${t('verify_badge')}</span>`
+        : '';
+
+      const popup = `
+        <div class="map-pop">
+          <div style="font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:${color};margin-bottom:4px">${catLabel}</div>
+          <b>${nombre}</b>
+          ${notaVerif}
+          ${dist || dific ? `<span class="map-pop-stats">${[dist, dific].filter(Boolean).join(' · ')}</span>` : ''}
+          ${rec ? `<span class="map-pop-rec">${rec}</span>` : ''}
+          <a href="${gmaps}" target="_blank" rel="noopener noreferrer">${IC.navi} ${t('cta_how')}</a>
+        </div>`;
+
+      L.marker(latlng, { icon: iconBase(color) })
+        .addTo(mapIl)
+        .bindPopup(popup, { maxWidth: 260, minWidth: 180 });
+    });
+
+    setTimeout(() => mapIl.invalidateSize(), 300);
+  } catch(e) {
+    console.warn('[Labateca] Error inicializando mapa ilustrado:', e);
+  }
+}
+
+/* ============================================================
+   ENLACES DE CONTACTO / SOCIAL desde CONFIG
+   ============================================================ */
+function wireLinks(){
+  const wa=buildWaLink("Hola Labateca Turismo, quisiera información para visitar el pueblo.");
+  const mapTown=`https://www.google.com/maps/search/?api=1&query=${CONFIG.townCoords.lat},${CONFIG.townCoords.lng}`;
+  // Uso wrapper seguro: si el elemento no existe, no crashea
+  const set=(id,prop,val)=>{ const el=document.getElementById(id); if(el) el[prop]=val; };
+  set("chWhatsapp","href",wa);
+  set("footWa","href",wa);
+  set("chMail","href",`mailto:${CONFIG.email}`);
+  set("mailText","textContent",CONFIG.email);
+  set("chLoc","href",mapTown);
+  set("footMap","href",mapTown);
+  set("socIg","href",CONFIG.social.instagram);
+  set("socFb","href",CONFIG.social.facebook);
+  set("socTk","href",CONFIG.social.tiktok);
+}
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+let _lbPlace    = null;   // lugar activo
+let _lbIdx      = 0;      // índice de foto actual
+let _lbFocusPrev = null;  // elemento con foco antes de abrir (para restaurarlo)
+let _lbTouchX   = 0;      // para swipe en móvil
+
+function openLightbox(placeId, photoIdx) {
+  const p = PLACES.find(x => x.id === placeId);
+  if (!p) return;
+  _lbPlace     = p;
+  _lbIdx       = photoIdx || 0;
+  _lbFocusPrev = document.activeElement;
+  paintLightbox();
+  const lb = document.getElementById('lightbox');
+  lb.removeAttribute('hidden');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('lbClose').focus();
+}
+
+function closeLightbox() {
+  const lb = document.getElementById('lightbox');
+  lb.setAttribute('hidden', '');
+  document.body.style.overflow = '';
+  _lbPlace = null;
+  if (_lbFocusPrev) _lbFocusPrev.focus();
+}
+
+function lightboxNav(dir) {
+  if (!_lbPlace) return;
+  const total = (_lbPlace.fotos || []).length;
+  if (total < 2) return;
+  _lbIdx = (_lbIdx + dir + total) % total;
+  paintLightbox();
+}
+
+function paintLightbox() {
+  if (!_lbPlace) return;
+  const p      = _lbPlace;
+  const fotos  = p.fotos || [];
+  const total  = fotos.length;
+  const media  = document.getElementById('lbMedia');
+
+  // ── Imagen o placeholder ──
+  if (total > 0) {
+    const url = cldUrl(fotos[_lbIdx], 'w_1600,f_auto,q_auto')
+             || cldUrl(fotos[_lbIdx], 'w_1200,f_auto,q_auto');
+    if (url) {
+      const img = new Image();
+      img.id      = 'lbImg';
+      img.className = 'loading';
+      img.alt     = placeName(p);
+      img.onload  = () => img.classList.remove('loading');
+      img.src     = url;
+      media.innerHTML = '';
+      media.appendChild(img);
+    } else {
+      // Public ID existe pero cloudName vacío → mostrar placeholder con aviso
+      media.innerHTML = lbPlaceholder(p, true);
+    }
+  } else {
+    // Sin fotos aún
+    media.innerHTML = lbPlaceholder(p, false);
+  }
+
+  // ── Leyenda ──
+  document.getElementById('lbTitle').textContent = placeName(p);
+  const rec = (p.recomendacion || p.rec || {})[lang] || '';
+  document.getElementById('lbRec').textContent   = rec;
+
+  // ── Contador y nav ──
+  const showNav = total > 1;
+  document.getElementById('lbPrev').toggleAttribute('hidden', !showNav);
+  document.getElementById('lbNext').toggleAttribute('hidden', !showNav);
+  document.getElementById('lbCounter').textContent = showNav
+    ? `${_lbIdx + 1} ${t('lb_of')} ${total}` : '';
+}
+
+function lbPlaceholder(p, hasIds) {
+  const cat   = p.categoria || p.cat || 'naturaleza';
+  const msg   = hasIds
+    ? `<p style="font-size:.82rem;opacity:.6">Configura CONFIG.cloudName<br>para ver las fotos</p>`
+    : `<p>${t('lb_no_photo')}</p>`;
+  return `<div class="lb-ph">
+    ${IC.cam}
+    <strong style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--cream)">${placeName(p)}</strong>
+    <span style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-soft);font-weight:800">${t('fil_'+cat)}</span>
+    ${msg}
+  </div>`;
+}
+
+/* ── Teclado: Esc / flechas / focus trap ── */
+document.addEventListener('keydown', e => {
+  const lb = document.getElementById('lightbox');
+  if (!lb || lb.hasAttribute('hidden')) return;
+  if (e.key === 'Escape')     { closeLightbox(); return; }
+  if (e.key === 'ArrowLeft')  { lightboxNav(-1); return; }
+  if (e.key === 'ArrowRight') { lightboxNav(1);  return; }
+  // Focus trap: tab cicla dentro del lightbox
+  if (e.key === 'Tab') {
+    const focusable = Array.from(lb.querySelectorAll('button:not([hidden]),[tabindex="0"]:not([hidden])'));
+    if (!focusable.length) return;
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault(); last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault(); first.focus();
+    }
+  }
+});
+
+/* ── Swipe en móvil ── */
+(function(){
+  const lb = document.getElementById('lightbox');
+  if (!lb) return; // guarda si el SW sirvió HTML viejo sin el lightbox
+  lb.addEventListener('touchstart', e => {
+    _lbTouchX = e.touches[0].clientX;
+  }, { passive: true });
+  lb.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - _lbTouchX;
+    if (Math.abs(dx) > 50) lightboxNav(dx < 0 ? 1 : -1);
+  }, { passive: true });
+})();
+
+/* ============================================================
+   PDF DESCARGABLE — generado en el cliente con jsPDF
+   ============================================================ */
+function generatePDF() {
+  const statusEl = document.getElementById('pdfStatus');
+  if (statusEl) statusEl.textContent = t('pdf_generating');
+
+  // Cargar jsPDF de forma diferida (no afecta la carga inicial)
+  const loadJsPDF = new Promise((resolve, reject) => {
+    if (window.jspdf) { resolve(window.jspdf.jsPDF); return; }
+    const s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+    s.onload  = () => resolve(window.jspdf.jsPDF);
+    s.onerror = reject;
+    document.head.appendChild(s);
+  });
+
+  loadJsPDF.then(jsPDF => {
+    const doc  = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+    const W    = 210;  // A4 width mm
+    const H    = 297;  // A4 height mm
+    const ML   = 18;   // margin left
+    const MR   = 18;   // margin right
+    const CW   = W - ML - MR; // content width
+    const FOREST  = [22, 53, 42];
+    const CLAY    = [189, 93, 52];
+    const GOLD    = [212, 162, 63];
+    const CREAM   = [246, 239, 227];
+    const INK     = [29, 26, 21];
+    const INK_MUT = [106, 99, 87];
+
+    const CAT_COLORS = {
+      naturaleza:  [31, 74, 57],
+      cultura:     [139, 58, 26],
+      gastronomia: [122, 92, 30],
+      hospedaje:   [26, 58, 92]
+    };
+    const CAT_LABELS_ES = { naturaleza:'Naturaleza', cultura:'Cultura', gastronomia:'Gastronomía', hospedaje:'Hospedaje' };
+    const CAT_LABELS_EN = { naturaleza:'Nature', cultura:'Culture', gastronomia:'Food', hospedaje:'Lodging' };
+    const catLabel = (cat) => (lang === 'es' ? CAT_LABELS_ES : CAT_LABELS_EN)[cat] || cat;
+
+    // ── Helpers ───────────────────────────────────────────────
+    function setFont(style, size, color) {
+      doc.setFont('helvetica', style);
+      doc.setFontSize(size);
+      if (color) doc.setTextColor(...color); else doc.setTextColor(...INK);
+    }
+    function fillRect(x, y, w, h, color) {
+      doc.setFillColor(...color);
+      doc.rect(x, y, w, h, 'F');
+    }
+    function addWrappedText(text, x, y, maxW, lineH) {
+      const lines = doc.splitTextToSize(text, maxW);
+      doc.text(lines, x, y);
+      return y + lines.length * lineH;
+    }
+
+    // ── PORTADA ───────────────────────────────────────────────
+    fillRect(0, 0, W, H, FOREST);
+    // Banda dorada top
+    fillRect(0, 0, W, 3, GOLD);
+    // Triángulo/montaña decorativo
+    doc.setFillColor(...[45, 97, 73]);
+    doc.triangle(0, H, W/2, H*0.35, W, H, 'F');
+    doc.setFillColor(...[31, 74, 57]);
+    doc.triangle(0, H, W*0.3, H*0.5, W*0.6, H, 'F');
+
+    // Títulos
+    setFont('bold', 42, GOLD);
+    doc.text('Labateca', W/2, 90, { align: 'center' });
+    setFont('normal', 16, CREAM);
+    doc.text(lang === 'es' ? 'Volcanes de Dios' : "God's Volcanoes", W/2, 102, { align: 'center' });
+    // Línea decorativa
+    doc.setDrawColor(...GOLD); doc.setLineWidth(0.5);
+    doc.line(ML + 30, 108, W - MR - 30, 108);
+    // Subtítulo
+    setFont('normal', 12, [200, 190, 175]);
+    doc.text(
+      lang === 'es' ? 'Guía turística completa · Norte de Santander, Colombia'
+                    : 'Complete travel guide · Norte de Santander, Colombia',
+      W/2, 116, { align: 'center' }
+    );
+    // Datos
+    setFont('normal', 10, [160, 150, 135]);
+    doc.text('1.566 m.s.n.m.  ·  ~20 °C  ·  ~113 km de Cúcuta', W/2, 128, { align: 'center' });
+    // Fecha
+    const fecha = new Date().toLocaleDateString(lang === 'es' ? 'es-CO' : 'en-US', { year:'numeric', month:'long' });
+    setFont('normal', 9, [130, 120, 110]);
+    doc.text(fecha, W/2, H - 20, { align: 'center' });
+    doc.text('labateca-turismo.co', W/2, H - 14, { align: 'center' });
+
+    // ── ORGANIZAR LUGARES POR CATEGORÍA ──────────────────────
+    const cats = ['naturaleza', 'cultura', 'gastronomia', 'hospedaje'];
+    const bycat = {};
+    cats.forEach(c => { bycat[c] = PLACES.filter(p => (p.categoria || p.cat) === c); });
+
+    let pageNum = 1;
+
+    cats.forEach(cat => {
+      const list = bycat[cat];
+      if (!list.length) return;
+
+      // ── PÁGINA DE CATEGORÍA ───────────────────────────────
+      doc.addPage();
+      pageNum++;
+      const catColor = CAT_COLORS[cat] || FOREST;
+
+      // Header de categoría
+      fillRect(0, 0, W, 28, catColor);
+      fillRect(0, 0, W, 2, GOLD);
+      setFont('bold', 22, CREAM);
+      doc.text(catLabel(cat).toUpperCase(), ML, 18);
+      setFont('normal', 9, [200, 190, 175]);
+      doc.text(`Labateca · ${list.length} ${lang === 'es' ? 'lugares' : 'places'}`, ML, 25);
+
+      let y = 40;
+
+      list.forEach((p, idx) => {
+        const nombre  = (p.nombre || p.name || {})[lang] || p.id;
+        const desc    = (p.desc || {})[lang] || '';
+        const dist    = (p.dist || {})[lang] || '';
+        const tiempo  = (p.tiempo || p.time || {})[lang] || '';
+        const dific   = (p.dificultad || p.diff || {})[lang] || '';
+        const como    = (p.comoLlegar || {})[lang] || '';
+        const rec     = (p.recomendacion || p.rec || {})[lang] || '';
+
+        // Estimar altura necesaria
+        const descLines  = doc.splitTextToSize(desc, CW - 4).length;
+        const comoLines  = como ? doc.splitTextToSize(como, CW - 4).length : 0;
+        const recLines   = rec  ? doc.splitTextToSize(rec,  CW - 4).length : 0;
+        const neededH    = 10 + descLines * 4.5 + (comoLines + recLines) * 4.5 + 22;
+
+        // Salto de página si no cabe
+        if (y + neededH > H - 20) {
+          doc.addPage(); pageNum++;
+          fillRect(0, 0, W, 12, catColor);
+          fillRect(0, 0, W, 2, GOLD);
+          setFont('bold', 9, CREAM);
+          doc.text(catLabel(cat).toUpperCase() + ' (cont.)', ML, 9);
+          y = 20;
+        }
+
+        // Borde izquierdo de color
+        doc.setFillColor(...catColor);
+        doc.rect(ML, y, 3, neededH - 4, 'F');
+
+        // Número
+        setFont('bold', 8, catColor);
+        doc.text(String(idx + 1).padStart(2, '0'), ML + 6, y + 6);
+
+        // Nombre
+        setFont('bold', 13, INK);
+        doc.text(nombre, ML + 16, y + 6);
+
+        // Chips: dist · tiempo · dific
+        let cx = ML + 16;
+        const chips = [dist, tiempo, dific].filter(Boolean);
+        setFont('normal', 7.5, INK_MUT);
+        if (chips.length) {
+          y += 10;
+          doc.text(chips.join('  ·  '), ML + 16, y);
+          y += 6;
+        } else {
+          y += 10;
+        }
+
+        // Descripción
+        if (desc) {
+          setFont('normal', 9, INK);
+          y = addWrappedText(desc, ML + 16, y, CW - 16, 4.5);
+          y += 2;
+        }
+
+        // Cómo llegar
+        if (como) {
+          setFont('bold', 8, catColor);
+          doc.text(lang === 'es' ? 'Cómo llegar:' : 'How to get there:', ML + 16, y);
+          y += 4.5;
+          setFont('normal', 8.5, INK_MUT);
+          y = addWrappedText(como, ML + 16, y, CW - 16, 4.2);
+          y += 1;
+        }
+
+        // Recomendación
+        if (rec) {
+          setFont('bold', 8, GOLD.map(v => Math.max(0, v - 30)));
+          doc.text('💡 ' + (lang === 'es' ? 'Tip:' : 'Tip:'), ML + 16, y);
+          y += 4.5;
+          setFont('normal', 8.5, INK_MUT);
+          y = addWrappedText(rec, ML + 16, y, CW - 16, 4.2);
+          y += 1;
+        }
+
+        // Separador
+        doc.setDrawColor(...[220, 215, 205]);
+        doc.setLineWidth(0.3);
+        doc.line(ML + 4, y + 1, W - MR, y + 1);
+        y += 7;
+      });
+    });
+
+    // ── PIE EN TODAS LAS PÁGINAS ──────────────────────────────
+    const total = doc.getNumberOfPages();
+    for (let i = 1; i <= total; i++) {
+      doc.setPage(i);
+      if (i > 1) { // no en portada
+        fillRect(0, H - 10, W, 10, FOREST);
+        setFont('normal', 7, [180, 170, 155]);
+        doc.text('Labateca · Volcanes de Dios · labateca-turismo.co', ML, H - 4);
+        doc.text(`${i} / ${total}`, W - MR, H - 4, { align: 'right' });
+      }
+    }
+
+    // ── GUARDAR ────────────────────────────────────────────────
+    const filename = `Labateca-Guia-${lang.toUpperCase()}-${new Date().getFullYear()}.pdf`;
+    doc.save(filename);
+
+    if (statusEl) statusEl.textContent = t('pdf_done');
+    setTimeout(() => { if (statusEl) statusEl.textContent = t('pdf_sub'); }, 4000);
+  }).catch(err => {
+    console.error('jsPDF no cargó:', err);
+    if (statusEl) statusEl.textContent = lang === 'es' ? 'Error al generar el PDF. Intenta de nuevo.' : 'PDF generation failed. Please try again.';
+  });
+}
+
+/* ============================================================
+   CHAT IA FLOTANTE
+   ============================================================ */
+let _chatOpen = false;
+
+function toggleChat(open) {
+  _chatOpen = (open !== undefined) ? !!open : !_chatOpen;
+  const panel = document.getElementById('chat-panel');
+  if (!panel) return;
+  panel.classList.toggle('open', _chatOpen);
+  panel.setAttribute('aria-hidden', String(!_chatOpen));
+  if (_chatOpen) {
+    setTimeout(() => { const inp = document.getElementById('chatInput'); if(inp) inp.focus(); }, 150);
+  }
+}
+
+function _chatAddMsg(text, role, isHTML) {
+  const msgs = document.getElementById('chatMessages');
+  if (!msgs) return null;
+  const div = document.createElement('div');
+  div.className = 'chat-msg ' + role;
+  if (isHTML) div.innerHTML = text; else div.textContent = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+  return div;
+}
+
+function _chatTyping() {
+  const msgs = document.getElementById('chatMessages');
+  if (!msgs) return null;
+  const div = document.createElement('div');
+  div.className = 'chat-msg typing';
+  div.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>';
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+  return div;
+}
+
+function sendSuggestion(btn) {
+  const inp = document.getElementById('chatInput');
+  if (inp) inp.value = btn.textContent;
+  const sugs = document.getElementById('chatSuggestions');
+  if (sugs) sugs.style.display = 'none';
+  sendChat();
+}
+
+async function sendChat() {
+  const inp  = document.getElementById('chatInput');
+  const send = document.getElementById('chatSend');
+  const q    = inp ? inp.value.trim() : '';
+  if (!q) return;
+
+  // Reset input
+  if (inp)  { inp.value = ''; inp.style.height = 'auto'; }
+  if (send) send.disabled = true;
+  const sugs = document.getElementById('chatSuggestions');
+  if (sugs) sugs.style.display = 'none';
+
+  _chatAddMsg(q, 'user', false);
+  const typing = _chatTyping();
+
+  try {
+    const resp = await fetch(CONFIG.chatWorkerUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ question: q, lang: lang, places: PLACES.slice(0, 15) })
+    });
+    const data = await resp.json();
+    if (typing) typing.remove();
+    if (data.ok && data.answer) {
+      _chatAddMsg(data.answer, 'ai', false);
+    } else {
+      throw new Error(data.error || 'Sin respuesta');
+    }
+  } catch(err) {
+    if (typing) typing.remove();
+    const wa  = buildWaLink(q);
+    const key = lang === 'es' ? 'chat_error' : 'chat_error';
+    const msg = t(key).replace('{{wa}}', wa);
+    _chatAddMsg(msg, 'ai', true);
+  }
+
+  if (send) send.disabled = false;
+  if (inp)  inp.focus();
+}
+
+/* ============================================================
+   NAV: scroll, menú móvil, reveal
+   ============================================================ */
+function toggleMenu(){ document.getElementById("navLinks").classList.toggle("open"); }
+document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navLinks").classList.remove("open")));
+
+window.addEventListener("scroll",()=>{
+  document.getElementById("header").classList.toggle("scrolled",window.scrollY>40);
+});
+
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target);} });
+},{threshold:.12});
+
+/* ============================================================
+   INIT
+   ============================================================ */
+function init(){
+  // 1. Cargar idioma guardado
+  lang = store.get("lab_lang") || "es";
+  document.getElementById("langEs").classList.toggle("active",lang==="es");
+  document.getElementById("langEn").classList.toggle("active",lang==="en");
+  document.getElementById("year").textContent=new Date().getFullYear();
+  applyI18n();
+
+  // 2. Render inicial — cada función en try individual para que un error no detenga todo
+  try { renderFilters(); } catch(e) { console.warn('renderFilters',e); }
+  try { renderPlaces();  } catch(e) { console.warn('renderPlaces',e);  }
+  try { renderGallery(); } catch(e) { console.warn('renderGallery',e); }
+  try { renderDrawer();  } catch(e) { console.warn('renderDrawer',e);  }
+  try { updateBadges();  } catch(e) { console.warn('updateBadges',e);  }
+  try { wireLinks();     } catch(e) { console.warn('wireLinks',e);     }
+  try { loadWeather();   } catch(e) { console.warn('loadWeather',e);   }
+  try { initMap();       } catch(e) { console.warn('initMap',e);       }
+
+  // Activar animaciones de scroll (progressive enhancement):
+  // primero el contenido está visible (sin .js-anim),
+  // luego activamos las animaciones para las secciones debajo del fold
+  setTimeout(() => {
+    document.documentElement.classList.add('js-anim');
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  }, 200);
+
+  // 3. Cargar datos JSON en paralelo (no bloquea el render inicial)
+  fetch('/data/places.json')
+    .then(r => r.json())
+    .then(json => {
+      PLACES = Array.isArray(json.lugares) ? json.lugares : [];
+      renderFilters(); renderPlaces(); renderGallery();
+      // Después de cargar los lugares, verificar si hay ?lugar= en la URL
+      _checkLugarParam();
+    })
+    .catch(e => console.warn('[Labateca] places.json:', e.message));
+
+  // 4. Cargar rutas temáticas (también en paralelo)
+  loadRutas();
+}
+
+/* ── Abrir lugar desde URL ?lugar=ID (para QR codes físicos) ── */
+function _checkLugarParam() {
+  try {
+    const params  = new URLSearchParams(window.location.search);
+    const lugarId = params.get('lugar');
+    if (!lugarId) return;
+    const p = PLACES.find(x => x.id === lugarId);
+    if (!p) return;
+    // Scroll a la sección de lugares y abrir el lightbox
+    const secLugares = document.getElementById('lugares');
+    if (secLugares) secLugares.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Pequeño delay para que el scroll empiece antes de abrir el modal
+    setTimeout(() => openLightbox(lugarId), 600);
+  } catch(e) { /* ignorar */ }
+}
+
+// 4. Registrar Service Worker (HTTPS o localhost)
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('[SW] Registrado:', reg.scope))
+      .catch(err => console.warn('[SW] Error al registrar:', err));
+  });
+}
+
+init();
+</script>
+</body>
+</html>

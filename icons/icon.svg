@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Fondo -->
+  <rect width="512" height="512" rx="112" fill="#16352a"/>
+  <!-- Montañas (dorado) -->
+  <path d="M72 368 L184 184 L266 296 L338 144 L440 368 Z" fill="#d4a23f"/>
+  <!-- Sol/Volcán (terracota) -->
+  <circle cx="338" cy="128" r="44" fill="#bd5d34"/>
+  <!-- Base verde más oscura -->
+  <path d="M72 368 Q256 328 440 368 L440 410 Q256 370 72 410 Z" fill="#2d6149"/>
+</svg>

@@ -1,0 +1,184 @@
+# ============================================================
+# Decap CMS / Sveltia CMS — Labateca Turismo
+# ============================================================
+# Para activar:
+#   Netlify: conectar repositorio Git y activar Identity + Git Gateway.
+#   Cloudflare Pages: usar Sveltia CMS con GitHub OAuth directo.
+#
+# Acceso al panel: https://tu-dominio.com/admin/
+# ============================================================
+
+backend:
+  name: git-gateway       # Cambiar a "github" si usas Sveltia en Cloudflare Pages
+  branch: main            # Rama de producción
+
+# Carpeta donde se guardan los archivos multimedia subidos desde el CMS
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Idioma del panel
+locale: es
+
+collections:
+  # ─── LUGARES TURÍSTICOS ───────────────────────────────────
+  - name: "lugares_data"
+    label: "Lugares turísticos"
+    description: "Gestiona los lugares del mapa y la guía"
+    files:
+      - label: "Todos los lugares"
+        name: "places"
+        file: "data/places.json"
+        format: json
+        fields:
+          - label: "Versión"
+            name: "version"
+            widget: hidden
+            default: "1.0"
+
+          - label: "Lugares"
+            name: "lugares"
+            widget: list
+            label_singular: "Lugar"
+            summary: "{{fields.nombre.es}} ({{fields.categoria}})"
+            fields:
+              - { label: "ID único",    name: "id",          widget: string,  hint: "Solo minúsculas, sin espacios. Ej: cascada-lirgua" }
+              - label: "Categoría"
+                name: "categoria"
+                widget: select
+                options:
+                  - { label: "Naturaleza",   value: "naturaleza" }
+                  - { label: "Cultura",      value: "cultura" }
+                  - { label: "Gastronomía",  value: "gastronomia" }
+                  - { label: "Hospedaje",    value: "hospedaje" }
+
+              - { label: "¿Verificado?",          name: "verified",     widget: boolean, default: false }
+              - { label: "¿Coordenadas aprox.?",  name: "coordsApprox", widget: boolean, default: true }
+              - { label: "Latitud",   name: "lat",   widget: number, value_type: float, hint: "Ej: 7.3167" }
+              - { label: "Longitud",  name: "lng",   widget: number, value_type: float, hint: "Ej: -72.4833" }
+              - { label: "Pos. X (mapa ilustrado)", name: "mapaX", widget: number, default: 500, hint: "Coordenada X en el mapa ilustrado (0–1000)" }
+              - { label: "Pos. Y (mapa ilustrado)", name: "mapaY", widget: number, default: 350, hint: "Coordenada Y en el mapa ilustrado (0–700)" }
+              - { label: "Teléfono", name: "telefono", widget: string, required: false, hint: "Formato internacional sin '+'. Ej: 573001234567" }
+
+              - label: "Nombre"
+                name: "nombre"
+                widget: object
+                fields:
+                  - { label: "Español", name: "es", widget: string }
+                  - { label: "Inglés",  name: "en", widget: string }
+
+              - label: "Descripción"
+                name: "desc"
+                widget: object
+                fields:
+                  - { label: "Español", name: "es", widget: text }
+                  - { label: "Inglés",  name: "en", widget: text }
+
+              - label: "Cómo llegar"
+                name: "comoLlegar"
+                widget: object
+                fields:
+                  - { label: "Español", name: "es", widget: string }
+                  - { label: "Inglés",  name: "en", widget: string }
+
+              - label: "Distancia"
+                name: "dist"
+                widget: object
+                fields:
+                  - { label: "Español", name: "es", widget: string, hint: "Ej: ~7 km del pueblo" }
+                  - { label: "Inglés",  name: "en", widget: string }
+
+              - label: "Tiempo de llegada"
+                name: "tiempo"
+                widget: object
+                fields:
+                  - { label: "Español", name: "es", widget: string, hint: "Ej: Carro + caminata 30 min" }
+                  - { label: "Inglés",  name: "en", widget: string }
+
+              - label: "Dificultad"
+                name: "dificultad"
+                widget: object
+                fields:
+                  - { label: "Español", name: "es", widget: string, hint: "Ej: Dificultad media" }
+                  - { label: "Inglés",  name: "en", widget: string }
+
+              - label: "Recomendación"
+                name: "recomendacion"
+                widget: object
+                fields:
+                  - { label: "Español", name: "es", widget: text }
+                  - { label: "Inglés",  name: "en", widget: text }
+
+              - label: "Fotos (IDs de Cloudinary)"
+                name: "fotos"
+                widget: list
+                field:
+                  label: "ID de foto"
+                  name: "foto"
+                  widget: string
+                  hint: "Solo el public_id de Cloudinary. Ej: labateca/lirgua-01"
+                required: false
+
+  # ─── RUTAS TEMÁTICAS ─────────────────────────────────────
+  - name: "rutas_data"
+    label: "Rutas temáticas"
+    description: "Gestiona las rutas sugeridas de la guía"
+    files:
+      - label: "Todas las rutas"
+        name: "rutas"
+        file: "data/rutas.json"
+        format: json
+        fields:
+          - label: "Versión"
+            name: "version"
+            widget: hidden
+            default: "1.0"
+
+          - label: "Rutas"
+            name: "rutas"
+            widget: list
+            label_singular: "Ruta"
+            summary: "{{fields.nombre.es}}"
+            fields:
+              - { label: "ID único",  name: "id",     widget: string }
+              - { label: "Ícono",     name: "icono",  widget: string, hint: "Emoji. Ej: 🌿" }
+              - { label: "Color principal", name: "color", widget: string, hint: "Hex. Ej: #2d6149" }
+              - { label: "Color suave",     name: "colorSoft", widget: string, hint: "Hex. Ej: #deeee7" }
+              - label: "Nombre"
+                name: "nombre"
+                widget: object
+                fields:
+                  - { label: "Español", name: "es", widget: string }
+                  - { label: "Inglés",  name: "en", widget: string }
+              - label: "Descripción"
+                name: "desc"
+                widget: object
+                fields:
+                  - { label: "Español", name: "es", widget: text }
+                  - { label: "Inglés",  name: "en", widget: text }
+              - label: "Duración"
+                name: "duracion"
+                widget: object
+                fields:
+                  - { label: "Español", name: "es", widget: string, hint: "Ej: Día completo" }
+                  - { label: "Inglés",  name: "en", widget: string }
+              - label: "Dificultad"
+                name: "dificultad"
+                widget: object
+                fields:
+                  - { label: "Español", name: "es", widget: string, hint: "Ej: Media" }
+                  - { label: "Inglés",  name: "en", widget: string }
+              - label: "Recomendación"
+                name: "recomendacion"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Español", name: "es", widget: text }
+                  - { label: "Inglés",  name: "en", widget: text }
+              - label: "Lugares (IDs)"
+                name: "lugares"
+                widget: list
+                field:
+                  label: "ID del lugar"
+                  name: "lugar"
+                  widget: string
+                  hint: "Usar el ID exacto de places.json. Ej: lirgua"

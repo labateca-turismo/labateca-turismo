@@ -1,0 +1,57 @@
+{
+  "version": "1.0",
+  "rutas": [
+    {
+      "id": "cultural",
+      "icono": "🏛️",
+      "color": "#bd5d34",
+      "colorSoft": "#f5e6de",
+      "nombre":      { "es": "Ruta Cultural",         "en": "Cultural Route" },
+      "desc":        { "es": "El alma histórica de Labateca: el templo colonial, el parque principal, la Casa de la Cultura y las artesanías chitareras. Perfecta para empezar la visita.", "en": "The historic soul of Labateca: the colonial church, main square, House of Culture and Chitarera crafts. Perfect for starting your visit." },
+      "duracion":    { "es": "2–3 horas",             "en": "2–3 hours" },
+      "dificultad":  { "es": "Fácil",                 "en": "Easy" },
+      "inicio":      { "es": "Parque Principal",       "en": "Main Square" },
+      "recomendacion": { "es": "Empieza en el parque y recorre todo a pie. Pregunta en la Casa de la Cultura por el horario del templo.", "en": "Start at the square and walk everywhere. Ask at the House of Culture about the church's opening hours." },
+      "lugares": ["parque", "templo", "casa-cultura", "artesanias"]
+    },
+    {
+      "id": "naturaleza",
+      "icono": "🌿",
+      "color": "#2d6149",
+      "colorSoft": "#deeee7",
+      "nombre":      { "es": "Ruta de Naturaleza",    "en": "Nature Route" },
+      "desc":        { "es": "Agua, verde y frescura. Desde la espectacular Cascada La Lirgua hasta el balneario El Molino y la Quebrada Los Monos. Lleva calzado impermeable.", "en": "Water, greenery and fresh air. From the spectacular La Lirgua Waterfall to El Molino swimming hole and Los Monos creek. Bring waterproof shoes." },
+      "duracion":    { "es": "Día completo",          "en": "Full day" },
+      "dificultad":  { "es": "Media",                 "en": "Moderate" },
+      "inicio":      { "es": "Casco urbano",          "en": "Town center" },
+      "recomendacion": { "es": "Sal temprano. Lleva lunch, ropa de cambio y protector solar. Recomienda guía local para La Lirgua.", "en": "Start early. Bring lunch, spare clothes and sunscreen. A local guide is recommended for La Lirgua." },
+      "lugares": ["lirgua", "balneario-molino", "quebrada-monos"]
+    },
+    {
+      "id": "cafe",
+      "icono": "☕",
+      "color": "#8b5e3c",
+      "colorSoft": "#f2e8df",
+      "nombre":      { "es": "Ruta del Café",         "en": "Coffee Route" },
+      "desc":        { "es": "Vive el proceso del café de exportación y termina probando los dulces típicos del pueblo: arequipe de café, quesillo de ahuyama y bocadillos artesanales.", "en": "Experience export-grade coffee from farm to cup, then taste local sweets: coffee arequipe, squash quesillo and artisan bocadillos." },
+      "duracion":    { "es": "3–4 horas",             "en": "3–4 hours" },
+      "dificultad":  { "es": "Fácil",                 "en": "Easy" },
+      "inicio":      { "es": "Casco urbano",          "en": "Town center" },
+      "recomendacion": { "es": "Coordina la visita a la finca cafetera con anticipación. Los dulces se consiguen mejor los días de mercado.", "en": "Arrange the coffee farm visit in advance. Local sweets are best found on market days." },
+      "lugares": ["cafe", "dulces", "restaurante-paramo"]
+    },
+    {
+      "id": "paramo",
+      "icono": "⛰️",
+      "color": "#1f4a39",
+      "colorSoft": "#d8ece4",
+      "nombre":      { "es": "Ruta del Páramo",       "en": "Páramo Route" },
+      "desc":        { "es": "La ruta más exigente y más recompensante. Frailejones, Laguna Negra, el sector Labateca del Páramo de Santurbán y una vista panorámica desde el Mirador La Cumbre.", "en": "The most demanding and rewarding route. Frailejones, Black Lagoon, the Labateca sector of Santurbán Páramo and panoramic views from La Cumbre viewpoint." },
+      "duracion":    { "es": "Día completo + guía",   "en": "Full day + guide" },
+      "dificultad":  { "es": "Exigente",              "en": "Challenging" },
+      "inicio":      { "es": "Alcaldía de Labateca",  "en": "Labateca Town Hall" },
+      "recomendacion": { "es": "Obligatorio con guía certificado. Lleva ropa de abrigo, bastones y mucha agua. Clima impredecible.", "en": "Certified guide required. Bring warm layers, trekking poles and plenty of water. Unpredictable weather." },
+      "lugares": ["mirador-cumbre", "laguna-negra", "santurban"]
+    }
+  ]
+}
