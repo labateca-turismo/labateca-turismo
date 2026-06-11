@@ -1667,6 +1667,7 @@ const I18N = {
     rv_sending:"Enviando…",
     rv_thanks:"¡Gracias! Tu opinión quedó en revisión y pronto será publicada.",
     rv_photo_big:"La foto es muy pesada (máximo 8 MB).",
+    rv_rate:"Se han enviado varias opiniones seguidas desde esta conexión. Espera un rato e inténtalo de nuevo.",
     map_ilustrado_note:"Mapa artístico de referencia · toca un punto para ver la ficha · \"Cómo llegar\" abre Google Maps con la ubicación real",
     map_fallback:"El mapa interactivo se cargará cuando publiques el sitio. Mientras tanto, cada lugar tiene su botón \"Cómo llegar\".",
     gal_eyebrow:"Postales", gal_title:"Galería", gal_sub:"Reemplaza estos espacios por tus propias fotos (mejor calidad y sin problemas de derechos).",
@@ -1764,6 +1765,7 @@ const I18N = {
     rv_sending:"Sending…",
     rv_thanks:"Thank you! Your review is pending approval and will be published soon.",
     rv_photo_big:"The photo is too large (8 MB max).",
+    rv_rate:"Several reviews were sent from this connection in a row. Please wait a while and try again.",
     map_ilustrado_note:"Artistic reference map · tap a dot to see the place card · \"Directions\" opens Google Maps with the real location",
     map_fallback:"The interactive map will load once you publish the site. Meanwhile, every place has its own \"Directions\" button.",
     gal_eyebrow:"Postcards", gal_title:"Gallery", gal_sub:"Replace these slots with your own photos (better quality and no copyright issues).",
@@ -2148,6 +2150,7 @@ async function submitReview(e){
         photo, lang
       })
     });
+    if(r.status===429){ throw new Error('RATE'); }
     const j=await r.json();
     if(!j.ok) throw new Error(j.error||'error');
     msg.style.color='var(--forest)'; msg.textContent=t('rv_thanks');
@@ -2155,7 +2158,9 @@ async function submitReview(e){
     document.getElementById('rvPhotoName').textContent='';
     _rvRating=0; _paintStars();
   }catch(err){
-    msg.style.color='var(--clay)'; msg.textContent=err.message===t('rv_photo_big')?err.message:t('rv_error');
+    msg.style.color='var(--clay)';
+    if(err.message==='RATE') msg.textContent=t('rv_rate');
+    else msg.textContent=err.message===t('rv_photo_big')?err.message:t('rv_error');
   }
   btn.disabled=false;
   return false;
