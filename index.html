@@ -1466,6 +1466,7 @@ const I18N = {
     nav_routes:"Rutas",
     map_eyebrow:"Ubícate", map_title:"Todo Labateca en un mapa", map_sub:"Explora cada lugar, mira las distancias y abre la navegación con un toque.",
     map_tab_real:"Mapa real", map_tab_ilustrado:"Mapa ilustrado",
+    map_track:"Sendero a pie",
     map_ilustrado_note:"Mapa artístico de referencia · toca un punto para ver la ficha · \"Cómo llegar\" abre Google Maps con la ubicación real",
     map_fallback:"El mapa interactivo se cargará cuando publiques el sitio. Mientras tanto, cada lugar tiene su botón \"Cómo llegar\".",
     gal_eyebrow:"Postales", gal_title:"Galería", gal_sub:"Reemplaza estos espacios por tus propias fotos (mejor calidad y sin problemas de derechos).",
@@ -1533,6 +1534,7 @@ const I18N = {
     nav_routes:"Routes",
     map_eyebrow:"Find your way", map_title:"All of Labateca on one map", map_sub:"Explore every place, check distances and launch navigation with one tap.",
     map_tab_real:"Real map", map_tab_ilustrado:"Illustrated map",
+    map_track:"Walking trail",
     map_ilustrado_note:"Artistic reference map · tap a dot to see the place card · \"Directions\" opens Google Maps with the real location",
     map_fallback:"The interactive map will load once you publish the site. Meanwhile, every place has its own \"Directions\" button.",
     gal_eyebrow:"Postcards", gal_title:"Gallery", gal_sub:"Replace these slots with your own photos (better quality and no copyright issues).",
@@ -1751,8 +1753,8 @@ function renderDrawer(){
       </button>
     </div>`;
   }).join("");
-  // ruta de Google Maps: del pueblo a través de cada parada
-  const stops=route.map(id=>{const p=PLACES.find(x=>x.id===id);return `${p.lat},${p.lng}`;});
+  // ruta de Google Maps: del pueblo a través de cada parada (ignora ids huérfanos)
+  const stops=route.map(id=>PLACES.find(x=>x.id===id)).filter(Boolean).map(p=>`${p.lat},${p.lng}`);
   const dir=`https://www.google.com/maps/dir/${CONFIG.townCoords.lat},${CONFIG.townCoords.lng}/${stops.join("/")}`;
   btn.style.opacity="1"; btn.style.pointerEvents="auto"; btn.setAttribute("href",dir);
 }
@@ -2073,19 +2075,61 @@ function initMap(){
     L.marker([lat,lng],{icon:townIcon}).addTo(map)
       .bindPopup(`<div class="map-pop"><b>Labateca</b>${lang==="es"?"Parque Principal":"Main Square"}</div>`);
 
-    const group=[[lat,lng]];
-    PLACES.forEach(p=>{
-      const gmaps=`https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`;
-      L.marker([p.lat,p.lng],{icon}).addTo(map)
-        .bindPopup(`<div class="map-pop"><b>${placeName(p)}</b>${(p.dist||{})[lang]||''} · ${(p.dificultad||p.diff||{})[lang]||''}<br><a href="${gmaps}" target="_blank" rel="noopener">${IC.navi} ${t('cta_how')}</a></div>`);
-      group.push([p.lat,p.lng]);
-    });
-    map.fitBounds(group,{padding:[50,50]});
+    window._placeIcon = icon;
+    paintMapMarkers();
     setTimeout(()=>map.invalidateSize(),300);
   }catch(e){
     document.getElementById("map").style.display="none";
     document.getElementById("mapFallback").style.display="block";
   }
+}
+
+/* Pinta (o repinta) los marcadores de lugares y sus senderos.
+   Se llama desde initMap() y de nuevo cuando places.json termina de cargar. */
+function paintMapMarkers(){
+  const map=window._leafletMapReal;
+  if(!map||typeof L==="undefined"||!PLACES.length) return;
+  if(window._placesLayer) map.removeLayer(window._placesLayer);
+  const layer=L.layerGroup().addTo(map);
+  window._placesLayer=layer;
+  const {lat,lng}=CONFIG.townCoords;
+  const group=[[lat,lng]];
+  PLACES.forEach(p=>{
+    if(p.lat==null||p.lng==null) return;
+    const gmaps=`https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`;
+    L.marker([p.lat,p.lng],{icon:window._placeIcon}).addTo(layer)
+      .bindPopup(`<div class="map-pop"><b>${placeName(p)}</b>${(p.dist||{})[lang]||''} · ${(p.dificultad||p.diff||{})[lang]||''}<br><a href="${gmaps}" target="_blank" rel="noopener">${IC.navi} ${t('cta_how')}</a></div>`);
+    group.push([p.lat,p.lng]);
+    if(p.track) drawTrack(p,layer);
+  });
+  map.fitBounds(group,{padding:[50,50]});
+}
+
+/* ============================================================
+   TRACKS GPX — senderos propios grabados en campo
+   Cada lugar puede tener track:"data/tracks/archivo.gpx".
+   Se dibuja como línea sobre el mapa real (vanilla, sin librerías:
+   el GPX es XML y se parsea con DOMParser).
+   ============================================================ */
+function drawTrack(p,layer){
+  fetch('/'+p.track.replace(/^\//,''))
+    .then(r=>{ if(!r.ok) throw new Error('http '+r.status); return r.text(); })
+    .then(xml=>{
+      const doc=new DOMParser().parseFromString(xml,"application/xml");
+      if(doc.querySelector('parsererror')) throw new Error('GPX inválido');
+      // trkpt = track grabado; rtept = ruta planificada (soportamos ambos)
+      let pts=[...doc.querySelectorAll('trkpt')];
+      if(!pts.length) pts=[...doc.querySelectorAll('rtept')];
+      const coords=pts.map(pt=>[parseFloat(pt.getAttribute('lat')),parseFloat(pt.getAttribute('lon'))])
+                      .filter(c=>!isNaN(c[0])&&!isNaN(c[1]));
+      if(coords.length<2) return;
+      let km=0;
+      for(let i=1;i<coords.length;i++) km+=haversineKm(coords[i-1][0],coords[i-1][1],coords[i][0],coords[i][1]);
+      L.polyline(coords,{color:'#bd5d34',weight:4,opacity:.85,dashArray:'1 7',lineCap:'round'})
+        .addTo(layer)
+        .bindPopup(`<div class="map-pop"><b>${placeName(p)}</b>${t('map_track')} · ${km.toFixed(1)} km</div>`);
+    })
+    .catch(e=>console.warn('[Labateca] track',p.id,':',e.message));
 }
 
 /* ============================================================
@@ -2720,6 +2764,7 @@ function init(){
     .then(json => {
       PLACES = Array.isArray(json.lugares) ? json.lugares : [];
       renderFilters(); renderPlaces(); renderGallery();
+      try { paintMapMarkers(); } catch(e) { console.warn('paintMapMarkers', e); }
       // Después de cargar los lugares, verificar si hay ?lugar= en la URL
       _checkLugarParam();
     })

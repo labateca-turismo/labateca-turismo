@@ -7,7 +7,7 @@
      - network-first      → datos dinámicos (clima Open-Meteo)
    ============================================================ */
 
-const CACHE_VERSION = 'labateca-v13';
+const CACHE_VERSION = 'labateca-v14';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE   = `${CACHE_VERSION}-images`;
 const DATA_CACHE    = `${CACHE_VERSION}-data`;
@@ -69,8 +69,8 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // 3. JSON de datos → stale-while-revalidate (se actualiza con CMS)
-  if (url.pathname === '/data/places.json' || url.pathname === '/data/rutas.json') {
+  // 3. Datos (JSON y tracks GPX) → stale-while-revalidate (se actualizan con CMS/campo)
+  if (url.pathname.startsWith('/data/')) {
     event.respondWith(staleWhileRevalidate(request, DATA_CACHE));
     return;
   }

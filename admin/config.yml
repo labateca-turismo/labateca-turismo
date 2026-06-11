@@ -118,6 +118,8 @@ collections:
                   hint: "Solo el public_id de Cloudinary. Ej: labateca/lirgua-01"
                 required: false
 
+              - { label: "Track GPS (archivo GPX)", name: "track", widget: string, required: false, hint: "Ruta del sendero grabado en campo. Ej: data/tracks/cascada-lirgua.gpx" }
+
   # ─── RUTAS TEMÁTICAS ─────────────────────────────────────
   - name: "rutas_data"
     label: "Rutas temáticas"
