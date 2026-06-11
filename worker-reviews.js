@@ -53,7 +53,8 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const origin = request.headers.get('Origin') || '';
-    const allowed = ALLOWED_ORIGINS.includes(origin);
+    // Permitidos: el sitio, localhost, y el propio worker (el panel /moderar llama a /api/admin/*)
+    const allowed = ALLOWED_ORIGINS.includes(origin) || origin === url.origin;
     const cors = {
       'Access-Control-Allow-Origin': allowed ? origin : ALLOWED_ORIGINS[0],
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
