@@ -2324,34 +2324,78 @@ const WCODE={
   95:{e:"⛈️",es:"Tormenta",en:"Thunderstorm"},96:{e:"⛈️",es:"Tormenta",en:"Thunderstorm"}
 };
 let lastWeather=null;
+/* Clima con doble proveedor: Open-Meteo (principal) y MET Norway (respaldo).
+   Algunos ISP no alcanzan el servidor de Open-Meteo; met.no es gratis y sin clave. */
 async function loadWeather(){
+  try{ await _weatherOpenMeteo(); }
+  catch(e1){
+    console.warn('[Labateca] Open-Meteo falló, probando met.no:', e1.message);
+    try{ await _weatherMetNo(); }
+    catch(e2){
+      console.warn('[Labateca] met.no también falló:', e2.message);
+      document.getElementById("wTemp").textContent="20";
+      document.getElementById("wIcon").textContent="⛅";
+      document.getElementById("wCondition").innerHTML=
+        `${lang==="es"?"Clima templado":"Mild climate"} &nbsp;<button onclick="loadWeather()" style="font:inherit;font-size:.75rem;background:var(--forest);color:#fff;border:none;border-radius:99px;padding:2px 10px;cursor:pointer">${lang==="es"?"Reintentar":"Retry"}</button>`;
+    }
+  }
+}
+
+function _fetchTimeout(url,ms){
+  const ctrl=new AbortController();
+  const tid=setTimeout(()=>ctrl.abort(),ms);
+  return fetch(url,{signal:ctrl.signal}).finally(()=>clearTimeout(tid));
+}
+
+async function _weatherOpenMeteo(){
   const {lat,lng}=CONFIG.townCoords;
   const url=`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation,uv_index,cloud_cover&timezone=America/Bogota`;
-  try{
-    const ctrl=new AbortController();
-    const tid=setTimeout(()=>ctrl.abort(),7000);
-    const r=await fetch(url,{signal:ctrl.signal}); clearTimeout(tid);
-    if(!r.ok) throw new Error('http '+r.status);
-    const d=await r.json();
-    const c=d.current;
-    if(!c||c.temperature_2m==null) throw new Error('bad data');
-    lastWeather={
-      temp:Math.round(c.temperature_2m),
-      feels:Math.round(c.apparent_temperature??c.temperature_2m),
-      code:c.weather_code??2,
-      hum:c.relative_humidity_2m??0,
-      wind:Math.round(c.wind_speed_10m??0),
-      rain:+(c.precipitation??0).toFixed(1),
-      uv:Math.round(c.uv_index??0),
-      cloud:c.cloud_cover??0
-    };
-    paintWeather();
-  }catch(e){
-    document.getElementById("wTemp").textContent="20";
-    document.getElementById("wIcon").textContent="⛅";
-    document.getElementById("wCondition").innerHTML=
-      `${lang==="es"?"Clima templado":"Mild climate"} &nbsp;<button onclick="loadWeather()" style="font:inherit;font-size:.75rem;background:var(--forest);color:#fff;border:none;border-radius:99px;padding:2px 10px;cursor:pointer">${lang==="es"?"Reintentar":"Retry"}</button>`;
-  }
+  const r=await _fetchTimeout(url,6000);
+  if(!r.ok) throw new Error('http '+r.status);
+  const d=await r.json();
+  const c=d.current;
+  if(!c||c.temperature_2m==null) throw new Error('bad data');
+  lastWeather={
+    temp:Math.round(c.temperature_2m),
+    feels:Math.round(c.apparent_temperature??c.temperature_2m),
+    code:c.weather_code??2,
+    hum:c.relative_humidity_2m??0,
+    wind:Math.round(c.wind_speed_10m??0),
+    rain:+(c.precipitation??0).toFixed(1),
+    uv:Math.round(c.uv_index??0),
+    cloud:c.cloud_cover??0
+  };
+  paintWeather();
+}
+
+/* Mapa de símbolos de met.no → códigos WMO que ya usa WCODE */
+const METNO_WMO={clearsky:0,fair:1,partlycloudy:2,cloudy:3,fog:45,
+  lightrain:61,lightrainshowers:61,rain:63,rainshowers:80,heavyrain:65,heavyrainshowers:65,
+  lightsleet:66,sleet:66,heavysleet:66,lightsnow:71,snow:73,heavysnow:75,
+  lightrainandthunder:95,rainandthunder:95,heavyrainandthunder:95,thunderstorm:95};
+
+async function _weatherMetNo(){
+  const {lat,lng}=CONFIG.townCoords;
+  const url=`https://api.met.no/weatherapi/locationforecast/2.0/complete?lat=${lat}&lon=${lng}`;
+  const r=await _fetchTimeout(url,6000);
+  if(!r.ok) throw new Error('http '+r.status);
+  const d=await r.json();
+  const now=d.properties&&d.properties.timeseries&&d.properties.timeseries[0];
+  if(!now) throw new Error('bad data');
+  const det=now.data.instant.details;
+  const next=(now.data.next_1_hours||now.data.next_6_hours||{});
+  const sym=((next.summary||{}).symbol_code||'partlycloudy').split('_')[0];
+  lastWeather={
+    temp:Math.round(det.air_temperature),
+    feels:Math.round(det.air_temperature),
+    code:METNO_WMO[sym]??2,
+    hum:Math.round(det.relative_humidity??0),
+    wind:Math.round((det.wind_speed??0)*3.6),
+    rain:+(((next.details||{}).precipitation_amount)??0).toFixed(1),
+    uv:Math.round(det.ultraviolet_index_clear_sky??0),
+    cloud:Math.round(det.cloud_area_fraction??0)
+  };
+  paintWeather();
 }
 function paintWeather(){
   if(!lastWeather) return;
