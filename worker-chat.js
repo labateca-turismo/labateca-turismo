@@ -1,27 +1,62 @@
+/* Orígenes autorizados a usar el chat (agregar aquí el dominio propio cuando exista) */
+const ALLOWED_ORIGINS = [
+  'https://labateca-turismo.jr22caceres.workers.dev',
+  'http://localhost:8000',
+  'http://localhost:8765',
+];
+
+const MAX_QUESTION_CHARS = 500;
+const MAX_PLACES = 12;
+const MAX_FIELD_CHARS = 300;
+
+/* Limpia un campo de texto venido del cliente: solo string, longitud acotada */
+function clean(v) {
+  return (typeof v === 'string') ? v.slice(0, MAX_FIELD_CHARS) : '';
+}
+
 export default {
   async fetch(request, env) {
+    const origin = request.headers.get('Origin') || '';
+    const allowed = ALLOWED_ORIGINS.includes(origin);
     const cors = {
-      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Origin': allowed ? origin : ALLOWED_ORIGINS[0],
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
+      'Vary': 'Origin',
     };
 
     if (request.method === 'OPTIONS') return new Response(null, { headers: cors });
     if (request.method !== 'POST') return new Response('Method not allowed', { status: 405 });
 
+    // Bloquear orígenes no autorizados (los navegadores siempre envían Origin en POST cross-site)
+    if (origin && !allowed) {
+      return new Response(JSON.stringify({ ok: false, error: 'Origin not allowed' }), {
+        status: 403,
+        headers: Object.assign({}, cors, { 'Content-Type': 'application/json' })
+      });
+    }
+
     try {
       const body = await request.json();
-      const question = body.question || '';
-      const lang     = body.lang || 'es';
-      const places   = body.places || [];
+      const question = String(body.question || '').slice(0, MAX_QUESTION_CHARS);
+      const lang     = (body.lang === 'en') ? 'en' : 'es';
+      const places   = Array.isArray(body.places) ? body.places : [];
 
-      // Construir contexto con los lugares del sitio
-      const ctx = places.slice(0, 12).map(function(p) {
-        const nombre = ((p.nombre || p.name || {})[lang]) || '';
-        const desc   = ((p.desc   || {})[lang]) || '';
-        const dist   = ((p.dist   || {})[lang]) || '';
-        const como   = ((p.comoLlegar || {})[lang]) || '';
-        const rec    = ((p.recomendacion || p.rec || {})[lang]) || '';
+      if (!question.trim()) {
+        return new Response(JSON.stringify({ ok: false, error: 'Empty question' }), {
+          status: 400,
+          headers: Object.assign({}, cors, { 'Content-Type': 'application/json' })
+        });
+      }
+
+      // Construir contexto con los lugares del sitio (campos saneados y acotados)
+      const ctx = places.slice(0, MAX_PLACES).map(function(p) {
+        if (!p || typeof p !== 'object') return '';
+        const nombre = clean(((p.nombre || p.name || {})[lang]));
+        const desc   = clean(((p.desc   || {})[lang]));
+        const dist   = clean(((p.dist   || {})[lang]));
+        const como   = clean(((p.comoLlegar || {})[lang]));
+        const rec    = clean(((p.recomendacion || p.rec || {})[lang]));
         if (!nombre) return '';
         var line = '• ' + nombre + ': ' + desc;
         if (dist) line += ' Distancia: ' + dist + '.';

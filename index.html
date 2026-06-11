@@ -2011,7 +2011,7 @@ function calcDistance(){
 /* ============================================================
    FORMULARIO (Web3Forms + respaldo WhatsApp)
    ============================================================ */
-function buildWaLink(text){ return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`; }
+function buildWaLink(text){ return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text).replace(/'/g,'%27')}`; }
 
 document.getElementById("contactForm").addEventListener("submit", async (e)=>{
   e.preventDefault();

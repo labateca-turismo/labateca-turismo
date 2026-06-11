@@ -1,0 +1,7 @@
+CLAUDE.md
+worker-chat.js
+wrangler.toml
+.gitignore
+.assetsignore
+debug.html
+debug2.html
