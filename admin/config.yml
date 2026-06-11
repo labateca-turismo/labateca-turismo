@@ -123,6 +123,70 @@ collections:
 
               - { label: "Track GPS (archivo GPX)", name: "track", widget: string, required: false, hint: "Ruta del sendero grabado en campo. Ej: data/tracks/cascada-lirgua.gpx" }
 
+  # ─── FIESTAS Y EVENTOS ───────────────────────────────────
+  - name: "eventos_data"
+    label: "Fiestas y eventos"
+    description: "Calendario de fiestas del municipio"
+    files:
+      - label: "Todos los eventos"
+        name: "eventos"
+        file: "data/eventos.json"
+        format: json
+        fields:
+          - { label: "Versión", name: "version", widget: hidden, default: "1.0" }
+          - label: "Eventos"
+            name: "eventos"
+            widget: list
+            label_singular: "Evento"
+            summary: "{{fields.nombre.es}}"
+            fields:
+              - { label: "ID único", name: "id", widget: string, hint: "Ej: fiestas-patronales" }
+              - label: "Fecha (texto)"
+                name: "fecha"
+                widget: object
+                fields:
+                  - { label: "Español", name: "es", widget: string, hint: "Ej: Septiembre · segunda semana" }
+                  - { label: "Inglés",  name: "en", widget: string }
+              - label: "Nombre"
+                name: "nombre"
+                widget: object
+                fields:
+                  - { label: "Español", name: "es", widget: string }
+                  - { label: "Inglés",  name: "en", widget: string }
+              - label: "Descripción"
+                name: "desc"
+                widget: object
+                fields:
+                  - { label: "Español", name: "es", widget: text }
+                  - { label: "Inglés",  name: "en", widget: text }
+
+  # ─── GUÍAS LOCALES ───────────────────────────────────────
+  - name: "guias_data"
+    label: "Guías locales"
+    description: "Directorio de guías y baquianos de la comunidad"
+    files:
+      - label: "Todos los guías"
+        name: "guias"
+        file: "data/guias.json"
+        format: json
+        fields:
+          - { label: "Versión", name: "version", widget: hidden, default: "1.0" }
+          - label: "Guías"
+            name: "guias"
+            widget: list
+            label_singular: "Guía"
+            summary: "{{fields.nombre}}"
+            fields:
+              - { label: "Nombre", name: "nombre", widget: string }
+              - { label: "WhatsApp", name: "whatsapp", widget: string, hint: "Formato internacional sin +. Ej: 573001234567" }
+              - { label: "Foto (ID de Cloudinary)", name: "foto", widget: string, required: false, hint: "Ej: labateca/guia-pedro-01" }
+              - label: "Especialidad"
+                name: "especialidad"
+                widget: object
+                fields:
+                  - { label: "Español", name: "es", widget: string, hint: "Ej: Cascadas y páramo · 15 años de experiencia" }
+                  - { label: "Inglés",  name: "en", widget: string }
+
   # ─── RUTAS TEMÁTICAS ─────────────────────────────────────
   - name: "rutas_data"
     label: "Rutas temáticas"

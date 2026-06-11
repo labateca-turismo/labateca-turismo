@@ -800,6 +800,83 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;
   #chat-panel{bottom:80px;right:12px;width:calc(100vw - 24px)}
   #chat-toggle{bottom:16px;right:16px}
 }
+/* ============================================================
+   CÓMO LLEGAR
+   ============================================================ */
+.howto-sec{background:var(--cream-2)}
+.howto-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:22px}
+.howto-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px 24px;box-shadow:0 6px 18px rgba(22,53,42,.06)}
+.howto-city{font-family:"Fraunces";font-size:1.25rem;font-weight:600;color:var(--forest);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.howto-city::before{content:"🚌"}
+.howto-card p{font-size:.92rem;color:var(--ink-mut);line-height:1.65}
+.howto-tip{background:rgba(201,162,39,.12);border:1px dashed var(--gold);border-radius:14px;padding:14px 18px;font-size:.88rem;color:var(--forest)}
+
+/* ============================================================
+   EVENTOS
+   ============================================================ */
+.eventos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.evento-card{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--clay);border-radius:14px;padding:20px 22px}
+.evento-mes{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);font-weight:800;margin-bottom:6px}
+.evento-card h3{font-family:"Fraunces";font-size:1.12rem;color:var(--forest);margin-bottom:6px}
+.evento-card p{font-size:.88rem;color:var(--ink-mut);line-height:1.6}
+
+/* ============================================================
+   GUÍAS LOCALES
+   ============================================================ */
+.guias-sec{background:var(--cream-2)}
+.guias-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.guia-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center}
+.guia-foto{width:84px;height:84px;border-radius:50%;object-fit:cover;margin:0 auto 12px;background:var(--cream-2);display:block}
+.guia-foto-ph{width:84px;height:84px;border-radius:50%;margin:0 auto 12px;background:var(--cream-2);display:grid;place-items:center;font-size:2rem}
+.guia-card h3{font-family:"Fraunces";font-size:1.08rem;color:var(--forest)}
+.guia-card .esp{font-size:.82rem;color:var(--ink-mut);margin:6px 0 14px}
+.guia-wa{display:inline-flex;align-items:center;gap:6px;background:#25D366;color:#fff;border-radius:99px;padding:8px 18px;font-size:.85rem;font-weight:700;text-decoration:none;transition:transform .2s}
+.guia-wa:hover{transform:translateY(-2px)}
+
+/* ============================================================
+   BOTÓN COMPARTIR EN TARJETAS
+   ============================================================ */
+.pc-share{width:38px;flex:none !important;display:grid;place-items:center;border:1.5px solid var(--line);border-radius:10px;color:var(--forest);transition:all .2s;cursor:pointer;background:none}
+.pc-share:hover{background:var(--forest);color:var(--cream);border-color:var(--forest)}
+.pc-share svg{width:17px;height:17px}
+
+/* ============================================================
+   RESEÑAS DE VISITANTES
+   ============================================================ */
+.pc-reviews{font-size:.78rem;font-weight:700;color:var(--clay);background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:4px;padding:4px 0;margin-top:2px}
+.pc-reviews:hover{text-decoration:underline}
+.rv-overlay{position:fixed;inset:0;background:rgba(22,53,42,.55);backdrop-filter:blur(4px);z-index:2100;display:grid;place-items:center;padding:18px}
+.rv-overlay[hidden]{display:none}
+.rv-modal{background:var(--paper);border-radius:20px;width:min(560px,100%);max-height:88vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.rv-head{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.rv-head h3{font-family:"Fraunces";font-size:1.3rem;color:var(--forest)}
+.rv-avg{font-size:.9rem;color:var(--gold);font-weight:700;margin-top:2px}
+.rv-close{width:36px;height:36px;border-radius:50%;background:var(--cream-2);display:grid;place-items:center;cursor:pointer;border:none;font-size:1rem;color:var(--forest);flex-shrink:0}
+.rv-body{overflow-y:auto;padding:20px 24px}
+.rv-list{margin-bottom:22px}
+.rv-item{padding:14px 0;border-bottom:1px dashed var(--line)}
+.rv-item-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:4px}
+.rv-item-head b{color:var(--forest);font-size:.92rem}
+.rv-item-stars{color:var(--gold);font-size:.85rem;letter-spacing:2px}
+.rv-item p{font-size:.88rem;color:var(--ink);line-height:1.6}
+.rv-item img{margin-top:10px;border-radius:10px;max-width:200px;max-height:140px;object-fit:cover;cursor:pointer}
+.rv-item .rv-date{font-size:.72rem;color:var(--ink-mut)}
+.rv-empty,.rv-loading{font-size:.88rem;color:var(--ink-mut);text-align:center;padding:18px 0}
+.rv-form{background:var(--cream);border-radius:14px;padding:18px}
+.rv-form h4{font-family:"Fraunces";color:var(--forest);margin-bottom:10px;font-size:1.05rem}
+.rv-stars{display:flex;gap:4px;margin-bottom:12px}
+.rv-stars button{font-size:1.7rem;background:none;border:none;cursor:pointer;color:#d8d2c2;transition:transform .15s,color .15s;padding:0 2px}
+.rv-stars button.on{color:var(--gold)}
+.rv-stars button:hover{transform:scale(1.2)}
+.rv-form input[type=text],.rv-form textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit;font-size:.9rem;margin-bottom:10px;background:var(--paper);color:var(--ink)}
+.rv-photo-label{display:block;font-size:.82rem;color:var(--forest);font-weight:600;cursor:pointer;margin-bottom:12px}
+.rv-photo-label input{display:none}
+.rv-photo-name{display:block;font-size:.75rem;color:var(--ink-mut);font-weight:400;margin-top:2px}
+.rv-submit{width:100%;background:var(--forest);color:var(--cream);border:none;border-radius:99px;padding:12px;font:inherit;font-weight:700;cursor:pointer;transition:background .2s}
+.rv-submit:hover{background:var(--forest-2)}
+.rv-submit:disabled{opacity:.55;cursor:wait}
+.rv-note{font-size:.72rem;color:var(--ink-mut);text-align:center;margin-top:8px}
+.rv-msg{font-size:.85rem;font-weight:700;text-align:center;margin-top:8px}
 </style>
 </head>
 <body>
@@ -1061,6 +1138,62 @@ if ('serviceWorker' in navigator) {
 </section>
 
 <!-- ============================================================
+     CÓMO LLEGAR A LABATECA
+     ============================================================ -->
+<section class="howto-sec" id="como-llegar">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="hl_eyebrow">Tu viaje</span>
+      <h2 data-i18n="hl_title">Cómo llegar a Labateca</h2>
+      <p data-i18n="hl_sub">Paso a paso desde las tres ciudades más cercanas. Los horarios y tarifas de bus se confirman en cada terminal.</p>
+    </div>
+    <div class="howto-grid">
+      <div class="howto-card reveal">
+        <div class="howto-city" data-i18n="hl_cucuta_t">Desde Cúcuta</div>
+        <p data-i18n="hl_cucuta_d">Toma un bus o buseta hacia Labateca en la Terminal de Transportes de Cúcuta (ruta por Pamplona o por Toledo, según la empresa). Son ~113 km, entre 3 y 4 horas por carretera de montaña. Pregunta en taquilla por el horario de regreso del mismo día.</p>
+      </div>
+      <div class="howto-card reveal d1">
+        <div class="howto-city" data-i18n="hl_pamplona_t">Desde Pamplona</div>
+        <p data-i18n="hl_pamplona_d">Pamplona es el punto intermedio de la ruta. Desde su terminal salen busetas y camionetas hacia Labateca y Toledo. Es el tramo más corto y con los paisajes de páramo más bonitos del recorrido.</p>
+      </div>
+      <div class="howto-card reveal d2">
+        <div class="howto-city" data-i18n="hl_buca_t">Desde Bucaramanga</div>
+        <p data-i18n="hl_buca_d">Toma un bus Bucaramanga → Pamplona (~4 horas) y allí haz el cambio hacia Labateca. Sal temprano: el último transporte del día hacia el municipio suele salir en la tarde.</p>
+      </div>
+    </div>
+    <div class="howto-tip reveal" data-i18n="hl_tip">💡 Si vienes en carro propio: la vía está pavimentada en su mayoría; tanquea en Pamplona o Cúcuta y descarga el mapa offline antes de salir, hay tramos sin señal.</div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FIESTAS Y EVENTOS (se muestra solo si hay eventos en data/eventos.json)
+     ============================================================ -->
+<section class="eventos-sec" id="eventos" style="display:none">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="ev_eyebrow">Calendario</span>
+      <h2 data-i18n="ev_title">Fiestas y eventos</h2>
+      <p data-i18n="ev_sub">Las fechas en las que Labateca se viste de fiesta. Planea tu visita para vivirlas.</p>
+    </div>
+    <div class="eventos-grid" id="eventosGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GUÍAS LOCALES (se muestra solo si hay guías en data/guias.json)
+     ============================================================ -->
+<section class="guias-sec" id="guias" style="display:none">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="gu_eyebrow">Gente local</span>
+      <h2 data-i18n="gu_title">Guías y baquianos</h2>
+      <p data-i18n="gu_sub">Personas de la comunidad que conocen cada sendero. Contrátalos directo por WhatsApp: tu visita deja ingreso local.</p>
+    </div>
+    <div class="guias-grid" id="guiasGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
      CONTACTO
      ============================================================ -->
 <section class="contact" id="contacto">
@@ -1273,6 +1406,40 @@ if ('serviceWorker' in navigator) {
 </aside>
 
 <!-- ============================================================
+     MODAL DE RESEÑAS DE VISITANTES
+     ============================================================ -->
+<div class="rv-overlay" id="rvOverlay" role="dialog" aria-modal="true" aria-labelledby="rvTitle" hidden>
+  <div class="rv-modal">
+    <div class="rv-head">
+      <div>
+        <h3 id="rvTitle">—</h3>
+        <div class="rv-avg" id="rvAvg"></div>
+      </div>
+      <button class="rv-close" onclick="closeReviews()" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="rv-body">
+      <div class="rv-list" id="rvList"><p class="rv-loading" data-i18n="rv_loading">Cargando opiniones…</p></div>
+      <form class="rv-form" id="rvForm" onsubmit="return submitReview(event)">
+        <h4 data-i18n="rv_form_title">Cuéntanos tu experiencia</h4>
+        <div class="rv-stars" id="rvStars" role="radiogroup" aria-label="Calificación">
+          <button type="button" data-v="1">★</button><button type="button" data-v="2">★</button><button type="button" data-v="3">★</button><button type="button" data-v="4">★</button><button type="button" data-v="5">★</button>
+        </div>
+        <input type="text" id="rvName" maxlength="60" required data-i18n-ph="rv_name_ph" placeholder="Tu nombre">
+        <textarea id="rvComment" maxlength="600" rows="3" required data-i18n-ph="rv_comment_ph" placeholder="¿Cómo fue tu visita? ¿Qué recomiendas?"></textarea>
+        <label class="rv-photo-label">
+          <input type="file" id="rvPhoto" accept="image/*">
+          <span data-i18n="rv_photo">📷 Agregar una foto de tu visita (opcional)</span>
+          <span class="rv-photo-name" id="rvPhotoName"></span>
+        </label>
+        <button type="submit" class="rv-submit" id="rvSubmit" data-i18n="rv_send">Enviar opinión</button>
+        <p class="rv-note" data-i18n="rv_moderation">Tu opinión se publica después de una revisión rápida. ¡Gracias por aportar!</p>
+        <p class="rv-msg" id="rvMsg"></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
      LEAFLET JS
      ============================================================ -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -1293,6 +1460,10 @@ const CONFIG = {
   cloudName: "dtumgxebs",
   // URL del Worker de IA (Cloudflare Workers AI)
   chatWorkerUrl: "https://labateca-chat.jr22caceres.workers.dev",
+  // URL del Worker de reseñas de visitantes (Cloudflare D1). Vacío = sección oculta.
+  reviewsWorkerUrl: "https://labateca-reviews.jr22caceres.workers.dev",
+  // Upload preset SIN FIRMA de Cloudinary para fotos de visitantes (carpeta visitantes/)
+  uploadPreset: "labateca_visitantes",
   // Centro del pueblo (Parque Principal) — coordenadas del casco urbano
   townCoords: { lat: 7.3167, lng: -72.4833 },
   // Redes sociales (pon tus enlaces; deja "#" si aún no tienes)
@@ -1467,6 +1638,35 @@ const I18N = {
     map_eyebrow:"Ubícate", map_title:"Todo Labateca en un mapa", map_sub:"Explora cada lugar, mira las distancias y abre la navegación con un toque.",
     map_tab_real:"Mapa real", map_tab_ilustrado:"Mapa ilustrado",
     map_track:"Sendero a pie",
+    cta_share:"Compartir",
+    hl_eyebrow:"Tu viaje", hl_title:"Cómo llegar a Labateca",
+    hl_sub:"Paso a paso desde las tres ciudades más cercanas. Los horarios y tarifas de bus se confirman en cada terminal.",
+    hl_cucuta_t:"Desde Cúcuta",
+    hl_cucuta_d:"Toma un bus o buseta hacia Labateca en la Terminal de Transportes de Cúcuta (ruta por Pamplona o por Toledo, según la empresa). Son ~113 km, entre 3 y 4 horas por carretera de montaña. Pregunta en taquilla por el horario de regreso del mismo día.",
+    hl_pamplona_t:"Desde Pamplona",
+    hl_pamplona_d:"Pamplona es el punto intermedio de la ruta. Desde su terminal salen busetas y camionetas hacia Labateca y Toledo. Es el tramo más corto y con los paisajes de páramo más bonitos del recorrido.",
+    hl_buca_t:"Desde Bucaramanga",
+    hl_buca_d:"Toma un bus Bucaramanga → Pamplona (~4 horas) y allí haz el cambio hacia Labateca. Sal temprano: el último transporte del día hacia el municipio suele salir en la tarde.",
+    hl_tip:"💡 Si vienes en carro propio: la vía está pavimentada en su mayoría; tanquea en Pamplona o Cúcuta y descarga el mapa offline antes de salir, hay tramos sin señal.",
+    ev_eyebrow:"Calendario", ev_title:"Fiestas y eventos",
+    ev_sub:"Las fechas en las que Labateca se viste de fiesta. Planea tu visita para vivirlas.",
+    gu_eyebrow:"Gente local", gu_title:"Guías y baquianos",
+    gu_sub:"Personas de la comunidad que conocen cada sendero. Contrátalos directo por WhatsApp: tu visita deja ingreso local.",
+    rv_open:"Opiniones de visitantes",
+    rv_loading:"Cargando opiniones…",
+    rv_empty:"Aún no hay opiniones de este lugar. ¡Sé la primera persona en contar su experiencia!",
+    rv_error:"No pudimos conectarnos. Inténtalo de nuevo en un momento.",
+    rv_count:"opiniones",
+    rv_form_title:"Cuéntanos tu experiencia",
+    rv_name_ph:"Tu nombre",
+    rv_comment_ph:"¿Cómo fue tu visita? ¿Qué recomiendas?",
+    rv_photo:"📷 Agregar una foto de tu visita (opcional)",
+    rv_send:"Enviar opinión",
+    rv_moderation:"Tu opinión se publica después de una revisión rápida. ¡Gracias por aportar!",
+    rv_need_stars:"Elige una calificación de 1 a 5 estrellas.",
+    rv_sending:"Enviando…",
+    rv_thanks:"¡Gracias! Tu opinión quedó en revisión y pronto será publicada.",
+    rv_photo_big:"La foto es muy pesada (máximo 8 MB).",
     map_ilustrado_note:"Mapa artístico de referencia · toca un punto para ver la ficha · \"Cómo llegar\" abre Google Maps con la ubicación real",
     map_fallback:"El mapa interactivo se cargará cuando publiques el sitio. Mientras tanto, cada lugar tiene su botón \"Cómo llegar\".",
     gal_eyebrow:"Postales", gal_title:"Galería", gal_sub:"Reemplaza estos espacios por tus propias fotos (mejor calidad y sin problemas de derechos).",
@@ -1535,6 +1735,35 @@ const I18N = {
     map_eyebrow:"Find your way", map_title:"All of Labateca on one map", map_sub:"Explore every place, check distances and launch navigation with one tap.",
     map_tab_real:"Real map", map_tab_ilustrado:"Illustrated map",
     map_track:"Walking trail",
+    cta_share:"Share",
+    hl_eyebrow:"Your trip", hl_title:"How to get to Labateca",
+    hl_sub:"Step by step from the three nearest cities. Bus schedules and fares are confirmed at each terminal.",
+    hl_cucuta_t:"From Cúcuta",
+    hl_cucuta_d:"Take a bus or minibus to Labateca at the Cúcuta Bus Terminal (route via Pamplona or Toledo, depending on the company). It is ~113 km, 3 to 4 hours on a mountain road. Ask at the ticket office about same-day return times.",
+    hl_pamplona_t:"From Pamplona",
+    hl_pamplona_d:"Pamplona is the midpoint of the route. Minibuses and pickups leave from its terminal to Labateca and Toledo. It is the shortest stretch, with the most beautiful páramo views of the trip.",
+    hl_buca_t:"From Bucaramanga",
+    hl_buca_d:"Take a Bucaramanga → Pamplona bus (~4 hours) and transfer there towards Labateca. Leave early: the last ride of the day to town usually departs in the afternoon.",
+    hl_tip:"💡 Driving? The road is mostly paved; fill up in Pamplona or Cúcuta and download the offline map before leaving — some stretches have no signal.",
+    ev_eyebrow:"Calendar", ev_title:"Festivals & events",
+    ev_sub:"The dates when Labateca dresses up to celebrate. Plan your visit around them.",
+    gu_eyebrow:"Local people", gu_title:"Guides & trail experts",
+    gu_sub:"Community members who know every trail. Hire them directly via WhatsApp — your visit supports local income.",
+    rv_open:"Visitor reviews",
+    rv_loading:"Loading reviews…",
+    rv_empty:"No reviews for this place yet. Be the first to share your experience!",
+    rv_error:"We couldn't connect. Please try again in a moment.",
+    rv_count:"reviews",
+    rv_form_title:"Tell us about your experience",
+    rv_name_ph:"Your name",
+    rv_comment_ph:"How was your visit? What do you recommend?",
+    rv_photo:"📷 Add a photo from your visit (optional)",
+    rv_send:"Submit review",
+    rv_moderation:"Your review is published after a quick check. Thanks for contributing!",
+    rv_need_stars:"Pick a rating from 1 to 5 stars.",
+    rv_sending:"Sending…",
+    rv_thanks:"Thank you! Your review is pending approval and will be published soon.",
+    rv_photo_big:"The photo is too large (8 MB max).",
     map_ilustrado_note:"Artistic reference map · tap a dot to see the place card · \"Directions\" opens Google Maps with the real location",
     map_fallback:"The interactive map will load once you publish the site. Meanwhile, every place has its own \"Directions\" button.",
     gal_eyebrow:"Postcards", gal_title:"Gallery", gal_sub:"Replace these slots with your own photos (better quality and no copyright issues).",
@@ -1696,7 +1925,11 @@ function renderPlaces(){
           <button class="pc-btn route ${inRoute?'added':''}" onclick="toggleRoute('${p.id}')">
             ${inRoute?IC.check:IC.plus}${inRoute?t('cta_added'):t('cta_add')}
           </button>
+          <button class="pc-share" onclick="sharePlace('${p.id}')" aria-label="${t('cta_share')}" title="${t('cta_share')}">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
+        ${CONFIG.reviewsWorkerUrl?`<button class="pc-reviews" onclick="openReviews('${p.id}')">★ ${t('rv_open')}</button>`:''}
         ${note}
       </div>
     </article>`;
@@ -1761,6 +1994,172 @@ function renderDrawer(){
 
 function openDrawer(){ document.getElementById("drawer").classList.add("open"); document.getElementById("drawerOverlay").classList.add("open"); }
 function closeDrawer(){ document.getElementById("drawer").classList.remove("open"); document.getElementById("drawerOverlay").classList.remove("open"); }
+
+/* ============================================================
+   COMPARTIR LUGAR (Web Share API, respaldo WhatsApp)
+   ============================================================ */
+function sharePlace(id){
+  const p=PLACES.find(x=>x.id===id); if(!p) return;
+  const url=`${location.origin}/?lugar=${encodeURIComponent(id)}`;
+  const text=`${placeName(p)} — Labateca · Volcanes de Dios`;
+  if(navigator.share){
+    navigator.share({title:text,text,url}).catch(()=>{});
+  }else{
+    window.open(`https://wa.me/?text=${encodeURIComponent(text+' '+url)}`,'_blank','noopener');
+  }
+}
+
+/* ============================================================
+   FIESTAS Y EVENTOS (data/eventos.json — sección oculta si vacío)
+   ============================================================ */
+async function loadEventos(){
+  try{
+    const r=await fetch('/data/eventos.json');
+    const j=await r.json();
+    const evs=Array.isArray(j.eventos)?j.eventos:[];
+    if(!evs.length) return;
+    const grid=document.getElementById('eventosGrid');
+    grid.innerHTML=evs.map(ev=>`
+      <div class="evento-card reveal in">
+        <div class="evento-mes">${(ev.fecha||{})[lang]||''}</div>
+        <h3>${(ev.nombre||{})[lang]||''}</h3>
+        <p>${(ev.desc||{})[lang]||''}</p>
+      </div>`).join('');
+    document.getElementById('eventos').style.display='';
+  }catch(e){ console.warn('[Labateca] eventos.json:',e.message); }
+}
+
+/* ============================================================
+   GUÍAS LOCALES (data/guias.json — sección oculta si vacío)
+   ============================================================ */
+async function loadGuias(){
+  try{
+    const r=await fetch('/data/guias.json');
+    const j=await r.json();
+    const gs=Array.isArray(j.guias)?j.guias:[];
+    if(!gs.length) return;
+    const grid=document.getElementById('guiasGrid');
+    grid.innerHTML=gs.map(g=>{
+      const foto=g.foto?`<img class="guia-foto" src="${cldUrl(g.foto,'w_200,h_200,c_fill,g_face,f_auto,q_auto')}" alt="${g.nombre}" loading="lazy">`:`<div class="guia-foto-ph">🧭</div>`;
+      const wa=g.whatsapp?`<a class="guia-wa" href="https://wa.me/${g.whatsapp}?text=${encodeURIComponent(lang==='es'?'Hola, te contacto desde la guía de Labateca. Quisiera información sobre un recorrido.':'Hi! I found you on the Labateca guide. I would like info about a tour.')}" target="_blank" rel="noopener">WhatsApp</a>`:'';
+      return `<div class="guia-card reveal in">${foto}<h3>${g.nombre||''}</h3><div class="esp">${(g.especialidad||{})[lang]||''}</div>${wa}</div>`;
+    }).join('');
+    document.getElementById('guias').style.display='';
+  }catch(e){ console.warn('[Labateca] guias.json:',e.message); }
+}
+
+/* ============================================================
+   RESEÑAS DE VISITANTES (worker + D1, moderadas)
+   ============================================================ */
+let _rvPlaceId=null, _rvRating=0;
+
+function openReviews(id){
+  const p=PLACES.find(x=>x.id===id); if(!p||!CONFIG.reviewsWorkerUrl) return;
+  _rvPlaceId=id; _rvRating=0;
+  document.getElementById('rvTitle').textContent=placeName(p);
+  document.getElementById('rvAvg').textContent='';
+  document.getElementById('rvMsg').textContent='';
+  document.getElementById('rvForm').reset();
+  document.getElementById('rvPhotoName').textContent='';
+  _paintStars();
+  document.getElementById('rvOverlay').hidden=false;
+  document.body.style.overflow='hidden';
+  loadReviews(id);
+}
+function closeReviews(){
+  document.getElementById('rvOverlay').hidden=true;
+  document.body.style.overflow='';
+}
+document.getElementById('rvOverlay').addEventListener('click',e=>{ if(e.target===e.currentTarget) closeReviews(); });
+
+function _paintStars(){
+  document.querySelectorAll('#rvStars button').forEach(b=>{
+    b.classList.toggle('on',+b.dataset.v<=_rvRating);
+  });
+}
+document.querySelectorAll('#rvStars button').forEach(b=>{
+  b.addEventListener('click',()=>{ _rvRating=+b.dataset.v; _paintStars(); });
+});
+document.getElementById('rvPhoto').addEventListener('change',e=>{
+  const f=e.target.files[0];
+  document.getElementById('rvPhotoName').textContent=f?f.name:'';
+});
+
+async function loadReviews(id){
+  const list=document.getElementById('rvList');
+  list.innerHTML=`<p class="rv-loading">${t('rv_loading')}</p>`;
+  try{
+    const r=await fetch(`${CONFIG.reviewsWorkerUrl}/api/reviews?place=${encodeURIComponent(id)}`);
+    const j=await r.json();
+    if(!j.ok) throw new Error(j.error||'error');
+    const revs=j.reviews||[];
+    if(j.avg) document.getElementById('rvAvg').textContent=`★ ${j.avg} · ${revs.length} ${t('rv_count')}`;
+    if(!revs.length){ list.innerHTML=`<p class="rv-empty">${t('rv_empty')}</p>`; return; }
+    list.innerHTML=revs.map(rv=>{
+      const stars='★'.repeat(rv.rating)+'☆'.repeat(5-rv.rating);
+      const img=rv.photo?`<img src="${rv.photo}" alt="" loading="lazy" onclick="window.open('${rv.photo}','_blank')">`:'';
+      const d=new Date(rv.created_at).toLocaleDateString(lang==='es'?'es-CO':'en-US',{year:'numeric',month:'short'});
+      const safeName=rv.name.replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+      const safeComment=rv.comment.replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+      return `<div class="rv-item">
+        <div class="rv-item-head"><b>${safeName}</b><span class="rv-item-stars">${stars}</span></div>
+        <p>${safeComment}</p>${img}
+        <div class="rv-date">${d}</div>
+      </div>`;
+    }).join('');
+  }catch(e){
+    list.innerHTML=`<p class="rv-empty">${t('rv_error')}</p>`;
+  }
+}
+
+async function _uploadReviewPhoto(file){
+  if(!CONFIG.cloudName||!CONFIG.uploadPreset) return '';
+  const fd=new FormData();
+  fd.append('file',file);
+  fd.append('upload_preset',CONFIG.uploadPreset);
+  fd.append('folder','visitantes');
+  const r=await fetch(`https://api.cloudinary.com/v1_1/${CONFIG.cloudName}/image/upload`,{method:'POST',body:fd});
+  const j=await r.json();
+  if(!j.secure_url) throw new Error(j.error&&j.error.message||'upload');
+  return j.secure_url;
+}
+
+async function submitReview(e){
+  e.preventDefault();
+  const msg=document.getElementById('rvMsg');
+  const btn=document.getElementById('rvSubmit');
+  if(!_rvRating){ msg.style.color='var(--clay)'; msg.textContent=t('rv_need_stars'); return false; }
+  btn.disabled=true; msg.style.color='var(--ink-mut)'; msg.textContent=t('rv_sending');
+  try{
+    let photo='';
+    const file=document.getElementById('rvPhoto').files[0];
+    if(file){
+      if(file.size>8*1024*1024) throw new Error(t('rv_photo_big'));
+      photo=await _uploadReviewPhoto(file);
+    }
+    const r=await fetch(`${CONFIG.reviewsWorkerUrl}/api/reviews`,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        place:_rvPlaceId,
+        name:document.getElementById('rvName').value.trim(),
+        rating:_rvRating,
+        comment:document.getElementById('rvComment').value.trim(),
+        photo, lang
+      })
+    });
+    const j=await r.json();
+    if(!j.ok) throw new Error(j.error||'error');
+    msg.style.color='var(--forest)'; msg.textContent=t('rv_thanks');
+    document.getElementById('rvForm').reset();
+    document.getElementById('rvPhotoName').textContent='';
+    _rvRating=0; _paintStars();
+  }catch(err){
+    msg.style.color='var(--clay)'; msg.textContent=err.message===t('rv_photo_big')?err.message:t('rv_error');
+  }
+  btn.disabled=false;
+  return false;
+}
 
 /* ============================================================
    GALERÍA
@@ -2746,6 +3145,8 @@ function init(){
   try { wireLinks();     } catch(e) { console.warn('wireLinks',e);     }
   try { loadWeather();   } catch(e) { console.warn('loadWeather',e);   }
   try { initMap();       } catch(e) { console.warn('initMap',e);       }
+  try { loadEventos();   } catch(e) { console.warn('loadEventos',e);   }
+  try { loadGuias();     } catch(e) { console.warn('loadGuias',e);     }
 
   // Activar animaciones de scroll (progressive enhancement):
   // primero el contenido está visible (sin .js-anim),
