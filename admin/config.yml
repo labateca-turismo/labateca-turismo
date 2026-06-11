@@ -9,8 +9,11 @@
 # ============================================================
 
 backend:
-  name: git-gateway       # Cambiar a "github" si usas Sveltia en Cloudflare Pages
-  branch: main            # Rama de producción
+  name: github
+  repo: jr22caceres/labateca-turismo
+  branch: main
+  # Worker de autenticación OAuth (código en worker-cms-auth.js del repo)
+  base_url: https://labateca-cms-auth.jr22caceres.workers.dev
 
 # Carpeta donde se guardan los archivos multimedia subidos desde el CMS
 media_folder: "images/uploads"

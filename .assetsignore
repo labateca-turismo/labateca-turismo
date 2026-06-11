@@ -1,5 +1,6 @@
 CLAUDE.md
 worker-chat.js
+worker-cms-auth.js
 wrangler.toml
 .gitignore
 .assetsignore
