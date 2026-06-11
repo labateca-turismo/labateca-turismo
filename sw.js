@@ -7,7 +7,7 @@
      - network-first      → datos dinámicos (clima Open-Meteo)
    ============================================================ */
 
-const CACHE_VERSION = 'labateca-v15';
+const CACHE_VERSION = 'labateca-v16';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE   = `${CACHE_VERSION}-images`;
 const DATA_CACHE    = `${CACHE_VERSION}-data`;
@@ -60,8 +60,12 @@ self.addEventListener('fetch', event => {
   // Solo interceptar GET
   if (request.method !== 'GET') return;
 
-  // 1. API de clima (Open-Meteo) → sin interceptar, el browser lo maneja directo
+  // 1. APIs dinámicas → sin interceptar, el browser las maneja directo
+  //    (clima, chat IA, reseñas, subida de fotos de visitantes)
   if (url.hostname === 'api.open-meteo.com') return;
+  if (url.hostname === 'labateca-chat.jr22caceres.workers.dev') return;
+  if (url.hostname === 'labateca-reviews.jr22caceres.workers.dev') return;
+  if (url.hostname === 'api.cloudinary.com') return;
 
   // 2. Imágenes de Cloudinary → stale-while-revalidate
   if (url.hostname.includes('cloudinary.com')) {
