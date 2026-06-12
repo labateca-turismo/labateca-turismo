@@ -11,14 +11,37 @@
       "mapaX": 500,
       "mapaY": 370,
       "telefono": "",
-      "nombre":        { "es": "Templo Nuestra Señora de las Angustias", "en": "Our Lady of Sorrows Church" },
-      "desc":          { "es": "Templo parroquial colonial que custodia el lienzo original de la Virgen y una pila bautismal tallada en piedra. El corazón espiritual e histórico del pueblo.", "en": "Colonial parish church that safeguards the original canvas of the Virgin and a stone-carved baptismal font. The town's spiritual and historic heart." },
-      "comoLlegar":    { "es": "En el casco urbano, frente al parque principal.", "en": "In the town center, facing the main square." },
-      "dist":          { "es": "En el casco urbano", "en": "In town center" },
-      "tiempo":        { "es": "Llegada inmediata", "en": "Right there" },
-      "dificultad":    { "es": "Acceso fácil", "en": "Easy access" },
-      "recomendacion": { "es": "Pregunta por los horarios de misa para entrar a verlo por dentro.", "en": "Ask for mass times to see the interior." },
-      "fotos": []
+      "nombre": {
+        "es": "Templo Nuestra Señora de las Angustias",
+        "en": "Our Lady of Sorrows Church"
+      },
+      "desc": {
+        "es": "Templo parroquial colonial que custodia el lienzo original de la Virgen y una pila bautismal tallada en piedra. El corazón espiritual e histórico del pueblo.",
+        "en": "Colonial parish church that safeguards the original canvas of the Virgin and a stone-carved baptismal font. The town's spiritual and historic heart."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, frente al parque principal.",
+        "en": "In the town center, facing the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Llegada inmediata",
+        "en": "Right there"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Pregunta por los horarios de misa para entrar a verlo por dentro.",
+        "en": "Ask for mass times to see the interior."
+      },
+      "fotos": [
+        "labateca/templo-01"
+      ]
     },
     {
       "id": "parque",
@@ -30,13 +53,34 @@
       "mapaX": 495,
       "mapaY": 380,
       "telefono": "",
-      "nombre":        { "es": "Parque Principal", "en": "Main Square" },
-      "desc":          { "es": "El punto de encuentro de Labateca, rodeado de la arquitectura tradicional, el busto del Libertador y el monumento La Columna. Ideal para empezar el recorrido.", "en": "Labateca's gathering point, surrounded by traditional architecture, the Liberator's bust and La Columna monument. The perfect place to start." },
-      "comoLlegar":    { "es": "Centro del pueblo, punto de referencia principal.", "en": "Town center, main landmark." },
-      "dist":          { "es": "Centro del pueblo", "en": "Town center" },
-      "tiempo":        { "es": "Punto de partida", "en": "Starting point" },
-      "dificultad":    { "es": "Acceso fácil", "en": "Easy access" },
-      "recomendacion": { "es": "Por las tardes es el mejor momento para tomar fotos con buena luz.", "en": "Late afternoon offers the best light for photos." },
+      "nombre": {
+        "es": "Parque Principal",
+        "en": "Main Square"
+      },
+      "desc": {
+        "es": "El punto de encuentro de Labateca, rodeado de la arquitectura tradicional, el busto del Libertador y el monumento La Columna. Ideal para empezar el recorrido.",
+        "en": "Labateca's gathering point, surrounded by traditional architecture, the Liberator's bust and La Columna monument. The perfect place to start."
+      },
+      "comoLlegar": {
+        "es": "Centro del pueblo, punto de referencia principal.",
+        "en": "Town center, main landmark."
+      },
+      "dist": {
+        "es": "Centro del pueblo",
+        "en": "Town center"
+      },
+      "tiempo": {
+        "es": "Punto de partida",
+        "en": "Starting point"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Por las tardes es el mejor momento para tomar fotos con buena luz.",
+        "en": "Late afternoon offers the best light for photos."
+      },
       "fotos": []
     },
     {
@@ -45,17 +89,38 @@
       "verified": true,
       "coordsApprox": true,
       "lat": 7.3169,
-      "lng": -72.4830,
+      "lng": -72.483,
       "mapaX": 520,
       "mapaY": 360,
       "telefono": "",
-      "nombre":        { "es": "Casa de la Cultura", "en": "House of Culture" },
-      "desc":          { "es": "Espacio dedicado a la memoria y las tradiciones del municipio. Un buen lugar para entender la historia chitarera y la identidad labatecana.", "en": "A space dedicated to the town's memory and traditions. A great spot to grasp the Chitarera heritage and Labateca's identity." },
-      "comoLlegar":    { "es": "A pasos del parque principal, en el casco urbano.", "en": "Steps from the main square, in the town center." },
-      "dist":          { "es": "A pasos del parque", "en": "Steps from the square" },
-      "tiempo":        { "es": "2 min a pie", "en": "2 min walk" },
-      "dificultad":    { "es": "Acceso fácil", "en": "Easy access" },
-      "recomendacion": { "es": "Verifica días de apertura con la Alcaldía antes de ir.", "en": "Check opening days with the town hall first." },
+      "nombre": {
+        "es": "Casa de la Cultura",
+        "en": "House of Culture"
+      },
+      "desc": {
+        "es": "Espacio dedicado a la memoria y las tradiciones del municipio. Un buen lugar para entender la historia chitarera y la identidad labatecana.",
+        "en": "A space dedicated to the town's memory and traditions. A great spot to grasp the Chitarera heritage and Labateca's identity."
+      },
+      "comoLlegar": {
+        "es": "A pasos del parque principal, en el casco urbano.",
+        "en": "Steps from the main square, in the town center."
+      },
+      "dist": {
+        "es": "A pasos del parque",
+        "en": "Steps from the square"
+      },
+      "tiempo": {
+        "es": "2 min a pie",
+        "en": "2 min walk"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Verifica días de apertura con la Alcaldía antes de ir.",
+        "en": "Check opening days with the town hall first."
+      },
       "fotos": []
     },
     {
@@ -64,17 +129,38 @@
       "verified": true,
       "coordsApprox": true,
       "lat": 7.305,
-      "lng": -72.470,
+      "lng": -72.47,
       "mapaX": 220,
       "mapaY": 520,
       "telefono": "",
-      "nombre":        { "es": "Cascada La Lirgua", "en": "La Lirgua Waterfall" },
-      "desc":          { "es": "La joya ecoturística de Labateca: una imponente cascada rodeada de naturaleza exuberante. Una de las caídas de agua más fotografiadas de la región.", "en": "Labateca's ecotourism jewel: an imposing waterfall surrounded by lush nature. One of the most photographed falls in the region." },
-      "comoLlegar":    { "es": "A ~7 km del casco urbano. Se llega en carro hasta cierto punto y luego caminata.", "en": "About 7 km from town. Drivable to a point, then hiking." },
-      "dist":          { "es": "~7 km del pueblo", "en": "~7 km from town" },
-      "tiempo":        { "es": "Carro + caminata", "en": "Car + hike" },
-      "dificultad":    { "es": "Dificultad media", "en": "Moderate" },
-      "recomendacion": { "es": "Ve con guía local, lleva calzado antideslizante y sal temprano.", "en": "Go with a local guide, wear non-slip shoes and start early." },
+      "nombre": {
+        "es": "Cascada La Lirgua",
+        "en": "La Lirgua Waterfall"
+      },
+      "desc": {
+        "es": "La joya ecoturística de Labateca: una imponente cascada rodeada de naturaleza exuberante. Una de las caídas de agua más fotografiadas de la región.",
+        "en": "Labateca's ecotourism jewel: an imposing waterfall surrounded by lush nature. One of the most photographed falls in the region."
+      },
+      "comoLlegar": {
+        "es": "A ~7 km del casco urbano. Se llega en carro hasta cierto punto y luego caminata.",
+        "en": "About 7 km from town. Drivable to a point, then hiking."
+      },
+      "dist": {
+        "es": "~7 km del pueblo",
+        "en": "~7 km from town"
+      },
+      "tiempo": {
+        "es": "Carro + caminata",
+        "en": "Car + hike"
+      },
+      "dificultad": {
+        "es": "Dificultad media",
+        "en": "Moderate"
+      },
+      "recomendacion": {
+        "es": "Ve con guía local, lleva calzado antideslizante y sal temprano.",
+        "en": "Go with a local guide, wear non-slip shoes and start early."
+      },
       "fotos": []
     },
     {
@@ -82,18 +168,39 @@
       "categoria": "naturaleza",
       "verified": false,
       "coordsApprox": true,
-      "lat": 7.290,
-      "lng": -72.450,
+      "lat": 7.29,
+      "lng": -72.45,
       "mapaX": 350,
       "mapaY": 180,
       "telefono": "",
-      "nombre":        { "es": "Laguna Negra", "en": "Black Lagoon" },
-      "desc":          { "es": "Una laguna de montaña enclavada en el entorno del páramo, de aguas oscuras y quietas. Un paraje de altura para los amantes del senderismo.", "en": "A mountain lagoon set in the páramo, with dark, still waters. A high-altitude spot for hiking lovers." },
-      "comoLlegar":    { "es": "Zona de páramo, acceso por sendero de montaña. Coordinar con guía local.", "en": "Páramo zone, access via mountain trail. Coordinate with local guide." },
-      "dist":          { "es": "Zona de páramo", "en": "Páramo area" },
-      "tiempo":        { "es": "Por confirmar", "en": "To be confirmed" },
-      "dificultad":    { "es": "Dificultad alta", "en": "Challenging" },
-      "recomendacion": { "es": "Requiere guía y buena condición física. Clima frío del páramo.", "en": "Requires a guide and good fitness. Cold páramo weather." },
+      "nombre": {
+        "es": "Laguna Negra",
+        "en": "Black Lagoon"
+      },
+      "desc": {
+        "es": "Una laguna de montaña enclavada en el entorno del páramo, de aguas oscuras y quietas. Un paraje de altura para los amantes del senderismo.",
+        "en": "A mountain lagoon set in the páramo, with dark, still waters. A high-altitude spot for hiking lovers."
+      },
+      "comoLlegar": {
+        "es": "Zona de páramo, acceso por sendero de montaña. Coordinar con guía local.",
+        "en": "Páramo zone, access via mountain trail. Coordinate with local guide."
+      },
+      "dist": {
+        "es": "Zona de páramo",
+        "en": "Páramo area"
+      },
+      "tiempo": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "dificultad": {
+        "es": "Dificultad alta",
+        "en": "Challenging"
+      },
+      "recomendacion": {
+        "es": "Requiere guía y buena condición física. Clima frío del páramo.",
+        "en": "Requires a guide and good fitness. Cold páramo weather."
+      },
       "fotos": []
     },
     {
@@ -101,18 +208,39 @@
       "categoria": "naturaleza",
       "verified": true,
       "coordsApprox": true,
-      "lat": 7.270,
-      "lng": -72.440,
+      "lat": 7.27,
+      "lng": -72.44,
       "mapaX": 400,
       "mapaY": 120,
       "telefono": "",
-      "nombre":        { "es": "Páramo de Santurbán (sector Labateca)", "en": "Santurbán Páramo (Labateca sector)" },
-      "desc":          { "es": "Más de 2.000 hectáreas del municipio pertenecen a este ecosistema único, fábrica de agua de Norte de Santander, con frailejones y biodiversidad de altura.", "en": "Over 2,000 hectares of the municipality belong to this unique ecosystem, a water factory for Norte de Santander, with frailejones and high-altitude biodiversity." },
-      "comoLlegar":    { "es": "Zona alta del municipio. Solo con guía autorizado.", "en": "Upper municipality. Authorized guide only." },
-      "dist":          { "es": "Zona alta del municipio", "en": "Upper municipality" },
-      "tiempo":        { "es": "Excursión de día", "en": "Full-day trip" },
-      "dificultad":    { "es": "Dificultad alta", "en": "Challenging" },
-      "recomendacion": { "es": "Solo con guía autorizado. Abrígate: temperaturas muy bajas.", "en": "Authorized guide only. Dress warm: very low temperatures." },
+      "nombre": {
+        "es": "Páramo de Santurbán (sector Labateca)",
+        "en": "Santurbán Páramo (Labateca sector)"
+      },
+      "desc": {
+        "es": "Más de 2.000 hectáreas del municipio pertenecen a este ecosistema único, fábrica de agua de Norte de Santander, con frailejones y biodiversidad de altura.",
+        "en": "Over 2,000 hectares of the municipality belong to this unique ecosystem, a water factory for Norte de Santander, with frailejones and high-altitude biodiversity."
+      },
+      "comoLlegar": {
+        "es": "Zona alta del municipio. Solo con guía autorizado.",
+        "en": "Upper municipality. Authorized guide only."
+      },
+      "dist": {
+        "es": "Zona alta del municipio",
+        "en": "Upper municipality"
+      },
+      "tiempo": {
+        "es": "Excursión de día",
+        "en": "Full-day trip"
+      },
+      "dificultad": {
+        "es": "Dificultad alta",
+        "en": "Challenging"
+      },
+      "recomendacion": {
+        "es": "Solo con guía autorizado. Abrígate: temperaturas muy bajas.",
+        "en": "Authorized guide only. Dress warm: very low temperatures."
+      },
       "fotos": []
     },
     {
@@ -120,18 +248,39 @@
       "categoria": "gastronomia",
       "verified": false,
       "coordsApprox": true,
-      "lat": 7.320,
-      "lng": -72.490,
+      "lat": 7.32,
+      "lng": -72.49,
       "mapaX": 160,
       "mapaY": 300,
       "telefono": "",
-      "nombre":        { "es": "Ruta del Café", "en": "Coffee Route" },
-      "desc":          { "es": "Labateca y Toledo son tierra de café orgánico tipo exportación. Visita una finca cafetera para vivir el proceso del grano y probarlo recién tostado.", "en": "Labateca and Toledo are land of organic export-grade coffee. Visit a coffee farm to experience the bean's journey and taste it freshly roasted." },
-      "comoLlegar":    { "es": "En las veredas cercanas al casco urbano. Coordinar visita con anticipación.", "en": "In the rural areas near town. Arrange visit in advance." },
-      "dist":          { "es": "Veredas cercanas", "en": "Nearby countryside" },
-      "tiempo":        { "es": "Por coordinar", "en": "To arrange" },
-      "dificultad":    { "es": "Acceso medio", "en": "Moderate access" },
-      "recomendacion": { "es": "Espacio para una finca de la comunidad. Coordina la visita con anticipación.", "en": "Spot for a community farm. Arrange the visit in advance." },
+      "nombre": {
+        "es": "Ruta del Café",
+        "en": "Coffee Route"
+      },
+      "desc": {
+        "es": "Labateca y Toledo son tierra de café orgánico tipo exportación. Visita una finca cafetera para vivir el proceso del grano y probarlo recién tostado.",
+        "en": "Labateca and Toledo are land of organic export-grade coffee. Visit a coffee farm to experience the bean's journey and taste it freshly roasted."
+      },
+      "comoLlegar": {
+        "es": "En las veredas cercanas al casco urbano. Coordinar visita con anticipación.",
+        "en": "In the rural areas near town. Arrange visit in advance."
+      },
+      "dist": {
+        "es": "Veredas cercanas",
+        "en": "Nearby countryside"
+      },
+      "tiempo": {
+        "es": "Por coordinar",
+        "en": "To arrange"
+      },
+      "dificultad": {
+        "es": "Acceso medio",
+        "en": "Moderate access"
+      },
+      "recomendacion": {
+        "es": "Espacio para una finca de la comunidad. Coordina la visita con anticipación.",
+        "en": "Spot for a community farm. Arrange the visit in advance."
+      },
       "fotos": []
     },
     {
@@ -144,13 +293,34 @@
       "mapaX": 490,
       "mapaY": 390,
       "telefono": "",
-      "nombre":        { "es": "Dulces y sabores típicos", "en": "Local sweets & flavors" },
-      "desc":          { "es": "No te vayas sin probar el arequipe de café, el quesillo de ahuyama, los bocadillos, el guarapo de frutas y las hayacas de maíz. Pura tradición nortesantandereana.", "en": "Don't leave without trying coffee arequipe, squash quesillo, bocadillos, fruit guarapo and corn hayacas. Pure regional tradition." },
-      "comoLlegar":    { "es": "Disponibles en las tiendas alrededor del parque principal.", "en": "Available at shops around the main square." },
-      "dist":          { "es": "En el pueblo", "en": "In town" },
-      "tiempo":        { "es": "Cuando quieras", "en": "Anytime" },
-      "dificultad":    { "es": "Acceso fácil", "en": "Easy access" },
-      "recomendacion": { "es": "Pregunta en las tiendas del parque por los productos del día.", "en": "Ask the shops around the square for the day's treats." },
+      "nombre": {
+        "es": "Dulces y sabores típicos",
+        "en": "Local sweets & flavors"
+      },
+      "desc": {
+        "es": "No te vayas sin probar el arequipe de café, el quesillo de ahuyama, los bocadillos, el guarapo de frutas y las hayacas de maíz. Pura tradición nortesantandereana.",
+        "en": "Don't leave without trying coffee arequipe, squash quesillo, bocadillos, fruit guarapo and corn hayacas. Pure regional tradition."
+      },
+      "comoLlegar": {
+        "es": "Disponibles en las tiendas alrededor del parque principal.",
+        "en": "Available at shops around the main square."
+      },
+      "dist": {
+        "es": "En el pueblo",
+        "en": "In town"
+      },
+      "tiempo": {
+        "es": "Cuando quieras",
+        "en": "Anytime"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Pregunta en las tiendas del parque por los productos del día.",
+        "en": "Ask the shops around the square for the day's treats."
+      },
       "fotos": []
     },
     {
@@ -163,13 +333,34 @@
       "mapaX": 510,
       "mapaY": 395,
       "telefono": "",
-      "nombre":        { "es": "Hospedaje local", "en": "Local lodging" },
-      "desc":          { "es": "Espacio reservado para los hospedajes, posadas y fincas turísticas de Labateca. Si tienes uno, ¡este es tu lugar en la guía!", "en": "A space reserved for Labateca's lodges, inns and tourist farms. If you run one, this is your spot in the guide!" },
-      "comoLlegar":    { "es": "Por definir según el establecimiento.", "en": "To be defined per establishment." },
-      "dist":          { "es": "Por definir", "en": "To be defined" },
-      "tiempo":        { "es": "—", "en": "—" },
-      "dificultad":    { "es": "—", "en": "—" },
-      "recomendacion": { "es": "Aporte de la comunidad: agrega aquí los datos de tu negocio.", "en": "Community contribution: add your business details here." },
+      "nombre": {
+        "es": "Hospedaje local",
+        "en": "Local lodging"
+      },
+      "desc": {
+        "es": "Espacio reservado para los hospedajes, posadas y fincas turísticas de Labateca. Si tienes uno, ¡este es tu lugar en la guía!",
+        "en": "A space reserved for Labateca's lodges, inns and tourist farms. If you run one, this is your spot in the guide!"
+      },
+      "comoLlegar": {
+        "es": "Por definir según el establecimiento.",
+        "en": "To be defined per establishment."
+      },
+      "dist": {
+        "es": "Por definir",
+        "en": "To be defined"
+      },
+      "tiempo": {
+        "es": "—",
+        "en": "—"
+      },
+      "dificultad": {
+        "es": "—",
+        "en": "—"
+      },
+      "recomendacion": {
+        "es": "Aporte de la comunidad: agrega aquí los datos de tu negocio.",
+        "en": "Community contribution: add your business details here."
+      },
       "fotos": []
     },
     {
@@ -182,13 +373,34 @@
       "mapaX": 280,
       "mapaY": 200,
       "telefono": "",
-      "nombre":        { "es": "Mirador La Cumbre", "en": "La Cumbre Viewpoint" },
-      "desc":          { "es": "Punto panorámico desde donde se divisa el valle, el casco urbano y las montañas que rodean Labateca. Uno de los mejores atardeceres del municipio.", "en": "Panoramic viewpoint overlooking the valley, the town center and the mountains surrounding Labateca. One of the best sunsets in the municipality." },
-      "comoLlegar":    { "es": "Camino hacia las veredas altas del municipio. Confirmar ruta con locales.", "en": "Road toward the upper rural areas. Confirm route with locals." },
-      "dist":          { "es": "~4 km del pueblo", "en": "~4 km from town" },
-      "tiempo":        { "es": "~20 min en carro", "en": "~20 min by car" },
-      "dificultad":    { "es": "Acceso medio", "en": "Moderate access" },
-      "recomendacion": { "es": "Llega antes del atardecer. Lleva abrigo, la temperatura baja rápido.", "en": "Arrive before sunset. Bring a jacket — temperatures drop fast." },
+      "nombre": {
+        "es": "Mirador La Cumbre",
+        "en": "La Cumbre Viewpoint"
+      },
+      "desc": {
+        "es": "Punto panorámico desde donde se divisa el valle, el casco urbano y las montañas que rodean Labateca. Uno de los mejores atardeceres del municipio.",
+        "en": "Panoramic viewpoint overlooking the valley, the town center and the mountains surrounding Labateca. One of the best sunsets in the municipality."
+      },
+      "comoLlegar": {
+        "es": "Camino hacia las veredas altas del municipio. Confirmar ruta con locales.",
+        "en": "Road toward the upper rural areas. Confirm route with locals."
+      },
+      "dist": {
+        "es": "~4 km del pueblo",
+        "en": "~4 km from town"
+      },
+      "tiempo": {
+        "es": "~20 min en carro",
+        "en": "~20 min by car"
+      },
+      "dificultad": {
+        "es": "Acceso medio",
+        "en": "Moderate access"
+      },
+      "recomendacion": {
+        "es": "Llega antes del atardecer. Lleva abrigo, la temperatura baja rápido.",
+        "en": "Arrive before sunset. Bring a jacket — temperatures drop fast."
+      },
       "fotos": []
     },
     {
@@ -201,13 +413,34 @@
       "mapaX": 310,
       "mapaY": 430,
       "telefono": "",
-      "nombre":        { "es": "Quebrada Los Monos", "en": "Los Monos Creek" },
-      "desc":          { "es": "Corriente de agua cristalina ideal para refrescarse después de una caminata. Rodeada de vegetación nativa y el canto de aves locales.", "en": "Crystal-clear stream ideal for cooling off after a hike. Surrounded by native vegetation and the song of local birds." },
-      "comoLlegar":    { "es": "Acceso desde camino rural. Confirmar con guía local.", "en": "Access via rural path. Confirm with local guide." },
-      "dist":          { "es": "~3 km del pueblo", "en": "~3 km from town" },
-      "tiempo":        { "es": "~30 min a pie", "en": "~30 min on foot" },
-      "dificultad":    { "es": "Dificultad media", "en": "Moderate" },
-      "recomendacion": { "es": "Lleva ropa de cambio y calzado impermeable. Visita en temporada seca.", "en": "Bring a change of clothes and waterproof footwear. Visit in dry season." },
+      "nombre": {
+        "es": "Quebrada Los Monos",
+        "en": "Los Monos Creek"
+      },
+      "desc": {
+        "es": "Corriente de agua cristalina ideal para refrescarse después de una caminata. Rodeada de vegetación nativa y el canto de aves locales.",
+        "en": "Crystal-clear stream ideal for cooling off after a hike. Surrounded by native vegetation and the song of local birds."
+      },
+      "comoLlegar": {
+        "es": "Acceso desde camino rural. Confirmar con guía local.",
+        "en": "Access via rural path. Confirm with local guide."
+      },
+      "dist": {
+        "es": "~3 km del pueblo",
+        "en": "~3 km from town"
+      },
+      "tiempo": {
+        "es": "~30 min a pie",
+        "en": "~30 min on foot"
+      },
+      "dificultad": {
+        "es": "Dificultad media",
+        "en": "Moderate"
+      },
+      "recomendacion": {
+        "es": "Lleva ropa de cambio y calzado impermeable. Visita en temporada seca.",
+        "en": "Bring a change of clothes and waterproof footwear. Visit in dry season."
+      },
       "fotos": []
     },
     {
@@ -220,13 +453,34 @@
       "mapaX": 240,
       "mapaY": 460,
       "telefono": "",
-      "nombre":        { "es": "Balneario El Molino", "en": "El Molino Swimming Hole" },
-      "desc":          { "es": "Poza natural de aguas limpias muy frecuentada por los labatecanos los fines de semana. Ambiente familiar y tranquilo, rodeado de guadua y piedras.", "en": "Natural swimming hole with clean water, popular with locals on weekends. Family-friendly atmosphere surrounded by bamboo and rocks." },
-      "comoLlegar":    { "es": "Camino a la salida del pueblo. Preguntar a los locales por El Molino.", "en": "On the road leaving town. Ask locals for El Molino." },
-      "dist":          { "es": "~2 km del centro", "en": "~2 km from center" },
-      "tiempo":        { "es": "~15 min a pie", "en": "~15 min on foot" },
-      "dificultad":    { "es": "Acceso fácil", "en": "Easy access" },
-      "recomendacion": { "es": "Mejor entre semana para disfrutarlo con tranquilidad.", "en": "Weekdays are best for a more peaceful experience." },
+      "nombre": {
+        "es": "Balneario El Molino",
+        "en": "El Molino Swimming Hole"
+      },
+      "desc": {
+        "es": "Poza natural de aguas limpias muy frecuentada por los labatecanos los fines de semana. Ambiente familiar y tranquilo, rodeado de guadua y piedras.",
+        "en": "Natural swimming hole with clean water, popular with locals on weekends. Family-friendly atmosphere surrounded by bamboo and rocks."
+      },
+      "comoLlegar": {
+        "es": "Camino a la salida del pueblo. Preguntar a los locales por El Molino.",
+        "en": "On the road leaving town. Ask locals for El Molino."
+      },
+      "dist": {
+        "es": "~2 km del centro",
+        "en": "~2 km from center"
+      },
+      "tiempo": {
+        "es": "~15 min a pie",
+        "en": "~15 min on foot"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Mejor entre semana para disfrutarlo con tranquilidad.",
+        "en": "Weekdays are best for a more peaceful experience."
+      },
       "fotos": []
     },
     {
@@ -239,13 +493,34 @@
       "mapaX": 525,
       "mapaY": 375,
       "telefono": "",
-      "nombre":        { "es": "Cocina de montaña (espacio comunitario)", "en": "Mountain Kitchen (community spot)" },
-      "desc":          { "es": "Espacio reservado para los restaurantes y comedores del pueblo. Menú del día con ingredientes locales: sancocho de gallina, arepas de choclo y mazamorra.", "en": "Space reserved for town restaurants. Daily menu with local ingredients: chicken stew, corn arepas and mazamorra." },
-      "comoLlegar":    { "es": "En el casco urbano, cerca del parque principal.", "en": "In the town center, near the main square." },
-      "dist":          { "es": "En el casco urbano", "en": "In town center" },
-      "tiempo":        { "es": "Almuerzo: 12 pm – 3 pm", "en": "Lunch: 12 pm – 3 pm" },
-      "dificultad":    { "es": "Acceso fácil", "en": "Easy access" },
-      "recomendacion": { "es": "Confirmar horarios y disponibilidad. Aporte de la comunidad.", "en": "Confirm hours and availability. Community contribution." },
+      "nombre": {
+        "es": "Cocina de montaña (espacio comunitario)",
+        "en": "Mountain Kitchen (community spot)"
+      },
+      "desc": {
+        "es": "Espacio reservado para los restaurantes y comedores del pueblo. Menú del día con ingredientes locales: sancocho de gallina, arepas de choclo y mazamorra.",
+        "en": "Space reserved for town restaurants. Daily menu with local ingredients: chicken stew, corn arepas and mazamorra."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, cerca del parque principal.",
+        "en": "In the town center, near the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Almuerzo: 12 pm – 3 pm",
+        "en": "Lunch: 12 pm – 3 pm"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Confirmar horarios y disponibilidad. Aporte de la comunidad.",
+        "en": "Confirm hours and availability. Community contribution."
+      },
       "fotos": []
     },
     {
@@ -258,13 +533,34 @@
       "mapaX": 480,
       "mapaY": 400,
       "telefono": "",
-      "nombre":        { "es": "Posada comunitaria (espacio)", "en": "Community Guesthouse (spot)" },
-      "desc":          { "es": "Espacio para posadas y alojamientos familiares del municipio. Ambiente cálido, desayuno incluido, contacto directo con la vida local de Labateca.", "en": "Space for family guesthouses in the municipality. Warm atmosphere, breakfast included, direct contact with local life in Labateca." },
-      "comoLlegar":    { "es": "En el casco urbano o veredas cercanas. Confirmar con antelación.", "en": "In town or nearby rural areas. Confirm in advance." },
-      "dist":          { "es": "En el pueblo", "en": "In town" },
-      "tiempo":        { "es": "Check-in: desde las 2 pm", "en": "Check-in: from 2 pm" },
-      "dificultad":    { "es": "Acceso fácil", "en": "Easy access" },
-      "recomendacion": { "es": "Reservar con tiempo, especialmente en temporada de festividades.", "en": "Book ahead, especially during festival season." },
+      "nombre": {
+        "es": "Posada comunitaria (espacio)",
+        "en": "Community Guesthouse (spot)"
+      },
+      "desc": {
+        "es": "Espacio para posadas y alojamientos familiares del municipio. Ambiente cálido, desayuno incluido, contacto directo con la vida local de Labateca.",
+        "en": "Space for family guesthouses in the municipality. Warm atmosphere, breakfast included, direct contact with local life in Labateca."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano o veredas cercanas. Confirmar con antelación.",
+        "en": "In town or nearby rural areas. Confirm in advance."
+      },
+      "dist": {
+        "es": "En el pueblo",
+        "en": "In town"
+      },
+      "tiempo": {
+        "es": "Check-in: desde las 2 pm",
+        "en": "Check-in: from 2 pm"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Reservar con tiempo, especialmente en temporada de festividades.",
+        "en": "Book ahead, especially during festival season."
+      },
       "fotos": []
     },
     {
@@ -272,18 +568,39 @@
       "categoria": "cultura",
       "verified": false,
       "coordsApprox": true,
-      "lat": 7.3170,
+      "lat": 7.317,
       "lng": -72.4831,
       "mapaX": 515,
       "mapaY": 355,
       "telefono": "",
-      "nombre":        { "es": "Artesanías y tejidos locales", "en": "Local crafts & weaving" },
-      "desc":          { "es": "Labateca conserva la tradición artesanal chitarera: tejidos en lana, sombreros y cerámica. Un souvenir auténtico y una forma de apoyar a las familias del municipio.", "en": "Labateca preserves the Chitarera craft tradition: wool weaving, hats and pottery. An authentic souvenir and a way to support local families." },
-      "comoLlegar":    { "es": "Preguntar por artesanas en el parque principal o la Casa de la Cultura.", "en": "Ask for artisans at the main square or the House of Culture." },
-      "dist":          { "es": "En el casco urbano", "en": "In town center" },
-      "tiempo":        { "es": "Variable según artesanas", "en": "Varies by artisan" },
-      "dificultad":    { "es": "Acceso fácil", "en": "Easy access" },
-      "recomendacion": { "es": "Compra directamente al artesano, no a intermediarios.", "en": "Buy directly from the artisan, not middlemen." },
+      "nombre": {
+        "es": "Artesanías y tejidos locales",
+        "en": "Local crafts & weaving"
+      },
+      "desc": {
+        "es": "Labateca conserva la tradición artesanal chitarera: tejidos en lana, sombreros y cerámica. Un souvenir auténtico y una forma de apoyar a las familias del municipio.",
+        "en": "Labateca preserves the Chitarera craft tradition: wool weaving, hats and pottery. An authentic souvenir and a way to support local families."
+      },
+      "comoLlegar": {
+        "es": "Preguntar por artesanas en el parque principal o la Casa de la Cultura.",
+        "en": "Ask for artisans at the main square or the House of Culture."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Variable según artesanas",
+        "en": "Varies by artisan"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Compra directamente al artesano, no a intermediarios.",
+        "en": "Buy directly from the artisan, not middlemen."
+      },
       "fotos": []
     }
   ]
