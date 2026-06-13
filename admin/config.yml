@@ -10,7 +10,7 @@
 
 backend:
   name: github
-  repo: jr22caceres/labateca-turismo
+  repo: labatecacolombia-source/labateca-turismo
   branch: main
   # Worker de autenticación OAuth (código en worker-cms-auth.js del repo)
   base_url: https://labateca-cms-auth.jr22caceres.workers.dev
