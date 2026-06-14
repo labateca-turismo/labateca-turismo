@@ -11,20 +11,26 @@
 <meta name="author" content="Labateca Turismo" />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#16352a" />
-<link rel="canonical" href="https://www.labateca-turismo.co/" />
+<link rel="canonical" href="https://labateca-turismo.labatecacolombia.workers.dev/" />
 
 <!-- ====== OPEN GRAPH (al compartir en WhatsApp / Facebook) ====== -->
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="es_CO" />
+<meta property="og:locale:alternate" content="en_US" />
 <meta property="og:title" content="Labateca · Volcanes de Dios" />
 <meta property="og:description" content="Cascadas de hasta 100 m, café de exportación y el Páramo de Santurbán. Tu guía completa para visitar Labateca, Norte de Santander." />
 <meta property="og:site_name" content="Labateca Turismo" />
-<meta property="og:url" content="https://www.labateca-turismo.co/" />
+<meta property="og:url" content="https://labateca-turismo.labatecacolombia.workers.dev/" />
+<meta property="og:image" content="https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_630,c_fill,g_auto,f_jpg,q_auto/labateca/templo-01" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Templo Nuestra Señora de las Angustias de Labateca iluminado de noche" />
 
 <!-- ====== TWITTER CARD ====== -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Labateca · Volcanes de Dios" />
 <meta name="twitter:description" content="Tu guía completa para visitar Labateca, Norte de Santander: cascadas, café y montaña." />
+<meta name="twitter:image" content="https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_630,c_fill,g_auto,f_jpg,q_auto/labateca/templo-01" />
 
 <!-- ====== FAVICON (SVG en línea) ====== -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2316352a'/><path d='M18 70 L38 38 L52 58 L66 30 L84 70 Z' fill='%23d4a23f'/><circle cx='66' cy='26' r='8' fill='%23bd5d34'/></svg>" />
@@ -44,7 +50,7 @@
   "name": "Labateca",
   "alternateName": "Volcanes de Dios",
   "description": "Municipio del suroriente de Norte de Santander, Colombia. Reconocido por su café, sus cascadas ecoturísticas y el Páramo de Santurbán.",
-  "url": "https://www.labateca-turismo.co/",
+  "url": "https://labateca-turismo.labatecacolombia.workers.dev/",
   "touristType": ["Ecoturismo", "Turismo cultural", "Turismo de naturaleza"],
   "geo": {
     "@type": "GeoCoordinates",
@@ -1364,7 +1370,10 @@ if ('serviceWorker' in navigator) {
     </div>
     <div class="foot-bottom">
       <span data-i18n="foot_rights">© <span id="year"></span> Labateca Turismo · Hecho con cariño en la montaña</span>
-      <span data-i18n="foot_data">Datos verificados localmente · algunos por confirmar</span>
+      <span class="foot-legal">
+        <a href="/privacidad.html" data-i18n="foot_privacy">Política de privacidad</a> ·
+        <a href="/terminos.html" data-i18n="foot_terms">Términos de uso</a>
+      </span>
     </div>
   </div>
 </footer>
@@ -1703,6 +1712,7 @@ const I18N = {
     skip_link:"Saltar al contenido", menu_aria:"Abrir menú de navegación", nav_close_aria:"Cerrar menú",
     drawer_open_aria:"Abrir Mi ruta", drawer_title_aria:"Mi ruta — lugares guardados",
     fav_add:"Añadir a favoritos:", fav_remove:"Quitar de favoritos:",
+    foot_privacy:"Política de privacidad", foot_terms:"Términos de uso",
     hl_eyebrow:"Tu viaje", hl_title:"Cómo llegar a Labateca",
     hl_sub:"Paso a paso desde las tres ciudades más cercanas. Los horarios y tarifas de bus se confirman en cada terminal.",
     hl_cucuta_t:"Desde Cúcuta",
@@ -1804,6 +1814,7 @@ const I18N = {
     skip_link:"Skip to content", menu_aria:"Open navigation menu", nav_close_aria:"Close menu",
     drawer_open_aria:"Open My route", drawer_title_aria:"My route — saved places",
     fav_add:"Add to favorites:", fav_remove:"Remove from favorites:",
+    foot_privacy:"Privacy policy", foot_terms:"Terms of use",
     hl_eyebrow:"Your trip", hl_title:"How to get to Labateca",
     hl_sub:"Step by step from the three nearest cities. Bus schedules and fares are confirmed at each terminal.",
     hl_cucuta_t:"From Cúcuta",
@@ -2877,9 +2888,15 @@ function wireLinks(){
   set("mailText","textContent",CONFIG.email);
   set("chLoc","href",mapTown);
   set("footMap","href",mapTown);
-  set("socIg","href",CONFIG.social.instagram);
-  set("socFb","href",CONFIG.social.facebook);
-  set("socTk","href",CONFIG.social.tiktok);
+  // Redes sociales: si no están configuradas ("#" o vacío), ocultar el ícono
+  const social=(id,url)=>{
+    const el=document.getElementById(id); if(!el) return;
+    if(!url || url==="#"){ el.style.display="none"; }
+    else { el.href=url; el.style.display=""; }
+  };
+  social("socIg",CONFIG.social.instagram);
+  social("socFb",CONFIG.social.facebook);
+  social("socTk",CONFIG.social.tiktok);
 }
 
 /* ============================================================
