@@ -81,7 +81,7 @@ export default {
 
       var systemPrompt = (lang === 'es') ? sysES : sysEN;
 
-      var ai_result = await env.AI.run('@cf/meta/llama-3.1-8b-instruct', {
+      var ai_result = await env.AI.run('@cf/meta/llama-3.1-8b-instruct-fast', {
         messages: [
           { role: 'system', content: systemPrompt },
           { role: 'user',   content: question }
