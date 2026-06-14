@@ -1,0 +1,11 @@
+# Política de seguridad — Labateca · Volcanes de Dios
+# https://securitytxt.org/  (RFC 9116)
+
+Contact: mailto:labatecacolombia@gmail.com
+Expires: 2027-06-14T00:00:00.000Z
+Preferred-Languages: es, en
+Canonical: https://labateca-turismo.labatecacolombia.workers.dev/.well-known/security.txt
+
+# Si encuentras una vulnerabilidad, escríbenos al correo de arriba.
+# Agradecemos el reporte responsable: danos un tiempo razonable para
+# corregir antes de divulgar públicamente. ¡Gracias por cuidar el proyecto!

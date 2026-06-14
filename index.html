@@ -64,7 +64,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Hanken+Grotesk:wght@300..800&display=swap" rel="stylesheet" />
 
 <!-- ====== MAPA (Leaflet) ====== -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+      integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- ====== PDF (jsPDF — carga diferida, solo cuando el usuario pide el PDF) ====== -->
 <!-- Se inyecta dinámicamente en generatePDF() para no afectar la carga inicial -->
@@ -1019,7 +1021,7 @@ if ('serviceWorker' in navigator) {
           <div class="dist-line">
             <span data-i18n="dist_pre">Estás a</span> <b id="distKm">—</b> km <span data-i18n="dist_post">de Labateca (en línea recta)</span>
           </div>
-          <a id="distRoute" class="dist-route" target="_blank" rel="noopener">
+          <a id="distRoute" class="dist-route" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
             <span data-i18n="dist_route">Ver ruta y tiempo en Google Maps</span>
           </a>
@@ -1223,7 +1225,7 @@ if ('serviceWorker' in navigator) {
       <h2 data-i18n="contact_title">¿Planeas tu visita?</h2>
       <p data-i18n="contact_sub">Escríbenos para recomendaciones, guías locales o información de hospedaje. Respondemos por el canal que prefieras.</p>
       <div class="contact-channels">
-        <a class="channel" id="chWhatsapp" target="_blank" rel="noopener">
+        <a class="channel" id="chWhatsapp" target="_blank" rel="noopener noreferrer">
           <span class="channel-ic wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.207zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg></span>
           <span><b>WhatsApp</b><span data-i18n="ch_wa">Respuesta rápida · toca para chatear</span></span>
         </a>
@@ -1231,7 +1233,7 @@ if ('serviceWorker' in navigator) {
           <span class="channel-ic mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></span>
           <span><b data-i18n="ch_mail_t">Correo</b><span id="mailText">labatecacolombia@gmail.com</span></span>
         </a>
-        <a class="channel" id="chLoc" target="_blank" rel="noopener">
+        <a class="channel" id="chLoc" target="_blank" rel="noopener noreferrer">
           <span class="channel-ic loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg></span>
           <span><b data-i18n="ch_loc_t">Cómo llegar</b><span data-i18n="ch_loc_d">Parque Principal de Labateca</span></span>
         </a>
@@ -1247,6 +1249,9 @@ if ('serviceWorker' in navigator) {
 
     <div class="contact-form reveal d1">
       <form id="contactForm">
+        <!-- Honeypot anti-spam: invisible para humanos, los bots tienden a llenarlo -->
+        <input type="text" name="website" id="hpWebsite" tabindex="-1" autocomplete="off" aria-hidden="true"
+               style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;pointer-events:none" />
         <div class="fld">
           <label for="name" data-i18n="f_name">Nombre</label>
           <input type="text" id="name" name="name" required data-i18n-ph="f_name_ph" placeholder="Tu nombre" />
@@ -1294,9 +1299,9 @@ if ('serviceWorker' in navigator) {
         </div>
         <p class="foot-about" data-i18n="foot_about">Guía turística comunitaria de Labateca, Norte de Santander. Hecha por y para quienes aman este rincón de montaña.</p>
         <div class="socials">
-          <a class="soc" id="socIg" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a class="soc" id="socFb" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a class="soc" id="socTk" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.8a4.8 4.8 0 0 1-3.3-1.6 4.8 4.8 0 0 1-1.2-2.7h-3.3v13.3a2.7 2.7 0 1 1-2-2.6V7.6a6 6 0 1 0 5.3 6V9a8 8 0 0 0 4.5 1.4z"/></svg></a>
+          <a class="soc" id="socIg" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="soc" id="socFb" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a class="soc" id="socTk" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.8a4.8 4.8 0 0 1-3.3-1.6 4.8 4.8 0 0 1-1.2-2.7h-3.3v13.3a2.7 2.7 0 1 1-2-2.6V7.6a6 6 0 1 0 5.3 6V9a8 8 0 0 0 4.5 1.4z"/></svg></a>
         </div>
       </div>
       <div class="foot-col">
@@ -1312,8 +1317,8 @@ if ('serviceWorker' in navigator) {
         <h4 data-i18n="foot_useful">Útil</h4>
         <ul>
           <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
-          <li><a id="footWa" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li><a id="footMap" target="_blank" rel="noopener" data-i18n="foot_directions">Cómo llegar</a></li>
+          <li><a id="footWa" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a id="footMap" target="_blank" rel="noopener noreferrer" data-i18n="foot_directions">Cómo llegar</a></li>
           <li><a href="/qr.html" data-i18n="foot_qr">Carteles QR</a></li>
         </ul>
       </div>
@@ -1417,7 +1422,7 @@ if ('serviceWorker' in navigator) {
   </div>
   <div class="drawer-body" id="drawerBody"></div>
   <div class="drawer-foot">
-    <a class="btn btn-primary" id="routeMapsBtn" target="_blank" rel="noopener">
+    <a class="btn btn-primary" id="routeMapsBtn" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
       <span data-i18n="route_open">Ver ruta en Google Maps</span>
     </a>
@@ -1462,7 +1467,9 @@ if ('serviceWorker' in navigator) {
 <!-- ============================================================
      LEAFLET JS
      ============================================================ -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"
+        integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 /* ============================================================
    ⚙️ CONFIGURACIÓN — EDITA SOLO ESTO PARA PERSONALIZAR
@@ -1943,7 +1950,7 @@ function renderPlaces(){
           <span class="pc-stat">${IC.hill}${dific}</span>
         </div>
         <div class="pc-actions">
-          <a class="pc-btn map" href="${gmaps}" target="_blank" rel="noopener">${IC.navi}${t('cta_how')}</a>
+          <a class="pc-btn map" href="${gmaps}" target="_blank" rel="noopener noreferrer">${IC.navi}${t('cta_how')}</a>
           <button class="pc-btn route ${inRoute?'added':''}" onclick="toggleRoute('${p.id}')">
             ${inRoute?IC.check:IC.plus}${inRoute?t('cta_added'):t('cta_add')}
           </button>
@@ -2031,6 +2038,11 @@ function sharePlace(id){
   }
 }
 
+/* Escapa HTML para insertar texto de datos (CMS/comunidad) sin riesgo de XSS */
+function escHtml(s){
+  return String(s==null?'':s).replace(/[<>&"']/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
 /* ============================================================
    FIESTAS Y EVENTOS (data/eventos.json — sección oculta si vacío)
    ============================================================ */
@@ -2043,9 +2055,9 @@ async function loadEventos(){
     const grid=document.getElementById('eventosGrid');
     grid.innerHTML=evs.map(ev=>`
       <div class="evento-card reveal in">
-        <div class="evento-mes">${(ev.fecha||{})[lang]||''}</div>
-        <h3>${(ev.nombre||{})[lang]||''}</h3>
-        <p>${(ev.desc||{})[lang]||''}</p>
+        <div class="evento-mes">${escHtml((ev.fecha||{})[lang])}</div>
+        <h3>${escHtml((ev.nombre||{})[lang])}</h3>
+        <p>${escHtml((ev.desc||{})[lang])}</p>
       </div>`).join('');
     document.getElementById('eventos').style.display='';
   }catch(e){ console.warn('[Labateca] eventos.json:',e.message); }
@@ -2062,9 +2074,10 @@ async function loadGuias(){
     if(!gs.length) return;
     const grid=document.getElementById('guiasGrid');
     grid.innerHTML=gs.map(g=>{
-      const foto=g.foto?`<img class="guia-foto" src="${cldUrl(g.foto,'w_200,h_200,c_fill,g_face,f_auto,q_auto')}" alt="${g.nombre}" loading="lazy">`:`<div class="guia-foto-ph">🧭</div>`;
-      const wa=g.whatsapp?`<a class="guia-wa" href="https://wa.me/${g.whatsapp}?text=${encodeURIComponent(lang==='es'?'Hola, te contacto desde la guía de Labateca. Quisiera información sobre un recorrido.':'Hi! I found you on the Labateca guide. I would like info about a tour.')}" target="_blank" rel="noopener">WhatsApp</a>`:'';
-      return `<div class="guia-card reveal in">${foto}<h3>${g.nombre||''}</h3><div class="esp">${(g.especialidad||{})[lang]||''}</div>${wa}</div>`;
+      const foto=g.foto?`<img class="guia-foto" src="${escHtml(cldUrl(g.foto,'w_200,h_200,c_fill,g_face,f_auto,q_auto'))}" alt="${escHtml(g.nombre)}" loading="lazy">`:`<div class="guia-foto-ph">🧭</div>`;
+      const tel=String(g.whatsapp||'').replace(/[^0-9]/g,'');
+      const wa=tel?`<a class="guia-wa" href="https://wa.me/${tel}?text=${encodeURIComponent(lang==='es'?'Hola, te contacto desde la guía de Labateca. Quisiera información sobre un recorrido.':'Hi! I found you on the Labateca guide. I would like info about a tour.')}" target="_blank" rel="noopener noreferrer">WhatsApp</a>`:'';
+      return `<div class="guia-card reveal in">${foto}<h3>${escHtml(g.nombre)}</h3><div class="esp">${escHtml((g.especialidad||{})[lang])}</div>${wa}</div>`;
     }).join('');
     document.getElementById('guias').style.display='';
   }catch(e){ console.warn('[Labateca] guias.json:',e.message); }
@@ -2466,7 +2479,7 @@ function calcDistance(){
       // reconstruimos el resultado (por si venía de un error previo)
       res.innerHTML=`
         <div class="dist-line"><span data-i18n="dist_pre">${t('dist_pre')}</span> <b id="distKm">${km}</b> km <span data-i18n="dist_post">${t('dist_post')}</span></div>
-        <a id="distRoute" class="dist-route" href="${dir}" target="_blank" rel="noopener">
+        <a id="distRoute" class="dist-route" href="${dir}" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
           <span data-i18n="dist_route">${t('dist_route')}</span>
         </a>`;
@@ -2486,12 +2499,25 @@ function buildWaLink(text){ return `https://wa.me/${CONFIG.whatsapp}?text=${enco
 document.getElementById("contactForm").addEventListener("submit", async (e)=>{
   e.preventDefault();
   const msgBox=document.getElementById("formMsg");
+
+  // Honeypot: si el campo trampa viene lleno, es un bot → abortar en silencio
+  const hp=document.getElementById("hpWebsite");
+  if(hp && hp.value.trim()!==""){ return; }
+
   const data={
-    name:document.getElementById("name").value,
-    email:document.getElementById("email").value,
+    name:document.getElementById("name").value.trim().slice(0,100),
+    email:document.getElementById("email").value.trim().slice(0,120),
     topic:document.getElementById("topic").value,
-    message:document.getElementById("message").value
+    message:document.getElementById("message").value.trim().slice(0,2000)
   };
+
+  // Validación básica de entradas
+  const emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email);
+  if(!data.name || !emailOk || data.message.length<5){
+    msgBox.className="form-msg err"; msgBox.textContent=t('msg_err');
+    return;
+  }
+
   const waText=`Hola Labateca Turismo 👋\n\nNombre: ${data.name}\nCorreo: ${data.email}\nTema: ${data.topic}\nMensaje: ${data.message}`;
 
   // Si no hay clave Web3Forms, enviamos por WhatsApp directamente
@@ -2566,7 +2592,7 @@ function paintMapMarkers(){
     if(p.lat==null||p.lng==null) return;
     const gmaps=`https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`;
     L.marker([p.lat,p.lng],{icon:window._placeIcon}).addTo(layer)
-      .bindPopup(`<div class="map-pop"><b>${placeName(p)}</b>${(p.dist||{})[lang]||''} · ${(p.dificultad||p.diff||{})[lang]||''}<br><a href="${gmaps}" target="_blank" rel="noopener">${IC.navi} ${t('cta_how')}</a></div>`);
+      .bindPopup(`<div class="map-pop"><b>${placeName(p)}</b>${(p.dist||{})[lang]||''} · ${(p.dificultad||p.diff||{})[lang]||''}<br><a href="${gmaps}" target="_blank" rel="noopener noreferrer">${IC.navi} ${t('cta_how')}</a></div>`);
     group.push([p.lat,p.lng]);
     if(p.track) drawTrack(p,layer);
   });
@@ -2881,6 +2907,9 @@ function generatePDF() {
     if (window.jspdf) { resolve(window.jspdf.jsPDF); return; }
     const s = document.createElement('script');
     s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+    s.integrity = 'sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==';
+    s.crossOrigin = 'anonymous';
+    s.referrerPolicy = 'no-referrer';
     s.onload  = () => resolve(window.jspdf.jsPDF);
     s.onerror = reject;
     document.head.appendChild(s);
