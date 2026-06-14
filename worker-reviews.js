@@ -22,7 +22,7 @@ const ALLOWED_ORIGINS = [
 const MAX_NAME = 60;
 const MAX_COMMENT = 600;
 const PLACE_RE = /^[a-z0-9-]{2,60}$/;
-const PHOTO_PREFIX = 'https://res.cloudinary.com/dtumgxebs/';
+const PHOTO_PREFIX = 'https://res.cloudinary.com/dwotodtoa/';
 const RATE_LIMIT = 5; // reseñas por IP por hora
 
 const SCHEMA = `CREATE TABLE IF NOT EXISTS reviews (
