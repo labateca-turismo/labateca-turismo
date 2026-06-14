@@ -79,9 +79,10 @@
   --forest:#16352a;
   --forest-2:#1f4a39;
   --forest-3:#2d6149;
-  --clay:#bd5d34;
+  --clay:#a44a24;
   --clay-soft:#d8835e;
   --gold:#d4a23f;
+  --gold-text:#8f6a1b;
   --gold-soft:#e6c574;
   --cream:#f6efe3;
   --cream-2:#efe5d3;
@@ -354,7 +355,7 @@ section{padding:clamp(70px,11vw,130px) 0;position:relative}
 .pc-btn.route:hover{border-color:var(--forest-3)}
 .pc-btn.route.added{background:var(--clay);color:#fff;border-color:var(--clay)}
 .pc-btn svg{width:15px;height:15px}
-.pc-note{font-size:.74rem;color:var(--gold);font-weight:700;margin-top:12px;display:flex;gap:6px;align-items:center}
+.pc-note{font-size:.74rem;color:var(--gold-text);font-weight:700;margin-top:12px;display:flex;gap:6px;align-items:center}
 .pc-note svg{width:14px;height:14px;flex-shrink:0}
 .empty-state{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--ink-mut)}
 
@@ -387,7 +388,7 @@ section{padding:clamp(70px,11vw,130px) 0;position:relative}
   cursor:pointer;font-family:inherit;
 }
 .map-tab:hover{background:rgba(246,239,227,.14);color:var(--cream)}
-.map-tab.active{background:var(--gold);color:var(--forest);border-color:var(--gold)}
+.map-tab.active{background:var(--gold);color:var(--forest);border-color:var(--gold-text)}
 .map-tab svg{width:16px;height:16px;flex-shrink:0}
 
 /* ── MAPA ILUSTRADO ── */
@@ -868,14 +869,14 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;
 .rv-modal{background:var(--paper);border-radius:20px;width:min(560px,100%);max-height:88vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.3)}
 .rv-head{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
 .rv-head h3{font-family:"Fraunces";font-size:1.3rem;color:var(--forest)}
-.rv-avg{font-size:.9rem;color:var(--gold);font-weight:700;margin-top:2px}
+.rv-avg{font-size:.9rem;color:var(--gold-text);font-weight:700;margin-top:2px}
 .rv-close{width:36px;height:36px;border-radius:50%;background:var(--cream-2);display:grid;place-items:center;cursor:pointer;border:none;font-size:1rem;color:var(--forest);flex-shrink:0}
 .rv-body{overflow-y:auto;padding:20px 24px}
 .rv-list{margin-bottom:22px}
 .rv-item{padding:14px 0;border-bottom:1px dashed var(--line)}
 .rv-item-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:4px}
 .rv-item-head b{color:var(--forest);font-size:.92rem}
-.rv-item-stars{color:var(--gold);font-size:.85rem;letter-spacing:2px}
+.rv-item-stars{color:var(--gold-text);font-size:.85rem;letter-spacing:2px}
 .rv-item p{font-size:.88rem;color:var(--ink);line-height:1.6}
 .rv-item img{margin-top:10px;border-radius:10px;max-width:200px;max-height:140px;object-fit:cover;cursor:pointer}
 .rv-item .rv-date{font-size:.72rem;color:var(--ink-mut)}
@@ -884,7 +885,7 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;
 .rv-form h4{font-family:"Fraunces";color:var(--forest);margin-bottom:10px;font-size:1.05rem}
 .rv-stars{display:flex;gap:4px;margin-bottom:12px}
 .rv-stars button{font-size:1.7rem;background:none;border:none;cursor:pointer;color:#d8d2c2;transition:transform .15s,color .15s;padding:0 2px}
-.rv-stars button.on{color:var(--gold)}
+.rv-stars button.on{color:var(--gold-text)}
 .rv-stars button:hover{transform:scale(1.2)}
 .rv-form input[type=text],.rv-form textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit;font-size:.9rem;margin-bottom:10px;background:var(--paper);color:var(--ink)}
 .rv-photo-label{display:block;font-size:.82rem;color:var(--forest);font-weight:600;cursor:pointer;margin-bottom:12px}
@@ -895,9 +896,41 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;
 .rv-submit:disabled{opacity:.55;cursor:wait}
 .rv-note{font-size:.72rem;color:var(--ink-mut);text-align:center;margin-top:8px}
 .rv-msg{font-size:.85rem;font-weight:700;text-align:center;margin-top:8px}
+
+/* ============================================================
+   ACCESIBILIDAD (WCAG 2.2 AA)
+   ============================================================ */
+/* Skip link: salta al contenido, visible solo al recibir foco */
+.skip-link{position:absolute;left:8px;top:-60px;z-index:2000;background:var(--forest);color:var(--cream);
+  padding:12px 20px;border-radius:0 0 10px 10px;font-weight:700;text-decoration:none;transition:top .2s}
+.skip-link:focus{top:0}
+
+/* Foco visible global y consistente para TODO control interactivo */
+a:focus-visible,button:focus-visible,[role="button"]:focus-visible,
+input:focus-visible,select:focus-visible,textarea:focus-visible,
+[tabindex]:focus-visible,summary:focus-visible{
+  outline:3px solid var(--gold);outline-offset:2px;border-radius:4px;
+}
+.btn-primary:focus-visible,.drawer-foot .btn:focus-visible{outline-color:var(--gold-soft)}
+
+/* Áreas táctiles mínimas 44x44 (WCAG 2.5.8 / 2.5.5) */
+.lang-toggle button,.icon-btn,.hamburger,.pc-fav,.drawer-close,.lb-close,.lb-nav,
+.rv-close,.route-item .rm,.pc-btn,.pc-share,.dist-btn,.dist-retry,.nav-close{
+  min-width:44px;min-height:44px;
+}
+.lang-toggle button{padding:8px 14px}
+.route-item .rm{width:44px;height:44px}
+.chip{min-height:44px;display:inline-flex;align-items:center}
+
+/* Texto solo para lectores de pantalla */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
 </head>
 <body>
+
+<!-- Skip link (primer elemento enfocable): salta directo al contenido -->
+<a href="#contenido" class="skip-link" data-i18n="skip_link">Saltar al contenido</a>
 
 <!-- Desregistrar cualquier Service Worker viejo para garantizar HTML fresco en desarrollo -->
 <script>
@@ -926,8 +959,8 @@ if ('serviceWorker' in navigator) {
       </span>
     </a>
 
-    <ul class="nav-links" id="navLinks">
-      <button class="nav-close" onclick="toggleMenu()" aria-label="Cerrar menú">✕</button>
+    <ul class="nav-links" id="navLinks" role="navigation" aria-label="Navegación principal">
+      <li style="list-style:none"><button class="nav-close" onclick="toggleMenu()" aria-label="Cerrar menú" data-i18n-aria="nav_close_aria">✕</button></li>
       <li><a href="#inicio" data-i18n="nav_home">Inicio</a></li>
       <li><a href="#pueblo" data-i18n="nav_about">El pueblo</a></li>
       <li><a href="#lugares" data-i18n="nav_places">Lugares</a></li>
@@ -938,15 +971,15 @@ if ('serviceWorker' in navigator) {
     </ul>
 
     <div class="nav-tools">
-      <div class="lang-toggle" role="group" aria-label="Idioma">
-        <button id="langEs" class="active" onclick="setLang('es')">ES</button>
-        <button id="langEn" onclick="setLang('en')">EN</button>
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button id="langEs" class="active" onclick="setLang('es')" aria-pressed="true" lang="es" aria-label="Español">ES</button>
+        <button id="langEn" onclick="setLang('en')" aria-pressed="false" lang="en" aria-label="English">EN</button>
       </div>
-      <button class="icon-btn" onclick="openDrawer()" aria-label="Mi ruta" title="Mi ruta">
+      <button class="icon-btn" onclick="openDrawer()" aria-label="Mi ruta" title="Mi ruta" data-i18n-aria="drawer_open_aria">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M6 16V8a4 4 0 0 1 4-4h4"/><path d="M18 8v8a4 4 0 0 1-4 4h-1"/></svg>
         <span class="badge" id="routeBadge">0</span>
       </button>
-      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menú">
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menú" data-i18n-aria="menu_aria" aria-expanded="false" aria-controls="navLinks">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
     </div>
@@ -956,7 +989,7 @@ if ('serviceWorker' in navigator) {
 <!-- Overlay oscuro tras el menú móvil (clic = cerrar) -->
 <div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
 
-<main>
+<main id="contenido" tabindex="-1">
 <!-- ============================================================
      HERO
      ============================================================ -->
@@ -1017,7 +1050,7 @@ if ('serviceWorker' in navigator) {
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.2 7.8 13.4 13.4 7.8 16.2 10.6 10.6 16.2 7.8"/></svg>
           <span data-i18n="dist_btn">Calcular distancia desde mi ubicación</span>
         </button>
-        <div id="distResult" class="dist-result" hidden>
+        <div id="distResult" class="dist-result" role="status" aria-live="polite" hidden>
           <div class="dist-line">
             <span data-i18n="dist_pre">Estás a</span> <b id="distKm">—</b> km <span data-i18n="dist_post">de Labateca (en línea recta)</span>
           </div>
@@ -1087,7 +1120,7 @@ if ('serviceWorker' in navigator) {
       <p data-i18n="places_sub">Filtra por categoría, guarda tus favoritos ♥ y arma tu ruta. Toca “Cómo llegar” para abrir Google Maps.</p>
     </div>
 
-    <div class="filters reveal d1" id="filters"></div>
+    <div class="filters reveal d1" id="filters" role="group" aria-label="Filtrar lugares por categoría"></div>
     <div class="places-grid" id="placesGrid"></div>
   </div>
 </section>
@@ -1130,7 +1163,7 @@ if ('serviceWorker' in navigator) {
     </div>
 
     <!-- Mapa real (Leaflet + OSM) -->
-    <div id="map" class="reveal d1"></div>
+    <div id="map" class="reveal d1" role="application" aria-label="Mapa interactivo de Labateca. La lista de lugares de arriba es la alternativa accesible." aria-roledescription="mapa"></div>
 
     <!-- Mapa ilustrado (Leaflet CRS.Simple + imagen) -->
     <div id="map-ilustrado"></div>
@@ -1279,7 +1312,7 @@ if ('serviceWorker' in navigator) {
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           <span data-i18n="f_send">Enviar mensaje</span>
         </button>
-        <div class="form-msg" id="formMsg"></div>
+        <div class="form-msg" id="formMsg" role="alert" aria-live="assertive"></div>
       </form>
     </div>
   </div>
@@ -1413,7 +1446,7 @@ if ('serviceWorker' in navigator) {
 
 <!-- DRAWER MI RUTA -->
 <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
-<aside class="drawer" id="drawer" aria-label="Mi ruta">
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Mi ruta" data-i18n-aria="drawer_title_aria">
   <div class="drawer-head">
     <h3><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#16352a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M6 16V8a4 4 0 0 1 4-4h4"/><path d="M18 8v8a4 4 0 0 1-4 4h-1"/></svg><span data-i18n="route_title">Mi ruta</span> <span class="cnt" id="drawerCount">0</span></h3>
     <button class="drawer-close" onclick="closeDrawer()" aria-label="Cerrar">
@@ -1666,6 +1699,9 @@ const I18N = {
     map_tab_real:"Mapa real", map_tab_ilustrado:"Mapa ilustrado",
     map_track:"Sendero a pie",
     cta_share:"Compartir",
+    skip_link:"Saltar al contenido", menu_aria:"Abrir menú de navegación", nav_close_aria:"Cerrar menú",
+    drawer_open_aria:"Abrir Mi ruta", drawer_title_aria:"Mi ruta — lugares guardados",
+    fav_add:"Añadir a favoritos:", fav_remove:"Quitar de favoritos:",
     hl_eyebrow:"Tu viaje", hl_title:"Cómo llegar a Labateca",
     hl_sub:"Paso a paso desde las tres ciudades más cercanas. Los horarios y tarifas de bus se confirman en cada terminal.",
     hl_cucuta_t:"Desde Cúcuta",
@@ -1764,6 +1800,9 @@ const I18N = {
     map_tab_real:"Real map", map_tab_ilustrado:"Illustrated map",
     map_track:"Walking trail",
     cta_share:"Share",
+    skip_link:"Skip to content", menu_aria:"Open navigation menu", nav_close_aria:"Close menu",
+    drawer_open_aria:"Open My route", drawer_title_aria:"My route — saved places",
+    fav_add:"Add to favorites:", fav_remove:"Remove from favorites:",
     hl_eyebrow:"Your trip", hl_title:"How to get to Labateca",
     hl_sub:"Step by step from the three nearest cities. Bus schedules and fares are confirmed at each terminal.",
     hl_cucuta_t:"From Cúcuta",
@@ -1938,7 +1977,7 @@ function renderPlaces(){
            aria-label="${t('lb_open')}: ${placeName(p)}">
         ${media}
         ${badge}
-        <button class="pc-fav ${isFav?'on':''}" onclick="toggleFav('${p.id}')" aria-label="Favorito" title="Favorito">${IC.heart}</button>
+        <button class="pc-fav ${isFav?'on':''}" onclick="toggleFav('${p.id}')" aria-pressed="${isFav?'true':'false'}" aria-label="${(isFav?t('fav_remove'):t('fav_add'))} ${placeName(p)}" title="${t('fav_add')}">${IC.heart}</button>
       </div>
       <div class="pc-body">
         <div class="pc-cat">${t('fil_'+cat)}</div>
@@ -2021,8 +2060,31 @@ function renderDrawer(){
   btn.style.opacity="1"; btn.style.pointerEvents="auto"; btn.setAttribute("href",dir);
 }
 
-function openDrawer(){ document.getElementById("drawer").classList.add("open"); document.getElementById("drawerOverlay").classList.add("open"); }
-function closeDrawer(){ document.getElementById("drawer").classList.remove("open"); document.getElementById("drawerOverlay").classList.remove("open"); }
+let _drawerFocusPrev=null;
+function _drawerKeydown(e){
+  if(e.key==="Escape"){ closeDrawer(); return; }
+  if(e.key!=="Tab") return;
+  const d=document.getElementById("drawer");
+  const f=d.querySelectorAll('a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])');
+  if(!f.length) return;
+  const first=f[0], last=f[f.length-1];
+  if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
+  else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
+}
+function openDrawer(){
+  _drawerFocusPrev=document.activeElement;
+  document.getElementById("drawer").classList.add("open");
+  document.getElementById("drawerOverlay").classList.add("open");
+  document.addEventListener("keydown",_drawerKeydown);
+  const close=document.querySelector("#drawer .drawer-close");
+  if(close) setTimeout(()=>close.focus(),60);
+}
+function closeDrawer(){
+  document.getElementById("drawer").classList.remove("open");
+  document.getElementById("drawerOverlay").classList.remove("open");
+  document.removeEventListener("keydown",_drawerKeydown);
+  if(_drawerFocusPrev && _drawerFocusPrev.focus){ _drawerFocusPrev.focus(); _drawerFocusPrev=null; }
+}
 
 /* ============================================================
    COMPARTIR LUGAR (Web Share API, respaldo WhatsApp)
@@ -2132,7 +2194,7 @@ async function loadReviews(id){
     if(!revs.length){ list.innerHTML=`<p class="rv-empty">${t('rv_empty')}</p>`; return; }
     list.innerHTML=revs.map(rv=>{
       const stars='★'.repeat(rv.rating)+'☆'.repeat(5-rv.rating);
-      const img=rv.photo?`<img src="${rv.photo}" alt="" loading="lazy" onclick="window.open('${rv.photo}','_blank')">`:'';
+      const img=rv.photo?`<a href="${rv.photo}" target="_blank" rel="noopener noreferrer" aria-label="${lang==='es'?'Ver foto de '+safeName+' en grande':'View photo by '+safeName+' full size'}"><img src="${rv.photo}" alt="${lang==='es'?'Foto de la visita de '+safeName:'Visit photo by '+safeName}" loading="lazy"></a>`:'';
       const d=new Date(rv.created_at).toLocaleDateString(lang==='es'?'es-CO':'en-US',{year:'numeric',month:'short'});
       const safeName=rv.name.replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
       const safeComment=rv.comment.replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
@@ -2336,11 +2398,17 @@ function applyI18n(){
     const k=el.getAttribute("data-i18n-ph");
     if(I18N[lang][k]!==undefined) el.setAttribute("placeholder",I18N[lang][k]);
   });
+  document.querySelectorAll("[data-i18n-aria]").forEach(el=>{
+    const k=el.getAttribute("data-i18n-aria");
+    if(I18N[lang][k]!==undefined) el.setAttribute("aria-label",I18N[lang][k]);
+  });
 }
 function setLang(l){
   lang=l; store.set("lab_lang",l);
-  document.getElementById("langEs").classList.toggle("active",l==="es");
-  document.getElementById("langEn").classList.toggle("active",l==="en");
+  const es=document.getElementById("langEs"), en=document.getElementById("langEn");
+  es.classList.toggle("active",l==="es"); en.classList.toggle("active",l==="en");
+  es.setAttribute("aria-pressed",l==="es"?"true":"false");
+  en.setAttribute("aria-pressed",l==="en"?"true":"false");
   applyI18n(); renderFilters(); renderPlaces(); renderGallery(); renderDrawer(); renderRutas();
 }
 
@@ -3217,6 +3285,11 @@ function toggleMenu(){
   const overlay=document.getElementById("navOverlay");
   const open=links.classList.toggle("open");
   overlay.classList.toggle("open",open);
+  const burger=document.getElementById("hamburger");
+  if(burger) burger.setAttribute("aria-expanded",open?"true":"false");
+  // Al abrir, llevar el foco al primer enlace; al cerrar, devolverlo a la hamburguesa
+  if(open){ const a=links.querySelector("a"); if(a) setTimeout(()=>a.focus(),50); }
+  else if(burger){ burger.focus(); }
 }
 document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>{
   document.getElementById("navLinks").classList.remove("open");
