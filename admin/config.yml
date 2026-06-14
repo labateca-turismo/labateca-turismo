@@ -13,7 +13,7 @@ backend:
   repo: labateca-turismo/labateca-turismo
   branch: main
   # Worker de autenticación OAuth (código en worker-cms-auth.js del repo)
-  base_url: https://labateca-cms-auth.jr22caceres.workers.dev
+  base_url: https://labateca-cms-auth.labatecacolombia.workers.dev
 
 # Carpeta donde se guardan los archivos multimedia subidos desde el CMS
 media_folder: "images/uploads"

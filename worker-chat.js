@@ -1,6 +1,6 @@
 /* Orígenes autorizados a usar el chat (agregar aquí el dominio propio cuando exista) */
 const ALLOWED_ORIGINS = [
-  'https://labateca-turismo.jr22caceres.workers.dev',
+  'https://labateca-turismo.labatecacolombia.workers.dev',
   'http://localhost:8000',
   'http://localhost:8765',
 ];

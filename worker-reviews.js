@@ -10,11 +10,11 @@
       contraseña larga inventada — es la llave del panel de moderación.
 
    PANEL DE MODERACIÓN:
-     https://labateca-reviews.jr22caceres.workers.dev/moderar?key=TU_ADMIN_KEY
+     https://labateca-reviews.labatecacolombia.workers.dev/moderar?key=TU_ADMIN_KEY
    ============================================================ */
 
 const ALLOWED_ORIGINS = [
-  'https://labateca-turismo.jr22caceres.workers.dev',
+  'https://labateca-turismo.labatecacolombia.workers.dev',
   'http://localhost:8000',
   'http://localhost:8765',
 ];

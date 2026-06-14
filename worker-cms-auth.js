@@ -7,11 +7,11 @@
      GITHUB_CLIENT_SECRET → de la GitHub OAuth App (tipo "Secret")
 
    La OAuth App de GitHub debe tener como callback URL:
-     https://labateca-cms-auth.jr22caceres.workers.dev/callback
+     https://labateca-cms-auth.labatecacolombia.workers.dev/callback
    ============================================================ */
 
 const ALLOWED_SITES = [
-  'labateca-turismo.jr22caceres.workers.dev',
+  'labateca-turismo.labatecacolombia.workers.dev',
   'localhost:8000',
   'localhost:8765',
 ];
