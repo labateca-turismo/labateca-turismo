@@ -58,15 +58,21 @@
 }
 </script>
 
-<!-- ====== TIPOGRAFÍA ====== -->
+<!-- ====== TIPOGRAFÍA ======
+     Solo los pesos realmente usados (400/600/700/800 + itálica del título).
+     Carga NO bloqueante: se aplica al terminar de descargar (display=swap). -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Hanken+Grotesk:wght@300..800&display=swap" rel="stylesheet" />
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700;800&display=swap" />
+<link rel="stylesheet" media="print" onload="this.media='all'"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700;800&display=swap" />
+<noscript><link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700;800&display=swap" /></noscript>
 
-<!-- ====== MAPA (Leaflet) ====== -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
-      integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- ====== MAPA ======
+     Leaflet (CSS + ~140 KB de JS) se carga de forma DIFERIDA: solo se inyecta
+     cuando el mapa entra en pantalla (ver ensureLeaflet() en el script). -->
 
 <!-- ====== PDF (jsPDF — carga diferida, solo cuando el usuario pide el PDF) ====== -->
 <!-- Se inyecta dinámicamente en generatePDF() para no afectar la carga inicial -->
@@ -1497,12 +1503,7 @@ if ('serviceWorker' in navigator) {
   </div>
 </div>
 
-<!-- ============================================================
-     LEAFLET JS
-     ============================================================ -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"
-        integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Leaflet se carga de forma diferida desde el script (ensureLeaflet) -->
 <script>
 /* ============================================================
    ⚙️ CONFIGURACIÓN — EDITA SOLO ESTO PARA PERSONALIZAR
@@ -1953,9 +1954,15 @@ function renderPlaces(){
     const photoUrl   = firstPhoto
       ? (firstPhoto.startsWith('http') ? firstPhoto : cldUrl(firstPhoto))
       : '';
+    // Imagen responsive: si es Cloudinary, srcset en 3 anchos (WebP via f_auto);
+    // width/height fijan la relación (evita CLS); lazy + async no bloquean.
+    const isCld = firstPhoto && !firstPhoto.startsWith('http');
+    const srcset = isCld
+      ? `srcset="${cldUrl(firstPhoto,'w_400,h_250,c_fill,f_auto,q_auto')} 400w, ${cldUrl(firstPhoto,'w_640,h_400,c_fill,f_auto,q_auto')} 640w, ${cldUrl(firstPhoto,'w_900,h_563,c_fill,f_auto,q_auto')} 900w" sizes="(max-width:600px) 92vw, (max-width:1000px) 46vw, 380px"`
+      : '';
     const media = photoUrl
-      ? `<img src="${photoUrl}" alt="${placeName(p)}" loading="lazy">`
-      : `<div class="pc-ph">${IC.cam}<small>${placeName(p)}</small></div>`;
+      ? `<img src="${photoUrl}" ${srcset} alt="${escHtml(placeName(p))}" loading="lazy" decoding="async" width="640" height="400">`
+      : `<div class="pc-ph">${IC.cam}<small>${escHtml(placeName(p))}</small></div>`;
 
     const badge = p.verified
       ? `<span class="pc-badge">${t('fil_'+cat)}</span>`
@@ -2611,8 +2618,38 @@ document.getElementById("contactForm").addEventListener("submit", async (e)=>{
 /* ============================================================
    MAPA (Leaflet) con respaldo
    ============================================================ */
+/* Carga diferida de Leaflet (CSS + JS con SRI). Devuelve una promesa que
+   resuelve cuando window.L está listo. Solo se descarga una vez. */
+let _leafletPromise=null;
+function ensureLeaflet(){
+  if(window.L) return Promise.resolve();
+  if(_leafletPromise) return _leafletPromise;
+  _leafletPromise=new Promise((resolve,reject)=>{
+    const css=document.createElement('link');
+    css.rel='stylesheet';
+    css.href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';
+    css.integrity='sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==';
+    css.crossOrigin='anonymous'; css.referrerPolicy='no-referrer';
+    document.head.appendChild(css);
+    const js=document.createElement('script');
+    js.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
+    js.integrity='sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==';
+    js.crossOrigin='anonymous'; js.referrerPolicy='no-referrer';
+    js.onload=()=>resolve(); js.onerror=()=>reject(new Error('leaflet'));
+    document.head.appendChild(js);
+  });
+  return _leafletPromise;
+}
+/* Inicia el mapa real asegurando primero que Leaflet esté cargado. */
+function initMapDeferred(){
+  ensureLeaflet().then(initMap).catch(()=>{
+    const m=document.getElementById('map'), f=document.getElementById('mapFallback');
+    if(m) m.style.display='none'; if(f) f.style.display='block';
+  });
+}
+
 function initMap(){
-  if(typeof L==="undefined"){ // librería bloqueada
+  if(typeof L==="undefined"){ // librería no disponible
     document.getElementById("map").style.display="none";
     document.getElementById("mapFallback").style.display="block";
     return;
@@ -2701,6 +2738,11 @@ let _mapIlustradoInited = false;
 
 function switchMap(type) {
   const isReal = type === 'real';
+  // Leaflet puede no estar cargado aún (carga diferida): asegurarlo antes de operar
+  if (typeof L === "undefined") {
+    ensureLeaflet().then(() => switchMap(type)).catch(()=>{});
+    return;
+  }
   // Mostrar/ocultar contenedores
   document.getElementById("map").style.display           = isReal ? '' : 'none';
   document.getElementById("map-ilustrado").style.display = isReal ? 'none' : '';
@@ -2708,6 +2750,8 @@ function switchMap(type) {
   // Actualizar tabs
   document.getElementById("tabMapReal").classList.toggle("active", isReal);
   document.getElementById("tabMapIlustrado").classList.toggle("active", !isReal);
+  // El mapa real puede no haberse iniciado todavía si se entra directo al ilustrado
+  if (isReal && !window._leafletMapReal) { initMap(); }
   // Inicializar mapa ilustrado solo una vez (al primer clic)
   if (!isReal && !_mapIlustradoInited) {
     initMapIlustrado();
@@ -3323,7 +3367,16 @@ function init(){
   try { updateBadges();  } catch(e) { console.warn('updateBadges',e);  }
   try { wireLinks();     } catch(e) { console.warn('wireLinks',e);     }
   try { loadWeather();   } catch(e) { console.warn('loadWeather',e);   }
-  try { initMap();       } catch(e) { console.warn('initMap',e);       }
+  // Mapa DIFERIDO: Leaflet (~140 KB) se carga solo cuando el mapa se acerca a la pantalla
+  try {
+    const mapaSec=document.getElementById('mapa');
+    if(mapaSec && 'IntersectionObserver' in window){
+      const mo=new IntersectionObserver((ents,obs)=>{
+        if(ents.some(x=>x.isIntersecting)){ obs.disconnect(); initMapDeferred(); }
+      },{rootMargin:'350px'});
+      mo.observe(mapaSec);
+    } else { initMapDeferred(); }
+  } catch(e){ console.warn('map defer',e); }
   try { loadEventos();   } catch(e) { console.warn('loadEventos',e);   }
   try { loadGuias();     } catch(e) { console.warn('loadGuias',e);     }
 
