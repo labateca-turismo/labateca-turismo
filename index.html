@@ -1699,6 +1699,7 @@ const I18N = {
     map_eyebrow:"Ubícate", map_title:"Todo Labateca en un mapa", map_sub:"Explora cada lugar, mira las distancias y abre la navegación con un toque.",
     map_tab_real:"Mapa real", map_tab_ilustrado:"Mapa ilustrado",
     map_track:"Sendero a pie",
+    map_tiles_off:"Sin conexión al fondo del mapa. Los puntos y senderos sí funcionan.",
     cta_share:"Compartir",
     skip_link:"Saltar al contenido", menu_aria:"Abrir menú de navegación", nav_close_aria:"Cerrar menú",
     drawer_open_aria:"Abrir Mi ruta", drawer_title_aria:"Mi ruta — lugares guardados",
@@ -1802,6 +1803,7 @@ const I18N = {
     map_eyebrow:"Find your way", map_title:"All of Labateca on one map", map_sub:"Explore every place, check distances and launch navigation with one tap.",
     map_tab_real:"Real map", map_tab_ilustrado:"Illustrated map",
     map_track:"Walking trail",
+    map_tiles_off:"Map background unavailable on this connection. Points and trails still work.",
     cta_share:"Share",
     skip_link:"Skip to content", menu_aria:"Open navigation menu", nav_close_aria:"Close menu",
     drawer_open_aria:"Open My route", drawer_title_aria:"My route — saved places",
@@ -2653,6 +2655,35 @@ function initMapDeferred(){
   });
 }
 
+/* Fondo del mapa resistente: intenta OpenStreetMap y, si la red no lo alcanza,
+   cae a CARTO. Si ningún proveedor carga, muestra un aviso (sin romper el mapa:
+   los marcadores y senderos siguen visibles). */
+function addBaseTiles(map){
+  const providers=[
+    {url:'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', o:{maxZoom:18, subdomains:'abc', attribution:'© OpenStreetMap'}},
+    {url:'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png', o:{maxZoom:20, subdomains:'abcd', attribution:'© OpenStreetMap, © CARTO'}}
+  ];
+  let idx=0, layer=null, loaded=0, errors=0;
+  function showTileNote(){
+    if(document.getElementById('tileNote')) return;
+    const n=document.createElement('div');
+    n.id='tileNote';
+    n.style.cssText='position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:500;background:rgba(22,53,42,.92);color:#f6efe3;font-size:.78rem;font-weight:600;padding:7px 14px;border-radius:99px;max-width:90%;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.3)';
+    n.textContent=t('map_tiles_off');
+    const c=document.getElementById('map'); if(c) c.appendChild(n);
+  }
+  function place(){
+    if(layer) map.removeLayer(layer);
+    loaded=0; errors=0;
+    layer=L.tileLayer(providers[idx].url, providers[idx].o).addTo(map);
+    layer.on('tileload',()=>{ loaded++; const n=document.getElementById('tileNote'); if(n) n.remove(); });
+    layer.on('tileerror',()=>{ errors++; if(loaded===0 && errors>=4 && idx<providers.length-1){ idx++; place(); } });
+  }
+  place();
+  // Si tras 7s ningún proveedor cargó un solo tile → avisar (el mapa sigue usable)
+  setTimeout(()=>{ if(loaded===0) showTileNote(); }, 7000);
+}
+
 function initMap(){
   if(typeof L==="undefined"){ // librería no disponible
     document.getElementById("map").style.display="none";
@@ -2663,9 +2694,7 @@ function initMap(){
     const {lat,lng}=CONFIG.townCoords;
     const map=L.map("map",{scrollWheelZoom:false}).setView([lat,lng],13);
     window._leafletMapReal = map;
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
-      maxZoom:18, attribution:'© OpenStreetMap'
-    }).addTo(map);
+    addBaseTiles(map);
 
     const icon=L.divIcon({
       className:"",html:`<div style="width:30px;height:30px;background:#bd5d34;border:3px solid #fbf8f1;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 4px 10px rgba(0,0,0,.3)"></div>`,
