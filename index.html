@@ -1760,6 +1760,7 @@ const I18N = {
     route_title:"Mi ruta", route_open:"Ver ruta en Google Maps", route_clear:"Vaciar ruta",
     cta_how:"Cómo llegar", cta_add:"Agregar", cta_added:"En ruta",
     cta_drive:"Llegar al inicio", cta_trail:"Ver sendero",
+    cta_wikiloc:"Navegar (GPS)", cta_wikiloc_t:"Abre el sendero en Wikiloc: te guía con tu ubicación en vivo y funciona sin señal (descarga la ruta antes de salir).",
     fil_all:"Todos", fil_naturaleza:"Naturaleza", fil_cultura:"Cultura", fil_gastronomia:"Gastronomía", fil_hospedaje:"Hospedaje", fil_fav:"♥ Favoritos",
     verify_badge:"Por verificar", approx_note:"Ubicación aproximada — por confirmar en campo",
     route_empty:"Tu ruta está vacía. Toca “Agregar” en los lugares que quieras visitar.",
@@ -1864,6 +1865,7 @@ const I18N = {
     route_title:"My route", route_open:"Open route in Google Maps", route_clear:"Clear route",
     cta_how:"Directions", cta_add:"Add", cta_added:"In route",
     cta_drive:"Drive to start", cta_trail:"View trail",
+    cta_wikiloc:"Navigate (GPS)", cta_wikiloc_t:"Open the trail in Wikiloc: it guides you with your live location and works with no signal (download the route before you leave).",
     fil_all:"All", fil_naturaleza:"Nature", fil_cultura:"Culture", fil_gastronomia:"Food", fil_hospedaje:"Lodging", fil_fav:"♥ Favorites",
     verify_badge:"To verify", approx_note:"Approximate location — confirm on site",
     route_empty:"Your route is empty. Tap “Add” on the places you'd like to visit.",
@@ -2013,7 +2015,9 @@ function renderPlaces(){
         </div>
         <div class="pc-actions">
           <a class="pc-btn map" href="${gmaps}" target="_blank" rel="noopener noreferrer">${IC.navi}${p.track?t('cta_drive'):t('cta_how')}</a>
-          ${p.track?`<button class="pc-btn trail" onclick="showTrail('${p.id}')">${IC.hill}${t('cta_trail')}</button>`:''}
+          ${p.wikiloc
+            ? `<a class="pc-btn trail" href="${escHtml(p.wikiloc)}" target="_blank" rel="noopener noreferrer" title="${t('cta_wikiloc_t')}">${IC.hill}${t('cta_wikiloc')}</a>`
+            : (p.track?`<button class="pc-btn trail" onclick="showTrail('${p.id}')">${IC.hill}${t('cta_trail')}</button>`:'')}
           <button class="pc-btn route ${inRoute?'added':''}" onclick="toggleRoute('${p.id}')">
             ${inRoute?IC.check:IC.plus}${inRoute?t('cta_added'):t('cta_add')}
           </button>
