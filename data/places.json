@@ -602,6 +602,47 @@
         "en": "Buy directly from the artisan, not middlemen."
       },
       "fotos": []
+    },
+    {
+      "id": "cascada-siscata",
+      "categoria": "naturaleza",
+      "verified": false,
+      "coordsApprox": false,
+      "lat": 7.303682,
+      "lng": -72.514713,
+      "mapaX": 300,
+      "mapaY": 480,
+      "telefono": "",
+      "nombre": {
+        "es": "Cascada de Siscata",
+        "en": "Siscata Waterfall"
+      },
+      "desc": {
+        "es": "Cascada de montaña a la que se llega por un sendero desde el casco urbano de Labateca. La traza del recorrido fue registrada en campo con GPS.",
+        "en": "Mountain waterfall reached by a trail from Labateca town center. The route was field-recorded with GPS."
+      },
+      "comoLlegar": {
+        "es": "Sendero a pie de ~3,6 km desde el pueblo. La ruta GPS aparece dibujada en el mapa; síguela.",
+        "en": "~3.6 km walking trail from town. The GPS route is drawn on the map; follow it."
+      },
+      "dist": {
+        "es": "~3,6 km (sendero a pie)",
+        "en": "~3.6 km (walking trail)"
+      },
+      "tiempo": {
+        "es": "Caminata",
+        "en": "Hike"
+      },
+      "dificultad": {
+        "es": "Por confirmar",
+        "en": "To confirm"
+      },
+      "recomendacion": {
+        "es": "Ve con guía local y calzado de agarre. Descarga el mapa offline antes de salir.",
+        "en": "Go with a local guide and grippy footwear. Download the offline map before leaving."
+      },
+      "fotos": [],
+      "track": "data/tracks/Cascada_siscata.gpx"
     }
   ]
 }
