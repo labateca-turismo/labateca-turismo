@@ -2792,10 +2792,11 @@ function switchMap(type) {
     ensureLeaflet().then(() => switchMap(type)).catch(()=>{});
     return;
   }
-  // Mostrar/ocultar contenedores
-  document.getElementById("map").style.display           = isReal ? '' : 'none';
-  document.getElementById("map-ilustrado").style.display = isReal ? 'none' : '';
-  document.getElementById("mapIlustradoNote").style.display = isReal ? 'none' : '';
+  // Mostrar/ocultar contenedores. OJO: #map-ilustrado tiene display:none en CSS,
+  // así que para mostrarlo hay que poner 'block' explícito (con '' volvería a none).
+  document.getElementById("map").style.display           = isReal ? 'block' : 'none';
+  document.getElementById("map-ilustrado").style.display = isReal ? 'none' : 'block';
+  document.getElementById("mapIlustradoNote").style.display = isReal ? 'none' : 'block';
   // Actualizar tabs
   document.getElementById("tabMapReal").classList.toggle("active", isReal);
   document.getElementById("tabMapIlustrado").classList.toggle("active", !isReal);
