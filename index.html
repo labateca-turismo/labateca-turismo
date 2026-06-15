@@ -944,15 +944,6 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
 <!-- Skip link (primer elemento enfocable): salta directo al contenido -->
 <a href="#contenido" class="skip-link" data-i18n="skip_link">Saltar al contenido</a>
 
-<!-- Desregistrar cualquier Service Worker viejo para garantizar HTML fresco en desarrollo -->
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.getRegistrations()
-    .then(regs => regs.forEach(r => r.unregister()))
-    .catch(() => {});
-}
-</script>
-
 <!-- ============================================================
      HEADER
      ============================================================ -->
@@ -3482,8 +3473,9 @@ function _checkLugarParam() {
 // 4. Registrar Service Worker (HTTPS o localhost)
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then(reg => console.log('[SW] Registrado:', reg.scope))
+    // updateViaCache:'none' → el navegador siempre comprueba sw.js fresco (detecta updates rápido)
+    navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' })
+      .then(reg => { console.log('[SW] Registrado:', reg.scope); reg.update(); })
       .catch(err => console.warn('[SW] Error al registrar:', err));
   });
 }

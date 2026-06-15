@@ -7,7 +7,7 @@
      - network-first      → datos dinámicos (clima Open-Meteo)
    ============================================================ */
 
-const CACHE_VERSION = 'labateca-v31';
+const CACHE_VERSION = 'labateca-v32';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE   = `${CACHE_VERSION}-images`;
 const DATA_CACHE    = `${CACHE_VERSION}-data`;
@@ -89,9 +89,31 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // 5. Todo lo demás (HTML, CSS, JS, iconos) → cache-first
+  // 5. Navegación / documentos HTML → network-first: SIEMPRE fresco si hay
+  //    conexión (evita servir versiones viejas), con caché como respaldo offline.
+  if (request.mode === 'navigate' || request.destination === 'document') {
+    event.respondWith(networkFirstDoc(request));
+    return;
+  }
+
+  // 6. Todo lo demás (CSS, JS, iconos del propio sitio) → cache-first
   event.respondWith(cacheFirst(request, STATIC_CACHE));
 });
+
+/* Documentos HTML: red primero, caché como respaldo, offline.html si todo falla. */
+async function networkFirstDoc(request) {
+  const cache = await caches.open(STATIC_CACHE);
+  try {
+    const response = await fetch(request);
+    if (response.ok) cache.put(request, response.clone());
+    return response;
+  } catch {
+    const cached = await cache.match(request) || await cache.match('/') || await cache.match('/index.html');
+    if (cached) return cached;
+    const offline = await caches.match('/offline.html');
+    return offline || new Response('Sin conexión', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
+  }
+}
 
 /* ============================================================
    ESTRATEGIAS
