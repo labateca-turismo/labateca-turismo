@@ -2626,37 +2626,23 @@ document.getElementById("contactForm").addEventListener("submit", async (e)=>{
 /* ============================================================
    MAPA (Leaflet) con respaldo
    ============================================================ */
-/* Carga diferida de Leaflet (CSS + JS con SRI). Devuelve una promesa que
-   resuelve cuando window.L está listo. Solo se descarga una vez. */
+/* Carga diferida de Leaflet AUTO-ALOJADO en el propio dominio (/vendor/leaflet/).
+   Se sirve desde el mismo Cloudflare que el sitio: fiable en conexiones rurales/
+   lentas, sin depender de un CDN externo (cdnjs). Mismo origen → sin SRI/CORS. */
 let _leafletPromise=null;
-const _LEAFLET_JS='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
-const _LEAFLET_CSS='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';
-function _loadLeafletJs(useSRI){
-  return new Promise((resolve,reject)=>{
-    const js=document.createElement('script');
-    js.src=_LEAFLET_JS;
-    if(useSRI){
-      js.integrity='sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==';
-      js.crossOrigin='anonymous'; js.referrerPolicy='no-referrer';
-    }
-    js.onload=()=>resolve(); js.onerror=()=>reject(new Error('leaflet'));
-    document.head.appendChild(js);
-  });
-}
 function ensureLeaflet(){
   if(window.L) return Promise.resolve();
   if(_leafletPromise) return _leafletPromise;
-  // CSS con SRI; si la copia en caché del SW falla la verificación, reintenta sin SRI
   const css=document.createElement('link');
-  css.rel='stylesheet'; css.href=_LEAFLET_CSS;
-  css.integrity='sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==';
-  css.crossOrigin='anonymous'; css.referrerPolicy='no-referrer';
-  css.onerror=()=>{ const c2=document.createElement('link'); c2.rel='stylesheet'; c2.href=_LEAFLET_CSS; document.head.appendChild(c2); };
+  css.rel='stylesheet'; css.href='/vendor/leaflet/leaflet.min.css';
   document.head.appendChild(css);
-  // JS con SRI; si falla (p.ej. el SW sirvió una copia sin CORS), reintenta sin SRI
-  _leafletPromise=_loadLeafletJs(true)
-    .catch(()=>{ if(window.L) return; return _loadLeafletJs(false); })
-    .then(()=>{ if(!window.L) throw new Error('L undefined'); });
+  _leafletPromise=new Promise((resolve,reject)=>{
+    const js=document.createElement('script');
+    js.src='/vendor/leaflet/leaflet.min.js';
+    js.onload=()=>{ window.L ? resolve() : reject(new Error('L undefined')); };
+    js.onerror=()=>reject(new Error('leaflet'));
+    document.head.appendChild(js);
+  });
   return _leafletPromise;
 }
 /* Inicia el mapa real asegurando primero que Leaflet esté cargado. */
@@ -3065,10 +3051,7 @@ function generatePDF() {
   const loadJsPDF = new Promise((resolve, reject) => {
     if (window.jspdf) { resolve(window.jspdf.jsPDF); return; }
     const s = document.createElement('script');
-    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
-    s.integrity = 'sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==';
-    s.crossOrigin = 'anonymous';
-    s.referrerPolicy = 'no-referrer';
+    s.src = '/vendor/jspdf/jspdf.umd.min.js';  // auto-alojado (sin CDN externo)
     s.onload  = () => resolve(window.jspdf.jsPDF);
     s.onerror = reject;
     document.head.appendChild(s);
