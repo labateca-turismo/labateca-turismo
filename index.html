@@ -1743,7 +1743,7 @@ const I18N = {
     rv_photo_big:"La foto es muy pesada (máximo 8 MB).",
     rv_rate:"Se han enviado varias opiniones seguidas desde esta conexión. Espera un rato e inténtalo de nuevo.",
     map_ilustrado_note:"Mapa artístico de referencia · toca un punto para ver la ficha · \"Cómo llegar\" abre Google Maps con la ubicación real",
-    map_fallback:"El mapa interactivo se cargará cuando publiques el sitio. Mientras tanto, cada lugar tiene su botón \"Cómo llegar\".",
+    map_fallback:"No pudimos cargar el mapa interactivo. Revisa tu conexión e inténtalo de nuevo, o usa el botón \"Cómo llegar\" de cada lugar.",
     gal_eyebrow:"Postales", gal_title:"Galería", gal_sub:"Reemplaza estos espacios por tus propias fotos (mejor calidad y sin problemas de derechos).",
     contact_eyebrow:"Hablemos", contact_title:"¿Planeas tu visita?",
     contact_sub:"Escríbenos para recomendaciones, guías locales o información de hospedaje. Respondemos por el canal que prefieras.",
@@ -1760,6 +1760,7 @@ const I18N = {
     foot_rights:"Labateca Turismo · Hecho con cariño en la montaña", foot_data:"Datos verificados localmente · algunos por confirmar",
     route_title:"Mi ruta", route_open:"Ver ruta en Google Maps", route_clear:"Vaciar ruta",
     cta_how:"Cómo llegar", cta_add:"Agregar", cta_added:"En ruta",
+    cta_drive:"Llegar al inicio", cta_trail:"Ver sendero",
     fil_all:"Todos", fil_naturaleza:"Naturaleza", fil_cultura:"Cultura", fil_gastronomia:"Gastronomía", fil_hospedaje:"Hospedaje", fil_fav:"♥ Favoritos",
     verify_badge:"Por verificar", approx_note:"Ubicación aproximada — por confirmar en campo",
     route_empty:"Tu ruta está vacía. Toca “Agregar” en los lugares que quieras visitar.",
@@ -1845,7 +1846,7 @@ const I18N = {
     rv_photo_big:"The photo is too large (8 MB max).",
     rv_rate:"Several reviews were sent from this connection in a row. Please wait a while and try again.",
     map_ilustrado_note:"Artistic reference map · tap a dot to see the place card · \"Directions\" opens Google Maps with the real location",
-    map_fallback:"The interactive map will load once you publish the site. Meanwhile, every place has its own \"Directions\" button.",
+    map_fallback:"We couldn't load the interactive map. Check your connection and try again, or use each place's \"Directions\" button.",
     gal_eyebrow:"Postcards", gal_title:"Gallery", gal_sub:"Replace these slots with your own photos (better quality and no copyright issues).",
     contact_eyebrow:"Let's talk", contact_title:"Planning your visit?",
     contact_sub:"Write to us for recommendations, local guides or lodging info. We'll reply through whichever channel you prefer.",
@@ -1862,6 +1863,7 @@ const I18N = {
     foot_rights:"Labateca Tourism · Made with love in the mountains", foot_data:"Locally verified data · some still to confirm",
     route_title:"My route", route_open:"Open route in Google Maps", route_clear:"Clear route",
     cta_how:"Directions", cta_add:"Add", cta_added:"In route",
+    cta_drive:"Drive to start", cta_trail:"View trail",
     fil_all:"All", fil_naturaleza:"Nature", fil_cultura:"Culture", fil_gastronomia:"Food", fil_hospedaje:"Lodging", fil_fav:"♥ Favorites",
     verify_badge:"To verify", approx_note:"Approximate location — confirm on site",
     route_empty:"Your route is empty. Tap “Add” on the places you'd like to visit.",
@@ -1958,7 +1960,10 @@ function renderPlaces(){
     const isFav   = favorites.includes(p.id);
     const inRoute = route.includes(p.id);
     const cat     = p.categoria || p.cat;
-    const gmaps   = `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`;
+    // Si el lugar tiene sendero a pie, "Cómo llegar" apunta al INICIO (donde se deja
+    // el carro) en vez de al destino inalcanzable por carretera.
+    const navDest = p.trailhead ? `${p.trailhead.lat},${p.trailhead.lng}` : `${p.lat},${p.lng}`;
+    const gmaps   = `https://www.google.com/maps/search/?api=1&query=${navDest}`;
 
     // Foto: schema nuevo usa fotos[] (IDs Cloudinary), schema legacy usa img
     const firstPhoto = (p.fotos && p.fotos.length) ? p.fotos[0] : (p.img || '');
@@ -2007,7 +2012,8 @@ function renderPlaces(){
           <span class="pc-stat">${IC.hill}${dific}</span>
         </div>
         <div class="pc-actions">
-          <a class="pc-btn map" href="${gmaps}" target="_blank" rel="noopener noreferrer">${IC.navi}${t('cta_how')}</a>
+          <a class="pc-btn map" href="${gmaps}" target="_blank" rel="noopener noreferrer">${IC.navi}${p.track?t('cta_drive'):t('cta_how')}</a>
+          ${p.track?`<button class="pc-btn trail" onclick="showTrail('${p.id}')">${IC.hill}${t('cta_trail')}</button>`:''}
           <button class="pc-btn route ${inRoute?'added':''}" onclick="toggleRoute('${p.id}')">
             ${inRoute?IC.check:IC.plus}${inRoute?t('cta_added'):t('cta_add')}
           </button>
@@ -2632,23 +2638,34 @@ document.getElementById("contactForm").addEventListener("submit", async (e)=>{
 /* Carga diferida de Leaflet (CSS + JS con SRI). Devuelve una promesa que
    resuelve cuando window.L está listo. Solo se descarga una vez. */
 let _leafletPromise=null;
-function ensureLeaflet(){
-  if(window.L) return Promise.resolve();
-  if(_leafletPromise) return _leafletPromise;
-  _leafletPromise=new Promise((resolve,reject)=>{
-    const css=document.createElement('link');
-    css.rel='stylesheet';
-    css.href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';
-    css.integrity='sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==';
-    css.crossOrigin='anonymous'; css.referrerPolicy='no-referrer';
-    document.head.appendChild(css);
+const _LEAFLET_JS='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
+const _LEAFLET_CSS='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';
+function _loadLeafletJs(useSRI){
+  return new Promise((resolve,reject)=>{
     const js=document.createElement('script');
-    js.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
-    js.integrity='sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==';
-    js.crossOrigin='anonymous'; js.referrerPolicy='no-referrer';
+    js.src=_LEAFLET_JS;
+    if(useSRI){
+      js.integrity='sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==';
+      js.crossOrigin='anonymous'; js.referrerPolicy='no-referrer';
+    }
     js.onload=()=>resolve(); js.onerror=()=>reject(new Error('leaflet'));
     document.head.appendChild(js);
   });
+}
+function ensureLeaflet(){
+  if(window.L) return Promise.resolve();
+  if(_leafletPromise) return _leafletPromise;
+  // CSS con SRI; si la copia en caché del SW falla la verificación, reintenta sin SRI
+  const css=document.createElement('link');
+  css.rel='stylesheet'; css.href=_LEAFLET_CSS;
+  css.integrity='sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==';
+  css.crossOrigin='anonymous'; css.referrerPolicy='no-referrer';
+  css.onerror=()=>{ const c2=document.createElement('link'); c2.rel='stylesheet'; c2.href=_LEAFLET_CSS; document.head.appendChild(c2); };
+  document.head.appendChild(css);
+  // JS con SRI; si falla (p.ej. el SW sirvió una copia sin CORS), reintenta sin SRI
+  _leafletPromise=_loadLeafletJs(true)
+    .catch(()=>{ if(window.L) return; return _loadLeafletJs(false); })
+    .then(()=>{ if(!window.L) throw new Error('L undefined'); });
   return _leafletPromise;
 }
 /* Inicia el mapa real asegurando primero que Leaflet esté cargado. */
@@ -2735,11 +2752,32 @@ function drawTrack(p,layer){
       if(coords.length<2) return;
       let km=0;
       for(let i=1;i<coords.length;i++) km+=haversineKm(coords[i-1][0],coords[i-1][1],coords[i][0],coords[i][1]);
-      L.polyline(coords,{color:'#bd5d34',weight:4,opacity:.85,dashArray:'1 7',lineCap:'round'})
+      const pl=L.polyline(coords,{color:'#a44a24',weight:4,opacity:.9,dashArray:'1 7',lineCap:'round'})
         .addTo(layer)
         .bindPopup(`<div class="map-pop"><b>${placeName(p)}</b>${t('map_track')} · ${km.toFixed(1)} km</div>`);
+      // Registrar el sendero para poder resaltarlo desde el botón "Ver sendero"
+      window._trackLayers=window._trackLayers||{};
+      window._trackLayers[p.id]=pl;
     })
     .catch(e=>console.warn('[Labateca] track',p.id,':',e.message));
+}
+
+/* "Ver sendero": baja al mapa, asegura Leaflet y resalta la ruta del lugar. */
+function showTrail(id){
+  const sec=document.getElementById('mapa');
+  if(sec) sec.scrollIntoView({behavior:'smooth'});
+  ensureLeaflet().then(()=>{
+    if(!window._leafletMapReal) initMap();
+    try{ switchMap('real'); }catch(e){}
+    setTimeout(()=>{
+      const map=window._leafletMapReal, pl=window._trackLayers&&window._trackLayers[id];
+      if(!map) return;
+      map.invalidateSize();
+      if(pl){ map.fitBounds(pl.getBounds().pad(0.25)); pl.openPopup(); }
+    },600);
+  }).catch(()=>{
+    const f=document.getElementById('mapFallback'); if(f) f.style.display='block';
+  });
 }
 
 /* ============================================================

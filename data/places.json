@@ -642,7 +642,11 @@
         "en": "Go with a local guide and grippy footwear. Download the offline map before leaving."
       },
       "fotos": [],
-      "track": "data/tracks/Cascada_siscata.gpx"
+      "track": "data/tracks/Cascada_siscata.gpx",
+      "trailhead": {
+        "lat": 7.299865,
+        "lng": -72.494603
+      }
     }
   ]
 }
