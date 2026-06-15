@@ -7,7 +7,7 @@
      - network-first      → datos dinámicos (clima Open-Meteo)
    ============================================================ */
 
-const CACHE_VERSION = 'labateca-v34';
+const CACHE_VERSION = 'labateca-v35';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE   = `${CACHE_VERSION}-images`;
 const DATA_CACHE    = `${CACHE_VERSION}-data`;
@@ -70,6 +70,8 @@ self.addEventListener('fetch', event => {
   if (url.hostname === 'labateca-chat.labatecacolombia.workers.dev') return;
   if (url.hostname === 'labateca-reviews.labatecacolombia.workers.dev') return;
   if (url.hostname === 'api.cloudinary.com') return;
+  // Google My Maps incrustado (mapa real) → lo maneja el navegador directo, sin cachear
+  if (url.hostname.endsWith('google.com')) return;
 
   // 2. Imágenes de Cloudinary → stale-while-revalidate
   if (url.hostname.includes('cloudinary.com')) {

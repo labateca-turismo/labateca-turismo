@@ -380,7 +380,8 @@ section{padding:clamp(70px,11vw,130px) 0;position:relative}
 .map-sec .sec-head h2{color:var(--cream)}
 .map-sec .sec-head p{color:rgba(246,239,227,.75)}
 #map{height:520px;width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-lg);
-  border:6px solid rgba(246,239,227,.1);background:var(--forest-2);z-index:1}
+  border:6px solid rgba(246,239,227,.1);background:var(--forest-2);z-index:1;overflow:hidden}
+#map iframe{width:100%;height:100%;border:0;display:block}
 .leaflet-popup-content-wrapper{border-radius:14px;font-family:"Hanken Grotesk"}
 .leaflet-popup-content{margin:14px 16px}
 .map-pop b{font-family:"Fraunces";color:var(--forest);font-size:1.05rem;display:block;margin-bottom:4px}
@@ -1165,8 +1166,14 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
       </button>
     </div>
 
-    <!-- Mapa real (Leaflet + OSM) -->
-    <div id="map" class="reveal d1" role="application" aria-label="Mapa interactivo de Labateca. La lista de lugares de arriba es la alternativa accesible." aria-roledescription="mapa"></div>
+    <!-- Mapa real (Google My Maps incrustado: rutas + senderos + lugares) -->
+    <div id="map" class="reveal d1">
+      <iframe id="gmapsFrame"
+        title="Mapa de rutas, senderos y lugares de Labateca en Google Maps"
+        aria-label="Mapa interactivo de Labateca. La lista de lugares de arriba es la alternativa accesible."
+        src="https://www.google.com/maps/d/embed?mid=1ZG71MZbcIr_80cUuPe1M5TMM_Dxyx-8"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
     <!-- Mapa ilustrado (Leaflet CRS.Simple + imagen) -->
     <div id="map-ilustrado"></div>
@@ -2771,19 +2778,8 @@ function drawTrack(p,layer){
 /* "Ver sendero": baja al mapa, asegura Leaflet y resalta la ruta del lugar. */
 function showTrail(id){
   const sec=document.getElementById('mapa');
+  try{ switchMap('real'); }catch(e){}
   if(sec) sec.scrollIntoView({behavior:'smooth'});
-  ensureLeaflet().then(()=>{
-    if(!window._leafletMapReal) initMap();
-    try{ switchMap('real'); }catch(e){}
-    setTimeout(()=>{
-      const map=window._leafletMapReal, pl=window._trackLayers&&window._trackLayers[id];
-      if(!map) return;
-      map.invalidateSize();
-      if(pl){ map.fitBounds(pl.getBounds().pad(0.25)); pl.openPopup(); }
-    },600);
-  }).catch(()=>{
-    const f=document.getElementById('mapFallback'); if(f) f.style.display='block';
-  });
 }
 
 /* ============================================================
@@ -2793,8 +2789,9 @@ let _mapIlustradoInited = false;
 
 function switchMap(type) {
   const isReal = type === 'real';
-  // Leaflet puede no estar cargado aún (carga diferida): asegurarlo antes de operar
-  if (typeof L === "undefined") {
+  // Mapa real = iframe de Google My Maps (no necesita Leaflet).
+  // Mapa ilustrado = Leaflet CRS.Simple sobre imagen propia (sí lo necesita).
+  if (!isReal && typeof L === "undefined") {
     ensureLeaflet().then(() => switchMap(type)).catch(()=>{});
     return;
   }
@@ -2806,16 +2803,10 @@ function switchMap(type) {
   // Actualizar tabs
   document.getElementById("tabMapReal").classList.toggle("active", isReal);
   document.getElementById("tabMapIlustrado").classList.toggle("active", !isReal);
-  // El mapa real puede no haberse iniciado todavía si se entra directo al ilustrado
-  if (isReal && !window._leafletMapReal) { initMap(); }
   // Inicializar mapa ilustrado solo una vez (al primer clic)
   if (!isReal && !_mapIlustradoInited) {
     initMapIlustrado();
     _mapIlustradoInited = true;
-  }
-  // Forzar re-render del mapa activo (Leaflet necesita invalidateSize tras display:block)
-  if (isReal && window._leafletMapReal) {
-    setTimeout(() => window._leafletMapReal.invalidateSize(), 60);
   }
   if (!isReal && window._leafletMapIlustrado) {
     setTimeout(() => window._leafletMapIlustrado.invalidateSize(), 60);
@@ -3426,16 +3417,8 @@ function init(){
   try { updateBadges();  } catch(e) { console.warn('updateBadges',e);  }
   try { wireLinks();     } catch(e) { console.warn('wireLinks',e);     }
   try { loadWeather();   } catch(e) { console.warn('loadWeather',e);   }
-  // Mapa DIFERIDO: Leaflet (~140 KB) se carga solo cuando el mapa se acerca a la pantalla
-  try {
-    const mapaSec=document.getElementById('mapa');
-    if(mapaSec && 'IntersectionObserver' in window){
-      const mo=new IntersectionObserver((ents,obs)=>{
-        if(ents.some(x=>x.isIntersecting)){ obs.disconnect(); initMapDeferred(); }
-      },{rootMargin:'350px'});
-      mo.observe(mapaSec);
-    } else { initMapDeferred(); }
-  } catch(e){ console.warn('map defer',e); }
+  // Mapa real = iframe de Google My Maps (carga diferida nativa con loading="lazy").
+  // Leaflet ya NO se carga al arranque; solo el mapa ilustrado lo pide al tocarlo.
   try { loadEventos();   } catch(e) { console.warn('loadEventos',e);   }
   try { loadGuias();     } catch(e) { console.warn('loadGuias',e);     }
 
