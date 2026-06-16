@@ -1171,7 +1171,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
       <iframe id="gmapsFrame"
         title="Mapa de rutas, senderos y lugares de Labateca en Google Maps"
         aria-label="Mapa interactivo de Labateca. La lista de lugares de arriba es la alternativa accesible."
-        src="https://www.google.com/maps/d/embed?mid=1ZG71MZbcIr_80cUuPe1M5TMM_Dxyx-8"
+        data-src="https://www.google.com/maps/d/embed?mid=1ZG71MZbcIr_80cUuPe1M5TMM_Dxyx-8"
         loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
@@ -2799,6 +2799,8 @@ function switchMap(type) {
     ensureLeaflet().then(() => switchMap(type)).catch(()=>{});
     return;
   }
+  // Si se muestra el mapa real, asegurar que el iframe de Google tenga su src cargado.
+  if (isReal) { const gmf=document.getElementById('gmapsFrame'); if(gmf && !gmf.src && gmf.dataset.src){ gmf.src=gmf.dataset.src; } }
   // Mostrar/ocultar contenedores. OJO: #map-ilustrado tiene display:none en CSS,
   // así que para mostrarlo hay que poner 'block' explícito (con '' volvería a none).
   document.getElementById("map").style.display           = isReal ? 'block' : 'none';
@@ -3421,8 +3423,19 @@ function init(){
   try { updateBadges();  } catch(e) { console.warn('updateBadges',e);  }
   try { wireLinks();     } catch(e) { console.warn('wireLinks',e);     }
   try { loadWeather();   } catch(e) { console.warn('loadWeather',e);   }
-  // Mapa real = iframe de Google My Maps (carga diferida nativa con loading="lazy").
-  // Leaflet ya NO se carga al arranque; solo el mapa ilustrado lo pide al tocarlo.
+  // Mapa real = iframe de Google My Maps. Se carga SOLO cuando la sección del mapa
+  // entra en pantalla. Así el iframe no roba el foco al abrir la página (evita que la
+  // página baje sola hasta el mapa). Leaflet solo lo usa el mapa ilustrado.
+  try {
+    const gmf=document.getElementById('gmapsFrame'), mapaSec=document.getElementById('mapa');
+    const loadGmaps=()=>{ if(gmf && !gmf.src && gmf.dataset.src){ gmf.src=gmf.dataset.src; } };
+    if(gmf && mapaSec && 'IntersectionObserver' in window){
+      const mo=new IntersectionObserver((ents,obs)=>{
+        if(ents.some(x=>x.isIntersecting)){ obs.disconnect(); loadGmaps(); }
+      },{rootMargin:'200px'});
+      mo.observe(mapaSec);
+    } else { loadGmaps(); }
+  } catch(e){ console.warn('gmaps defer',e); }
   try { loadEventos();   } catch(e) { console.warn('loadEventos',e);   }
   try { loadGuias();     } catch(e) { console.warn('loadGuias',e);     }
 
