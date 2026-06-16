@@ -3408,6 +3408,22 @@ const io=new IntersectionObserver((entries)=>{
    INIT
    ============================================================ */
 function init(){
+  // 0. Abrir SIEMPRE arriba (en el hero), salvo que la URL pida un lugar concreto.
+  //    Evita que el navegador o una app instalada (PWA) restaure el scroll anterior
+  //    o que algún recurso (mapa/imágenes) arrastre la página hacia abajo al cargar.
+  try {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    const _wantsLugar = new URLSearchParams(location.search).get('lugar');
+    if (!_wantsLugar && !location.hash) {
+      window.scrollTo(0, 0);
+      // Re-afirmar el tope tras el primer pintado y tras cargar recursos (imágenes/
+      // fuentes) que pudieran haber arrastrado la página hacia abajo. {once} evita
+      // interferir con el scroll posterior del usuario (p. ej. al bajar al mapa).
+      requestAnimationFrame(() => window.scrollTo(0, 0));
+      window.addEventListener('load', () => window.scrollTo(0, 0), { once: true });
+    }
+  } catch(e) { /* no romper el arranque */ }
+
   // 1. Cargar idioma guardado
   lang = store.get("lab_lang") || "es";
   document.getElementById("langEs").classList.toggle("active",lang==="es");
