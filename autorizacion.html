@@ -45,11 +45,29 @@
   footer{margin-top:34px;color:var(--mut);font-size:.85rem;text-align:center}
   .note-print{color:var(--mut);font-size:.88rem;margin-top:10px}
   @media print{
-    .top,.actions,.note-print{display:none}
-    body{background:#fff;padding:0}
-    .intro{background:#fff;border-left:3px solid #999}
-    h1{margin-top:6px}
-    a{color:var(--ink);text-decoration:none}
+    @page{size:Letter;margin:9mm 11mm}
+    .top,.actions,.note-print,footer{display:none}
+    html,body{background:#fff;padding:0;font-size:9.6pt;line-height:1.28;color:#000}
+    .wrap{max-width:100%;padding:0}
+    p,li{margin-bottom:4px;color:#000}
+    ul{padding-left:18px;margin-bottom:4px}
+    h1{font-size:1.25rem;margin:0 0 2px;color:#000}
+    .upd{font-size:.78rem;margin-bottom:7px}
+    h2{font-size:.95rem;margin:9px 0 4px;padding-bottom:3px;color:#000;border-bottom:1px solid #999}
+    .intro{background:#fff;border-left:2px solid #999;padding:6px 9px;margin:0 0 8px;font-size:.82rem}
+    .field{margin:6px 0}
+    .field label{font-size:.8rem;margin-bottom:2px;color:#000}
+    .field input,.field textarea{padding:4px 7px;font-size:.9rem;border:1px solid #888;border-radius:5px}
+    .row{gap:10px}
+    .checks{margin:4px 0}
+    .checks li{margin-bottom:3px}
+    .checks input{width:13px;height:13px;margin-top:3px}
+    .decl{padding:8px 11px;margin:9px 0;border:1px solid #888;border-radius:6px;font-size:.86rem}
+    .decl ul{margin-bottom:2px}
+    .sign{gap:18px;margin-top:16px}
+    .sign .line{height:34px;border-bottom:1px solid #000}
+    .sign small{font-size:.78rem}
+    a{color:#000;text-decoration:none}
   }
 </style>
 </head>
