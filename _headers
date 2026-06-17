@@ -25,6 +25,8 @@
 #  Es privado (login GitHub). El CMS carga librerías de unpkg y
 #  habla con api.github.com, por eso necesita una CSP más amplia.
 /admin/*
+  # Desadjuntar la CSP estricta heredada de "/*" para que no se sume a la del panel.
+  ! Content-Security-Policy
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
