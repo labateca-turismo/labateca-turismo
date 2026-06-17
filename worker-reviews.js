@@ -38,6 +38,12 @@ const SCHEMA = `CREATE TABLE IF NOT EXISTS reviews (
   created_at TEXT DEFAULT (datetime('now'))
 )`;
 
+/* Contador de visitas: una sola fila (id=1) con el total acumulado. */
+const VISITS_SCHEMA = `CREATE TABLE IF NOT EXISTS visits (
+  id INTEGER PRIMARY KEY,
+  total INTEGER NOT NULL DEFAULT 0
+)`;
+
 function json(data, status = 200, cors = {}) {
   return new Response(JSON.stringify(data), {
     status,
@@ -109,6 +115,20 @@ export default {
         .prepare('INSERT INTO reviews (place, name, rating, comment, photo, lang, ip) VALUES (?,?,?,?,?,?,?)')
         .bind(place, name, rating, comment, photo, lang, ip).run();
       return json({ ok: true }, 200, cors);
+    }
+
+    /* ── Contador de visitas (público) ──
+       GET  /api/visits → devuelve el total.
+       POST /api/visits → suma 1 y devuelve el total (el sitio lo llama
+       una vez por visitante por día; el resto del día solo lee con GET). */
+    if (url.pathname === '/api/visits') {
+      await env.DB.prepare(VISITS_SCHEMA).run();
+      await env.DB.prepare('INSERT OR IGNORE INTO visits (id, total) VALUES (1, 0)').run();
+      if (request.method === 'POST') {
+        await env.DB.prepare('UPDATE visits SET total = total + 1 WHERE id = 1').run();
+      }
+      const { results } = await env.DB.prepare('SELECT total FROM visits WHERE id = 1').all();
+      return json({ ok: true, total: results.length ? results[0].total : 0 }, 200, cors);
     }
 
     /* ── Moderación (requiere ADMIN_KEY) ── */

@@ -283,6 +283,7 @@ const I18N = {
     usar_eyebrow:"Guía rápida", usar_title:"Cómo usar la app", usar_sub:"Videos cortos para aprovecharla en segundos. ¿Buscas qué visitar? Toca el botón y explora todos los lugares.",
     usar_video_soon:"Video próximamente", usar_v1:"Encontrar lugares y armar tu ruta", usar_v2:"Navegar senderos con GPS (Wikiloc)", usar_v3:"El mapa, el clima y \"Cómo llegar\"", usar_cta:"Ver todos los lugares",
     back_home:"Volver al inicio",
+    visits_label:"visitas", visits_aria:"Personas que han visitado el sitio",
     fil_all:"Todos", fil_naturaleza:"Naturaleza", fil_cultura:"Cultura", fil_gastronomia:"Gastronomía", fil_hospedaje:"Hospedaje", fil_fav:"♥ Favoritos",
     verify_badge:"Por verificar", approx_note:"Ubicación aproximada — por confirmar en campo",
     route_empty:"Tu ruta está vacía. Toca “Agregar” en los lugares que quieras visitar.",
@@ -391,6 +392,7 @@ const I18N = {
     usar_eyebrow:"Quick guide", usar_title:"How to use the app", usar_sub:"Short videos to get the most out of it in seconds. Looking for places to visit? Tap the button and explore them all.",
     usar_video_soon:"Video coming soon", usar_v1:"Find places and build your route", usar_v2:"Navigate trails with GPS (Wikiloc)", usar_v3:"The map, weather and \"Directions\"", usar_cta:"See all places",
     back_home:"Back to home",
+    visits_label:"visits", visits_aria:"People who have visited the site",
     fil_all:"All", fil_naturaleza:"Nature", fil_cultura:"Culture", fil_gastronomia:"Food", fil_hospedaje:"Lodging", fil_fav:"♥ Favorites",
     verify_badge:"To verify", approx_note:"Approximate location — confirm on site",
     route_empty:"Your route is empty. Tap “Add” on the places you'd like to visit.",
@@ -1471,6 +1473,26 @@ function wireLinks(){
   social("socTk",CONFIG.social.tiktok);
 }
 
+/* Contador de visitas visible (usa el Worker de reseñas + D1).
+   Cuenta UNA vez por visitante por día (vía localStorage) para no inflar:
+   el primer acceso del día suma (POST), el resto solo lee (GET). */
+function loadVisitCounter(){
+  const wrap = document.getElementById('visitCounter');
+  const num  = document.getElementById('visitCount');
+  if (!wrap || !num || !CONFIG.reviewsWorkerUrl) return;
+  const today = new Date().toISOString().slice(0, 10);
+  const alreadyToday = store.get('lab_visit_day') === today;
+  fetch(`${CONFIG.reviewsWorkerUrl}/api/visits`, { method: alreadyToday ? 'GET' : 'POST' })
+    .then(r => r.json())
+    .then(d => {
+      if (!d || !d.ok || typeof d.total !== 'number') return;
+      if (!alreadyToday) store.set('lab_visit_day', today);
+      num.textContent = d.total.toLocaleString(lang === 'es' ? 'es-CO' : 'en-US');
+      wrap.hidden = false;
+    })
+    .catch(() => { /* si el worker no responde, el contador queda oculto */ });
+}
+
 /* ============================================================
    LIGHTBOX
    ============================================================ */
@@ -1969,6 +1991,7 @@ function init(){
   try { updateBadges();  } catch(e) { console.warn('updateBadges',e);  }
   try { wireLinks();     } catch(e) { console.warn('wireLinks',e);     }
   try { initVideos();    } catch(e) { console.warn('initVideos',e);    }
+  try { loadVisitCounter(); } catch(e) { console.warn('loadVisitCounter',e); }
   try { loadWeather();   } catch(e) { console.warn('loadWeather',e);   }
   // Mapa real = iframe de Google My Maps. Se carga SOLO cuando la sección del mapa
   // entra en pantalla. Así el iframe no roba el foco al abrir la página (evita que la

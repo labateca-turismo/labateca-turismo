@@ -886,3 +886,9 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
   font-weight:700;font-size:.9rem;color:var(--clay);text-decoration:none}
 .back-home:hover{text-decoration:underline}
 .lugares-page .sec-head{text-align:left}
+
+/* Contador de visitas (pie de página) */
+.visit-counter{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;
+  color:rgba(246,239,227,.78)}
+.visit-counter svg{width:15px;height:15px;color:var(--gold);flex:none}
+.visit-counter b{color:var(--cream);font-weight:700;font-variant-numeric:tabular-nums}
