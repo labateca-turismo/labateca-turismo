@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Panel CMS · Labateca Turismo</title>
   <!-- Sveltia CMS (reemplaza Decap; compatible con Cloudflare Pages + GitHub OAuth) -->
+  <!-- IMPORTANTE: la versión va FIJADA (@0.167.1). NO usar la URL sin versión:
+       unpkg sirve la "última" y una versión nueva puede dejar el panel EN BLANCO
+       (le pasó a 0.167.2 el 17-jun-2026). Para actualizar: probar la nueva versión
+       y, si funciona, subir el número aquí a mano. -->
   <!-- Para usar Decap CMS clásico, cambiar la línea siguiente por:
        <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script> -->
-  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+  <script src="https://unpkg.com/@sveltia/cms@0.167.1/dist/sveltia-cms.js"></script>
 </head>
 <body>
   <!-- El CMS se monta aquí automáticamente -->
