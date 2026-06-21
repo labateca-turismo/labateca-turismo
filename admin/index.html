@@ -12,8 +12,36 @@
   <!-- Para usar Decap CMS clásico, cambiar la línea siguiente por:
        <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script> -->
   <script src="https://unpkg.com/@sveltia/cms@0.167.1/dist/sveltia-cms.js"></script>
+  <style>
+    /* Accesos directos internos (flotan sobre el CMS) */
+    #lab-shortcuts{position:fixed;right:14px;bottom:14px;z-index:99999;display:flex;flex-direction:column;gap:8px;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+    #lab-shortcuts a{background:#16352a;color:#f6efe3;text-decoration:none;font-weight:700;font-size:13px;padding:9px 14px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.28);display:flex;align-items:center;gap:7px}
+    #lab-shortcuts a:hover{filter:brightness(1.1)}
+    #lab-shortcuts a.alt{background:#a44a24}
+  </style>
 </head>
 <body>
   <!-- El CMS se monta aquí automáticamente -->
+  <script>
+    /* Inserta un acceso directo a la página de avances y al sitio.
+       Se reinserta si el CMS redibuja el body (MutationObserver). */
+    (function(){
+      function ensure(){
+        if(document.getElementById('lab-shortcuts')||!document.body) return;
+        var b=document.createElement('div');
+        b.id='lab-shortcuts';
+        b.innerHTML='<a href="/progreso.html" target="_blank" rel="noopener" title="Ver los avances del proyecto">📊 Avances del proyecto</a>'+
+                    '<a class="alt" href="/" target="_blank" rel="noopener" title="Ver el sitio público">🌐 Ver el sitio</a>';
+        document.body.appendChild(b);
+      }
+      document.addEventListener('DOMContentLoaded', ensure);
+      setTimeout(ensure,1500); setTimeout(ensure,4000); setTimeout(ensure,8000);
+      if(window.MutationObserver){
+        var mo=new MutationObserver(function(){ ensure(); });
+        var start=function(){ if(document.body) mo.observe(document.body,{childList:true}); };
+        if(document.body) start(); else document.addEventListener('DOMContentLoaded', start);
+      }
+    })();
+  </script>
 </body>
 </html>
