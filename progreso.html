@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Seguimiento del proyecto turístico · Labateca</title>
+<meta name="description" content="Panel interno de seguimiento del proyecto turístico de Labateca." />
+<!-- OCULTA: no se indexa en buscadores y no está enlazada en el sitio público -->
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#16352a" />
+<link rel="icon" href="/icons/icon.svg" />
+<style>
+  :root{--forest:#16352a;--clay:#a44a24;--cream:#f6efe3;--paper:#fbf8f1;--ink:#1d1a15;--mut:#6a6357;--line:#e2d8c4;--gold:#8f6a1b;--green:#2e7d4f;--amber:#c98a1b}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;padding:0 0 70px}
+  .top{background:var(--forest);color:var(--cream);padding:16px 0}
+  .wrap{max-width:880px;margin:0 auto;padding:0 22px}
+  .top a{color:var(--cream);text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+  h1{font-size:1.9rem;color:var(--forest);margin:28px 0 4px;line-height:1.2}
+  .sub{color:var(--mut);font-size:.95rem;margin-bottom:6px}
+  .badge-hidden{display:inline-block;background:#efe7d6;color:var(--mut);font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:3px 12px;margin:8px 0 18px}
+  h2{font-size:1.3rem;color:var(--forest);margin:34px 0 12px;padding-bottom:7px;border-bottom:2px solid var(--line);display:flex;align-items:center;gap:10px}
+  h2 .ic{font-size:1.2rem}
+  h3{font-size:1.05rem;color:var(--clay);margin:18px 0 8px}
+  p,li{font-size:1rem;margin-bottom:8px}
+
+  /* Barra de progreso */
+  .progress-card{background:var(--forest);color:var(--cream);border-radius:14px;padding:20px 22px;margin:18px 0 8px}
+  .progress-card .pct{font-size:2.4rem;font-weight:800;line-height:1}
+  .progress-card .lbl{opacity:.85;font-size:.9rem;margin-bottom:12px}
+  .bar{height:14px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden}
+  .bar > span{display:block;height:100%;background:linear-gradient(90deg,#7bbf8f,#cfa54a);width:0;transition:width .5s ease;border-radius:999px}
+  .bar-meta{font-size:.85rem;opacity:.85;margin-top:8px}
+
+  /* Fases (cronograma) */
+  .phase{background:#fff;border:1px solid var(--line);border-left:5px solid var(--clay);border-radius:10px;padding:16px 18px;margin:14px 0}
+  .phase .when{display:inline-block;background:var(--cream);color:var(--forest);font-weight:700;font-size:.8rem;border-radius:999px;padding:3px 12px;margin-bottom:8px}
+  .phase h3{margin-top:0}
+  .phase ul{padding-left:20px;margin:6px 0 0}
+  .status{font-size:.78rem;font-weight:700;border-radius:6px;padding:1px 8px;margin-left:6px;white-space:nowrap}
+  .s-done{background:#e2f3e8;color:var(--green)}
+  .s-prog{background:#fbf0d8;color:var(--amber)}
+  .s-todo{background:#efe7d6;color:var(--mut)}
+
+  /* Checklist interactivo */
+  .chk-group{margin:14px 0}
+  .chk-group > .gh{font-weight:700;color:var(--forest);margin:14px 0 6px;font-size:1rem}
+  .chk{display:flex;align-items:flex-start;gap:11px;background:#fff;border:1px solid var(--line);border-radius:9px;padding:11px 13px;margin-bottom:7px;cursor:pointer;transition:background .15s}
+  .chk:hover{background:#fdfbf6}
+  .chk input{margin-top:3px;width:19px;height:19px;flex:none;accent-color:var(--green);cursor:pointer}
+  .chk span{font-size:.97rem}
+  .chk.done span{text-decoration:line-through;color:var(--mut)}
+  .reset{background:transparent;border:1px solid var(--line);color:var(--mut);border-radius:8px;padding:7px 14px;font:inherit;font-size:.85rem;cursor:pointer;margin-top:8px}
+
+  /* Bitácora */
+  .week{border-left:3px solid var(--line);padding:0 0 4px 18px;margin:0 0 6px 6px;position:relative}
+  .week::before{content:"";position:absolute;left:-8px;top:4px;width:13px;height:13px;border-radius:50%;background:var(--clay);border:3px solid var(--paper)}
+  .week .wk{font-weight:700;color:var(--forest)}
+  .week .wd{color:var(--mut);font-size:.85rem;margin-bottom:4px}
+  .week ul{padding-left:18px;margin:4px 0 14px}
+  .week.future::before{background:var(--line)}
+  .week.future .wk{color:var(--mut)}
+
+  .note{background:var(--cream);border-left:4px solid var(--clay);border-radius:8px;padding:13px 16px;margin:16px 0;font-size:.94rem}
+  footer{margin-top:36px;color:var(--mut);font-size:.85rem;text-align:center}
+  .mk li{margin-bottom:9px}
+  .mk strong{color:var(--forest)}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><a href="/">← Sitio público de Labateca</a></div></div>
+<div class="wrap">
+
+  <h1>Seguimiento del proyecto turístico</h1>
+  <p class="sub">Labateca · Volcanes de Dios — panel interno de avances</p>
+  <span class="badge-hidden">🔒 Página oculta · no aparece en buscadores ni en el menú</span>
+
+  <!-- ============ BARRA DE PROGRESO ============ -->
+  <div class="progress-card">
+    <div class="pct" id="pct">0%</div>
+    <div class="lbl">avance general (según tareas marcadas)</div>
+    <div class="bar"><span id="barfill"></span></div>
+    <div class="bar-meta" id="barmeta">0 de 0 tareas completadas</div>
+  </div>
+  <p class="sub">Marca las casillas a medida que vayas avanzando. Se guardan en este dispositivo automáticamente.</p>
+
+  <!-- ============ CRONOGRAMA GENERAL ============ -->
+  <h2><span class="ic">🗓️</span> Cronograma general por fases</h2>
+
+  <div class="phase">
+    <span class="when">Fase 0 · Plataforma digital</span>
+    <h3>La base tecnológica <span class="status s-done">CASI LISTA</span></h3>
+    <ul>
+      <li>Web + app instalable, bilingüe, mapas, clima, chat, reseñas <span class="status s-done">HECHO</span></li>
+      <li>Panel de autoadministración (CMS) y cumplimiento de datos (Ley 1581) <span class="status s-done">HECHO</span></li>
+      <li>Cargar los ~50 sitios reales + fotos <span class="status s-prog">EN CURSO</span></li>
+      <li>Videos "cómo usar", contador de visitas, redes y formulario <span class="status s-todo">PENDIENTE</span></li>
+    </ul>
+  </div>
+
+  <div class="phase">
+    <span class="when">Fase 1 · Meses 1-3 (jun – ago 2026)</span>
+    <h3>Contenido y base local</h3>
+    <ul>
+      <li>Levantar las fichas de los ~50 sitios (datos de campo)</li>
+      <li>Jornada fotográfica de cascadas, templo, café y paisajes</li>
+      <li>Vincular los primeros colaboradores (autorizaciones firmadas)</li>
+      <li>Definir la marca/promesa "Volcanes de Dios" y la imagen-héroe (Salto de Siscatá)</li>
+      <li>Abrir y activar redes sociales</li>
+    </ul>
+  </div>
+
+  <div class="phase">
+    <span class="when">Fase 2 · Meses 3-6 (sep – dic 2026)</span>
+    <h3>Producto turístico en tierra</h3>
+    <ul>
+      <li>Formar y certificar guías locales</li>
+      <li>Señalizar senderos (empezando por el circuito de cascadas)</li>
+      <li>Inventario de hospedaje y gastronomía</li>
+      <li>Seguridad básica y baños en la cascada estrella</li>
+      <li>Definir el "Circuito de las cascadas" como producto de 2-3 días</li>
+    </ul>
+  </div>
+
+  <div class="phase">
+    <span class="when">Fase 3 · Meses 6-12 (2027)</span>
+    <h3>Promoción y alianzas</h3>
+    <ul>
+      <li>Alianza con Pamplona (ciudad puerta de entrada)</li>
+      <li>Operadores turísticos de Cúcuta y Bucaramanga</li>
+      <li>Articulación con la Gobernación / SITUR Norte de Santander</li>
+      <li>Campaña de la cascada (imagen-héroe) en redes</li>
+      <li>Fiestas patronales como evento ancla</li>
+    </ul>
+  </div>
+
+  <div class="phase">
+    <span class="when">Fase 4 · Año 2+</span>
+    <h3>Reconocimiento y medición</h3>
+    <ul>
+      <li>Postular Labateca a "Best Tourism Villages" de ONU Turismo (vía MinCIT)</li>
+      <li>Aspirar a la Red de Pueblos Patrimonio</li>
+      <li>Medir el impacto (visitas, colaboradores, reseñas — la app ya lo registra)</li>
+    </ul>
+  </div>
+
+  <!-- ============ CHECKLIST INTERACTIVO ============ -->
+  <h2><span class="ic">✅</span> Tareas (marca tu avance)</h2>
+  <div id="checklist"></div>
+  <button class="reset" id="resetBtn">↺ Reiniciar marcado</button>
+
+  <!-- ============ BITÁCORA SEMANAL ============ -->
+  <h2><span class="ic">📔</span> Bitácora semana a semana</h2>
+  <p class="sub">Registro de lo realizado. Pídele al equipo técnico que agregue cada semana nueva.</p>
+
+  <div class="week">
+    <div class="wk">Semana del 14 jun 2026</div>
+    <div class="wd">Infraestructura y calidad</div>
+    <ul>
+      <li>Migración completa a la cuenta nueva (labatecacolombia) y dominio de trabajo.</li>
+      <li>Auditoría de seguridad, accesibilidad (WCAG) y rendimiento para redes 3G/rurales.</li>
+      <li>Revisión final pre-lanzamiento: SEO, legal base, robots y sitemap.</li>
+    </ul>
+  </div>
+
+  <div class="week">
+    <div class="wk">Semana del 15 jun 2026</div>
+    <div class="wd">Mapas y senderos</div>
+    <ul>
+      <li>Mapa real con Google My Maps (carga aun en redes rurales) — confirmado en celular 4G.</li>
+      <li>Navegación GPS de senderos con Wikiloc (funciona sin señal).</li>
+      <li>Librerías del mapa auto-alojadas para que no dependan de terceros.</li>
+    </ul>
+  </div>
+
+  <div class="week">
+    <div class="wk">Semana del 16 jun 2026</div>
+    <div class="wd">Estructura y analítica</div>
+    <ul>
+      <li>Sitio reorganizado en varias páginas (inicio liviano + página de lugares).</li>
+      <li>Analítica de visitas (panel privado) y contador de visitas.</li>
+    </ul>
+  </div>
+
+  <div class="week">
+    <div class="wk">Semana del 17 jun 2026</div>
+    <div class="wd">Cumplimiento legal, autonomía y estrategia</div>
+    <ul>
+      <li>Cumplimiento de datos: política actualizada + formato de autorización imprimible (Ley 1581).</li>
+      <li>Panel de administración estabilizado (el dueño edita el contenido por sí mismo).</li>
+      <li>Resumen ejecutivo para la Junta y la Alcaldía.</li>
+      <li>Investigación turística: cómo vender Labateca + casos de éxito (Zapatoca, Jericó, mundo).</li>
+      <li>Creación de este panel de seguimiento.</li>
+    </ul>
+  </div>
+
+  <div class="week future">
+    <div class="wk">Próximas semanas</div>
+    <div class="wd">Por registrar</div>
+    <ul>
+      <li>(Aquí se irán anotando los avances de Fase 1: fichas, fotos, colaboradores, redes…)</li>
+    </ul>
+  </div>
+
+  <!-- ============ MARKETING ============ -->
+  <h2><span class="ic">📣</span> Qué mejoraría nuestro marketing</h2>
+  <ul class="mk">
+    <li><strong>Una sola imagen-héroe:</strong> el Salto de Siscatá (80 m) en todo — web, redes, carteles. Una imagen potente y repetida crea recordación.</li>
+    <li><strong>Constancia en redes:</strong> reels cortos y frecuentes de cascadas, café, páramo y fiestas. Más vale poco y seguido que mucho de vez en cuando.</li>
+    <li><strong>Nicho de aviturismo:</strong> Colombia es el país #1 del mundo en aves; armar un listado de especies del páramo atrae a un turista que paga bien.</li>
+    <li><strong>Relato "Guardianes del agua de Santurbán":</strong> conecta lo ambiental con la identidad y diferencia a Labateca.</li>
+    <li><strong>Perfil de Google (Google Business):</strong> que cada lugar y el municipio aparezcan en Google Maps con fotos y reseñas.</li>
+    <li><strong>Carteles con código QR</strong> en Pamplona y Cúcuta que lleven a la app (captar al turista que ya está cerca).</li>
+    <li><strong>Alianza con influencers de viajes</strong> regionales y nacionales (invitarlos a recorrer el circuito).</li>
+    <li><strong>Paquetes de fin de semana</strong> con operadores de Cúcuta y Bucaramanga.</li>
+    <li><strong>Reseñas y testimonios:</strong> ya tienes el sistema; pedir activamente reseñas genera confianza.</li>
+    <li><strong>Difusión en las fiestas patronales:</strong> aprovechar el público que ya llega para mostrarle el resto del municipio.</li>
+  </ul>
+
+  <div class="note"><strong>Meta honesta:</strong> no buscar ser "el próximo Guatapé", sino "<strong>el primer Labateca</strong>" — un destino auténtico de naturaleza, bien gestionado, usando la web/app como ventaja que otros pueblos aún no tienen.</div>
+
+  <footer>Labateca · Volcanes de Dios — panel interno de seguimiento (uso privado del equipo)</footer>
+</div>
+
+<script>
+// ===== Checklist interactivo con guardado en el dispositivo =====
+const TAREAS = {
+  "Fase 1 · Contenido y base local": [
+    "Levantar las fichas de los ~50 sitios turísticos",
+    "Hacer la jornada fotográfica de los lugares",
+    "Cargar lugares y fotos reales en la app",
+    "Vincular los primeros 5 colaboradores (autorizaciones firmadas)",
+    "Definir la marca e imagen-héroe (Salto de Siscatá)",
+    "Abrir y activar las redes sociales",
+    "Configurar el formulario de contacto y los enlaces de redes",
+    "Grabar los 3 videos de 'cómo usar la app'"
+  ],
+  "Fase 2 · Producto en tierra": [
+    "Formar y certificar guías locales",
+    "Señalizar el circuito de cascadas",
+    "Inventariar hospedaje y gastronomía",
+    "Mejorar seguridad y baños en la cascada estrella",
+    "Definir el 'Circuito de las cascadas' (2-3 días)"
+  ],
+  "Fase 3 · Promoción y alianzas": [
+    "Acordar alianza con Pamplona (puerta de entrada)",
+    "Contactar operadores de Cúcuta y Bucaramanga",
+    "Articular con la Gobernación / SITUR",
+    "Lanzar la campaña de la cascada en redes",
+    "Colocar carteles QR en Pamplona y Cúcuta"
+  ],
+  "Fase 4 · Reconocimiento": [
+    "Postular a Best Tourism Villages (vía MinCIT)",
+    "Solicitar ingreso a la Red de Pueblos Patrimonio",
+    "Presentar el primer reporte de impacto a la Junta"
+  ]
+};
+
+const KEY = "lab_progreso_v1";
+let estado = {};
+try { estado = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch(e) { estado = {}; }
+
+const cont = document.getElementById("checklist");
+let idx = 0, total = 0;
+for (const grupo in TAREAS) {
+  const g = document.createElement("div");
+  g.className = "chk-group";
+  const gh = document.createElement("div");
+  gh.className = "gh";
+  gh.textContent = grupo;
+  g.appendChild(gh);
+  TAREAS[grupo].forEach(t => {
+    total++;
+    const id = "t" + (idx++);
+    const lab = document.createElement("label");
+    lab.className = "chk" + (estado[id] ? " done" : "");
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.checked = !!estado[id];
+    cb.addEventListener("change", () => {
+      estado[id] = cb.checked;
+      lab.classList.toggle("done", cb.checked);
+      try { localStorage.setItem(KEY, JSON.stringify(estado)); } catch(e){}
+      pintar();
+    });
+    const sp = document.createElement("span");
+    sp.textContent = t;
+    lab.appendChild(cb); lab.appendChild(sp);
+    g.appendChild(lab);
+  });
+  cont.appendChild(g);
+}
+
+function pintar(){
+  let hechas = 0;
+  for (let i = 0; i < total; i++) if (estado["t"+i]) hechas++;
+  const pc = total ? Math.round(hechas / total * 100) : 0;
+  document.getElementById("pct").textContent = pc + "%";
+  document.getElementById("barfill").style.width = pc + "%";
+  document.getElementById("barmeta").textContent = hechas + " de " + total + " tareas completadas";
+}
+pintar();
+
+document.getElementById("resetBtn").addEventListener("click", () => {
+  if (!confirm("¿Borrar todas las marcas de avance en este dispositivo?")) return;
+  estado = {};
+  try { localStorage.removeItem(KEY); } catch(e){}
+  document.querySelectorAll(".chk input").forEach(cb => { cb.checked = false; cb.closest(".chk").classList.remove("done"); });
+  pintar();
+});
+</script>
+</body>
+</html>
