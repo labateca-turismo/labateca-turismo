@@ -648,6 +648,58 @@
         "lng": -72.494603
       },
       "wikiloc": "https://loc.wiki/t/269503883?h=2m4va5w5om&wa=sd&la=es"
+    },
+    {
+      "id": "pedregal",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299898,
+      "lng": -72.504955,
+      "mapaX": 360,
+      "mapaY": 410,
+      "telefono": "573112327066",
+      "nombre": {
+        "es": "Finca El Pedregal",
+        "en": "El Pedregal Farm"
+      },
+      "desc": {
+        "es": "Finca turística a las afueras de Labateca que combina mirador, gastronomía y fe. Desde su terraza se contemplan las montañas y el vecino pueblo de Toledo; cuenta con zona de descanso con billar y un Santo Sepulcro con cruces que la hace única. La atiende don Óscar Rozo.",
+        "en": "A tourist farm just outside Labateca blending viewpoint, food and faith. From its terrace you can see the mountains and the neighboring town of Toledo; it offers a rest area with billiards and a Holy Sepulchre with crosses that makes it unique. Hosted by Mr. Óscar Rozo."
+      },
+      "comoLlegar": {
+        "es": "Desde la parroquia Nuestra Señora de las Angustias, ~1,5 km hacia el occidente. La ruta GPS aparece dibujada en el mapa; síguela.",
+        "en": "From Our Lady of Sorrows parish, ~1.5 km to the west. The GPS route is drawn on the map; follow it."
+      },
+      "dist": {
+        "es": "~1,5 km del pueblo",
+        "en": "~1.5 km from town"
+      },
+      "tiempo": {
+        "es": "Caminata ~25 min (o en carro)",
+        "en": "~25 min walk (or by car)"
+      },
+      "dificultad": {
+        "es": "Fácil-media",
+        "en": "Easy–moderate"
+      },
+      "recomendacion": {
+        "es": "Ve al atardecer por la vista. Llama antes para confirmar atención: don Óscar.",
+        "en": "Go at sunset for the view. Call ahead to confirm: Mr. Óscar."
+      },
+      "fotos": [
+        "labateca/pedregal-02",
+        "labateca/pedregal-04",
+        "labateca/pedregal-06",
+        "labateca/pedregal-07",
+        "labateca/pedregal-05",
+        "labateca/pedregal-08"
+      ],
+      "track": "data/tracks/pedregal.gpx",
+      "trailhead": {
+        "lat": 7.299807,
+        "lng": -72.494508
+      }
     }
   ]
 }
