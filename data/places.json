@@ -701,6 +701,50 @@
         "lng": -72.494508
       },
       "wikiloc": "https://loc.wiki/t/269295597?h=2m4va5w5om&wa=sd&la=es"
+    },
+    {
+      "id": "fama-el-corral",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.2990524,
+      "lng": -72.4949041,
+      "mapaX": 490,
+      "mapaY": 375,
+      "telefono": "573118913433",
+      "nombre": {
+        "es": "Fama y Charcutería El Corral",
+        "en": "El Corral Butcher & Deli"
+      },
+      "desc": {
+        "es": "Carnicería, charcutería y víveres en pleno casco urbano de Labateca: carnes frescas, embutidos, bebidas y abarrotes. Atendida con esmero por su propietario, don Juan Carlos Duarte — \"siempre a su servicio\".",
+        "en": "Butcher shop, deli and grocery in the heart of Labateca: fresh meat, cured meats, drinks and pantry staples. Run with care by its owner, Mr. Juan Carlos Duarte — \"always at your service\"."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, Carrera 3 # 3-01, sector La Esmeralda.",
+        "en": "In the town center, Carrera 3 # 3-01, La Esmeralda area."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "7:30 am–1 pm y 3–7 pm",
+        "en": "7:30 am–1 pm & 3–7 pm"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Buen punto para surtirte de carnes y víveres antes de salir de paseo. Llama para encargos.",
+        "en": "A handy stop to stock up on meat and supplies before a trip. Call to place orders."
+      },
+      "fotos": [
+        "labateca/elcorral-01",
+        "labateca/elcorral-02",
+        "labateca/elcorral-03"
+      ]
     }
   ]
 }
