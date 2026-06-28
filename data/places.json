@@ -745,6 +745,52 @@
         "labateca/elcorral-02",
         "labateca/elcorral-03"
       ]
+    },
+    {
+      "id": "automercado-karen",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.29917,
+      "lng": -72.494704,
+      "mapaX": 485,
+      "mapaY": 378,
+      "telefono": "573222834876",
+      "nombre": {
+        "es": "Automercado Karen",
+        "en": "Karen Supermarket"
+      },
+      "desc": {
+        "es": "Supermercado bien surtido en el casco urbano de Labateca: víveres, abarrotes, frutas, bebidas y productos de la canasta familiar. Atendido por su propietario, don Edixon Garavito.",
+        "en": "A well-stocked supermarket in Labateca's town center: groceries, fresh produce, drinks and household essentials. Run by its owner, Mr. Edixon Garavito."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, Calle 3 # 2-44, sector La Candelaria.",
+        "en": "In the town center, Calle 3 # 2-44, La Candelaria area."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Horario comercial",
+        "en": "Business hours"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para abastecerte de víveres y provisiones durante tu visita.",
+        "en": "Ideal to stock up on groceries and supplies during your visit."
+      },
+      "fotos": [
+        "labateca/karen-04",
+        "labateca/karen-03",
+        "labateca/karen-02",
+        "labateca/karen-01",
+        "labateca/karen-05"
+      ]
     }
   ]
 }
