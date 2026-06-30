@@ -606,7 +606,7 @@
     {
       "id": "cascada-siscata",
       "categoria": "naturaleza",
-      "verified": false,
+      "verified": true,
       "coordsApprox": false,
       "lat": 7.303682,
       "lng": -72.514713,
@@ -622,24 +622,24 @@
         "en": "Mountain waterfall reached by a trail from Labateca town center. The route was field-recorded with GPS."
       },
       "comoLlegar": {
-        "es": "Sendero a pie de ~3,6 km desde el pueblo. La ruta GPS aparece dibujada en el mapa; síguela.",
-        "en": "~3.6 km walking trail from town. The GPS route is drawn on the map; follow it."
+        "es": "Hay tres formas de llegar: (1) A pie desde el pueblo: ~3,6 km con +342 m de desnivel (~1 h 15 min). (2) En carro hasta la Finca El Pedregal —hasta ahí entran los carros— y luego a pie: ~20 min hasta la casa del señor Epifanio (la última casa) y ~25 min más hasta la cascada. (3) En moto hasta la casa del señor Epifanio y desde ahí ~25 min a pie. Sigue la ruta GPS dibujada en el mapa.",
+        "en": "There are three ways to get there: (1) On foot from town: ~3.6 km with +342 m of elevation gain (~1 h 15 min). (2) By car up to Finca El Pedregal —cars go that far— then on foot: ~20 min to Mr. Epifanio's house (the last house) and ~25 min more to the waterfall. (3) By motorbike up to Mr. Epifanio's house, then ~25 min on foot. Follow the GPS route drawn on the map."
       },
       "dist": {
-        "es": "~3,6 km (sendero a pie)",
-        "en": "~3.6 km (walking trail)"
+        "es": "~3,6 km a pie · +342 m",
+        "en": "~3.6 km on foot · +342 m"
       },
       "tiempo": {
-        "es": "Caminata",
-        "en": "Hike"
+        "es": "~1 h 15 min a pie (o carro/moto + caminata)",
+        "en": "~1 h 15 min on foot (or car/bike + walk)"
       },
       "dificultad": {
-        "es": "Por confirmar",
-        "en": "To confirm"
+        "es": "Moderada",
+        "en": "Moderate"
       },
       "recomendacion": {
-        "es": "Ve con guía local y calzado de agarre. Descarga el mapa offline antes de salir.",
-        "en": "Go with a local guide and grippy footwear. Download the offline map before leaving."
+        "es": "Procura estar en la cascada hacia las 10 a. m. para disfrutar del sol y sus hermosos paisajes. Ve con calzado de agarre y descarga el mapa offline antes de salir.",
+        "en": "Aim to reach the waterfall around 10 a.m. to enjoy the sun and the beautiful scenery. Wear grippy footwear and download the offline map before leaving."
       },
       "fotos": [
         "labateca/siscata-01",
