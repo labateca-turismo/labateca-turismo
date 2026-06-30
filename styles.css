@@ -36,6 +36,15 @@ body{
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
 }
+/* fondo translúcido: foto aérea del pueblo, muy suave detrás de todo el sitio.
+   Capa fija (no background-attachment) para que en móvil no se vea entrecortado.
+   El velo crema encima (~0.88) mantiene el contenido perfectamente legible. */
+body::after{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    linear-gradient(rgba(251,248,241,.86), rgba(251,248,241,.90)),
+    url("https://res.cloudinary.com/dwotodtoa/image/upload/w_1600,f_auto,q_auto/labateca/fondo-pueblo") center center / cover no-repeat;
+}
 /* sutil textura de grano sobre todo el fondo */
 body::before{
   content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
