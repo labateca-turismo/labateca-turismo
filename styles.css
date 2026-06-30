@@ -289,6 +289,8 @@ section{padding:clamp(70px,11vw,130px) 0;position:relative}
 .pc-btn.route{background:var(--cream-2);color:var(--forest);border:1.5px solid var(--line)}
 .pc-btn.route:hover{border-color:var(--forest-3)}
 .pc-btn.route.added{background:var(--clay);color:#fff;border-color:var(--clay)}
+.pc-btn.wa{background:#25d366;color:#fff}
+.pc-btn.wa:hover{background:#1da851}
 .pc-btn svg{width:15px;height:15px}
 .pc-note{font-size:.74rem;color:var(--gold-text);font-weight:700;margin-top:12px;display:flex;gap:6px;align-items:center}
 .pc-note svg{width:14px;height:14px;flex-shrink:0}
