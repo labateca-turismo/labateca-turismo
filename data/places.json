@@ -641,7 +641,14 @@
         "es": "Ve con guía local y calzado de agarre. Descarga el mapa offline antes de salir.",
         "en": "Go with a local guide and grippy footwear. Download the offline map before leaving."
       },
-      "fotos": [],
+      "fotos": [
+        "labateca/siscata-01",
+        "labateca/siscata-02",
+        "labateca/siscata-03",
+        "labateca/siscata-04",
+        "labateca/siscata-05",
+        "labateca/siscata-06"
+      ],
       "track": "data/tracks/Cascada_siscata.gpx",
       "trailhead": {
         "lat": 7.299865,
@@ -773,8 +780,8 @@
         "en": "In town center"
       },
       "tiempo": {
-        "es": "Horario comercial",
-        "en": "Business hours"
+        "es": "8 am–1 pm y 2–8 pm",
+        "en": "8 am–1 pm & 2–8 pm"
       },
       "dificultad": {
         "es": "Acceso fácil",
