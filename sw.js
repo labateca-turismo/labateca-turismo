@@ -7,7 +7,7 @@
      - network-first      → datos dinámicos (clima Open-Meteo)
    ============================================================ */
 
-const CACHE_VERSION = 'labateca-v46';
+const CACHE_VERSION = 'labateca-v47';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE   = `${CACHE_VERSION}-images`;
 const DATA_CACHE    = `${CACHE_VERSION}-data`;
@@ -78,11 +78,15 @@ self.addEventListener('fetch', event => {
   // Cloudflare Web Analytics (beacon) → directo, sin cachear ni interceptar
   if (url.hostname.endsWith('cloudflareinsights.com')) return;
 
-  // 2. Imágenes de Cloudinary → stale-while-revalidate
-  if (url.hostname.includes('cloudinary.com')) {
-    event.respondWith(staleWhileRevalidate(request, IMAGE_CACHE));
-    return;
-  }
+  // 2. Imágenes de Cloudinary → SIN interceptar (las maneja el navegador directo).
+  //    Antes pasaban por stale-while-revalidate, pero el SW re-emitía estas
+  //    peticiones cross-origin (no-cors) y en algunos Android esa re-emisión
+  //    fallaba y devolvía un respaldo que ROMPÍA la imagen (ícono partido),
+  //    aunque la misma URL abierta directo en el navegador sí cargaba.
+  //    Dejándolas pasar directo se comportan igual que el enlace directo
+  //    (probado y funcionando en celular). Se pierde el cacheo offline de
+  //    fotos, pero la prioridad es que las imágenes se vean siempre.
+  if (url.hostname.includes('cloudinary.com')) return;
 
   // 3. Datos (JSON y tracks GPX) → stale-while-revalidate (se actualizan con CMS/campo)
   if (url.pathname.startsWith('/data/')) {
