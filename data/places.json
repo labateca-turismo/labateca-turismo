@@ -798,6 +798,50 @@
         "labateca/karen-01",
         "labateca/karen-05"
       ]
+    },
+    {
+      "id": "antojitos",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298409,
+      "lng": -72.493737,
+      "mapaX": 480,
+      "mapaY": 383,
+      "telefono": "573144195716",
+      "nombre": {
+        "es": "Antojitos",
+        "en": "Antojitos"
+      },
+      "desc": {
+        "es": "Heladería y antojería en el casco urbano de Labateca: granizados, helados, pizzas y antojitos para todos los gustos. Un buen punto para refrescarse y compartir. La atiende su propietaria, doña Mónica García.",
+        "en": "Ice-cream and snack spot in Labateca's town center: slushies, ice cream, pizzas and treats for every taste. A nice place to cool off and hang out. Run by its owner, Mrs. Mónica García."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca. La ubicación exacta aparece en el mapa; sigue el pin.",
+        "en": "In Labateca's town center. The exact location is shown on the map; follow the pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Lun–vie 3–9 pm · Sáb y dom 9 am–9 pm",
+        "en": "Mon–Fri 3–9 pm · Sat & Sun 9 am–9 pm"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para un granizado o un helado al pasear por el pueblo. Llama para pedidos.",
+        "en": "Great for a slushie or ice cream while strolling around town. Call to place orders."
+      },
+      "fotos": [
+        "labateca/antojitos-01",
+        "labateca/antojitos-02",
+        "labateca/antojitos-03"
+      ]
     }
   ]
 }
