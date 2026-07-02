@@ -299,7 +299,7 @@ section{padding:clamp(70px,11vw,130px) 0;position:relative}
 /* ============================================================
    MAPA
    ============================================================ */
-.map-sec{background:var(--forest);color:var(--cream);position:relative;overflow:hidden}
+.map-sec{background:var(--forest);color:var(--cream);position:relative;overflow:hidden;z-index:1}
 .map-sec .eyebrow{color:var(--gold-soft)}
 .map-sec .eyebrow::before{background:var(--gold-soft)}
 .map-sec .sec-head h2{color:var(--cream)}
@@ -483,7 +483,7 @@ section{padding:clamp(70px,11vw,130px) 0;position:relative}
 /* ============================================================
    FOOTER
    ============================================================ */
-footer{background:var(--forest);color:var(--cream);padding:70px 0 30px;position:relative;overflow:hidden}
+footer{background:var(--forest);color:var(--cream);padding:70px 0 30px;position:relative;overflow:hidden;z-index:1}
 footer::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;
   background:linear-gradient(90deg,var(--clay),var(--gold),var(--clay))}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;margin-bottom:48px}
