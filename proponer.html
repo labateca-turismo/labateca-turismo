@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Propón tu lugar o negocio · Labateca Turismo</title>
+<meta name="description" content="¿Tienes un negocio, hospedaje o sitio turístico en Labateca? Propón que aparezca en la guía turística: llena el formulario, sube fotos y envíalo. Es gratis y voluntario." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#16352a" />
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png" />
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+<style>
+  :root{--forest:#16352a;--forest-2:#1f4a38;--clay:#a44a24;--gold:#d4a23f;--cream:#f6efe3;--paper:#fbf8f1;--ink:#1d1a15;--mut:#6a6357;--line:#e2d8c4}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;padding:0 0 70px}
+  .top{background:var(--forest);color:var(--cream);padding:16px 0}
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
+  .top a{color:var(--cream);text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+  h1{font-size:1.85rem;color:var(--forest);margin:30px 0 4px;line-height:1.2}
+  .upd{color:var(--mut);font-size:.92rem;margin-bottom:16px}
+  h2{font-size:1.12rem;color:var(--forest);margin:26px 0 10px;border-bottom:2px solid var(--line);padding-bottom:6px}
+  p,li{font-size:1rem;color:var(--ink);margin-bottom:10px}
+  a{color:var(--clay);font-weight:600}
+  .intro{background:var(--cream);border-left:4px solid var(--gold);border-radius:8px;padding:14px 16px;margin:0 0 8px;font-size:.96rem}
+  .field{margin:14px 0}
+  .field label{display:block;font-weight:700;color:var(--forest);font-size:.94rem;margin-bottom:5px}
+  .field .req{color:var(--clay)}
+  .field .hint{font-weight:400;color:var(--mut);font-size:.86rem}
+  .field input,.field textarea,.field select{width:100%;font:inherit;font-size:1rem;padding:11px 12px;border:1.5px solid var(--line);border-radius:9px;background:#fff;color:var(--ink)}
+  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--forest);box-shadow:0 0 0 3px rgba(22,53,42,.12)}
+  .field textarea{min-height:80px;resize:vertical}
+  .row{display:flex;gap:14px;flex-wrap:wrap}
+  .row .field{flex:1;min-width:200px}
+  /* Subir fotos */
+  .drop{border:2px dashed var(--line);border-radius:12px;background:#fff;padding:22px 16px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s}
+  .drop:hover,.drop.over{border-color:var(--forest);background:var(--cream)}
+  .drop .big{font-size:2rem;line-height:1}
+  .drop .t{font-weight:700;color:var(--forest);margin-top:6px}
+  .drop .s{color:var(--mut);font-size:.86rem}
+  .thumbs{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .thumb{position:relative;width:92px;height:92px;border-radius:10px;overflow:hidden;border:1.5px solid var(--line);background:#f0eadf}
+  .thumb img{width:100%;height:100%;object-fit:cover}
+  .thumb .st{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(22,53,42,.55);color:#fff;font-size:.72rem;text-align:center;padding:4px}
+  .thumb .rm{position:absolute;top:3px;right:3px;width:22px;height:22px;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;border:none;cursor:pointer;font-size:.8rem;line-height:1}
+  .checks{list-style:none;padding:0;margin:10px 0}
+  .checks li{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px}
+  .checks input{margin-top:4px;width:18px;height:18px;flex:none;accent-color:var(--clay)}
+  .checks label{font-size:.95rem;color:var(--ink);font-weight:400}
+  .submit{width:100%;background:var(--forest);color:var(--cream);border:none;border-radius:999px;padding:15px;font:inherit;font-weight:800;font-size:1.05rem;cursor:pointer;margin-top:22px;transition:background .2s}
+  .submit:hover{background:var(--forest-2)}
+  .submit:disabled{opacity:.6;cursor:not-allowed}
+  .msg{margin-top:14px;font-weight:600;text-align:center;font-size:.98rem}
+  .ok-panel{display:none;background:#fff;border:1.5px solid var(--line);border-left:5px solid #25d366;border-radius:12px;padding:22px;margin-top:18px}
+  .ok-panel h3{color:var(--forest);margin-bottom:8px}
+  footer{margin-top:34px;color:var(--mut);font-size:.85rem;text-align:center}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><a href="/">← Volver al inicio</a></div></div>
+<div class="wrap">
+  <h1>Propón tu lugar o negocio</h1>
+  <p class="upd">Guía Turística Digital de Labateca · Norte de Santander, Colombia</p>
+
+  <div class="intro">
+    ¿Tienes un negocio, hospedaje, restaurante o conoces un sitio turístico de Labateca? Cuéntanos y <strong>lo revisamos para publicarlo en la guía</strong>. Es <strong>gratis y voluntario</strong>. Llena lo que puedas, sube fotos y envía. 📸
+  </div>
+
+  <form id="propForm" novalidate>
+    <h2>1. Datos del lugar</h2>
+    <div class="field">
+      <label>Nombre del lugar o negocio <span class="req">*</span></label>
+      <input type="text" id="nombre" required placeholder="Ej.: Restaurante La Montaña" />
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>Categoría <span class="req">*</span></label>
+        <select id="categoria" required>
+          <option value="">Elige una…</option>
+          <option value="gastronomia">Gastronomía (restaurante, tienda, café…)</option>
+          <option value="hospedaje">Hospedaje (hotel, finca, posada…)</option>
+          <option value="naturaleza">Naturaleza (cascada, mirador, sendero…)</option>
+          <option value="cultura">Cultura (templo, sitio histórico…)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Teléfono / WhatsApp <span class="req">*</span></label>
+        <input type="tel" id="telefono" required placeholder="Ej.: 320 906 0582" />
+      </div>
+    </div>
+    <div class="field">
+      <label>Descripción <span class="req">*</span> <span class="hint">— ¿qué ofrece? ¿qué lo hace especial?</span></label>
+      <textarea id="desc" required placeholder="Cuéntanos en pocas líneas sobre tu lugar…"></textarea>
+    </div>
+    <div class="field">
+      <label>Horario de atención <span class="hint">— opcional</span></label>
+      <input type="text" id="horario" placeholder="Ej.: Lun–sáb 8 am–8 pm" />
+    </div>
+    <div class="field">
+      <label>Dirección o cómo llegar <span class="hint">— opcional</span></label>
+      <input type="text" id="direccion" placeholder="Ej.: Calle 3 # 4-21, o 'a 1 km del parque'" />
+    </div>
+    <div class="field">
+      <label>Enlace de Google Maps <span class="hint">— opcional, ayuda a ubicarte en el mapa</span></label>
+      <input type="url" id="maps" placeholder="En Google Maps: Compartir → Copiar enlace, y pégalo aquí" />
+    </div>
+
+    <h2>2. Fotos del lugar</h2>
+    <p style="font-size:.92rem;color:var(--mut);margin-bottom:6px">Sube hasta 6 fotos. Se guardan en la nube automáticamente (se optimizan solas). No incluyas fotos de menores ni de personas sin su permiso.</p>
+    <div class="drop" id="drop">
+      <div class="big">📷</div>
+      <div class="t">Toca aquí para subir fotos</div>
+      <div class="s">o arrástralas · JPG/PNG · hasta 6</div>
+    </div>
+    <input type="file" id="fileInput" accept="image/*" multiple hidden />
+    <div class="thumbs" id="thumbs"></div>
+
+    <h2>3. ¿Quién envía?</h2>
+    <div class="row">
+      <div class="field">
+        <label>Tu nombre <span class="req">*</span></label>
+        <input type="text" id="proponente" required placeholder="Nombre y apellido" />
+      </div>
+      <div class="field">
+        <label>Tu rol <span class="hint">— opcional</span></label>
+        <input type="text" id="rol" placeholder="Propietario, administrador, vecino…" />
+      </div>
+    </div>
+
+    <h2>4. Autorización</h2>
+    <ul class="checks">
+      <li>
+        <input type="checkbox" id="consent" />
+        <label for="consent">Autorizo el tratamiento de mis datos e imagen para promover el turismo de Labateca, conforme a la <a href="/privacidad.html" target="_blank">Ley 1581 de 2012 y la Política de Datos</a>. Declaro que las fotos son mías o tengo permiso para usarlas, y que <strong>no incluyen menores ni terceros identificables</strong> sin su consentimiento. Sé que esta autorización es voluntaria y puedo revocarla. <span class="req">*</span></label>
+      </li>
+    </ul>
+    <p style="font-size:.88rem;color:var(--mut)">Para negocios, además puedes firmar el <a href="/autorizacion.html" target="_blank">formato de autorización</a> y enviárnoslo. Así queda constancia formal.</p>
+
+    <button type="submit" class="submit" id="submitBtn">📨 Enviar propuesta</button>
+    <div class="msg" id="msg"></div>
+  </form>
+
+  <div class="ok-panel" id="okPanel">
+    <h3>✅ ¡Gracias! Tu propuesta está lista para enviarse</h3>
+    <p id="okText">Se abrió WhatsApp con toda la información. Solo pulsa <strong>enviar</strong> en el chat para que la recibamos. La revisaremos y, si todo está en orden, tu lugar aparecerá en la guía.</p>
+    <p><a href="/lugares.html">← Ver los lugares de la guía</a></p>
+  </div>
+
+  <footer>Labateca · Volcanes de Dios — Norte de Santander, Colombia · labatecacolombia@gmail.com</footer>
+</div>
+
+<script>
+(function(){
+  // ── Configuración ──
+  var WHATSAPP = "573209060582";        // número del proyecto (recibe las propuestas)
+  var WEB3FORMS_KEY = "";                // opcional: pega tu Access Key de web3forms.com para recibir también por correo
+  var CLOUD = "dwotodtoa";               // Cloudinary cloud name
+  var PRESET = "labateca_visitantes";    // preset SIN firma (funciona sin login)
+  var MAX_FOTOS = 6, MAX_MB = 10;
+
+  var fotos = [];   // {url, name, status:'up'|'done'|'err', id}
+  var uid = 0;
+
+  var drop = document.getElementById('drop');
+  var fileInput = document.getElementById('fileInput');
+  var thumbs = document.getElementById('thumbs');
+  var msg = document.getElementById('msg');
+
+  drop.addEventListener('click', function(){ fileInput.click(); });
+  drop.addEventListener('dragover', function(e){ e.preventDefault(); drop.classList.add('over'); });
+  drop.addEventListener('dragleave', function(){ drop.classList.remove('over'); });
+  drop.addEventListener('drop', function(e){ e.preventDefault(); drop.classList.remove('over'); handleFiles(e.dataTransfer.files); });
+  fileInput.addEventListener('change', function(e){ handleFiles(e.target.files); fileInput.value=''; });
+
+  function handleFiles(list){
+    var arr = Array.prototype.slice.call(list);
+    for (var i=0;i<arr.length;i++){
+      if (fotos.length >= MAX_FOTOS){ flash('Máximo ' + MAX_FOTOS + ' fotos.'); break; }
+      var f = arr[i];
+      if (!/^image\//.test(f.type)) continue;
+      if (f.size > MAX_MB*1024*1024){ flash('Una foto supera los ' + MAX_MB + ' MB.'); continue; }
+      uploadOne(f);
+    }
+  }
+
+  function uploadOne(file){
+    var item = { url:'', name:file.name, status:'up', id:(++uid) };
+    fotos.push(item);
+    renderThumbs();
+    var fd = new FormData();
+    fd.append('file', file);
+    fd.append('upload_preset', PRESET);
+    fd.append('folder', 'propuestas');
+    fetch('https://api.cloudinary.com/v1_1/' + CLOUD + '/image/upload', { method:'POST', body:fd })
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        if (j.secure_url){ item.url = j.secure_url; item.status = 'done'; }
+        else { item.status = 'err'; }
+        renderThumbs();
+      })
+      .catch(function(){ item.status = 'err'; renderThumbs(); });
+  }
+
+  function renderThumbs(){
+    thumbs.innerHTML = fotos.map(function(f){
+      var inner = f.status==='done'
+        ? '<img src="' + f.url + '" alt="">'
+        : (f.status==='up'
+            ? '<div class="st">Subiendo…</div>'
+            : '<div class="st">Error, quita y reintenta</div>');
+      return '<div class="thumb" data-id="' + f.id + '">' + inner +
+             '<button type="button" class="rm" data-id="' + f.id + '" aria-label="Quitar">✕</button></div>';
+    }).join('');
+    Array.prototype.forEach.call(thumbs.querySelectorAll('.rm'), function(b){
+      b.addEventListener('click', function(){
+        var id = +b.getAttribute('data-id');
+        fotos = fotos.filter(function(x){ return x.id !== id; });
+        renderThumbs();
+      });
+    });
+  }
+
+  function flash(text){ msg.style.color='var(--clay)'; msg.textContent = text; }
+
+  document.getElementById('propForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var val = function(id){ return (document.getElementById(id).value||'').trim(); };
+    var nombre=val('nombre'), categoria=val('categoria'), telefono=val('telefono'),
+        desc=val('desc'), horario=val('horario'), direccion=val('direccion'),
+        maps=val('maps'), proponente=val('proponente'), rol=val('rol');
+    var consent = document.getElementById('consent').checked;
+
+    if(!nombre||!categoria||!telefono||!desc||!proponente){ flash('Completa los campos con *.'); return; }
+    if(!consent){ flash('Debes aceptar la autorización de datos para enviar.'); return; }
+    if(fotos.some(function(f){ return f.status==='up'; })){ flash('Espera a que terminen de subir las fotos…'); return; }
+
+    var links = fotos.filter(function(f){ return f.status==='done'; }).map(function(f){ return f.url; });
+    var catLabel = {gastronomia:'Gastronomía',hospedaje:'Hospedaje',naturaleza:'Naturaleza',cultura:'Cultura'}[categoria]||categoria;
+
+    var lines = [];
+    lines.push('*NUEVA PROPUESTA DE LUGAR — Guía de Labateca*');
+    lines.push('');
+    lines.push('🏷️ Nombre: ' + nombre);
+    lines.push('📂 Categoría: ' + catLabel);
+    lines.push('📞 Teléfono: ' + telefono);
+    lines.push('📝 Descripción: ' + desc);
+    if(horario) lines.push('🕐 Horario: ' + horario);
+    if(direccion) lines.push('📍 Dirección: ' + direccion);
+    if(maps) lines.push('🗺️ Google Maps: ' + maps);
+    lines.push('');
+    lines.push('👤 Enviado por: ' + proponente + (rol?(' ('+rol+')'):''));
+    lines.push('✅ Autorización de datos: aceptada');
+    lines.push('');
+    if(links.length){
+      lines.push('📸 Fotos (' + links.length + '):');
+      links.forEach(function(u){ lines.push(u); });
+    } else {
+      lines.push('📸 Fotos: (no adjuntó)');
+    }
+    var text = lines.join('\n');
+
+    var btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+
+    // Opción A: correo (si hay Web3Forms configurado)
+    if (WEB3FORMS_KEY){
+      fetch('https://api.web3forms.com/submit', {
+        method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: 'Nueva propuesta de lugar — ' + nombre,
+          from_name: 'Formulario Propón tu lugar',
+          message: text
+        })
+      }).then(function(r){ return r.json(); }).then(function(j){
+        if(j.success){ success('correo'); } else { openWhatsApp(text); }
+      }).catch(function(){ openWhatsApp(text); });
+      return;
+    }
+    // Opción B (por defecto): WhatsApp
+    openWhatsApp(text);
+  });
+
+  function openWhatsApp(text){
+    var url = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(text);
+    window.open(url, '_blank', 'noopener');
+    success('whatsapp');
+  }
+
+  function success(via){
+    document.getElementById('propForm').style.display = 'none';
+    var ok = document.getElementById('okPanel');
+    if (via==='correo'){
+      document.getElementById('okText').innerHTML = 'Recibimos tu propuesta por correo. La revisaremos y, si todo está en orden, tu lugar aparecerá en la guía. ¡Gracias por aportar! 🌄';
+    }
+    ok.style.display = 'block';
+    ok.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+})();
+</script>
+</body>
+</html>
