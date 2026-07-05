@@ -302,7 +302,18 @@ const I18N = {
     chat_welcome:"¡Hola! Soy tu guía virtual de Labateca. Puedo ayudarte con lugares para visitar, cómo llegar, qué comer y mucho más. ¿En qué te ayudo?",
     chat_placeholder:"Escribe tu pregunta…",
     chat_sug1:"¿Qué hacer en Labateca?", chat_sug2:"¿Cómo llegar desde Cúcuta?", chat_sug3:"¿Qué comer?",
-    chat_error:"No pude conectarme ahora. <a href='{{wa}}' target='_blank' style='color:var(--clay);font-weight:700'>Escríbenos por WhatsApp</a> y te ayudamos."
+    chat_error:"No pude conectarme ahora. <a href='{{wa}}' target='_blank' style='color:var(--clay);font-weight:700'>Escríbenos por WhatsApp</a> y te ayudamos.",
+    ex_eyebrow:"Guía inteligente",
+    ex_title:"¿Qué puedes encontrar en Labateca?",
+    ex_lead:"Pregúntale a nuestra guía con inteligencia artificial: qué visitar, cómo llegar, qué comer o cómo armar tu recorrido. Te responde al instante, en español o inglés.",
+    ex_ph:"Ej.: ¿Qué cascadas puedo visitar en un día?",
+    ex_go:"Preguntar",
+    ex_c1:"¿Qué hacer en un fin de semana?",
+    ex_c2:"¿Dónde comer comida típica?",
+    ex_c3:"¿Cómo llego a la Cascada de Siscata?",
+    ex_c4:"Arma un plan de 1 día",
+    ex_all:"Ver todos los lugares",
+    ex_map:"Ver el mapa"
   },
   en:{
     brand_sub:"God's Volcanoes",
@@ -414,7 +425,18 @@ const I18N = {
     chat_welcome:"Hi! I'm your Labateca virtual guide. I can help you with places to visit, how to get there, what to eat and much more. How can I help?",
     chat_placeholder:"Type your question…",
     chat_sug1:"What to do in Labateca?", chat_sug2:"How to get from Cúcuta?", chat_sug3:"What to eat?",
-    chat_error:"Could not connect right now. <a href='{{wa}}' target='_blank' style='color:var(--clay);font-weight:700'>Write us on WhatsApp</a> and we'll help you."
+    chat_error:"Could not connect right now. <a href='{{wa}}' target='_blank' style='color:var(--clay);font-weight:700'>Write us on WhatsApp</a> and we'll help you.",
+    ex_eyebrow:"Smart guide",
+    ex_title:"What can you find in Labateca?",
+    ex_lead:"Ask our AI-powered guide: what to see, how to get there, what to eat or how to plan your trip. It answers instantly, in Spanish or English.",
+    ex_ph:"e.g. Which waterfalls can I visit in one day?",
+    ex_go:"Ask",
+    ex_c1:"What to do on a weekend?",
+    ex_c2:"Where to eat local food?",
+    ex_c3:"How do I get to Siscata Waterfall?",
+    ex_c4:"Plan a 1-day trip",
+    ex_all:"See all places",
+    ex_map:"View map"
   }
 };
 
@@ -759,10 +781,11 @@ async function loadReviews(id){
     if(!revs.length){ list.innerHTML=`<p class="rv-empty">${t('rv_empty')}</p>`; return; }
     list.innerHTML=revs.map(rv=>{
       const stars='★'.repeat(rv.rating)+'☆'.repeat(5-rv.rating);
-      const img=rv.photo?`<a href="${rv.photo}" target="_blank" rel="noopener noreferrer" aria-label="${lang==='es'?'Ver foto de '+safeName+' en grande':'View photo by '+safeName+' full size'}"><img src="${rv.photo}" alt="${lang==='es'?'Foto de la visita de '+safeName:'Visit photo by '+safeName}" loading="lazy"></a>`:'';
-      const d=new Date(rv.created_at).toLocaleDateString(lang==='es'?'es-CO':'en-US',{year:'numeric',month:'short'});
       const safeName=rv.name.replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
       const safeComment=rv.comment.replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+      const safePhoto=(typeof rv.photo==='string'&&rv.photo.startsWith('https://res.cloudinary.com/'))?rv.photo:'';
+      const img=safePhoto?`<a href="${safePhoto}" target="_blank" rel="noopener noreferrer" aria-label="${lang==='es'?'Ver foto de '+safeName+' en grande':'View photo by '+safeName+' full size'}"><img src="${safePhoto}" alt="${lang==='es'?'Foto de la visita de '+safeName:'Visit photo by '+safeName}" loading="lazy"></a>`:'';
+      const d=new Date(rv.created_at).toLocaleDateString(lang==='es'?'es-CO':'en-US',{year:'numeric',month:'short'});
       return `<div class="rv-item">
         <div class="rv-item-head"><b>${safeName}</b><span class="rv-item-stars">${stars}</span></div>
         <p>${safeComment}</p>${img}
@@ -1852,6 +1875,88 @@ function generatePDF() {
 }
 
 /* ============================================================
+   EXPLORA CON IA — buscador conversacional del inicio
+   Reutiliza el mismo Worker del chat, pero muestra la respuesta
+   en línea (grande) y sugiere lugares mencionados + acciones.
+   ============================================================ */
+/* Quita tildes y baja a minúsculas para comparar sin acentos. */
+function _norm(s){ return String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); }
+
+/* Selecciona los lugares MÁS RELEVANTES a la pregunta (no solo los primeros).
+   Así la IA siempre recibe el lugar preguntado aunque haya 50 lugares cargados.
+   Si no hay coincidencias (pregunta genérica), devuelve un surtido variado. */
+function _pickPlaces(question, limit){
+  limit = limit || 16;
+  if(PLACES.length <= limit) return PLACES;
+  const words = _norm(question).match(/[a-z0-9]{4,}/g) || [];
+  const scored = PLACES.map((p, i)=>{
+    const hay = _norm(placeName(p) + ' ' + ((p.desc||{})[lang]||'') + ' ' + ((p.categoria||p.cat)||''));
+    let s = 0;
+    for(const w of words){ if(hay.includes(w)) s += (hay.includes(_norm(placeName(p))) ? 2 : 1); }
+    return { p, s, i };
+  });
+  // Más puntaje primero; a igual puntaje, conserva el orden original.
+  scored.sort((a,b)=> b.s - a.s || a.i - b.i);
+  return scored.slice(0, limit).map(x=>x.p);
+}
+
+async function heroAsk(preset){
+  const inp = document.getElementById('exInput');
+  const q = String(preset || (inp ? inp.value : '')).trim();
+  if(!q) return;
+  if(inp){ if(preset) inp.value = preset; }
+  const ans = document.getElementById('exAnswer');
+  if(!ans) return;
+  ans.hidden = false;
+  ans.innerHTML = `<div class="ex-loading"><span></span><span></span><span></span></div>`;
+  ans.scrollIntoView({behavior:'smooth', block:'nearest'});
+  try{
+    const resp = await fetch(CONFIG.chatWorkerUrl, {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({ question:q, lang:lang, places:_pickPlaces(q, 16) })
+    });
+    const data = await resp.json();
+    if(!(data.ok && data.answer)) throw new Error(data.error || 'no-answer');
+    // escHtml: la respuesta del modelo se pinta como texto (nunca como HTML)
+    ans.innerHTML = `<div class="ex-a">${escHtml(data.answer)}</div>`
+      + _exMatchPlaces(data.answer + ' ' + q)
+      + _exActions();
+  }catch(err){
+    const wa = buildWaLink(q);
+    ans.innerHTML = `<div class="ex-a">${t('chat_error').replace('{{wa}}', wa)}</div>` + _exActions();
+  }
+}
+
+/* Detecta lugares nombrados en la respuesta/pregunta y los ofrece como accesos
+   directos a "cómo llegar" (Google Maps). Sin coincidencias → nada. */
+function _exMatchPlaces(text){
+  const low = ' ' + String(text).toLowerCase() + ' ';
+  const seen = new Set();
+  const hits = [];
+  for(const p of PLACES){
+    const n = placeName(p).toLowerCase();
+    if(n.length > 3 && !seen.has(p.id) && low.includes(n)){
+      seen.add(p.id); hits.push(p);
+      if(hits.length >= 4) break;
+    }
+  }
+  if(!hits.length) return '';
+  return `<div class="ex-places">` + hits.map(p=>{
+    const dest = p.trailhead ? `${p.trailhead.lat},${p.trailhead.lng}` : `${p.lat},${p.lng}`;
+    const g = `https://www.google.com/maps/search/?api=1&query=${dest}`;
+    return `<a class="ex-place" href="${g}" target="_blank" rel="noopener noreferrer">${IC.pin}${escHtml(placeName(p))}</a>`;
+  }).join('') + `</div>`;
+}
+
+function _exActions(){
+  return `<div class="ex-actions">
+    <a class="ex-act" href="/lugares.html">${t('ex_all')}</a>
+    <a class="ex-act ghost" href="#mapa">${t('ex_map')}</a>
+  </div>`;
+}
+
+/* ============================================================
    CHAT IA FLOTANTE
    ============================================================ */
 let _chatOpen = false;
@@ -1916,7 +2021,7 @@ async function sendChat() {
     const resp = await fetch(CONFIG.chatWorkerUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ question: q, lang: lang, places: PLACES.slice(0, 15) })
+      body: JSON.stringify({ question: q, lang: lang, places: _pickPlaces(q, 16) })
     });
     const data = await resp.json();
     if (typing) typing.remove();

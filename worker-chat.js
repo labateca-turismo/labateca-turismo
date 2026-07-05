@@ -6,7 +6,7 @@ const ALLOWED_ORIGINS = [
 ];
 
 const MAX_QUESTION_CHARS = 500;
-const MAX_PLACES = 12;
+const MAX_PLACES = 16;
 const MAX_FIELD_CHARS = 300;
 
 /* Limpia un campo de texto venido del cliente: solo string, longitud acotada */
