@@ -842,6 +842,52 @@
         "labateca/antojitos-02",
         "labateca/antojitos-03"
       ]
+    },
+    {
+      "id": "sistemas-um",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300080,
+      "lng": -72.494792,
+      "mapaX": 468,
+      "mapaY": 372,
+      "telefono": "573234521624",
+      "nombre": {
+        "es": "Sistemas UM",
+        "en": "Sistemas UM"
+      },
+      "desc": {
+        "es": "Tienda de tecnología y papelería en el casco urbano de Labateca. Fotocopias, papelería, perfumería, joyería, recuerdos y accesorios para celular y cómputo. También servicio técnico y venta de celulares, computadores, impresoras, cámaras de seguridad y más. La atiende su propietario, Félix Merchán.",
+        "en": "Tech and stationery shop in Labateca's town center. Photocopies, stationery, perfumery, jewelry, gifts and phone & computer accessories. Also phone repair and sales of phones, computers, printers, security cameras and more. Run by its owner, Félix Merchán."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, cerca del Parque Principal. La ubicación exacta aparece en el mapa; sigue el pin.",
+        "en": "In Labateca's town center, near the main square. The exact location is shown on the map; follow the pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Lun–sáb 7 am–1 pm y 2–7 pm",
+        "en": "Mon–Sat 7 am–1 pm & 2–7 pm"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "¿Se te dañó el celular o necesitas papelería en el pueblo? Este es el punto. Escribe por WhatsApp para consultar servicio técnico o disponibilidad.",
+        "en": "Phone trouble or need stationery in town? This is the spot. Message on WhatsApp to ask about repairs or availability."
+      },
+      "fotos": [
+        "labateca/sistemas-um-01",
+        "labateca/sistemas-um-02",
+        "labateca/sistemas-um-03",
+        "labateca/sistemas-um-04",
+        "labateca/sistemas-um-05"
+      ]
     }
   ]
 }

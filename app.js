@@ -287,7 +287,7 @@ const I18N = {
     usar_video_soon:"Video próximamente", usar_v1:"Encontrar lugares y armar tu ruta", usar_v2:"Navegar senderos con GPS (Wikiloc)", usar_v3:"El mapa, el clima y \"Cómo llegar\"", usar_cta:"Ver todos los lugares",
     back_home:"Volver al inicio",
     visits_label:"visitas", visits_aria:"Personas que han visitado el sitio",
-    fil_all:"Todos", fil_naturaleza:"Naturaleza", fil_cultura:"Cultura", fil_gastronomia:"Gastronomía", fil_hospedaje:"Hospedaje", fil_fav:"♥ Favoritos",
+    fil_all:"Todos", fil_naturaleza:"Naturaleza", fil_cultura:"Cultura", fil_gastronomia:"Gastronomía", fil_hospedaje:"Hospedaje", fil_comercio:"Comercio", fil_fav:"♥ Favoritos",
     verify_badge:"Por verificar", approx_note:"Ubicación aproximada — por confirmar en campo",
     route_empty:"Tu ruta está vacía. Toca “Agregar” en los lugares que quieras visitar.",
     fav_empty:"Aún no tienes favoritos. Toca el ♥ en un lugar para guardarlo.",
@@ -410,7 +410,7 @@ const I18N = {
     usar_video_soon:"Video coming soon", usar_v1:"Find places and build your route", usar_v2:"Navigate trails with GPS (Wikiloc)", usar_v3:"The map, weather and \"Directions\"", usar_cta:"See all places",
     back_home:"Back to home",
     visits_label:"visits", visits_aria:"People who have visited the site",
-    fil_all:"All", fil_naturaleza:"Nature", fil_cultura:"Culture", fil_gastronomia:"Food", fil_hospedaje:"Lodging", fil_fav:"♥ Favorites",
+    fil_all:"All", fil_naturaleza:"Nature", fil_cultura:"Culture", fil_gastronomia:"Food", fil_hospedaje:"Lodging", fil_comercio:"Shops", fil_fav:"♥ Favorites",
     verify_badge:"To verify", approx_note:"Approximate location — confirm on site",
     route_empty:"Your route is empty. Tap “Add” on the places you'd like to visit.",
     fav_empty:"No favorites yet. Tap the ♥ on a place to save it.",
@@ -482,7 +482,7 @@ const IC = {
   warn:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
   wa:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 0 1 12 4zm-2.7 4c-.2 0-.5 0-.7.4-.2.4-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.7 2.7 4.3 3.7 2.1.8 2.5.7 3 .6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3l-1.6-.8c-.2-.1-.4-.1-.6.1l-.6.8c-.1.2-.3.2-.5.1-.7-.3-1.4-.6-2.1-1.5-.5-.6-.8-1.2-.9-1.4-.1-.2 0-.4.1-.5l.4-.5c.1-.1.1-.3.2-.4 0-.1 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.6-.4z"/></svg>'
 };
-const CATS = ["all","naturaleza","cultura","gastronomia","hospedaje","fav"];
+const CATS = ["all","naturaleza","cultura","gastronomia","hospedaje","comercio","fav"];
 
 /* ============================================================
    RENDER FILTROS
@@ -1435,7 +1435,8 @@ function initMapIlustrado() {
       naturaleza:  '#2d6149',
       cultura:     '#bd5d34',
       gastronomia: '#d4a23f',
-      hospedaje:   '#7bb3d4'
+      hospedaje:   '#7bb3d4',
+      comercio:    '#8a5a9c'
     };
 
     // Dibujar marcadores
@@ -1684,10 +1685,11 @@ function generatePDF() {
       naturaleza:  [31, 74, 57],
       cultura:     [139, 58, 26],
       gastronomia: [122, 92, 30],
-      hospedaje:   [26, 58, 92]
+      hospedaje:   [26, 58, 92],
+      comercio:    [138, 90, 156]
     };
-    const CAT_LABELS_ES = { naturaleza:'Naturaleza', cultura:'Cultura', gastronomia:'Gastronomía', hospedaje:'Hospedaje' };
-    const CAT_LABELS_EN = { naturaleza:'Nature', cultura:'Culture', gastronomia:'Food', hospedaje:'Lodging' };
+    const CAT_LABELS_ES = { naturaleza:'Naturaleza', cultura:'Cultura', gastronomia:'Gastronomía', hospedaje:'Hospedaje', comercio:'Comercio' };
+    const CAT_LABELS_EN = { naturaleza:'Nature', cultura:'Culture', gastronomia:'Food', hospedaje:'Lodging', comercio:'Shops' };
     const catLabel = (cat) => (lang === 'es' ? CAT_LABELS_ES : CAT_LABELS_EN)[cat] || cat;
 
     // ── Helpers ───────────────────────────────────────────────
@@ -1741,7 +1743,7 @@ function generatePDF() {
     doc.text('labateca-turismo.co', W/2, H - 14, { align: 'center' });
 
     // ── ORGANIZAR LUGARES POR CATEGORÍA ──────────────────────
-    const cats = ['naturaleza', 'cultura', 'gastronomia', 'hospedaje'];
+    const cats = ['naturaleza', 'cultura', 'gastronomia', 'hospedaje', 'comercio'];
     const bycat = {};
     cats.forEach(c => { bycat[c] = PLACES.filter(p => (p.categoria || p.cat) === c); });
 
