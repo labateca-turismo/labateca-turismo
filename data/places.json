@@ -884,6 +884,52 @@
         "labateca/sistemas-um-04",
         "labateca/sistemas-um-05"
       ]
+    },
+    {
+      "id": "antano",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.2987856,
+      "lng": -72.4940529,
+      "mapaX": 470,
+      "mapaY": 390,
+      "telefono": "",
+      "nombre": {
+        "es": "Antaño Café-Bar",
+        "en": "Antaño Café-Bar"
+      },
+      "desc": {
+        "es": "Café-bar temático de ambiente vintage en el casco urbano de Labateca: paredes decoradas con discos de vinilo, tocadiscos, radios y teléfonos antiguos, faroles e hiedra. Un rincón nostálgico para tomar café, compartir una pizza artesanal o una bebida. Conserva fotografías históricas del pueblo.",
+        "en": "A vintage-themed café-bar in Labateca's town center: walls decorated with vinyl records, old record players, radios and telephones, lanterns and ivy. A nostalgic corner for a coffee, a homemade pizza or a drink. It even keeps historic photos of the town."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca (Cra. 2 #227), a pocos pasos del parque principal. Sigue el pin del mapa.",
+        "en": "In Labateca's town center (Cra. 2 #227), steps from the main square. Follow the map pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "2–9 pm",
+        "en": "2–9 pm"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ve al atardecer por un café o una pizza en un ambiente nostálgico. Fíjate en los vinilos, los radios antiguos y las fotos históricas del pueblo.",
+        "en": "Go at dusk for a coffee or pizza in a nostalgic setting. Look for the vinyl records, old radios and historic town photos."
+      },
+      "fotos": [
+        "labateca/antano-02",
+        "labateca/antano-01",
+        "labateca/antano-03",
+        "labateca/antano-04",
+        "labateca/antano-05"
+      ]
     }
   ]
 }
