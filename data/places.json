@@ -661,8 +661,8 @@
       "categoria": "gastronomia",
       "verified": true,
       "coordsApprox": false,
-      "lat": 7.299898,
-      "lng": -72.504955,
+      "lat": 7.2991571,
+      "lng": -72.5043657,
       "mapaX": 360,
       "mapaY": 410,
       "telefono": "573112327066",
@@ -683,16 +683,16 @@
         "en": "~1.5 km from town"
       },
       "tiempo": {
-        "es": "Caminata ~25 min (o en carro)",
-        "en": "~25 min walk (or by car)"
+        "es": "Fines de semana",
+        "en": "Weekends"
       },
       "dificultad": {
-        "es": "Fácil-media",
-        "en": "Easy–moderate"
+        "es": "Acceso fácil",
+        "en": "Easy access"
       },
       "recomendacion": {
-        "es": "Ve al atardecer por la vista. Llama antes para confirmar atención: don Óscar.",
-        "en": "Go at sunset for the view. Call ahead to confirm: Mr. Óscar."
+        "es": "Abre los fines de semana. Para comer, reserva con anticipación por WhatsApp con don Óscar. Ve al atardecer por la vista a las montañas y al pueblo de Toledo.",
+        "en": "Open on weekends. For meals, reserve in advance via WhatsApp with Mr. Óscar. Go at sunset for the view of the mountains and the town of Toledo."
       },
       "fotos": [
         "labateca/pedregal-02",
@@ -703,10 +703,6 @@
         "labateca/pedregal-08"
       ],
       "track": "data/tracks/pedregal.gpx",
-      "trailhead": {
-        "lat": 7.299807,
-        "lng": -72.494508
-      },
       "wikiloc": "https://loc.wiki/t/269295597?h=2m4va5w5om&wa=sd&la=es"
     },
     {
