@@ -930,6 +930,45 @@
         "labateca/antano-04",
         "labateca/antano-05"
       ]
+    },
+    {
+      "id": "la-pena",
+      "categoria": "naturaleza",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.281153,
+      "lng": -72.530685,
+      "telefono": "573114804352",
+      "correo": "antonioaza38@hotmail.es",
+      "nombre": {
+        "es": "Centro Turístico La Peña",
+        "en": "La Peña Ecotourism Center"
+      },
+      "desc": {
+        "es": "Finca ecoturística al suroccidente de Labateca (sector Tencalá). Ofrece senderismo hasta la parte alta de La Peña —con opción de subir por una ruta y bajar por la laguna—, avistamiento del cóndor andino y otras aves, contacto con animales de la zona (cabras y ovejas) y visita a tumbas y restos indígenas con reseña histórica local. Cuenta con zona de camping y servicio de alimentación, con el ovejo como especialidad. La atiende el señor Víctor Antonio Daza.",
+        "en": "An ecotourism farm southwest of Labateca (Tencalá area). It offers hiking to the top of La Peña —with the option to go up one way and come down by the lagoon—, Andean condor and birdwatching, contact with local animals (goats and sheep), and a visit to Indigenous tombs and remains with local historical background. It has a camping area and meal service, with lamb (ovejo) as the specialty. Hosted by Mr. Víctor Antonio Daza."
+      },
+      "comoLlegar": {
+        "es": "El sendero principal parte de la Escuela de Tencalá y sube a la parte alta de La Peña; el recorrido se ajusta a la exigencia del grupo. Coordina el acceso y la guía con anticipación por WhatsApp. Sigue el pin del mapa.",
+        "en": "The main trail starts at the Tencalá school and climbs to the top of La Peña; the route adapts to the group's fitness. Arrange access and a guide in advance via WhatsApp. Follow the map pin."
+      },
+      "dist": {
+        "es": "Sector Tencalá (SO de Labateca)",
+        "en": "Tencalá area (SW of Labateca)"
+      },
+      "tiempo": {
+        "es": "Caminata variable según el grupo",
+        "en": "Hike varies by group"
+      },
+      "dificultad": {
+        "es": "Exigencia media–alta (ruta personalizable)",
+        "en": "Moderate–hard (customizable route)"
+      },
+      "recomendacion": {
+        "es": "Ideal para acampar y avistar el cóndor andino. Cuentan con 4 carpas propias; si van en grupo grande, lleven su propio equipo. Capacidad: 30–50 personas en la zona baja (mayor si acampan en la cima). Tarifas: desayuno $20.000, almuerzo de ovejo $30.000, cena $20.000 y guía $80.000 (seguro de accidentes incluido). Reserva con anticipación por WhatsApp.",
+        "en": "Great for camping and spotting the Andean condor. They have 4 tents of their own; for large groups, bring your own gear. Capacity: 30–50 people in the lower area (more if you camp at the summit). Rates: breakfast $20,000, lamb lunch $30,000, dinner $20,000 and guide $80,000 (accident insurance included). Book ahead via WhatsApp."
+      },
+      "fotos": []
     }
   ]
 }
