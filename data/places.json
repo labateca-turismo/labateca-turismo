@@ -974,6 +974,53 @@
         "labateca/la-pena-03",
         "labateca/la-pena-04"
       ]
+    },
+    {
+      "id": "teca-bar-la-barra",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.297209,
+      "lng": -72.496575,
+      "mapaX": 450,
+      "mapaY": 398,
+      "telefono": "573108566143",
+      "nombre": {
+        "es": "Teca Bar La Barra",
+        "en": "Teca Bar La Barra"
+      },
+      "desc": {
+        "es": "Bar temático deportivo en el casco urbano de Labateca, decorado con un vistoso mural de fútbol, carnaval y la bandera de Colombia. Cuenta con dos mesas de billar (pool), barra con cervezas, gaseosas y pasabocas, y pantalla para ver los partidos. Ambiente juvenil y familiar. La atiende su propietaria, Dioselina Vera.",
+        "en": "A football-themed sports bar in Labateca's town center, decorated with a colorful mural of football, carnival and the Colombian flag. It has two pool tables, a bar with beers, sodas and snacks, and a screen for watching matches. A lively, welcoming spot. Run by its owner, Dioselina Vera."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, cerca del parque principal. La ubicación exacta aparece en el mapa; sigue el pin.",
+        "en": "In Labateca's town center, near the main square. The exact location is shown on the map; follow the pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Lun–Vie 10 am–11 pm · fines de semana hasta 2 am",
+        "en": "Mon–Fri 10 am–11 pm · weekends until 2 am"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Pásate por una cerveza, una partida de billar o a ver el partido. Los fines de semana el ambiente se extiende hasta las 2 de la mañana. Escribe por WhatsApp para preguntar o reservar.",
+        "en": "Drop by for a beer, a game of pool or to catch the match. On weekends the vibe runs until 2 a.m. Message on WhatsApp to ask or book."
+      },
+      "fotos": [
+        "labateca/teca-bar-01",
+        "labateca/teca-bar-02",
+        "labateca/teca-bar-03",
+        "labateca/teca-bar-04",
+        "labateca/teca-bar-05",
+        "labateca/teca-bar-06"
+      ]
     }
   ]
 }
