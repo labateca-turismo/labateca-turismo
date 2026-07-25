@@ -44,6 +44,18 @@ const VISITS_SCHEMA = `CREATE TABLE IF NOT EXISTS visits (
   total INTEGER NOT NULL DEFAULT 0
 )`;
 
+/* Contador por lugar: cuántas veces tocaron "Cómo llegar" (ruta) o
+   "WhatsApp" (whatsapp) de cada lugar/empresa, agrupado por día para
+   poder ver tendencias (hoy, últimos 7 días, total). */
+const EVENTS_SCHEMA = `CREATE TABLE IF NOT EXISTS place_events (
+  place TEXT NOT NULL,
+  type  TEXT NOT NULL,
+  day   TEXT NOT NULL,
+  count INTEGER NOT NULL DEFAULT 0,
+  PRIMARY KEY (place, type, day)
+)`;
+const EVENT_TYPES = ['ruta', 'whatsapp'];
+
 function json(data, status = 200, cors = {}) {
   return new Response(JSON.stringify(data), {
     status,
@@ -131,6 +143,26 @@ export default {
       return json({ ok: true, total: results.length ? results[0].total : 0 }, 200, cors);
     }
 
+    /* ── Contador por lugar (público) ──
+       POST /api/track  body {place, type}  (type = 'ruta' | 'whatsapp')
+       Suma 1 al lugar/tipo del día. Lo llama el sitio con sendBeacon
+       cuando alguien toca "Cómo llegar" o "WhatsApp" de un lugar. */
+    if (url.pathname === '/api/track' && request.method === 'POST') {
+      let body;
+      try { body = JSON.parse((await request.text()) || '{}'); } catch { return json({ ok: false, error: 'Bad JSON' }, 400, cors); }
+      const place = String(body.place || '');
+      const type = String(body.type || '');
+      if (!PLACE_RE.test(place)) return json({ ok: false, error: 'Bad place' }, 400, cors);
+      if (!EVENT_TYPES.includes(type)) return json({ ok: false, error: 'Bad type' }, 400, cors);
+      await env.DB.prepare(EVENTS_SCHEMA).run();
+      const day = new Date().toISOString().slice(0, 10);
+      await env.DB.prepare(
+        `INSERT INTO place_events (place, type, day, count) VALUES (?, ?, ?, 1)
+         ON CONFLICT(place, type, day) DO UPDATE SET count = count + 1`
+      ).bind(place, type, day).run();
+      return json({ ok: true }, 200, cors);
+    }
+
     /* ── Moderación (requiere ADMIN_KEY) ── */
     const key = url.searchParams.get('key') || '';
     const isAdmin = env.ADMIN_KEY && key === env.ADMIN_KEY;
@@ -174,6 +206,51 @@ async function act(id, action){
 </'+'script></body></html>`.replace("</'+'script>", '<\/script>'), {
         headers: { 'Content-Type': 'text/html; charset=utf-8' },
       });
+    }
+
+    /* ── Panel de estadísticas por lugar (requiere ADMIN_KEY) ── */
+    if (url.pathname === '/stats') {
+      if (!isAdmin) return new Response('Acceso denegado. Usa /stats?key=TU_ADMIN_KEY', { status: 403 });
+      await env.DB.prepare(EVENTS_SCHEMA).run();
+      const { results } = await env.DB.prepare(`
+        SELECT place,
+          SUM(CASE WHEN type='ruta'     THEN count ELSE 0 END) AS rutas,
+          SUM(CASE WHEN type='whatsapp' THEN count ELSE 0 END) AS wa,
+          SUM(CASE WHEN type='ruta'     AND day > date('now','-7 day') THEN count ELSE 0 END) AS rutas7,
+          SUM(CASE WHEN type='whatsapp' AND day > date('now','-7 day') THEN count ELSE 0 END) AS wa7
+        FROM place_events
+        GROUP BY place
+        ORDER BY (rutas + wa) DESC`).all();
+      let totR = 0, totW = 0;
+      const rows = results.map(r => {
+        totR += r.rutas; totW += r.wa;
+        return `<tr>
+          <td><code>${esc(r.place)}</code></td>
+          <td class="n">${r.rutas}<span class="s">${r.rutas7 ? ' · +' + r.rutas7 + ' (7d)' : ''}</span></td>
+          <td class="n">${r.wa}<span class="s">${r.wa7 ? ' · +' + r.wa7 + ' (7d)' : ''}</span></td>
+          <td class="n b">${r.rutas + r.wa}</td>
+        </tr>`;
+      }).join('') || '<tr><td colspan="4" style="text-align:center;color:#888;padding:24px">Aún no hay datos. Aparecerán cuando la gente toque “Cómo llegar” o “WhatsApp”.</td></tr>';
+      return new Response(`<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Estadísticas · Labateca</title>
+<style>
+body{font-family:system-ui;background:#f5efe3;color:#16352a;max-width:760px;margin:0 auto;padding:24px}
+h1{font-size:1.4rem;margin-bottom:4px}p.sub{color:#666;margin:0 0 18px;font-size:.9rem}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 3px 10px rgba(22,53,42,.08)}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid #f0eae0}
+th{background:#16352a;color:#fff;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+td.n{text-align:right;font-variant-numeric:tabular-nums}td.b{font-weight:800}
+.s{color:#3a8f6a;font-size:.78rem}code{background:#efe7d8;padding:2px 6px;border-radius:6px;font-size:.85rem}
+tfoot td{font-weight:800;background:#faf6ee}
+</style></head><body>
+<h1>📊 Estadísticas por lugar</h1>
+<p class="sub">Cuántas veces tocaron <b>Cómo llegar</b> (ruta) y <b>WhatsApp</b> en cada lugar. El “+N (7d)” es lo de los últimos 7 días.</p>
+<table>
+<thead><tr><th>Lugar</th><th style="text-align:right">Cómo llegar</th><th style="text-align:right">WhatsApp</th><th style="text-align:right">Total</th></tr></thead>
+<tbody>${rows}</tbody>
+<tfoot><tr><td>TOTAL (${results.length} lugares)</td><td class="n">${totR}</td><td class="n">${totW}</td><td class="n">${totR + totW}</td></tr></tfoot>
+</table>
+</body></html>`, { headers: { 'Content-Type': 'text/html; charset=utf-8' } });
     }
 
     if ((url.pathname === '/api/admin/approve' || url.pathname === '/api/admin/reject') && request.method === 'POST') {

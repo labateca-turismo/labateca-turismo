@@ -572,8 +572,8 @@ function renderPlaces(){
           <span class="pc-stat">${IC.hill}${dific}</span>
         </div>
         <div class="pc-actions">
-          <a class="pc-btn map" href="${gmaps}" target="_blank" rel="noopener noreferrer">${IC.navi}${p.track?t('cta_drive'):t('cta_how')}</a>
-          ${p.telefono?`<a class="pc-btn wa" href="https://wa.me/${p.telefono}?text=${encodeURIComponent((lang==='es'?'Hola, te contacto desde la guía turística de Labateca sobre ':'Hi! I found you on the Labateca tourism guide — about ')+placeName(p)+'.')}" target="_blank" rel="noopener noreferrer" title="${t('cta_whatsapp_t')}">${IC.wa}${t('cta_whatsapp')}</a>`:''}
+          <a class="pc-btn map" href="${gmaps}" target="_blank" rel="noopener noreferrer" onclick="trackEvent('${p.id}','ruta')">${IC.navi}${p.track?t('cta_drive'):t('cta_how')}</a>
+          ${p.telefono?`<a class="pc-btn wa" href="https://wa.me/${p.telefono}?text=${encodeURIComponent((lang==='es'?'Hola, te contacto desde la guía turística de Labateca sobre ':'Hi! I found you on the Labateca tourism guide — about ')+placeName(p)+'.')}" target="_blank" rel="noopener noreferrer" title="${t('cta_whatsapp_t')}" onclick="trackEvent('${p.id}','whatsapp')">${IC.wa}${t('cta_whatsapp')}</a>`:''}
           ${p.wikiloc
             ? `<a class="pc-btn trail" href="${escHtml(p.wikiloc)}" target="_blank" rel="noopener noreferrer" title="${t('cta_wikiloc_t')}">${IC.hill}${t('cta_wikiloc')}</a>`
             : (p.track?`<button class="pc-btn trail" onclick="showTrail('${p.id}')">${IC.hill}${t('cta_trail')}</button>`:'')}
@@ -1154,6 +1154,25 @@ function calcDistance(){
    ============================================================ */
 function buildWaLink(text){ return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text).replace(/'/g,'%27')}`; }
 
+/* Contador interno por lugar: registra cuando alguien toca "Cómo llegar"
+   (type='ruta') o "WhatsApp" (type='whatsapp') de un lugar. Usa sendBeacon
+   para no frenar el clic ni retrasar la apertura de Maps/WhatsApp. Es
+   "fire-and-forget": si el worker no responde, no pasa nada (no afecta al
+   usuario). Las estadísticas se ven en el panel /stats del worker de reseñas. */
+function trackEvent(place, type){
+  try {
+    if (!place || !CONFIG.reviewsWorkerUrl) return;
+    const url = `${CONFIG.reviewsWorkerUrl}/api/track`;
+    const body = JSON.stringify({ place, type });
+    // text/plain evita el preflight CORS (el worker lo parsea como JSON).
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon(url, new Blob([body], { type: 'text/plain' }));
+    } else {
+      fetch(url, { method:'POST', body, headers:{'Content-Type':'text/plain'}, keepalive:true }).catch(()=>{});
+    }
+  } catch(e){ /* silencioso a propósito */ }
+}
+
 const _contactForm = document.getElementById("contactForm");
 if (_contactForm) _contactForm.addEventListener("submit", async (e)=>{
   e.preventDefault();
@@ -1305,7 +1324,7 @@ function paintMapMarkers(){
     if(p.lat==null||p.lng==null) return;
     const gmaps=`https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`;
     L.marker([p.lat,p.lng],{icon:window._placeIcon}).addTo(layer)
-      .bindPopup(`<div class="map-pop"><b>${placeName(p)}</b>${(p.dist||{})[lang]||''} · ${(p.dificultad||p.diff||{})[lang]||''}<br><a href="${gmaps}" target="_blank" rel="noopener noreferrer">${IC.navi} ${t('cta_how')}</a></div>`);
+      .bindPopup(`<div class="map-pop"><b>${placeName(p)}</b>${(p.dist||{})[lang]||''} · ${(p.dificultad||p.diff||{})[lang]||''}<br><a href="${gmaps}" target="_blank" rel="noopener noreferrer" onclick="trackEvent('${p.id}','ruta')">${IC.navi} ${t('cta_how')}</a></div>`);
     group.push([p.lat,p.lng]);
     if(p.track) drawTrack(p,layer);
   });
@@ -1466,7 +1485,7 @@ function initMapIlustrado() {
           ${notaVerif}
           ${dist || dific ? `<span class="map-pop-stats">${[dist, dific].filter(Boolean).join(' · ')}</span>` : ''}
           ${rec ? `<span class="map-pop-rec">${rec}</span>` : ''}
-          <a href="${gmaps}" target="_blank" rel="noopener noreferrer">${IC.navi} ${t('cta_how')}</a>
+          <a href="${gmaps}" target="_blank" rel="noopener noreferrer" onclick="trackEvent('${p.id}','ruta')">${IC.navi} ${t('cta_how')}</a>
         </div>`;
 
       L.marker(latlng, { icon: iconBase(color) })
