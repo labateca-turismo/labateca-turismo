@@ -1021,6 +1021,51 @@
         "labateca/teca-bar-05",
         "labateca/teca-bar-06"
       ]
+    },
+    {
+      "id": "frikarnes",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300349,
+      "lng": -72.494849,
+      "mapaX": 464,
+      "mapaY": 368,
+      "telefono": "573123647768",
+      "nombre": {
+        "es": "Frikarnes",
+        "en": "Frikarnes"
+      },
+      "desc": {
+        "es": "Carnicería y víveres en el casco urbano de Labateca. Carnes frescas de res, cerdo, pollo y pescado, además de embutidos (chorizos, longaniza) y una buena surtida de abarrotes, aseo y productos de la canasta familiar. La atiende su propietario, Jesús Sánchez.",
+        "en": "Butcher shop and grocery in Labateca's town center. Fresh beef, pork, chicken and fish, plus cured meats (chorizo, longaniza) and a good stock of groceries, cleaning supplies and pantry staples. Run by its owner, Jesús Sánchez."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, cerca del parque principal. La ubicación exacta aparece en el mapa; sigue el pin.",
+        "en": "In Labateca's town center, near the main square. The exact location is shown on the map; follow the pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días 6 am–6 pm",
+        "en": "Daily 6 am–6 pm"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "¿Necesitas carne fresca o mercado en el pueblo? Aquí encuentras res, cerdo, pollo, pescado y embutidos. Escribe por WhatsApp para consultar cortes o precios.",
+        "en": "Need fresh meat or groceries in town? Here you'll find beef, pork, chicken, fish and cured meats. Message on WhatsApp to ask about cuts or prices."
+      },
+      "fotos": [
+        "labateca/frikarnes-01",
+        "labateca/frikarnes-02",
+        "labateca/frikarnes-03",
+        "labateca/frikarnes-04"
+      ]
     }
   ]
 }
