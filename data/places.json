@@ -1157,6 +1157,49 @@
         "labateca/galactic-03",
         "labateca/galactic-04"
       ]
+    },
+    {
+      "id": "registraduria",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.3005588,
+      "lng": -72.4949505,
+      "mapaX": 448,
+      "mapaY": 362,
+      "correo": "labatecanortedesan@registraduria.gov.co",
+      "nombre": {
+        "es": "Registraduría Municipal de Labateca",
+        "en": "Civil Registry Office (Registraduría)"
+      },
+      "desc": {
+        "es": "Oficina de la Registraduría Nacional del Estado Civil en Labateca. Aquí realizas los trámites de identificación y estado civil: cédula de ciudadanía (primera vez, renovación, rectificación, duplicado y cédula digital), tarjeta de identidad para menores, registro civil de nacimiento, matrimonio y defunción (copias y correcciones), inscripción de la cédula para votar y certificados como la vigencia de la cédula y el certificado de votación. Atiende en jornada continua, sin agendamiento. Tel. 300 912 4000 ext. 250491 · labatecanortedesan@registraduria.gov.co",
+        "en": "Office of Colombia's National Civil Registry (Registraduría) in Labateca. Here you handle identity and civil-status procedures: citizenship ID (first-time, renewal, correction, duplicate and digital ID), minors' identity cards, civil registry of birth, marriage and death (copies and corrections), voter registration, and certificates such as ID validity and the voting certificate. Open in continuous hours, no appointment needed. Phone 300 912 4000 ext. 250491 · labatecanortedesan@registraduria.gov.co"
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, Cra. 2 # 4-38, barrio Divino Niño, cerca del Parque Principal. La ubicación exacta aparece en el mapa; sigue el pin.",
+        "en": "In Labateca's town center, Cra. 2 # 4-38, Divino Niño neighborhood, near the main square. The exact location is shown on the map; follow the pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Lun a Vie 8 am–4 pm · jornada continua, sin cita",
+        "en": "Mon–Fri 8 am–4 pm · continuous hours, no appointment"
+      },
+      "dificultad": {
+        "es": "Entidad pública · acceso fácil",
+        "en": "Public office · easy access"
+      },
+      "recomendacion": {
+        "es": "¿Duplicado de cédula o copia de registro civil? Muchos trámites y pagos se hacen en línea (PSE) en registraduria.gov.co, sin cita: pagas y reclamas en la oficina. Abre el cartel de información para ver todos los enlaces.",
+        "en": "Need an ID duplicate or a civil-registry copy? Many procedures and payments can be done online (PSE) at registraduria.gov.co, no appointment: pay and pick up at the office. Open the info poster to see all the links."
+      },
+      "fotos": [
+        "labateca/registraduria-01",
+        "labateca/registraduria-02"
+      ]
     }
   ]
 }
