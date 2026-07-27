@@ -1112,6 +1112,51 @@
         "labateca/siste-hogar-04",
         "labateca/siste-hogar-05"
       ]
+    },
+    {
+      "id": "galactic-bar",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299908,
+      "lng": -72.494747,
+      "mapaX": 458,
+      "mapaY": 380,
+      "telefono": "573153331207",
+      "nombre": {
+        "es": "Galactic Bar",
+        "en": "Galactic Bar"
+      },
+      "desc": {
+        "es": "Bar de ambiente temático espacial en el casco urbano de Labateca, sector La Esmeralda. Un espacio amplio y colorido para compartir con amigos: cervezas, gaseosas, snacks, música y buen ambiente. Solo para mayores de edad. Los fines de semana es punto de encuentro del pueblo; entre semana atienden reservas para grupos. La atiende su propietaria, Yoleysy Mariño.",
+        "en": "A space-themed bar in Labateca's town center, in the La Esmeralda area. A roomy, colorful spot to hang out with friends: beers, sodas, snacks, music and good vibes. Adults only. On weekends it's the town's go-to meeting point; on weekdays they take group reservations. Run by its owner, Yoleysy Mariño."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca (Cra. 2 #3-75, sector La Esmeralda), cerca del Parque Principal. La ubicación exacta aparece en el mapa; sigue el pin.",
+        "en": "In Labateca's town center (Cra. 2 #3-75, La Esmeralda area), near the main square. The exact location is shown on the map; follow the pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Fines de semana 8 am–8 pm (o más tarde según el flujo). Entre semana, reservas para grupos.",
+        "en": "Weekends 8 am–8 pm (or later depending on the crowd). Weekdays by group reservation."
+      },
+      "dificultad": {
+        "es": "Acceso fácil · solo mayores de edad",
+        "en": "Easy access · adults only"
+      },
+      "recomendacion": {
+        "es": "El plan de fin de semana en Labateca. ¿Vienen en grupo entre semana? Escribe por WhatsApp para reservar.",
+        "en": "The weekend plan in Labateca. Coming as a group on a weekday? Message on WhatsApp to book."
+      },
+      "fotos": [
+        "labateca/galactic-01",
+        "labateca/galactic-02",
+        "labateca/galactic-03",
+        "labateca/galactic-04"
+      ]
     }
   ]
 }
