@@ -1066,6 +1066,52 @@
         "labateca/frikarnes-03",
         "labateca/frikarnes-04"
       ]
+    },
+    {
+      "id": "siste-hogar",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298875,
+      "lng": -72.494026,
+      "mapaX": 480,
+      "mapaY": 384,
+      "telefono": "573115576386",
+      "nombre": {
+        "es": "Siste Hogar",
+        "en": "Siste Hogar"
+      },
+      "desc": {
+        "es": "Miscelánea y variedades en el casco urbano de Labateca. Aquí encuentras de todo para la casa: plásticos y utensilios de cocina, papelería y útiles escolares, forros y accesorios de celular, juguetería, ferretería, aseo y perfumería. La atiende su propietario, Yamid Merchán.",
+        "en": "Variety and household store in Labateca's town center. A bit of everything for the home: plasticware and kitchen utensils, stationery and school supplies, phone cases and accessories, toys, hardware, cleaning products and perfumery. Run by its owner, Yamid Merchán."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, cerca del Parque Principal. La ubicación exacta aparece en el mapa; sigue el pin.",
+        "en": "In Labateca's town center, near the main square. The exact location is shown on the map; follow the pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días 8 am–1 pm y 2:30–6:30 pm",
+        "en": "Daily 8 am–1 pm & 2:30–6:30 pm"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "¿Necesitas algo para la casa, la escuela o el celular sin salir del pueblo? Aquí lo consigues. Escribe por WhatsApp para consultar disponibilidad.",
+        "en": "Need something for the house, school or your phone without leaving town? You'll find it here. Message on WhatsApp to check availability."
+      },
+      "fotos": [
+        "labateca/siste-hogar-01",
+        "labateca/siste-hogar-02",
+        "labateca/siste-hogar-03",
+        "labateca/siste-hogar-04",
+        "labateca/siste-hogar-05"
+      ]
     }
   ]
 }
