@@ -1291,6 +1291,49 @@
         "labateca/cielo-isabella-03",
         "labateca/cielo-isabella-04"
       ]
+    },
+    {
+      "id": "concejo-labateca",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": true,
+      "lat": 7.300560,
+      "lng": -72.494900,
+      "mapaX": 456,
+      "mapaY": 358,
+      "nombre": {
+        "es": "Concejo Municipal de Labateca",
+        "en": "Municipal Council of Labateca"
+      },
+      "desc": {
+        "es": "Corporación administrativa del municipio de Labateca, integrada por concejales elegidos por voto popular para periodos de cuatro años. El Concejo es la máxima autoridad normativa y de control político del municipio: aprueba el Plan de Desarrollo y el presupuesto anual, reglamenta los usos del suelo y los servicios a cargo del municipio, autoriza al alcalde para contratar, fija los tributos municipales dentro de la ley y vigila la gestión de la Alcaldía. Sesiona en su recinto, en el Palacio Municipal, y sus debates son públicos.",
+        "en": "Elected administrative body of the municipality of Labateca, made up of council members chosen by popular vote for four-year terms. The Council is the town's top law-making and oversight authority: it approves the Development Plan and annual budget, regulates land use and municipal services, authorizes the mayor to sign contracts, sets local taxes within the law and oversees the mayor's administration. It meets in its chamber at the Municipal Palace, and its debates are public."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, en el Palacio Municipal (Cra. 2 # 4-37), en el Parque Principal. La ubicación exacta aparece en el mapa; sigue el pin.",
+        "en": "In Labateca's town center, at the Municipal Palace (Cra. 2 # 4-37), on the main square. The exact location is shown on the map; follow the pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Sesiones del Concejo abiertas al público",
+        "en": "Council sessions open to the public"
+      },
+      "dificultad": {
+        "es": "Entidad pública · acceso fácil",
+        "en": "Public institution · easy access"
+      },
+      "recomendacion": {
+        "es": "Las sesiones del Concejo son públicas: cualquier ciudadano puede asistir y participar. Consulta acuerdos, actas y la mesa directiva en el sitio oficial: concejomunicipal-labateca-nortedesantander.gov.co",
+        "en": "Council sessions are public: any citizen may attend and take part. Check agreements, minutes and the board at the official site: concejomunicipal-labateca-nortedesantander.gov.co"
+      },
+      "fotos": [
+        "labateca/concejo-labateca-01",
+        "labateca/concejo-labateca-02",
+        "labateca/concejo-labateca-03"
+      ]
     }
   ]
 }
