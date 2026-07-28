@@ -1246,6 +1246,51 @@
         "labateca/sofi-burger-04",
         "labateca/sofi-burger-05"
       ]
+    },
+    {
+      "id": "cielo-isabella",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300800,
+      "lng": -72.495177,
+      "mapaX": 440,
+      "mapaY": 350,
+      "telefono": "573124097073",
+      "nombre": {
+        "es": "Tienda Mixta Cielo Isabella",
+        "en": "Tienda Mixta Cielo Isabella"
+      },
+      "desc": {
+        "es": "Tienda mixta en el casco urbano de Labateca: víveres, snacks, dulces, gaseosas y helados, más productos de aseo, droguería básica y de la canasta familiar. También hay hielo y carbón. La atiende su propietaria, Doris Aguilar.",
+        "en": "Mixed convenience store in Labateca's town center: groceries, snacks, candy, sodas and ice cream, plus cleaning products, basic pharmacy items and pantry staples. They also sell ice and charcoal. Run by its owner, Doris Aguilar."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, cerca del Parque Principal. La ubicación exacta aparece en el mapa; sigue el pin.",
+        "en": "In Labateca's town center, near the main square. The exact location is shown on the map; follow the pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días 8 am–7 pm",
+        "en": "Daily 8 am–7 pm"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "¿Necesitas algo rápido en el pueblo —un snack, una gaseosa, hielo o algo de la canasta? Aquí lo consigues. Escribe por WhatsApp para consultar.",
+        "en": "Need something quick in town —a snack, a soda, ice or pantry basics? You'll find it here. Message on WhatsApp to ask."
+      },
+      "fotos": [
+        "labateca/cielo-isabella-01",
+        "labateca/cielo-isabella-02",
+        "labateca/cielo-isabella-03",
+        "labateca/cielo-isabella-04"
+      ]
     }
   ]
 }
