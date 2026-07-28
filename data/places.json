@@ -1200,6 +1200,52 @@
         "labateca/registraduria-01",
         "labateca/registraduria-02"
       ]
+    },
+    {
+      "id": "sofi-burger",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298304,
+      "lng": -72.493737,
+      "mapaX": 495,
+      "mapaY": 402,
+      "telefono": "573212675678",
+      "nombre": {
+        "es": "Sofi Burger",
+        "en": "Sofi Burger"
+      },
+      "desc": {
+        "es": "Hamburguesería y shawarmas en el casco urbano de Labateca. Un lugar acogedor y bien decorado para cenar: hamburguesas artesanales (salsa de queso, 'problemática' y vikinga), shawarmas (sencillo, mixto, especial y mexicano) y picadas cargadas. Abre todas las noches. Lo atiende su propietario, José Miguel Chacón.",
+        "en": "Burger and shawarma joint in Labateca's town center. A cozy, nicely decorated spot for dinner: handmade burgers (cheese sauce, 'problemática' and Viking), shawarmas (plain, mixed, special and Mexican) and loaded fries. Open every evening. Run by its owner, José Miguel Chacón."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, cerca del Parque Principal. La ubicación exacta aparece en el mapa; sigue el pin.",
+        "en": "In Labateca's town center, near the main square. The exact location is shown on the map; follow the pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días 6 pm–10 pm",
+        "en": "Daily 6 pm–10 pm"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "¿Antojo de hamburguesa o shawarma en la noche? Este es el punto. Escribe por WhatsApp para pedir o reservar mesa.",
+        "en": "Craving a burger or shawarma at night? This is the spot. Message on WhatsApp to order or book a table."
+      },
+      "fotos": [
+        "labateca/sofi-burger-01",
+        "labateca/sofi-burger-02",
+        "labateca/sofi-burger-03",
+        "labateca/sofi-burger-04",
+        "labateca/sofi-burger-05"
+      ]
     }
   ]
 }
