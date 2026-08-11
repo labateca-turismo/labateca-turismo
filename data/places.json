@@ -40,6 +40,7 @@
         "en": "Services: daily community celebrations, solemnities in honor of the Virgin of Sorrows, baptisms, first communions, confirmations, weddings, funerals and vigils. Step inside to see the main altar, the image of the Patroness and the colonial baptismal font."
       },
       "fotos": [
+        "labateca/templo-01",
         "labateca/parroquia-01",
         "labateca/parroquia-02",
         "labateca/parroquia-03",
@@ -47,6 +48,40 @@
         "labateca/parroquia-05",
         "labateca/parroquia-06",
         "labateca/parroquia-07"
+      ],
+      "fotosCap": [
+        {
+          "es": "Parroquia Nuestra Señora de las Angustias, el atractivo de mayor relevancia para los labatequenses. En 1719 adquirió la categoría de parroquia.",
+          "en": "Our Lady of Sorrows Parish, the most significant landmark for the people of Labateca. It was granted parish status in 1719."
+        },
+        {
+          "es": "Altar mayor. En el camarín se venera la imagen de la Patrona, la Virgen de las Angustias, de gran devoción y milagros.",
+          "en": "Main altar. In its shrine the image of the Patroness, the Virgin of Sorrows, is venerated with great devotion and miracles."
+        },
+        {
+          "es": "Nave principal del santuario, que durante varios meses del año recibe numerosos peregrinos y visitantes.",
+          "en": "Main nave of the sanctuary, which welcomes many pilgrims and visitors during several months of the year."
+        },
+        {
+          "es": "Interior del templo, corazón espiritual e histórico del pueblo; su historia se remonta al siglo XVII.",
+          "en": "Interior of the church, the town's spiritual and historic heart; its history dates back to the 17th century."
+        },
+        {
+          "es": "Detalle del altar mayor, tallado en madera, con el crucifijo y los ángeles orantes.",
+          "en": "Detail of the main altar, carved in wood, with the crucifix and praying angels."
+        },
+        {
+          "es": "La Virgen de las Angustias, patrona del municipio. La tradición cuenta que se apareció a la india María Berbecí en el contorno de Bochagá (hacia 1560–1630).",
+          "en": "The Virgin of Sorrows, patroness of the municipality. Tradition tells she appeared to the indigenous woman María Berbecí near Bochagá (around 1560–1630)."
+        },
+        {
+          "es": "Cúpula y vitrales sobre el camarín de la Patrona. En su honor se celebran cinco solemnidades al año: 2 feb, 15 feb, 15 ago, 21 nov y 8 dic.",
+          "en": "Dome and stained glass above the Patroness's shrine. Five solemnities are held in her honor each year: Feb 2 & 15, Aug 15, Nov 21 and Dec 8."
+        },
+        {
+          "es": "Mural «Reseña histórica de la aparición de la Virgen», que narra su historia, junto a la pila de agua bendita.",
+          "en": "Mural 'Historical account of the apparition of the Virgin,' depicting her story, beside the holy water font."
+        }
       ]
     },
     {

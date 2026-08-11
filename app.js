@@ -1611,10 +1611,12 @@ function paintLightbox() {
     media.innerHTML = lbPlaceholder(p, false);
   }
 
-  // ── Leyenda ──
+  // ── Leyenda ── (por foto si existe fotosCap[idx]; si no, la recomendación del lugar)
   document.getElementById('lbTitle').textContent = placeName(p);
-  const rec = (p.recomendacion || p.rec || {})[lang] || '';
-  document.getElementById('lbRec').textContent   = rec;
+  const rec  = (p.recomendacion || p.rec || {})[lang] || '';
+  const caps = p.fotosCap || null;
+  const cap  = (caps && caps[_lbIdx]) ? (caps[_lbIdx][lang] || caps[_lbIdx].es || '') : '';
+  document.getElementById('lbRec').textContent   = cap || rec;
 
   // ── Contador y nav ──
   const showNav = total > 1;
