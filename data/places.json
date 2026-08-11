@@ -85,6 +85,69 @@
       ]
     },
     {
+      "id": "virgen-angustias",
+      "categoria": "cultura",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299582,
+      "lng": -72.4938511,
+      "mapaX": 516,
+      "mapaY": 360,
+      "telefono": "",
+      "nombre": {
+        "es": "Nuestra Señora de las Angustias — Patrona",
+        "en": "Our Lady of Sorrows — Patroness"
+      },
+      "desc": {
+        "es": "Es la patrona del municipio. Cuenta la tradición que se apareció a la india María Berbecí, en el contorno de Bochagá —antiguamente Pueblo Viejo—, entre los años 1560 y 1630. Es una imagen muy milagrosa; por su religiosidad y la fervorosidad de sus gentes, congrega a miles de feligreses en cada una de las cinco celebraciones especiales que se realizan en su honor durante el año. Su imagen se venera en el camarín del altar mayor del templo, sobre un trono tallado en madera donde los devotos ofrendan los «milagros» de oro en señal de gratitud.",
+        "en": "She is the patroness of the municipality. Tradition tells that she appeared to the indigenous woman María Berbecí, near Bochagá —formerly Pueblo Viejo—, between 1560 and 1630. It is a deeply miraculous image; through its devotion and the fervor of the people, it gathers thousands of faithful at each of the five special celebrations held in her honor throughout the year. Her image is venerated in the shrine of the main altar, upon a wood-carved throne where devotees offer golden 'milagros' in gratitude."
+      },
+      "comoLlegar": {
+        "es": "En el camarín del altar mayor de la Parroquia Nuestra Señora de las Angustias (casco urbano, frente al Parque Principal).",
+        "en": "In the shrine of the main altar at Our Lady of Sorrows Parish (town center, facing the main square)."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "5 solemnidades al año: 2 y 15 feb, 15 ago, 21 nov y 8 dic",
+        "en": "5 solemnities a year: Feb 2 & 15, Aug 15, Nov 21 and Dec 8"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Las cinco fiestas en su honor: 2 de febrero (Candelaria), 15 de febrero (Fiesta Patronal), 15 de agosto (Asunción de María), 21 de noviembre (Renovación del Voto) y 8 de diciembre (Inmaculada Concepción). Se venera en el camarín del altar mayor.",
+        "en": "The five feasts in her honor: February 2 (Candlemas), February 15 (Patronal Feast), August 15 (Assumption of Mary), November 21 (Renewal of the Vow) and December 8 (Immaculate Conception). Venerated in the shrine of the main altar."
+      },
+      "fotos": [
+        "labateca/virgen-01",
+        "labateca/virgen-02",
+        "labateca/virgen-03",
+        "labateca/virgen-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "La imagen de la Patrona, «la Morenita»: una imagen muy milagrosa que congrega a miles de feligreses cada año.",
+          "en": "The image of the Patroness, 'la Morenita': a deeply miraculous image that gathers thousands of faithful each year."
+        },
+        {
+          "es": "La imagen en el camarín del altar mayor, flanqueada por ángeles tallados, sobre su trono de madera.",
+          "en": "The image in the shrine of the main altar, flanked by carved angels, upon its wooden throne."
+        },
+        {
+          "es": "Nuestra Señora de las Angustias, patrona del municipio; la tradición narra su aparición a la india María Berbecí en el contorno de Bochagá (1560–1630).",
+          "en": "Our Lady of Sorrows, patroness of the municipality; tradition tells of her apparition to the indigenous woman María Berbecí near Bochagá (1560–1630)."
+        },
+        {
+          "es": "El trono tallado en madera y los «milagros» de oro que los devotos ofrendan en señal de gratitud por los favores recibidos.",
+          "en": "The wood-carved throne and the golden 'milagros' that devotees offer in gratitude for the favors received."
+        }
+      ]
+    },
+    {
       "id": "parque",
       "categoria": "cultura",
       "verified": true,
