@@ -6,41 +6,47 @@
       "categoria": "cultura",
       "verified": true,
       "coordsApprox": false,
-      "lat": 7.3167,
-      "lng": -72.4833,
+      "lat": 7.299582,
+      "lng": -72.4938511,
       "mapaX": 500,
       "mapaY": 370,
       "telefono": "",
       "nombre": {
-        "es": "Templo Nuestra Señora de las Angustias",
-        "en": "Our Lady of Sorrows Church"
+        "es": "Parroquia Nuestra Señora de las Angustias",
+        "en": "Our Lady of Sorrows Parish"
       },
       "desc": {
-        "es": "Templo parroquial colonial que custodia el lienzo original de la Virgen y una pila bautismal tallada en piedra. El corazón espiritual e histórico del pueblo.",
-        "en": "Colonial parish church that safeguards the original canvas of the Virgin and a stone-carved baptismal font. The town's spiritual and historic heart."
+        "es": "Es, sin lugar a dudas, el atractivo de mayor relevancia para los labatequenses. Su historia se remonta al siglo XVII, cuando habitaban el territorio los primeros pobladores; en 1719 adquirió la categoría de Parroquia Nuestra Señora de las Angustias. Por su profundo significado religioso y los milagros atribuidos a nuestra patrona, la Virgen de las Angustias, durante varios meses del año recibe un número considerable de peregrinos y visitantes que vienen a implorar y a agradecer los favores que de la Morenita se reciben a diario. En su interior se venera la imagen de la Patrona en el camarín del altar mayor y se conserva una pila bautismal tallada en una sola piedra por los indígenas bateca en 1654.",
+        "en": "It is, without a doubt, the most significant attraction for the people of Labateca. Its history dates back to the 17th century, when the first settlers inhabited the territory; in 1719 it was granted the status of Parish of Our Lady of Sorrows. For its deep religious meaning and the miracles attributed to our patroness, the Virgin of Sorrows, throughout several months of the year it welcomes a considerable number of pilgrims and visitors who come to pray and give thanks for the favors received daily from 'la Morenita.' Inside, the image of the Patroness is venerated in the shrine of the main altar, and a baptismal font carved from a single stone by the Bateca indigenous people in 1654 is preserved."
       },
       "comoLlegar": {
-        "es": "En el casco urbano, frente al parque principal.",
-        "en": "In the town center, facing the main square."
+        "es": "Barrio Quinta Real, frente al Parque Principal Simón Bolívar.",
+        "en": "Quinta Real neighborhood, facing the Simón Bolívar main square."
       },
       "dist": {
         "es": "En el casco urbano",
         "en": "In town center"
       },
       "tiempo": {
-        "es": "Llegada inmediata",
-        "en": "Right there"
+        "es": "Eucaristías: lun a sáb 7 a. m. y 6 p. m. · Domingos 7 y 10 a. m., 3 y 6 p. m.",
+        "en": "Mass: Mon–Sat 7 am & 6 pm · Sun 7 & 10 am, 3 & 6 pm"
       },
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
       },
       "recomendacion": {
-        "es": "Pregunta por los horarios de misa para entrar a verlo por dentro.",
-        "en": "Ask for mass times to see the interior."
+        "es": "Servicios: celebraciones comunitarias diarias, solemnidades en honor a la Virgen de las Angustias, bautismos, primeras comuniones, confirmaciones, matrimonios, exequias y vigilias. Entra a conocer el altar mayor, la imagen de la Patrona y la pila bautismal colonial.",
+        "en": "Services: daily community celebrations, solemnities in honor of the Virgin of Sorrows, baptisms, first communions, confirmations, weddings, funerals and vigils. Step inside to see the main altar, the image of the Patroness and the colonial baptismal font."
       },
       "fotos": [
-        "labateca/templo-01"
+        "labateca/parroquia-01",
+        "labateca/parroquia-02",
+        "labateca/parroquia-03",
+        "labateca/parroquia-04",
+        "labateca/parroquia-05",
+        "labateca/parroquia-06",
+        "labateca/parroquia-07"
       ]
     },
     {
