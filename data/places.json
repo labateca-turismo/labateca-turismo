@@ -400,6 +400,59 @@
       ]
     },
     {
+      "id": "banco-agrario",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": true,
+      "lat": 7.29975,
+      "lng": -72.4948,
+      "mapaX": 478,
+      "mapaY": 388,
+      "telefono": "",
+      "nombre": {
+        "es": "Banco Agrario de Colombia",
+        "en": "Banco Agrario de Colombia"
+      },
+      "desc": {
+        "es": "Sucursal del Banco Agrario de Colombia en Labateca, la entidad que impulsa el progreso de las familias del campo y contribuye al desarrollo sostenible del país. Ofrece productos de captación —cuentas de ahorro y depósitos— y de colocación —créditos—, con un servicio cercano al territorio y una atención diferencial pensada para el campesino y la comunidad rural. Dispone de cajero automático (ATM) en la entrada.",
+        "en": "Branch of Banco Agrario de Colombia in Labateca — the bank that drives the progress of rural families and contributes to the country's sustainable development. It offers deposit products (savings accounts and deposits) and lending products (loans), with service rooted in the territory and care tailored to farmers and the rural community. It has an ATM at the entrance."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, sobre el corredor cerca del parque principal (dirección 4-37).",
+        "en": "In the town center, along the arcade near the main square (address 4-37)."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Martes a sábado, 8:00 a. m. – 2:00 p. m. (jornada continua)",
+        "en": "Tuesday to Saturday, 8:00 a.m. – 2:00 p.m. (continuous hours)"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Práctico para retiros, pagos y trámites bancarios durante tu visita; el cajero automático (ATM) está en la entrada. Lleva tu documento de identidad para cualquier operación en caja.",
+        "en": "Handy for withdrawals, payments and banking during your visit; the ATM is right at the entrance. Bring your ID for any teller transaction."
+      },
+      "fotos": [
+        "labateca/banco-agrario-01",
+        "labateca/banco-agrario-02"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada del Banco Agrario de Colombia en Labateca, en el corredor del casco urbano, con su cajero automático (ATM) en la entrada.",
+          "en": "Facade of Banco Agrario de Colombia in Labateca, along the town-center arcade, with its ATM at the entrance."
+        },
+        {
+          "es": "Cajero automático (ATM) del Banco Agrario, disponible en la entrada de la sucursal.",
+          "en": "Banco Agrario ATM, available at the branch entrance."
+        }
+      ]
+    },
+    {
       "id": "casa-cultura",
       "categoria": "cultura",
       "verified": true,
