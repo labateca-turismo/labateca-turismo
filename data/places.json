@@ -1971,6 +1971,142 @@
           "en": "Cold-drink fridges and ice-cream freezer, with well-stocked shelves in the background."
         }
       ]
+    },
+    {
+      "id": "isla-mobile",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298665,
+      "lng": -72.493742,
+      "mapaX": 540,
+      "mapaY": 425,
+      "telefono": "573144490474",
+      "nombre": {
+        "es": "Isla Mobile — Telefonía y Accesorios",
+        "en": "Isla Mobile — Phones & Accessories"
+      },
+      "desc": {
+        "es": "La tienda de tecnología de Labateca: moderna, iluminada y muy surtida. Encuentras celulares nuevos (Samsung, Xiaomi, Motorola, Tecno, Honor y más), forros y accesorios de todos los colores, audífonos, parlantes y soporte técnico. También hacen recargas (Colombia y Venezuela), TV digital, pines y venta a cuotas con Sistecrédito. Y de paso, bisutería, cosméticos, morrales y bolsos. Un punto fresco y actual para resolver todo lo de tu celular.",
+        "en": "Labateca's tech shop: modern, bright and well stocked. You'll find new phones (Samsung, Xiaomi, Motorola, Tecno, Honor and more), cases and accessories in every color, headphones, speakers and technical support. They also do mobile top-ups (Colombia and Venezuela), digital TV, gaming PINs and installment purchases with Sistecrédito. Plus jewelry, cosmetics, backpacks and bags. A fresh, up-to-date spot for everything phone-related."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a pocos pasos del parque principal.",
+        "en": "In Labateca's town center, just steps from the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "8:00 a. m. – 1:00 p. m. y 2:00 – 7:00 p. m.",
+        "en": "8:00 a.m. – 1:00 p.m. and 2:00 – 7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para celulares, forros, accesorios, audífonos, parlantes y soporte técnico. También recargas y compra a cuotas con Sistecrédito. Contacto por WhatsApp: 314 449 0474.",
+        "en": "Great for phones, cases, accessories, headphones, speakers and technical support. Also top-ups and installment purchases with Sistecrédito. Contact via WhatsApp: 314 449 0474."
+      },
+      "fotos": [
+        "labateca/isla-mobile-01",
+        "labateca/isla-mobile-02",
+        "labateca/isla-mobile-03",
+        "labateca/isla-mobile-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Isla Mobile: «Telefonía · Accesorios y Soporte Técnico», con su vitrina abierta y la pared de forros al fondo.",
+          "en": "Isla Mobile storefront: 'Phones · Accessories & Technical Support', with its open display and the case wall in the background."
+        },
+        {
+          "es": "Interior moderno: pared llena de forros de colores y vitrinas con celulares, accesorios y parlantes.",
+          "en": "Modern interior: a wall full of colorful phone cases and display cases with phones, accessories and speakers."
+        },
+        {
+          "es": "Rincón con el logo «Isla Mobile» y vitrina de bisutería, cosméticos y parlantes.",
+          "en": "Corner with the 'Isla Mobile' logo and a display of jewelry, cosmetics and speakers."
+        },
+        {
+          "es": "Estantería de morrales, bolsos, accesorios para el cabello y cosméticos.",
+          "en": "Shelves of backpacks, bags, hair accessories and cosmetics."
+        }
+      ]
+    },
+    {
+      "id": "variedades-martha-efecty",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299447,
+      "lng": -72.494141,
+      "mapaX": 528,
+      "mapaY": 386,
+      "telefono": "573123504567",
+      "nombre": {
+        "es": "Variedades Martha — Miscelánea y Efecty",
+        "en": "Variedades Martha — Variety Store & Efecty"
+      },
+      "desc": {
+        "es": "Miscelánea surtida en pleno casco urbano, en un llamativo edificio rosado a un lado del parque. Aquí encuentras de todo: ropa para toda la familia (dama, caballero, bebé y niños), interiores y lencería, morrales, cosméticos, perfumería, aseo y mil detalles. Además es punto Efecty: giros nacionales e internacionales, pago de facturas de servicios públicos y privados, recargas, loterías, retiros y consignaciones, y pagos por Nequi. Atención amable de doña Martha Elvira.",
+        "en": "A well-stocked variety store right in the town center, in an eye-catching pink building beside the main square. You'll find a bit of everything: clothing for the whole family (women, men, babies and kids), underwear and lingerie, backpacks, cosmetics, perfumes, toiletries and countless odds and ends. It's also an Efecty point: national and international money transfers, payment of public and private utility bills, top-ups, lottery, withdrawals and deposits, plus Nequi payments. Warm service from Doña Martha Elvira."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, en el edificio rosado (direcciones 1-15 y 1-17), a un costado del parque principal.",
+        "en": "In the town center, in the pink building (addresses 1-15 and 1-17), beside the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "9:00 a. m. – 1:00 p. m. y 2:30 – 6:30 p. m.",
+        "en": "9:00 a.m. – 1:00 p.m. and 2:30 – 6:30 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para ropa, interiores, cosméticos, perfumería y detalles. Punto Efecty para giros, pago de facturas de servicios públicos, recargas y loterías. Contacto por WhatsApp: 312 350 4567.",
+        "en": "Great for clothing, underwear, cosmetics, perfumes and gifts. Efecty point for money transfers, utility-bill payments, top-ups and lottery. Contact via WhatsApp: 312 350 4567."
+      },
+      "fotos": [
+        "labateca/variedades-martha-efecty-01",
+        "labateca/variedades-martha-efecty-02",
+        "labateca/variedades-martha-efecty-03",
+        "labateca/variedades-martha-efecty-04",
+        "labateca/variedades-martha-efecty-05",
+        "labateca/variedades-martha-efecty-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada del edificio rosado con el punto Efecty y sus dos arcos de entrada (direcciones 1-15 y 1-17).",
+          "en": "The pink building's facade with the Efecty point and its two arched entrances (addresses 1-15 and 1-17)."
+        },
+        {
+          "es": "Mostradores con ropa surtida para toda la familia y cajas de calzado en la parte alta.",
+          "en": "Counters with assorted clothing for the whole family and shoe boxes stacked above."
+        },
+        {
+          "es": "Zona de perfumería, aseo y cosméticos, con vitrinas llenas de productos.",
+          "en": "Perfume, toiletries and cosmetics area, with display cases full of products."
+        },
+        {
+          "es": "Ropa, interiores y morrales colgados; variedad para grandes y chicos.",
+          "en": "Clothing, underwear and backpacks on display; variety for all ages."
+        },
+        {
+          "es": "Rincón de ropa para bebé y niños, junto a la entrada con vista al parque.",
+          "en": "Baby and kids' clothing corner, next to the entrance overlooking the park."
+        },
+        {
+          "es": "Punto Efecty: giros nacionales e internacionales, pago de facturas, recargas, loterías y consignaciones.",
+          "en": "Efecty point: national and international transfers, bill payments, top-ups, lottery and deposits."
+        }
+      ]
     }
   ]
 }
