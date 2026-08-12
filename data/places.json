@@ -47,7 +47,8 @@
         "labateca/parroquia-04",
         "labateca/parroquia-05",
         "labateca/parroquia-06",
-        "labateca/parroquia-07"
+        "labateca/parroquia-07",
+        "labateca/parroquia-08"
       ],
       "fotosCap": [
         {
@@ -81,6 +82,10 @@
         {
           "es": "Mural «Reseña histórica de la aparición de la Virgen», que narra su historia, junto a la pila de agua bendita.",
           "en": "Mural 'Historical account of the apparition of the Virgin,' depicting her story, beside the holy water font."
+        },
+        {
+          "es": "Pila bautismal tallada a cincel en una sola piedra por los indígenas bateca; data de 1654, siendo cura el presbítero Francisco de León. En la nave izquierda del templo, es el lugar donde se administra el sacramento del Bautismo.",
+          "en": "Baptismal font chiseled from a single stone by the Bateca indigenous people; dating from 1654, when Fr. Francisco de León was parish priest. Located in the left nave of the church, it is where the sacrament of Baptism is administered."
         }
       ]
     },
@@ -126,7 +131,7 @@
         "labateca/virgen-01",
         "labateca/virgen-02",
         "labateca/virgen-03",
-        "labateca/virgen-04b"
+        "labateca/virgen-04c"
       ],
       "fotosCap": [
         {
