@@ -332,6 +332,74 @@
       ]
     },
     {
+      "id": "intrinseco",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300327,
+      "lng": -72.494867,
+      "mapaX": 512,
+      "mapaY": 356,
+      "telefono": "573214592514",
+      "nombre": {
+        "es": "Intrínseco — Restaurante, Café y Bar",
+        "en": "Intrínseco — Restaurant, Café & Bar"
+      },
+      "desc": {
+        "es": "Restaurante, café y bar en el corazón de Labateca, a pasos del parque principal. Un espacio colorido y acogedor, decorado con murales de café, paredes verdes y flores, donde se respira el lema «Sigue tus sueños». Ideal para desayunar, almorzar o tomarse un buen café de la región en un ambiente tranquilo y familiar.",
+        "en": "A restaurant, café and bar in the heart of Labateca, steps from the main square. A colorful, welcoming spot decorated with coffee murals, green walls and flowers, where the motto 'Follow your dreams' sets the tone. Perfect for breakfast, lunch or a good regional coffee in a calm, family-friendly atmosphere."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, a pasos del parque principal y la Parroquia Nuestra Señora de las Angustias.",
+        "en": "In the town center, steps from the main square and Our Lady of Sorrows Parish."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Martes a domingo, 8:00 a. m. – 3:00 p. m.",
+        "en": "Tuesday to Sunday, 8:00 a.m. – 3:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Prueba el café de la región y los antojos típicos como el quesillo. Reserva o pide informes por WhatsApp.",
+        "en": "Try the regional coffee and typical treats like quesillo. Book or ask for details via WhatsApp."
+      },
+      "fotos": [
+        "labateca/intrinseco-01",
+        "labateca/intrinseco-02",
+        "labateca/intrinseco-03",
+        "labateca/intrinseco-04",
+        "labateca/intrinseco-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Intrínseco, sobre la calle del casco urbano, con su logo de restaurante, café y bar.",
+          "en": "Intrínseco's storefront on a street in the town center, with its restaurant, café and bar logo."
+        },
+        {
+          "es": "Interior acogedor con murales de café y el lema «Sigue tus sueños».",
+          "en": "Cozy interior with coffee murals and the motto 'Follow your dreams'."
+        },
+        {
+          "es": "Rincón con mural que celebra el café, el quesillo y la Virgen de las Angustias, patrona del pueblo.",
+          "en": "Corner with a mural celebrating coffee, quesillo and Our Lady of Sorrows, the town's patroness."
+        },
+        {
+          "es": "Zona con muro de flores, televisor y plantas: un ambiente fresco y colorido.",
+          "en": "Area with a flower wall, TV and plants: a fresh, colorful setting."
+        },
+        {
+          "es": "Vista hacia la cocina y la entrada, con la enredadera en el techo y la luz natural del pueblo.",
+          "en": "View toward the kitchen and entrance, with the ceiling vine and the town's natural light."
+        }
+      ]
+    },
+    {
       "id": "casa-cultura",
       "categoria": "cultura",
       "verified": true,
