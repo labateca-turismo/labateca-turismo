@@ -1893,6 +1893,79 @@
           "en": "Services area: photocopiers, computer and printing, with Nequi payments at 310 403 6102."
         }
       ]
+    },
+    {
+      "id": "tres-esquinas",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299268,
+      "lng": -72.494337,
+      "mapaX": 512,
+      "mapaY": 396,
+      "telefono": "573107963730",
+      "nombre": {
+        "es": "Tienda Tres Esquinas",
+        "en": "Tres Esquinas Corner Store"
+      },
+      "desc": {
+        "es": "La tienda de esquina de toda la vida, en pleno casco urbano de Labateca (Carrera 2, esquina). Amplia y bien surtida: víveres y granos, aceite, enlatados, aseo, mecato y dulces, gaseosas y bebidas bien frías, helados y pan fresco del día. Tiene su rinconcito de mesas para sentarse un momento. Atención cercana y de confianza de doña Lida Marisol —el punto perfecto para el mercado del diario o para un antojo al pasar.",
+        "en": "The classic corner store right in Labateca's town center (Carrera 2, on the corner). Spacious and well stocked: groceries and grains, cooking oil, canned goods, cleaning supplies, snacks and candy, sodas and ice-cold drinks, ice cream and fresh-baked bread. It even has a little seating area to rest for a while. Warm, trusted service from Doña Lida Marisol —the perfect spot for daily shopping or a quick craving."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, sobre la Carrera 2 (dirección 2-87), en una esquina a pocas cuadras del parque principal.",
+        "en": "In the town center, on Carrera 2 (address 2-87), on a corner a few blocks from the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 7:00 a. m. – 7:00 p. m.",
+        "en": "Every day, 7:00 a.m. – 7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para el mercado del diario: víveres, mecato, bebidas frías, helados y pan fresco. Tiene mesas para sentarse. Contacto y pedidos por WhatsApp: 310 796 3730.",
+        "en": "Great for daily shopping: groceries, snacks, cold drinks, ice cream and fresh bread. Has a seating area. Contact and orders via WhatsApp: 310 796 3730."
+      },
+      "fotos": [
+        "labateca/tres-esquinas-01",
+        "labateca/tres-esquinas-02",
+        "labateca/tres-esquinas-03",
+        "labateca/tres-esquinas-04",
+        "labateca/tres-esquinas-05",
+        "labateca/tres-esquinas-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de la Tienda Tres Esquinas, en la esquina de la Carrera 2 (2-87), con su llamativa pintura naranja y verde.",
+          "en": "Storefront of Tienda Tres Esquinas, on the corner of Carrera 2 (2-87), with its striking orange and green paint."
+        },
+        {
+          "es": "Interior amplio de la tienda: mostrador surtido, estanterías y su rinconcito de mesas al fondo.",
+          "en": "Spacious store interior: well-stocked counter, shelves and a little seating area in the back."
+        },
+        {
+          "es": "Mostrador con dulces, mecato y vitrina de pasabocas junto a las estanterías de abarrotes.",
+          "en": "Counter with candy, snacks and a display case beside the grocery shelves."
+        },
+        {
+          "es": "Estantería bien surtida con enlatados, aceite, granos y productos de aseo, y vitrina de dulces.",
+          "en": "Well-stocked shelves with canned goods, oil, grains and cleaning supplies, plus a candy display case."
+        },
+        {
+          "es": "Zona de neveras y congelador con panadería fresca del día en la vitrina.",
+          "en": "Fridge and freezer area with fresh-baked bread in the display case."
+        },
+        {
+          "es": "Neveras de bebidas frías y congelador de helados, con estanterías surtidas al fondo.",
+          "en": "Cold-drink fridges and ice-cream freezer, with well-stocked shelves in the background."
+        }
+      ]
     }
   ]
 }
