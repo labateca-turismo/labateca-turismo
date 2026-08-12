@@ -268,8 +268,8 @@
       "categoria": "cultura",
       "verified": true,
       "coordsApprox": false,
-      "lat": 7.3165,
-      "lng": -72.4835,
+      "lat": 7.2996816,
+      "lng": -72.49452,
       "mapaX": 495,
       "mapaY": 380,
       "telefono": "",
@@ -278,12 +278,12 @@
         "en": "Main Square"
       },
       "desc": {
-        "es": "El punto de encuentro de Labateca, rodeado de la arquitectura tradicional, el busto del Libertador y el monumento La Columna. Ideal para empezar el recorrido.",
-        "en": "Labateca's gathering point, surrounded by traditional architecture, the Liberator's bust and La Columna monument. The perfect place to start."
+        "es": "El Parque Principal es el corazón de Labateca, «Volcanes de Dios» en lengua chitarera. Alrededor de sus jardines, palmeras y senderos en ladrillo se levantan la Parroquia Nuestra Señora de las Angustias y la arquitectura tradicional del casco urbano, junto a la plaza cívica y el letrero «Yo ♥ Labateca». Enclavado en la montaña santandereana a unos 1.566 m s. n. m., con clima templado cercano a los 20 °C, es un pueblo tranquilo de calles empinadas, gente cálida y aire de café, a unos 113 km de Cúcuta. Aquí empieza el recorrido por el municipio.",
+        "en": "The Main Square is the heart of Labateca — 'Volcanoes of God' in the Chitarera language. Around its gardens, palm trees and brick paths stand Our Lady of Sorrows Parish and the town's traditional architecture, next to the civic plaza and the 'Yo ♥ Labateca' sign. Set in the Santander mountains at about 1,566 m above sea level, with a mild climate near 20 °C, it is a quiet town of steep streets, warm people and the scent of coffee, some 113 km from Cúcuta. This is where the tour of the municipality begins."
       },
       "comoLlegar": {
-        "es": "Centro del pueblo, punto de referencia principal.",
-        "en": "Town center, main landmark."
+        "es": "Centro del pueblo, frente a la Parroquia Nuestra Señora de las Angustias; punto de referencia principal.",
+        "en": "Town center, facing Our Lady of Sorrows Parish; the main landmark."
       },
       "dist": {
         "es": "Centro del pueblo",
@@ -298,10 +298,38 @@
         "en": "Easy access"
       },
       "recomendacion": {
-        "es": "Por las tardes es el mejor momento para tomar fotos con buena luz.",
-        "en": "Late afternoon offers the best light for photos."
+        "es": "Por las tardes es el mejor momento para tomar fotos con buena luz; al atardecer y de noche el parque se ilumina y luce especialmente bonito.",
+        "en": "Late afternoon offers the best light for photos; at sunset and after dark the square lights up and looks especially beautiful."
       },
-      "fotos": []
+      "fotos": [
+        "labateca/parque-01",
+        "labateca/parque-02",
+        "labateca/parque-03",
+        "labateca/parque-04",
+        "labateca/parque-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "El Parque Principal con el letrero «Yo ♥ Labateca», las palmeras y, al fondo, la Parroquia Nuestra Señora de las Angustias.",
+          "en": "The Main Square with the 'Yo ♥ Labateca' sign, palm trees and, in the background, Our Lady of Sorrows Parish."
+        },
+        {
+          "es": "Vista aérea del parque: sus jardines geométricos en ladrillo, la iglesia y la plaza cívica, en pleno corazón del casco urbano.",
+          "en": "Aerial view of the square: its geometric brick gardens, the church and the civic plaza, right in the heart of town."
+        },
+        {
+          "es": "Panorámica del pueblo desde el aire, con la parroquia, el parque y las montañas santandereanas alrededor.",
+          "en": "Aerial panorama of the town, with the parish, the square and the surrounding Santander mountains."
+        },
+        {
+          "es": "Atardecer sobre el parque: la hora dorada tiñe el cielo detrás de las palmeras y las torres del templo.",
+          "en": "Sunset over the square: golden hour colors the sky behind the palm trees and the church towers."
+        },
+        {
+          "es": "El parque de noche, iluminado bajo la luna, con la iglesia y el letrero del pueblo encendidos.",
+          "en": "The square at night, lit under the moon, with the church and the town sign aglow."
+        }
+      ]
     },
     {
       "id": "casa-cultura",
