@@ -216,6 +216,54 @@
       ]
     },
     {
+      "id": "despacho-parroquial",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.2997576,
+      "lng": -72.494551,
+      "mapaX": 492,
+      "mapaY": 380,
+      "telefono": "",
+      "nombre": {
+        "es": "Servicios Parroquiales y Documentos",
+        "en": "Parish Services & Records"
+      },
+      "desc": {
+        "es": "En la Parroquia Nuestra Señora de las Angustias se solicitan las partidas o fe de bautismo, confirmación, matrimonio y defunción, expedidas a partir de los libros parroquiales que se conservan en Labateca desde 1712. (La partida de bautismo es un documento eclesiástico; el registro civil de nacimiento lo expide la Registraduría.) En el despacho parroquial también se coordinan misas, bautismos, primeras comuniones, confirmaciones, matrimonios, exequias, vigilias y demás servicios.",
+        "en": "At Our Lady of Sorrows Parish you can request certificates of baptism, confirmation, marriage and death, issued from the parish books kept in Labateca since 1712. (A baptism certificate is a church document; the civil birth record is issued by the Registraduría.) The parish office also arranges Masses, baptisms, first communions, confirmations, weddings, funerals, vigils and other services."
+      },
+      "comoLlegar": {
+        "es": "Despacho parroquial (casa cural), en el casco urbano, junto a la Parroquia Nuestra Señora de las Angustias.",
+        "en": "Parish office (rectory), in the town center, next to Our Lady of Sorrows Parish."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Atención en el despacho parroquial (consultar horario)",
+        "en": "At the parish office (ask for hours)"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Para ciertos trámites, las partidas se legalizan o «sellan» en la Curia Arzobispal de la Arquidiócesis de Nueva Pamplona (Carrera 5 N.º 4-87, Pamplona).",
+        "en": "For certain procedures, the certificates are legalized ('sealed') at the Archbishop's Curia of the Archdiocese of Nueva Pamplona (Carrera 5 No. 4-87, Pamplona)."
+      },
+      "fotos": [
+        "labateca/despacho-parroquial-01"
+      ],
+      "fotosCap": [
+        {
+          "es": "Despacho parroquial (casa cural), donde se solicitan las partidas y se coordinan los servicios de la parroquia.",
+          "en": "Parish office (rectory), where certificates are requested and parish services are arranged."
+        }
+      ]
+    },
+    {
       "id": "parque",
       "categoria": "cultura",
       "verified": true,
