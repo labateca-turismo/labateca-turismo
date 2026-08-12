@@ -458,7 +458,7 @@
       "categoria": "servicios",
       "verified": true,
       "coordsApprox": false,
-      "lat": 7.300170,
+      "lat": 7.30017,
       "lng": -72.494824,
       "mapaX": 470,
       "mapaY": 372,
@@ -532,7 +532,7 @@
       "verified": true,
       "coordsApprox": false,
       "lat": 7.300346,
-      "lng": -72.494870,
+      "lng": -72.49487,
       "mapaX": 486,
       "mapaY": 366,
       "telefono": "584168475520",
@@ -1340,7 +1340,7 @@
       "categoria": "comercio",
       "verified": true,
       "coordsApprox": false,
-      "lat": 7.300080,
+      "lat": 7.30008,
       "lng": -72.494792,
       "mapaX": 468,
       "mapaY": 372,
@@ -1748,7 +1748,7 @@
       "categoria": "comercio",
       "verified": true,
       "coordsApprox": false,
-      "lat": 7.300800,
+      "lat": 7.3008,
       "lng": -72.495177,
       "mapaX": 440,
       "mapaY": 350,
@@ -1793,8 +1793,8 @@
       "categoria": "servicios",
       "verified": true,
       "coordsApprox": true,
-      "lat": 7.300560,
-      "lng": -72.494900,
+      "lat": 7.30056,
+      "lng": -72.4949,
       "mapaX": 456,
       "mapaY": 358,
       "nombre": {
@@ -1829,6 +1829,69 @@
         "labateca/concejo-labateca-01",
         "labateca/concejo-labateca-02",
         "labateca/concejo-labateca-03"
+      ]
+    },
+    {
+      "id": "variedades-martha",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299932,
+      "lng": -72.494973,
+      "mapaX": 466,
+      "mapaY": 382,
+      "telefono": "573104036102",
+      "nombre": {
+        "es": "Papelería y Variedades Martha Sánchez",
+        "en": "Martha Sánchez Stationery & Variety Store"
+      },
+      "desc": {
+        "es": "El multiservicio del pueblo: papelería, variedades y servicio de internet en un solo lugar. Aquí resuelves todo en un mismo mostrador —fotocopias, impresiones, escáner, laminado y anillado, RUT y trámites por computador, útiles escolares y de oficina— y de paso encuentras el detalle perfecto: peluchería, perfumería, piñatería y bombas de helio. También hacen recargas (Colombia y Venezuela), venta de SOAT, TV digital y pines. Atención cercana y amable de doña Martha, a pasos del parque principal.",
+        "en": "The town's all-in-one shop: stationery, variety goods and internet service under one roof. Everything gets solved at the same counter —photocopies, printing, scanning, laminating and binding, tax registration (RUT) and computer paperwork, school and office supplies— and you can also grab the perfect gift: plush toys, perfumes, party supplies and helium balloons. They also do mobile top-ups (Colombia and Venezuela), sell SOAT insurance, digital TV and gaming PINs. Warm, personal service from Doña Martha, steps from the main square."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a pocos pasos del parque principal.",
+        "en": "In Labateca's town center, just steps from the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Lunes a viernes, 8:00 a. m. – 5:00 p. m. · Sábado y domingo, 8:00 a. m. – 1:00 p. m.",
+        "en": "Monday to Friday, 8:00 a.m. – 5:00 p.m. · Saturday and Sunday, 8:00 a.m. – 1:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para fotocopias, impresiones, escáner, laminado, anillado, RUT y trámites. También útiles escolares, detalles, peluchería, perfumería, recargas y SOAT. Contacto y pagos por WhatsApp / Nequi: 310 403 6102.",
+        "en": "Great for photocopies, printing, scanning, laminating, binding, RUT and paperwork. Also school supplies, gifts, plush toys, perfumes, top-ups and SOAT insurance. Contact and payments via WhatsApp / Nequi: 310 403 6102."
+      },
+      "fotos": [
+        "labateca/variedades-martha-01",
+        "labateca/variedades-martha-02",
+        "labateca/variedades-martha-03",
+        "labateca/variedades-martha-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Papelería y Variedades Martha Sánchez, con sus pendones de recargas, servicio de internet y venta de SOAT.",
+          "en": "Storefront of Martha Sánchez Stationery & Variety Store, with its banners for top-ups, internet service and SOAT insurance."
+        },
+        {
+          "es": "Rincón de peluchería y detalles: peluches, perfumería y vitrinas con regalos para toda ocasión.",
+          "en": "Plush-toy and gift corner: stuffed animals, perfumes and display cases with gifts for every occasion."
+        },
+        {
+          "es": "Zona de papelería con útiles escolares, cintas, cartulinas y artículos de oficina sobre el mostrador.",
+          "en": "Stationery area with school supplies, ribbons, cardstock and office items on the counter."
+        },
+        {
+          "es": "Área de servicios: fotocopiadoras, computador e impresión, con pagos por Nequi al 310 403 6102.",
+          "en": "Services area: photocopiers, computer and printing, with Nequi payments at 310 403 6102."
+        }
       ]
     }
   ]
