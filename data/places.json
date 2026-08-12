@@ -2107,6 +2107,131 @@
           "en": "Efecty point: national and international transfers, bill payments, top-ups, lottery and deposits."
         }
       ]
+    },
+    {
+      "id": "heladeria-napoles",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.30023,
+      "lng": -72.494266,
+      "mapaX": 509,
+      "mapaY": 372,
+      "telefono": "573106803058",
+      "nombre": {
+        "es": "Heladería Nápoles",
+        "en": "Heladería Nápoles — Ice Cream Parlor"
+      },
+      "desc": {
+        "es": "Un punto dulce y colorido en pleno casco urbano de Labateca, ideal para refrescarse. Ofrece helados en cono (sencillo y doble), copas, malteadas, waffles, porciones de torta y ensaladas de frutas, además de jugos naturales en agua o en leche. También encuentras paletas y helados de la marca Bugui, gaseosas, bebidas frías, dulces y mecato. El salón está decorado con muebles de palet, muros florales y letreros neón, con mesas para sentarse a compartir. Atención amable de doña Yuleima Villamizar.",
+        "en": "A sweet, colorful spot right in Labateca's town center, perfect for cooling off. It offers ice-cream cones (single and double), sundaes, milkshakes, waffles, cake slices and fruit salads, plus fresh juices made with water or milk. You'll also find Bugui-brand popsicles and ice cream, sodas, cold drinks, candy and snacks. The parlor is decorated with pallet furniture, floral walls and neon signs, with tables to sit and share. Warm service from Doña Yuleima Villamizar."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a pocos pasos del parque principal.",
+        "en": "In Labateca's town center, just steps from the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Horario por confirmar — escribe por WhatsApp: 310 680 3058",
+        "en": "Hours to be confirmed — message via WhatsApp: 310 680 3058"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para un helado, jugos naturales, waffles y postres. Precios de referencia: cono sencillo $3.000, cono doble $6.000, jugos desde $4.000. Contacto por WhatsApp: 310 680 3058.",
+        "en": "Great for ice cream, fresh juices, waffles and desserts. Reference prices: single cone COP 3,000, double cone COP 6,000, juices from COP 4,000. Contact via WhatsApp: 310 680 3058."
+      },
+      "fotos": [
+        "labateca/heladeria-napoles-01",
+        "labateca/heladeria-napoles-02",
+        "labateca/heladeria-napoles-03",
+        "labateca/heladeria-napoles-04",
+        "labateca/heladeria-napoles-05",
+        "labateca/heladeria-napoles-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de la Heladería Nápoles en el casco urbano, con su pendón de helados y las entradas al salón y a la tienda.",
+          "en": "Heladería Nápoles storefront in the town center, with its ice-cream banner and entrances to the parlor and shop."
+        },
+        {
+          "es": "Salón interior con mesas de palet y el menú de jugos naturales, waffles, conos y porciones de torta.",
+          "en": "Interior seating with pallet tables and the menu of fresh juices, waffles, cones and cake slices."
+        },
+        {
+          "es": "Ambiente decorado con pendones de postres y sillas de colores para sentarse a disfrutar.",
+          "en": "A space decorated with dessert banners and colorful chairs to sit and enjoy."
+        },
+        {
+          "es": "Rincón con letrero neón, muro floral y mesas para compartir un helado.",
+          "en": "Corner with a neon sign, floral wall and tables to share an ice cream."
+        },
+        {
+          "es": "Neveras de helados Bugui y refrigerador de gaseosas y bebidas frías.",
+          "en": "Bugui ice-cream freezers and a fridge with sodas and cold drinks."
+        },
+        {
+          "es": "Vitrina de dulces y mecato junto a la nevera de helados de la marca Bugui.",
+          "en": "Candy and snack display next to the Bugui-brand ice-cream freezer."
+        }
+      ]
+    },
+    {
+      "id": "juzgado-labateca",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": true,
+      "lat": 7.2996,
+      "lng": -72.4945,
+      "mapaX": 494,
+      "mapaY": 393,
+      "nombre": {
+        "es": "Juzgado Promiscuo Municipal de Labateca",
+        "en": "Labateca Municipal Court (Juzgado Promiscuo Municipal)"
+      },
+      "desc": {
+        "es": "Es el despacho judicial del municipio, parte de la Rama Judicial de Colombia (Distrito Judicial de Pamplona, Norte de Santander). Por ser «promiscuo», un solo juez conoce asuntos de varias especialidades: civil, penal, de familia, laboral, comercial y otros procesos de menor cuantía y de primera instancia. Aquí los ciudadanos radican demandas y acciones de tutela, asisten a audiencias, adelantan sus procesos, solicitan copias y reciben orientación sobre trámites judiciales. Los estados, listas de traslado y publicaciones procesales se consultan en línea en ramajudicial.gov.co, y el despacho atiende por su correo oficial jprmlabateca@cendoj.ramajudicial.gov.co.",
+        "en": "The town's court, part of Colombia's Judicial Branch (Judicial District of Pamplona, Norte de Santander). Being a «promiscuo» (mixed-jurisdiction) court, a single judge hears cases across several areas of law: civil, criminal, family, labor, commercial and other first-instance and lower-amount matters. Here citizens file lawsuits and constitutional-rights actions (tutelas), attend hearings, pursue their cases, request copies and receive guidance on judicial procedures. Case dockets, transfer lists and procedural notices are consulted online at ramajudicial.gov.co, and the office can be reached at its official email jprmlabateca@cendoj.ramajudicial.gov.co."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a pocas cuadras del parque principal.",
+        "en": "In Labateca's town center, a few blocks from the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Lunes a viernes, en días hábiles (horario de atención judicial)",
+        "en": "Monday to Friday, on business days (court service hours)"
+      },
+      "dificultad": {
+        "es": "Acceso fácil (con rampa)",
+        "en": "Easy access (with ramp)"
+      },
+      "recomendacion": {
+        "es": "Para trámites y procesos judiciales del municipio. Consulta de estados y publicaciones procesales en ramajudicial.gov.co. Correo oficial del despacho: jprmlabateca@cendoj.ramajudicial.gov.co.",
+        "en": "For the municipality's judicial procedures and cases. Case dockets and procedural notices at ramajudicial.gov.co. Court's official email: jprmlabateca@cendoj.ramajudicial.gov.co."
+      },
+      "fotos": [
+        "labateca/juzgado-labateca-01",
+        "labateca/juzgado-labateca-02"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada del Juzgado Promiscuo Municipal de Labateca, con su rampa de acceso y el aviso de la Rama Judicial.",
+          "en": "Facade of Labateca's Municipal Court, with its access ramp and the Judicial Branch sign."
+        },
+        {
+          "es": "Placa conmemorativa del Juzgado Promiscuo Municipal de Labateca — Distrito Judicial de Pamplona, Norte de Santander (septiembre de 2020).",
+          "en": "Commemorative plaque of Labateca's Municipal Court — Judicial District of Pamplona, Norte de Santander (September 2020)."
+        }
+      ]
     }
   ]
 }
