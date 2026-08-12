@@ -409,6 +409,7 @@
       "mapaX": 478,
       "mapaY": 388,
       "telefono": "",
+      "telFijo": "576015948500",
       "nombre": {
         "es": "Banco Agrario de Colombia",
         "en": "Banco Agrario de Colombia"
@@ -449,6 +450,79 @@
         {
           "es": "Cajero automático (ATM) del Banco Agrario, disponible en la entrada de la sucursal.",
           "en": "Banco Agrario ATM, available at the branch entrance."
+        }
+      ]
+    },
+    {
+      "id": "siscatagua",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300170,
+      "lng": -72.494824,
+      "mapaX": 470,
+      "mapaY": 372,
+      "telefono": "573123047048",
+      "nombre": {
+        "es": "Siscatagua A.P.C. — Acueducto y Alcantarillado",
+        "en": "Siscatagua A.P.C. — Water & Sewer Utility"
+      },
+      "desc": {
+        "es": "Siscatagua A.P.C. es la entidad que lleva el agua potable a los hogares de Labateca. Opera la Planta de Tratamiento de Agua Potable (PTAP) —con floculadores, sedimentadores, filtros y su propio laboratorio de control de calidad— para que a cada casa llegue agua limpia y segura: «Vida en cada gota de agua». En su oficina se atienden todas las solicitudes, reclamos y novedades del servicio público de acueducto y alcantarillado, y se recibe el pago de la factura.",
+        "en": "Siscatagua A.P.C. is the utility that brings drinking water to Labateca's homes. It runs the Water Treatment Plant (PTAP) —with flocculators, settling tanks, filters and its own quality-control lab— so every household gets clean, safe water: 'Life in every drop of water.' Its office handles all requests, complaints and issues with the public water and sewer service, and also receives bill payments."
+      },
+      "comoLlegar": {
+        "es": "Oficina en el casco urbano: Carrera 2 N.º 4-07, barrio Divino Niño.",
+        "en": "Office in the town center: Carrera 2 No. 4-07, Divino Niño neighborhood."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "8:00 a. m. – 12:00 m y 2:00 – 6:00 p. m.",
+        "en": "8:00 a.m. – 12:00 p.m. and 2:00 – 6:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "¿Un daño, una fuga o una novedad con el agua o el alcantarillado? Aquí se atienden los reportes del servicio y también puedes pagar tu factura del acueducto. Escribe o llama por WhatsApp.",
+        "en": "A leak, a breakdown or an issue with your water or sewer? This is where reports are handled — and where you can also pay your water bill. Message or call via WhatsApp."
+      },
+      "fotos": [
+        "labateca/siscatagua-01",
+        "labateca/siscatagua-02",
+        "labateca/siscatagua-03",
+        "labateca/siscatagua-04",
+        "labateca/siscatagua-05",
+        "labateca/siscatagua-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "Planta de Tratamiento de Agua Potable (PTAP) de Labateca, con el mural «Vida en cada gota de agua».",
+          "en": "Labateca's Water Treatment Plant (PTAP), with the mural 'Life in every drop of water'."
+        },
+        {
+          "es": "Los filtros y sedimentadores de la planta, sobre la montaña, con el valle de Labateca al fondo.",
+          "en": "The plant's filters and settling tanks on the mountainside, with the Labateca valley in the background."
+        },
+        {
+          "es": "Floculadores y torre de aireación: parte del proceso que limpia el agua antes de distribuirla.",
+          "en": "Flocculators and aeration tower: part of the process that cleans the water before it is distributed."
+        },
+        {
+          "es": "Válvulas de los sedimentadores clarificadores, con la vista de las montañas santandereanas.",
+          "en": "Valves of the clarifier settling tanks, with a view of the Santander mountains."
+        },
+        {
+          "es": "Laboratorio propio de control de calidad, donde se analiza el agua para garantizar que sea potable.",
+          "en": "In-house quality-control lab, where the water is tested to ensure it is safe to drink."
+        },
+        {
+          "es": "Tanque y caseta de la planta en la ladera, rodeados del paisaje de montaña de Labateca.",
+          "en": "The plant's tank and hut on the hillside, surrounded by Labateca's mountain landscape."
         }
       ]
     },

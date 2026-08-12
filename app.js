@@ -282,6 +282,7 @@ const I18N = {
     cta_how:"Cómo llegar", cta_add:"Agregar", cta_added:"En ruta",
     cta_whatsapp:"WhatsApp", cta_whatsapp_t:"Contactar por WhatsApp",
     cta_drive:"Llegar al inicio", cta_trail:"Ver sendero",
+    cta_llamar:"Llamar", cta_llamar_t:"Llamar a la línea de atención",
     cta_wikiloc:"Navegar (GPS)", cta_wikiloc_t:"Abre el sendero en Wikiloc: te guía con tu ubicación en vivo y funciona sin señal (descarga la ruta antes de salir).",
     usar_eyebrow:"Guía rápida", usar_title:"Cómo usar la app", usar_sub:"Videos cortos para aprovecharla en segundos. ¿Buscas qué visitar? Toca el botón y explora todos los lugares.",
     usar_video_soon:"Video próximamente", usar_v1:"Encontrar lugares y armar tu ruta", usar_v2:"Navegar senderos con GPS (Wikiloc)", usar_v3:"El mapa, el clima y \"Cómo llegar\"", usar_cta:"Ver todos los lugares",
@@ -405,6 +406,7 @@ const I18N = {
     cta_how:"Directions", cta_add:"Add", cta_added:"In route",
     cta_whatsapp:"WhatsApp", cta_whatsapp_t:"Contact on WhatsApp",
     cta_drive:"Drive to start", cta_trail:"View trail",
+    cta_llamar:"Call", cta_llamar_t:"Call the phone line",
     cta_wikiloc:"Navigate (GPS)", cta_wikiloc_t:"Open the trail in Wikiloc: it guides you with your live location and works with no signal (download the route before you leave).",
     usar_eyebrow:"Quick guide", usar_title:"How to use the app", usar_sub:"Short videos to get the most out of it in seconds. Looking for places to visit? Tap the button and explore them all.",
     usar_video_soon:"Video coming soon", usar_v1:"Find places and build your route", usar_v2:"Navigate trails with GPS (Wikiloc)", usar_v3:"The map, weather and \"Directions\"", usar_cta:"See all places",
@@ -480,7 +482,8 @@ const IC = {
   plus:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>',
   check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>',
   warn:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
-  wa:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 0 1 12 4zm-2.7 4c-.2 0-.5 0-.7.4-.2.4-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.7 2.7 4.3 3.7 2.1.8 2.5.7 3 .6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3l-1.6-.8c-.2-.1-.4-.1-.6.1l-.6.8c-.1.2-.3.2-.5.1-.7-.3-1.4-.6-2.1-1.5-.5-.6-.8-1.2-.9-1.4-.1-.2 0-.4.1-.5l.4-.5c.1-.1.1-.3.2-.4 0-.1 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.6-.4z"/></svg>'
+  wa:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 0 1 12 4zm-2.7 4c-.2 0-.5 0-.7.4-.2.4-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.7 2.7 4.3 3.7 2.1.8 2.5.7 3 .6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3l-1.6-.8c-.2-.1-.4-.1-.6.1l-.6.8c-.1.2-.3.2-.5.1-.7-.3-1.4-.6-2.1-1.5-.5-.6-.8-1.2-.9-1.4-.1-.2 0-.4.1-.5l.4-.5c.1-.1.1-.3.2-.4 0-.1 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.6-.4z"/></svg>',
+  phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>'
 };
 const CATS = ["all","naturaleza","cultura","gastronomia","hospedaje","comercio","servicios","fav"];
 
@@ -574,6 +577,7 @@ function renderPlaces(){
         <div class="pc-actions">
           <a class="pc-btn map" href="${gmaps}" target="_blank" rel="noopener noreferrer" onclick="trackEvent('${p.id}','ruta')">${IC.navi}${p.track?t('cta_drive'):t('cta_how')}</a>
           ${p.telefono?`<a class="pc-btn wa" href="https://wa.me/${p.telefono}?text=${encodeURIComponent((lang==='es'?'Hola, te contacto desde la guía turística de Labateca sobre ':'Hi! I found you on the Labateca tourism guide — about ')+placeName(p)+'.')}" target="_blank" rel="noopener noreferrer" title="${t('cta_whatsapp_t')}" onclick="trackEvent('${p.id}','whatsapp')">${IC.wa}${t('cta_whatsapp')}</a>`:''}
+          ${p.telFijo?`<a class="pc-btn call" href="tel:+${String(p.telFijo).replace(/[^0-9]/g,'')}" title="${t('cta_llamar_t')}" onclick="trackEvent('${p.id}','llamar')">${IC.phone}${t('cta_llamar')}</a>`:''}
           ${p.wikiloc
             ? `<a class="pc-btn trail" href="${escHtml(p.wikiloc)}" target="_blank" rel="noopener noreferrer" title="${t('cta_wikiloc_t')}">${IC.hill}${t('cta_wikiloc')}</a>`
             : (p.track?`<button class="pc-btn trail" onclick="showTrail('${p.id}')">${IC.hill}${t('cta_trail')}</button>`:'')}
