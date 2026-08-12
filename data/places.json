@@ -403,9 +403,9 @@
       "id": "banco-agrario",
       "categoria": "servicios",
       "verified": true,
-      "coordsApprox": true,
-      "lat": 7.29975,
-      "lng": -72.4948,
+      "coordsApprox": false,
+      "lat": 7.3005894,
+      "lng": -72.4950748,
       "mapaX": 478,
       "mapaY": 388,
       "telefono": "",
@@ -480,8 +480,8 @@
         "en": "In town center"
       },
       "tiempo": {
-        "es": "8:00 a. m. – 12:00 m y 2:00 – 6:00 p. m.",
-        "en": "8:00 a.m. – 12:00 p.m. and 2:00 – 6:00 p.m."
+        "es": "Lunes a viernes, 8:00 a. m. – 12:00 m y 2:00 – 6:00 p. m.",
+        "en": "Monday to Friday, 8:00 a.m. – 12:00 p.m. and 2:00 – 6:00 p.m."
       },
       "dificultad": {
         "es": "Acceso fácil",
@@ -492,12 +492,12 @@
         "en": "A leak, a breakdown or an issue with your water or sewer? This is where reports are handled — and where you can also pay your water bill. Message or call via WhatsApp."
       },
       "fotos": [
-        "labateca/siscatagua-01",
+        "labateca/siscatagua-01b",
         "labateca/siscatagua-02",
-        "labateca/siscatagua-03",
-        "labateca/siscatagua-04",
+        "labateca/siscatagua-03b",
+        "labateca/siscatagua-04b",
         "labateca/siscatagua-05",
-        "labateca/siscatagua-06"
+        "labateca/siscatagua-06b"
       ],
       "fotosCap": [
         {
@@ -553,8 +553,8 @@
         "en": "In town center"
       },
       "tiempo": {
-        "es": "9:00 a. m. – 12:00 m y 2:00 – 7:00 p. m.",
-        "en": "9:00 a.m. – 12:00 p.m. and 2:00 – 7:00 p.m."
+        "es": "Lunes a sábado, 9:00 a. m. – 12:00 m y 2:00 – 7:00 p. m.",
+        "en": "Monday to Saturday, 9:00 a.m. – 12:00 p.m. and 2:00 – 7:00 p.m."
       },
       "dificultad": {
         "es": "Acceso fácil",
