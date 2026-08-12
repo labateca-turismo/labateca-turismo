@@ -153,6 +153,69 @@
       ]
     },
     {
+      "id": "cementerio",
+      "categoria": "cultura",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.3002463,
+      "lng": -72.4963025,
+      "mapaX": 464,
+      "mapaY": 342,
+      "telefono": "",
+      "nombre": {
+        "es": "Cementerio (Camposanto) de Labateca",
+        "en": "Labateca Cemetery"
+      },
+      "desc": {
+        "es": "El cementerio de Labateca es el camposanto tradicional del municipio, ligado desde sus orígenes a la vida parroquial. Más allá de su función, es parte del patrimonio y de la memoria de las familias labatequenses. La Parroquia Nuestra Señora de las Angustias conserva los libros de defunciones —fundamentales para la historia y la genealogía local—, con registros parroquiales que se remontan al año 1712.",
+        "en": "Labateca's cemetery is the town's traditional camposanto, tied since its origins to parish life. Beyond its function, it is part of the heritage and memory of Labateca's families. Our Lady of Sorrows Parish keeps the death registers —essential for local history and genealogy— with parish records dating back to 1712."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, al noroccidente del centro; el portón da directamente a la vía.",
+        "en": "In the town center, northwest of the main square; the gate opens right onto the street."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Visita durante el día",
+        "en": "Open during the day"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Un lugar de recogimiento y memoria; visítalo con respeto. La Parroquia conserva los libros de defunciones desde 1712, valiosos para la historia y la genealogía local.",
+        "en": "A place of reflection and remembrance; please visit respectfully. The parish has kept the death registers since 1712, valuable for local history and genealogy."
+      },
+      "fotos": [
+        "labateca/cementerio-01",
+        "labateca/cementerio-02",
+        "labateca/cementerio-03",
+        "labateca/cementerio-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "Portada del camposanto, coronada por la cruz y la inscripción «Esperamos la resurrección de los muertos».",
+          "en": "Entrance of the cemetery, crowned by the cross and the inscription 'We await the resurrection of the dead.'"
+        },
+        {
+          "es": "Calzada central hacia la capilla, presidida por la frase «Yo soy la resurrección y la vida».",
+          "en": "Central walkway toward the chapel, headed by the phrase 'I am the resurrection and the life.'"
+        },
+        {
+          "es": "El camposanto en lo alto, con el pueblo de Labateca y las montañas al fondo; patrimonio y memoria de las familias labatequenses.",
+          "en": "The cemetery on the hillside, with the town of Labateca and the mountains in the background; heritage and memory of Labateca's families."
+        },
+        {
+          "es": "Capilla del cementerio, lugar de oración y despedida.",
+          "en": "The cemetery chapel, a place of prayer and farewell."
+        }
+      ]
+    },
+    {
       "id": "parque",
       "categoria": "cultura",
       "verified": true,
