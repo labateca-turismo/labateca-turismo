@@ -527,6 +527,59 @@
       ]
     },
     {
+      "id": "criss-studio",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300346,
+      "lng": -72.494870,
+      "mapaX": 486,
+      "mapaY": 366,
+      "telefono": "584168475520",
+      "nombre": {
+        "es": "Criss Studio — Uñas y Belleza",
+        "en": "Criss Studio — Nails & Beauty"
+      },
+      "desc": {
+        "es": "Criss Studio es el rincón de belleza de Labateca: un espacio moderno y acogedor para consentirte y lucir espectacular. Manicure, pedicure, uñas en acrílico y poligel, depilación y pigmentación de cejas, con productos de calidad y todo el detalle. ¡Agenda tu cita y déjate engreír!",
+        "en": "Criss Studio is Labateca's beauty corner: a modern, cozy space to pamper yourself and look amazing. Manicure, pedicure, acrylic and polygel nails, waxing and eyebrow tinting, with quality products and great attention to detail. Book your appointment and treat yourself!"
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano (dirección 4-20), a pasos del parque principal.",
+        "en": "In the town center (address 4-20), steps from the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "9:00 a. m. – 12:00 m y 2:00 – 7:00 p. m.",
+        "en": "9:00 a.m. – 12:00 p.m. and 2:00 – 7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Servicios: manicure, pedicure, uñas en acrílico y poligel, depilación y pigmentación de cejas. Agenda tu cita por WhatsApp (también en Colombia: 314 309 0046).",
+        "en": "Services: manicure, pedicure, acrylic and polygel nails, waxing and eyebrow tinting. Book your appointment via WhatsApp (also in Colombia: 314 309 0046)."
+      },
+      "fotos": [
+        "labateca/criss-studio-01",
+        "labateca/criss-studio-02"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Criss Studio en el casco urbano de Labateca, con su estación de manicure iluminada al fondo.",
+          "en": "Criss Studio's storefront in Labateca's town center, with its lit manicure station in the background."
+        },
+        {
+          "es": "Interior del estudio: camilla de estética, aro de luz, exhibidor de esmaltes y estación de manicure bajo el letrero «Criss Studio».",
+          "en": "Inside the studio: beauty bed, ring light, nail-polish display and manicure station under the 'Criss Studio' sign."
+        }
+      ]
+    },
+    {
       "id": "casa-cultura",
       "categoria": "cultura",
       "verified": true,
