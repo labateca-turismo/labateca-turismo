@@ -2567,6 +2567,58 @@
           "en": "Shelves of cleaning products, canned goods and household items."
         }
       ]
+    },
+    {
+      "id": "supergiros",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299931881265672,
+      "lng": -72.49471127546606,
+      "mapaX": 482,
+      "mapaY": 382,
+      "nombre": {
+        "es": "SuperGiros",
+        "en": "SuperGiros"
+      },
+      "desc": {
+        "es": "Oficina de SuperGiros en el casco urbano de Labateca, parte de la red de servicios financieros más grande de Colombia. Aquí puedes enviar y recibir giros nacionales, pagar facturas de servicios públicos y convenios (Movistar, DirecTV, y muchos más), hacer recargas de celular y billeteras, y usar la corresponsalía bancaria (Grupo Aval): retiros, consignaciones y depósitos. También es punto de juegos de suerte y azar: chance y apuestas deportivas BetPlay. Una opción práctica para trámites de dinero sin tener que salir del pueblo.",
+        "en": "A SuperGiros office in Labateca's town center, part of Colombia's largest financial-services network. Here you can send and receive domestic money transfers, pay utility bills and service agreements (Movistar, DirecTV and many more), top up phones and digital wallets, and use banking-correspondent services (Grupo Aval): withdrawals, deposits and payments. It's also a games-of-chance point: 'chance' lottery and BetPlay sports betting. A handy option for money errands without leaving town."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, cerca del parque principal.",
+        "en": "In Labateca's town center, near the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 7:00 a. m. – 7:00 p. m.",
+        "en": "Every day, 7:00 a.m. – 7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para giros nacionales, pago de facturas de servicios públicos, recargas, retiros y consignaciones (corresponsal bancario Grupo Aval), chance y apuestas BetPlay.",
+        "en": "Great for domestic money transfers, utility-bill payments, top-ups, withdrawals and deposits (Grupo Aval banking correspondent), lottery and BetPlay betting."
+      },
+      "fotos": [
+        "labateca/supergiros-01",
+        "labateca/supergiros-02"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de la oficina SuperGiros, con su aviso azul y base en piedra en el casco urbano.",
+          "en": "The SuperGiros office facade, with its blue sign and stone base in the town center."
+        },
+        {
+          "es": "Interior con los terminales de apuestas BetPlay y el punto de atención SuperGiros.",
+          "en": "Interior with BetPlay betting terminals and the SuperGiros service counter."
+        }
+      ]
     }
   ]
 }
