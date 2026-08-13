@@ -2499,6 +2499,74 @@
           "en": "Entrance of Maxipan Bakery, seen from the street (address 2-60)."
         }
       ]
+    },
+    {
+      "id": "tienda-alex",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.297252,
+      "lng": -72.49704,
+      "mapaX": 342,
+      "mapaY": 473,
+      "telefono": "573114554780",
+      "nombre": {
+        "es": "Tienda Alex",
+        "en": "Tienda Alex — Corner Store"
+      },
+      "desc": {
+        "es": "Tienda de barrio surtida y bien organizada en el casco urbano de Labateca, con la entrada adornada de materas y flores. Encuentras de todo para el día a día: víveres y granos, pan fresco, mecato y pasabocas (Cheetos, Doritos, De Todito, Margarita), lácteos y huevos, gaseosas y bebidas frías, agua en botellón, productos de aseo y cuidado personal, y artículos de conveniencia. También es punto de recargas Claro. Atención de doña María Diva Ortega.",
+        "en": "A well-stocked, tidy neighborhood store in Labateca's town center, its entrance decorated with potted plants and flowers. You'll find everything for daily life: groceries and grains, fresh bread, snacks (Cheetos, Doritos, De Todito, Margarita), dairy and eggs, sodas and cold drinks, bottled water, cleaning and personal-care products, and convenience items. It's also a Claro top-up point. Run by Doña María Diva Ortega."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca (dirección 2-21).",
+        "en": "In Labateca's town center (address 2-21)."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 7:00 a. m. – 7:00 p. m.",
+        "en": "Every day, 7:00 a.m. – 7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para víveres, mecato, bebidas, agua en botellón y productos de aseo. Punto de recargas Claro. Contacto por WhatsApp: 311 455 4780.",
+        "en": "Great for groceries, snacks, drinks, bottled water and cleaning products. Claro top-up point. Contact via WhatsApp: 311 455 4780."
+      },
+      "fotos": [
+        "labateca/tienda-alex-01",
+        "labateca/tienda-alex-02",
+        "labateca/tienda-alex-03",
+        "labateca/tienda-alex-04",
+        "labateca/tienda-alex-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Tienda Alex, con sus dos entradas y la acera adornada de materas y flores.",
+          "en": "Tienda Alex storefront, with its two entrances and a sidewalk decorated with potted plants and flowers."
+        },
+        {
+          "es": "Pared de mecato (De Todito, Cheetos, Doritos, Margarita), granos, pan fresco y agua en botellón.",
+          "en": "Snack wall (De Todito, Cheetos, Doritos, Margarita), grains, fresh bread and bottled water."
+        },
+        {
+          "es": "Neveras de helados y bebidas frías, con lácteos y punto de recargas Claro.",
+          "en": "Ice-cream and cold-drink freezers, with dairy and a Claro top-up point."
+        },
+        {
+          "es": "Sección de aseo y cuidado personal, con vitrina de artículos de conveniencia.",
+          "en": "Toiletries and personal-care section, with a display of convenience items."
+        },
+        {
+          "es": "Estantería de productos de aseo, enlatados y artículos para el hogar.",
+          "en": "Shelves of cleaning products, canned goods and household items."
+        }
+      ]
     }
   ]
 }
