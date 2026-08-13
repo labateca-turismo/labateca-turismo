@@ -2436,6 +2436,69 @@
           "en": "Counter with toiletries and personal-care products, in a clean and tidy shop."
         }
       ]
+    },
+    {
+      "id": "panaderia-maxipan",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299102,
+      "lng": -72.494192,
+      "mapaX": 513,
+      "mapaY": 410,
+      "telefono": "573168725118",
+      "nombre": {
+        "es": "Panadería Maxipan",
+        "en": "Maxipan Bakery"
+      },
+      "desc": {
+        "es": "Panadería del casco urbano de Labateca, con pan fresco todos los días: pan blandito, mogollas, roscones, pan de queso, hojaldres y variedad de productos de horno. También encuentras galletas y mecato (Saltín Noel, Tosh, Yupis), dulces, jugos Hit, gaseosas y bebidas frías para acompañar. Un buen punto para el desayuno o las onces. Administra Diego Ordóñez.",
+        "en": "A bakery in Labateca's town center with fresh bread every day: soft rolls, mogollas, roscones, cheese bread, puff pastries and a variety of oven-baked goods. You'll also find crackers and snacks (Saltín Noel, Tosh, Yupis), sweets, Hit juices, sodas and cold drinks to go with them. A great spot for breakfast or an afternoon snack. Managed by Diego Ordóñez."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a pocas cuadras del parque principal.",
+        "en": "In Labateca's town center, a few blocks from the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días (excepto festivos), 7:00 a. m. – 6:30 p. m.",
+        "en": "Every day (except holidays), 7:00 a.m. – 6:30 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para pan fresco, roscones, hojaldres, mecato y bebidas. Contacto por WhatsApp: 316 872 5118.",
+        "en": "Great for fresh bread, roscones, pastries, snacks and drinks. Contact via WhatsApp: 316 872 5118."
+      },
+      "fotos": [
+        "labateca/panaderia-maxipan-01",
+        "labateca/panaderia-maxipan-02",
+        "labateca/panaderia-maxipan-03",
+        "labateca/panaderia-maxipan-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "Vitrina con pan fresco (blandito, roscones, hojaldres) y pared de mecato y dulces.",
+          "en": "Display case with fresh bread (soft rolls, roscones, pastries) and a wall of snacks and sweets."
+        },
+        {
+          "es": "Estantería surtida con pan, galletas Saltín Noel y jugos Hit.",
+          "en": "Shelves stocked with bread, Saltín Noel crackers and Hit juices."
+        },
+        {
+          "es": "Nevera de gaseosas y bebidas frías junto a la vitrina de hojaldres y pan.",
+          "en": "Fridge of sodas and cold drinks next to the display of pastries and bread."
+        },
+        {
+          "es": "Entrada de la Panadería Maxipan, vista desde la calle (dirección 2-60).",
+          "en": "Entrance of Maxipan Bakery, seen from the street (address 2-60)."
+        }
+      ]
     }
   ]
 }
