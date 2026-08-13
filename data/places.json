@@ -2135,8 +2135,8 @@
         "en": "In town center"
       },
       "tiempo": {
-        "es": "Horario por confirmar — escribe por WhatsApp: 310 680 3058",
-        "en": "Hours to be confirmed — message via WhatsApp: 310 680 3058"
+        "es": "Lunes a domingo, 9:00 a. m. – 7:00 p. m.",
+        "en": "Monday to Sunday, 9:00 a.m. – 7:00 p.m."
       },
       "dificultad": {
         "es": "Acceso fácil",
@@ -2185,11 +2185,11 @@
       "id": "juzgado-labateca",
       "categoria": "servicios",
       "verified": true,
-      "coordsApprox": true,
-      "lat": 7.2996,
-      "lng": -72.4945,
-      "mapaX": 494,
-      "mapaY": 393,
+      "coordsApprox": false,
+      "lat": 7.300002,
+      "lng": -72.49379,
+      "mapaX": 537,
+      "mapaY": 380,
       "nombre": {
         "es": "Juzgado Promiscuo Municipal de Labateca",
         "en": "Labateca Municipal Court (Juzgado Promiscuo Municipal)"
