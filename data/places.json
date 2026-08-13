@@ -2232,6 +2232,210 @@
           "en": "Commemorative plaque of Labateca's Municipal Court — Judicial District of Pamplona, Norte de Santander (September 2020)."
         }
       ]
+    },
+    {
+      "id": "moto-repuesto-doble-aa",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298773,
+      "lng": -72.493981,
+      "mapaX": 526,
+      "mapaY": 421,
+      "telefono": "573205777829",
+      "nombre": {
+        "es": "Moto Repuesto Doble AA",
+        "en": "Moto Repuesto Doble AA — Motorcycle Parts & Workshop"
+      },
+      "desc": {
+        "es": "Repuestos, accesorios y taller para motos en pleno casco urbano de Labateca. Manejan aceites y lubricantes (Motul, Shell, Multigil, entre otros), filtros, cadenas, discos, cascos, guayas, llantas y neumáticos, herramientas (Total) y mil repuestos para tu moto. Además cuentan con desmontadora de llantas y servicio de mecánica para dejar tu moto lista. Atención de Adriana Rocío Mora.",
+        "en": "Motorcycle parts, accessories and workshop right in Labateca's town center. They carry oils and lubricants (Motul, Shell, Multigil and more), filters, chains, brake discs, helmets, cables, tires, tools (Total) and countless spare parts for your bike. They also have a tire-changing machine and mechanical service to get your motorcycle ready. Run by Adriana Rocío Mora."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a pocas cuadras del parque principal.",
+        "en": "In Labateca's town center, a few blocks from the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 8:00 a. m. – 7:00 p. m.",
+        "en": "Every day, 8:00 a.m. – 7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para repuestos, aceites, cascos, llantas y mantenimiento de tu moto. Contacto por WhatsApp: 320 577 7829.",
+        "en": "Great for spare parts, oils, helmets, tires and motorcycle maintenance. Contact via WhatsApp: 320 577 7829."
+      },
+      "fotos": [
+        "labateca/moto-repuestos-01",
+        "labateca/moto-repuestos-02",
+        "labateca/moto-repuestos-03",
+        "labateca/moto-repuestos-04",
+        "labateca/moto-repuestos-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Moto Repuesto Doble AA: dos locales con repuestos, accesorios y una moto en la entrada.",
+          "en": "Moto Repuesto Doble AA storefront: two units with parts, accessories and a motorcycle by the entrance."
+        },
+        {
+          "es": "Estantería de aceites y lubricantes para moto (Motul, Shell, Multigil) y cascos.",
+          "en": "Shelves of motorcycle oils and lubricants (Motul, Shell, Multigil) and helmets."
+        },
+        {
+          "es": "Vitrina de repuestos, herramientas y neumáticos para toda clase de motos.",
+          "en": "Display of spare parts, tools and tires for all kinds of motorcycles."
+        },
+        {
+          "es": "Herramientas Total, discos, guayas y accesorios, con llantas al fondo.",
+          "en": "Total tools, brake discs, cables and accessories, with tires in the back."
+        },
+        {
+          "es": "Zona de taller con desmontadora de llantas y equipos para el mantenimiento de motos.",
+          "en": "Workshop area with a tire-changing machine and equipment for motorcycle maintenance."
+        }
+      ]
+    },
+    {
+      "id": "tecno-agro",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299147,
+      "lng": -72.494282,
+      "mapaX": 508,
+      "mapaY": 409,
+      "telefono": "573144922534",
+      "nombre": {
+        "es": "Almacén Tecno-Agro",
+        "en": "Tecno-Agro Farm Supply Store"
+      },
+      "desc": {
+        "es": "Almacén agropecuario surtido para el campo labatecano. Encuentras agroinsumos (fertilizantes, insecticidas, herbicidas), semillas de hortalizas, fumigadoras y motobombas, guadañas y desbrozadoras, herramientas (palas, azadones Bellota), alambre de púas y de amarre, mangueras y accesorios de riego, concentrados y productos veterinarios para animales, y mucho más. «Tecnología y conocimiento al servicio del agro». Administra Vilma Lucía García.",
+        "en": "A well-stocked farm supply store for Labateca's countryside. You'll find agricultural inputs (fertilizers, insecticides, herbicides), vegetable seeds, sprayers and water pumps, brush cutters, tools (shovels, Bellota hoes), barbed and tie wire, hoses and irrigation fittings, animal feed and veterinary products, and much more. 'Technology and knowledge at the service of agriculture.' Managed by Vilma Lucía García."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a pocas cuadras del parque principal.",
+        "en": "In Labateca's town center, a few blocks from the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 6:00 a. m. – 6:00 p. m.",
+        "en": "Every day, 6:00 a.m. – 6:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para insumos agrícolas, semillas, fumigadoras, herramientas y productos veterinarios. Contacto por WhatsApp: 314 492 2534.",
+        "en": "Great for farm inputs, seeds, sprayers, tools and veterinary products. Contact via WhatsApp: 314 492 2534."
+      },
+      "fotos": [
+        "labateca/tecno-agro-01",
+        "labateca/tecno-agro-02",
+        "labateca/tecno-agro-03",
+        "labateca/tecno-agro-04",
+        "labateca/tecno-agro-05",
+        "labateca/tecno-agro-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada del Almacén Tecno-Agro, punto FINCA e INTEROC, con sus dos entradas en el casco urbano.",
+          "en": "Tecno-Agro store facade, a FINCA and INTEROC point, with its two entrances in the town center."
+        },
+        {
+          "es": "Herramientas para el campo: guadañas, palas, azadones y rollos de alambre.",
+          "en": "Tools for the field: brush cutters, shovels, hoes and rolls of wire."
+        },
+        {
+          "es": "Fumigadoras y motobombas Royal Condor y Forte para el trabajo agrícola.",
+          "en": "Royal Condor and Forte sprayers and water pumps for farm work."
+        },
+        {
+          "es": "Estantería de insecticidas, herbicidas y agroquímicos, con el aviso de Tecno-Agro.",
+          "en": "Shelves of insecticides, herbicides and agrochemicals, with the Tecno-Agro sign."
+        },
+        {
+          "es": "Concentrados para animales, semillas a granel y accesorios para el campo.",
+          "en": "Animal feed, bulk seeds and farm supplies."
+        },
+        {
+          "es": "Repuestos, accesorios de riego y conexiones para toda necesidad del agro.",
+          "en": "Spare parts, irrigation fittings and connections for every farming need."
+        }
+      ]
+    },
+    {
+      "id": "drogueria-maria-jose",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298917,
+      "lng": -72.493682,
+      "mapaX": 544,
+      "mapaY": 416,
+      "telefono": "573184471211",
+      "nombre": {
+        "es": "Droguería María José",
+        "en": "María José Pharmacy (Droguería)"
+      },
+      "desc": {
+        "es": "La droguería del pueblo, limpia y bien surtida, en el casco urbano de Labateca. Encuentras medicamentos, vitaminas y productos de venta libre, cuidado personal y aseo, cosméticos y perfumería, productos para bebé, primeros auxilios y artículos de conveniencia. Atención amable de Josefa Milena Contreras Parada.",
+        "en": "The town's pharmacy, clean and well stocked, in Labateca's town center. You'll find medicines, vitamins and over-the-counter products, personal care and toiletries, cosmetics and perfumes, baby products, first aid and convenience items. Warm service from Josefa Milena Contreras Parada."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a pocas cuadras del parque principal.",
+        "en": "In Labateca's town center, a few blocks from the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 8:00 a. m. – 12:00 m. y 2:00 – 6:00 p. m.",
+        "en": "Every day, 8:00 a.m. – 12:00 p.m. and 2:00 – 6:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para medicamentos, vitaminas, cuidado personal y productos de aseo. Contacto por WhatsApp: 318 447 1211.",
+        "en": "Great for medicines, vitamins, personal care and toiletries. Contact via WhatsApp: 318 447 1211."
+      },
+      "fotos": [
+        "labateca/drogueria-maria-jose-01",
+        "labateca/drogueria-maria-jose-02",
+        "labateca/drogueria-maria-jose-03",
+        "labateca/drogueria-maria-jose-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de la Droguería María José, con su aviso verde en el casco urbano.",
+          "en": "Droguería María José storefront, with its green sign in the town center."
+        },
+        {
+          "es": "Vitrinas surtidas con medicamentos, vitaminas y productos de cuidado personal.",
+          "en": "Display cases stocked with medicines, vitamins and personal-care products."
+        },
+        {
+          "es": "Estantería con medicamentos, suplementos y artículos de primeros auxilios.",
+          "en": "Shelves with medicines, supplements and first-aid items."
+        },
+        {
+          "es": "Mostrador con productos de aseo y cuidado personal, en un local limpio y ordenado.",
+          "en": "Counter with toiletries and personal-care products, in a clean and tidy shop."
+        }
+      ]
     }
   ]
 }
