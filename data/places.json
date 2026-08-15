@@ -2619,6 +2619,562 @@
           "en": "Interior with BetPlay betting terminals and the SuperGiros service counter."
         }
       ]
+    },
+    {
+      "id": "esquinita-sabor",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300103,
+      "lng": -72.49476,
+      "mapaX": 479,
+      "mapaY": 376,
+      "telefono": "573138048438",
+      "nombre": {
+        "es": "La Esquinita del Sabor",
+        "en": "La Esquinita del Sabor — Café & Snacks"
+      },
+      "desc": {
+        "es": "Café y comidas rápidas en el casco urbano de Labateca, con un interior muy colorido decorado con motivos tricolor, flores y materas. Ideal para el desayuno y las onces: empanadas, pasteles y arepas recién hechas, pan, avena y bebidas frías. Un rincón acogedor con mesas de madera para sentarse a compartir. Atención de doña Yina Ochoa.",
+        "en": "A café and quick-bites spot in Labateca's town center, with a colorful interior decorated in Colombian-flag colors, flowers and potted plants. Great for breakfast and afternoon snacks: freshly made empanadas, pastries and arepas, bread, oat drinks and cold beverages. A cozy corner with wooden tables to sit and share. Run by Doña Yina Ochoa."
+      },
+      "comoLlegar": {
+        "es": "En una esquina del casco urbano de Labateca (dirección 4-12).",
+        "en": "On a corner in Labateca's town center (address 4-12)."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 8:30 a. m. – 12:00 m.",
+        "en": "Every day, 8:30 a.m. – 12:00 noon"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para desayuno y onces: empanadas, pasteles, arepas, pan y avena. Contacto por WhatsApp: 313 804 8438.",
+        "en": "Great for breakfast and snacks: empanadas, pastries, arepas, bread and oat drinks. Contact via WhatsApp: 313 804 8438."
+      },
+      "fotos": [
+        "labateca/esquinita-sabor-01",
+        "labateca/esquinita-sabor-02",
+        "labateca/esquinita-sabor-03",
+        "labateca/esquinita-sabor-04",
+        "labateca/esquinita-sabor-05",
+        "labateca/esquinita-sabor-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "Interior colorido con mesas de madera, butacos de colores y adornos tricolor colgantes.",
+          "en": "Colorful interior with wooden tables, colorful stools and hanging Colombian-flag decorations."
+        },
+        {
+          "es": "Vitrina caliente con empanadas, pasteles y arepas recién hechas.",
+          "en": "Warm display case with freshly made empanadas, pastries and arepas."
+        },
+        {
+          "es": "Fachada y entrada del local (dirección 4-12) con vista al interior.",
+          "en": "Storefront and entrance (address 4-12) with a view inside."
+        },
+        {
+          "es": "Salón principal con la imagen del Sagrado Corazón, TV y la barra de atención.",
+          "en": "Main room with the Sacred Heart image, TV and the service counter."
+        },
+        {
+          "es": "Vitrina de productos con panes, arepas y pasteles surtidos.",
+          "en": "Product display with assorted breads, arepas and pastries."
+        },
+        {
+          "es": "Un pastel recién servido, listo para disfrutar en el local.",
+          "en": "A freshly served pastry, ready to enjoy at the spot."
+        }
+      ]
+    },
+    {
+      "id": "taller-el-toro",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298122,
+      "lng": -72.493567,
+      "mapaX": 551,
+      "mapaY": 443,
+      "telefono": "573123106831",
+      "nombre": {
+        "es": "Taller de Motos El Toro",
+        "en": "El Toro Motorcycle Workshop"
+      },
+      "desc": {
+        "es": "Motorepuestos y taller de motos en el casco urbano de Labateca. Venta de repuestos para las principales marcas (Yamaha, Honda, Suzuki, Bajaj, AKT, Kymco y más), aceites y lubricantes, llantas, baterías, bujías y accesorios. Ofrecen mecánica en general, servicio eléctrico, tornillería y servicio de prensa hidráulica. Un taller bien surtido y organizado para dejar tu moto a punto. Propietario: Gerson Enrique Fernández.",
+        "en": "A motorcycle parts store and repair workshop in Labateca's town center. They sell parts for the main brands (Yamaha, Honda, Suzuki, Bajaj, AKT, Kymco and more), oils and lubricants, tires, batteries, spark plugs and accessories. Services include general mechanics, electrical work, threading/fasteners and hydraulic-press service. A well-stocked, organized shop to keep your motorcycle running. Owner: Gerson Enrique Fernández."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca (dirección 0-34).",
+        "en": "In Labateca's town center (address 0-34)."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Lunes a sábado, 8:00 a. m. – 12:00 m. y 2:00 – 6:00 p. m.",
+        "en": "Monday to Saturday, 8:00 a.m. – 12:00 noon and 2:00 – 6:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para repuestos de moto, aceites, llantas, mecánica general, servicio eléctrico y prensa hidráulica. Contacto por WhatsApp: 312 310 6831.",
+        "en": "Great for motorcycle parts, oils, tires, general mechanics, electrical service and hydraulic press. Contact via WhatsApp: 312 310 6831."
+      },
+      "fotos": [
+        "labateca/taller-el-toro-01",
+        "labateca/taller-el-toro-02",
+        "labateca/taller-el-toro-03",
+        "labateca/taller-el-toro-04",
+        "labateca/taller-el-toro-05",
+        "labateca/taller-el-toro-06",
+        "labateca/taller-el-toro-07",
+        "labateca/taller-el-toro-08"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada del local con el aviso «Motorepuestos Toro» y las marcas que atienden.",
+          "en": "Storefront with the 'Motorepuestos Toro' sign and the brands they service."
+        },
+        {
+          "es": "Área de taller con prensa hidráulica, montallantas y mesa de trabajo.",
+          "en": "Workshop area with hydraulic press, tire changer and workbench."
+        },
+        {
+          "es": "Pared de herramientas: llaves, alicates y destornilladores organizados.",
+          "en": "Tool wall: wrenches, pliers and screwdrivers neatly organized."
+        },
+        {
+          "es": "Estantería de repuestos surtidos para varias marcas de motos.",
+          "en": "Shelves of assorted parts for several motorcycle brands."
+        },
+        {
+          "es": "Repuestos menores: balineras, bujías, bombillos y rodamientos.",
+          "en": "Small parts: bearings, spark plugs, bulbs and rollers."
+        },
+        {
+          "es": "Surtido de aceites y lubricantes para moto (Motul, Shell, Castrol, Yamalube y más).",
+          "en": "A range of motorcycle oils and lubricants (Motul, Shell, Castrol, Yamalube and more)."
+        },
+        {
+          "es": "Vitrina con accesorios y repuestos especiales.",
+          "en": "Display case with accessories and special parts."
+        },
+        {
+          "es": "Estante de llantas para moto de distintas medidas.",
+          "en": "Rack of motorcycle tires in various sizes."
+        }
+      ]
+    },
+    {
+      "id": "supermercado-campesino",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.29849,
+      "lng": -72.493971,
+      "mapaX": 526,
+      "mapaY": 431,
+      "telefono": "573123106831",
+      "nombre": {
+        "es": "Supermercado El Campesino",
+        "en": "El Campesino Supermarket"
+      },
+      "desc": {
+        "es": "Supermercado familiar en el casco urbano de Labateca, «con todo para su hogar». Encuentras frutas y verduras frescas, carnes frías y lácteos en nevera, granos y abarrotes, pan, mecato, bebidas, productos de aseo y cuidado del hogar. Un mercado surtido y bien atendido para la compra del día a día. Propietario: Gerson Enrique Fernández.",
+        "en": "A family supermarket in Labateca's town center, 'with everything for your home'. You'll find fresh fruit and vegetables, cold cuts and dairy in the fridge, grains and groceries, bread, snacks, drinks, and cleaning and household products. A well-stocked, friendly market for everyday shopping. Owner: Gerson Enrique Fernández."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca.",
+        "en": "In Labateca's town center."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 6:00 a. m. – 8:00 p. m.",
+        "en": "Every day, 6:00 a.m. – 8:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para frutas y verduras, carnes frías, granos, abarrotes y productos de aseo. Contacto por WhatsApp: 312 310 6831.",
+        "en": "Great for fruit and vegetables, cold cuts, grains, groceries and cleaning products. Contact via WhatsApp: 312 310 6831."
+      },
+      "fotos": [
+        "labateca/supermercado-campesino-01",
+        "labateca/supermercado-campesino-02",
+        "labateca/supermercado-campesino-03",
+        "labateca/supermercado-campesino-04",
+        "labateca/supermercado-campesino-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada del supermercado con su aviso «Con todo para su hogar».",
+          "en": "Supermarket storefront with its 'Everything for your home' sign."
+        },
+        {
+          "es": "Sección de frutas y verduras frescas en canastillas.",
+          "en": "Fresh fruit and vegetable section in baskets."
+        },
+        {
+          "es": "Neveras con lácteos, carnes frías, embutidos y bebidas.",
+          "en": "Fridges with dairy, cold cuts, deli meats and drinks."
+        },
+        {
+          "es": "Interior con abarrotes, pan, granos y productos de aseo.",
+          "en": "Interior with groceries, bread, grains and cleaning products."
+        },
+        {
+          "es": "Estante de frutas con el punto de pesaje.",
+          "en": "Fruit shelf with the weighing station."
+        }
+      ]
+    },
+    {
+      "id": "tienda-ivancho",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299401,
+      "lng": -72.494427,
+      "mapaX": 499,
+      "mapaY": 400,
+      "telefono": "573202435050",
+      "nombre": {
+        "es": "La Tienda de Ivancho",
+        "en": "La Tienda de Ivancho — Corner Store"
+      },
+      "desc": {
+        "es": "Tienda y granero bien surtido en el casco urbano de Labateca. Encuentras víveres y abarrotes, salchichonería y quesos, pan, mecato y pasabocas, enlatados, aceites, bebidas frías, productos de aseo y de cuidado personal. Cuenta con mesas para sentarse un rato. Un clásico de barrio para la compra diaria. Administrador: Lino Camargo.",
+        "en": "A well-stocked corner store and grocer in Labateca's town center. You'll find groceries and staples, deli meats and cheeses, bread, snacks, canned goods, oils, cold drinks, and cleaning and personal-care products. It has tables to sit for a while. A neighborhood classic for everyday shopping. Manager: Lino Camargo."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca (dirección 5-67).",
+        "en": "In Labateca's town center (address 5-67)."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 6:00 a. m. – 7:00 p. m.",
+        "en": "Every day, 6:00 a.m. – 7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para víveres, salchichonería, pan, mecato, bebidas y productos de aseo. Contacto por WhatsApp: 320 243 5050.",
+        "en": "Great for groceries, deli meats, bread, snacks, drinks and cleaning products. Contact via WhatsApp: 320 243 5050."
+      },
+      "fotos": [
+        "labateca/tienda-ivancho-01",
+        "labateca/tienda-ivancho-02",
+        "labateca/tienda-ivancho-03",
+        "labateca/tienda-ivancho-04",
+        "labateca/tienda-ivancho-05",
+        "labateca/tienda-ivancho-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "Interior de la tienda con vitrinas, estantería surtida y mesas para sentarse.",
+          "en": "Store interior with display cases, well-stocked shelves and tables to sit at."
+        },
+        {
+          "es": "Estantería de abarrotes, salchichonería, quesos y enlatados.",
+          "en": "Shelves of groceries, deli meats, cheeses and canned goods."
+        },
+        {
+          "es": "Vitrinas de pan y variedad de productos surtidos.",
+          "en": "Bread cases and a variety of assorted products."
+        },
+        {
+          "es": "Estantes de aceites y abarrotes junto a la nevera de bebidas y lácteos.",
+          "en": "Shelves of oils and groceries next to the drinks and dairy fridge."
+        },
+        {
+          "es": "Exhibidor de mecato y productos de aseo.",
+          "en": "Snacks and cleaning-products display."
+        },
+        {
+          "es": "Vista nocturna del local desde la calle.",
+          "en": "Night view of the store from the street."
+        }
+      ]
+    },
+    {
+      "id": "hospedaje-mirador",
+      "categoria": "hospedaje",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.296239,
+      "lng": -72.498977,
+      "mapaX": 225,
+      "mapaY": 507,
+      "telefono": "573107821429",
+      "nombre": {
+        "es": "Hospedaje Mirador de Mi Bateca",
+        "en": "Mirador de Mi Bateca Lodging"
+      },
+      "desc": {
+        "es": "Hospedaje en Labateca ubicado en un edificio llamativo, decorado con murales de paisajes y motivos de la región. Ofrece habitaciones privadas y dormitorio múltiple, baño, sala de estar y hermosas vistas panorámicas al valle y las montañas. El mismo lugar cuenta con zona de disco-bar y karaoke «Mirador de mi Bateca», ideal para grupos y visitantes. Atención las 24 horas coordinando con el administrador. Propietario: Fredy Delgado.",
+        "en": "Lodging in Labateca set in an eye-catching building decorated with landscape murals and regional motifs. It offers private rooms and a shared dormitory, a bathroom, a lounge and beautiful panoramic views of the valley and mountains. The same venue has a disco-bar and karaoke area, 'Mirador de mi Bateca', ideal for groups and visitors. Available 24 hours by arrangement with the manager. Owner: Fredy Delgado."
+      },
+      "comoLlegar": {
+        "es": "En Labateca, cerca del casco urbano; edificio con mural en la fachada. Coordina con el administrador.",
+        "en": "In Labateca, near the town center; building with a mural on the facade. Coordinate with the manager."
+      },
+      "dist": {
+        "es": "Casco urbano",
+        "en": "Town area"
+      },
+      "tiempo": {
+        "es": "Atención 24 horas — coordinar con el administrador.",
+        "en": "Available 24 hours — coordinate with the manager."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para alojarse en grupo o en pareja, con vista al valle. Habitaciones privadas y dormitorio múltiple; zona de bar y karaoke. Reservas por WhatsApp: 310 782 1429.",
+        "en": "Great for staying as a group or couple, with valley views. Private rooms and a shared dorm; bar and karaoke area. Bookings via WhatsApp: 310 782 1429."
+      },
+      "fotos": [
+        "labateca/hospedaje-mirador-01",
+        "labateca/hospedaje-mirador-02",
+        "labateca/hospedaje-mirador-03",
+        "labateca/hospedaje-mirador-04",
+        "labateca/hospedaje-mirador-05",
+        "labateca/hospedaje-mirador-06",
+        "labateca/hospedaje-mirador-07",
+        "labateca/hospedaje-mirador-08",
+        "labateca/hospedaje-mirador-09",
+        "labateca/hospedaje-mirador-10",
+        "labateca/hospedaje-mirador-11",
+        "labateca/hospedaje-mirador-12",
+        "labateca/hospedaje-mirador-13"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada del edificio con su gran mural de la pareja indígena y el paisaje de la región.",
+          "en": "Building facade with its large mural of an Indigenous couple and the region's landscape."
+        },
+        {
+          "es": "Sala de estar con sillones, imágenes religiosas y detalles decorativos.",
+          "en": "Lounge with armchairs, religious images and decorative details."
+        },
+        {
+          "es": "Pasillo de entrada con murales de motivos campesinos.",
+          "en": "Entrance hallway with countryside-themed murals."
+        },
+        {
+          "es": "Escalera decorada con un mural de cascada y paisaje.",
+          "en": "Staircase decorated with a waterfall-and-landscape mural."
+        },
+        {
+          "es": "Vista panorámica al valle y las montañas desde una de las ventanas.",
+          "en": "Panoramic view of the valley and mountains from one of the windows."
+        },
+        {
+          "es": "Habitación privada con cama doble y baño cercano.",
+          "en": "Private room with a double bed and a nearby bathroom."
+        },
+        {
+          "es": "Otra habitación privada, amplia e iluminada.",
+          "en": "Another private room, spacious and bright."
+        },
+        {
+          "es": "Habitación con cama doble y cama sencilla, ideal para familias.",
+          "en": "Room with a double and a single bed, ideal for families."
+        },
+        {
+          "es": "Habitación sencilla con detalles decorativos y TV.",
+          "en": "Single room with decorative details and a TV."
+        },
+        {
+          "es": "Dormitorio múltiple con camarote y varias camas.",
+          "en": "Shared dormitory with a bunk bed and several beds."
+        },
+        {
+          "es": "Baño limpio y bien mantenido.",
+          "en": "Clean, well-kept bathroom."
+        },
+        {
+          "es": "Zona lounge de karaoke «Mirador de mi Bateca».",
+          "en": "'Mirador de mi Bateca' karaoke lounge area."
+        },
+        {
+          "es": "Barra del disco-bar del mismo lugar.",
+          "en": "Bar counter of the venue's disco-bar."
+        }
+      ]
+    },
+    {
+      "id": "estadero-mirador",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.296239,
+      "lng": -72.498977,
+      "mapaX": 237,
+      "mapaY": 500,
+      "telefono": "573107821429",
+      "nombre": {
+        "es": "Estadero Fuente de Soda Mirador de Mi Bateca",
+        "en": "Mirador de Mi Bateca Sports Bar"
+      },
+      "desc": {
+        "es": "Estadero y fuente de soda tipo sport bar en Labateca, para pasar un buen rato entre amigos. Cuenta con mesas de billar (pool), sapo, máquinas de arcade y una barra bien surtida de bebidas. Ambiente deportivo y familiar, en el mismo edificio del Hospedaje Mirador de Mi Bateca. Propietario: Fredy Delgado.",
+        "en": "A sports-bar-style hangout and soda fountain in Labateca, perfect for good times with friends. It has pool tables, a 'sapo' (toss game), arcade machines and a well-stocked drinks bar. A sporty, family-friendly atmosphere, in the same building as the Mirador de Mi Bateca lodging. Owner: Fredy Delgado."
+      },
+      "comoLlegar": {
+        "es": "En Labateca, en el mismo edificio del Hospedaje Mirador de Mi Bateca.",
+        "en": "In Labateca, in the same building as the Mirador de Mi Bateca lodging."
+      },
+      "dist": {
+        "es": "Casco urbano",
+        "en": "Town area"
+      },
+      "tiempo": {
+        "es": "Viernes 2:00 p. m. – 12:00 a. m.; sábados y domingos 2:00 p. m. – 1:00 a. m. Entre semana con reserva.",
+        "en": "Friday 2:00 p.m. – 12:00 a.m.; Saturday and Sunday 2:00 p.m. – 1:00 a.m. Weekdays by reservation."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para billar, sapo y arcade con bebidas entre amigos. Reservas por WhatsApp: 310 782 1429.",
+        "en": "Great for pool, 'sapo' and arcade games with drinks among friends. Bookings via WhatsApp: 310 782 1429."
+      },
+      "fotos": [
+        "labateca/estadero-mirador-01",
+        "labateca/estadero-mirador-02",
+        "labateca/estadero-mirador-03",
+        "labateca/estadero-mirador-04",
+        "labateca/estadero-mirador-05",
+        "labateca/estadero-mirador-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "Mesa de billar con el logo pintado «Estadero Mirador de mi Bateca».",
+          "en": "Pool table with the painted 'Estadero Mirador de mi Bateca' logo on the wall."
+        },
+        {
+          "es": "Salón de billar con mesas, sillas y máquinas de arcade.",
+          "en": "Billiards room with tables, chairs and arcade machines."
+        },
+        {
+          "es": "Zona de juego con mesa de billar, arcade y sapo.",
+          "en": "Games area with a pool table, arcade and 'sapo' toss game."
+        },
+        {
+          "es": "Barra de madera con butacos, licores y equipo de sonido.",
+          "en": "Wooden bar with stools, spirits and sound equipment."
+        },
+        {
+          "es": "Otra vista de la barra y la zona de estar.",
+          "en": "Another view of the bar and the seating area."
+        },
+        {
+          "es": "Fachada del edificio (compartida con el hospedaje), con su gran mural.",
+          "en": "Building facade (shared with the lodging), with its large mural."
+        }
+      ]
+    },
+    {
+      "id": "tienda-trebol",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298035,
+      "lng": -72.496432,
+      "mapaX": 378,
+      "mapaY": 446,
+      "telefono": "573507282468",
+      "nombre": {
+        "es": "Tienda El Trébol",
+        "en": "El Trebol Corner Store"
+      },
+      "desc": {
+        "es": "Tienda tradicional y granero surtido en el casco urbano de Labateca. Ofrece víveres en general, pan, frutas y verduras, carnes frías y salchichonería, pollo, perniles, pan tajado, leche, mecato, dulces, bebidas frías y productos de aseo. Un clásico bien surtido y organizado para la compra del día a día. Propietario: Misael Ramón.",
+        "en": "A traditional corner store and well-stocked grocer in Labateca's town center. It offers general groceries, bread, fruit and vegetables, cold cuts and deli meats, chicken, pork, sliced bread, milk, snacks, sweets, cold drinks and cleaning products. A well-stocked, organized classic for everyday shopping. Owner: Misael Ramón."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca (dirección 5-67).",
+        "en": "In Labateca's town center (address 5-67)."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 7:00 a. m. – 12:00 m. y 2:00 – 8:00 p. m.",
+        "en": "Every day, 7:00 a.m. – 12:00 noon and 2:00 – 8:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para víveres, pan, frutas y verduras, salchichonería, pollo y perniles, bebidas y aseo. Contacto por WhatsApp: 350 728 2468.",
+        "en": "Great for groceries, bread, fruit and vegetables, deli meats, chicken and pork, drinks and cleaning products. Contact via WhatsApp: 350 728 2468."
+      },
+      "fotos": [
+        "labateca/tienda-trebol-01",
+        "labateca/tienda-trebol-02",
+        "labateca/tienda-trebol-03",
+        "labateca/tienda-trebol-04",
+        "labateca/tienda-trebol-05",
+        "labateca/tienda-trebol-06",
+        "labateca/tienda-trebol-07"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada nocturna iluminada con el aviso «Tienda El Trébol» y el tablero de servicios.",
+          "en": "Illuminated night storefront with the 'Tienda El Trébol' sign and the services board."
+        },
+        {
+          "es": "Interior con estantería de pan, abarrotes y vitrina de dulces (dirección 5-67).",
+          "en": "Interior with bread shelves, groceries and a candy case (address 5-67)."
+        },
+        {
+          "es": "Pasillo de abarrotes: aceites, mecato, cuidado personal y salchichonería.",
+          "en": "Grocery aisle: oils, snacks, personal care and deli meats."
+        },
+        {
+          "es": "Canastillas de frutas y verduras: tomate, plátano, papa y cebolla.",
+          "en": "Fruit and vegetable baskets: tomatoes, plantains, potatoes and onions."
+        },
+        {
+          "es": "Estantería de productos de aseo, con huevos y embutidos en el mostrador.",
+          "en": "Shelves of cleaning products, with eggs and sausages on the counter."
+        },
+        {
+          "es": "Exhibidor de pan y nevera de bebidas frías.",
+          "en": "Bread display and the cold-drinks fridge."
+        },
+        {
+          "es": "Zona de aseo y bebidas con sillas para la atención.",
+          "en": "Cleaning-and-drinks area with chairs for customers."
+        }
+      ]
     }
   ]
 }
