@@ -2543,7 +2543,12 @@
         "labateca/tienda-alex-02",
         "labateca/tienda-alex-03",
         "labateca/tienda-alex-04",
-        "labateca/tienda-alex-05"
+        "labateca/tienda-alex-05",
+        "labateca/tienda-alex-06",
+        "labateca/tienda-alex-07",
+        "labateca/tienda-alex-08",
+        "labateca/tienda-alex-09",
+        "labateca/tienda-alex-10"
       ],
       "fotosCap": [
         {
@@ -2564,6 +2569,26 @@
         },
         {
           "es": "Estantería de productos de aseo, enlatados y artículos para el hogar.",
+          "en": "Shelves of cleaning products, canned goods and household items."
+        },
+        {
+          "es": "Fachada nocturna de Tienda Alex (dirección 2-21), con sus materas y flores en la entrada.",
+          "en": "Tienda Alex at night (address 2-21), with potted plants and flowers at the entrance."
+        },
+        {
+          "es": "Interior: neveras de bebidas y helados, víveres y punto de recargas Claro.",
+          "en": "Interior: drink and ice-cream freezers, groceries and a Claro top-up point."
+        },
+        {
+          "es": "Pasillo de mecato, pan y agua embotellada.",
+          "en": "Aisle of snacks, bread and bottled water."
+        },
+        {
+          "es": "Sección de aseo y cuidado personal, con vitrina de medicamentos básicos.",
+          "en": "Cleaning and personal-care section, with a case of basic medicines."
+        },
+        {
+          "es": "Estantería de aseo, enlatados y artículos para el hogar.",
           "en": "Shelves of cleaning products, canned goods and household items."
         }
       ]
@@ -3173,6 +3198,643 @@
         {
           "es": "Zona de aseo y bebidas con sillas para la atención.",
           "en": "Cleaning-and-drinks area with chairs for customers."
+        }
+      ]
+    },
+    {
+      "id": "mundo-leo",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.296766,
+      "lng": -72.497689,
+      "mapaX": 303,
+      "mapaY": 489,
+      "telefono": "573124193241",
+      "nombre": {
+        "es": "Mundo Leo — Variedades",
+        "en": "Mundo Leo — Variety Store"
+      },
+      "desc": {
+        "es": "Tienda de variedades y papelería en el casco urbano de Labateca, identificada por su logo del osito panda. Encuentras útiles escolares y de oficina (cuadernos, colores, marcadores, cartulinas, cometas), juguetería, detalles y regalos, bisutería y accesorios para el cabello, mecato y dulces, helados Colombina, artículos de aseo y cuidado personal, audífonos y pequeños electrónicos. Atención de Javier Montañez.",
+        "en": "Variety and stationery store in Labateca's town center, marked by its little-panda logo. You'll find school and office supplies (notebooks, colored pencils, markers, poster board, kites), toys, gifts, costume jewelry and hair accessories, snacks and candy, Colombina ice cream, cleaning and personal-care items, headphones and small electronics. Run by Javier Montañez."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca.",
+        "en": "In Labateca's town center."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 7:00 a. m. – 12:00 m. y 1:00 – 8:00 p. m.",
+        "en": "Every day, 7:00 a.m. – 12:00 noon and 1:00 – 8:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para útiles escolares, papelería, juguetes, detalles y mecato. Contacto por WhatsApp: 312 419 3241.",
+        "en": "Great for school supplies, stationery, toys, gifts and snacks. Contact via WhatsApp: 312 419 3241."
+      },
+      "fotos": [
+        "labateca/mundo-leo-01",
+        "labateca/mundo-leo-02",
+        "labateca/mundo-leo-03",
+        "labateca/mundo-leo-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Mundo Leo, con su logo del osito panda, en la entrada al local de variedades.",
+          "en": "Mundo Leo storefront with its little-panda logo, at the entrance to the variety store."
+        },
+        {
+          "es": "Nevera de helados Colombina y vitrina con juguetes, papelería y accesorios.",
+          "en": "Colombina ice-cream freezer and display case with toys, stationery and accessories."
+        },
+        {
+          "es": "Estantería de mecato, dulces y artículos de variedades.",
+          "en": "Shelves of snacks, candy and variety items."
+        },
+        {
+          "es": "Sección de papelería y juguetería: cuadernos, colores, cometas y más.",
+          "en": "Stationery and toy section: notebooks, colored pencils, kites and more."
+        }
+      ]
+    },
+    {
+      "id": "restaurante-dona-maria",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298937,
+      "lng": -72.494087,
+      "mapaX": 519,
+      "mapaY": 416,
+      "telefono": "573134966445",
+      "nombre": {
+        "es": "Restaurante Doña María",
+        "en": "Doña María Restaurant & Café"
+      },
+      "desc": {
+        "es": "Restaurante y cafetería de comida casera en el casco urbano de Labateca (dirección 2-42). Sirve desayunos y almuerzos caseros, empanadas y fritos recién hechos, y bebidas calientes de su máquina de café. Ambiente sencillo y acogedor, con mesas para comer en el sitio. Atención de doña María Edelmira Rozo.",
+        "en": "Home-cooking restaurant and café in Labateca's town center (address 2-42). It serves homemade breakfasts and lunches, freshly made empanadas and fried snacks, and hot drinks from its espresso machine. A simple, welcoming spot with tables for dining in. Run by Doña María Edelmira Rozo."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca (dirección 2-42).",
+        "en": "In Labateca's town center (address 2-42)."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 7:00 a. m. – 7:00 p. m.",
+        "en": "Every day, 7:00 a.m. – 7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para desayunar, almorzar o tomar un café con empanadas. Contacto por WhatsApp: 313 496 6445.",
+        "en": "Great for breakfast, lunch or coffee with empanadas. Contact via WhatsApp: 313 496 6445."
+      },
+      "fotos": [
+        "labateca/restaurante-dona-maria-01",
+        "labateca/restaurante-dona-maria-02",
+        "labateca/restaurante-dona-maria-03",
+        "labateca/restaurante-dona-maria-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada del Restaurante Doña María (dirección 2-42), con su vitrina de empanadas en la entrada.",
+          "en": "Doña María Restaurant storefront (address 2-42), with its empanada display case at the entrance."
+        },
+        {
+          "es": "Interior del restaurante, con la cocina y el calentador de empanadas y fritos.",
+          "en": "Restaurant interior, with the kitchen and the warmer for empanadas and fried snacks."
+        },
+        {
+          "es": "Zona de mesas para comer en el sitio, con nevera de bebidas frías.",
+          "en": "Dining area with tables and a cold-drinks fridge."
+        },
+        {
+          "es": "Máquina de café para bebidas calientes.",
+          "en": "Espresso machine for hot drinks."
+        }
+      ]
+    },
+    {
+      "id": "salud-y-vida",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298332,
+      "lng": -72.493707,
+      "mapaX": 542,
+      "mapaY": 436,
+      "telefono": "573123106831",
+      "nombre": {
+        "es": "Centro Naturista Salud & Vida",
+        "en": "Salud & Vida — Natural Health Store"
+      },
+      "desc": {
+        "es": "Centro naturista F&G en el casco urbano de Labateca. Ofrece productos naturales y suplementos (colágeno, proteínas, vitaminas, productos para bajar de peso y bienestar), remedios y cuidado personal. También funciona como Corresponsal Bancario Bancolombia (retiros, depósitos y pagos) y punto de recargas Claro. Atención de Gerson Fernández.",
+        "en": "F&G natural-health store in Labateca's town center. It offers natural products and supplements (collagen, protein, vitamins, weight-loss and wellness products), remedies and personal care. It also serves as a Bancolombia Banking Correspondent (withdrawals, deposits and payments) and a Claro top-up point. Run by Gerson Fernández."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca.",
+        "en": "In Labateca's town center."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 8:00 a. m. – 12:00 m. y 2:00 – 6:00 p. m.",
+        "en": "Every day, 8:00 a.m. – 12:00 noon and 2:00 – 6:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para productos naturistas y suplementos, y para trámites bancarios como Corresponsal Bancolombia. Recargas Claro. Contacto por WhatsApp: 312 310 6831.",
+        "en": "Great for natural products and supplements, and for banking through its Bancolombia Correspondent. Claro top-ups. Contact via WhatsApp: 312 310 6831."
+      },
+      "fotos": [
+        "labateca/salud-y-vida-01",
+        "labateca/salud-y-vida-02",
+        "labateca/salud-y-vida-03",
+        "labateca/salud-y-vida-04",
+        "labateca/salud-y-vida-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Salud & Vida, Centro Naturista F&G, con el punto de Corresponsal Bancolombia.",
+          "en": "Salud & Vida storefront (F&G natural-health center), with its Bancolombia Correspondent point."
+        },
+        {
+          "es": "Vitrina de productos naturistas y suplementos.",
+          "en": "Display of natural products and supplements."
+        },
+        {
+          "es": "Estantería de suplementos, vitaminas y productos de bienestar.",
+          "en": "Shelves of supplements, vitamins and wellness products."
+        },
+        {
+          "es": "Punto de Corresponsal Bancolombia y recargas Claro, con productos de cuidado personal.",
+          "en": "Bancolombia Correspondent and Claro top-up point, with personal-care products."
+        },
+        {
+          "es": "Vitrinas con más suplementos y productos naturales.",
+          "en": "Cases with more supplements and natural products."
+        }
+      ]
+    },
+    {
+      "id": "frutas-y-verduras",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298932,
+      "lng": -72.49408,
+      "mapaX": 506,
+      "mapaY": 426,
+      "telefono": "573208491055",
+      "nombre": {
+        "es": "Frutas y Verduras",
+        "en": "Frutas y Verduras — Fruit & Vegetable Shop"
+      },
+      "desc": {
+        "es": "Fruver en el casco urbano de Labateca con frutas y verduras frescas del día: plátano, banano, piña, papa, cebolla, zanahoria, tomate, pimentón, ajo y más, además de huevos y algunos víveres. Administrado por Ciro Alfonso Villamizar.",
+        "en": "Fruit-and-vegetable shop in Labateca's town center with fresh daily produce: plantain, banana, pineapple, potato, onion, carrot, tomato, pepper, garlic and more, plus eggs and some groceries. Managed by Ciro Alfonso Villamizar."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca.",
+        "en": "In Labateca's town center."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 6:00 a. m. – 7:00 p. m.",
+        "en": "Every day, 6:00 a.m. – 7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para frutas y verduras frescas del día. Contacto por WhatsApp: 320 849 1055.",
+        "en": "Great for fresh daily fruits and vegetables. Contact via WhatsApp: 320 849 1055."
+      },
+      "fotos": [
+        "labateca/frutas-y-verduras-01",
+        "labateca/frutas-y-verduras-02",
+        "labateca/frutas-y-verduras-03",
+        "labateca/frutas-y-verduras-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "Cajones de frutas y verduras frescas: zanahoria, plátano, banano, piña y más.",
+          "en": "Crates of fresh fruit and vegetables: carrots, plantain, banana, pineapple and more."
+        },
+        {
+          "es": "Surtido de frutas y verduras del día.",
+          "en": "Assortment of the day's fruit and vegetables."
+        },
+        {
+          "es": "Báscula y nevera con más productos frescos.",
+          "en": "Scale and fridge with more fresh produce."
+        },
+        {
+          "es": "Fachada del local de frutas y verduras.",
+          "en": "Storefront of the fruit-and-vegetable shop."
+        }
+      ]
+    },
+    {
+      "id": "drogueria-central",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298426,
+      "lng": -72.494158,
+      "mapaX": 515,
+      "mapaY": 433,
+      "telefono": "573208080167",
+      "nombre": {
+        "es": "Droguería Central",
+        "en": "Droguería Central — Pharmacy"
+      },
+      "desc": {
+        "es": "Droguería en el casco urbano de Labateca (dirección 2-32) con medicamentos de venta libre, productos de cuidado personal y aseo, pañales para bebé y adulto, cuidado del bebé, papelería básica y artículos de conveniencia. Atención de Doris Yamile Martínez.",
+        "en": "Pharmacy in Labateca's town center (address 2-32) with over-the-counter medicines, personal-care and cleaning products, baby and adult diapers, baby care, basic stationery and convenience items. Run by Doris Yamile Martínez."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca (dirección 2-32).",
+        "en": "In Labateca's town center (address 2-32)."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 8:00 a. m. – 12:00 m. y 2:00 – 7:00 p. m.",
+        "en": "Every day, 8:00 a.m. – 12:00 noon and 2:00 – 7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para medicamentos de venta libre, cuidado personal y productos para el bebé. Contacto por WhatsApp: 320 808 0167.",
+        "en": "Great for over-the-counter medicines, personal care and baby products. Contact via WhatsApp: 320 808 0167."
+      },
+      "fotos": [
+        "labateca/drogueria-central-04",
+        "labateca/drogueria-central-01",
+        "labateca/drogueria-central-02",
+        "labateca/drogueria-central-03"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de la Droguería Central (dirección 2-32).",
+          "en": "Droguería Central storefront (address 2-32)."
+        },
+        {
+          "es": "Estantería de medicamentos y productos de cuidado personal.",
+          "en": "Shelves of medicines and personal-care products."
+        },
+        {
+          "es": "Vitrina de recepción con medicamentos de venta libre.",
+          "en": "Front counter with over-the-counter medicines."
+        },
+        {
+          "es": "Estantes con pañales, productos para el bebé y papelería básica.",
+          "en": "Shelves with diapers, baby products and basic stationery."
+        }
+      ]
+    },
+    {
+      "id": "ateca",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.2987,
+      "lng": -72.493926,
+      "mapaX": 529,
+      "mapaY": 424,
+      "telefono": "573185619179",
+      "nombre": {
+        "es": "Ateca Bar Café Restaurante",
+        "en": "Ateca — Bar, Café & Restaurant"
+      },
+      "desc": {
+        "es": "Bar, café y restaurante en el casco urbano de Labateca, con un ambiente cálido de luces, madera y decoración acogedora. Su carta 'Made in Labateca' incluye hamburguesas gourmet (Deluxe, Búfalo, Cheddar), sándwiches y wraps, picadas y platos a la parrilla (churrasco, pollo, chorizo), entradas y una barra con cócteles, café y bebidas. Atención de Nurymar Medina.",
+        "en": "Bar, café and restaurant in Labateca's town center, with a warm atmosphere of string lights, wood and cozy décor. Its 'Made in Labateca' menu features gourmet burgers (Deluxe, Búfalo, Cheddar), sandwiches and wraps, sharing platters and grilled dishes (steak, chicken, chorizo), starters and a bar with cocktails, coffee and drinks. Run by Nurymar Medina."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca.",
+        "en": "In Labateca's town center."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 6:00 – 10:00 p. m.; domingos, 12:00 m. – 3:00 p. m.",
+        "en": "Every day, 6:00 – 10:00 p.m.; Sundays, 12:00 noon – 3:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "El lugar para hamburguesas gourmet, picadas y una salida de noche en Labateca. Contacto por WhatsApp: 318 561 9179.",
+        "en": "The spot for gourmet burgers, sharing platters and a night out in Labateca. Contact via WhatsApp: 318 561 9179."
+      },
+      "fotos": [
+        "labateca/ateca-01",
+        "labateca/ateca-02",
+        "labateca/ateca-03",
+        "labateca/ateca-04",
+        "labateca/ateca-05",
+        "labateca/ateca-06",
+        "labateca/ateca-07",
+        "labateca/ateca-08",
+        "labateca/ateca-09",
+        "labateca/ateca-10",
+        "labateca/ateca-11",
+        "labateca/ateca-12",
+        "labateca/ateca-13",
+        "labateca/ateca-14"
+      ],
+      "fotosCap": [
+        {
+          "es": "Ateca Bar Café Restaurante — 'Made in Labateca'.",
+          "en": "Ateca Bar, Café & Restaurant — 'Made in Labateca'."
+        },
+        {
+          "es": "Salón interior, con mesas de madera y luces cálidas.",
+          "en": "Interior dining room, with wooden tables and warm lights."
+        },
+        {
+          "es": "Rincón decorado del local, de ambiente acogedor.",
+          "en": "Cozy decorated corner of the venue."
+        },
+        {
+          "es": "La barra, con su surtido de bebidas y máquina de café.",
+          "en": "The bar, with its selection of drinks and espresso machine."
+        },
+        {
+          "es": "Plato a la parrilla: carne, pollo, chorizo, yuca y ensalada.",
+          "en": "Grilled platter: beef, chicken, chorizo, cassava and salad."
+        },
+        {
+          "es": "Picada surtida para compartir.",
+          "en": "Assorted sharing platter."
+        },
+        {
+          "es": "Sándwich Ateca, con jamón, tocineta y más.",
+          "en": "Ateca sandwich, with ham, bacon and more."
+        },
+        {
+          "es": "Wraps 'Made in Labateca' con nachos.",
+          "en": "'Made in Labateca' wraps with nachos."
+        },
+        {
+          "es": "Plato de pepperoni y queso fundido con pan.",
+          "en": "Pepperoni and melted-cheese dish with bread."
+        },
+        {
+          "es": "Wrap de pollo y tocineta.",
+          "en": "Chicken and bacon wrap."
+        },
+        {
+          "es": "Hamburguesa Búfalo, de la carta de Ateca.",
+          "en": "Búfalo burger, from Ateca's menu."
+        },
+        {
+          "es": "Hamburguesa Cheddar, de la carta de Ateca.",
+          "en": "Cheddar burger, from Ateca's menu."
+        },
+        {
+          "es": "Hamburguesa Deluxe, especialidad de la casa.",
+          "en": "Deluxe burger, the house specialty."
+        },
+        {
+          "es": "Especial de pepperoni, de la carta de Ateca.",
+          "en": "Pepperoni special, from Ateca's menu."
+        }
+      ]
+    },
+    {
+      "id": "axel-tiendas",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298516,
+      "lng": -72.494867,
+      "mapaX": 472,
+      "mapaY": 430,
+      "telefono": "573007685165",
+      "nombre": {
+        "es": "Axel Tiendas",
+        "en": "Axel Tiendas — Clothing & Variety Store"
+      },
+      "desc": {
+        "es": "Tienda de ropa y variedades en el casco urbano de Labateca, 'para verte y sentirte bien'. Encuentras ropa para toda la familia (incluida ropa infantil), morrales y peluches, papelería y útiles, bisutería y accesorios, mecato, dulces y artículos de aseo y cuidado personal. Atención de Ana Karina Murillo.",
+        "en": "Clothing and variety store in Labateca's town center — 'to look and feel good.' You'll find clothing for the whole family (including children's wear), backpacks and plush toys, stationery and supplies, costume jewelry and accessories, snacks, candy and personal-care items. Run by Ana Karina Murillo."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca.",
+        "en": "In Labateca's town center."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 8:00 a. m. – 8:00 p. m.",
+        "en": "Every day, 8:00 a.m. – 8:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para ropa, morrales, peluches, papelería y detalles. Contacto por WhatsApp: 300 768 5165.",
+        "en": "Great for clothing, backpacks, plush toys, stationery and gifts. Contact via WhatsApp: 300 768 5165."
+      },
+      "fotos": [
+        "labateca/axel-tiendas-01",
+        "labateca/axel-tiendas-02",
+        "labateca/axel-tiendas-03",
+        "labateca/axel-tiendas-04",
+        "labateca/axel-tiendas-05",
+        "labateca/axel-tiendas-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Axel Tiendas, con su aviso 'para verte y sentirte bien'.",
+          "en": "Axel Tiendas storefront, with its motto 'to look and feel good.'"
+        },
+        {
+          "es": "Ropa infantil, morrales y vitrina con peluches y accesorios.",
+          "en": "Children's clothing, backpacks and a case with plush toys and accessories."
+        },
+        {
+          "es": "Ropa, morrales y detalles para toda la familia.",
+          "en": "Clothing, backpacks and gifts for the whole family."
+        },
+        {
+          "es": "Ropa colgada, peluches y artículos de regalo.",
+          "en": "Hanging clothing, plush toys and gift items."
+        },
+        {
+          "es": "Sección de papelería y útiles.",
+          "en": "Stationery and supplies section."
+        },
+        {
+          "es": "Estantería de papelería, cintas y artículos de variedades.",
+          "en": "Shelves of stationery, ribbons and variety items."
+        }
+      ]
+    },
+    {
+      "id": "la-economica-jy",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299067,
+      "lng": -72.494904,
+      "mapaX": 470,
+      "mapaY": 411,
+      "telefono": "573112805177",
+      "nombre": {
+        "es": "La Económica JY",
+        "en": "La Económica JY — Minimarket"
+      },
+      "desc": {
+        "es": "Tienda y minimercado surtido en el casco urbano de Labateca. Encuentras víveres y granos, productos de aseo del hogar y cuidado personal, mecato y dulces, pan, lácteos, bebidas frías, cervezas y gaseosas, agua y artículos de conveniencia. Atención de Jheni Contreras.",
+        "en": "Well-stocked store and minimarket in Labateca's town center. You'll find groceries and grains, household cleaning and personal-care products, snacks and candy, bread, dairy, cold drinks, beer and sodas, water and convenience items. Run by Jheni Contreras."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca.",
+        "en": "In Labateca's town center."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 7:30 a. m. – 9:00 p. m.",
+        "en": "Every day, 7:30 a.m. – 9:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para el mercado del día, mecato, bebidas y productos de aseo. Contacto por WhatsApp: 311 280 5177.",
+        "en": "Great for daily groceries, snacks, drinks and cleaning products. Contact via WhatsApp: 311 280 5177."
+      },
+      "fotos": [
+        "labateca/la-economica-jy-01",
+        "labateca/la-economica-jy-02",
+        "labateca/la-economica-jy-03",
+        "labateca/la-economica-jy-04",
+        "labateca/la-economica-jy-05",
+        "labateca/la-economica-jy-06",
+        "labateca/la-economica-jy-07"
+      ],
+      "fotosCap": [
+        {
+          "es": "Interior del minimercado, con neveras de bebidas frías y cajas de cerveza y gaseosa.",
+          "en": "Minimarket interior, with cold-drink fridges and crates of beer and soda."
+        },
+        {
+          "es": "Neveras de bebidas y cajas de gaseosa, cerveza y agua.",
+          "en": "Drink fridges and crates of soda, beer and water."
+        },
+        {
+          "es": "Estantería de productos de aseo del hogar y cuidado personal.",
+          "en": "Shelves of household cleaning and personal-care products."
+        },
+        {
+          "es": "Estantes de víveres, enlatados y abarrotes.",
+          "en": "Shelves of groceries, canned goods and staples."
+        },
+        {
+          "es": "Vitrina de pan y estantería de mecato y abarrotes.",
+          "en": "Bread case and shelves of snacks and staples."
+        },
+        {
+          "es": "Mecato, dulces y pan surtido.",
+          "en": "Snacks, candy and assorted bread."
+        },
+        {
+          "es": "Fachada del local, sobre la vía del casco urbano.",
+          "en": "Storefront, on a street in the town center."
+        }
+      ]
+    },
+    {
+      "id": "barber-shop",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298705,
+      "lng": -72.494589,
+      "mapaX": 489,
+      "mapaY": 424,
+      "telefono": "573227784070",
+      "nombre": {
+        "es": "Barber Shop Labateca",
+        "en": "Barber Shop Labateca"
+      },
+      "desc": {
+        "es": "Barbería en el casco urbano de Labateca, con un montaje moderno de sillas de barbero, espejos con luces y ambiente de barber shop. Ofrece cortes de cabello, arreglo de barba y servicios de barbería para hombres y niños. Atención de Breiner Isidro.",
+        "en": "Barbershop in Labateca's town center, with a modern setup of barber chairs, lighted mirrors and a classic barber-shop vibe. It offers haircuts, beard grooming and barbering services for men and boys. Run by Breiner Isidro."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca.",
+        "en": "In Labateca's town center."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 8:00 a. m. – 7:00 p. m.",
+        "en": "Every day, 8:00 a.m. – 7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ideal para cortes de cabello y arreglo de barba. Contacto por WhatsApp: 322 778 4070.",
+        "en": "Great for haircuts and beard grooming. Contact via WhatsApp: 322 778 4070."
+      },
+      "fotos": [
+        "labateca/barber-shop-01",
+        "labateca/barber-shop-02"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de la barbería, con su poste de barbero a la entrada.",
+          "en": "Barbershop storefront, with its barber pole at the entrance."
+        },
+        {
+          "es": "Interior de la barbería, con las sillas y el espejo iluminado.",
+          "en": "Barbershop interior, with the chairs and lighted mirror."
         }
       ]
     }
