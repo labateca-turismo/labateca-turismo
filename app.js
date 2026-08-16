@@ -1927,7 +1927,7 @@ const _STOP = new Set([
 const _SYN = {
   pelo:['cabello','barberia','barber','corte'], peluqueria:['barberia','barber','cabello','belleza'],
   peluqueria2:['barberia'], barbero:['barberia','barber','cabello'], cortarme:['corte','cabello','barberia'],
-  cortar:['corte','cabello','barberia'], unas:['unas','belleza','manicure'], manicure:['unas','belleza'],
+  cortar:['corte','cabello','barberia'], manicure:['unas','belleza'], manicurista:['unas','belleza'],
   farmacia:['drogueria','medicamentos'], droga:['drogueria','medicamentos'], drogas:['drogueria','medicamentos'],
   remedio:['medicamentos','drogueria'], remedios:['medicamentos','drogueria'], medicina:['medicamentos','drogueria'],
   medicinas:['medicamentos','drogueria'], medico:['drogueria','salud','naturista'], enfermo:['drogueria','medicamentos'],
@@ -1953,8 +1953,67 @@ const _SYN = {
   cuaderno:['papeleria','utiles'], utiles:['papeleria','utiles','escolares'], papeleria:['papeleria','utiles'],
   mascota:['veterinario','agropecuario','concentrados'], veterinario:['veterinario','agropecuario'],
   cascada:['cascada','salto','quebrada'], caminar:['sendero','caminata','mirador'],
-  paisaje:['mirador','vista','paramo'], nadar:['balneario','quebrada','rio']
+  paisaje:['mirador','vista','paramo'], nadar:['balneario','quebrada','rio'],
+  /* Habla de la región: la gente no dice "cortarme el cabello", dice "tusarme". */
+  tusar:['cabello','barberia','corte'], tusarme:['cabello','barberia','corte'],
+  tuso:['cabello','barberia','corte'], motilar:['cabello','barberia','corte'],
+  rumbear:['bar','estadero','billar','cerveza'], rumbiar:['bar','estadero','billar'],
+  parranda:['bar','estadero','billar'], frias:['cerveza','bar','estadero'],
+  pola:['cerveza','bar','estadero'], polas:['cerveza','bar','estadero'],
+  guaro:['bar','estadero','licor'], banar:['balneario','quebrada','rio','charco'],
+  banarme:['balneario','quebrada','rio'], charco:['balneario','quebrada','rio'],
+  onces:['panaderia','pan','cafeteria'], algo:['panaderia','cafeteria','pan'],
+  corrientazo:['almuerzo','restaurante','comida'], sancocho:['almuerzo','restaurante','comida'],
+  mercar:['supermercado','viveres','tienda','granero'], revuelto:['verduras','frutas'],
+  granero:['granero','viveres','tienda'], miscelanea:['variedades','papeleria'],
+  minutos:['recargas','claro'], pieza:['hospedaje','habitaciones'],
+  residencia:['hospedaje','habitaciones','posada'], pinchar:['llantas','taller','motos'],
+  pincho:['llantas','taller','motos'], vulcanizadora:['llantas','taller','motos'],
+  /* Inglés: las fichas en inglés dicen "lodging", no "sleep". */
+  sleep:['lodging','rooms','stay','guesthouse'], stay:['lodging','rooms','guesthouse'],
+  hotel_en:['lodging','rooms'], eat:['restaurant','food','lunch','grill'],
+  food:['restaurant','food','meals'], lunch:['lunch','restaurant','meals'],
+  dinner:['restaurant','food','burgers'], breakfast:['breakfast','bakery','cafe'],
+  haircut:['barber','barbershop','hair'], barber:['barber','barbershop','hair'],
+  hair:['barber','barbershop','hair'], pharmacy:['pharmacy','medicines','drugstore'],
+  drugstore:['pharmacy','medicines'], medicine:['medicines','pharmacy'],
+  cash:['bank','atm','correspondent'], money:['bank','atm','correspondent'],
+  withdraw:['atm','bank','correspondent'], groceries:['groceries','store','minimarket'],
+  grocery:['groceries','store','minimarket'], market:['market','store','groceries'],
+  beer:['beer','bar','drinks'], drink:['bar','drinks','beer'],
+  coffee:['coffee','cafe'], bread:['bakery','bread'], bakery:['bakery','bread'],
+  clothes:['clothing','clothes','store'], clothing:['clothing','clothes'],
+  swim:['swimming','river','pool'], hike:['trail','hiking','viewpoint','walk'],
+  waterfall:['waterfall'], motorcycle:['motorcycle','workshop','repair'],
+  tire:['tires','workshop','motorcycle'], phone:['top-up','recharge','claro']
 };
+
+/* La jerga local ("me tuso", "unas frías") el modelo no la entiende, aunque el
+   lugar correcto le llegue de primero: probado, respondía con datos del pueblo.
+   Le añadimos los términos equivalentes como pista. No cambia la pregunta del
+   visitante ni inventa nada: solo traduce su modismo a las palabras de la ficha. */
+function _hint(question){
+  const crudas = _norm(question).match(/[a-z0-9]{3,}/g) || [];
+  const t = [];
+  crudas.forEach(w=>{
+    if(_STOP.has(w)) return;
+    const s = _syn(w);
+    if(s) s.forEach(x=>{ if(t.indexOf(x) === -1) t.push(x); });
+  });
+  if(!t.length) return question;
+  return question + (lang === 'es'
+    ? '\n(el visitante busca: ' + t.slice(0,6).join(', ') + ')'
+    : '\n(the visitor is looking for: ' + t.slice(0,6).join(', ') + ')');
+}
+
+/* Busca sinónimos tolerando variantes ("rumba"/"rumbear", "tusar"/"tusarme"). */
+function _syn(w){
+  if(_SYN[w]) return _SYN[w];
+  for(const k in _SYN){
+    if(k.length >= 5 && w.length >= 5 && (w.indexOf(k.slice(0,5)) === 0 || k.indexOf(w.slice(0,5)) === 0)) return _SYN[k];
+  }
+  return null;
+}
 
 /* Recorta sin partir palabras: el worker corta en seco a 300 caracteres. */
 function _clip(s, n){
@@ -2015,7 +2074,7 @@ function _pickPlaces(question, limit){
   crudas.forEach(w=>{
     if(_STOP.has(w)) return;
     words.push(w);
-    (_SYN[w] || []).forEach(s=>{ const n = _norm(s); if(!words.includes(n)) words.push(n); });
+    (_syn(w) || []).forEach(s=>{ const n = _norm(s); if(!words.includes(n)) words.push(n); });
   });
   if(!words.length) return _variado(limit).map(_forAI);
 
@@ -2061,7 +2120,7 @@ async function heroAsk(preset){
     const resp = await fetch(CONFIG.chatWorkerUrl, {
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({ question:q, lang:lang, places:_pickPlaces(q, 30) })
+      body:JSON.stringify({ question:_hint(q), lang:lang, places:_pickPlaces(q, 30) })
     });
     const data = await resp.json();
     if(!(data.ok && data.answer)) throw new Error(data.error || 'no-answer');
@@ -2168,7 +2227,7 @@ async function sendChat() {
     const resp = await fetch(CONFIG.chatWorkerUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ question: q, lang: lang, places: _pickPlaces(q, 30) })
+      body: JSON.stringify({ question: _hint(q), lang: lang, places: _pickPlaces(q, 30) })
     });
     const data = await resp.json();
     if (typing) typing.remove();
