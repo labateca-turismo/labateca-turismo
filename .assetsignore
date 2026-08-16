@@ -1,3 +1,5 @@
+.git
+.git/**
 CLAUDE.md
 worker-chat.js
 worker-cms-auth.js

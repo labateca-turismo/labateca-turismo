@@ -642,6 +642,19 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;
   body{font-size:16px}
   .hamburger{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--cream-2);border:1px solid var(--line);color:var(--forest)}
   .hamburger svg{width:24px;height:24px}
+  /* El encabezado no cabía en un celular: la marca (178px) + los controles
+     (204px) + separaciones sumaban 402px dentro de 335px útiles, así que el
+     botón ☰ quedaba FUERA de la pantalla y el menú era inalcanzable en
+     cualquier teléfono de menos de ~442px. La marca ahora cede espacio y los
+     controles nunca se encogen, así el ☰ siempre queda visible. */
+  .wrap.nav{gap:10px;padding-left:14px;padding-right:14px}
+  .brand{min-width:0;flex:0 1 auto;overflow:hidden}
+  .brand>span{min-width:0;overflow:hidden}
+  .brand-name{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .brand-sub{display:none}
+  .nav-tools{flex:0 0 auto;gap:6px}
+  .lang-toggle{font-size:.72rem}
+  .lang-toggle button{padding:5px 9px}
   /* Panel desplegable bajo el header (absolute respecto al header fijo:
      no usar position:fixed aquí — el backdrop-filter del header.scrolled
      lo convertiría en containing block y recortaría el panel) */
