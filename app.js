@@ -1911,22 +1911,140 @@ function generatePDF() {
 /* Quita tildes y baja a minúsculas para comparar sin acentos. */
 function _norm(s){ return String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); }
 
+/* Palabras que salen en casi todas las fichas ("labateca" está en 58 de 66):
+   si puntúan, todo el mundo empata y el ranking deja de distinguir. */
+const _STOP = new Set([
+  'labateca','casco','urbano','pueblo','municipio','norte','santander','colombia',
+  'todos','todas','dias','dia','lugar','lugares','sitio','sitios','local','locales',
+  'donde','puedo','podemos','hay','tiene','tienen','cerca','cerquita','quiero','necesito',
+  'busco','buscar','como','para','por','con','del','las','los','una','uno','que','cual',
+  'cuales','esta','este','esa','ese','mas','muy','bien','mejor','favor','tambien',
+  'atencion','contacto','whatsapp','ideal','encuentras','ofrece','servicio','servicios'
+]);
+
+/* Lo que escribe un visitante → las palabras que de verdad están en las fichas.
+   Sin esto, "córtame el pelo" no encuentra la barbería (su ficha dice "cabello"). */
+const _SYN = {
+  pelo:['cabello','barberia','barber','corte'], peluqueria:['barberia','barber','cabello','belleza'],
+  peluqueria2:['barberia'], barbero:['barberia','barber','cabello'], cortarme:['corte','cabello','barberia'],
+  cortar:['corte','cabello','barberia'], unas:['unas','belleza','manicure'], manicure:['unas','belleza'],
+  farmacia:['drogueria','medicamentos'], droga:['drogueria','medicamentos'], drogas:['drogueria','medicamentos'],
+  remedio:['medicamentos','drogueria'], remedios:['medicamentos','drogueria'], medicina:['medicamentos','drogueria'],
+  medicinas:['medicamentos','drogueria'], medico:['drogueria','salud','naturista'], enfermo:['drogueria','medicamentos'],
+  pastillas:['medicamentos','drogueria'],
+  dormir:['hospedaje','habitaciones','posada'], hotel:['hospedaje','habitaciones','posada'],
+  alojamiento:['hospedaje','habitaciones'], hospedarme:['hospedaje','habitaciones'], noche:['hospedaje','bar'],
+  comer:['restaurante','comida','almuerzo','cafeteria'], hambre:['restaurante','comida','almuerzo'],
+  almorzar:['almuerzo','restaurante','comida'], desayunar:['desayuno','cafeteria','panaderia'],
+  cenar:['cena','restaurante','comida'], hamburguesa:['hamburguesas'], hamburguesas:['hamburguesas'],
+  tinto:['cafe','cafeteria'], pan:['panaderia','pan'],
+  trago:['bar','cerveza','estadero'], rumba:['bar','estadero','billar'], fiesta:['bar','estadero','billar'],
+  tomar:['bar','cerveza','bebidas'], cerveza:['cerveza','bar','estadero'],
+  mercado:['supermercado','viveres','tienda','granero'], compras:['tienda','supermercado','comercio'],
+  mercar:['supermercado','viveres','tienda'], verduras:['verduras','frutas'],
+  plata:['banco','corresponsal','cajero'], efectivo:['cajero','banco','corresponsal'],
+  retiro:['cajero','banco','corresponsal'], retirar:['cajero','banco','corresponsal'],
+  banco:['banco','corresponsal','cajero'], giro:['giros','supergiros','corresponsal'],
+  celular:['recargas','claro','sim'], recarga:['recargas','claro'], internet:['internet','recargas'],
+  wifi:['internet'], sim:['sim','claro','recargas'],
+  moto:['motos','taller','repuestos'], llanta:['llantas','taller','motos'], mecanico:['taller','mecanica','motos'],
+  taller:['taller','mecanica'], herramientas:['ferreteria','herramientas'],
+  ropa:['ropa','vestuario'], zapatos:['ropa','calzado'], regalo:['detalles','regalos','variedades'],
+  cuaderno:['papeleria','utiles'], utiles:['papeleria','utiles','escolares'], papeleria:['papeleria','utiles'],
+  mascota:['veterinario','agropecuario','concentrados'], veterinario:['veterinario','agropecuario'],
+  cascada:['cascada','salto','quebrada'], caminar:['sendero','caminata','mirador'],
+  paisaje:['mirador','vista','paramo'], nadar:['balneario','quebrada','rio']
+};
+
+/* Recorta sin partir palabras: el worker corta en seco a 300 caracteres. */
+function _clip(s, n){
+  s = String(s||'').trim();
+  if(s.length <= n) return s;
+  const cut = s.slice(0, n);
+  const i = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf(', '), cut.lastIndexOf(' '));
+  return (i > n*0.6 ? cut.slice(0, i+1) : cut).trim() + '…';
+}
+
+/* El worker SOLO lee nombre, desc, dist, comoLlegar y recomendacion — el horario
+   y el teléfono viven en otros campos y nunca le llegaban al modelo (por eso
+   respondía "no tengo el horario" teniéndolo cargado). Aquí los metemos al
+   principio de "recomendacion", que sí viaja, sin tener que tocar el worker. */
+function _forAI(p){
+  const rec  = (p.recomendacion || p.rec || {})[lang] || '';
+  // "Todos los días" es obvio para una persona, no para el modelo: al preguntarle
+  // "¿abre los domingos?" respondía que no sabía. Se lo dejamos explícito.
+  const hora = ((p.tiempo || {})[lang] || '')
+    .replace(/todos los d[ií]as/i, 'Todos los días (lunes a domingo, incluye sábado y domingo)')
+    .replace(/every day/i, 'Every day (Monday to Sunday, including Saturday and Sunday)');
+  const tel  = p.telefono ? String(p.telefono).replace(/^57/, '') : '';
+  const cab  = (hora ? (lang==='es' ? 'Horario: ' : 'Hours: ') + hora + ' ' : '')
+             + (tel  ? 'WhatsApp: ' + tel + '. ' : '');
+  const o = Object.assign({}, p);
+  o.desc = Object.assign({}, p.desc || {});
+  o.desc[lang] = _clip((p.desc || {})[lang] || '', 295);
+  o.recomendacion = Object.assign({}, p.recomendacion || {});
+  o.recomendacion[lang] = _clip(cab + rec, 295);
+  return o;
+}
+
+/* Surtido variado: una vuelta por cada categoría, para que ante una pregunta
+   general ("¿qué puedo hacer?") la IA vea de todo y no solo el inicio del archivo. */
+function _variado(n){
+  const porCat = {};
+  PLACES.forEach(p=>{ const c = p.categoria || p.cat || 'otros'; (porCat[c] = porCat[c] || []).push(p); });
+  const cats = Object.keys(porCat), out = [];
+  for(let r = 0; out.length < n && r < 40; r++){
+    let puso = false;
+    for(const c of cats){
+      const p = porCat[c][r];
+      if(p){ out.push(p); puso = true; if(out.length >= n) break; }
+    }
+    if(!puso) break;
+  }
+  return out;
+}
+
 /* Selecciona los lugares MÁS RELEVANTES a la pregunta (no solo los primeros).
-   Así la IA siempre recibe el lugar preguntado aunque haya 50 lugares cargados.
-   Si no hay coincidencias (pregunta genérica), devuelve un surtido variado. */
+   Así la IA siempre recibe el lugar preguntado aunque haya 66 lugares cargados. */
 function _pickPlaces(question, limit){
   limit = limit || 16;
-  if(PLACES.length <= limit) return PLACES;
-  const words = _norm(question).match(/[a-z0-9]{4,}/g) || [];
+  if(PLACES.length <= limit) return PLACES.map(_forAI);
+
+  const crudas = _norm(question).match(/[a-z0-9]{3,}/g) || [];
+  const words = [];
+  crudas.forEach(w=>{
+    if(_STOP.has(w)) return;
+    words.push(w);
+    (_SYN[w] || []).forEach(s=>{ const n = _norm(s); if(!words.includes(n)) words.push(n); });
+  });
+  if(!words.length) return _variado(limit).map(_forAI);
+
   const scored = PLACES.map((p, i)=>{
-    const hay = _norm(placeName(p) + ' ' + ((p.desc||{})[lang]||'') + ' ' + ((p.categoria||p.cat)||''));
+    const nom    = _norm(placeName(p));
+    const cat    = _norm(p.categoria || p.cat || '');
+    const cuerpo = _norm(((p.desc||{})[lang]||'') + ' ' + ((p.recomendacion||{})[lang]||''));
     let s = 0;
-    for(const w of words){ if(hay.includes(w)) s += (hay.includes(_norm(placeName(p))) ? 2 : 1); }
+    for(const w of words){
+      if(nom.includes(w))         s += 3;   // el nombre sí pesa (antes el bonus nunca se aplicaba)
+      else if(cat.includes(w))    s += 2;
+      else if(cuerpo.includes(w)) s += 1;
+    }
+    // A igual relevancia, primero la ficha con foto y teléfono (no la más antigua).
+    if(s){ if((p.fotos||[]).length) s += 0.5; if(p.telefono) s += 0.25; }
     return { p, s, i };
   });
-  // Más puntaje primero; a igual puntaje, conserva el orden original.
-  scored.sort((a,b)=> b.s - a.s || a.i - b.i);
-  return scored.slice(0, limit).map(x=>x.p);
+
+  const hit = scored.filter(x=>x.s > 0).sort((a,b)=> b.s - a.s || a.i - b.i);
+  if(!hit.length) return _variado(limit).map(_forAI);
+
+  const out = hit.slice(0, limit).map(x=>x.p);
+  if(out.length < limit){                       // completa el cupo con surtido
+    for(const p of _variado(limit * 3)){
+      if(out.length >= limit) break;
+      if(out.indexOf(p) === -1) out.push(p);
+    }
+  }
+  return out.map(_forAI);
 }
 
 async function heroAsk(preset){
@@ -1943,7 +2061,7 @@ async function heroAsk(preset){
     const resp = await fetch(CONFIG.chatWorkerUrl, {
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({ question:q, lang:lang, places:_pickPlaces(q, 16) })
+      body:JSON.stringify({ question:q, lang:lang, places:_pickPlaces(q, 30) })
     });
     const data = await resp.json();
     if(!(data.ok && data.answer)) throw new Error(data.error || 'no-answer');
@@ -2050,7 +2168,7 @@ async function sendChat() {
     const resp = await fetch(CONFIG.chatWorkerUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ question: q, lang: lang, places: _pickPlaces(q, 16) })
+      body: JSON.stringify({ question: q, lang: lang, places: _pickPlaces(q, 30) })
     });
     const data = await resp.json();
     if (typing) typing.remove();

@@ -6,8 +6,10 @@ const ALLOWED_ORIGINS = [
 ];
 
 const MAX_QUESTION_CHARS = 500;
-const MAX_PLACES = 16;
-const MAX_FIELD_CHARS = 300;
+/* Con 66 lugares cargados, 16 dejaba fuera casi todo el directorio. */
+const MAX_PLACES = 30;
+/* 300 cortaba a media frase 38 de las 66 descripciones. */
+const MAX_FIELD_CHARS = 600;
 
 /* Limpia un campo de texto venido del cliente: solo string, longitud acotada */
 function clean(v) {
@@ -57,8 +59,15 @@ export default {
         const dist   = clean(((p.dist   || {})[lang]));
         const como   = clean(((p.comoLlegar || {})[lang]));
         const rec    = clean(((p.recomendacion || p.rec || {})[lang]));
+        const hora   = clean(((p.tiempo || {})[lang]));
+        const tel    = (typeof p.telefono === 'string') ? p.telefono.replace(/[^0-9]/g, '').slice(0, 15) : '';
         if (!nombre) return '';
         var line = '• ' + nombre + ': ' + desc;
+        // El horario y el teléfono no viajaban nunca: el asistente respondía
+        // "no tengo el horario" teniéndolo cargado en la ficha.
+        // (Si el sitio ya los inyectó dentro de "rec", no los repetimos.)
+        if (hora && !/horario:/i.test(rec)) line += ' Horario: ' + hora + '.';
+        if (tel  && !/whatsapp:/i.test(rec)) line += ' WhatsApp: ' + tel + '.';
         if (dist) line += ' Distancia: ' + dist + '.';
         if (como) line += ' Cómo llegar: ' + como + '.';
         if (rec)  line += ' Tip: ' + rec;
@@ -69,14 +78,20 @@ export default {
         + 'Altitud: 1.566 m.s.n.m., clima templado ~20°C, a ~113 km de Cúcuta (~3.5h en bus). '
         + 'Responde preguntas sobre turismo, cómo llegar, gastronomía y actividades. '
         + 'Sé amable y conciso (máximo 3-4 oraciones). '
-        + 'Si no tienes el dato exacto, sugiere contactar la alcaldía o un guía local.\n\n'
+        + 'REGLA IMPORTANTE: usa ÚNICAMENTE los lugares y datos de la lista de abajo. '
+        + 'No inventes negocios, direcciones, horarios ni teléfonos que no estén en la lista. '
+        + 'Si un lugar dice "Todos los días", eso incluye sábados y domingos. '
+        + 'Si el dato no está en la lista, dilo con claridad y sugiere contactar la alcaldía o un guía local.\n\n'
         + 'Lugares disponibles:\n' + ctx;
 
       const sysEN = 'You are the tourism assistant for Labateca (God\'s Volcanoes), Norte de Santander, Colombia. '
         + 'Altitude 1,566 m, mild climate ~20°C, ~113 km from Cúcuta (~3.5h by bus). '
         + 'Answer questions about tourism, directions, food and activities. '
         + 'Be friendly and concise (max 3-4 sentences). '
-        + 'If you lack the specific info, suggest contacting the town hall or a local guide.\n\n'
+        + 'IMPORTANT RULE: use ONLY the places and data in the list below. '
+        + 'Do not invent businesses, addresses, opening hours or phone numbers that are not listed. '
+        + 'If a place says "Every day", that includes Saturdays and Sundays. '
+        + 'If the data is not in the list, say so clearly and suggest contacting the town hall or a local guide.\n\n'
         + 'Available places:\n' + ctx;
 
       var systemPrompt = (lang === 'es') ? sysES : sysEN;
@@ -87,7 +102,9 @@ export default {
           { role: 'user',   content: question }
         ],
         max_tokens: 400,
-        temperature: 0.7
+        // 0.7 hacía que rellenara huecos inventando; para un directorio de datos
+        // reales conviene que se pegue a la lista.
+        temperature: 0.3
       });
 
       var answer = ai_result.response
