@@ -8,8 +8,8 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 500,
-      "mapaY": 370,
+      "mapaX": 509,
+      "mapaY": 363,
       "telefono": "",
       "nombre": {
         "es": "Parroquia Nuestra Señora de las Angustias",
@@ -96,8 +96,8 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 516,
-      "mapaY": 360,
+      "mapaX": 523,
+      "mapaY": 363,
       "telefono": "",
       "nombre": {
         "es": "Nuestra Señora de las Angustias — Patrona",
@@ -159,8 +159,8 @@
       "coordsApprox": false,
       "lat": 7.3002463,
       "lng": -72.4963025,
-      "mapaX": 464,
-      "mapaY": 342,
+      "mapaX": 466,
+      "mapaY": 340,
       "telefono": "",
       "nombre": {
         "es": "Cementerio (Camposanto) de Labateca",
@@ -222,8 +222,8 @@
       "coordsApprox": false,
       "lat": 7.2997576,
       "lng": -72.494551,
-      "mapaX": 492,
-      "mapaY": 380,
+      "mapaX": 489,
+      "mapaY": 399,
       "telefono": "573213496226",
       "nombre": {
         "es": "Servicios Parroquiales y Documentos",
@@ -270,8 +270,8 @@
       "coordsApprox": false,
       "lat": 7.2996816,
       "lng": -72.49452,
-      "mapaX": 495,
-      "mapaY": 380,
+      "mapaX": 502,
+      "mapaY": 375,
       "telefono": "",
       "nombre": {
         "es": "Parque Principal",
@@ -338,8 +338,8 @@
       "coordsApprox": false,
       "lat": 7.300327,
       "lng": -72.494867,
-      "mapaX": 512,
-      "mapaY": 356,
+      "mapaX": 502,
+      "mapaY": 351,
       "telefono": "573214592514",
       "nombre": {
         "es": "Intrínseco — Restaurante, Café y Bar",
@@ -406,7 +406,7 @@
       "coordsApprox": false,
       "lat": 7.3005894,
       "lng": -72.4950748,
-      "mapaX": 478,
+      "mapaX": 468,
       "mapaY": 388,
       "telefono": "",
       "telFijo": "576015948500",
@@ -460,8 +460,8 @@
       "coordsApprox": false,
       "lat": 7.30017,
       "lng": -72.494824,
-      "mapaX": 470,
-      "mapaY": 372,
+      "mapaX": 467,
+      "mapaY": 364,
       "telefono": "573123047048",
       "nombre": {
         "es": "Siscatagua A.P.C. — Acueducto y Alcantarillado",
@@ -538,8 +538,8 @@
       "coordsApprox": false,
       "lat": 7.300346,
       "lng": -72.49487,
-      "mapaX": 486,
-      "mapaY": 366,
+      "mapaX": 488,
+      "mapaY": 351,
       "telefono": "584168475520",
       "nombre": {
         "es": "Criss Studio — Uñas y Belleza",
@@ -591,8 +591,8 @@
       "coordsApprox": true,
       "lat": 7.3169,
       "lng": -72.483,
-      "mapaX": 520,
-      "mapaY": 360,
+      "mapaX": 530,
+      "mapaY": 350,
       "telefono": "",
       "nombre": {
         "es": "Casa de la Cultura",
@@ -791,8 +791,8 @@
       "coordsApprox": true,
       "lat": 7.3166,
       "lng": -72.4837,
-      "mapaX": 490,
-      "mapaY": 390,
+      "mapaX": 482,
+      "mapaY": 388,
       "telefono": "",
       "nombre": {
         "es": "Dulces y sabores típicos",
@@ -831,8 +831,8 @@
       "coordsApprox": true,
       "lat": 7.3163,
       "lng": -72.4832,
-      "mapaX": 510,
-      "mapaY": 395,
+      "mapaX": 509,
+      "mapaY": 387,
       "telefono": "",
       "nombre": {
         "es": "Hospedaje local",
@@ -991,8 +991,8 @@
       "coordsApprox": true,
       "lat": 7.3168,
       "lng": -72.4829,
-      "mapaX": 525,
-      "mapaY": 375,
+      "mapaX": 530,
+      "mapaY": 374,
       "telefono": "",
       "nombre": {
         "es": "Cocina de montaña (espacio comunitario)",
@@ -1031,8 +1031,8 @@
       "coordsApprox": true,
       "lat": 7.3162,
       "lng": -72.4836,
-      "mapaX": 480,
-      "mapaY": 400,
+      "mapaX": 481,
+      "mapaY": 412,
       "telefono": "",
       "nombre": {
         "es": "Posada comunitaria (espacio)",
@@ -1071,8 +1071,8 @@
       "coordsApprox": true,
       "lat": 7.317,
       "lng": -72.4831,
-      "mapaX": 515,
-      "mapaY": 355,
+      "mapaX": 516,
+      "mapaY": 351,
       "telefono": "",
       "nombre": {
         "es": "Artesanías y tejidos locales",
@@ -1111,8 +1111,8 @@
       "coordsApprox": false,
       "lat": 7.303682,
       "lng": -72.514713,
-      "mapaX": 300,
-      "mapaY": 480,
+      "mapaX": 299,
+      "mapaY": 478,
       "telefono": "",
       "nombre": {
         "es": "Cascada de Siscata",
@@ -1155,7 +1155,33 @@
         "lat": 7.299865,
         "lng": -72.494603
       },
-      "wikiloc": "https://loc.wiki/t/269503883?h=2m4va5w5om&wa=sd&la=es"
+      "wikiloc": "https://loc.wiki/t/269503883?h=2m4va5w5om&wa=sd&la=es",
+      "fotosCap": [
+        {
+          "es": "El salto principal de Siscata cayendo sobre la poza, entre paredes de roca y vegetación.",
+          "en": "Siscata's main falls dropping into the pool, framed by rock walls and dense greenery."
+        },
+        {
+          "es": "La cascada vista desde la ladera cubierta de musgo, en pleno día soleado.",
+          "en": "The waterfall seen from the moss-covered slope on a bright sunny day."
+        },
+        {
+          "es": "Mirando hacia el valle desde el costado del salto, con la quebrada abriéndose paso entre las montañas.",
+          "en": "Looking out toward the valley from beside the falls, with the creek winding between the mountains."
+        },
+        {
+          "es": "Vista completa del salto y el cauce de piedras que baja desde su base.",
+          "en": "Full view of the falls and the rocky streambed running down from its base."
+        },
+        {
+          "es": "Paredón húmedo cubierto de musgo, con hilos de agua escurriendo entre las rocas.",
+          "en": "Damp rock face covered in moss, with threads of water trickling between the stones."
+        },
+        {
+          "es": "La grieta de roca en la parte baja del recorrido, donde está la bocatoma del acueducto.",
+          "en": "The rock crevice at the lower end of the trail, where the water intake sits."
+        }
+      ]
     },
     {
       "id": "pedregal",
@@ -1204,7 +1230,33 @@
         "labateca/pedregal-08"
       ],
       "track": "data/tracks/pedregal.gpx",
-      "wikiloc": "https://loc.wiki/t/269295597?h=2m4va5w5om&wa=sd&la=es"
+      "wikiloc": "https://loc.wiki/t/269295597?h=2m4va5w5om&wa=sd&la=es",
+      "fotosCap": [
+        {
+          "es": "La terraza del mirador al atardecer, con el valle y el pueblo al fondo.",
+          "en": "The lookout terrace at dusk, with the valley and the town below."
+        },
+        {
+          "es": "Vista aérea de la finca sobre la ladera, rodeada de montaña.",
+          "en": "Aerial view of the farm on the hillside, surrounded by mountains."
+        },
+        {
+          "es": "La casa principal en piedra con su techo rojo, vista desde el aire.",
+          "en": "The main stone house with its red roof, seen from above."
+        },
+        {
+          "es": "Zona techada con mesa de billar, barra y muros en adobe y madera.",
+          "en": "Covered area with a pool table, bar, and adobe-and-wood walls."
+        },
+        {
+          "es": "La gruta de piedra y el Vía Crucis, con el valle abriéndose al fondo.",
+          "en": "The stone grotto and Stations of the Cross, with the valley opening up behind."
+        },
+        {
+          "es": "Otra vista de la gruta y la cruz blanca, en el filo del mirador.",
+          "en": "Another view of the grotto and the white cross, on the edge of the lookout."
+        }
+      ]
     },
     {
       "id": "fama-el-corral",
@@ -1213,8 +1265,8 @@
       "coordsApprox": false,
       "lat": 7.2990524,
       "lng": -72.4949041,
-      "mapaX": 490,
-      "mapaY": 375,
+      "mapaX": 495,
+      "mapaY": 363,
       "telefono": "573118913433",
       "nombre": {
         "es": "Fama y Charcutería El Corral",
@@ -1248,6 +1300,20 @@
         "labateca/elcorral-01",
         "labateca/elcorral-02",
         "labateca/elcorral-03"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Fama y Charcutería El Corral, con su aviso pintado a mano.",
+          "en": "Storefront of Fama y Charcutería El Corral, with its hand-painted sign."
+        },
+        {
+          "es": "Vitrina de carnes frescas, congeladores de pollo y estantería de abarrotes.",
+          "en": "Fresh-meat display case, chicken freezers and grocery shelves."
+        },
+        {
+          "es": "Mostrador de embutidos y mecato, con el televisor del local encendido.",
+          "en": "Deli and snack counter, with the shop's television on."
+        }
       ]
     },
     {
@@ -1257,8 +1323,8 @@
       "coordsApprox": false,
       "lat": 7.29917,
       "lng": -72.494704,
-      "mapaX": 485,
-      "mapaY": 378,
+      "mapaX": 496,
+      "mapaY": 387,
       "telefono": "573222834876",
       "nombre": {
         "es": "Automercado Karen",
@@ -1294,6 +1360,28 @@
         "labateca/karen-02",
         "labateca/karen-01",
         "labateca/karen-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "Nevera de bebidas frías: gaseosas, jugos, energizantes y lácteos.",
+          "en": "Cold-drinks fridge: sodas, juices, energy drinks and dairy."
+        },
+        {
+          "es": "Pasillo de víveres y abarrotes: granos, aceites y enlatados.",
+          "en": "Grocery aisle: grains, cooking oils and canned goods."
+        },
+        {
+          "es": "Vitrina refrigerada con lácteos y fruta fresca, junto a los exhibidores de dulces.",
+          "en": "Refrigerated case with dairy and fresh fruit, beside the candy racks."
+        },
+        {
+          "es": "Mostrador largo con pan, pasabocas y vitrina de charcutería.",
+          "en": "Long counter with bread, snacks and a deli display case."
+        },
+        {
+          "es": "Entrada del supermercado (dirección 2-44), con bultos de grano y concentrado.",
+          "en": "Supermarket entrance (address 2-44), with sacks of grain and feed."
+        }
       ]
     },
     {
@@ -1303,8 +1391,8 @@
       "coordsApprox": false,
       "lat": 7.298409,
       "lng": -72.493737,
-      "mapaX": 480,
-      "mapaY": 383,
+      "mapaX": 481,
+      "mapaY": 363,
       "telefono": "573144195716",
       "nombre": {
         "es": "Antojitos",
@@ -1338,6 +1426,20 @@
         "labateca/antojitos-01",
         "labateca/antojitos-02",
         "labateca/antojitos-03"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Antojitos, con sus murales de granizados y el toldo rojo.",
+          "en": "Antojitos storefront, with its slush-drink murals and red awning."
+        },
+        {
+          "es": "Salón interior con mesas de colores, máquina de granizados y horno de pizza.",
+          "en": "Indoor seating with colorful tables, a slush machine and a pizza oven."
+        },
+        {
+          "es": "Las dos máquinas de granizados y la mesa de jarabes y toppings.",
+          "en": "The two slush machines and the syrup-and-topping table."
+        }
       ]
     },
     {
@@ -1347,8 +1449,8 @@
       "coordsApprox": false,
       "lat": 7.30008,
       "lng": -72.494792,
-      "mapaX": 468,
-      "mapaY": 372,
+      "mapaX": 461,
+      "mapaY": 376,
       "telefono": "573234521624",
       "nombre": {
         "es": "Sistemas UM",
@@ -1384,6 +1486,28 @@
         "labateca/sistemas-um-03",
         "labateca/sistemas-um-04",
         "labateca/sistemas-um-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Sistemas UM de noche, con su aviso en neón y banderines.",
+          "en": "Sistemas UM storefront at night, with its neon sign and pennants."
+        },
+        {
+          "es": "Vitrina de papelería y variedades: útiles, perfumería y pequeños electrónicos.",
+          "en": "Stationery and variety display: school supplies, fragrances and small electronics."
+        },
+        {
+          "es": "Pared de forros para celular y vitrina de accesorios y repuestos.",
+          "en": "Wall of phone cases and a display of accessories and spare parts."
+        },
+        {
+          "es": "Exhibidores de regalos, cosméticos, joyería y artículos para el hogar.",
+          "en": "Displays of gifts, cosmetics, jewelry and household items."
+        },
+        {
+          "es": "El taller de tecnología: reparación de celulares con microscopio y estación de soldadura.",
+          "en": "The tech workshop: phone repair with a microscope and soldering station."
+        }
       ]
     },
     {
@@ -1393,8 +1517,8 @@
       "coordsApprox": false,
       "lat": 7.2987856,
       "lng": -72.4940529,
-      "mapaX": 470,
-      "mapaY": 390,
+      "mapaX": 461,
+      "mapaY": 400,
       "telefono": "573212849284",
       "nombre": {
         "es": "Antaño Café-Bar",
@@ -1430,6 +1554,28 @@
         "labateca/antano-03",
         "labateca/antano-04",
         "labateca/antano-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Antaño Café-Bar al anochecer, con sus avisos en madera y materas.",
+          "en": "Antaño Café-Bar at dusk, with its wooden signs and potted plants."
+        },
+        {
+          "es": "Salón vintage: discos de vinilo, televisores antiguos y enredadera en el techo.",
+          "en": "Vintage room: vinyl records, old television sets and ivy across the ceiling."
+        },
+        {
+          "es": "La barra del café-bar, con nevera de bebidas y decoración de antaño.",
+          "en": "The café-bar counter, with a drinks fridge and old-time décor."
+        },
+        {
+          "es": "Pizza de la casa servida frente al mural de discos y el tocadiscos.",
+          "en": "House pizza served in front of the record wall and turntable."
+        },
+        {
+          "es": "El muro de vinilos con la cámara antigua, la hoz y los faroles.",
+          "en": "The vinyl wall with the antique camera, sickle and lanterns."
+        }
       ]
     },
     {
@@ -1474,6 +1620,24 @@
         "labateca/la-pena-02",
         "labateca/la-pena-03",
         "labateca/la-pena-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "La formación rocosa de La Peña asomando sobre el bosque de eucaliptos.",
+          "en": "The rocky outcrop of La Peña rising above the eucalyptus grove."
+        },
+        {
+          "es": "Cabras pastando en la ladera, con el cañón y el río muy abajo.",
+          "en": "Goats grazing on the slope, with the canyon and river far below."
+        },
+        {
+          "es": "Caída de agua entre piedras y musgo, en el sendero de la finca.",
+          "en": "Water tumbling among mossy rocks along the farm's trail."
+        },
+        {
+          "es": "Construcción de la finca sobre la ladera, al pie de la montaña.",
+          "en": "The farm building on the hillside, at the foot of the mountain."
+        }
       ]
     },
     {
@@ -1483,8 +1647,8 @@
       "coordsApprox": false,
       "lat": 7.297209,
       "lng": -72.496575,
-      "mapaX": 450,
-      "mapaY": 398,
+      "mapaX": 447,
+      "mapaY": 400,
       "telefono": "573108566143",
       "nombre": {
         "es": "Teca Bar La Barra",
@@ -1521,6 +1685,32 @@
         "labateca/teca-bar-04",
         "labateca/teca-bar-05",
         "labateca/teca-bar-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Teca Bar La Barra de noche, con su mural de fútbol y carnaval.",
+          "en": "Teca Bar La Barra at night, with its football-and-carnival mural."
+        },
+        {
+          "es": "El local iluminado en verde, con el mural y la entrada al salón.",
+          "en": "The venue lit in green, with the mural and the entrance to the hall."
+        },
+        {
+          "es": "Las dos mesas de billar bajo el techo de cintas de colores.",
+          "en": "The two pool tables under a ceiling of colorful streamers."
+        },
+        {
+          "es": "Mesa de billar frente a la barra en madera y la nevera de bebidas.",
+          "en": "Pool table facing the wooden bar and the drinks fridge."
+        },
+        {
+          "es": "Zona de mesas con la barra al fondo y el muro de girasoles.",
+          "en": "Seating area with the bar at the back and the sunflower wall."
+        },
+        {
+          "es": "El mural pintado a mano: camisetas, banderas, balón y máscara de carnaval.",
+          "en": "The hand-painted mural: jerseys, flags, a football and a carnival mask."
+        }
       ]
     },
     {
@@ -1530,8 +1720,8 @@
       "coordsApprox": false,
       "lat": 7.300349,
       "lng": -72.494849,
-      "mapaX": 464,
-      "mapaY": 368,
+      "mapaX": 454,
+      "mapaY": 364,
       "telefono": "573123047768",
       "nombre": {
         "es": "Frikarnes",
@@ -1566,6 +1756,24 @@
         "labateca/frikarnes-02",
         "labateca/frikarnes-03",
         "labateca/frikarnes-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Frikarnes, con sus avisos de carnicería y el agua en botellón.",
+          "en": "Frikarnes storefront, with its butcher-shop banners and bottled water."
+        },
+        {
+          "es": "Vitrina refrigerada con cortes de carne, pollo y bandejas listas.",
+          "en": "Refrigerated case with cuts of meat, chicken and ready-packed trays."
+        },
+        {
+          "es": "Mostrador y caja, con estantería de abarrotes y congelador de embutidos.",
+          "en": "Counter and register, with grocery shelves and a freezer for cold cuts."
+        },
+        {
+          "es": "Bodega surtida: enlatados, aseo, concentrados y granos por bulto.",
+          "en": "Well-stocked back room: canned goods, cleaning products, feed and bulk grains."
+        }
       ]
     },
     {
@@ -1575,8 +1783,8 @@
       "coordsApprox": false,
       "lat": 7.298875,
       "lng": -72.494026,
-      "mapaX": 480,
-      "mapaY": 384,
+      "mapaX": 475,
+      "mapaY": 399,
       "telefono": "573115576386",
       "nombre": {
         "es": "Siste Hogar",
@@ -1612,6 +1820,28 @@
         "labateca/siste-hogar-03",
         "labateca/siste-hogar-04",
         "labateca/siste-hogar-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Siste Hogar, con sus dos puertas y la vitrina de accesorios.",
+          "en": "Siste Hogar storefront, with its two doors and accessory display."
+        },
+        {
+          "es": "Pared de forros para celular, papelería y juguetería infantil.",
+          "en": "Wall of phone cases, stationery and children's toys."
+        },
+        {
+          "es": "Artículos para el hogar: canastos, baldes, ollas y plásticos.",
+          "en": "Household goods: baskets, buckets, pots and plasticware."
+        },
+        {
+          "es": "Vitrina de herramientas, cacharrería y artículos de ferretería menor.",
+          "en": "Display of tools, odds and ends, and small hardware items."
+        },
+        {
+          "es": "Zona de bodega con herramienta colgada, pinturas y mercancía surtida.",
+          "en": "Storage area with hanging tools, paints and assorted stock."
+        }
       ]
     },
     {
@@ -1621,8 +1851,8 @@
       "coordsApprox": false,
       "lat": 7.299908,
       "lng": -72.494747,
-      "mapaX": 458,
-      "mapaY": 380,
+      "mapaX": 447,
+      "mapaY": 376,
       "telefono": "573153331207",
       "nombre": {
         "es": "Galactic Bar",
@@ -1657,6 +1887,24 @@
         "labateca/galactic-02",
         "labateca/galactic-03",
         "labateca/galactic-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "El logo del astronauta y el mural espacial en la fachada del Galactic Bar.",
+          "en": "The astronaut logo and space mural on the Galactic Bar storefront."
+        },
+        {
+          "es": "La barra de atención con la nevera de bebidas y el aviso de pago.",
+          "en": "The service counter with the drinks fridge and payment sign."
+        },
+        {
+          "es": "Salón con mesas de colores, luces y sonido, y el mural galáctico.",
+          "en": "Room with colorful tables, lights and sound, and the galactic mural."
+        },
+        {
+          "es": "Vista del salón hacia la calle, con las cajas de cerveza y las montañas al fondo.",
+          "en": "View from the hall toward the street, with beer crates and the mountains beyond."
+        }
       ]
     },
     {
@@ -1666,8 +1914,8 @@
       "coordsApprox": false,
       "lat": 7.3005588,
       "lng": -72.4949505,
-      "mapaX": 448,
-      "mapaY": 362,
+      "mapaX": 440,
+      "mapaY": 363,
       "correo": "labatecanortedesan@registraduria.gov.co",
       "nombre": {
         "es": "Registraduría Municipal de Labateca",
@@ -1700,6 +1948,16 @@
       "fotos": [
         "labateca/registraduria-01",
         "labateca/registraduria-02"
+      ],
+      "fotosCap": [
+        {
+          "es": "Entrada de la Registraduría Municipal de Labateca.",
+          "en": "Entrance to Labateca's Municipal Civil Registry office."
+        },
+        {
+          "es": "Resumen de trámites, horario y contacto de la Registraduría Municipal.",
+          "en": "Summary of services, hours and contact details for the Municipal Civil Registry."
+        }
       ]
     },
     {
@@ -1710,7 +1968,7 @@
       "lat": 7.298304,
       "lng": -72.493737,
       "mapaX": 495,
-      "mapaY": 402,
+      "mapaY": 412,
       "telefono": "573212675678",
       "nombre": {
         "es": "Sofi Burger",
@@ -1746,6 +2004,28 @@
         "labateca/sofi-burger-03",
         "labateca/sofi-burger-04",
         "labateca/sofi-burger-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "Salón de Sofi Burger, con el muro verde, las luces colgantes y el televisor.",
+          "en": "Sofi Burger's dining room, with the green wall, string lights and television."
+        },
+        {
+          "es": "Papas cargadas con pollo desmechado y salsa de queso, frente al logo de la casa.",
+          "en": "Loaded fries with pulled chicken and cheese sauce, in front of the house logo."
+        },
+        {
+          "es": "La carta de la casa: shawarmas y hamburguesas, entre ellas la Vikinga y la Problemática.",
+          "en": "The house menu: shawarmas and burgers, including the Vikinga and the Problemática."
+        },
+        {
+          "es": "Fachada de noche con el aviso iluminado y la entrada al salón.",
+          "en": "Storefront at night with the lit sign and the entrance to the dining room."
+        },
+        {
+          "es": "Mesas y barra del salón, con el muro verde y el logo en la pared.",
+          "en": "Tables and counter in the dining room, with the green wall and logo."
+        }
       ]
     },
     {
@@ -1756,7 +2036,7 @@
       "lat": 7.3008,
       "lng": -72.495177,
       "mapaX": 440,
-      "mapaY": 350,
+      "mapaY": 349,
       "telefono": "573124097073",
       "nombre": {
         "es": "Tienda Mixta Cielo Isabella",
@@ -1791,6 +2071,24 @@
         "labateca/cielo-isabella-02",
         "labateca/cielo-isabella-03",
         "labateca/cielo-isabella-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de la Tienda Mixta Cielo Isabella, con sus puertas rojas.",
+          "en": "Storefront of Tienda Mixta Cielo Isabella, with its red doors."
+        },
+        {
+          "es": "Estantería de aseo, cuidado personal y medicamentos básicos, junto a la nevera.",
+          "en": "Shelves of cleaning, personal-care and basic medicine items, beside the fridge."
+        },
+        {
+          "es": "Exhibidor de mecato y pan, con el congelador de helados.",
+          "en": "Snack and bread display, with the ice-cream freezer."
+        },
+        {
+          "es": "Entrada del local vista desde adentro, con la vitrina de productos.",
+          "en": "The entrance seen from inside, with the product display case."
+        }
       ]
     },
     {
@@ -1801,7 +2099,7 @@
       "lat": 7.30056,
       "lng": -72.4949,
       "mapaX": 456,
-      "mapaY": 358,
+      "mapaY": 350,
       "nombre": {
         "es": "Concejo Municipal de Labateca",
         "en": "Municipal Council of Labateca"
@@ -1834,6 +2132,20 @@
         "labateca/concejo-labateca-01",
         "labateca/concejo-labateca-02",
         "labateca/concejo-labateca-03"
+      ],
+      "fotosCap": [
+        {
+          "es": "Entrada del Concejo Municipal de Labateca, con su placa institucional.",
+          "en": "Entrance to Labateca's Municipal Council, with its institutional plaque."
+        },
+        {
+          "es": "El recinto de sesiones, con los escritorios de los concejales y las banderas.",
+          "en": "The session chamber, with the councillors' desks and the flags."
+        },
+        {
+          "es": "Tablero del recinto y el retrato de Simón Bolívar.",
+          "en": "The chamber's board and the portrait of Simón Bolívar."
+        }
       ]
     },
     {
@@ -1843,8 +2155,8 @@
       "coordsApprox": false,
       "lat": 7.299932,
       "lng": -72.494973,
-      "mapaX": 466,
-      "mapaY": 382,
+      "mapaX": 454,
+      "mapaY": 388,
       "telefono": "573104036102",
       "nombre": {
         "es": "Papelería y Variedades Martha Sánchez",
@@ -1906,8 +2218,8 @@
       "coordsApprox": false,
       "lat": 7.299268,
       "lng": -72.494337,
-      "mapaX": 512,
-      "mapaY": 396,
+      "mapaX": 518,
+      "mapaY": 398,
       "telefono": "573107963730",
       "nombre": {
         "es": "Tienda Tres Esquinas",
@@ -1979,7 +2291,7 @@
       "coordsApprox": false,
       "lat": 7.298665,
       "lng": -72.493742,
-      "mapaX": 540,
+      "mapaX": 544,
       "mapaY": 425,
       "telefono": "573144490474",
       "nombre": {
@@ -2043,7 +2355,7 @@
       "lat": 7.299447,
       "lng": -72.494141,
       "mapaX": 528,
-      "mapaY": 386,
+      "mapaY": 388,
       "telefono": "573123504567",
       "nombre": {
         "es": "Variedades Martha — Miscelánea y Efecty",
@@ -2115,8 +2427,8 @@
       "coordsApprox": false,
       "lat": 7.30023,
       "lng": -72.494266,
-      "mapaX": 509,
-      "mapaY": 372,
+      "mapaX": 516,
+      "mapaY": 375,
       "telefono": "573106803058",
       "nombre": {
         "es": "Heladería Nápoles",
@@ -2188,8 +2500,8 @@
       "coordsApprox": false,
       "lat": 7.300002,
       "lng": -72.49379,
-      "mapaX": 537,
-      "mapaY": 380,
+      "mapaX": 541,
+      "mapaY": 383,
       "nombre": {
         "es": "Juzgado Promiscuo Municipal de Labateca",
         "en": "Labateca Municipal Court (Juzgado Promiscuo Municipal)"
@@ -2240,8 +2552,8 @@
       "coordsApprox": false,
       "lat": 7.298773,
       "lng": -72.493981,
-      "mapaX": 526,
-      "mapaY": 421,
+      "mapaX": 536,
+      "mapaY": 414,
       "telefono": "573205777829",
       "nombre": {
         "es": "Moto Repuesto Doble AA",
@@ -2308,8 +2620,8 @@
       "coordsApprox": false,
       "lat": 7.299147,
       "lng": -72.494282,
-      "mapaX": 508,
-      "mapaY": 409,
+      "mapaX": 509,
+      "mapaY": 412,
       "telefono": "573144922534",
       "nombre": {
         "es": "Almacén Tecno-Agro",
@@ -2381,8 +2693,8 @@
       "coordsApprox": false,
       "lat": 7.298917,
       "lng": -72.493682,
-      "mapaX": 544,
-      "mapaY": 416,
+      "mapaX": 550,
+      "mapaY": 413,
       "telefono": "573184471211",
       "nombre": {
         "es": "Droguería María José",
@@ -2444,8 +2756,8 @@
       "coordsApprox": false,
       "lat": 7.299102,
       "lng": -72.494192,
-      "mapaX": 513,
-      "mapaY": 410,
+      "mapaX": 523,
+      "mapaY": 411,
       "telefono": "573168725118",
       "nombre": {
         "es": "Panadería Maxipan",
@@ -2600,8 +2912,8 @@
       "coordsApprox": false,
       "lat": 7.299931881265672,
       "lng": -72.49471127546606,
-      "mapaX": 482,
-      "mapaY": 382,
+      "mapaX": 488,
+      "mapaY": 375,
       "nombre": {
         "es": "SuperGiros",
         "en": "SuperGiros"
@@ -2652,7 +2964,7 @@
       "coordsApprox": false,
       "lat": 7.300103,
       "lng": -72.49476,
-      "mapaX": 479,
+      "mapaX": 475,
       "mapaY": 376,
       "telefono": "573138048438",
       "nombre": {
@@ -2725,8 +3037,8 @@
       "coordsApprox": false,
       "lat": 7.298122,
       "lng": -72.493567,
-      "mapaX": 551,
-      "mapaY": 443,
+      "mapaX": 553,
+      "mapaY": 444,
       "telefono": "573123106831",
       "nombre": {
         "es": "Taller de Motos El Toro",
@@ -2808,8 +3120,8 @@
       "coordsApprox": false,
       "lat": 7.29849,
       "lng": -72.493971,
-      "mapaX": 526,
-      "mapaY": 431,
+      "mapaX": 525,
+      "mapaY": 439,
       "telefono": "573123106831",
       "nombre": {
         "es": "Supermercado El Campesino",
@@ -2876,8 +3188,8 @@
       "coordsApprox": false,
       "lat": 7.299401,
       "lng": -72.494427,
-      "mapaX": 499,
-      "mapaY": 400,
+      "mapaX": 503,
+      "mapaY": 399,
       "telefono": "573202435050",
       "nombre": {
         "es": "La Tienda de Ivancho",
@@ -3208,8 +3520,8 @@
       "coordsApprox": false,
       "lat": 7.296766,
       "lng": -72.497689,
-      "mapaX": 303,
-      "mapaY": 489,
+      "mapaX": 304,
+      "mapaY": 491,
       "telefono": "573124193241",
       "nombre": {
         "es": "Mundo Leo — Variedades",
@@ -3271,8 +3583,8 @@
       "coordsApprox": false,
       "lat": 7.298937,
       "lng": -72.494087,
-      "mapaX": 519,
-      "mapaY": 416,
+      "mapaX": 516,
+      "mapaY": 423,
       "telefono": "573134966445",
       "nombre": {
         "es": "Restaurante Doña María",
@@ -3334,8 +3646,8 @@
       "coordsApprox": false,
       "lat": 7.298332,
       "lng": -72.493707,
-      "mapaX": 542,
-      "mapaY": 436,
+      "mapaX": 539,
+      "mapaY": 439,
       "telefono": "573123106831",
       "nombre": {
         "es": "Centro Naturista Salud & Vida",
@@ -3402,7 +3714,7 @@
       "coordsApprox": false,
       "lat": 7.298932,
       "lng": -72.49408,
-      "mapaX": 506,
+      "mapaX": 503,
       "mapaY": 426,
       "telefono": "573208491055",
       "nombre": {
@@ -3465,8 +3777,8 @@
       "coordsApprox": false,
       "lat": 7.298426,
       "lng": -72.494158,
-      "mapaX": 515,
-      "mapaY": 433,
+      "mapaX": 512,
+      "mapaY": 437,
       "telefono": "573208080167",
       "nombre": {
         "es": "Droguería Central",
@@ -3528,8 +3840,8 @@
       "coordsApprox": false,
       "lat": 7.2987,
       "lng": -72.493926,
-      "mapaX": 529,
-      "mapaY": 424,
+      "mapaX": 530,
+      "mapaY": 426,
       "telefono": "573185619179",
       "nombre": {
         "es": "Ateca Bar Café Restaurante",
@@ -3714,8 +4026,8 @@
       "coordsApprox": false,
       "lat": 7.299067,
       "lng": -72.494904,
-      "mapaX": 470,
-      "mapaY": 411,
+      "mapaX": 467,
+      "mapaY": 413,
       "telefono": "573112805177",
       "nombre": {
         "es": "La Económica JY",
@@ -3793,7 +4105,7 @@
       "lat": 7.298705,
       "lng": -72.494589,
       "mapaX": 489,
-      "mapaY": 424,
+      "mapaY": 425,
       "telefono": "573227784070",
       "nombre": {
         "es": "Barber Shop Labateca",

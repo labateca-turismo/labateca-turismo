@@ -549,25 +549,29 @@ function renderPlaces(){
     const note = p.coordsApprox
       ? `<div class="pc-note">${IC.warn}<span>${t('approx_note')}</span></div>` : "";
 
-    // Campos: soporte schema nuevo (nombre/tiempo/dificultad) y legacy (name/time/diff)
-    const desc     = (p.desc||{})[lang] || '';
-    const dist     = (p.dist||{})[lang] || '';
-    const tiempo   = (p.tiempo||p.time||{})[lang] || '';
-    const dific    = (p.dificultad||p.diff||{})[lang] || '';
+    // Campos: soporte schema nuevo (nombre/tiempo/dificultad) y legacy (name/time/diff).
+    // Se escapan al pintar: aunque hoy solo el CMS escribe places.json, un nombre
+    // con comillas o etiquetas no debe poder romper el HTML de la tarjeta.
+    const nomEsc   = escHtml(placeName(p));
+    const idJs     = escJs(p.id);
+    const desc     = escHtml((p.desc||{})[lang] || '');
+    const dist     = escHtml((p.dist||{})[lang] || '');
+    const tiempo   = escHtml((p.tiempo||p.time||{})[lang] || '');
+    const dific    = escHtml((p.dificultad||p.diff||{})[lang] || '');
 
     return `
     <article class="place-card">
       <div class="pc-media" role="button" tabindex="0"
-           onclick="if(!event.target.closest('.pc-fav'))openLightbox('${p.id}')"
-           onkeydown="if((event.key==='Enter'||event.key===' ')&&!event.target.closest('.pc-fav')){event.preventDefault();openLightbox('${p.id}')}"
-           aria-label="${t('lb_open')}: ${placeName(p)}">
+           onclick="if(!event.target.closest('.pc-fav'))openLightbox('${idJs}')"
+           onkeydown="if((event.key==='Enter'||event.key===' ')&&!event.target.closest('.pc-fav')){event.preventDefault();openLightbox('${idJs}')}"
+           aria-label="${t('lb_open')}: ${nomEsc}">
         ${media}
         ${badge}
-        <button class="pc-fav ${isFav?'on':''}" onclick="toggleFav('${p.id}')" aria-pressed="${isFav?'true':'false'}" aria-label="${(isFav?t('fav_remove'):t('fav_add'))} ${placeName(p)}" title="${t('fav_add')}">${IC.heart}</button>
+        <button class="pc-fav ${isFav?'on':''}" onclick="toggleFav('${idJs}')" aria-pressed="${isFav?'true':'false'}" aria-label="${(isFav?t('fav_remove'):t('fav_add'))} ${nomEsc}" title="${t('fav_add')}">${IC.heart}</button>
       </div>
       <div class="pc-body">
         <div class="pc-cat">${t('fil_'+cat)}</div>
-        <h3 class="pc-title">${placeName(p)}</h3>
+        <h3 class="pc-title">${nomEsc}</h3>
         <p class="pc-desc">${desc}</p>
         <div class="pc-stats">
           <span class="pc-stat">${IC.pin}${dist}</span>
@@ -575,20 +579,20 @@ function renderPlaces(){
           <span class="pc-stat">${IC.hill}${dific}</span>
         </div>
         <div class="pc-actions">
-          <a class="pc-btn map" href="${gmaps}" target="_blank" rel="noopener noreferrer" onclick="trackEvent('${p.id}','ruta')">${IC.navi}${p.track?t('cta_drive'):t('cta_how')}</a>
+          <a class="pc-btn map" href="${gmaps}" target="_blank" rel="noopener noreferrer" onclick="trackEvent('${idJs}','ruta')">${IC.navi}${p.track?t('cta_drive'):t('cta_how')}</a>
           ${p.telefono?`<a class="pc-btn wa" href="https://wa.me/${p.telefono}?text=${encodeURIComponent((lang==='es'?'Hola, te contacto desde la guía turística de Labateca sobre ':'Hi! I found you on the Labateca tourism guide — about ')+placeName(p)+'.')}" target="_blank" rel="noopener noreferrer" title="${t('cta_whatsapp_t')}" onclick="trackEvent('${p.id}','whatsapp')">${IC.wa}${t('cta_whatsapp')}</a>`:''}
-          ${p.telFijo?`<a class="pc-btn call" href="tel:+${String(p.telFijo).replace(/[^0-9]/g,'')}" title="${t('cta_llamar_t')}" onclick="trackEvent('${p.id}','llamar')">${IC.phone}${t('cta_llamar')}</a>`:''}
+          ${p.telFijo?`<a class="pc-btn call" href="tel:+${String(p.telFijo).replace(/[^0-9]/g,'')}" title="${t('cta_llamar_t')}" onclick="trackEvent('${idJs}','llamar')">${IC.phone}${t('cta_llamar')}</a>`:''}
           ${p.wikiloc
             ? `<a class="pc-btn trail" href="${escHtml(p.wikiloc)}" target="_blank" rel="noopener noreferrer" title="${t('cta_wikiloc_t')}">${IC.hill}${t('cta_wikiloc')}</a>`
-            : (p.track?`<button class="pc-btn trail" onclick="showTrail('${p.id}')">${IC.hill}${t('cta_trail')}</button>`:'')}
-          <button class="pc-btn route ${inRoute?'added':''}" onclick="toggleRoute('${p.id}')">
+            : (p.track?`<button class="pc-btn trail" onclick="showTrail('${idJs}')">${IC.hill}${t('cta_trail')}</button>`:'')}
+          <button class="pc-btn route ${inRoute?'added':''}" onclick="toggleRoute('${idJs}')">
             ${inRoute?IC.check:IC.plus}${inRoute?t('cta_added'):t('cta_add')}
           </button>
-          <button class="pc-share" onclick="sharePlace('${p.id}')" aria-label="${t('cta_share')}" title="${t('cta_share')}">
+          <button class="pc-share" onclick="sharePlace('${idJs}')" aria-label="${t('cta_share')}" title="${t('cta_share')}">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
-        ${CONFIG.reviewsWorkerUrl?`<button class="pc-reviews" onclick="openReviews('${p.id}')">★ ${t('rv_open')}</button>`:''}
+        ${CONFIG.reviewsWorkerUrl?`<button class="pc-reviews" onclick="openReviews('${idJs}')">★ ${t('rv_open')}</button>`:''}
         ${note}
       </div>
     </article>`;
@@ -631,16 +635,16 @@ function renderDrawer(){
     const firstPhoto=(p.fotos&&p.fotos.length)?p.fotos[0]:(p.img||'');
     const photoUrl=firstPhoto?(firstPhoto.startsWith('http')?firstPhoto:cldUrl(firstPhoto)):'';
     const thumb=photoUrl
-      ?`<img class="route-thumb" src="${photoUrl}" alt="${placeName(p)}" loading="lazy">`
+      ?`<img class="route-thumb" src="${photoUrl}" alt="${escHtml(placeName(p))}" loading="lazy">`
       :`<div class="route-ph">${IC.cam}</div>`;
-    const dist=(p.dist||{})[lang]||'';
-    const dific=(p.dificultad||p.diff||{})[lang]||'';
+    const dist=escHtml((p.dist||{})[lang]||'');
+    const dific=escHtml((p.dificultad||p.diff||{})[lang]||'');
     const meta=[dist,dific].filter(Boolean).join(' · ');
     return `<div class="route-item">
       <span class="route-num">${idx+1}</span>
       ${thumb}
-      <span style="flex:1;min-width:0"><b>${placeName(p)}</b><span>${meta}</span></span>
-      <button class="rm" onclick="toggleRoute('${p.id}')" aria-label="Quitar">
+      <span style="flex:1;min-width:0"><b>${escHtml(placeName(p))}</b><span>${meta}</span></span>
+      <button class="rm" onclick="toggleRoute('${escJs(p.id)}')" aria-label="Quitar">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>`;
@@ -694,6 +698,13 @@ function sharePlace(id){
 /* Escapa HTML para insertar texto de datos (CMS/comunidad) sin riesgo de XSS */
 function escHtml(s){
   return String(s==null?'':s).replace(/[<>&"']/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+/* Escapa para incrustar dentro de una cadena JS que va en un atributo HTML,
+   como onclick="borrar('AQUI')": primero se neutraliza la comilla para JS y
+   luego se escapa el HTML. Sin esto, un id con comilla rompe el manejador. */
+function escJs(s){
+  return escHtml(String(s==null?'':s).replace(/\\/g,'\\\\').replace(/'/g,"\\'"));
 }
 
 /* ============================================================
@@ -888,8 +899,8 @@ function renderGallery(){
 
     return `<div class="gal ${LAYOUT[i]||''}"
       role="button" tabindex="0"
-      onclick="openLightbox('${p.id}')"
-      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('${p.id}')}"
+      onclick="openLightbox('${escJs(p.id)}')"
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('${escJs(p.id)}')}"
       aria-label="${t('lb_open')}: ${caption}">
       ${inner}
       <div class="gal-cap">${caption}</div>
@@ -918,11 +929,11 @@ function renderRutas() {
   if (!grid || !RUTAS.length) return;
 
   grid.innerHTML = RUTAS.map((r, i) => {
-    const nombre   = r.nombre[lang]      || r.nombre.es;
-    const desc     = r.desc[lang]        || r.desc.es;
-    const duracion = r.duracion[lang]    || r.duracion.es;
-    const dific    = r.dificultad[lang]  || r.dificultad.es;
-    const rec      = r.recomendacion[lang] || r.recomendacion.es || '';
+    const nombre   = escHtml(r.nombre[lang]      || r.nombre.es);
+    const desc     = escHtml(r.desc[lang]        || r.desc.es);
+    const duracion = escHtml(r.duracion[lang]    || r.duracion.es);
+    const dific    = escHtml(r.dificultad[lang]  || r.dificultad.es);
+    const rec      = escHtml(r.recomendacion[lang] || r.recomendacion.es || '');
     const nLugares = r.lugares.length;
 
     // Cuántos de los lugares de esta ruta ya están en "Mi ruta"
@@ -949,7 +960,7 @@ function renderRutas() {
           </span>
         </div>
         ${rec ? `<div class="ruta-rec">${rec}</div>` : ''}
-        <button class="ruta-btn" onclick="applyRoute('${r.id}')" aria-label="${t('rutas_btn')}: ${nombre}">
+        <button class="ruta-btn" onclick="applyRoute('${escJs(r.id)}')" aria-label="${t('rutas_btn')}: ${nombre}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M6 16V8a4 4 0 0 1 4-4h4"/><path d="M18 8v8a4 4 0 0 1-4 4h-1"/></svg>
           <span id="rutaBtn_${r.id}">${yaEnRuta ? t('rutas_btn_active') : t('rutas_btn')}</span>
         </button>
@@ -1328,7 +1339,7 @@ function paintMapMarkers(){
     if(p.lat==null||p.lng==null) return;
     const gmaps=`https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`;
     L.marker([p.lat,p.lng],{icon:window._placeIcon}).addTo(layer)
-      .bindPopup(`<div class="map-pop"><b>${placeName(p)}</b>${(p.dist||{})[lang]||''} · ${(p.dificultad||p.diff||{})[lang]||''}<br><a href="${gmaps}" target="_blank" rel="noopener noreferrer" onclick="trackEvent('${p.id}','ruta')">${IC.navi} ${t('cta_how')}</a></div>`);
+      .bindPopup(`<div class="map-pop"><b>${escHtml(placeName(p))}</b>${escHtml((p.dist||{})[lang]||'')} · ${escHtml((p.dificultad||p.diff||{})[lang]||'')}<br><a href="${gmaps}" target="_blank" rel="noopener noreferrer" onclick="trackEvent('${escJs(p.id)}','ruta')">${IC.navi} ${t('cta_how')}</a></div>`);
     group.push([p.lat,p.lng]);
     if(p.track) drawTrack(p,layer);
   });
@@ -1357,7 +1368,7 @@ function drawTrack(p,layer){
       for(let i=1;i<coords.length;i++) km+=haversineKm(coords[i-1][0],coords[i-1][1],coords[i][0],coords[i][1]);
       const pl=L.polyline(coords,{color:'#a44a24',weight:4,opacity:.9,dashArray:'1 7',lineCap:'round'})
         .addTo(layer)
-        .bindPopup(`<div class="map-pop"><b>${placeName(p)}</b>${t('map_track')} · ${km.toFixed(1)} km</div>`);
+        .bindPopup(`<div class="map-pop"><b>${escHtml(placeName(p))}</b>${t('map_track')} · ${km.toFixed(1)} km</div>`);
       // Registrar el sendero para poder resaltarlo desde el botón "Ver sendero"
       window._trackLayers=window._trackLayers||{};
       window._trackLayers[p.id]=pl;
@@ -1474,10 +1485,10 @@ function initMapIlustrado() {
       const color  = CAT_COLOR[cat] || '#bd5d34';
       const gmaps  = `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`;
 
-      const nombre   = placeName(p);
-      const dist     = (p.dist        || {})[lang] || '';
-      const dific    = (p.dificultad  || p.diff || {})[lang] || '';
-      const rec      = (p.recomendacion || p.rec || {})[lang] || '';
+      const nombre   = escHtml(placeName(p));
+      const dist     = escHtml((p.dist        || {})[lang] || '');
+      const dific    = escHtml((p.dificultad  || p.diff || {})[lang] || '');
+      const rec      = escHtml((p.recomendacion || p.rec || {})[lang] || '');
       const catLabel = t('fil_' + cat);
       const notaVerif= !p.verified
         ? `<span style="display:inline-block;margin-top:5px;font-size:.72rem;background:#d4a23f;color:#16352a;padding:2px 7px;border-radius:99px;font-weight:800">${t('verify_badge')}</span>`
@@ -1490,7 +1501,7 @@ function initMapIlustrado() {
           ${notaVerif}
           ${dist || dific ? `<span class="map-pop-stats">${[dist, dific].filter(Boolean).join(' · ')}</span>` : ''}
           ${rec ? `<span class="map-pop-rec">${rec}</span>` : ''}
-          <a href="${gmaps}" target="_blank" rel="noopener noreferrer" onclick="trackEvent('${p.id}','ruta')">${IC.navi} ${t('cta_how')}</a>
+          <a href="${gmaps}" target="_blank" rel="noopener noreferrer" onclick="trackEvent('${escJs(p.id)}','ruta')">${IC.navi} ${t('cta_how')}</a>
         </div>`;
 
       L.marker(latlng, { icon: iconBase(color) })
@@ -1637,7 +1648,7 @@ function lbPlaceholder(p, hasIds) {
     : `<p>${t('lb_no_photo')}</p>`;
   return `<div class="lb-ph">
     ${IC.cam}
-    <strong style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--cream)">${placeName(p)}</strong>
+    <strong style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--cream)">${escHtml(placeName(p))}</strong>
     <span style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-soft);font-weight:800">${t('fil_'+cat)}</span>
     ${msg}
   </div>`;
