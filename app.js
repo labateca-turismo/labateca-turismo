@@ -198,6 +198,7 @@ const _PLACES_FALLBACK = [
 const I18N = {
   es:{
     brand_sub:"Volcanes de Dios",
+    about_cta:"Conocer la historia documentada desde 1623",
     nav_home:"Inicio", nav_about:"El pueblo", nav_places:"Lugares", nav_map:"Mapa", nav_gallery:"Galería", nav_contact:"Contacto",
     hero_eyebrow:"Norte de Santander · Colombia",
     hero_tag:"Donde la montaña guarda volcanes de Dios",
@@ -322,6 +323,7 @@ const I18N = {
   },
   en:{
     brand_sub:"God's Volcanoes",
+    about_cta:"Read the documented history since 1623",
     nav_home:"Home", nav_about:"The town", nav_places:"Places", nav_map:"Map", nav_gallery:"Gallery", nav_contact:"Contact",
     hero_eyebrow:"Norte de Santander · Colombia",
     hero_tag:"Where the mountains keep God's volcanoes",
@@ -773,7 +775,8 @@ function closeReviews(){
   document.getElementById('rvOverlay').hidden=true;
   document.body.style.overflow='';
 }
-document.getElementById('rvOverlay').addEventListener('click',e=>{ if(e.target===e.currentTarget) closeReviews(); });
+const _rvOv = document.getElementById('rvOverlay');
+if(_rvOv) _rvOv.addEventListener('click',e=>{ if(e.target===e.currentTarget) closeReviews(); });
 
 function _paintStars(){
   document.querySelectorAll('#rvStars button').forEach(b=>{
@@ -783,7 +786,8 @@ function _paintStars(){
 document.querySelectorAll('#rvStars button').forEach(b=>{
   b.addEventListener('click',()=>{ _rvRating=+b.dataset.v; _paintStars(); });
 });
-document.getElementById('rvPhoto').addEventListener('change',e=>{
+const _rvFoto = document.getElementById('rvPhoto');
+if(_rvFoto) _rvFoto.addEventListener('change',e=>{
   const f=e.target.files[0];
   document.getElementById('rvPhotoName').textContent=f?f.name:'';
 });
@@ -2408,9 +2412,11 @@ function init(){
 
   // 1. Cargar idioma guardado
   lang = store.get("lab_lang") || "es";
-  document.getElementById("langEs").classList.toggle("active",lang==="es");
-  document.getElementById("langEn").classList.toggle("active",lang==="en");
-  document.getElementById("year").textContent=new Date().getFullYear();
+  const _es = document.getElementById("langEs"), _en = document.getElementById("langEn");
+  if(_es) _es.classList.toggle("active",lang==="es");
+  if(_en) _en.classList.toggle("active",lang==="en");
+  const _yr = document.getElementById("year");
+  if(_yr) _yr.textContent=new Date().getFullYear();
   applyI18n();
 
   // 2. Render inicial — cada función en try individual para que un error no detenga todo

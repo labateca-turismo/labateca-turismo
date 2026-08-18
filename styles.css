@@ -1000,3 +1000,184 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
   color:rgba(246,239,227,.78)}
 .visit-counter svg{width:15px;height:15px;color:var(--gold);flex:none}
 .visit-counter b{color:var(--cream);font-weight:700;font-variant-numeric:tabular-nums}
+
+/* ============================================================
+   DOCUMENTOS HISTÓRICOS  (/historia/*.html)
+   Lectura larga en pantalla: medida de línea corta, tipografía
+   serif para el cuerpo y aparato crítico (notas, tablas, fuentes)
+   claramente separado del texto del autor.
+   ============================================================ */
+.doc{background:var(--paper);padding:0 0 60px}
+.doc-wrap{max-width:760px}                    /* ~70 caracteres por línea */
+.doc-migas{font-size:.82rem;color:var(--ink-mut);padding:18px 0 0}
+.doc-migas a{color:var(--ink-mut);text-decoration:none}
+.doc-migas a:hover{color:var(--forest-3);text-decoration:underline}
+
+.doc-head{padding:26px 0 30px;border-bottom:2px solid var(--line);margin-bottom:34px}
+.doc-kicker{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);font-weight:800;margin:0 0 10px}
+.doc-head h1{font-family:Fraunces,Georgia,serif;font-size:clamp(1.7rem,5vw,2.6rem);line-height:1.12;color:var(--forest);margin:0 0 8px}
+.doc-sub{font-family:Fraunces,Georgia,serif;font-style:italic;font-size:1.08rem;color:var(--ink-mut);margin:0 0 16px}
+.doc-autor{margin:0 0 16px;color:var(--ink)}
+.doc-datos{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0 0 18px}
+.doc-datos li{background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:.85rem;color:var(--ink-mut)}
+.doc-datos b{color:var(--forest);font-weight:800}
+.doc-aviso{background:var(--cream);border-left:3px solid var(--gold);padding:11px 15px;border-radius:0 var(--r-sm) var(--r-sm) 0;font-size:.88rem;color:var(--ink-mut);margin:0 0 20px}
+.doc-acciones{display:flex;flex-wrap:wrap;gap:10px;margin:0}
+.doc-btn{display:inline-block;background:var(--forest);color:var(--cream);text-decoration:none;padding:11px 18px;border-radius:999px;font-weight:700;font-size:.9rem;transition:transform .2s var(--ease),background .2s}
+.doc-btn:hover{background:var(--forest-3);transform:translateY(-1px)}
+.doc-btn--ghost{background:transparent;color:var(--forest);border:1.5px solid var(--forest)}
+.doc-btn--ghost:hover{background:var(--forest);color:var(--cream)}
+
+.doc-toc{background:var(--cream);border:1px solid var(--line);border-radius:var(--r-md);padding:20px 24px;margin:0 0 36px}
+.doc-toc h2{font-family:Fraunces,Georgia,serif;font-size:1.05rem;color:var(--forest);margin:0 0 12px}
+.doc-toc ol{list-style:none;padding:0;margin:0}
+.doc-toc li{margin:0 0 7px;line-height:1.4}
+.doc-toc .toc-n3{padding-left:20px;font-size:.92rem}
+.doc-toc a{color:var(--ink);text-decoration:none;display:block}
+.doc-toc a:hover{color:var(--clay);text-decoration:underline}
+.doc-toc a span{color:var(--gold-text);font-weight:800;margin-right:7px}
+
+.doc-cuerpo{font-family:Fraunces,Georgia,serif;font-size:1.06rem;line-height:1.75;color:var(--ink)}
+.doc-cuerpo p{margin:0 0 1.15em;text-align:justify;hyphens:auto}
+.doc-cuerpo h2,.doc-cuerpo h3{font-family:Fraunces,Georgia,serif;color:var(--forest);line-height:1.2;margin:2em 0 .7em;scroll-margin-top:90px}
+.doc-cuerpo h2{font-size:1.5rem;border-bottom:1px solid var(--line);padding-bottom:.35em}
+.doc-cuerpo h3{font-size:1.18rem}
+.doc-num{color:var(--gold-text)}
+.doc-cuerpo blockquote{margin:1.6em 0;padding:2px 0 2px 20px;border-left:3px solid var(--gold-soft);color:var(--ink-mut);font-style:italic}
+.doc-cuerpo blockquote p{margin:0;text-align:left}
+.doc-fuente{font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:.8rem;color:var(--ink-mut);background:var(--cream);border-radius:var(--r-sm);padding:7px 12px;text-align:left!important}
+
+.doc-tabla{margin:2em 0;padding:0}
+.doc-tabla figcaption{font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:800;font-size:.9rem;color:var(--forest);margin:0 0 10px;line-height:1.35}
+.doc-tabla-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:var(--r-sm)}
+.doc-tabla table{border-collapse:collapse;width:100%;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:.88rem}
+.doc-tabla th{background:var(--forest);color:var(--cream);text-align:left;padding:9px 12px;font-weight:700;white-space:nowrap}
+.doc-tabla td{padding:8px 12px;border-top:1px solid var(--line);vertical-align:top}
+.doc-tabla tbody tr:nth-child(even){background:var(--cream)}
+.doc-nota-extraccion{font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:.82rem;color:var(--ink-mut);background:var(--cream);border-left:3px solid var(--clay-soft);padding:9px 13px;border-radius:0 var(--r-sm) var(--r-sm) 0;margin:0 0 10px;text-align:left!important}
+.doc-lista{font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:.88rem;columns:2;column-gap:26px;padding-left:18px;margin:0;color:var(--ink-mut)}
+.doc-lista li{break-inside:avoid;margin:0 0 3px}
+
+.doc-notas{margin:48px 0 0;padding:26px 0 0;border-top:2px solid var(--line)}
+.doc-notas h2{font-family:Fraunces,Georgia,serif;font-size:1.25rem;color:var(--forest);margin:0 0 14px}
+.doc-notas-lista{list-style:none;padding:0;margin:0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:.85rem;line-height:1.55;color:var(--ink-mut)}
+.doc-notas-lista li{margin:0 0 9px;padding-left:30px;position:relative;scroll-margin-top:90px}
+.doc-nnum{position:absolute;left:0;top:0;font-weight:800;color:var(--gold-text)}
+.doc-volver{margin:34px 0 0}
+.doc-volver a{color:var(--forest);font-weight:700;text-decoration:none}
+.doc-volver a:hover{text-decoration:underline}
+
+.doc-pie{background:var(--forest);color:var(--cream);padding:26px 0;font-size:.85rem}
+.doc-pie p{margin:0;opacity:.85}
+
+@media(max-width:760px){
+  .doc-cuerpo{font-size:1.02rem;line-height:1.7}
+  .doc-cuerpo p{text-align:left}          /* justificado + pantalla angosta = ríos de espacio */
+  .doc-toc{padding:16px 18px}
+  .doc-lista{columns:1}
+  .doc-datos li{font-size:.8rem}
+}
+
+/* ============================================================
+   EL PUEBLO  (/pueblo.html) — historia del municipio
+   ============================================================ */
+.pb-hero{background:var(--forest);color:var(--cream);padding:56px 0 52px;position:relative;overflow:hidden}
+.pb-hero::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 78% 0%,rgba(212,162,63,.20),transparent 60%);pointer-events:none}
+.pb-hero .wrap{position:relative;z-index:1;max-width:820px}
+.pb-kicker{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);font-weight:800;margin:0 0 12px}
+.pb-hero h1{font-family:Fraunces,Georgia,serif;font-size:clamp(1.9rem,6vw,3.2rem);line-height:1.1;margin:0 0 18px;font-weight:600}
+.pb-hero h1 span{color:var(--gold-soft)}
+.pb-lead{font-size:clamp(1rem,2.4vw,1.16rem);line-height:1.65;opacity:.94;margin:0 0 18px;max-width:64ch}
+.pb-fuente-hero{font-size:.86rem;opacity:.72;margin:0}
+
+.pb-sec{padding:56px 0;background:var(--paper)}
+.pb-sec--alt{background:var(--cream)}
+.pb-wrap{max-width:820px}
+.pb-sec h2{font-family:Fraunces,Georgia,serif;font-size:clamp(1.5rem,4vw,2.1rem);color:var(--forest);line-height:1.15;margin:6px 0 14px}
+.pb-sub{color:var(--ink-mut);margin:0 0 26px;max-width:62ch;line-height:1.6}
+.pb-sub--sm{font-size:.9rem;margin:10px 0 22px}
+
+.pb-texto{font-family:Fraunces,Georgia,serif;font-size:1.06rem;line-height:1.78;color:var(--ink)}
+.pb-texto p{margin:0 0 1.15em}
+.pb-texto strong{color:var(--forest);font-weight:600}
+.pb-cierre{border-left:3px solid var(--gold);padding-left:18px;font-style:italic;color:var(--ink-mut)}
+.pb-cta-linea{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0}
+
+/* ── línea de tiempo ── */
+.tl{list-style:none;padding:0;margin:0;position:relative}
+.tl::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;padding:0 0 26px 38px}
+.tl-item::before{content:"";position:absolute;left:3px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--paper);border:3px solid var(--forest-3)}
+.tl-item--hito::before{background:var(--gold);border-color:var(--clay);width:20px;height:20px;left:0;top:2px}
+.tl-anio{display:inline-block;font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:800;font-size:.82rem;letter-spacing:.04em;color:var(--clay);text-transform:uppercase;margin:0 0 4px}
+.tl-item--hito .tl-anio{background:var(--gold);color:var(--forest);padding:3px 11px;border-radius:999px}
+.tl-cuerpo h3{font-family:Fraunces,Georgia,serif;font-size:1.15rem;color:var(--forest);margin:0 0 5px}
+.tl-cuerpo p{margin:0 0 6px;color:var(--ink);line-height:1.6}
+.tl-fuente{font-size:.78rem!important;color:var(--ink-mut)!important;background:var(--cream);border-radius:var(--r-sm);padding:5px 10px;display:inline-block}
+.pb-sec--alt .tl-item::before{background:var(--cream)}
+.pb-sec--alt .tl-fuente{background:var(--paper)}
+
+/* ── los trece pueblos ── */
+.pb-pueblos{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:9px}
+.pb-pueblos li{background:var(--forest);color:var(--cream);border-radius:999px;padding:8px 17px;font-weight:600;font-size:.94rem}
+
+/* ── biblioteca ── */
+.pb-grupo{font-family:Fraunces,Georgia,serif;font-size:1.2rem;color:var(--forest);margin:34px 0 6px}
+.pb-docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin:16px 0 0}
+.pb-doc{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm)}
+.pb-sec--alt .pb-doc{background:var(--paper)}
+.pb-doc-tipo{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);font-weight:800;margin:0 0 8px}
+.pb-doc h4{font-family:Fraunces,Georgia,serif;font-size:1.2rem;color:var(--forest);margin:0 0 9px;line-height:1.25}
+.pb-doc p{color:var(--ink-mut);line-height:1.6;margin:0 0 16px;font-size:.95rem}
+.pb-doc-acc{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:0!important}
+.pb-pdf{color:var(--forest);font-weight:700;font-size:.88rem;text-decoration:none;border-bottom:1px solid var(--line)}
+.pb-pdf:hover{color:var(--clay);border-color:var(--clay)}
+.pb-lista-docs{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px}
+.pb-lista-docs li{display:flex;align-items:center;gap:11px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-sm);padding:10px 14px;font-size:.93rem;color:var(--ink)}
+.pb-lista-docs span{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--forest);color:var(--cream);display:grid;place-items:center;font-size:.78rem;font-weight:800}
+
+/* ── videos (carga al tocar) ── */
+.pb-privacidad{font-size:.85rem;color:var(--ink-mut);background:var(--cream);border-left:3px solid var(--forest-3);padding:9px 14px;border-radius:0 var(--r-sm) var(--r-sm) 0;margin:0 0 22px}
+.pb-videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.pb-video{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:5px;text-align:left;background:var(--forest);color:var(--cream);border:none;border-radius:var(--r-md);padding:20px 54px 20px 20px;cursor:pointer;font-family:inherit;min-height:104px;transition:transform .2s var(--ease),box-shadow .2s}
+.pb-video:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.pb-video:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.pb-video-num{font-family:Fraunces,Georgia,serif;font-size:1.5rem;color:var(--gold-soft);line-height:1}
+.pb-video-tit{font-weight:700;font-size:1.02rem;line-height:1.3}
+.pb-video-dur{font-size:.82rem;opacity:.7}
+.pb-video-etq{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--gold);color:var(--forest);padding:3px 9px;border-radius:999px;margin-top:3px}
+.pb-video--clave{background:var(--forest-2);box-shadow:inset 0 0 0 2px var(--gold)}
+.pb-video-play{position:absolute;right:18px;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(246,239,227,.14);display:grid;place-items:center;font-size:.9rem}
+.pb-video:hover .pb-video-play{background:var(--gold);color:var(--forest)}
+/* Al abrirse ocupa toda la fila de la rejilla: si se queda en una columna,
+   la altura se la impone la fila y el video sale aplastado. */
+.pb-video-marco{grid-column:1/-1;align-self:start;position:relative;aspect-ratio:16/9;border-radius:var(--r-md);overflow:hidden;background:#000}
+.pb-video-marco iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+.pb-sec--credito{background:var(--forest);color:var(--cream)}
+.pb-sec--credito h2{color:var(--cream)}
+.pb-sec--credito p{line-height:1.7;opacity:.92;margin:0 0 1em;max-width:64ch}
+.pb-sec--credito strong{color:var(--gold-soft)}
+
+@media(max-width:760px){
+  .pb-sec{padding:42px 0}
+  .pb-hero{padding:40px 0 38px}
+  .pb-texto{font-size:1.02rem}
+  .tl-item{padding-left:32px}
+  .pb-pueblos li{font-size:.88rem;padding:7px 14px}
+}
+
+/* Acta de 1623: marcas de folio y recuento marginal del escribano */
+.doc-cuerpo--acta p{text-align:left}
+.doc-folio{margin:1.8em 0 .9em!important;text-align:center!important;position:relative}
+.doc-folio::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--line)}
+.doc-folio span{position:relative;background:var(--paper);padding:0 14px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mut);font-weight:800}
+.doc-recuento{margin:0 0 34px;padding:20px;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-md)}
+.doc-recuento figcaption{font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:800;font-size:.88rem;color:var(--forest);margin:0 0 12px}
+.doc-recuento ul{list-style:none;padding:0;margin:0 0 12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:7px}
+.doc-recuento li{display:flex;justify-content:space-between;gap:8px;background:var(--paper);border-radius:var(--r-sm);padding:7px 12px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:.86rem}
+.doc-recuento b{color:var(--ink);font-weight:600}
+.doc-recuento span{color:var(--clay);font-weight:800}
+.doc-recuento .doc-nota-extraccion{margin:0}
+
+.about-cta{margin:22px 0 0}
