@@ -1209,9 +1209,9 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
 
 .gl{position:fixed;inset:0;z-index:3000;background:rgba(10,18,14,.94);display:flex;align-items:center;justify-content:center;gap:8px;padding:16px}
 .gl[hidden]{display:none}
-.gl-fig{margin:0;max-width:1200px;width:100%;display:flex;flex-direction:column;gap:12px;align-items:center}
-.gl-marco{width:100%;aspect-ratio:842/596;background:#000;border-radius:var(--r-sm);overflow:hidden;display:grid;place-items:center}
-.gl-marco img{max-width:100%;max-height:100%;width:auto;height:auto;display:block}
+.gl-fig{margin:0;max-width:1200px;width:100%;max-height:100%;display:flex;flex-direction:column;gap:12px;align-items:center}
+.gl-marco{display:grid;place-items:center;min-height:140px}
+.gl-marco img{max-width:100%;max-height:calc(100vh - 150px);max-height:calc(100dvh - 150px);width:auto;height:auto;display:block;background:#000;border-radius:var(--r-sm)}
 .gl-pie{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 18px;color:var(--cream);font-size:.92rem}
 .gl-cuenta{font-variant-numeric:tabular-nums;opacity:.7}
 .gl-bajar{color:var(--gold-soft);font-weight:700;text-decoration:none;border-bottom:1px solid transparent}
@@ -1227,4 +1227,5 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
   .gl-prev{left:16px}
   .gl-next{right:16px}
   .gl-pie{font-size:.85rem;flex-direction:column;gap:6px;padding-bottom:80px}
+  .gl-marco img{max-height:calc(100vh - 215px);max-height:calc(100dvh - 215px)}
 }
