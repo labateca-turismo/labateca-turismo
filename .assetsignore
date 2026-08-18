@@ -9,3 +9,5 @@ wrangler.toml
 .assetsignore
 debug.html
 debug2.html
+.claude
+.claude/**
