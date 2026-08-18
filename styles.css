@@ -1181,3 +1181,19 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
 .doc-recuento .doc-nota-extraccion{margin:0}
 
 .about-cta{margin:22px 0 0}
+
+/* ── Pósters de la serie ilustrada (/pueblo.html) ── */
+.lm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.lm{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .2s var(--ease),box-shadow .2s}
+.lm:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.lm--clave{box-shadow:0 0 0 2px var(--gold),var(--shadow-sm)}
+.lm-img{display:block;background:var(--cream-2);line-height:0}
+.lm-img img{width:100%;height:auto;aspect-ratio:842/596;object-fit:cover;display:block}
+.lm-pie{padding:15px 17px 17px;display:flex;flex-direction:column;gap:6px;flex:1}
+.lm-mod{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--clay);font-weight:800;margin:0}
+.lm-pie h3{font-family:Fraunces,Georgia,serif;font-size:1.1rem;color:var(--forest);margin:0;line-height:1.25}
+.lm-etq{align-self:flex-start;font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--gold);color:var(--forest);padding:3px 10px;border-radius:999px}
+.lm-bajar{margin-top:auto;padding-top:10px;color:var(--forest);font-weight:700;font-size:.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:7px}
+.lm-bajar::before{content:"↓";font-size:1.05rem;color:var(--clay)}
+.lm-bajar:hover{color:var(--clay);text-decoration:underline}
+@media(max-width:760px){ .lm-grid{grid-template-columns:1fr} }
