@@ -1014,7 +1014,11 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
 .doc-migas a{color:var(--ink-mut);text-decoration:none}
 .doc-migas a:hover{color:var(--forest-3);text-decoration:underline}
 
-.doc-head{padding:26px 0 30px;border-bottom:2px solid var(--line);margin-bottom:34px}
+/* El sitio estiliza la ETIQUETA <header> suelta (position:fixed, top:0), dando
+   por hecho que solo existe el encabezado del sitio. La cabecera de un artículo
+   también es un <header>, así que heredaba eso: se pegaba al tope de la pantalla
+   y se encimaba con el menú y con el índice. Vuelve al flujo normal. */
+.doc-head{position:static;z-index:auto;padding:26px 0 30px;border-bottom:2px solid var(--line);margin-bottom:34px}
 .doc-kicker{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);font-weight:800;margin:0 0 10px}
 .doc-head h1{font-family:Fraunces,Georgia,serif;font-size:clamp(1.7rem,5vw,2.6rem);line-height:1.12;color:var(--forest);margin:0 0 8px}
 .doc-sub{font-family:Fraunces,Georgia,serif;font-style:italic;font-size:1.08rem;color:var(--ink-mut);margin:0 0 16px}
