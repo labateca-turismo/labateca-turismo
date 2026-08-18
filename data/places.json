@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "lugares": [
     {
       "id": "templo",
@@ -8,8 +8,8 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 509,
-      "mapaY": 363,
+      "mapaX": 510,
+      "mapaY": 362,
       "telefono": "",
       "nombre": {
         "es": "Parroquia Nuestra Señora de las Angustias",
@@ -96,8 +96,8 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 523,
-      "mapaY": 363,
+      "mapaX": 524,
+      "mapaY": 362,
       "telefono": "",
       "nombre": {
         "es": "Nuestra Señora de las Angustias — Patrona",
@@ -223,7 +223,7 @@
       "lat": 7.2997576,
       "lng": -72.494551,
       "mapaX": 489,
-      "mapaY": 399,
+      "mapaY": 401,
       "telefono": "573213496226",
       "nombre": {
         "es": "Servicios Parroquiales y Documentos",
@@ -271,7 +271,7 @@
       "lat": 7.2996816,
       "lng": -72.49452,
       "mapaX": 502,
-      "mapaY": 375,
+      "mapaY": 374,
       "telefono": "",
       "nombre": {
         "es": "Parque Principal",
@@ -339,7 +339,7 @@
       "lat": 7.300327,
       "lng": -72.494867,
       "mapaX": 502,
-      "mapaY": 351,
+      "mapaY": 350,
       "telefono": "573214592514",
       "nombre": {
         "es": "Intrínseco — Restaurante, Café y Bar",
@@ -406,8 +406,8 @@
       "coordsApprox": false,
       "lat": 7.3005894,
       "lng": -72.4950748,
-      "mapaX": 468,
-      "mapaY": 388,
+      "mapaX": 466,
+      "mapaY": 389,
       "telefono": "",
       "telFijo": "576015948500",
       "nombre": {
@@ -539,7 +539,7 @@
       "lat": 7.300346,
       "lng": -72.49487,
       "mapaX": 488,
-      "mapaY": 351,
+      "mapaY": 350,
       "telefono": "584168475520",
       "nombre": {
         "es": "Criss Studio — Uñas y Belleza",
@@ -628,41 +628,109 @@
       "id": "lirgua",
       "categoria": "naturaleza",
       "verified": true,
-      "coordsApprox": true,
-      "lat": 7.305,
-      "lng": -72.47,
+      "coordsApprox": false,
+      "lat": 7.272325,
+      "lng": -72.544543,
       "mapaX": 220,
       "mapaY": 520,
       "telefono": "",
       "nombre": {
-        "es": "Cascada La Lirgua",
-        "en": "La Lirgua Waterfall"
+        "es": "Cascadas de Lirgua y Dos Brazos",
+        "en": "Lirgua and Dos Brazos Waterfalls"
       },
       "desc": {
-        "es": "La joya ecoturística de Labateca: una imponente cascada rodeada de naturaleza exuberante. Una de las caídas de agua más fotografiadas de la región.",
-        "en": "Labateca's ecotourism jewel: an imposing waterfall surrounded by lush nature. One of the most photographed falls in the region."
+        "es": "Dos cascadas sobre la misma quebrada, dentro de un predio privado a unos 6 km al occidente del casco urbano. La primera es la Cascada de Lirgua, un salto alto y de buen caudal que cae sobre una poza rodeada de roca y monte. Quebrada arriba está la Cascada de Dos Brazos, que se abre en dos chorros paralelos sobre una pared de piedra cubierta de musgo. El sendero entre las dos está trabajado por la familia propietaria: escalones de piedra, jardines y letreros de madera pintados a mano. El recorrido completo mide 1,6 km, sube unos 140 metros (de 1.620 a 1.760 m sobre el nivel del mar) e incluye un cruce de quebrada. Es un predio privado de Luis Fidel Ortiz Parada: para entrar hay que pedir las llaves en la casa que está al lado del puente de Lirgua y se paga una entrada por persona.",
+        "en": "Two waterfalls on the same creek, inside private land about 6 km west of the town center. The first is Lirgua Falls, a tall, strong drop landing in a pool ringed by rock and forest. Further upstream is Dos Brazos Falls, which splits into two parallel jets over a moss-covered stone wall. The trail between them is maintained by the owner's family: stone steps, planted gardens and hand-painted wooden signs. The full route is 1.6 km, climbs about 140 metres (from 1,620 to 1,760 m above sea level) and includes one creek crossing. This is private property belonging to Luis Fidel Ortiz Parada: to get in you must ask for the keys at the house next to the Lirgua bridge, and there is a per-person entrance fee."
       },
       "comoLlegar": {
-        "es": "A ~7 km del casco urbano. Se llega en carro hasta cierto punto y luego caminata.",
-        "en": "About 7 km from town. Drivable to a point, then hiking."
+        "es": "A unos 6 km al occidente-suroccidente del casco urbano. Se llega en carro o moto hasta el puente de Lirgua; ahí mismo, en la casa contigua al puente, se piden las llaves de la entrada. Desde la portada arranca el sendero: primero la Cascada de Lirgua y, siguiendo quebrada arriba, la Cascada de Dos Brazos.",
+        "en": "About 6 km west-southwest of the town center. Drive or ride to the Lirgua bridge; the house right next to the bridge is where you ask for the gate keys. The trail starts at the entrance: Lirgua Falls first, then Dos Brazos Falls further up the creek."
       },
       "dist": {
-        "es": "~7 km del pueblo",
-        "en": "~7 km from town"
+        "es": "~6 km del pueblo",
+        "en": "~6 km from town"
       },
       "tiempo": {
-        "es": "Carro + caminata",
-        "en": "Car + hike"
+        "es": "Todos los días, 6:00 a. m. – 5:00 p. m.",
+        "en": "Every day, 6:00 a.m. – 5:00 p.m."
       },
       "dificultad": {
         "es": "Dificultad media",
         "en": "Moderate"
       },
       "recomendacion": {
-        "es": "Ve con guía local, lleva calzado antideslizante y sal temprano.",
-        "en": "Go with a local guide, wear non-slip shoes and start early."
+        "es": "Pide las llaves en la casa junto al puente de Lirgua antes de subir; se paga una entrada por persona. Lleva calzado antideslizante: el sendero tiene escalones de piedra, tramos de barro y un cruce de quebrada. Ve temprano y con luz de día. Recuerda que es un predio privado y una familia lo cuida: no dejes basura y respeta los senderos y los jardines.",
+        "en": "Ask for the keys at the house beside the Lirgua bridge before heading up; there is a per-person entrance fee. Wear non-slip shoes: the trail has stone steps, muddy stretches and a creek crossing. Go early and in daylight. Remember it is private land cared for by a family: take your trash with you and stay on the paths."
       },
-      "fotos": []
+      "fotos": [
+        "labateca/cascada-lirgua-01",
+        "labateca/cascada-lirgua-02",
+        "labateca/cascada-lirgua-03",
+        "labateca/cascada-lirgua-04",
+        "labateca/cascada-lirgua-05",
+        "labateca/cascada-lirgua-06",
+        "labateca/cascada-lirgua-07",
+        "labateca/cascada-lirgua-08",
+        "labateca/cascada-lirgua-09",
+        "labateca/cascada-lirgua-10",
+        "labateca/cascada-lirgua-11",
+        "labateca/cascada-lirgua-12",
+        "labateca/cascada-lirgua-13"
+      ],
+      "fotosCap": [
+        {
+          "es": "La Cascada de Lirgua vista de frente desde el final del sendero, con el salto principal cayendo entre paredes de roca y monte.",
+          "en": "Lirgua Falls seen head-on from the end of the trail, the main drop falling between rock walls and forest."
+        },
+        {
+          "es": "El torrente bajando entre piedras justo debajo del salto; arriba, al fondo, se alcanza a ver la caída principal.",
+          "en": "The torrent tumbling over boulders just below the falls; the main drop is visible up in the background."
+        },
+        {
+          "es": "La cascada vista desde lejos, encajada en la ladera y enmarcada por platanales y monte alto.",
+          "en": "The waterfall from a distance, set into the hillside and framed by banana plants and tall forest."
+        },
+        {
+          "es": "Portada de entrada: la roca pintada a mano con el saludo «Bienvenidos Cascadas Lirgua». Las llaves se piden en la casa junto al puente.",
+          "en": "Entrance gate: the hand-painted rock reading 'Bienvenidos Cascadas Lirgua'. Keys are requested at the house by the bridge."
+        },
+        {
+          "es": "Escalones de piedra del sendero y los letreros de madera pintados por la familia que cuida el predio.",
+          "en": "Stone steps along the trail and the wooden signs painted by the family that looks after the property."
+        },
+        {
+          "es": "Otro tramo del sendero, con jardines sembrados al borde del camino y la cascada asomando entre los árboles.",
+          "en": "Another stretch of the trail, with gardens planted along the path and the waterfall peeking through the trees."
+        },
+        {
+          "es": "Letreros de madera entre los árboles del sendero, una de las señas de la casa que cuida el lugar.",
+          "en": "Wooden signs among the trees along the trail, a signature of the family that maintains the site."
+        },
+        {
+          "es": "La Cascada de Dos Brazos vista desde abajo: el agua se parte en dos chorros paralelos antes de caer a la poza.",
+          "en": "Dos Brazos Falls from below: the water splits into two parallel jets before hitting the pool."
+        },
+        {
+          "es": "Los dos brazos de la cascada de cerca, abriéndose en abanico sobre la pared de roca cubierta de musgo.",
+          "en": "The waterfall's two arms up close, fanning out over the moss-covered rock face."
+        },
+        {
+          "es": "El agua deslizándose sobre la roca lisa en el tramo alto de la Cascada de Dos Brazos.",
+          "en": "Water sliding over smooth rock on the upper section of Dos Brazos Falls."
+        },
+        {
+          "es": "Parte baja de la Cascada de Dos Brazos, donde el agua se estrella contra la piedra y sigue quebrada abajo.",
+          "en": "The lower section of Dos Brazos Falls, where the water hits the rock and continues downstream."
+        },
+        {
+          "es": "La poza donde termina la Cascada de Dos Brazos y empieza el tramo que baja hacia la Cascada de Lirgua.",
+          "en": "The pool where Dos Brazos Falls ends and the stretch running down to Lirgua Falls begins."
+        },
+        {
+          "es": "La quebrada a lo largo del recorrido entre las dos cascadas, entre roca, musgo y monte húmedo.",
+          "en": "The creek along the route between the two waterfalls, amid rock, moss and damp forest."
+        }
+      ]
     },
     {
       "id": "laguna-negra",
@@ -792,7 +860,7 @@
       "lat": 7.3166,
       "lng": -72.4837,
       "mapaX": 482,
-      "mapaY": 388,
+      "mapaY": 389,
       "telefono": "",
       "nombre": {
         "es": "Dulces y sabores típicos",
@@ -832,7 +900,7 @@
       "lat": 7.3163,
       "lng": -72.4832,
       "mapaX": 509,
-      "mapaY": 387,
+      "mapaY": 386,
       "telefono": "",
       "nombre": {
         "es": "Hospedaje local",
@@ -991,7 +1059,7 @@
       "coordsApprox": true,
       "lat": 7.3168,
       "lng": -72.4829,
-      "mapaX": 530,
+      "mapaX": 531,
       "mapaY": 374,
       "telefono": "",
       "nombre": {
@@ -1032,7 +1100,7 @@
       "lat": 7.3162,
       "lng": -72.4836,
       "mapaX": 481,
-      "mapaY": 412,
+      "mapaY": 413,
       "telefono": "",
       "nombre": {
         "es": "Posada comunitaria (espacio)",
@@ -1072,7 +1140,7 @@
       "lat": 7.317,
       "lng": -72.4831,
       "mapaX": 516,
-      "mapaY": 351,
+      "mapaY": 350,
       "telefono": "",
       "nombre": {
         "es": "Artesanías y tejidos locales",
@@ -1324,7 +1392,7 @@
       "lat": 7.29917,
       "lng": -72.494704,
       "mapaX": 496,
-      "mapaY": 387,
+      "mapaY": 389,
       "telefono": "573222834876",
       "nombre": {
         "es": "Automercado Karen",
@@ -1391,8 +1459,8 @@
       "coordsApprox": false,
       "lat": 7.298409,
       "lng": -72.493737,
-      "mapaX": 481,
-      "mapaY": 363,
+      "mapaX": 475,
+      "mapaY": 353,
       "telefono": "573144195716",
       "nombre": {
         "es": "Antojitos",
@@ -1449,7 +1517,7 @@
       "coordsApprox": false,
       "lat": 7.30008,
       "lng": -72.494792,
-      "mapaX": 461,
+      "mapaX": 460,
       "mapaY": 376,
       "telefono": "573234521624",
       "nombre": {
@@ -1517,8 +1585,8 @@
       "coordsApprox": false,
       "lat": 7.2987856,
       "lng": -72.4940529,
-      "mapaX": 461,
-      "mapaY": 400,
+      "mapaX": 460,
+      "mapaY": 402,
       "telefono": "573212849284",
       "nombre": {
         "es": "Antaño Café-Bar",
@@ -1647,8 +1715,8 @@
       "coordsApprox": false,
       "lat": 7.297209,
       "lng": -72.496575,
-      "mapaX": 447,
-      "mapaY": 400,
+      "mapaX": 446,
+      "mapaY": 401,
       "telefono": "573108566143",
       "nombre": {
         "es": "Teca Bar La Barra",
@@ -1720,7 +1788,7 @@
       "coordsApprox": false,
       "lat": 7.300349,
       "lng": -72.494849,
-      "mapaX": 454,
+      "mapaX": 453,
       "mapaY": 364,
       "telefono": "573123047768",
       "nombre": {
@@ -1783,8 +1851,8 @@
       "coordsApprox": false,
       "lat": 7.298875,
       "lng": -72.494026,
-      "mapaX": 475,
-      "mapaY": 399,
+      "mapaX": 474,
+      "mapaY": 400,
       "telefono": "573115576386",
       "nombre": {
         "es": "Siste Hogar",
@@ -1851,7 +1919,7 @@
       "coordsApprox": false,
       "lat": 7.299908,
       "lng": -72.494747,
-      "mapaX": 447,
+      "mapaX": 446,
       "mapaY": 376,
       "telefono": "573153331207",
       "nombre": {
@@ -1914,7 +1982,7 @@
       "coordsApprox": false,
       "lat": 7.3005588,
       "lng": -72.4949505,
-      "mapaX": 440,
+      "mapaX": 439,
       "mapaY": 363,
       "correo": "labatecanortedesan@registraduria.gov.co",
       "nombre": {
@@ -1967,8 +2035,8 @@
       "coordsApprox": false,
       "lat": 7.298304,
       "lng": -72.493737,
-      "mapaX": 495,
-      "mapaY": 412,
+      "mapaX": 496,
+      "mapaY": 413,
       "telefono": "573212675678",
       "nombre": {
         "es": "Sofi Burger",
@@ -2155,7 +2223,7 @@
       "coordsApprox": false,
       "lat": 7.299932,
       "lng": -72.494973,
-      "mapaX": 454,
+      "mapaX": 452,
       "mapaY": 388,
       "telefono": "573104036102",
       "nombre": {
@@ -2218,7 +2286,7 @@
       "coordsApprox": false,
       "lat": 7.299268,
       "lng": -72.494337,
-      "mapaX": 518,
+      "mapaX": 517,
       "mapaY": 398,
       "telefono": "573107963730",
       "nombre": {
@@ -2291,8 +2359,8 @@
       "coordsApprox": false,
       "lat": 7.298665,
       "lng": -72.493742,
-      "mapaX": 544,
-      "mapaY": 425,
+      "mapaX": 548,
+      "mapaY": 426,
       "telefono": "573144490474",
       "nombre": {
         "es": "Isla Mobile — Telefonía y Accesorios",
@@ -2427,8 +2495,8 @@
       "coordsApprox": false,
       "lat": 7.30023,
       "lng": -72.494266,
-      "mapaX": 516,
-      "mapaY": 375,
+      "mapaX": 517,
+      "mapaY": 374,
       "telefono": "573106803058",
       "nombre": {
         "es": "Heladería Nápoles",
@@ -2552,8 +2620,8 @@
       "coordsApprox": false,
       "lat": 7.298773,
       "lng": -72.493981,
-      "mapaX": 536,
-      "mapaY": 414,
+      "mapaX": 538,
+      "mapaY": 415,
       "telefono": "573205777829",
       "nombre": {
         "es": "Moto Repuesto Doble AA",
@@ -2620,8 +2688,8 @@
       "coordsApprox": false,
       "lat": 7.299147,
       "lng": -72.494282,
-      "mapaX": 509,
-      "mapaY": 412,
+      "mapaX": 512,
+      "mapaY": 411,
       "telefono": "573144922534",
       "nombre": {
         "es": "Almacén Tecno-Agro",
@@ -2693,8 +2761,8 @@
       "coordsApprox": false,
       "lat": 7.298917,
       "lng": -72.493682,
-      "mapaX": 550,
-      "mapaY": 413,
+      "mapaX": 552,
+      "mapaY": 412,
       "telefono": "573184471211",
       "nombre": {
         "es": "Droguería María José",
@@ -2756,8 +2824,8 @@
       "coordsApprox": false,
       "lat": 7.299102,
       "lng": -72.494192,
-      "mapaX": 523,
-      "mapaY": 411,
+      "mapaX": 526,
+      "mapaY": 409,
       "telefono": "573168725118",
       "nombre": {
         "es": "Panadería Maxipan",
@@ -2912,8 +2980,8 @@
       "coordsApprox": false,
       "lat": 7.299931881265672,
       "lng": -72.49471127546606,
-      "mapaX": 488,
-      "mapaY": 375,
+      "mapaX": 489,
+      "mapaY": 377,
       "nombre": {
         "es": "SuperGiros",
         "en": "SuperGiros"
@@ -2964,8 +3032,8 @@
       "coordsApprox": false,
       "lat": 7.300103,
       "lng": -72.49476,
-      "mapaX": 475,
-      "mapaY": 376,
+      "mapaX": 474,
+      "mapaY": 377,
       "telefono": "573138048438",
       "nombre": {
         "es": "La Esquinita del Sabor",
@@ -3120,8 +3188,8 @@
       "coordsApprox": false,
       "lat": 7.29849,
       "lng": -72.493971,
-      "mapaX": 525,
-      "mapaY": 439,
+      "mapaX": 526,
+      "mapaY": 440,
       "telefono": "573123106831",
       "nombre": {
         "es": "Supermercado El Campesino",
@@ -3189,7 +3257,7 @@
       "lat": 7.299401,
       "lng": -72.494427,
       "mapaX": 503,
-      "mapaY": 399,
+      "mapaY": 401,
       "telefono": "573202435050",
       "nombre": {
         "es": "La Tienda de Ivancho",
@@ -3583,8 +3651,8 @@
       "coordsApprox": false,
       "lat": 7.298937,
       "lng": -72.494087,
-      "mapaX": 516,
-      "mapaY": 423,
+      "mapaX": 508,
+      "mapaY": 424,
       "telefono": "573134966445",
       "nombre": {
         "es": "Restaurante Doña María",
@@ -3646,8 +3714,8 @@
       "coordsApprox": false,
       "lat": 7.298332,
       "lng": -72.493707,
-      "mapaX": 539,
-      "mapaY": 439,
+      "mapaX": 540,
+      "mapaY": 441,
       "telefono": "573123106831",
       "nombre": {
         "es": "Centro Naturista Salud & Vida",
@@ -3714,8 +3782,8 @@
       "coordsApprox": false,
       "lat": 7.298932,
       "lng": -72.49408,
-      "mapaX": 503,
-      "mapaY": 426,
+      "mapaX": 498,
+      "mapaY": 434,
       "telefono": "573208491055",
       "nombre": {
         "es": "Frutas y Verduras",
@@ -3840,8 +3908,8 @@
       "coordsApprox": false,
       "lat": 7.2987,
       "lng": -72.493926,
-      "mapaX": 530,
-      "mapaY": 426,
+      "mapaX": 534,
+      "mapaY": 429,
       "telefono": "573185619179",
       "nombre": {
         "es": "Ateca Bar Café Restaurante",
@@ -4027,7 +4095,7 @@
       "lat": 7.299067,
       "lng": -72.494904,
       "mapaX": 467,
-      "mapaY": 413,
+      "mapaY": 414,
       "telefono": "573112805177",
       "nombre": {
         "es": "La Económica JY",
@@ -4104,7 +4172,7 @@
       "coordsApprox": false,
       "lat": 7.298705,
       "lng": -72.494589,
-      "mapaX": 489,
+      "mapaX": 488,
       "mapaY": 425,
       "telefono": "573227784070",
       "nombre": {
@@ -4147,6 +4215,254 @@
         {
           "es": "Interior de la barbería, con las sillas y el espejo iluminado.",
           "en": "Barbershop interior, with the chairs and lighted mirror."
+        }
+      ]
+    },
+    {
+      "id": "supermercado-batecano",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300102,
+      "lng": -72.494544,
+      "mapaX": 481,
+      "mapaY": 365,
+      "telefono": "573209083700",
+      "nombre": {
+        "es": "Supermercado Batecano",
+        "en": "Supermercado Batecano — Grocery Store"
+      },
+      "desc": {
+        "es": "Supermercado surtido en el casco urbano de Labateca, a media cuadra del parque principal. Maneja el mercado completo de la casa: arroz, pastas, granos, aceite, panela, café, azúcar, enlatados, huevos y pan del día. También aseo del hogar y cuidado personal (jabón, detergentes, suavizante, papel higiénico, cepillos y cremas dentales), mecato y dulces, medicamentos de venta libre, y una nevera con bebidas frías: gaseosas, jugos, agua, cerveza y licores. Atención de Deisy Johana Bautista.",
+        "en": "A well-stocked grocery store in Labateca's town center, half a block from the main square. It carries the full household shop: rice, pasta, grains, cooking oil, panela, coffee, sugar, canned goods, eggs and fresh bread. Also household and personal care (soap, detergents, fabric softener, toilet paper, toothbrushes and toothpaste), snacks and candy, over-the-counter medicines, and a cooler with cold drinks: sodas, juices, water, beer and spirits. Run by Deisy Johana Bautista."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a media cuadra del parque principal.",
+        "en": "In Labateca's town center, half a block from the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 7:00 a. m. – 12:00 m. y 2:00 – 8:00 p. m.",
+        "en": "Every day, 7:00 a.m. – 12:00 noon and 2:00 – 8:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "El sitio para hacer el mercado completo sin salir del pueblo, y para conseguir bebidas frías y mecato antes de salir a caminar. Contacto por WhatsApp: 320 908 3700.",
+        "en": "The place for a full grocery run without leaving town, and for cold drinks and snacks before heading out on a hike. Contact via WhatsApp: 320 908 3700."
+      },
+      "fotos": [
+        "labateca/supermercado-batecano-01",
+        "labateca/supermercado-batecano-02",
+        "labateca/supermercado-batecano-03",
+        "labateca/supermercado-batecano-04",
+        "labateca/supermercado-batecano-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada del Supermercado Batecano, con sus dos puertas hacia el andén empedrado.",
+          "en": "Supermercado Batecano storefront, with its two doors onto the cobbled sidewalk."
+        },
+        {
+          "es": "Estantería principal y vitrinas: papel higiénico, café, panela, pan del día, huevos y productos de botiquín.",
+          "en": "Main shelving and display cases: toilet paper, coffee, panela, fresh bread, eggs and pharmacy items."
+        },
+        {
+          "es": "Sección de víveres: arroz, pastas, aceite, enlatados y paquetes, con la nevera de bebidas al lado.",
+          "en": "Groceries section: rice, pasta, oil, canned goods and snacks, with the drinks cooler alongside."
+        },
+        {
+          "es": "Aseo del hogar y cuidado personal: detergentes, suavizantes, blanqueador, cepillos y cremas dentales.",
+          "en": "Household and personal care: detergents, fabric softeners, bleach, toothbrushes and toothpaste."
+        },
+        {
+          "es": "La nevera con bebidas frías: gaseosas, jugos, agua, cerveza y licores.",
+          "en": "The cooler with cold drinks: sodas, juices, water, beer and spirits."
+        }
+      ]
+    },
+    {
+      "id": "el-saman",
+      "categoria": "naturaleza",
+      "verified": true,
+      "coordsApprox": false,
+      "telefono": "",
+      "nombre": {
+        "es": "El Samán",
+        "en": "The Samán Tree"
+      },
+      "desc": {
+        "es": "Un samán enorme y muy viejo, plantado al borde del camino junto al puente, con la copa abierta como un paraguas sobre la vía y el río corriendo abajo. Los samanes (Samanea saman, también llamados «árbol de la lluvia») son de los árboles de copa más ancha de América tropical y pueden pasar los 25 metros de alto. Este está vivo por dentro y por fuera: en sus ramas viven quiches, orquídeas, helechos y barbas de viejo, como un jardín colgante. La tradición del pueblo cuenta que se sembró a la par con el samán de Bochalema —que fue plantado en 1888 y es, según los cronistas de aquel municipio, hijo del Samán de Táriba y nieto del Samán de Güere—, lo que le daría a este árbol cerca de 140 años. Al pie tiene una cruz de madera y materas hechas con llantas pintadas de amarillo, que los vecinos mantienen con flores.",
+        "en": "A huge, very old samán tree standing at the roadside next to the bridge, its crown opening like an umbrella over the road with the river running below. Samán trees (Samanea saman, also called the 'rain tree') have some of the widest crowns in tropical America and can exceed 25 metres in height. This one is alive inside and out: bromeliads, orchids, ferns and Spanish moss grow along its branches like a hanging garden. Local tradition holds that it was planted at the same time as the samán of Bochalema —sown in 1888 and, according to that town's chroniclers, a child of the Samán de Táriba and grandchild of the Samán de Güere—, which would make this tree close to 140 years old. At its foot stand a wooden cross and planters made from yellow-painted tyres, which neighbours keep filled with flowers."
+      },
+      "comoLlegar": {
+        "es": "A la orilla de la vía, junto al puente. Se ve desde el carro: es el árbol más grande del sector y no hay cómo confundirlo.",
+        "en": "At the roadside, next to the bridge. You can see it from the car: it is by far the largest tree around and impossible to miss."
+      },
+      "dist": {
+        "es": "Fuera del casco urbano",
+        "en": "Outside the town center"
+      },
+      "tiempo": {
+        "es": "Visita durante el día",
+        "en": "Open during the day"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Párate debajo y mira hacia arriba: en las ramas se ven quiches, orquídeas y barbas de viejo. Es un buen punto de parada y de foto camino a las veredas. La edad del árbol es tradición oral del pueblo, no un dato de archivo.",
+        "en": "Stand underneath and look up: bromeliads, orchids and Spanish moss grow along the branches. It makes a good stop and photo spot on the way out to the veredas. The tree's age comes from local oral tradition, not from written records."
+      },
+      "fotos": [
+        "labateca/el-saman-01",
+        "labateca/el-saman-02",
+        "labateca/el-saman-03",
+        "labateca/el-saman-04",
+        "labateca/el-saman-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "El samán completo desde la vía: la copa abierta en paraguas, el puente al lado y las montañas al fondo.",
+          "en": "The whole samán from the road: its umbrella-shaped crown, the bridge alongside and the mountains behind."
+        },
+        {
+          "es": "El árbol visto desde el camino destapado, con el tronco principal y las materas de llantas pintadas al pie.",
+          "en": "The tree from the dirt road, with the main trunk and the painted-tyre planters at its base."
+        },
+        {
+          "es": "Las ramas gruesas cubiertas de quiches, helechos y barbas de viejo, como un jardín colgante.",
+          "en": "Thick branches covered in bromeliads, ferns and Spanish moss, like a hanging garden."
+        },
+        {
+          "es": "La copa vista desde abajo, y al pie la cruz de madera que los vecinos mantienen con flores.",
+          "en": "The canopy seen from below, with the wooden cross at its foot that neighbours keep decorated with flowers."
+        },
+        {
+          "es": "El samán al borde del río, con el agua crecida corriendo entre las piedras.",
+          "en": "The samán at the river's edge, with the swollen water running between the boulders."
+        }
+      ]
+    },
+    {
+      "id": "tumba-cacique-bateca",
+      "categoria": "cultura",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.277147,
+      "lng": -72.518257,
+      "mapaX": 352,
+      "mapaY": 487,
+      "telefono": "",
+      "nombre": {
+        "es": "Tumba del Cacique Bateca",
+        "en": "Tomb of Cacique Bateca"
+      },
+      "desc": {
+        "es": "Sobre el camino real, a unos 3,6 km al suroccidente del pueblo, hay un sepulcro de piedra y cal que los labatequenses conocen como la tumba del Cacique Bateca. La cámara está cerrada con una reja de hierro y, alrededor de la abertura, hay placas de metal fundido con agradecimientos: «Doy gracias al Cacique Bateca por favor recibido». No es solo un vestigio: es un sitio de devoción vivo, donde la gente todavía deja flores y placas. El nombre no es invención: en los archivos de la Real Audiencia consta que el 4 de mayo de 1560 el Oidor Tomás López interrogó en los aposentos de Labateca a «Batecabala, cacique» del pueblo, encomienda del Capitán Andrés de Acevedo, a través de un intérprete. Que este sepulcro sea el suyo es tradición del pueblo, no un hecho comprobado por arqueólogos; lo que sí es cierto es que el nombre del cacique quedó escrito en los papeles del siglo XVI y sigue vivo en la memoria de Labateca.",
+        "en": "On the old royal road, some 3.6 km southwest of town, stands a stone-and-lime tomb that the people of Labateca know as the tomb of Cacique Bateca. The chamber is closed with an iron grate and, around the opening, cast metal plaques carry messages of thanks: 'I give thanks to Cacique Bateca for a favour granted.' This is not merely a relic: it is a living devotional site where people still leave flowers and plaques. The name is not invented: the records of the Royal Audiencia show that on 4 May 1560 the Oidor Tomás López questioned, in the lodgings at Labateca, 'Batecabala, cacique' of the town, held in encomienda by Captain Andrés de Acevedo, through an interpreter. That this tomb is his is local tradition, not a fact verified by archaeologists; what is certain is that the cacique's name was written into sixteenth-century papers and still lives in Labateca's memory."
+      },
+      "comoLlegar": {
+        "es": "A unos 3,6 km al suroccidente del casco urbano, por el camino real. Se llega hasta el punto de entrada y desde ahí son unos 260 metros de caminata cuesta arriba (unos 35 metros de desnivel) por camino de herradura.",
+        "en": "About 3.6 km southwest of the town center, along the old royal road. You reach the trailhead and from there it is roughly 260 metres of uphill walking (about 35 metres of climb) on a mule path."
+      },
+      "dist": {
+        "es": "~3,6 km del pueblo",
+        "en": "~3.6 km from town"
+      },
+      "tiempo": {
+        "es": "Visita durante el día",
+        "en": "Open during the day"
+      },
+      "dificultad": {
+        "es": "Dificultad baja",
+        "en": "Easy"
+      },
+      "recomendacion": {
+        "es": "Ve con un guía o un vecino que conozca el camino real, y visítalo con respeto: para muchas familias de Labateca es un sitio sagrado, no una atracción. No muevas ni toques las placas, las flores ni la reja. Combínalo con la historia del pueblo de indios de Labateca en la sección EL PUEBLO.",
+        "en": "Go with a guide or a neighbour who knows the royal road, and visit respectfully: for many families in Labateca this is a sacred site, not an attraction. Do not move or touch the plaques, the flowers or the grate. Pair the visit with the history of the Labateca pueblo de indios in the EL PUEBLO section."
+      },
+      "fotos": [
+        "labateca/tumba-cacique-bateca-01",
+        "labateca/tumba-cacique-bateca-02",
+        "labateca/tumba-cacique-bateca-03",
+        "labateca/tumba-cacique-bateca-04",
+        "labateca/tumba-cacique-bateca-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "El sepulcro completo: la estructura de piedra y cal cubierta de musgo, con la reja de hierro y las placas de agradecimiento alrededor de la abertura.",
+          "en": "The whole tomb: a moss-covered stone-and-lime structure with its iron grate and the plaques of thanks around the opening."
+        },
+        {
+          "es": "Una de las placas de metal fundido empotradas en la pared: «Doy gracias al Cacique Bateca por favor recibido».",
+          "en": "One of the cast metal plaques set into the wall: 'I give thanks to Cacique Bateca for a favour granted.'"
+        },
+        {
+          "es": "Otra placa de agradecimiento junto a la reja; las ofrendas se siguen dejando hasta hoy.",
+          "en": "Another plaque of thanks beside the grate; offerings are still left here today."
+        },
+        {
+          "es": "La reja de hierro que cierra la cámara del sepulcro, oxidada por los años y amarrada con alambre.",
+          "en": "The iron grate that seals the burial chamber, rusted by the years and tied with wire."
+        },
+        {
+          "es": "El camino real que lleva hasta el sepulcro, con sus muros de piedra; todavía se recorre a lomo de bestia.",
+          "en": "The old royal road leading to the tomb, with its stone walls; it is still travelled on horseback."
+        }
+      ]
+    },
+    {
+      "id": "virgen-conductores",
+      "categoria": "cultura",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.295545,
+      "lng": -72.493841,
+      "mapaX": 522,
+      "mapaY": 422,
+      "telefono": "",
+      "nombre": {
+        "es": "Monumento a la Virgen del Carmen",
+        "en": "Shrine of Our Lady of Mount Carmel"
+      },
+      "desc": {
+        "es": "A la salida de Labateca, al lado de la plaza de toros, está el monumento a la Virgen del Carmen, conocido en el pueblo como la Virgen de los Conductores. Es una capillita blanca con zócalo de ladrillo, techo de teja y reja de hierro forjado; adentro, la imagen de la Virgen con el Niño, rodeada de flores frescas y guirnaldas que los vecinos renuevan. En Colombia la Virgen del Carmen es la patrona de los conductores, y por eso estos altares se levantan justo a la orilla de la vía: quien sale del pueblo se persigna al pasar y le encomienda el viaje. Su fiesta es el 16 de julio, cuando se bendicen los carros y las motos.",
+        "en": "At the edge of Labateca, next to the bullring, stands the shrine of Our Lady of Mount Carmel, known locally as the Virgin of the Drivers. It is a small white chapel with a brick base, a tiled roof and a wrought-iron gate; inside, the image of the Virgin with the Child, surrounded by fresh flowers and garlands that neighbours keep renewing. In Colombia Our Lady of Mount Carmel is the patron saint of drivers, which is why these altars are built right at the roadside: those leaving town cross themselves as they pass and commend their journey to her. Her feast day is 16 July, when cars and motorbikes are blessed."
+      },
+      "comoLlegar": {
+        "es": "A la salida del casco urbano, al lado de la plaza de toros, a menos de 500 metros del parque principal. Está a la orilla misma de la vía.",
+        "en": "At the edge of the town center, next to the bullring, less than 500 metres from the main square. It sits right at the roadside."
+      },
+      "dist": {
+        "es": "A 500 m del parque",
+        "en": "500 m from the main square"
+      },
+      "tiempo": {
+        "es": "Abierto todo el día",
+        "en": "Open all day"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Es la última parada antes de salir del pueblo y una foto bonita con el paisaje al fondo. Si vienes el 16 de julio vas a encontrar la fiesta de la Virgen del Carmen, con la bendición de carros y motos.",
+        "en": "It is the last stop before leaving town and makes a lovely photo with the landscape behind. If you come on 16 July you will find the feast of Our Lady of Mount Carmel, with the blessing of cars and motorbikes."
+      },
+      "fotos": [
+        "labateca/virgen-conductores-01"
+      ],
+      "fotosCap": [
+        {
+          "es": "La capilla de la Virgen del Carmen a la orilla de la vía: reja de hierro forjado, techo de teja y la imagen rodeada de flores frescas.",
+          "en": "The roadside chapel of Our Lady of Mount Carmel: wrought-iron gate, tiled roof and the image surrounded by fresh flowers."
         }
       ]
     }

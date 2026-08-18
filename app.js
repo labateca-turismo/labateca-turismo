@@ -531,6 +531,11 @@ function renderPlaces(){
     const cat     = p.categoria || p.cat;
     // Si el lugar tiene sendero a pie, "Cómo llegar" apunta al INICIO (donde se deja
     // el carro) en vez de al destino inalcanzable por carretera.
+    // Hay lugares sin coordenada todavía: sin esto el enlace saldría como
+    // "query=undefined,undefined" y llevaría al usuario a ninguna parte.
+    const tieneCoord = p.trailhead
+      ? (p.trailhead.lat != null && p.trailhead.lng != null)
+      : (p.lat != null && p.lng != null);
     const navDest = p.trailhead ? `${p.trailhead.lat},${p.trailhead.lng}` : `${p.lat},${p.lng}`;
     const gmaps   = `https://www.google.com/maps/search/?api=1&query=${navDest}`;
 
@@ -585,7 +590,7 @@ function renderPlaces(){
           <span class="pc-stat">${IC.hill}${dific}</span>
         </div>
         <div class="pc-actions">
-          <a class="pc-btn map" href="${gmaps}" target="_blank" rel="noopener noreferrer" onclick="trackEvent('${idJs}','ruta')">${IC.navi}${p.track?t('cta_drive'):t('cta_how')}</a>
+          ${tieneCoord?`<a class="pc-btn map" href="${gmaps}" target="_blank" rel="noopener noreferrer" onclick="trackEvent('${idJs}','ruta')">${IC.navi}${p.track?t('cta_drive'):t('cta_how')}</a>`:''}
           ${p.telefono?`<a class="pc-btn wa" href="https://wa.me/${p.telefono}?text=${encodeURIComponent((lang==='es'?'Hola, te contacto desde la guía turística de Labateca sobre ':'Hi! I found you on the Labateca tourism guide — about ')+placeName(p)+'.')}" target="_blank" rel="noopener noreferrer" title="${t('cta_whatsapp_t')}" onclick="trackEvent('${p.id}','whatsapp')">${IC.wa}${t('cta_whatsapp')}</a>`:''}
           ${p.telFijo?`<a class="pc-btn call" href="tel:+${String(p.telFijo).replace(/[^0-9]/g,'')}" title="${t('cta_llamar_t')}" onclick="trackEvent('${idJs}','llamar')">${IC.phone}${t('cta_llamar')}</a>`:''}
           ${p.wikiloc
@@ -2265,6 +2270,8 @@ function _exMatchPlaces(text){
   if(!hits.length) return '';
   return `<div class="ex-places">` + hits.map(p=>{
     const dest = p.trailhead ? `${p.trailhead.lat},${p.trailhead.lng}` : `${p.lat},${p.lng}`;
+    // sin coordenada no se ofrece enlace al mapa, solo el nombre
+    if(/undefined|null/.test(dest)) return `<span class="ex-place">${IC.pin}${escHtml(placeName(p))}</span>`;
     const g = `https://www.google.com/maps/search/?api=1&query=${dest}`;
     return `<a class="ex-place" href="${g}" target="_blank" rel="noopener noreferrer">${IC.pin}${escHtml(placeName(p))}</a>`;
   }).join('') + `</div>`;
