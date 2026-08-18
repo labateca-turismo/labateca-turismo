@@ -1,5 +1,5 @@
 {
-  "version": "1.2",
+  "version": "1.3",
   "lugares": [
     {
       "id": "templo",
@@ -3814,8 +3814,8 @@
         "en": "Great for fresh daily fruits and vegetables. Contact via WhatsApp: 320 849 1055."
       },
       "fotos": [
-        "labateca/frutas-y-verduras-01",
-        "labateca/frutas-y-verduras-02",
+        "labateca/frutas-y-verduras-01b",
+        "labateca/frutas-y-verduras-02b",
         "labateca/frutas-y-verduras-03",
         "labateca/frutas-y-verduras-04"
       ],
@@ -3825,8 +3825,8 @@
           "en": "Crates of fresh fruit and vegetables: carrots, plantain, banana, pineapple and more."
         },
         {
-          "es": "Surtido de frutas y verduras del día.",
-          "en": "Assortment of the day's fruit and vegetables."
+          "es": "Canastillas con manzana, limón, naranja, mandarina, papa y cebolla larga fresca del día.",
+          "en": "Crates of apples, limes, oranges, tangerines, potatoes and fresh spring onion."
         },
         {
           "es": "Báscula y nevera con más productos frescos.",
