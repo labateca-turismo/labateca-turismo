@@ -2102,14 +2102,28 @@ function _variado(n){
    con solo 30 lugares. Es un techo medido, no supuesto. */
 const CTX_PRESUPUESTO = 18000;
 
+/* "bares" no aparece dentro de "bar", ni "tiendas" dentro de "tienda": el
+   buscador compara texto literal. Y la gente escribe en plural justo cuando
+   explora ("¿qué restaurantes hay?"). Devuelve la raíz para poder emparejar. */
+function _singular(w){
+  const r = [];
+  if(w.length >= 5 && /es$/.test(w)) r.push(w.slice(0, -2));   // bares -> bar
+  if(w.length >= 4 && /s$/.test(w))  r.push(w.slice(0, -1));   // tiendas -> tienda
+  return r.filter(x => x.length >= 3);
+}
+
 /* Ordena TODOS los lugares por relevancia a la pregunta (sin recortar). */
 function _ranking(question){
   const crudas = _norm(question).match(/[a-z0-9]{3,}/g) || [];
   const words = [];
+  const meter = x => { const nn = _norm(x); if(nn && !words.includes(nn)) words.push(nn); };
   crudas.forEach(w=>{
     if(_STOP.has(w)) return;
-    words.push(w);
-    (_syn(w) || []).forEach(x=>{ const nn = _norm(x); if(!words.includes(nn)) words.push(nn); });
+    // la palabra, su raíz singular, y los sinónimos de ambas
+    [w].concat(_singular(w)).forEach(base=>{
+      meter(base);
+      (_syn(base) || []).forEach(meter);
+    });
   });
   if(!words.length) return _variado(PLACES.length);
 
