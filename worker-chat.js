@@ -6,8 +6,14 @@ const ALLOWED_ORIGINS = [
 ];
 
 const MAX_QUESTION_CHARS = 500;
-/* Con 66 lugares cargados, 16 dejaba fuera casi todo el directorio. */
-const MAX_PLACES = 30;
+/* El sitio ahora manda TODOS los lugares en dos niveles (unos pocos con la
+   ficha completa y el resto compactos), dentro de un presupuesto fijo de
+   caracteres que él mismo calcula. El tope de aquí es solo una malla de
+   seguridad: 30 volvía invisible a medio directorio. */
+const MAX_PLACES = 130;
+/* Guía maestra del municipio: contexto que ninguna ficha contiene
+   (cómo llegar, páramo, gastronomía típica, patrona). */
+const MAX_GUIA_CHARS = 4000;
 /* 300 cortaba a media frase 38 de las 66 descripciones. */
 const MAX_FIELD_CHARS = 600;
 
@@ -43,6 +49,7 @@ export default {
       const question = String(body.question || '').slice(0, MAX_QUESTION_CHARS);
       const lang     = (body.lang === 'en') ? 'en' : 'es';
       const places   = Array.isArray(body.places) ? body.places : [];
+      const guia     = (typeof body.guia === 'string') ? body.guia.slice(0, MAX_GUIA_CHARS) : '';
 
       if (!question.trim()) {
         return new Response(JSON.stringify({ ok: false, error: 'Empty question' }), {
@@ -85,7 +92,9 @@ export default {
         + 'No inventes negocios, direcciones, horarios ni teléfonos que no estén en la lista. '
         + 'Si un lugar dice "Todos los días", eso incluye sábados y domingos. '
         + 'Si el dato no está en la lista, dilo con claridad y sugiere contactar la alcaldía o un guía local.\n\n'
-        + 'Lugares disponibles:\n' + ctx;
+        + (guia ? 'Sobre el municipio:\n' + guia + '\n\n' : '')
+        + 'Lugares disponibles (los que traen [categoría] son la lista completa del
+directorio; los demás vienen con su ficha ampliada):\n' + ctx;
 
       const sysEN = 'You are the tourism assistant for Labateca (God\'s Volcanoes), Norte de Santander, Colombia. '
         + 'Altitude 1,566 m, mild climate ~20°C, ~113 km from Cúcuta (~3.5h by bus). '
@@ -98,7 +107,9 @@ export default {
         + 'Do not invent businesses, addresses, opening hours or phone numbers that are not listed. '
         + 'If a place says "Every day", that includes Saturdays and Sundays. '
         + 'If the data is not in the list, say so clearly and suggest contacting the town hall or a local guide.\n\n'
-        + 'Available places:\n' + ctx;
+        + (guia ? 'About the municipality:\n' + guia + '\n\n' : '')
+        + 'Available places (those with [category] are the full directory; the
+rest come with their expanded entry):\n' + ctx;
 
       var systemPrompt = (lang === 'es') ? sysES : sysEN;
 

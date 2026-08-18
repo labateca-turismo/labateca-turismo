@@ -7,7 +7,7 @@
      - network-first      → datos dinámicos (clima Open-Meteo)
    ============================================================ */
 
-const CACHE_VERSION = 'labateca-v108';
+const CACHE_VERSION = 'labateca-v109';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE   = `${CACHE_VERSION}-images`;
 const DATA_CACHE    = `${CACHE_VERSION}-data`;
@@ -23,6 +23,7 @@ const PRECACHE_URLS = [
   '/manifest.json',
   '/data/places.json',
   '/data/rutas.json',
+  '/data/guia.json',
   '/icons/icon.svg',
   '/icons/icon-maskable.svg',
   '/images/mapa-ilustrado-placeholder.svg'

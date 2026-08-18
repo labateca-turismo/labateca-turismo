@@ -82,6 +82,10 @@ function initVideos() {
            dificultad{es,en}, recomendacion{es,en}, fotos[]
    ============================================================ */
 let PLACES = [];
+/* Guía maestra del municipio (data/guia.json): el contexto que NINGUNA ficha
+   contiene —cómo llegar, páramo, gastronomía típica, patrona— y que la IA
+   necesita para responder lo que no es un lugar. Viaja completa en cada consulta. */
+let GUIA = { es:'', en:'' };
 
 /* ── BLOQUE ELIMINADO: los datos viven ahora en data/places.json ──
    Si necesitas un respaldo local de emergencia, copia aquí el JSON.
@@ -2039,13 +2043,19 @@ function _clip(s, n){
    y el teléfono viven en otros campos y nunca le llegaban al modelo (por eso
    respondía "no tengo el horario" teniéndolo cargado). Aquí los metemos al
    principio de "recomendacion", que sí viaja, sin tener que tocar el worker. */
+/* "Todos los días" es obvio para una persona, no para el modelo: al preguntarle
+   "¿abre los domingos?" respondía que no sabía. Se lo dejamos explícito. */
+function _horaClara(p){
+  return ((p.tiempo || {})[lang] || '')
+    .replace(/todos los d[ií]as/i, 'Todos los días (lunes a domingo, incluye sábado y domingo)')
+    .replace(/every day/i, 'Every day (Monday to Sunday, including Saturday and Sunday)');
+}
+
 function _forAI(p){
   const rec  = (p.recomendacion || p.rec || {})[lang] || '';
   // "Todos los días" es obvio para una persona, no para el modelo: al preguntarle
   // "¿abre los domingos?" respondía que no sabía. Se lo dejamos explícito.
-  const hora = ((p.tiempo || {})[lang] || '')
-    .replace(/todos los d[ií]as/i, 'Todos los días (lunes a domingo, incluye sábado y domingo)')
-    .replace(/every day/i, 'Every day (Monday to Sunday, including Saturday and Sunday)');
+  const hora = _horaClara(p);
   const tel  = p.telefono ? String(p.telefono).replace(/^57/, '') : '';
   const cab  = (hora ? (lang==='es' ? 'Horario: ' : 'Hours: ') + hora + ' ' : '')
              + (tel  ? 'WhatsApp: ' + tel + '. ' : '');
@@ -2063,7 +2073,7 @@ function _variado(n){
   const porCat = {};
   PLACES.forEach(p=>{ const c = p.categoria || p.cat || 'otros'; (porCat[c] = porCat[c] || []).push(p); });
   const cats = Object.keys(porCat), out = [];
-  for(let r = 0; out.length < n && r < 40; r++){
+  for(let r = 0; out.length < n && r < PLACES.length; r++){
     let puso = false;
     for(const c of cats){
       const p = porCat[c][r];
@@ -2074,47 +2084,123 @@ function _variado(n){
   return out;
 }
 
-/* Selecciona los lugares MÁS RELEVANTES a la pregunta (no solo los primeros).
-   Así la IA siempre recibe el lugar preguntado aunque haya 66 lugares cargados. */
-function _pickPlaces(question, limit){
-  limit = limit || 16;
-  if(PLACES.length <= limit) return PLACES.map(_forAI);
+/* ── CONTEXTO QUE VIAJA A LA IA ─────────────────────────────────────
+   Antes viajaban 30 lugares completos y el resto quedaba INVISIBLE para el
+   asistente: preguntar "¿dónde hay bares?" (en plural) dejaba fuera al bar
+   principal del pueblo, porque "bares" no aparece dentro de "bar". Ahora
+   viajan TODOS los lugares, en dos niveles:
 
+     · compacto  → nombre [categoría] | horario | teléfono      (~90 chars)
+     · detallado → la ficha entera, podada                      (~580 chars)
+
+   El presupuesto de caracteres es FIJO, así que al crecer el directorio baja
+   sola la cantidad de fichas detalladas: nunca se desborda el modelo. Y como
+   el ranking sigue leyendo la ficha COMPLETA aquí en el navegador, el lugar
+   por el que preguntan siempre asciende a detallado. */
+
+/* ~5.280 tokens: el mismo gasto que producción ya venía corriendo sin problema
+   con solo 30 lugares. Es un techo medido, no supuesto. */
+const CTX_PRESUPUESTO = 18000;
+
+/* Ordena TODOS los lugares por relevancia a la pregunta (sin recortar). */
+function _ranking(question){
   const crudas = _norm(question).match(/[a-z0-9]{3,}/g) || [];
   const words = [];
   crudas.forEach(w=>{
     if(_STOP.has(w)) return;
     words.push(w);
-    (_syn(w) || []).forEach(s=>{ const n = _norm(s); if(!words.includes(n)) words.push(n); });
+    (_syn(w) || []).forEach(x=>{ const nn = _norm(x); if(!words.includes(nn)) words.push(nn); });
   });
-  if(!words.length) return _variado(limit).map(_forAI);
+  if(!words.length) return _variado(PLACES.length);
 
   const scored = PLACES.map((p, i)=>{
     const nom    = _norm(placeName(p));
     const cat    = _norm(p.categoria || p.cat || '');
     const cuerpo = _norm(((p.desc||{})[lang]||'') + ' ' + ((p.recomendacion||{})[lang]||''));
-    let s = 0;
+    let sc = 0;
     for(const w of words){
-      if(nom.includes(w))         s += 3;   // el nombre sí pesa (antes el bonus nunca se aplicaba)
-      else if(cat.includes(w))    s += 2;
-      else if(cuerpo.includes(w)) s += 1;
+      if(nom.includes(w))         sc += 3;   // el nombre pesa más que todo
+      else if(cat.includes(w))    sc += 2;
+      else if(cuerpo.includes(w)) sc += 1;
     }
     // A igual relevancia, primero la ficha con foto y teléfono (no la más antigua).
-    if(s){ if((p.fotos||[]).length) s += 0.5; if(p.telefono) s += 0.25; }
-    return { p, s, i };
+    if(sc){ if((p.fotos||[]).length) sc += 0.5; if(p.telefono) sc += 0.25; }
+    return { p, s:sc, i };
   });
 
-  const hit = scored.filter(x=>x.s > 0).sort((a,b)=> b.s - a.s || a.i - b.i);
-  if(!hit.length) return _variado(limit).map(_forAI);
+  const hit = scored.filter(x=>x.s > 0).sort((a,b)=> b.s - a.s || a.i - b.i).map(x=>x.p);
+  if(!hit.length) return _variado(PLACES.length);
+  // Los que no puntuaron igual viajan (compactos), repartidos por categoría.
+  return hit.concat(_variado(PLACES.length).filter(p => hit.indexOf(p) === -1));
+}
 
-  const out = hit.slice(0, limit).map(x=>x.p);
-  if(out.length < limit){                       // completa el cupo con surtido
-    for(const p of _variado(limit * 3)){
-      if(out.length >= limit) break;
-      if(out.indexOf(p) === -1) out.push(p);
-    }
+/* Ficha completa, podada. Dos podas distintas:
+   · de contenido → "En el casco urbano" se repite 49 veces en el directorio y
+     la guía maestra ya lo dice una sola vez;
+   · de transporte → antes viajaban también fotos, coordenadas y pies de foto,
+     que el worker ni lee. Con 66 lugares eso eran 48 KB de subida por pregunta,
+     y buena parte de los visitantes están en red móvil de montaña. */
+function _detalle(p){
+  const f    = _forAI(p);                       // recorta textos e inyecta horario/WhatsApp
+  const como = (p.comoLlegar || {})[lang] || '';
+  return {
+    id:            p.id,
+    nombre:        _soloL(p.nombre),
+    desc:          _soloL(f.desc),
+    recomendacion: _soloL(f.recomendacion),
+    tiempo:        _soloL(p.tiempo),
+    telefono:      p.telefono,
+    comoLlegar:    /casco urbano/i.test(como) ? {} : _soloL(p.comoLlegar)  // solo si sale del pueblo
+  };
+}
+
+/* Cada texto viene en español e inglés, pero la consulta usa uno solo:
+   mandar los dos duplica los kilobytes que sube el visitante. */
+function _soloL(m){ const o = {}; o[lang] = (m || {})[lang] || ''; return o; }
+
+/* Lo mínimo para que el lugar EXISTA para el modelo y pueda nombrarlo. */
+function _compacto(p){
+  const o = { id:p.id, nombre:_soloL(p.nombre), telefono:p.telefono, desc:{}, tiempo:{} };
+  o.desc[lang]   = '[' + (p.categoria || p.cat || '') + ']';
+  o.tiempo[lang] = _horaClara(p);
+  return o;
+}
+
+/* Cuánto ocupará en el prompt la línea que el worker arma con este objeto.
+   Calca su formato exacto —etiquetas incluidas—, porque estimarlo por lo bajo
+   hacía que el paquete se pasara del presupuesto. */
+function _peso(o){
+  const g   = f => ((o[f] || {})[lang] || '').length;
+  const rec = (o.recomendacion || {})[lang] || '';
+  const tel = String(o.telefono || '').replace(/[^0-9]/g, '').length;
+  let n = 4 + g('nombre') + g('desc');                                  // '• ' + nombre + ': '
+  if(g('tiempo') && !/horario:/i.test(rec))  n += g('tiempo') + 11;     // ' Horario: X.'
+  if(tel         && !/whatsapp:/i.test(rec)) n += tel + 12;             // ' WhatsApp: Y.'
+  if(g('dist'))       n += g('dist') + 12;
+  if(g('comoLlegar')) n += g('comoLlegar') + 15;
+  if(rec)             n += rec.length + 6;                              // ' Tip: '
+  return n;
+}
+
+/* Arma el paquete: todos compactos, y asciende a detallados los más relevantes
+   hasta agotar el presupuesto. Van ordenados por relevancia, así que si el
+   worker todavía recorta, los que sobreviven son justamente los que importan. */
+function _contexto(question){
+  const orden     = _ranking(question);
+  const compactos = orden.map(_compacto);
+  const salida    = compactos.slice();
+  let usado = compactos.reduce((a,o)=> a + _peso(o), 0)
+            + (GUIA[lang] || '').length
+            + 1000;                                    // instrucciones fijas del worker
+
+  for(let k = 0; k < orden.length; k++){
+    const det   = _detalle(orden[k]);
+    const extra = _peso(det) - _peso(compactos[k]);
+    if(usado + extra > CTX_PRESUPUESTO) break;
+    salida[k] = det;
+    usado += extra;
   }
-  return out.map(_forAI);
+  return salida;
 }
 
 async function heroAsk(preset){
@@ -2131,7 +2217,7 @@ async function heroAsk(preset){
     const resp = await fetch(CONFIG.chatWorkerUrl, {
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({ question:_hint(q), lang:lang, places:_pickPlaces(q, 30) })
+      body:JSON.stringify({ question:_hint(q), lang:lang, places:_contexto(q), guia:(GUIA[lang]||'') })
     });
     const data = await resp.json();
     if(!(data.ok && data.answer)) throw new Error(data.error || 'no-answer');
@@ -2238,7 +2324,7 @@ async function sendChat() {
     const resp = await fetch(CONFIG.chatWorkerUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ question: _hint(q), lang: lang, places: _pickPlaces(q, 30) })
+      body: JSON.stringify({ question: _hint(q), lang: lang, places: _contexto(q), guia: (GUIA[lang]||'') })
     });
     const data = await resp.json();
     if (typing) typing.remove();
@@ -2362,7 +2448,13 @@ function init(){
     })
     .catch(e => console.warn('[Labateca] places.json:', e.message));
 
-  // 4. Cargar rutas temáticas (también en paralelo)
+  // 4. Guía maestra del municipio (contexto para la IA, en paralelo)
+  fetch('/data/guia.json')
+    .then(r => r.json())
+    .then(j => { GUIA = { es: j.es || '', en: j.en || '' }; })
+    .catch(e => console.warn('[Labateca] guia.json:', e.message));
+
+  // 5. Cargar rutas temáticas (también en paralelo)
   loadRutas();
 }
 
