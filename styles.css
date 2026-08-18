@@ -723,6 +723,44 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;
 }
 #lbImg.loading{opacity:.4}
 
+/* Aviso de contenido sensible sobre una foto puntual.
+   La imagen ya llega difuminada desde Cloudinary (e_blur): esta capa es
+   la advertencia y el boton para verla, no el unico velo. */
+#lbMedia{position:relative;display:flex;justify-content:center;width:100%}
+.lb-aviso{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:12px;padding:24px;text-align:center;
+  background:rgba(13,22,18,.72);
+  border-radius:14px;
+}
+.lb-aviso strong{
+  font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;
+  color:var(--cream);letter-spacing:.01em;
+}
+.lb-aviso p{
+  margin:0;max-width:34ch;
+  font-size:.95rem;line-height:1.5;color:var(--cream);opacity:.9;
+}
+.lb-aviso button{
+  margin-top:4px;padding:11px 22px;
+  font:inherit;font-size:.9rem;font-weight:700;letter-spacing:.02em;
+  color:var(--forest);background:var(--gold-soft);
+  border:0;border-radius:999px;cursor:pointer;
+  transition:background .18s, transform .18s;
+}
+.lb-aviso button:hover{background:var(--cream);transform:translateY(-1px)}
+.lb-aviso button:focus-visible{outline:3px solid var(--cream);outline-offset:3px}
+.lb-aviso small{
+  font-size:.78rem;line-height:1.4;color:var(--cream);opacity:.65;max-width:32ch;
+}
+@media(max-width:520px){
+  .lb-aviso{gap:9px;padding:16px}
+  .lb-aviso strong{font-size:1.05rem}
+  .lb-aviso p{font-size:.88rem}
+  .lb-aviso small{display:none}
+}
+
 /* Placeholder cuando no hay fotos */
 .lb-ph{
   width:100%;max-width:640px;aspect-ratio:16/9;

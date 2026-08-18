@@ -1,5 +1,5 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "lugares": [
     {
       "id": "templo",
@@ -899,7 +899,7 @@
       "coordsApprox": true,
       "lat": 7.3163,
       "lng": -72.4832,
-      "mapaX": 509,
+      "mapaX": 510,
       "mapaY": 386,
       "telefono": "",
       "nombre": {
@@ -1334,7 +1334,7 @@
       "lat": 7.2990524,
       "lng": -72.4949041,
       "mapaX": 495,
-      "mapaY": 363,
+      "mapaY": 362,
       "telefono": "573118913433",
       "nombre": {
         "es": "Fama y Charcutería El Corral",
@@ -3105,7 +3105,7 @@
       "coordsApprox": false,
       "lat": 7.298122,
       "lng": -72.493567,
-      "mapaX": 553,
+      "mapaX": 554,
       "mapaY": 444,
       "telefono": "573123106831",
       "nombre": {
@@ -3846,7 +3846,7 @@
       "lat": 7.298426,
       "lng": -72.494158,
       "mapaX": 512,
-      "mapaY": 437,
+      "mapaY": 438,
       "telefono": "573208080167",
       "nombre": {
         "es": "Droguería Central",
@@ -4301,12 +4301,12 @@
         "en": "A huge, very old samán tree standing at the roadside next to the bridge, its crown opening like an umbrella over the road with the river running below. Samán trees (Samanea saman, also called the 'rain tree') have some of the widest crowns in tropical America and can exceed 25 metres in height. This one is alive inside and out: bromeliads, orchids, ferns and Spanish moss grow along its branches like a hanging garden. Local tradition holds that it was planted at the same time as the samán of Bochalema —sown in 1888 and, according to that town's chroniclers, a child of the Samán de Táriba and grandchild of the Samán de Güere—, which would make this tree close to 140 years old. At its foot stand a wooden cross and planters made from yellow-painted tyres, which neighbours keep filled with flowers."
       },
       "comoLlegar": {
-        "es": "A la orilla de la vía, junto al puente. Se ve desde el carro: es el árbol más grande del sector y no hay cómo confundirlo.",
-        "en": "At the roadside, next to the bridge. You can see it from the car: it is by far the largest tree around and impossible to miss."
+        "es": "A unos 2,7 km al sursureste del casco urbano, a la orilla de la vía y junto al puente. Se ve desde el carro: es el árbol más grande del sector y no hay cómo confundirlo.",
+        "en": "About 2.7 km south-southeast of the town center, at the roadside next to the bridge. You can see it from the car: it is by far the largest tree around and impossible to miss."
       },
       "dist": {
-        "es": "Fuera del casco urbano",
-        "en": "Outside the town center"
+        "es": "~2,7 km del pueblo",
+        "en": "~2.7 km from town"
       },
       "tiempo": {
         "es": "Visita durante el día",
@@ -4348,7 +4348,11 @@
           "es": "El samán al borde del río, con el agua crecida corriendo entre las piedras.",
           "en": "The samán at the river's edge, with the swollen water running between the boulders."
         }
-      ]
+      ],
+      "lat": 7.276603,
+      "lng": -72.486316,
+      "mapaX": 534,
+      "mapaY": 470
     },
     {
       "id": "tumba-cacique-bateca",
@@ -4393,7 +4397,8 @@
         "labateca/tumba-cacique-bateca-02",
         "labateca/tumba-cacique-bateca-03",
         "labateca/tumba-cacique-bateca-04",
-        "labateca/tumba-cacique-bateca-05"
+        "labateca/tumba-cacique-bateca-05",
+        "labateca/tumba-cacique-bateca-06"
       ],
       "fotosCap": [
         {
@@ -4415,8 +4420,18 @@
         {
           "es": "El camino real que lleva hasta el sepulcro, con sus muros de piedra; todavía se recorre a lomo de bestia.",
           "en": "The old royal road leading to the tomb, with its stone walls; it is still travelled on horseback."
+        },
+        {
+          "es": "Interior de la cámara, visto a través de la reja: se alcanzan a ver los restos óseos que el pueblo atribuye al Cacique Bateca.",
+          "en": "Inside the burial chamber, seen through the grate: the skeletal remains that local tradition attributes to Cacique Bateca."
         }
-      ]
+      ],
+      "fotosAviso": {
+        "5": {
+          "es": "Esta foto muestra restos humanos.",
+          "en": "This photo shows human remains."
+        }
+      }
     },
     {
       "id": "virgen-conductores",

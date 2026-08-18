@@ -303,6 +303,7 @@ const I18N = {
     ph_photo:"Tu foto aquí",
     lb_close:"Cerrar galería", lb_prev:"Foto anterior", lb_next:"Foto siguiente",
     lb_of:"de", lb_no_photo:"Foto próximamente", lb_open:"Ver fotos",
+    lb_aviso_tit:"Contenido sensible", lb_aviso_btn:"Ver la foto", lb_aviso_pie:"Toca fuera o pasa a la siguiente si prefieres no verla.",
     gal_click_hint:"Toca para ver la ficha del lugar",
     chat_title:"Guía Labateca IA", chat_subtitle:"Pregúntame lo que quieras",
     chat_welcome:"¡Hola! Soy tu guía virtual de Labateca. Puedo ayudarte con lugares para visitar, cómo llegar, qué comer y mucho más. ¿En qué te ayudo?",
@@ -428,6 +429,7 @@ const I18N = {
     ph_photo:"Your photo here",
     lb_close:"Close gallery", lb_prev:"Previous photo", lb_next:"Next photo",
     lb_of:"of", lb_no_photo:"Photo coming soon", lb_open:"View photos",
+    lb_aviso_tit:"Sensitive content", lb_aviso_btn:"Show the photo", lb_aviso_pie:"Tap outside or move on if you would rather not see it.",
     gal_click_hint:"Tap to see the place card",
     chat_title:"Labateca AI Guide", chat_subtitle:"Ask me anything",
     chat_welcome:"Hi! I'm your Labateca virtual guide. I can help you with places to visit, how to get there, what to eat and much more. How can I help?",
@@ -1587,6 +1589,7 @@ function openLightbox(placeId, photoIdx) {
   _lbPlace     = p;
   _lbIdx       = photoIdx || 0;
   _lbFocusPrev = document.activeElement;
+  _lbDestapadas.clear();   // el aviso vuelve a salir en cada visita al lugar
   paintLightbox();
   const lb = document.getElementById('lightbox');
   lb.removeAttribute('hidden');
@@ -1601,6 +1604,10 @@ function closeLightbox() {
   _lbPlace = null;
   if (_lbFocusPrev) _lbFocusPrev.focus();
 }
+
+/* Índices de fotos con aviso que el visitante ya decidió ver. Se vacía
+   cada vez que se abre el lightbox. */
+let _lbDestapadas = new Set();
 
 function lightboxNav(dir) {
   if (!_lbPlace) return;
@@ -1619,17 +1626,35 @@ function paintLightbox() {
 
   // ── Imagen o placeholder ──
   if (total > 0) {
-    const url = cldUrl(fotos[_lbIdx], 'w_1600,f_auto,q_auto')
+    const aviso   = (p.fotosAviso || {})[_lbIdx];
+    const tapada  = !!aviso && !_lbDestapadas.has(_lbIdx);
+    // Con aviso sin destapar se pide la versión difuminada por Cloudinary:
+    // así la imagen nítida ni siquiera se descarga.
+    const tr      = tapada ? 'w_900,e_blur:2000,f_auto,q_auto' : 'w_1600,f_auto,q_auto';
+    const url = cldUrl(fotos[_lbIdx], tr)
              || cldUrl(fotos[_lbIdx], 'w_1200,f_auto,q_auto');
     if (url) {
       const img = new Image();
       img.id      = 'lbImg';
       img.className = 'loading';
-      img.alt     = placeName(p);
+      img.alt     = tapada ? t('lb_aviso_tit') : placeName(p);
       img.onload  = () => img.classList.remove('loading');
       img.src     = url;
       media.innerHTML = '';
       media.appendChild(img);
+      if (tapada) {
+        const capa = document.createElement('div');
+        capa.className = 'lb-aviso';
+        capa.innerHTML = '<strong>' + t('lb_aviso_tit') + '</strong>'
+          + '<p>' + escHtml(aviso[lang] || aviso.es || '') + '</p>'
+          + '<button type="button">' + t('lb_aviso_btn') + '</button>'
+          + '<small>' + t('lb_aviso_pie') + '</small>';
+        capa.querySelector('button').addEventListener('click', () => {
+          _lbDestapadas.add(_lbIdx);
+          paintLightbox();
+        });
+        media.appendChild(capa);
+      }
     } else {
       // Public ID existe pero cloudName vacío → mostrar placeholder con aviso
       media.innerHTML = lbPlaceholder(p, true);
