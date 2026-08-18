@@ -93,8 +93,7 @@ export default {
         + 'Si un lugar dice "Todos los días", eso incluye sábados y domingos. '
         + 'Si el dato no está en la lista, dilo con claridad y sugiere contactar la alcaldía o un guía local.\n\n'
         + (guia ? 'Sobre el municipio:\n' + guia + '\n\n' : '')
-        + 'Lugares disponibles (los que traen [categoría] son la lista completa del
-directorio; los demás vienen con su ficha ampliada):\n' + ctx;
+        + 'Lugares disponibles (los que traen [categoría] son el directorio completo; los demás vienen con su ficha ampliada):\n' + ctx;
 
       const sysEN = 'You are the tourism assistant for Labateca (God\'s Volcanoes), Norte de Santander, Colombia. '
         + 'Altitude 1,566 m, mild climate ~20°C, ~113 km from Cúcuta (~3.5h by bus). '
@@ -108,8 +107,7 @@ directorio; los demás vienen con su ficha ampliada):\n' + ctx;
         + 'If a place says "Every day", that includes Saturdays and Sundays. '
         + 'If the data is not in the list, say so clearly and suggest contacting the town hall or a local guide.\n\n'
         + (guia ? 'About the municipality:\n' + guia + '\n\n' : '')
-        + 'Available places (those with [category] are the full directory; the
-rest come with their expanded entry):\n' + ctx;
+        + 'Available places (those with [category] are the full directory; the rest come with their expanded entry):\n' + ctx;
 
       var systemPrompt = (lang === 'es') ? sysES : sysEN;
 
