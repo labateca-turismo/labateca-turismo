@@ -1369,4 +1369,58 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/lugar/linaje-barber</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/linaje-barber"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/linaje-barber"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/linaje-barber"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/en/place/linaje-barber</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/linaje-barber"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/linaje-barber"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/linaje-barber"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/lugar/ferre-agro-tk</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/ferre-agro-tk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/ferre-agro-tk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/ferre-agro-tk"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/en/place/ferre-agro-tk</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/ferre-agro-tk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/ferre-agro-tk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/ferre-agro-tk"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/lugar/cafe-btk</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/cafe-btk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/cafe-btk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/cafe-btk"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/en/place/cafe-btk</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/cafe-btk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/cafe-btk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/cafe-btk"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

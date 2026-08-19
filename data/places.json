@@ -1,5 +1,5 @@
 {
-  "version": "1.5",
+  "version": "1.6",
   "lugares": [
     {
       "id": "templo",
@@ -4600,6 +4600,220 @@
         {
           "es": "El lavacabezas, bajo el mural de «You are always beautiful».",
           "en": "The hair-washing chair, under the You are always beautiful wall art."
+        }
+      ]
+    },
+    {
+      "id": "linaje-barber",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298638,
+      "lng": -72.49365,
+      "mapaX": 547,
+      "mapaY": 398,
+      "telefono": "573219833791",
+      "nombre": {
+        "es": "Linaje Barber Estudio",
+        "en": "Linaje Barber Estudio"
+      },
+      "desc": {
+        "es": "Barbería en el casco urbano, en el barrio Quinta Real, a una cuadra y media del parque principal. Por fuera es una casa blanca de dos pisos con dos puertas negras y un aviso vertical de «Barber Shop» en medio; por dentro sorprende: paneles de mármol negro en techo y paredes, tiras de luz LED, listones de madera, dos sillas de barbero, espejos de arco con tocador iluminado, televisor y una nevera con bebidas frías mientras uno espera el turno. La atiende su propietario, Otilio Cordero.",
+        "en": "A barbershop in the town center, in the Quinta Real neighborhood, a block and a half from the main square. From the street it is a white two-story house with two black doors and a vertical Barber Shop sign between them; inside it is a surprise: black marble panelling on ceiling and walls, LED strip lighting, slatted wood, two barber chairs, arched mirrors with lit vanities, a TV, and a cooler with cold drinks while you wait your turn. Run by its owner, Otilio Cordero."
+      },
+      "comoLlegar": {
+        "es": "En el barrio Quinta Real, frente al Hotel Irene Rayal, a una cuadra y media del parque principal. Se reconoce por el aviso vertical de «Barber Shop», en letras verdes, entre las dos puertas negras.",
+        "en": "In the Quinta Real neighborhood, opposite the Hotel Irene Rayal, a block and a half from the main square. Look for the vertical Barber Shop sign in green lettering between the two black doors."
+      },
+      "dist": {
+        "es": "A 150 m del parque principal",
+        "en": "150 m from the main square"
+      },
+      "tiempo": {
+        "es": "Lunes a viernes 9:00 a. m. – 12:30 p. m. y 2:30 – 7:30 p. m. · Sábados 8:00 a. m. – 1:00 p. m. y 2:00 – 8:00 p. m. · Domingos 8:00 a. m. – 1:00 p. m.",
+        "en": "Mon–Fri 9:00 a.m. – 12:30 p.m. and 2:30 – 7:30 p.m. · Saturdays 8:00 a.m. – 1:00 p.m. and 2:00 – 8:00 p.m. · Sundays 8:00 a.m. – 1:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Entre semana cierra al mediodía, de 12:30 a 2:30; el sábado trabaja hasta las 8 de la noche y el domingo solo por la mañana. Si va justo de tiempo, escríbale antes por WhatsApp y le aparta el turno.",
+        "en": "On weekdays it closes for lunch, 12:30 to 2:30; on Saturdays it stays open until 8 p.m. and on Sundays mornings only. If you are short of time, message ahead on WhatsApp and they will hold your slot."
+      },
+      "fotos": [
+        "labateca/linaje-barber-01",
+        "labateca/linaje-barber-02",
+        "labateca/linaje-barber-03"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada sobre la calle: la casa blanca de dos pisos, las dos puertas negras y, en medio, el aviso vertical de «Barber Shop».",
+          "en": "The front on the street: the white two-story house, the two black doors and, between them, the vertical Barber Shop sign."
+        },
+        {
+          "es": "Por dentro: el mármol negro del techo y las paredes, las tiras de luz, las dos sillas de barbero, los espejos de arco con tocador y la nevera de bebidas.",
+          "en": "Inside: the black marble ceiling and walls, the light strips, the two barber chairs, the arched mirrors with their vanities and the drinks cooler."
+        },
+        {
+          "es": "La cuadra del barrio Quinta Real, con las motos parqueadas contra el andén y el filo de la montaña asomando al fondo.",
+          "en": "The block in the Quinta Real neighborhood, motorbikes parked against the curb and the ridge of the mountain showing behind."
+        }
+      ]
+    },
+    {
+      "id": "ferre-agro-tk",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.302609,
+      "lng": -72.497921,
+      "mapaX": 324,
+      "mapaY": 287,
+      "telefono": "573133036828",
+      "nombre": {
+        "es": "Ferre Agro TK — Ferretería y Agroinsumos",
+        "en": "Ferre Agro TK — Hardware and Farm Supplies"
+      },
+      "desc": {
+        "es": "Ferretería grande a la salida del pueblo, unos 500 metros del parque principal, en un local amarillo que se ve desde la carretera. Tiene de todo lo que pide una casa o una finca de montaña: tejas de zinc y de fibrocemento, tubería y accesorios de PVC, tubo y perfilería metálica, varilla, cemento, pintura, manguera, herramienta, material eléctrico — bombillos, tomas, cable —, y una pared entera de sanitarios, lavamanos y grifería. Abre a las seis de la mañana todos los días, incluidos domingos y festivos. La administra Manuel Montañez Parada.",
+        "en": "A large hardware store on the way out of town, some 500 meters from the main square, in a yellow building visible from the road. It stocks what a mountain house or farm needs: zinc and fiber-cement roofing sheets, PVC pipe and fittings, metal tube and angle iron, rebar, cement, paint, hose, tools, electrical supplies — bulbs, sockets, cable — and a whole wall of toilets, basins and taps. It opens at six in the morning every day, Sundays and public holidays included. Managed by Manuel Montañez Parada."
+      },
+      "comoLlegar": {
+        "es": "Saliendo del casco urbano hacia el noroccidente, a unos 500 metros del parque principal. Se entra por un portón techado a la orilla de la vía, con un aviso pintado de «Ferretería · Vivero El Tulipán»; desde ahí ya se ve el local amarillo al final de la entrada destapada.",
+        "en": "Heading out of town to the northwest, about 500 meters from the main square. Turn in at the roofed gateway on the edge of the road, marked by a painted sign reading Ferretería · Vivero El Tulipán; from there the yellow building is already visible at the end of the unpaved drive."
+      },
+      "dist": {
+        "es": "A 500 m del parque principal",
+        "en": "500 m from the main square"
+      },
+      "tiempo": {
+        "es": "Todos los días, 6:00 a. m. – 5:00 p. m.",
+        "en": "Every day, 6:00 a.m. – 5:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil, entrada destapada",
+        "en": "Easy access, unpaved entrance"
+      },
+      "recomendacion": {
+        "es": "Abre a las 6 de la mañana y no cierra ni los domingos ni los festivos: si se le dañó algo el fin de semana, aquí sí hay con qué arreglarlo. En el mismo predio queda Café BTK, así que de una vez se lleva el café.",
+        "en": "It opens at 6 a.m. and does not close on Sundays or holidays: if something breaks over the weekend, this is where you will find the part. Café BTK is on the same property, so you can pick up coffee on the same trip."
+      },
+      "fotos": [
+        "labateca/ferre-agro-tk-01",
+        "labateca/ferre-agro-tk-02",
+        "labateca/ferre-agro-tk-03",
+        "labateca/ferre-agro-tk-04",
+        "labateca/ferre-agro-tk-05",
+        "labateca/ferre-agro-tk-06",
+        "labateca/ferre-agro-tk-07"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada amarilla con el aviso de «FERREAGRO T.K» en letras rosadas, las cortinas metálicas levantadas y el perro de la casa echado en el piso de baldosa.",
+          "en": "The yellow front with its FERREAGRO T.K sign in pink lettering, the roller shutters up and the house dog lying on the tiled floor."
+        },
+        {
+          "es": "El primer mostrador: la vitrina de material eléctrico — bombillos, tomas, interruptores — y, encima, el estante de accesorios amarillos de PVC.",
+          "en": "The first counter: the display case of electrical goods — bulbs, sockets, switches — and above it the shelf of yellow PVC fittings."
+        },
+        {
+          "es": "El pasillo hacia adentro, con las canastillas de tornillería, la herramienta colgada de la reja y la vitrina de pinturas y pegantes.",
+          "en": "The aisle running inward, with bins of screws and fittings, tools hanging on the grid panel and the display case of paints and adhesives."
+        },
+        {
+          "es": "La pared de sanitarios: inodoros, lavamanos, grifería y accesorios de baño colgados de la reja.",
+          "en": "The bathroom wall: toilets, basins, taps and bathroom fittings hanging on the grid."
+        },
+        {
+          "es": "El fondo del local, con los bultos, la manguera enrollada, los baldes y los aceites; al frente, el mostrador con la caja.",
+          "en": "The back of the store, with sacks, coiled hose, buckets and oils; in front, the counter with the till."
+        },
+        {
+          "es": "Bajo el cobertizo, el estante de tejas de zinc y de fibrocemento y los rollos de tubería de PVC por diámetros.",
+          "en": "Under the shed, the rack of zinc and fiber-cement roofing sheets and the runs of PVC pipe sorted by diameter."
+        },
+        {
+          "es": "El estante de tubo y perfilería metálica contra la pared de ladrillo, con la varilla y el tubo cuadrado por medidas.",
+          "en": "The rack of metal tube and angle iron against the brick wall, with rebar and square tube sorted by size."
+        }
+      ]
+    },
+    {
+      "id": "cafe-btk",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.302647,
+      "lng": -72.497887,
+      "mapaX": 338,
+      "mapaY": 280,
+      "telefono": "573124193241",
+      "nombre": {
+        "es": "Café BTK",
+        "en": "Café BTK"
+      },
+      "desc": {
+        "es": "Café de Labateca, tostado y empacado en el mismo predio de la ferretería, a 500 metros del parque principal. Hoy hace dos cosas: presta el servicio de tostión y vende su propio café ya procesado — molido, en bolsa de 250 gramos y en cajas de 15 sobres para pasar por goteo. El empaque cuenta lo que hay dentro: origen Labateca, Norte de Santander, a 1.676 metros sobre el nivel del mar, variedad Castillo, tostión medio-alto, taza uniforme y balanceada con notas dulces, florales y achocolatadas. Las siglas son del Cacique Bateca, que sale dibujado en el aviso redondo de la entrada. Lo administra Javier Montañez.",
+        "en": "Coffee from Labateca, roasted and packed on the same property as the hardware store, 500 meters from the main square. Today it does two things: it roasts coffee as a service, and it sells its own processed coffee — ground, in 250-gram bags and in boxes of 15 drip sachets. The packaging tells you what is inside: grown in Labateca, Norte de Santander, at 1,676 meters above sea level, Castillo variety, medium-high roast, an even and balanced cup with sweet, floral and chocolatey notes. The initials stand for Cacique Bateca, who appears on the round sign at the entrance. Managed by Javier Montañez."
+      },
+      "comoLlegar": {
+        "es": "Se entra por el mismo portón techado de la ferretería, saliendo del casco urbano hacia el noroccidente; el aviso de la vía dice «Ferretería · Vivero El Tulipán». Ya adentro del predio, el punto de venta es la ventana con el aviso redondo amarillo de Café BTK.",
+        "en": "Turn in at the same roofed gateway as the hardware store, heading out of town to the northwest; the sign on the road reads Ferretería · Vivero El Tulipán. Once on the property, the shop is the window under the round yellow Café BTK sign."
+      },
+      "dist": {
+        "es": "A 500 m del parque principal",
+        "en": "500 m from the main square"
+      },
+      "tiempo": {
+        "es": "Lunes a sábado, 8:00 a. m. – 5:00 p. m.",
+        "en": "Monday to Saturday, 8:00 a.m. – 5:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil, entrada destapada",
+        "en": "Easy access, unpaved entrance"
+      },
+      "recomendacion": {
+        "es": "Que quede claro para no llegar con la idea equivocada: por ahora no es cafetería, no se sienta uno a tomar tinto. Se va por el café empacado, o a que le tuesten la cosecha. Vale la subida de todos modos: desde el patio se ve el pueblo entero allá abajo, con la torre de la iglesia y la montaña detrás.",
+        "en": "So you do not arrive expecting the wrong thing: this is not a coffee shop, you cannot sit down for a cup. You go for the packed coffee, or to have your own harvest roasted. It is worth the trip up anyway: from the yard you look down on the whole town, church tower and mountains behind."
+      },
+      "fotos": [
+        "labateca/cafe-btk-01",
+        "labateca/cafe-btk-02",
+        "labateca/cafe-btk-03",
+        "labateca/cafe-btk-04",
+        "labateca/cafe-btk-05",
+        "labateca/cafe-btk-06",
+        "labateca/cafe-btk-07"
+      ],
+      "fotosCap": [
+        {
+          "es": "El punto de venta: la ventana y la puerta forradas en piedra, y encima el aviso redondo amarillo — «Café BTK · Tierra pródiga y bendita · Café especial tipo exportación».",
+          "en": "The shop front: window and door clad in stone, and above them the round yellow sign — Café BTK, Tierra pródiga y bendita, specialty export-grade coffee."
+        },
+        {
+          "es": "Los estantes por dentro, con el mural de las ramas de café al fondo, las bolsas alineadas, las cajas de sobres, la greca y la jarra de goteo.",
+          "en": "The shelves inside, with the mural of coffee branches behind, bags lined up, boxes of drip sachets, the moka pot and the pour-over jug."
+        },
+        {
+          "es": "Las cajas de 15 sobres de café especial, cada una para pasar una taza por goteo, bajo el mural de «Café BTK Colombia».",
+          "en": "The boxes of 15 specialty drip sachets, one cup each, under the Café BTK Colombia mural."
+        },
+        {
+          "es": "El estante con las bolsas de café molido y la tetera de cuello de cisne que usan para pasarlo.",
+          "en": "The shelf of ground-coffee bags and the gooseneck kettle they brew with."
+        },
+        {
+          "es": "La bolsa de 250 gramos de cerca: origen Labateca, 1.676 metros sobre el nivel del mar, variedad Castillo, tostión medio-alto.",
+          "en": "A 250-gram bag up close: grown in Labateca, 1,676 meters above sea level, Castillo variety, medium-high roast."
+        },
+        {
+          "es": "La entrada al predio desde la vía: el portón techado y el aviso pintado de «Ferretería · Vivero El Tulipán», con el local amarillo al fondo.",
+          "en": "The entrance from the road: the roofed gateway and the painted Ferretería · Vivero El Tulipán sign, with the yellow building at the end."
+        },
+        {
+          "es": "La vista desde el patio: Labateca abajo en el valle, con la torre de la iglesia entre los tejados y la montaña cerrando el fondo.",
+          "en": "The view from the yard: Labateca down in the valley, the church tower among the roofs and the mountain closing the horizon."
         }
       ]
     }
