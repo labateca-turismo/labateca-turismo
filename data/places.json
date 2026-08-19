@@ -1,5 +1,5 @@
 {
-  "version": "1.3",
+  "version": "1.4",
   "lugares": [
     {
       "id": "templo",
@@ -8,8 +8,8 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 510,
-      "mapaY": 362,
+      "mapaX": 507,
+      "mapaY": 358,
       "telefono": "",
       "nombre": {
         "es": "Parroquia Nuestra Señora de las Angustias",
@@ -96,8 +96,8 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 524,
-      "mapaY": 362,
+      "mapaX": 529,
+      "mapaY": 361,
       "telefono": "",
       "nombre": {
         "es": "Nuestra Señora de las Angustias — Patrona",
@@ -159,8 +159,8 @@
       "coordsApprox": false,
       "lat": 7.3002463,
       "lng": -72.4963025,
-      "mapaX": 466,
-      "mapaY": 340,
+      "mapaX": 465,
+      "mapaY": 338,
       "telefono": "",
       "nombre": {
         "es": "Cementerio (Camposanto) de Labateca",
@@ -222,8 +222,8 @@
       "coordsApprox": false,
       "lat": 7.2997576,
       "lng": -72.494551,
-      "mapaX": 489,
-      "mapaY": 401,
+      "mapaX": 485,
+      "mapaY": 404,
       "telefono": "573213496226",
       "nombre": {
         "es": "Servicios Parroquiales y Documentos",
@@ -270,8 +270,8 @@
       "coordsApprox": false,
       "lat": 7.2996816,
       "lng": -72.49452,
-      "mapaX": 502,
-      "mapaY": 374,
+      "mapaX": 504,
+      "mapaY": 372,
       "telefono": "",
       "nombre": {
         "es": "Parque Principal",
@@ -338,8 +338,8 @@
       "coordsApprox": false,
       "lat": 7.300327,
       "lng": -72.494867,
-      "mapaX": 502,
-      "mapaY": 350,
+      "mapaX": 501,
+      "mapaY": 346,
       "telefono": "573214592514",
       "nombre": {
         "es": "Intrínseco — Restaurante, Café y Bar",
@@ -406,8 +406,8 @@
       "coordsApprox": false,
       "lat": 7.3005894,
       "lng": -72.4950748,
-      "mapaX": 466,
-      "mapaY": 389,
+      "mapaX": 463,
+      "mapaY": 388,
       "telefono": "",
       "telFijo": "576015948500",
       "nombre": {
@@ -460,8 +460,8 @@
       "coordsApprox": false,
       "lat": 7.30017,
       "lng": -72.494824,
-      "mapaX": 467,
-      "mapaY": 364,
+      "mapaX": 466,
+      "mapaY": 363,
       "telefono": "573123047048",
       "nombre": {
         "es": "Siscatagua A.P.C. — Acueducto y Alcantarillado",
@@ -538,8 +538,8 @@
       "coordsApprox": false,
       "lat": 7.300346,
       "lng": -72.49487,
-      "mapaX": 488,
-      "mapaY": 350,
+      "mapaX": 487,
+      "mapaY": 349,
       "telefono": "584168475520",
       "nombre": {
         "es": "Criss Studio — Uñas y Belleza",
@@ -591,8 +591,8 @@
       "coordsApprox": true,
       "lat": 7.3169,
       "lng": -72.483,
-      "mapaX": 530,
-      "mapaY": 350,
+      "mapaX": 531,
+      "mapaY": 347,
       "telefono": "",
       "nombre": {
         "es": "Casa de la Cultura",
@@ -859,8 +859,8 @@
       "coordsApprox": true,
       "lat": 7.3166,
       "lng": -72.4837,
-      "mapaX": 482,
-      "mapaY": 389,
+      "mapaX": 483,
+      "mapaY": 388,
       "telefono": "",
       "nombre": {
         "es": "Dulces y sabores típicos",
@@ -899,8 +899,8 @@
       "coordsApprox": true,
       "lat": 7.3163,
       "lng": -72.4832,
-      "mapaX": 510,
-      "mapaY": 386,
+      "mapaX": 509,
+      "mapaY": 389,
       "telefono": "",
       "nombre": {
         "es": "Hospedaje local",
@@ -1059,7 +1059,7 @@
       "coordsApprox": true,
       "lat": 7.3168,
       "lng": -72.4829,
-      "mapaX": 531,
+      "mapaX": 532,
       "mapaY": 374,
       "telefono": "",
       "nombre": {
@@ -1099,8 +1099,8 @@
       "coordsApprox": true,
       "lat": 7.3162,
       "lng": -72.4836,
-      "mapaX": 481,
-      "mapaY": 413,
+      "mapaX": 473,
+      "mapaY": 412,
       "telefono": "",
       "nombre": {
         "es": "Posada comunitaria (espacio)",
@@ -1139,8 +1139,8 @@
       "coordsApprox": true,
       "lat": 7.317,
       "lng": -72.4831,
-      "mapaX": 516,
-      "mapaY": 350,
+      "mapaX": 517,
+      "mapaY": 348,
       "telefono": "",
       "nombre": {
         "es": "Artesanías y tejidos locales",
@@ -1333,7 +1333,7 @@
       "coordsApprox": false,
       "lat": 7.2990524,
       "lng": -72.4949041,
-      "mapaX": 495,
+      "mapaX": 494,
       "mapaY": 362,
       "telefono": "573118913433",
       "nombre": {
@@ -1392,7 +1392,7 @@
       "lat": 7.29917,
       "lng": -72.494704,
       "mapaX": 496,
-      "mapaY": 389,
+      "mapaY": 383,
       "telefono": "573222834876",
       "nombre": {
         "es": "Automercado Karen",
@@ -1459,8 +1459,8 @@
       "coordsApprox": false,
       "lat": 7.298409,
       "lng": -72.493737,
-      "mapaX": 475,
-      "mapaY": 353,
+      "mapaX": 473,
+      "mapaY": 349,
       "telefono": "573144195716",
       "nombre": {
         "es": "Antojitos",
@@ -1517,8 +1517,8 @@
       "coordsApprox": false,
       "lat": 7.30008,
       "lng": -72.494792,
-      "mapaX": 460,
-      "mapaY": 376,
+      "mapaX": 458,
+      "mapaY": 375,
       "telefono": "573234521624",
       "nombre": {
         "es": "Sistemas UM",
@@ -1716,7 +1716,7 @@
       "lat": 7.297209,
       "lng": -72.496575,
       "mapaX": 446,
-      "mapaY": 401,
+      "mapaY": 402,
       "telefono": "573108566143",
       "nombre": {
         "es": "Teca Bar La Barra",
@@ -1788,8 +1788,8 @@
       "coordsApprox": false,
       "lat": 7.300349,
       "lng": -72.494849,
-      "mapaX": 453,
-      "mapaY": 364,
+      "mapaX": 452,
+      "mapaY": 362,
       "telefono": "573123047768",
       "nombre": {
         "es": "Frikarnes",
@@ -1851,8 +1851,8 @@
       "coordsApprox": false,
       "lat": 7.298875,
       "lng": -72.494026,
-      "mapaX": 474,
-      "mapaY": 400,
+      "mapaX": 473,
+      "mapaY": 398,
       "telefono": "573115576386",
       "nombre": {
         "es": "Siste Hogar",
@@ -1919,8 +1919,8 @@
       "coordsApprox": false,
       "lat": 7.299908,
       "lng": -72.494747,
-      "mapaX": 446,
-      "mapaY": 376,
+      "mapaX": 444,
+      "mapaY": 375,
       "telefono": "573153331207",
       "nombre": {
         "es": "Galactic Bar",
@@ -1982,7 +1982,7 @@
       "coordsApprox": false,
       "lat": 7.3005588,
       "lng": -72.4949505,
-      "mapaX": 439,
+      "mapaX": 438,
       "mapaY": 363,
       "correo": "labatecanortedesan@registraduria.gov.co",
       "nombre": {
@@ -2035,8 +2035,8 @@
       "coordsApprox": false,
       "lat": 7.298304,
       "lng": -72.493737,
-      "mapaX": 496,
-      "mapaY": 413,
+      "mapaX": 497,
+      "mapaY": 411,
       "telefono": "573212675678",
       "nombre": {
         "es": "Sofi Burger",
@@ -2167,7 +2167,7 @@
       "lat": 7.30056,
       "lng": -72.4949,
       "mapaX": 456,
-      "mapaY": 350,
+      "mapaY": 349,
       "nombre": {
         "es": "Concejo Municipal de Labateca",
         "en": "Municipal Council of Labateca"
@@ -2223,7 +2223,7 @@
       "coordsApprox": false,
       "lat": 7.299932,
       "lng": -72.494973,
-      "mapaX": 452,
+      "mapaX": 449,
       "mapaY": 388,
       "telefono": "573104036102",
       "nombre": {
@@ -2286,8 +2286,8 @@
       "coordsApprox": false,
       "lat": 7.299268,
       "lng": -72.494337,
-      "mapaX": 517,
-      "mapaY": 398,
+      "mapaX": 521,
+      "mapaY": 396,
       "telefono": "573107963730",
       "nombre": {
         "es": "Tienda Tres Esquinas",
@@ -2359,8 +2359,8 @@
       "coordsApprox": false,
       "lat": 7.298665,
       "lng": -72.493742,
-      "mapaX": 548,
-      "mapaY": 426,
+      "mapaX": 557,
+      "mapaY": 432,
       "telefono": "573144490474",
       "nombre": {
         "es": "Isla Mobile — Telefonía y Accesorios",
@@ -2422,7 +2422,7 @@
       "coordsApprox": false,
       "lat": 7.299447,
       "lng": -72.494141,
-      "mapaX": 528,
+      "mapaX": 533,
       "mapaY": 388,
       "telefono": "573123504567",
       "nombre": {
@@ -2496,7 +2496,7 @@
       "lat": 7.30023,
       "lng": -72.494266,
       "mapaX": 517,
-      "mapaY": 374,
+      "mapaY": 368,
       "telefono": "573106803058",
       "nombre": {
         "es": "Heladería Nápoles",
@@ -2568,8 +2568,8 @@
       "coordsApprox": false,
       "lat": 7.300002,
       "lng": -72.49379,
-      "mapaX": 541,
-      "mapaY": 383,
+      "mapaX": 545,
+      "mapaY": 381,
       "nombre": {
         "es": "Juzgado Promiscuo Municipal de Labateca",
         "en": "Labateca Municipal Court (Juzgado Promiscuo Municipal)"
@@ -2620,8 +2620,8 @@
       "coordsApprox": false,
       "lat": 7.298773,
       "lng": -72.493981,
-      "mapaX": 538,
-      "mapaY": 415,
+      "mapaX": 534,
+      "mapaY": 416,
       "telefono": "573205777829",
       "nombre": {
         "es": "Moto Repuesto Doble AA",
@@ -2688,8 +2688,8 @@
       "coordsApprox": false,
       "lat": 7.299147,
       "lng": -72.494282,
-      "mapaX": 512,
-      "mapaY": 411,
+      "mapaX": 509,
+      "mapaY": 403,
       "telefono": "573144922534",
       "nombre": {
         "es": "Almacén Tecno-Agro",
@@ -2761,8 +2761,8 @@
       "coordsApprox": false,
       "lat": 7.298917,
       "lng": -72.493682,
-      "mapaX": 552,
-      "mapaY": 412,
+      "mapaX": 553,
+      "mapaY": 411,
       "telefono": "573184471211",
       "nombre": {
         "es": "Droguería María José",
@@ -2824,8 +2824,8 @@
       "coordsApprox": false,
       "lat": 7.299102,
       "lng": -72.494192,
-      "mapaX": 526,
-      "mapaY": 409,
+      "mapaX": 533,
+      "mapaY": 402,
       "telefono": "573168725118",
       "nombre": {
         "es": "Panadería Maxipan",
@@ -2980,8 +2980,8 @@
       "coordsApprox": false,
       "lat": 7.299931881265672,
       "lng": -72.49471127546606,
-      "mapaX": 489,
-      "mapaY": 377,
+      "mapaX": 486,
+      "mapaY": 374,
       "nombre": {
         "es": "SuperGiros",
         "en": "SuperGiros"
@@ -3032,7 +3032,7 @@
       "coordsApprox": false,
       "lat": 7.300103,
       "lng": -72.49476,
-      "mapaX": 474,
+      "mapaX": 472,
       "mapaY": 377,
       "telefono": "573138048438",
       "nombre": {
@@ -3105,8 +3105,8 @@
       "coordsApprox": false,
       "lat": 7.298122,
       "lng": -72.493567,
-      "mapaX": 554,
-      "mapaY": 444,
+      "mapaX": 555,
+      "mapaY": 446,
       "telefono": "573123106831",
       "nombre": {
         "es": "Taller de Motos El Toro",
@@ -3188,8 +3188,8 @@
       "coordsApprox": false,
       "lat": 7.29849,
       "lng": -72.493971,
-      "mapaX": 526,
-      "mapaY": 440,
+      "mapaX": 530,
+      "mapaY": 450,
       "telefono": "573123106831",
       "nombre": {
         "es": "Supermercado El Campesino",
@@ -3256,8 +3256,8 @@
       "coordsApprox": false,
       "lat": 7.299401,
       "lng": -72.494427,
-      "mapaX": 503,
-      "mapaY": 401,
+      "mapaX": 497,
+      "mapaY": 397,
       "telefono": "573202435050",
       "nombre": {
         "es": "La Tienda de Ivancho",
@@ -3651,8 +3651,8 @@
       "coordsApprox": false,
       "lat": 7.298937,
       "lng": -72.494087,
-      "mapaX": 508,
-      "mapaY": 424,
+      "mapaX": 510,
+      "mapaY": 431,
       "telefono": "573134966445",
       "nombre": {
         "es": "Restaurante Doña María",
@@ -3714,8 +3714,8 @@
       "coordsApprox": false,
       "lat": 7.298332,
       "lng": -72.493707,
-      "mapaX": 540,
-      "mapaY": 441,
+      "mapaX": 542,
+      "mapaY": 443,
       "telefono": "573123106831",
       "nombre": {
         "es": "Centro Naturista Salud & Vida",
@@ -3783,7 +3783,7 @@
       "lat": 7.298932,
       "lng": -72.49408,
       "mapaX": 498,
-      "mapaY": 434,
+      "mapaY": 439,
       "telefono": "573208491055",
       "nombre": {
         "es": "Frutas y Verduras",
@@ -3845,8 +3845,8 @@
       "coordsApprox": false,
       "lat": 7.298426,
       "lng": -72.494158,
-      "mapaX": 512,
-      "mapaY": 438,
+      "mapaX": 511,
+      "mapaY": 445,
       "telefono": "573208080167",
       "nombre": {
         "es": "Droguería Central",
@@ -3908,8 +3908,8 @@
       "coordsApprox": false,
       "lat": 7.2987,
       "lng": -72.493926,
-      "mapaX": 534,
-      "mapaY": 429,
+      "mapaX": 546,
+      "mapaY": 423,
       "telefono": "573185619179",
       "nombre": {
         "es": "Ateca Bar Café Restaurante",
@@ -4094,8 +4094,8 @@
       "coordsApprox": false,
       "lat": 7.299067,
       "lng": -72.494904,
-      "mapaX": 467,
-      "mapaY": 414,
+      "mapaX": 460,
+      "mapaY": 416,
       "telefono": "573112805177",
       "nombre": {
         "es": "La Económica JY",
@@ -4172,8 +4172,8 @@
       "coordsApprox": false,
       "lat": 7.298705,
       "lng": -72.494589,
-      "mapaX": 488,
-      "mapaY": 425,
+      "mapaX": 486,
+      "mapaY": 432,
       "telefono": "573227784070",
       "nombre": {
         "es": "Barber Shop Labateca",
@@ -4225,8 +4225,8 @@
       "coordsApprox": false,
       "lat": 7.300102,
       "lng": -72.494544,
-      "mapaX": 481,
-      "mapaY": 365,
+      "mapaX": 480,
+      "mapaY": 361,
       "telefono": "573209083700",
       "nombre": {
         "es": "Supermercado Batecano",
@@ -4441,7 +4441,7 @@
       "lat": 7.295545,
       "lng": -72.493841,
       "mapaX": 522,
-      "mapaY": 422,
+      "mapaY": 424,
       "telefono": "",
       "nombre": {
         "es": "Monumento a la Virgen del Carmen",
@@ -4478,6 +4478,603 @@
         {
           "es": "La capilla de la Virgen del Carmen a la orilla de la vía: reja de hierro forjado, techo de teja y la imagen rodeada de flores frescas.",
           "en": "The roadside chapel of Our Lady of Mount Carmel: wrought-iron gate, tiled roof and the image surrounded by fresh flowers."
+        }
+      ]
+    },
+    {
+      "id": "ks-montallantas",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.278305,
+      "lng": -72.501947,
+      "mapaX": 443,
+      "mapaY": 478,
+      "telefono": "573138049658",
+      "nombre": {
+        "es": "K&S — Montallantas y Cafetería",
+        "en": "K&S — Tyre Repair and Roadside Café"
+      },
+      "desc": {
+        "es": "Un alto en la vía a unos 2,4 km del casco urbano de Labateca, saliendo hacia el suroccidente. Es dos cosas a la vez: un montallantas y una cafetería de carretera. En el taller, bajo un techo de zinc, resuelven el pinchazo y el trabajo de llanta —despinche, parche, aire—, y también hay equipo de soldadura y banco de trabajo para lo que se ofrezca. A la orilla, en el kiosco, sirven arepas, empanadas, alitas de pollo, chorizo, huevos, café y bebidas frías, hay licores y se hacen almuerzos por encargo. Es de Fabio Peñaloza y abre todos los días de 6 de la mañana a 6 de la tarde.",
+        "en": "A stop on the road about 2.4 km southwest of the town center of Labateca, and two things at once: a tyre-repair shop and a roadside café. In the workshop, under a zinc roof, they sort out punctures and tyre work — removal, patching, air — and there is welding gear and a workbench for whatever else comes up. Out front, at the kiosk, they serve arepas, empanadas, chicken wings, chorizo, eggs, coffee and cold drinks; there are spirits, and set lunches are made to order. It belongs to Fabio Peñaloza and opens every day from 6 a.m. to 6 p.m."
+      },
+      "comoLlegar": {
+        "es": "Sobre la vía, a unos 2,4 km al suroccidente del casco urbano de Labateca. Se ve desde la carretera: el kiosco con el aviso y, al lado, el taller bajo el techo de zinc.",
+        "en": "On the road, about 2.4 km southwest of the town center. You can see it from the highway: the kiosk with the sign, and the workshop under its zinc roof beside it."
+      },
+      "dist": {
+        "es": "~2,4 km del pueblo",
+        "en": "~2.4 km from town"
+      },
+      "tiempo": {
+        "es": "Todos los días, 6:00 a. m. – 6:00 p. m.",
+        "en": "Every day, 6:00 a.m. – 6:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Punto útil si viajas en moto o en carro: aquí se resuelve un pinchazo sin devolverse al pueblo, y de paso cae bien un tinto con empanada. Si quieres almuerzo, encárgalo con tiempo. WhatsApp: 313 804 9658.",
+        "en": "A handy stop if you are travelling by motorbike or car: a puncture gets fixed here without going back to town, and a coffee with an empanada goes down well. If you want lunch, order ahead. WhatsApp: 313 804 9658."
+      },
+      "fotos": [
+        "labateca/ks-montallantas-01",
+        "labateca/ks-montallantas-02",
+        "labateca/ks-montallantas-03",
+        "labateca/ks-montallantas-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "El kiosco a la orilla de la vía, con el aviso de los servicios: montallantas de un lado y cafetería del otro.",
+          "en": "The roadside kiosk with the sign listing the services: tyre repair on one side, café on the other."
+        },
+        {
+          "es": "El taller bajo el techo de zinc: el banco de trabajo al fondo, la herramienta colgada en la pared y el tambor de aceite a un lado.",
+          "en": "The workshop under its zinc roof: the workbench at the back, tools hanging on the wall and the oil drum to one side."
+        },
+        {
+          "es": "Otro ángulo del taller, con el equipo de soldadura, las piezas de trabajo y el banco de herramienta.",
+          "en": "Another angle of the workshop, with the welding gear, work pieces and the tool bench."
+        },
+        {
+          "es": "Vista general del lote desde la carretera: el taller, el kiosco y el espacio para parquear junto a la vía.",
+          "en": "General view of the lot from the road: the workshop, the kiosk and the parking space beside the highway."
+        }
+      ]
+    },
+    {
+      "id": "concentrados-jl",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298245,
+      "lng": -72.493673,
+      "mapaX": 523,
+      "mapaY": 438,
+      "telefono": "573143571569",
+      "nombre": {
+        "es": "Concentrados JL",
+        "en": "Concentrados JL — Animal Feed and Household Goods"
+      },
+      "desc": {
+        "es": "Depósito de concentrados y granero en el casco urbano de Labateca, a menos de una cuadra del parque. Aquí se consigue el alimento de los animales de la casa y de la finca: bultos de concentrado, maíz y sal, y comida de marca para perro y gato. En el mismo local hay una buena sección de aseo del hogar y cuidado personal —detergentes, suavizante, jabón, papel higiénico, pañales—, además de bombillos LED, guantes de trabajo, lazos, escobas, traperos, canecas y baldes. Es de Jairo Maldonado Bonilla y lo atiende Leidy Lorena Mora.",
+        "en": "A feed store and general supply shop in the town center, less than a block from the main square. This is where you find food for household and farm animals: sacks of feed, maize and salt, plus branded dog and cat food. The same shop keeps a solid household and personal-care section — detergents, fabric softener, soap, toilet paper, nappies — along with LED bulbs, work gloves, rope, brooms, mops, bins and buckets. It belongs to Jairo Maldonado Bonilla and is run by Leidy Lorena Mora."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a menos de una cuadra del parque principal.",
+        "en": "In the town center of Labateca, less than a block from the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 8:00 a. m. – 5:30 p. m.",
+        "en": "Every day, 8:00 a.m. – 5:30 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "El sitio para resolver el alimento de los animales y, de paso, el aseo de la casa sin tener que bajar a Pamplona. Si necesitas varios bultos, avisa antes por WhatsApp: 314 357 1569.",
+        "en": "The place to sort out animal feed and household cleaning in one stop, without driving down to Pamplona. If you need several sacks, message ahead on WhatsApp: 314 357 1569."
+      },
+      "fotos": [
+        "labateca/concentrados-jl-01",
+        "labateca/concentrados-jl-02",
+        "labateca/concentrados-jl-03",
+        "labateca/concentrados-jl-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Concentrados JL, con sus dos puertas de madera sobre el andén.",
+          "en": "The front of Concentrados JL, with its two wooden doors onto the pavement."
+        },
+        {
+          "es": "El depósito por dentro: bultos de concentrado y de maíz apilados sobre estibas, y la comida de perro por marcas.",
+          "en": "Inside the store: sacks of feed and maize stacked on pallets, with dog food by brand."
+        },
+        {
+          "es": "Bultos, canecas, escobas y lazos de colores colgados a un lado del depósito.",
+          "en": "Sacks, bins, brooms and coloured rope hanging along one side of the store."
+        },
+        {
+          "es": "La sección de aseo del hogar: detergentes, suavizantes, papel higiénico, pañales y bombillos LED.",
+          "en": "The household section: detergents, fabric softener, toilet paper, nappies and LED bulbs."
+        }
+      ]
+    },
+    {
+      "id": "son-delicias",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298758,
+      "lng": -72.49401,
+      "mapaX": 510,
+      "mapaY": 417,
+      "telefono": "573152908856",
+      "nombre": {
+        "es": "Restaurante Son Delicias",
+        "en": "Son Delicias — Restaurant"
+      },
+      "desc": {
+        "es": "Restaurante y cafetería en el casco urbano, a pocos pasos del parque principal. Abre temprano, a las 6:30 de la mañana: desayunos, empanadas, tinto y café, bebidas frías, y al mediodía el almuerzo corriente, con mute los días que lo hacen. El domingo es el día fuerte: sancocho de gallina, pollo asado al barril y costillas de cerdo al barril —los dos barriles ahumadores están a la entrada, a la vista—. La cena se atiende por encargo. Lo atiende José Luis Contreras.",
+        "en": "A restaurant and café in the town center, a few steps from the main square. It opens early, at 6:30 a.m.: breakfasts, empanadas, coffee, cold drinks, and at midday the set lunch, with mute (a local tripe-and-corn stew) on the days they make it. Sunday is the big day: chicken sancocho, barrel-roasted chicken and barrel-roasted pork ribs — the two barrel smokers stand right by the entrance. Dinner is served to order. Run by José Luis Contreras."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, sobre la calle y a pocos pasos del parque principal.",
+        "en": "In the town center of Labateca, on the street a few steps from the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 6:30 a. m. – 4:00 p. m.",
+        "en": "Every day, 6:30 a.m. – 4:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Ve un domingo si puedes: es cuando salen el sancocho de gallina y el pollo y las costillas al barril, y se acaban temprano. Para cena, encárgala con anticipación. WhatsApp: 315 290 8856.",
+        "en": "Go on a Sunday if you can: that is when the chicken sancocho and the barrel-roasted chicken and ribs come out, and they sell out early. For dinner, order ahead. WhatsApp: 315 290 8856."
+      },
+      "fotos": [
+        "labateca/son-delicias-01",
+        "labateca/son-delicias-02",
+        "labateca/son-delicias-03",
+        "labateca/son-delicias-04",
+        "labateca/son-delicias-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada sobre la calle, con los avisos de «Restaurante» que señalan la entrada.",
+          "en": "The street front, with the Restaurante signs pointing to the door."
+        },
+        {
+          "es": "El pendón del menú: desayunos, empanadas, café, bebidas frías, almuerzos corrientes, mute y sancocho de gallina los domingos.",
+          "en": "The menu banner: breakfasts, empanadas, coffee, cold drinks, set lunches, mute and chicken sancocho on Sundays."
+        },
+        {
+          "es": "El salón visto a lo largo, fresco y de techo alto, con las mesas puestas para el almuerzo.",
+          "en": "The dining room seen lengthwise, cool and high-ceilinged, with the tables set for lunch."
+        },
+        {
+          "es": "El comedor con las mesas de madera, las sillas rojas y la barra al fondo.",
+          "en": "The dining area with wooden tables, red chairs and the bar at the back."
+        },
+        {
+          "es": "Los dos barriles ahumadores de la entrada, de donde salen el pollo asado y las costillas de cerdo.",
+          "en": "The two barrel smokers by the entrance, where the roast chicken and pork ribs come from."
+        }
+      ]
+    },
+    {
+      "id": "bazar-angustias",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299483,
+      "lng": -72.494037,
+      "mapaX": 520,
+      "mapaY": 382,
+      "telefono": "573123506776",
+      "nombre": {
+        "es": "Bazar Nuestra Señora de las Angustias",
+        "en": "Bazar Nuestra Señora de las Angustias — Religious Goods"
+      },
+      "desc": {
+        "es": "Bazar de artículos religiosos en el marco del parque, al lado del templo parroquial. Vende lo que la gente busca para la casa y para las fiestas patronales: imágenes y cuadros de Nuestra Señora de las Angustias —la patrona de Labateca— y de otros santos, rosarios, camándulas, escapularios, medallas, veladoras, novenas y estampas. Abre los fines de semana y los días festivos, que es cuando hay misa concurrida y llegan los visitantes. Es de Mario Álvaro Valencia Núñez.",
+        "en": "A shop for religious goods on the main square, next to the parish church. It sells what people look for at home and for the patron-saint festivities: images and framed pictures of Our Lady of Sorrows — the patron of Labateca — and of other saints, rosaries, prayer beads, scapulars, medals, votive candles, novena booklets and holy cards. It opens at weekends and on public holidays, when Mass is busiest and visitors come. It belongs to Mario Álvaro Valencia Núñez."
+      },
+      "comoLlegar": {
+        "es": "En el marco del parque principal de Labateca, junto al templo parroquial.",
+        "en": "On the main square of Labateca, next to the parish church."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Fines de semana y festivos, 7:00 a. m. – 6:00 p. m.",
+        "en": "Weekends and public holidays, 7:00 a.m. – 6:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Buen sitio para llevarse un recuerdo con sentido del pueblo: una estampa o una imagen de la patrona. Ten en cuenta el horario, porque abre sábados, domingos y festivos. WhatsApp: 312 350 6776.",
+        "en": "A good place to take home a meaningful keepsake: a holy card or an image of the town patron. Mind the hours — it opens Saturdays, Sundays and public holidays. WhatsApp: 312 350 6776."
+      },
+      "fotos": [
+        "labateca/bazar-angustias-01",
+        "labateca/bazar-angustias-02",
+        "labateca/bazar-angustias-03",
+        "labateca/bazar-angustias-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "El mural de Nuestra Señora de las Angustias pintado en la esquina, en homenaje a la parroquia.",
+          "en": "The mural of Our Lady of Sorrows painted on the corner, in tribute to the parish."
+        },
+        {
+          "es": "Vitrina con imágenes y estatuillas, y en la pared los cuadros enmarcados.",
+          "en": "A display case with statues and images, and framed pictures on the wall behind."
+        },
+        {
+          "es": "Rosarios, camándulas y escapularios colgados junto al mostrador.",
+          "en": "Rosaries, prayer beads and scapulars hanging beside the counter."
+        },
+        {
+          "es": "Las vitrinas del bazar, con imágenes de santos y cuadros del templo parroquial.",
+          "en": "The shop display cases, with images of saints and pictures of the parish church."
+        }
+      ]
+    },
+    {
+      "id": "tienda-las-delicias",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298612,
+      "lng": -72.493918,
+      "mapaX": 535,
+      "mapaY": 430,
+      "telefono": "573125841908",
+      "nombre": {
+        "es": "Tienda Mixta Las Delicias",
+        "en": "Tienda Mixta Las Delicias — Corner Shop"
+      },
+      "desc": {
+        "es": "Tienda mixta en el casco urbano, en una casa de fachada rosada adornada con banderitas de Colombia. Tiene el surtido completo del diario: mecato y papas, galletas y dulces, granos, enlatados y aseo, y una vitrina con el pan del día. La nevera guarda gaseosas, jugos, agua y cerveza. En un salón aparte, al fondo del local, hay máquinas de juego. Es de Carmen Castro Chapeta y abre todos los días de 7 de la mañana a 8 de la noche.",
+        "en": "A general corner shop in the town center, in a pink-fronted house strung with little Colombian flags. It carries the full daily shop: crisps and snacks, biscuits and sweets, grains, tinned food and cleaning products, plus a case with the day's bread. The cooler holds sodas, juice, water and beer. In a separate room at the back there are gaming machines. It belongs to Carmen Castro Chapeta and opens every day from 7 a.m. to 8 p.m."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a una cuadra del parque principal. La casa rosada con banderitas es inconfundible.",
+        "en": "In the town center of Labateca, a block from the main square. The pink house strung with little flags is unmistakable."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 7:00 a. m. – 8:00 p. m.",
+        "en": "Every day, 7:00 a.m. – 8:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Buena parada para el pan de la mañana y para llevar bebida fría y mecato antes de salir a caminar. WhatsApp: 312 584 1908.",
+        "en": "A good stop for morning bread and for cold drinks and snacks before heading out on a walk. WhatsApp: 312 584 1908."
+      },
+      "fotos": [
+        "labateca/tienda-las-delicias-01",
+        "labateca/tienda-las-delicias-02",
+        "labateca/tienda-las-delicias-03",
+        "labateca/tienda-las-delicias-04",
+        "labateca/tienda-las-delicias-05",
+        "labateca/tienda-las-delicias-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada rosada de la tienda, con las banderitas de Colombia tendidas sobre la pared y sus dos puertas en arco.",
+          "en": "The shop pink front, with little Colombian flags strung along the wall and its two arched doors."
+        },
+        {
+          "es": "La vitrina del pan del día, con las bolsas de mecato colgadas a un lado.",
+          "en": "The case with the day's bread, snack bags hanging alongside."
+        },
+        {
+          "es": "Estantería de paquetes y las vitrinas de dulces y galletas junto a la caja.",
+          "en": "Shelves of packets and the sweet and biscuit cases beside the till."
+        },
+        {
+          "es": "Mecato colgado en fila frente a la nevera de bebidas.",
+          "en": "Rows of hanging snacks facing the drinks cooler."
+        },
+        {
+          "es": "La nevera de gaseosas y cervezas, con las canastas apiladas al lado.",
+          "en": "The soda and beer cooler, with crates stacked beside it."
+        },
+        {
+          "es": "El salón de máquinas de juego, en la parte de atrás del local.",
+          "en": "The gaming-machine room at the back of the shop."
+        }
+      ]
+    },
+    {
+      "id": "variedades-ludwing",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.29922,
+      "lng": -72.494269,
+      "mapaX": 522,
+      "mapaY": 410,
+      "telefono": "573232158303",
+      "nombre": {
+        "es": "Variedades Ludwing",
+        "en": "Variedades Ludwing — Clothing and Footwear"
+      },
+      "desc": {
+        "es": "Almacén de ropa y calzado en el casco urbano, en una casa blanca de puertas en arco pintadas de rojo. Tiene surtido para toda la familia: chaquetas y buzos, camisas y camisetas, jeans y sudaderas, ropa de niño, ropa interior, medias, gorras, zapatos y botas. También maneja una vitrina de cuidado personal, con cremas, lociones, talcos y accesorios. Lo atiende Melby Nereyda Rincón, de martes a domingo.",
+        "en": "A clothing and footwear shop in the town center, in a white house with red-painted arched doors. It stocks for the whole family: jackets and hoodies, shirts and t-shirts, jeans and tracksuits, children's clothes, underwear, socks, caps, shoes and boots. There is also a personal-care case with creams, lotions, talc and accessories. Run by Melby Nereyda Rincón, Tuesday to Sunday."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a una cuadra del parque principal.",
+        "en": "In the town center of Labateca, a block from the main square."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Martes a domingo, 8:00 a. m. – 12:30 p. m. y 2:00 – 7:00 p. m.",
+        "en": "Tuesday to Sunday, 8:00 a.m. – 12:30 p.m. and 2:00 – 7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Si te cogió el frío del páramo sin abrigo, aquí se resuelve: hay chaquetas y buzos a la mano. Ojo con el horario, que los lunes no abre. WhatsApp: 323 215 8303.",
+        "en": "If the páramo cold caught you without a coat, this is the fix: jackets and hoodies are right here. Mind the hours — closed on Mondays. WhatsApp: 323 215 8303."
+      },
+      "fotos": [
+        "labateca/variedades-ludwing-01",
+        "labateca/variedades-ludwing-02",
+        "labateca/variedades-ludwing-03",
+        "labateca/variedades-ludwing-04",
+        "labateca/variedades-ludwing-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada del almacén, con sus dos puertas en arco y la ropa colgada a la entrada.",
+          "en": "The shop front, with its two arched doors and clothes hanging at the entrance."
+        },
+        {
+          "es": "El maniquí de la entrada, rodeado de chaquetas, camisas y jeans.",
+          "en": "The mannequin at the entrance, surrounded by jackets, shirts and jeans."
+        },
+        {
+          "es": "Buzos doblados por colores, junto a los pantalones y el calzado.",
+          "en": "Hoodies folded by colour, next to the trousers and footwear."
+        },
+        {
+          "es": "Las mesas de ropa y el rack de colgadores, en el centro del almacén.",
+          "en": "The clothing tables and the hanger rack in the middle of the shop."
+        },
+        {
+          "es": "Otro rincón del almacén, con la ropa de niño, los colgadores y el espejo.",
+          "en": "Another corner of the shop, with children's clothes, hangers and the mirror."
+        }
+      ]
+    },
+    {
+      "id": "tercer-tiempo",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.297249,
+      "lng": -72.496505,
+      "mapaX": 427,
+      "mapaY": 422,
+      "telefono": "573182088372",
+      "nombre": {
+        "es": "Tercer Tiempo",
+        "en": "Tercer Tiempo — Sports Bar"
+      },
+      "desc": {
+        "es": "Bar y estadero pegado a la cancha de Labateca, con una terraza techada que da directo al campo de juego. El nombre lo dice todo: el «tercer tiempo» es lo que viene después del partido, y para eso está el sitio. Mesas y sillas mirando a la cancha, banderas de países colgadas de lado a lado, cerveza y aguardiente fríos, gaseosas, agua y mecato; en la barra están los trofeos de los torneos del pueblo. Es de César Eduardo Capacho Maldonado y abre viernes, sábados, domingos y festivos, que es cuando hay partido.",
+        "en": "A bar next to the football pitch of Labateca, with a covered terrace looking straight onto the field. The name says it all: the third half is what comes after the match, and that is what this place is for. Tables and chairs facing the pitch, flags of many countries strung across, cold beer and aguardiente, sodas, water and snacks; the trophies from the town tournaments sit on the bar. It belongs to César Eduardo Capacho Maldonado and opens Fridays, Saturdays, Sundays and public holidays, which is when there is football."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, al lado de la cancha. La terraza da directo al campo de juego.",
+        "en": "In the town center of Labateca, right beside the football pitch. The terrace opens straight onto the field."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Viernes, sábados, domingos y festivos, 9:00 a. m. – 1:30 p. m.",
+        "en": "Fridays, Saturdays, Sundays and public holidays, 9:00 a.m. – 1:30 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "El plan es sencillo: llegar cuando hay partido y quedarse al tercer tiempo. Se venden bebidas alcohólicas, así que es sitio para mayores de edad. WhatsApp: 318 208 8372.",
+        "en": "The plan is simple: turn up when there is a match and stay for the third half. Alcohol is served, so it is an adults-only spot. WhatsApp: 318 208 8372."
+      },
+      "fotos": [
+        "labateca/tercer-tiempo-01",
+        "labateca/tercer-tiempo-02",
+        "labateca/tercer-tiempo-03",
+        "labateca/tercer-tiempo-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "El local visto desde la calle, con la terraza techada que da a la cancha.",
+          "en": "The place seen from the street, with the covered terrace facing the pitch."
+        },
+        {
+          "es": "La terraza por dentro: mesas y sillas mirando al campo, y las banderitas de países en la pared.",
+          "en": "Inside the terrace: tables and chairs facing the field, with the little flags of many countries on the wall."
+        },
+        {
+          "es": "Otro ángulo de la terraza, con la cancha al fondo y las mesas listas.",
+          "en": "Another angle of the terrace, the pitch behind and the tables ready."
+        },
+        {
+          "es": "La barra, con las neveras de bebidas, el aguardiente y los trofeos de los torneos del pueblo.",
+          "en": "The bar, with the drinks coolers, the aguardiente and the trophies from the town tournaments."
+        }
+      ]
+    },
+    {
+      "id": "variedades-mafe",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298958,
+      "lng": -72.494096,
+      "mapaX": 486,
+      "mapaY": 418,
+      "telefono": "573208168572",
+      "nombre": {
+        "es": "Variedades Mafe",
+        "en": "Variedades Mafe — Toys, Party Supplies and Baby Goods"
+      },
+      "desc": {
+        "es": "Miscelánea y piñatería en el casco urbano, a media cuadra del parque. Como dice su pendón, «lo mejor para los niñ@s»: juguetes, piñatería y todo lo de cumpleaños —globos, velas de número, manteles, bolsas de dulces, servilletas y adornos—, ropa y accesorios de bebé, teteros y chupos, flores artificiales, moños y accesorios para el pelo, cintas, papelería y detalles de regalo. Es de Yeny Carolina Villamizar Rozo y abre todos los días, en jornada de mañana y de tarde.",
+        "en": "A variety and party-supply shop in the town center, half a block from the main square. As its banner says, the best for the kids: toys, piñatas and everything for a birthday — balloons, number candles, tablecloths, sweet bags, napkins and decorations — plus baby clothes and accessories, bottles and dummies, artificial flowers, hair bows and clips, ribbon, stationery and small gifts. It belongs to Yeny Carolina Villamizar Rozo and opens every day, mornings and afternoons."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a media cuadra del parque principal. El pendón de colores en la fachada la delata.",
+        "en": "In the town center of Labateca, half a block from the main square. The colourful banner on the front gives it away."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 8:00 a. m. – 12:00 m. y 2:00 – 5:00 p. m.",
+        "en": "Every day, 8:00 a.m. – 12:00 noon and 2:00 – 5:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Si te invitaron a un cumpleaños en el pueblo, aquí sale todo de una sola vez: el regalo, los globos y la bolsa de dulces. WhatsApp: 320 816 8572.",
+        "en": "If you have been invited to a birthday in town, everything comes out of one shop here: the present, the balloons and the sweet bag. WhatsApp: 320 816 8572."
+      },
+      "fotos": [
+        "labateca/variedades-mafe-01",
+        "labateca/variedades-mafe-02",
+        "labateca/variedades-mafe-03",
+        "labateca/variedades-mafe-04",
+        "labateca/variedades-mafe-05",
+        "labateca/variedades-mafe-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "Fachada de Variedades Mafe, con el pendón de piñatería, juguetes, flores artificiales y cositas para bebés.",
+          "en": "The front of Variedades Mafe, with its banner for piñatas, toys, artificial flowers and baby goods."
+        },
+        {
+          "es": "Ropa de bebé colgada y la vitrina de teteros, chupos y detalles para recién nacido.",
+          "en": "Baby clothes on hangers and the case of bottles, dummies and newborn gifts."
+        },
+        {
+          "es": "Estantería de juguetes, carros, loncheras y artículos de regalo.",
+          "en": "Shelves of toys, toy cars, lunchboxes and gift items."
+        },
+        {
+          "es": "El panel de accesorios: moños, ganchos, bisutería y flores artificiales.",
+          "en": "The accessories wall: bows, clips, costume jewellery and artificial flowers."
+        },
+        {
+          "es": "Los estantes de cintas, vasos, juguetes y adornos, de arriba abajo.",
+          "en": "Shelves of ribbon, cups, toys and decorations, floor to ceiling."
+        },
+        {
+          "es": "El rincón de piñatería: globos, velas de número, manteles y todo lo de cumpleaños.",
+          "en": "The party corner: balloons, number candles, tablecloths and everything for a birthday."
+        }
+      ]
+    },
+    {
+      "id": "sonia-villamizar",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298942,
+      "lng": -72.494086,
+      "mapaX": 498,
+      "mapaY": 425,
+      "telefono": "573224001508",
+      "nombre": {
+        "es": "Sonia Villamizar — Salón de Belleza",
+        "en": "Sonia Villamizar — Beauty Salon"
+      },
+      "desc": {
+        "es": "Salón de belleza en el casco urbano de Labateca, con el dibujo de «Nail Art» pintado al lado de la puerta. Sonia Jimena Villamizar Rozo atiende ahí uñas, pestañas, cejas, maquillaje y peinado: tiene el tocador de trabajo con espejo, la camilla para pestañas y depilación, y el lavacabezas. Es un local pequeño y cuidado, decorado con mariposas y frases en las paredes. Abre todos los días, en jornada de mañana y de tarde.",
+        "en": "A beauty salon in the town center of Labateca, its front marked by the painted Nail Art design beside the door. Sonia Jimena Villamizar Rozo works here on nails, lashes, brows, make-up and hair: there is a mirrored make-up station, a treatment bed for lashes and waxing, and a hair-washing chair. It is a small, well-kept space decorated with butterflies and lettering on the walls. Open every day, mornings and afternoons."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a media cuadra del parque principal. Se reconoce por el dibujo de uñas y ojos pintado en la fachada.",
+        "en": "In the town center of Labateca, half a block from the main square. Look for the nails-and-eyes design painted on the front wall."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 8:00 a. m. – 12:00 m. y 2:00 – 5:00 p. m.",
+        "en": "Every day, 8:00 a.m. – 12:00 noon and 2:00 – 5:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Pide la cita por WhatsApp antes de llegar, sobre todo en temporada de fiestas: 322 400 1508.",
+        "en": "Book by WhatsApp before turning up, especially during festival season: 322 400 1508."
+      },
+      "fotos": [
+        "labateca/sonia-villamizar-01",
+        "labateca/sonia-villamizar-02",
+        "labateca/sonia-villamizar-03",
+        "labateca/sonia-villamizar-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada, con el dibujo de «Nail Art» pintado al lado de la puerta.",
+          "en": "The front of the salon, with the painted Nail Art design beside the door."
+        },
+        {
+          "es": "El tocador de maquillaje, con el espejo, las brochas y los esmaltes.",
+          "en": "The make-up station, with its mirror, brushes and polishes."
+        },
+        {
+          "es": "La camilla para pestañas y depilación, con la pared decorada de mariposas.",
+          "en": "The treatment bed for lashes and waxing, against a wall of butterflies."
+        },
+        {
+          "es": "El lavacabezas, bajo el mural de «You are always beautiful».",
+          "en": "The hair-washing chair, under the You are always beautiful wall art."
         }
       ]
     }
