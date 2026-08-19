@@ -54,7 +54,19 @@ main{padding:26px 0 56px}
 .miga a{color:var(--ink-mut)}
 .cat{display:inline-block;background:var(--cream);border:1px solid var(--line);
  color:var(--gold-text);font-size:13px;font-weight:700;letter-spacing:.06em;
- text-transform:uppercase;padding:5px 12px;border-radius:999px}
+ text-transform:uppercase;padding:5px 12px;border-radius:999px;text-decoration:none}
+.cat:hover{border-color:var(--gold)}
+.masdeesto{margin:16px 0 0;font-weight:700}
+.lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista .cuerpo{padding:16px 18px 18px}
+.lista h3{margin:0 0 6px;font:700 19px/1.25 Fraunces,Georgia,serif}
+.lista h3 a{color:var(--forest);text-decoration:none}
+.lista h3 a:hover{text-decoration:underline}
+.lista p{margin:0;font-size:14.5px;color:var(--ink-mut)}
+.lista .horario{margin-top:9px;font-size:13.5px;color:var(--forest-3);font-weight:600}
 h1{font:700 clamp(30px,6vw,44px)/1.12 Fraunces,Georgia,serif;color:var(--forest);margin:14px 0 0}
 .lead{font-size:19px;margin:16px 0 0}
 .acciones{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 0}
@@ -105,7 +117,7 @@ footer.pie a{color:var(--ink-mut)}
   dl.datos dt:first-child{margin-top:0}
 }</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/siscatagua#lugar","name":"Siscatagua A.P.C. — Acueducto y Alcantarillado","description":"Siscatagua A.P.C. es la entidad que lleva el agua potable a los hogares de Labateca. Opera la Planta de Tratamiento de Agua Potable (PTAP) —con floculadores, sedimentadores, filtros y su propio laboratorio de control de calidad— para que a cada casa llegue agua limpia y segura: «Vida en cada gota de agua». En su oficina se atienden todas las solicitudes, reclamos y novedades del servicio público de acueducto y alcantarillado, y se recibe el pago de la factura.","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/siscatagua","image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/siscatagua-07","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/siscatagua-01b","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/siscatagua-02","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/siscatagua-03b","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/siscatagua-04b","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/siscatagua-05"],"address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"geo":{"@type":"GeoCoordinates","latitude":7.30017,"longitude":-72.494824},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.30017,-72.494824","isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"},"telephone":"+573123047048"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Siscatagua A.P.C. — Acueducto y Alcantarillado","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/siscatagua"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Servicios en Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/categoria/servicios"},{"@type":"ListItem","position":4,"name":"Siscatagua A.P.C. — Acueducto y Alcantarillado","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/siscatagua"}]}</script>
 </head>
 <body>
 
@@ -125,10 +137,11 @@ footer.pie a{color:var(--ink-mut)}
 
 <main class="wrap">
   <p class="miga"><a href="/">Inicio</a> ›
-    <a href="/lugares">Lugares</a> › Siscatagua A.P.C. — Acueducto y Alcantarillado</p>
+    <a href="/lugares">Lugares</a> ›
+    <a href="/categoria/servicios">Servicios en Labateca</a> › Siscatagua A.P.C. — Acueducto y Alcantarillado</p>
 
   <article>
-    <span class="cat">Servicio</span>
+    <a class="cat" href="/categoria/servicios">Servicio</a>
     <h1>Siscatagua A.P.C. — Acueducto y Alcantarillado</h1>
     <p class="lead">Siscatagua A.P.C. es la entidad que lleva el agua potable a los hogares de Labateca. Opera la Planta de Tratamiento de Agua Potable (PTAP) —con floculadores, sedimentadores, filtros y su propio laboratorio de control de calidad— para que a cada casa llegue agua limpia y segura: «Vida en cada gota de agua». En su oficina se atienden todas las solicitudes, reclamos y novedades del servicio público de acueducto y alcantarillado, y se recibe el pago de la factura.</p>
 
@@ -212,7 +225,7 @@ footer.pie a{color:var(--ink-mut)}
     </div>
   </article>
 
-  <h2>Otros servicios de Labateca</h2>
+  <h2>Servicios en Labateca</h2>
   <ul class="otros">
     <li><a href="/lugar/despacho-parroquial">Servicios Parroquiales y Documentos
       <span>En la Parroquia Nuestra Señora de las Angustias se solicitan las…</span></a></li>
@@ -227,6 +240,7 @@ footer.pie a{color:var(--ink-mut)}
     <li><a href="/lugar/moto-repuesto-doble-aa">Moto Repuesto Doble AA
       <span>Repuestos, accesorios y taller para motos en pleno casco urbano de…</span></a></li>
   </ul>
+  <p class="masdeesto"><a href="/categoria/servicios">Ver los 13 →</a></p>
 
   <div class="volver">
     <p>Esta ficha es parte de la guía turística de Labateca: 67 lugares, mapa interactivo, clima en vivo y rutas.</p>

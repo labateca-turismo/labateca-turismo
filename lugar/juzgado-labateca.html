@@ -54,7 +54,19 @@ main{padding:26px 0 56px}
 .miga a{color:var(--ink-mut)}
 .cat{display:inline-block;background:var(--cream);border:1px solid var(--line);
  color:var(--gold-text);font-size:13px;font-weight:700;letter-spacing:.06em;
- text-transform:uppercase;padding:5px 12px;border-radius:999px}
+ text-transform:uppercase;padding:5px 12px;border-radius:999px;text-decoration:none}
+.cat:hover{border-color:var(--gold)}
+.masdeesto{margin:16px 0 0;font-weight:700}
+.lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista .cuerpo{padding:16px 18px 18px}
+.lista h3{margin:0 0 6px;font:700 19px/1.25 Fraunces,Georgia,serif}
+.lista h3 a{color:var(--forest);text-decoration:none}
+.lista h3 a:hover{text-decoration:underline}
+.lista p{margin:0;font-size:14.5px;color:var(--ink-mut)}
+.lista .horario{margin-top:9px;font-size:13.5px;color:var(--forest-3);font-weight:600}
 h1{font:700 clamp(30px,6vw,44px)/1.12 Fraunces,Georgia,serif;color:var(--forest);margin:14px 0 0}
 .lead{font-size:19px;margin:16px 0 0}
 .acciones{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 0}
@@ -105,7 +117,7 @@ footer.pie a{color:var(--ink-mut)}
   dl.datos dt:first-child{margin-top:0}
 }</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/juzgado-labateca#lugar","name":"Juzgado Promiscuo Municipal de Labateca","description":"Es el despacho judicial del municipio, parte de la Rama Judicial de Colombia (Distrito Judicial de Pamplona, Norte de Santander). Por ser «promiscuo», un solo juez conoce asuntos de varias especialidades: civil, penal, de familia, laboral, comercial y otros procesos de menor cuantía y de primera instancia. Aquí los ciudadanos radican demandas y acciones de tutela, asisten a audiencias, adelantan sus procesos, solicitan copias y reciben orientación sobre trámites judiciales. Los estados, listas de traslado y publicaciones procesales se consultan en línea en ramajudicial.gov.co, y el despacho atiende por su correo oficial jprmlabateca@cendoj.ramajudicial.gov.co.","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/juzgado-labateca","image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/juzgado-labateca-01","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/juzgado-labateca-02"],"address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"geo":{"@type":"GeoCoordinates","latitude":7.300002,"longitude":-72.49379},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.300002,-72.49379","isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Juzgado Promiscuo Municipal de Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/juzgado-labateca"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Servicios en Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/categoria/servicios"},{"@type":"ListItem","position":4,"name":"Juzgado Promiscuo Municipal de Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/juzgado-labateca"}]}</script>
 </head>
 <body>
 
@@ -125,10 +137,11 @@ footer.pie a{color:var(--ink-mut)}
 
 <main class="wrap">
   <p class="miga"><a href="/">Inicio</a> ›
-    <a href="/lugares">Lugares</a> › Juzgado Promiscuo Municipal de Labateca</p>
+    <a href="/lugares">Lugares</a> ›
+    <a href="/categoria/servicios">Servicios en Labateca</a> › Juzgado Promiscuo Municipal de Labateca</p>
 
   <article>
-    <span class="cat">Servicio</span>
+    <a class="cat" href="/categoria/servicios">Servicio</a>
     <h1>Juzgado Promiscuo Municipal de Labateca</h1>
     <p class="lead">Es el despacho judicial del municipio, parte de la Rama Judicial de Colombia (Distrito Judicial de Pamplona, Norte de Santander). Por ser «promiscuo», un solo juez conoce asuntos de varias especialidades: civil, penal, de familia, laboral, comercial y otros procesos de menor cuantía y de primera instancia. Aquí los ciudadanos radican demandas y acciones de tutela, asisten a audiencias, adelantan sus procesos, solicitan copias y reciben orientación sobre trámites judiciales. Los estados, listas de traslado y publicaciones procesales se consultan en línea en ramajudicial.gov.co, y el despacho atiende por su correo oficial jprmlabateca@cendoj.ramajudicial.gov.co.</p>
 
@@ -171,7 +184,7 @@ footer.pie a{color:var(--ink-mut)}
     </div>
   </article>
 
-  <h2>Otros servicios de Labateca</h2>
+  <h2>Servicios en Labateca</h2>
   <ul class="otros">
     <li><a href="/lugar/despacho-parroquial">Servicios Parroquiales y Documentos
       <span>En la Parroquia Nuestra Señora de las Angustias se solicitan las…</span></a></li>
@@ -186,6 +199,7 @@ footer.pie a{color:var(--ink-mut)}
     <li><a href="/lugar/moto-repuesto-doble-aa">Moto Repuesto Doble AA
       <span>Repuestos, accesorios y taller para motos en pleno casco urbano de…</span></a></li>
   </ul>
+  <p class="masdeesto"><a href="/categoria/servicios">Ver los 13 →</a></p>
 
   <div class="volver">
     <p>Esta ficha es parte de la guía turística de Labateca: 67 lugares, mapa interactivo, clima en vivo y rutas.</p>

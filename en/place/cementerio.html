@@ -54,7 +54,19 @@ main{padding:26px 0 56px}
 .miga a{color:var(--ink-mut)}
 .cat{display:inline-block;background:var(--cream);border:1px solid var(--line);
  color:var(--gold-text);font-size:13px;font-weight:700;letter-spacing:.06em;
- text-transform:uppercase;padding:5px 12px;border-radius:999px}
+ text-transform:uppercase;padding:5px 12px;border-radius:999px;text-decoration:none}
+.cat:hover{border-color:var(--gold)}
+.masdeesto{margin:16px 0 0;font-weight:700}
+.lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista .cuerpo{padding:16px 18px 18px}
+.lista h3{margin:0 0 6px;font:700 19px/1.25 Fraunces,Georgia,serif}
+.lista h3 a{color:var(--forest);text-decoration:none}
+.lista h3 a:hover{text-decoration:underline}
+.lista p{margin:0;font-size:14.5px;color:var(--ink-mut)}
+.lista .horario{margin-top:9px;font-size:13.5px;color:var(--forest-3);font-weight:600}
 h1{font:700 clamp(30px,6vw,44px)/1.12 Fraunces,Georgia,serif;color:var(--forest);margin:14px 0 0}
 .lead{font-size:19px;margin:16px 0 0}
 .acciones{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 0}
@@ -105,7 +117,7 @@ footer.pie a{color:var(--ink-mut)}
   dl.datos dt:first-child{margin-top:0}
 }</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristAttraction","@id":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/cementerio#lugar","name":"Labateca Cemetery","description":"Labateca's cemetery is the town's traditional camposanto, tied since its origins to parish life. Beyond its function, it is part of the heritage and memory of Labateca's families. Our Lady of Sorrows Parish keeps the death registers —essential for local history and genealogy— with parish records dating back to 1712.","url":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/cementerio","image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/cementerio-01","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/cementerio-02","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/cementerio-03","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/cementerio-04"],"address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"geo":{"@type":"GeoCoordinates","latitude":7.3002463,"longitude":-72.4963025},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.3002463,-72.4963025","isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Places","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Labateca Cemetery","item":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/cementerio"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Places","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"What to see in Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/en/category/what-to-see"},{"@type":"ListItem","position":4,"name":"Labateca Cemetery","item":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/cementerio"}]}</script>
 </head>
 <body>
 
@@ -125,10 +137,11 @@ footer.pie a{color:var(--ink-mut)}
 
 <main class="wrap">
   <p class="miga"><a href="/">Home</a> ›
-    <a href="/lugares">Places</a> › Labateca Cemetery</p>
+    <a href="/lugares">Places</a> ›
+    <a href="/en/category/what-to-see">What to see in Labateca</a> › Labateca Cemetery</p>
 
   <article>
-    <span class="cat">Cultural site</span>
+    <a class="cat" href="/en/category/what-to-see">Cultural site</a>
     <h1>Labateca Cemetery</h1>
     <p class="lead">Labateca&#39;s cemetery is the town&#39;s traditional camposanto, tied since its origins to parish life. Beyond its function, it is part of the heritage and memory of Labateca&#39;s families. Our Lady of Sorrows Parish keeps the death registers —essential for local history and genealogy— with parish records dating back to 1712.</p>
 
@@ -187,7 +200,7 @@ footer.pie a{color:var(--ink-mut)}
     </div>
   </article>
 
-  <h2>More in Labateca</h2>
+  <h2>What to see in Labateca</h2>
   <ul class="otros">
     <li><a href="/en/place/templo">Our Lady of Sorrows Parish
       <span>It is, without a doubt, the most significant attraction for the…</span></a></li>
@@ -200,6 +213,7 @@ footer.pie a{color:var(--ink-mut)}
     <li><a href="/en/place/virgen-conductores">Shrine of Our Lady of Mount Carmel
       <span>At the edge of Labateca, next to the bullring, stands the shrine of…</span></a></li>
   </ul>
+  <p class="masdeesto"><a href="/en/category/what-to-see">See all 6 →</a></p>
 
   <div class="volver">
     <p>This listing is part of the Labateca tourism guide: 67 places, an interactive map, live weather and routes.</p>

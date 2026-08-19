@@ -54,7 +54,19 @@ main{padding:26px 0 56px}
 .miga a{color:var(--ink-mut)}
 .cat{display:inline-block;background:var(--cream);border:1px solid var(--line);
  color:var(--gold-text);font-size:13px;font-weight:700;letter-spacing:.06em;
- text-transform:uppercase;padding:5px 12px;border-radius:999px}
+ text-transform:uppercase;padding:5px 12px;border-radius:999px;text-decoration:none}
+.cat:hover{border-color:var(--gold)}
+.masdeesto{margin:16px 0 0;font-weight:700}
+.lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista .cuerpo{padding:16px 18px 18px}
+.lista h3{margin:0 0 6px;font:700 19px/1.25 Fraunces,Georgia,serif}
+.lista h3 a{color:var(--forest);text-decoration:none}
+.lista h3 a:hover{text-decoration:underline}
+.lista p{margin:0;font-size:14.5px;color:var(--ink-mut)}
+.lista .horario{margin-top:9px;font-size:13.5px;color:var(--forest-3);font-weight:600}
 h1{font:700 clamp(30px,6vw,44px)/1.12 Fraunces,Georgia,serif;color:var(--forest);margin:14px 0 0}
 .lead{font-size:19px;margin:16px 0 0}
 .acciones{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 0}
@@ -105,7 +117,7 @@ footer.pie a{color:var(--ink-mut)}
   dl.datos dt:first-child{margin-top:0}
 }</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","@id":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/heladeria-napoles#lugar","name":"Heladería Nápoles","description":"Un punto dulce y colorido en pleno casco urbano de Labateca, ideal para refrescarse. Ofrece helados en cono (sencillo y doble), copas, malteadas, waffles, porciones de torta y ensaladas de frutas, además de jugos naturales en agua o en leche. También encuentras paletas y helados de la marca Bugui, gaseosas, bebidas frías, dulces y mecato. El salón está decorado con muebles de palet, muros florales y letreros neón, con mesas para sentarse a compartir. Atención amable de doña Yuleima Villamizar.","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/heladeria-napoles","image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/heladeria-napoles-01","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/heladeria-napoles-02","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/heladeria-napoles-03","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/heladeria-napoles-04","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/heladeria-napoles-05","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/heladeria-napoles-06"],"address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"geo":{"@type":"GeoCoordinates","latitude":7.30023,"longitude":-72.494266},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.30023,-72.494266","isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"},"telephone":"+573106803058"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Heladería Nápoles","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/heladeria-napoles"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Dónde comer en Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/categoria/donde-comer"},{"@type":"ListItem","position":4,"name":"Heladería Nápoles","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/heladeria-napoles"}]}</script>
 </head>
 <body>
 
@@ -125,10 +137,11 @@ footer.pie a{color:var(--ink-mut)}
 
 <main class="wrap">
   <p class="miga"><a href="/">Inicio</a> ›
-    <a href="/lugares">Lugares</a> › Heladería Nápoles</p>
+    <a href="/lugares">Lugares</a> ›
+    <a href="/categoria/donde-comer">Dónde comer en Labateca</a> › Heladería Nápoles</p>
 
   <article>
-    <span class="cat">Restaurante</span>
+    <a class="cat" href="/categoria/donde-comer">Restaurante</a>
     <h1>Heladería Nápoles</h1>
     <p class="lead">Un punto dulce y colorido en pleno casco urbano de Labateca, ideal para refrescarse. Ofrece helados en cono (sencillo y doble), copas, malteadas, waffles, porciones de torta y ensaladas de frutas, además de jugos naturales en agua o en leche. También encuentras paletas y helados de la marca Bugui, gaseosas, bebidas frías, dulces y mecato. El salón está decorado con muebles de palet, muros florales y letreros neón, con mesas para sentarse a compartir. Atención amable de doña Yuleima Villamizar.</p>
 
@@ -204,7 +217,7 @@ footer.pie a{color:var(--ink-mut)}
     </div>
   </article>
 
-  <h2>Otros restaurantes de Labateca</h2>
+  <h2>Dónde comer en Labateca</h2>
   <ul class="otros">
     <li><a href="/lugar/intrinseco">Intrínseco — Restaurante, Café y Bar
       <span>Restaurante, café y bar en el corazón de Labateca, a pasos del parque…</span></a></li>
@@ -219,6 +232,7 @@ footer.pie a{color:var(--ink-mut)}
     <li><a href="/lugar/antano">Antaño Café-Bar
       <span>Café-bar temático de ambiente vintage en el casco urbano de Labateca…</span></a></li>
   </ul>
+  <p class="masdeesto"><a href="/categoria/donde-comer">Ver los 18 →</a></p>
 
   <div class="volver">
     <p>Esta ficha es parte de la guía turística de Labateca: 67 lugares, mapa interactivo, clima en vivo y rutas.</p>

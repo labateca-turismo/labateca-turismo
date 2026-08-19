@@ -54,7 +54,19 @@ main{padding:26px 0 56px}
 .miga a{color:var(--ink-mut)}
 .cat{display:inline-block;background:var(--cream);border:1px solid var(--line);
  color:var(--gold-text);font-size:13px;font-weight:700;letter-spacing:.06em;
- text-transform:uppercase;padding:5px 12px;border-radius:999px}
+ text-transform:uppercase;padding:5px 12px;border-radius:999px;text-decoration:none}
+.cat:hover{border-color:var(--gold)}
+.masdeesto{margin:16px 0 0;font-weight:700}
+.lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista .cuerpo{padding:16px 18px 18px}
+.lista h3{margin:0 0 6px;font:700 19px/1.25 Fraunces,Georgia,serif}
+.lista h3 a{color:var(--forest);text-decoration:none}
+.lista h3 a:hover{text-decoration:underline}
+.lista p{margin:0;font-size:14.5px;color:var(--ink-mut)}
+.lista .horario{margin-top:9px;font-size:13.5px;color:var(--forest-3);font-weight:600}
 h1{font:700 clamp(30px,6vw,44px)/1.12 Fraunces,Georgia,serif;color:var(--forest);margin:14px 0 0}
 .lead{font-size:19px;margin:16px 0 0}
 .acciones{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 0}
@@ -105,7 +117,7 @@ footer.pie a{color:var(--ink-mut)}
   dl.datos dt:first-child{margin-top:0}
 }</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristAttraction","@id":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/lirgua#lugar","name":"Cascadas de Lirgua y Dos Brazos","description":"Dos cascadas sobre la misma quebrada, dentro de un predio privado a unos 6 km al occidente del casco urbano. La primera es la Cascada de Lirgua, un salto alto y de buen caudal que cae sobre una poza rodeada de roca y monte. Quebrada arriba está la Cascada de Dos Brazos, que se abre en dos chorros paralelos sobre una pared de piedra cubierta de musgo. El sendero entre las dos está trabajado por la familia propietaria: escalones de piedra, jardines y letreros de madera pintados a mano. El recorrido completo mide 1,6 km, sube unos 140 metros (de 1.620 a 1.760 m sobre el nivel del mar) e incluye un cruce de quebrada. Es un predio privado de Luis Fidel Ortiz Parada: para entrar hay que pedir las llaves en la casa que está al lado del puente de Lirgua y se paga una entrada por persona.","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/lirgua","image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/cascada-lirgua-01","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/cascada-lirgua-02","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/cascada-lirgua-03","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/cascada-lirgua-04","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/cascada-lirgua-05","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/cascada-lirgua-06"],"address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"geo":{"@type":"GeoCoordinates","latitude":7.272325,"longitude":-72.544543},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.272325,-72.544543","isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Cascadas de Lirgua y Dos Brazos","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/lirgua"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Cascadas y naturaleza en Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/categoria/naturaleza"},{"@type":"ListItem","position":4,"name":"Cascadas de Lirgua y Dos Brazos","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/lirgua"}]}</script>
 </head>
 <body>
 
@@ -125,10 +137,11 @@ footer.pie a{color:var(--ink-mut)}
 
 <main class="wrap">
   <p class="miga"><a href="/">Inicio</a> ›
-    <a href="/lugares">Lugares</a> › Cascadas de Lirgua y Dos Brazos</p>
+    <a href="/lugares">Lugares</a> ›
+    <a href="/categoria/naturaleza">Cascadas y naturaleza en Labateca</a> › Cascadas de Lirgua y Dos Brazos</p>
 
   <article>
-    <span class="cat">Sitio natural</span>
+    <a class="cat" href="/categoria/naturaleza">Sitio natural</a>
     <h1>Cascadas de Lirgua y Dos Brazos</h1>
     <p class="lead">Dos cascadas sobre la misma quebrada, dentro de un predio privado a unos 6 km al occidente del casco urbano. La primera es la Cascada de Lirgua, un salto alto y de buen caudal que cae sobre una poza rodeada de roca y monte. Quebrada arriba está la Cascada de Dos Brazos, que se abre en dos chorros paralelos sobre una pared de piedra cubierta de musgo. El sendero entre las dos está trabajado por la familia propietaria: escalones de piedra, jardines y letreros de madera pintados a mano. El recorrido completo mide 1,6 km, sube unos 140 metros (de 1.620 a 1.760 m sobre el nivel del mar) e incluye un cruce de quebrada. Es un predio privado de Luis Fidel Ortiz Parada: para entrar hay que pedir las llaves en la casa que está al lado del puente de Lirgua y se paga una entrada por persona.</p>
 
@@ -259,7 +272,7 @@ footer.pie a{color:var(--ink-mut)}
     </div>
   </article>
 
-  <h2>Otros sitio naturals de Labateca</h2>
+  <h2>Cascadas y naturaleza en Labateca</h2>
   <ul class="otros">
     <li><a href="/lugar/cascada-siscata">Cascada de Siscata
       <span>Cascada de montaña a la que se llega por un sendero desde el casco…</span></a></li>
@@ -268,6 +281,7 @@ footer.pie a{color:var(--ink-mut)}
     <li><a href="/lugar/el-saman">El Samán
       <span>Un samán enorme y muy viejo, plantado al borde del camino junto al…</span></a></li>
   </ul>
+  <p class="masdeesto"><a href="/categoria/naturaleza">Ver los 4 →</a></p>
 
   <div class="volver">
     <p>Esta ficha es parte de la guía turística de Labateca: 67 lugares, mapa interactivo, clima en vivo y rutas.</p>

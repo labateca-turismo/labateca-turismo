@@ -56,6 +56,114 @@
     <priority>0.2</priority>
   </url>
   <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/categoria/donde-comer</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/donde-comer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/category/where-to-eat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/donde-comer"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/en/category/where-to-eat</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/donde-comer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/category/where-to-eat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/donde-comer"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/categoria/donde-dormir</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/donde-dormir"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/category/where-to-stay"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/donde-dormir"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/en/category/where-to-stay</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/donde-dormir"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/category/where-to-stay"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/donde-dormir"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/categoria/tiendas</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/tiendas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/category/shops"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/tiendas"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/en/category/shops</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/tiendas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/category/shops"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/tiendas"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/categoria/servicios</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/servicios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/category/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/servicios"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/en/category/services</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/servicios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/category/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/servicios"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/categoria/que-ver</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/que-ver"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/category/what-to-see"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/que-ver"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/en/category/what-to-see</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/que-ver"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/category/what-to-see"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/que-ver"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/categoria/naturaleza</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/naturaleza"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/category/nature"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/naturaleza"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/en/category/nature</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/naturaleza"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/category/nature"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/naturaleza"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://labateca-turismo.labatecacolombia.workers.dev/lugar/templo</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/templo"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/templo"/>

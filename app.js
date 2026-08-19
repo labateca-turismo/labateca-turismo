@@ -2448,7 +2448,13 @@ function init(){
     }
   } catch(e) { /* no romper el arranque */ }
 
-  // 1. Cargar idioma guardado
+  // 1. Cargar idioma: primero ?lang= en la URL, luego lo guardado
+  //    Las paginas en ingles (/en/place/... y /en/category/...) mandan a
+  //    la guia con /?lang=en. Sin esto el enlace no hacia nada y el
+  //    visitante que venia leyendo en ingles caia en la portada en
+  //    espanol. Se guarda para que el resto de la visita siga igual.
+  const _urlLang = new URLSearchParams(location.search).get("lang");
+  if (_urlLang === "es" || _urlLang === "en") store.set("lab_lang", _urlLang);
   lang = store.get("lab_lang") || "es";
   const _es = document.getElementById("langEs"), _en = document.getElementById("langEn");
   if(_es) _es.classList.toggle("active",lang==="es");

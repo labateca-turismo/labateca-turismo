@@ -54,7 +54,19 @@ main{padding:26px 0 56px}
 .miga a{color:var(--ink-mut)}
 .cat{display:inline-block;background:var(--cream);border:1px solid var(--line);
  color:var(--gold-text);font-size:13px;font-weight:700;letter-spacing:.06em;
- text-transform:uppercase;padding:5px 12px;border-radius:999px}
+ text-transform:uppercase;padding:5px 12px;border-radius:999px;text-decoration:none}
+.cat:hover{border-color:var(--gold)}
+.masdeesto{margin:16px 0 0;font-weight:700}
+.lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista .cuerpo{padding:16px 18px 18px}
+.lista h3{margin:0 0 6px;font:700 19px/1.25 Fraunces,Georgia,serif}
+.lista h3 a{color:var(--forest);text-decoration:none}
+.lista h3 a:hover{text-decoration:underline}
+.lista p{margin:0;font-size:14.5px;color:var(--ink-mut)}
+.lista .horario{margin-top:9px;font-size:13.5px;color:var(--forest-3);font-weight:600}
 h1{font:700 clamp(30px,6vw,44px)/1.12 Fraunces,Georgia,serif;color:var(--forest);margin:14px 0 0}
 .lead{font-size:19px;margin:16px 0 0}
 .acciones{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 0}
@@ -105,7 +117,7 @@ footer.pie a{color:var(--ink-mut)}
   dl.datos dt:first-child{margin-top:0}
 }</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/ks-montallantas#lugar","name":"K&S — Montallantas y Cafetería","description":"Un alto en la vía a unos 2,4 km del casco urbano de Labateca, saliendo hacia el suroccidente. Es dos cosas a la vez: un montallantas y una cafetería de carretera. En el taller, bajo un techo de zinc, resuelven el pinchazo y el trabajo de llanta —despinche, parche, aire—, y también hay equipo de soldadura y banco de trabajo para lo que se ofrezca. A la orilla, en el kiosco, sirven arepas, empanadas, alitas de pollo, chorizo, huevos, café y bebidas frías, hay licores y se hacen almuerzos por encargo. Es de Fabio Peñaloza y abre todos los días de 6 de la mañana a 6 de la tarde.","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/ks-montallantas","image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/ks-montallantas-01","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/ks-montallantas-02","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/ks-montallantas-03","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/ks-montallantas-04"],"address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"geo":{"@type":"GeoCoordinates","latitude":7.278305,"longitude":-72.501947},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.278305,-72.501947","isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"},"telephone":"+573138049658"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"K&S — Montallantas y Cafetería","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/ks-montallantas"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Servicios en Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/categoria/servicios"},{"@type":"ListItem","position":4,"name":"K&S — Montallantas y Cafetería","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/ks-montallantas"}]}</script>
 </head>
 <body>
 
@@ -125,10 +137,11 @@ footer.pie a{color:var(--ink-mut)}
 
 <main class="wrap">
   <p class="miga"><a href="/">Inicio</a> ›
-    <a href="/lugares">Lugares</a> › K&amp;S — Montallantas y Cafetería</p>
+    <a href="/lugares">Lugares</a> ›
+    <a href="/categoria/servicios">Servicios en Labateca</a> › K&amp;S — Montallantas y Cafetería</p>
 
   <article>
-    <span class="cat">Servicio</span>
+    <a class="cat" href="/categoria/servicios">Servicio</a>
     <h1>K&amp;S — Montallantas y Cafetería</h1>
     <p class="lead">Un alto en la vía a unos 2,4 km del casco urbano de Labateca, saliendo hacia el suroccidente. Es dos cosas a la vez: un montallantas y una cafetería de carretera. En el taller, bajo un techo de zinc, resuelven el pinchazo y el trabajo de llanta —despinche, parche, aire—, y también hay equipo de soldadura y banco de trabajo para lo que se ofrezca. A la orilla, en el kiosco, sirven arepas, empanadas, alitas de pollo, chorizo, huevos, café y bebidas frías, hay licores y se hacen almuerzos por encargo. Es de Fabio Peñaloza y abre todos los días de 6 de la mañana a 6 de la tarde.</p>
 
@@ -188,7 +201,7 @@ footer.pie a{color:var(--ink-mut)}
     </div>
   </article>
 
-  <h2>Otros servicios de Labateca</h2>
+  <h2>Servicios en Labateca</h2>
   <ul class="otros">
     <li><a href="/lugar/despacho-parroquial">Servicios Parroquiales y Documentos
       <span>En la Parroquia Nuestra Señora de las Angustias se solicitan las…</span></a></li>
@@ -203,6 +216,7 @@ footer.pie a{color:var(--ink-mut)}
     <li><a href="/lugar/juzgado-labateca">Juzgado Promiscuo Municipal de Labateca
       <span>Es el despacho judicial del municipio, parte de la Rama Judicial de…</span></a></li>
   </ul>
+  <p class="masdeesto"><a href="/categoria/servicios">Ver los 13 →</a></p>
 
   <div class="volver">
     <p>Esta ficha es parte de la guía turística de Labateca: 67 lugares, mapa interactivo, clima en vivo y rutas.</p>

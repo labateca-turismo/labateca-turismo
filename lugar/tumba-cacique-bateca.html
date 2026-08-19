@@ -54,7 +54,19 @@ main{padding:26px 0 56px}
 .miga a{color:var(--ink-mut)}
 .cat{display:inline-block;background:var(--cream);border:1px solid var(--line);
  color:var(--gold-text);font-size:13px;font-weight:700;letter-spacing:.06em;
- text-transform:uppercase;padding:5px 12px;border-radius:999px}
+ text-transform:uppercase;padding:5px 12px;border-radius:999px;text-decoration:none}
+.cat:hover{border-color:var(--gold)}
+.masdeesto{margin:16px 0 0;font-weight:700}
+.lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista .cuerpo{padding:16px 18px 18px}
+.lista h3{margin:0 0 6px;font:700 19px/1.25 Fraunces,Georgia,serif}
+.lista h3 a{color:var(--forest);text-decoration:none}
+.lista h3 a:hover{text-decoration:underline}
+.lista p{margin:0;font-size:14.5px;color:var(--ink-mut)}
+.lista .horario{margin-top:9px;font-size:13.5px;color:var(--forest-3);font-weight:600}
 h1{font:700 clamp(30px,6vw,44px)/1.12 Fraunces,Georgia,serif;color:var(--forest);margin:14px 0 0}
 .lead{font-size:19px;margin:16px 0 0}
 .acciones{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 0}
@@ -105,7 +117,7 @@ footer.pie a{color:var(--ink-mut)}
   dl.datos dt:first-child{margin-top:0}
 }</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristAttraction","@id":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/tumba-cacique-bateca#lugar","name":"Tumba del Cacique Bateca","description":"Sobre el camino real, a unos 3,6 km al suroccidente del pueblo, hay un sepulcro de piedra y cal que los labatequenses conocen como la tumba del Cacique Bateca. La cámara está cerrada con una reja de hierro y, alrededor de la abertura, hay placas de metal fundido con agradecimientos: «Doy gracias al Cacique Bateca por favor recibido». No es solo un vestigio: es un sitio de devoción vivo, donde la gente todavía deja flores y placas. El nombre no es invención: en los archivos de la Real Audiencia consta que el 4 de mayo de 1560 el Oidor Tomás López interrogó en los aposentos de Labateca a «Batecabala, cacique» del pueblo, encomienda del Capitán Andrés de Acevedo, a través de un intérprete. Que este sepulcro sea el suyo es tradición del pueblo, no un hecho comprobado por arqueólogos; lo que sí es cierto es que el nombre del cacique quedó escrito en los papeles del siglo XVI y sigue vivo en la memoria de Labateca.","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/tumba-cacique-bateca","image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/tumba-cacique-bateca-01","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/tumba-cacique-bateca-02","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/tumba-cacique-bateca-03","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/tumba-cacique-bateca-04","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/tumba-cacique-bateca-05","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/tumba-cacique-bateca-06"],"address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"geo":{"@type":"GeoCoordinates","latitude":7.277147,"longitude":-72.518257},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.277147,-72.518257","isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Tumba del Cacique Bateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/tumba-cacique-bateca"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Qué ver en Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/categoria/que-ver"},{"@type":"ListItem","position":4,"name":"Tumba del Cacique Bateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/tumba-cacique-bateca"}]}</script>
 </head>
 <body>
 
@@ -125,10 +137,11 @@ footer.pie a{color:var(--ink-mut)}
 
 <main class="wrap">
   <p class="miga"><a href="/">Inicio</a> ›
-    <a href="/lugares">Lugares</a> › Tumba del Cacique Bateca</p>
+    <a href="/lugares">Lugares</a> ›
+    <a href="/categoria/que-ver">Qué ver en Labateca</a> › Tumba del Cacique Bateca</p>
 
   <article>
-    <span class="cat">Sitio cultural</span>
+    <a class="cat" href="/categoria/que-ver">Sitio cultural</a>
     <h1>Tumba del Cacique Bateca</h1>
     <p class="lead">Sobre el camino real, a unos 3,6 km al suroccidente del pueblo, hay un sepulcro de piedra y cal que los labatequenses conocen como la tumba del Cacique Bateca. La cámara está cerrada con una reja de hierro y, alrededor de la abertura, hay placas de metal fundido con agradecimientos: «Doy gracias al Cacique Bateca por favor recibido». No es solo un vestigio: es un sitio de devoción vivo, donde la gente todavía deja flores y placas. El nombre no es invención: en los archivos de la Real Audiencia consta que el 4 de mayo de 1560 el Oidor Tomás López interrogó en los aposentos de Labateca a «Batecabala, cacique» del pueblo, encomienda del Capitán Andrés de Acevedo, a través de un intérprete. Que este sepulcro sea el suyo es tradición del pueblo, no un hecho comprobado por arqueólogos; lo que sí es cierto es que el nombre del cacique quedó escrito en los papeles del siglo XVI y sigue vivo en la memoria de Labateca.</p>
 
@@ -206,7 +219,7 @@ footer.pie a{color:var(--ink-mut)}
     </div>
   </article>
 
-  <h2>Otros sitio culturals de Labateca</h2>
+  <h2>Qué ver en Labateca</h2>
   <ul class="otros">
     <li><a href="/lugar/templo">Parroquia Nuestra Señora de las Angustias
       <span>Es, sin lugar a dudas, el atractivo de mayor relevancia para los…</span></a></li>
@@ -219,6 +232,7 @@ footer.pie a{color:var(--ink-mut)}
     <li><a href="/lugar/virgen-conductores">Monumento a la Virgen del Carmen
       <span>A la salida de Labateca, al lado de la plaza de toros, está el…</span></a></li>
   </ul>
+  <p class="masdeesto"><a href="/categoria/que-ver">Ver los 6 →</a></p>
 
   <div class="volver">
     <p>Esta ficha es parte de la guía turística de Labateca: 67 lugares, mapa interactivo, clima en vivo y rutas.</p>
