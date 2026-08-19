@@ -699,7 +699,13 @@ function closeDrawer(){
    ============================================================ */
 function sharePlace(id){
   const p=PLACES.find(x=>x.id===id); if(!p) return;
-  const url=`${location.origin}/?lugar=${encodeURIComponent(id)}`;
+  /* Se comparte la ficha propia (/lugar/<id>), no el modal (?lugar=<id>).
+     Dos razones: WhatsApp y Facebook leen las etiquetas Open Graph de esa
+     pagina, asi que la vista previa sale con LA foto y el texto de ESE
+     lugar en vez de la portada generica del sitio; y el enlace que la
+     gente reenvia apunta a una URL que los buscadores si indexan.
+     Los carteles QR ya impresos usan ?lugar= y siguen funcionando. */
+  const url=`${location.origin}/lugar/${encodeURIComponent(id)}`;
   const text=`${placeName(p)} — Labateca · Volcanes de Dios`;
   if(navigator.share){
     navigator.share({title:text,text,url}).catch(()=>{});

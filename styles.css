@@ -1276,3 +1276,23 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
   .gl-pie{font-size:.85rem;flex-direction:column;gap:6px;padding-bottom:80px}
   .gl-marco img{max-height:calc(100vh - 215px);max-height:calc(100dvh - 215px)}
 }
+
+/* ============================================================
+   DIRECTORIO SEO  (lo genera gen_seo.js al final de lugares.html)
+   Es la lista de enlaces reales a las 67 fichas. Sirve a dos
+   públicos: al robot de Google, que sin enlaces internos no llega
+   a esas páginas aunque estén en el sitemap; y a quien prefiere
+   una lista de texto para buscar un nombre con Ctrl+F.
+   ============================================================ */
+.seo-dir{background:var(--cream);border-top:1px solid var(--line);padding:56px 0 60px}
+.seo-dir h2{font-family:Fraunces,Georgia,serif;font-size:clamp(24px,4vw,32px);
+  color:var(--forest);margin:0 0 6px}
+.seo-dir > .wrap > p{color:var(--ink-mut);margin:0 0 26px;max-width:60ch}
+.seo-dir h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold-text);margin:26px 0 10px;font-weight:800}
+.seo-dir ul{list-style:none;padding:0;margin:0;columns:3;column-gap:26px}
+.seo-dir li{break-inside:avoid;margin:0 0 7px}
+.seo-dir a{color:var(--forest-3);text-decoration:none;font-size:15.5px}
+.seo-dir a:hover{text-decoration:underline}
+@media(max-width:760px){.seo-dir ul{columns:2}}
+@media(max-width:460px){.seo-dir ul{columns:1}}
