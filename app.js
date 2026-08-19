@@ -2545,6 +2545,21 @@ function _checkLugarParam() {
 // 4. Registrar Service Worker (HTTPS o localhost)
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
+    /* Si YA había un service worker, esta visita puede quedar A MEDIAS: la
+       página se pintó con lo que había en caché (HTML nuevo, CSS viejo) y así
+       se queda hasta que alguien recargue a mano. Pasó de verdad con el botón
+       de Transporte y la foto de /viva. Cuando el SW nuevo toma el control se
+       recarga UNA sola vez y todo queda del mismo lote. En la primera visita
+       no hay nada que recargar, por eso el guard. */
+    const habíaSW = !!navigator.serviceWorker.controller;
+    let recargado = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (!habíaSW || recargado) return;
+      recargado = true;
+      console.log('[SW] Versión nueva activa — recargando una vez');
+      location.reload();
+    });
+
     // updateViaCache:'none' → el navegador siempre comprueba sw.js fresco (detecta updates rápido)
     navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' })
       .then(reg => { console.log('[SW] Registrado:', reg.scope); reg.update(); })

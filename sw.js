@@ -7,7 +7,7 @@
      - network-first      → datos dinámicos (clima Open-Meteo)
    ============================================================ */
 
-const CACHE_VERSION = 'labateca-v131';
+const CACHE_VERSION = 'labateca-v132';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE   = `${CACHE_VERSION}-images`;
 const DATA_CACHE    = `${CACHE_VERSION}-data`;
@@ -37,7 +37,13 @@ const PRECACHE_URLS = [
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
-      .then(cache => cache.addAll(PRECACHE_URLS))
+      /* cache:'reload' obliga a ir a la red. Sin esto, addAll puede
+         guardar en la caché nueva una copia VIEJA servida por el caché
+         HTTP del navegador o por el borde de Cloudflare, y entonces la
+         versión nueva nace con archivos del lote anterior. */
+      .then(cache => cache.addAll(
+        PRECACHE_URLS.map(u => new Request(u, { cache: 'reload' }))
+      ))
       .then(() => self.skipWaiting())
       .catch(err => console.warn('[SW] Precache parcial:', err))
   );
