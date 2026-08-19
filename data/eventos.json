@@ -1,4 +1,60 @@
 {
-  "version": "1.0",
-  "eventos": []
+  "version": "1.1",
+  "_nota": "Solo se ponen fechas confirmadas. Febrero (Candelaria + Ferias) y noviembre (Angustias, la patrona) son DOS fiestas distintas: asi es en Labateca. Cuando la alcaldia publique la programacion del ano, se ponen los dias exactos en 'fecha'.",
+  "eventos": [
+    {
+      "id": "candelaria-ferias",
+      "fecha": { "es": "Febrero", "en": "February" },
+      "nombre": {
+        "es": "Virgen de la Candelaria y Ferias Patronales",
+        "en": "Our Lady of Candelaria and the Patron Fairs"
+      },
+      "desc": {
+        "es": "La feria grande del año. Exposición de ganado y de caballos, actos religiosos y el pueblo lleno. Es la fecha en la que vuelve el labatequense que vive afuera.",
+        "en": "The big fair of the year. Cattle and horse shows, religious ceremonies and a town packed with people. This is when Labatecans living elsewhere come home."
+      }
+    },
+    {
+      "id": "semana-santa",
+      "fecha": { "es": "Marzo o abril", "en": "March or April" },
+      "nombre": { "es": "Semana Santa", "en": "Holy Week" },
+      "desc": {
+        "es": "Procesiones y celebraciones en el Templo de Nuestra Señora de las Angustias. La fecha cambia cada año según el calendario litúrgico.",
+        "en": "Processions and services at the Church of Our Lady of Sorrows. The date moves each year with the liturgical calendar."
+      }
+    },
+    {
+      "id": "virgen-carmen",
+      "fecha": { "es": "16 de julio", "en": "16 July" },
+      "nombre": {
+        "es": "Virgen del Carmen, patrona de los conductores",
+        "en": "Our Lady of Carmen, patron of drivers"
+      },
+      "desc": {
+        "es": "El día de quienes manejan. Los buses, las camionetas y las motos se adornan y se bendicen: sin ellos, a Labateca no llega ni sale nadie.",
+        "en": "The drivers' day. Buses, pickups and motorbikes are decorated and blessed — without them, nobody gets in or out of Labateca."
+      }
+    },
+    {
+      "id": "angustias",
+      "fecha": { "es": "Noviembre", "en": "November" },
+      "nombre": {
+        "es": "Nuestra Señora de las Angustias",
+        "en": "Our Lady of Sorrows"
+      },
+      "desc": {
+        "es": "La fiesta de la patrona del municipio, distinta de la feria de febrero. El templo guarda el lienzo original de la Virgen, y a ella le atribuyen milagros los devotos.",
+        "en": "The feast of the town's patron saint, a separate celebration from the February fair. The church holds the Virgin's original canvas, and the faithful credit her with miracles."
+      }
+    },
+    {
+      "id": "aguinaldos",
+      "fecha": { "es": "Diciembre", "en": "December" },
+      "nombre": { "es": "Aguinaldos y Fin de Año", "en": "Christmas novena and New Year" },
+      "desc": {
+        "es": "Novenas de barrio, alumbrado y las despedidas de año. Diciembre es el otro mes en que el pueblo se llena.",
+        "en": "Neighbourhood novenas, Christmas lights and end-of-year parties. December is the other month when the town fills up."
+      }
+    }
+  ]
 }
