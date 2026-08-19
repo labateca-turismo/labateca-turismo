@@ -574,6 +574,10 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;margin-bottom:48px}
 .foot-brand .brand-name{color:var(--cream)}
 .foot-about{color:rgba(246,239,227,.7);margin-top:16px;font-size:.94rem;max-width:340px}
+/* Quien hizo esto. Va debajo del "de que se trata", en tono mas bajo:
+   el protagonista es el pueblo, no la firma. */
+.foot-creator{color:rgba(246,239,227,.55);margin-top:10px;font-size:.86rem;max-width:340px;line-height:1.55}
+.foot-creator strong{color:var(--gold-soft);font-weight:600}
 .foot-col h4{font-family:"Fraunces";color:var(--gold-soft);font-size:1.1rem;margin-bottom:18px;font-weight:600}
 .foot-col ul{list-style:none;display:grid;gap:11px}
 .foot-col a{color:rgba(246,239,227,.78);font-size:.93rem;transition:color .25s,padding .25s}
@@ -1112,6 +1116,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
 
 .doc-pie{background:var(--forest);color:var(--cream);padding:26px 0;font-size:.85rem}
 .doc-pie p{margin:0;opacity:.85}
+.doc-pie p + p{margin-top:7px;opacity:.62;font-size:.95em}
 
 @media(max-width:760px){
   .doc-cuerpo{font-size:1.02rem;line-height:1.7}
