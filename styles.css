@@ -1478,14 +1478,20 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
    /viva mide ~9.400 px en un telefono: sin esto, las fotos de rodaje quedan
    a seis pantallas de scroll y nadie las encuentra. El scroll-margin evita
    que el ancla quede debajo del encabezado fijo. */
-.vv-indice{max-width:var(--maxw);margin:0 auto;padding:22px 24px 0;
-  display:flex;flex-wrap:wrap;align-items:center;gap:9px}
+.vv-indice-barra{background:var(--cream);border-bottom:1px solid var(--line)}
+.vv-indice{max-width:var(--maxw);margin:0 auto;padding:20px 24px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:10px}
 .vv-indice span{font-size:.72rem;font-weight:800;letter-spacing:.09em;
   text-transform:uppercase;color:var(--ink-mut);margin-right:4px}
-.vv-indice a{padding:8px 15px;border-radius:999px;background:var(--cream-2);
-  border:1px solid var(--line);color:var(--forest);font-weight:600;font-size:.88rem;
+/* Iban crema (#efe5d3) sobre fondo crema (#fbf8f1): en un celular a la luz
+   del dia no se leian como botones y Jose ni los vio. Ahora van en verde
+   oscuro con texto crema: imposible confundirlos con texto corrido. */
+.vv-indice a{padding:10px 17px;border-radius:999px;background:var(--forest);
+  border:1px solid var(--forest);color:var(--cream);font-weight:700;font-size:.9rem;
+  box-shadow:var(--shadow-sm);
   transition:background .2s,border-color .2s,transform .2s var(--ease)}
-.vv-indice a:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-1px)}
+.vv-indice a:hover,.vv-indice a:active{background:var(--gold);border-color:var(--gold);
+  color:var(--forest);transform:translateY(-1px)}
 .vv-indice a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 #calendario,#cine,#corto,#fotos,#gente,#llegar,#municipal,#carmen{scroll-margin-top:104px}
 @media(max-width:760px){
