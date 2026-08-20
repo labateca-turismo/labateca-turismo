@@ -320,6 +320,22 @@
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
+/* El service worker sirve de cache y esta pagina NO carga app.js, donde
+   vive la logica de actualizacion. Sin esto, quien ya tenia el sitio
+   guardado abre la version nueva con el CSS viejo hasta que recarga a
+   mano. Si ya habia un SW (o sea, es una actualizacion), se recarga UNA
+   vez cuando el nuevo toma el control. */
+if ('serviceWorker' in navigator) {
+  var _habiaSW = !!navigator.serviceWorker.controller, _recargado = false;
+  navigator.serviceWorker.addEventListener('controllerchange', function(){
+    if (!_habiaSW || _recargado) return;
+    _recargado = true;
+    location.reload();
+  });
+  navigator.serviceWorker.getRegistration().then(function(r){ if (r) r.update(); });
+}
+
+
 /* ------------------------------------------------------------------
    EL CALENDARIO se arma desde data/eventos.json, el mismo archivo que
    alimenta la portada. Un solo sitio donde corregir las fechas.
