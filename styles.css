@@ -1346,7 +1346,14 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
   font-size:.92rem;color:var(--ink-mut);line-height:1.6}
 
 /* --- Foto a lo ancho ----------------------------------------------------- */
-.vv-ancha{margin:34px 0;width:100%}
+/* z-index:1 OBLIGATORIO. body::after es un velo FIJO sobre toda la pantalla
+   (foto aerea del pueblo bajo una capa crema al 88%) con z-index:0 y
+   pointer-events:none. La regla del sitio es que el contenido va dentro de
+   .wrap, que ya trae position:relative;z-index:1. Estos dos bloques van
+   FUERA de .wrap (para ocupar todo el ancho), asi que necesitan subir ellos
+   mismos o el velo los tapa: se ven fantasma pero SI responden al clic,
+   porque el velo no intercepta el raton. */
+.vv-ancha{margin:34px 0;width:100%;position:relative;z-index:1}
 .vv-ancha img{width:100%;height:auto;display:block;max-height:64vh;object-fit:cover}
 .vv-ancha figcaption{max-width:var(--maxw);margin:12px auto 0;padding:0 24px;
   font-size:.9rem;color:var(--ink-mut);font-style:italic}
@@ -1422,12 +1429,13 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
    galeria en 2.949 px de alto en un telefono. Con tarjetas 4:3 iguales
    queda pareja, corta y sin sorpresas. */
 .vv-galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
-  gap:16px;max-width:var(--maxw);margin:26px auto 0;padding:0 24px}
+  gap:16px;max-width:var(--maxw);margin:26px auto 0;padding:0 24px;
+  position:relative;z-index:1}
 .vv-galeria figure{margin:0;background:var(--paper);border:1px solid var(--line);
   border-radius:var(--r-md);overflow:hidden;display:flex;flex-direction:column;
   transition:transform .25s var(--ease),box-shadow .25s}
 .vv-galeria figure:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
-.vv-galeria img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.vv-galeria img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
 .vv-galeria figcaption{padding:11px 14px 13px;font-size:.87rem;color:var(--ink-mut);
   line-height:1.5;flex:1}
 
