@@ -1319,7 +1319,9 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
 .nav-bus:hover{background:var(--gold-soft);transform:translateY(-1px);box-shadow:var(--shadow-sm)}
 .nav-bus:focus-visible{outline:3px solid var(--forest);outline-offset:2px}
 
-.vv-hero{background:linear-gradient(160deg,var(--forest) 0%,var(--forest-2) 60%,var(--forest-3) 100%)}
+/* NO oscurecer el hero. .pb-hero h1 es color:var(--forest) y el degradado
+   oscuro empezaba en ese MISMO color: el titulo quedaba invisible sobre su
+   propio color. Se deja el hero claro del resto del sitio. */
 
 /* --- El calendario ------------------------------------------------------- */
 .vv-cal{list-style:none;display:grid;gap:14px;margin:26px 0 0;padding:0;counter-reset:vvc}
