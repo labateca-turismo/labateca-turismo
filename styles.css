@@ -74,12 +74,18 @@ header{
   padding:18px 0;
 }
 header.scrolled{
-  background:rgba(251,248,241,.86);backdrop-filter:blur(14px) saturate(1.4);
+  /* SIN backdrop-filter. Un position:fixed con backdrop-filter encima de una
+     pagina larga y llena de fotos hace que el compositor de Windows falle al
+     repintar: quedaban fantasmas de cuadros viejos (una panoramica del pueblo
+     "de fondo" en toda la pagina) y las fotos solo aparecian al hacer clic o
+     mover el mouse, que fuerza el repintado. Un fondo casi opaco se ve igual
+     y no toca el compositor. */
+  background:rgba(251,248,241,.97);
   box-shadow:0 1px 0 var(--line), 0 6px 24px -16px rgba(22,53,42,.5);padding:12px 0;
 }
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
-.brand-mark{width:42px;height:42px;flex-shrink:0;border-radius:12px;object-fit:cover;filter:drop-shadow(0 4px 8px rgba(22,53,42,.2))}
+.brand-mark{width:42px;height:42px;flex-shrink:0;border-radius:12px;object-fit:cover;box-shadow:0 4px 8px rgba(22,53,42,.2)}
 .brand-name{font-family:"Fraunces";font-weight:600;font-size:1.35rem;color:var(--forest);letter-spacing:-.02em;line-height:1}
 .brand-sub{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);font-weight:700}
 header.scrolled .brand-name{color:var(--forest)}
