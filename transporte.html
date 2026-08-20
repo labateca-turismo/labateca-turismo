@@ -225,6 +225,18 @@
 </footer>
 
 <script>
+/* El encabezado es position:fixed y NACE TRANSPARENTE: quien le pone el fondo
+   esmerilado es la clase .scrolled, que en el resto del sitio agrega app.js.
+   Esta pagina no carga app.js, asi que lleva su propio listener; si no, el
+   contenido le pasa por debajo y los titulos se leen encima del menu. */
+(function(){
+  var h = document.getElementById('header');
+  if (!h) return;
+  var pinta = function(){ h.classList.toggle('scrolled', window.scrollY > 40); };
+  addEventListener('scroll', pinta, { passive: true });
+  pinta();
+})();
+
 document.getElementById('year').textContent = new Date().getFullYear();
 function toggleMenu(){
   var l = document.getElementById('navLinks'),
