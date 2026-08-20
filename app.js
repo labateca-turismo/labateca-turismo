@@ -2410,9 +2410,11 @@ async function sendChat() {
    ============================================================ */
 function toggleMenu(){
   const links=document.getElementById("navLinks");
+  // Solo cuatro paginas traen el div del fondo; en las demas era null y
+  // toggleMenu reventaba justo antes de actualizar aria-expanded.
   const overlay=document.getElementById("navOverlay");
   const open=links.classList.toggle("open");
-  overlay.classList.toggle("open",open);
+  if(overlay) overlay.classList.toggle("open",open);
   const burger=document.getElementById("hamburger");
   if(burger) burger.setAttribute("aria-expanded",open?"true":"false");
   // Al abrir, llevar el foco al primer enlace; al cerrar, devolverlo a la hamburguesa
@@ -2420,8 +2422,10 @@ function toggleMenu(){
   else if(burger){ burger.focus(); }
 }
 document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>{
-  document.getElementById("navLinks").classList.remove("open");
-  document.getElementById("navOverlay").classList.remove("open");
+  const links=document.getElementById("navLinks");
+  const overlay=document.getElementById("navOverlay");
+  if(links) links.classList.remove("open");
+  if(overlay) overlay.classList.remove("open");
 }));
 
 window.addEventListener("scroll",()=>{
