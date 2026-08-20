@@ -7,7 +7,7 @@
      - network-first      → datos dinámicos (clima Open-Meteo)
    ============================================================ */
 
-const CACHE_VERSION = 'labateca-v149';
+const CACHE_VERSION = 'labateca-v150';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE   = `${CACHE_VERSION}-images`;
 const DATA_CACHE    = `${CACHE_VERSION}-data`;
@@ -23,7 +23,7 @@ const PRECACHE_URLS = [
   '/historia/virgen-de-las-angustias.html',
   '/historia/himno-de-labateca.html',
   '/en/history/our-lady-of-sorrows.html',
-  '/styles.css?v=149',
+  '/styles.css?v=150',
   '/app.js',
   '/offline.html',
   '/manifest.json',
@@ -121,11 +121,19 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // 4. Recursos CDN (Leaflet, Google Fonts) → cache-first
-  if (url.hostname !== self.location.hostname) {
-    event.respondWith(cacheFirst(request, STATIC_CACHE));
-    return;
-  }
+  /* 4. CUALQUIER host externo -> SIN interceptar.
+     Antes iban a cacheFirst y NUNCA funciono. El service worker se sirve con
+     el CSP del sitio (/* cubre /sw.js) y, dentro del worker, un fetch()
+     cuenta como connect-src. connect-src no incluye fonts.googleapis.com, ni
+     los mosaicos del mapa, ni unpkg: el fetch lanzaba excepcion, el catch
+     devolvia un 503 fabricado por el propio SW y el recurso se perdia.
+     Medido en produccion: la hoja de Google Fonts daba 503 con el SW activo,
+     y la cache -static- no tenia NI UN recurso externo, prueba de que
+     cacheFirst jamas completo uno. Es el mismo fallo que ya estaba
+     documentado arriba para Cloudinary, pero afectando a todo lo de fuera.
+     Se pierde el cacheo offline de las fuentes, que de todos modos nunca
+     existio; el navegador las cachea por su cuenta con sus cabeceras. */
+  if (url.hostname !== self.location.hostname) return;
 
   // 5. Navegación / documentos HTML → network-first: SIEMPRE fresco si hay
   //    conexión (evita servir versiones viejas), con caché como respaldo offline.
