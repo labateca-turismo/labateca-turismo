@@ -1522,7 +1522,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
   color:var(--forest);transform:translateY(-1px)}
 .vv-indice a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 #calendario,#cine,#corto,#fotos,#gente,#llegar,#municipal,#carmen,
-#acta{scroll-margin-top:104px}
+#acta,#virgen{scroll-margin-top:104px}
 @media(max-width:760px){
   .vv-indice{padding:18px 18px 0;gap:7px}
   .vv-indice a{padding:7px 13px;font-size:.84rem}
