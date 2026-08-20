@@ -1470,3 +1470,24 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
   .tr-carmen{padding:26px 22px;border-radius:var(--r-md)}
   .tr-pendiente{padding:20px}
 }
+
+
+/* --- Indice de la pagina -------------------------------------------------
+   /viva mide ~9.400 px en un telefono: sin esto, las fotos de rodaje quedan
+   a seis pantallas de scroll y nadie las encuentra. El scroll-margin evita
+   que el ancla quede debajo del encabezado fijo. */
+.vv-indice{max-width:var(--maxw);margin:0 auto;padding:22px 24px 0;
+  display:flex;flex-wrap:wrap;align-items:center;gap:9px}
+.vv-indice span{font-size:.72rem;font-weight:800;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--ink-mut);margin-right:4px}
+.vv-indice a{padding:8px 15px;border-radius:999px;background:var(--cream-2);
+  border:1px solid var(--line);color:var(--forest);font-weight:600;font-size:.88rem;
+  transition:background .2s,border-color .2s,transform .2s var(--ease)}
+.vv-indice a:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-1px)}
+.vv-indice a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+#calendario,#cine,#corto,#fotos,#gente,#llegar,#municipal,#carmen{scroll-margin-top:104px}
+@media(max-width:760px){
+  .vv-indice{padding:18px 18px 0;gap:7px}
+  .vv-indice a{padding:7px 13px;font-size:.84rem}
+  .vv-indice span{width:100%;margin-bottom:2px}
+}
