@@ -7,7 +7,7 @@
      - network-first      → datos dinámicos (clima Open-Meteo)
    ============================================================ */
 
-const CACHE_VERSION = 'labateca-v148';
+const CACHE_VERSION = 'labateca-v149';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE   = `${CACHE_VERSION}-images`;
 const DATA_CACHE    = `${CACHE_VERSION}-data`;
@@ -23,7 +23,7 @@ const PRECACHE_URLS = [
   '/historia/virgen-de-las-angustias.html',
   '/historia/himno-de-labateca.html',
   '/en/history/our-lady-of-sorrows.html',
-  '/styles.css?v=148',
+  '/styles.css?v=149',
   '/app.js',
   '/offline.html',
   '/manifest.json',
@@ -101,6 +101,19 @@ self.addEventListener('fetch', event => {
   //    (probado y funcionando en celular). Se pierde el cacheo offline de
   //    fotos, pero la prioridad es que las imágenes se vean siempre.
   if (url.hostname.includes('cloudinary.com')) return;
+
+  /* 2-bis. Miniaturas de YouTube (i.ytimg.com) y el reproductor incrustado.
+     MISMO fallo que Cloudinary: la regla 4 mandaba estas peticiones
+     cross-origin a cacheFirst, el SW las re-emitia, el cache.put de la
+     respuesta opaca fallaba y el catch devolvia un 503 fabricado por el
+     propio SW. Resultado: la miniatura del video NUNCA se veia en
+     produccion, aunque en local -sin SW- si. Medido en el sitio ya
+     desplegado: i.ytimg naturalWidth 0, Cloudinary 60, y cinco 503 en
+     consola sin una sola violacion de CSP. */
+  if (url.hostname.endsWith('ytimg.com')) return;
+  if (url.hostname.endsWith('youtube.com')) return;
+  if (url.hostname.endsWith('youtube-nocookie.com')) return;
+  if (url.hostname.endsWith('googlevideo.com')) return;
 
   // 3. Datos (JSON y tracks GPX) → stale-while-revalidate (se actualizan con CMS/campo)
   if (url.pathname.startsWith('/data/')) {
