@@ -84,7 +84,7 @@
 <!-- ====== PDF (jsPDF — carga diferida, solo cuando el usuario pide el PDF) ====== -->
 <!-- Se inyecta dinámicamente en generatePDF() para no afectar la carga inicial -->
 
-<link rel="stylesheet" href="/styles.css?v=147">
+<link rel="stylesheet" href="/styles.css?v=148">
 </head>
 <body>
 
@@ -285,11 +285,31 @@
           <path d="M-20 400 Q120 360 200 410 T420 390"/>
         </g>
       </svg>
-      <div class="vquote">
-        <div class="q" data-i18n="quote">“De verdes altares se visten tus cerros, figurando murallas de recio color.”</div>
-        <div class="qs" data-i18n="quote_src">— Himno de Labateca</div>
-      </div>
+      <!-- La cita ya no es decoracion: lleva al himno completo, con letra y video. -->
+      <a class="vquote" href="/historia/himno-de-labateca.html"
+         aria-label="Ver el himno de Labateca completo: letra y video" data-i18n-aria="quote_aria">
+        <span class="q" data-i18n="quote">“De verdes altares se visten tus cerros, figurando murallas de recio color.”</span>
+        <span class="qs" data-i18n="quote_src">— Himno de Labateca</span>
+        <span class="q-cta" data-i18n="quote_cta">Ver el himno completo →</span>
+      </a>
     </div>
+  </div>
+
+  <!-- Video institucional del municipio. No se copia: el archivo sigue en el
+       canal de la Alcaldía y initYouTube() solo trae la miniatura hasta que
+       el visitante toca play. -->
+  <div class="wrap about-video reveal">
+    <div class="about-video-head">
+      <h3 data-i18n="about_video_t">Labateca en video</h3>
+      <p data-i18n="about_video_d">Un recorrido corto por el pueblo, sus calles y su paisaje, grabado por la Alcaldía Municipal.</p>
+    </div>
+    <div class="yt-lite" data-yt="6OYYUlHZyzg" data-yt-title="Labateca es calidad de vida — Alcaldía de Labateca">
+      <button type="button" class="yt-play" aria-label="Reproducir el video de Labateca en YouTube" data-i18n-aria="about_video_play">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <span class="yt-pie" data-i18n="about_video_cap">«Labateca es calidad de vida» · Alcaldía de Labateca</span>
+    </div>
+    <p class="about-video-pie" data-i18n="about_video_nota">Video del canal de YouTube de la Alcaldía de Labateca. No se copia aquí: al tocar play se abre el reproductor de YouTube y la reproducción se le cuenta al municipio.</p>
   </div>
 </section>
 

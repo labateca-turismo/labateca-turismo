@@ -7,7 +7,7 @@
      - network-first      → datos dinámicos (clima Open-Meteo)
    ============================================================ */
 
-const CACHE_VERSION = 'labateca-v147';
+const CACHE_VERSION = 'labateca-v148';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE   = `${CACHE_VERSION}-images`;
 const DATA_CACHE    = `${CACHE_VERSION}-data`;
@@ -21,8 +21,9 @@ const PRECACHE_URLS = [
   '/viva.html',
   '/transporte.html',
   '/historia/virgen-de-las-angustias.html',
+  '/historia/himno-de-labateca.html',
   '/en/history/our-lady-of-sorrows.html',
-  '/styles.css?v=147',
+  '/styles.css?v=148',
   '/app.js',
   '/offline.html',
   '/manifest.json',

@@ -1657,3 +1657,96 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
   .ac-hoja b{font-size:.68rem;padding:5px 2px}
   .ac-destacados{padding:0 18px}
 }
+
+/* ============================================================
+   HIMNO DEL MUNICIPIO + REPRODUCTOR DIFERIDO DE YOUTUBE
+   ============================================================ */
+
+/* --- La letra ------------------------------------------------
+   Va DESPUES de .doc-cuerpo p{text-align:justify} a proposito: misma
+   especificidad (0,1,1), gana la ultima. Los versos van centrados y
+   sin particion de palabras; justificar poesia la destroza. */
+.himno-letra{position:relative;overflow:hidden;
+  background:linear-gradient(160deg,var(--forest-2),var(--forest));
+  color:var(--cream);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);
+  padding:clamp(26px,5vw,44px);margin:26px 0 22px}
+.himno-letra::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(120% 85% at 50% 0%,rgba(230,197,116,.17),transparent 62%)}
+.himno-bloque{position:relative;z-index:1;margin:0 0 26px}
+.himno-bloque:last-child{margin-bottom:0}
+.himno-letra .himno-rot{font-family:"Hanken Grotesk",system-ui,sans-serif;
+  font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold-soft);font-weight:800;margin:0 0 11px;text-align:center}
+.himno-letra .himno-bloque p{font-family:Fraunces,Georgia,serif;
+  font-size:clamp(1rem,2.4vw,1.2rem);line-height:1.85;margin:0;
+  text-align:center;hyphens:none;text-wrap:balance}
+.himno-coro{border-bottom:1px solid rgba(230,197,116,.3);padding-bottom:24px}
+.himno-letra .himno-coro p{font-style:italic;font-size:clamp(1.08rem,2.7vw,1.32rem)}
+.himno-bis{display:inline-block;margin-top:8px;font-size:.78rem;font-style:normal;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--gold-soft);opacity:.85}
+
+.himno-lista{font-family:Fraunces,Georgia,serif;margin:0 0 1.15em;padding-left:1.3em}
+.himno-lista li{margin:0 0 .45em;line-height:1.6}
+.himno-lista b{color:var(--forest)}
+
+/* --- Reproductor diferido ------------------------------------
+   La pagina NO le pide nada a YouTube hasta que el visitante toca play:
+   solo la miniatura desde i.ytimg.com. Al tocar, initYouTube() mete el
+   iframe de youtube-nocookie. Mismo trato que initVideos() le da a
+   Cloudinary. El CSP ya trae frame-src youtube-nocookie. */
+.yt-lite{position:relative;width:100%;aspect-ratio:16/9;cursor:pointer;
+  border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg);
+  background:var(--forest) center/cover no-repeat}
+.yt-lite::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(22,53,42,.20),rgba(22,53,42,.58));
+  transition:background .3s var(--ease)}
+.yt-lite:hover::after{background:linear-gradient(180deg,rgba(22,53,42,.06),rgba(22,53,42,.44))}
+.yt-lite.cargado{cursor:default}
+.yt-lite.cargado::after{display:none}
+.yt-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;
+  width:clamp(58px,9vw,78px);height:clamp(58px,9vw,78px);border-radius:50%;border:0;
+  background:var(--cream);color:var(--forest);display:grid;place-items:center;
+  cursor:pointer;box-shadow:var(--shadow-lg);
+  transition:transform .25s var(--ease),background .25s}
+.yt-lite:hover .yt-play{transform:translate(-50%,-50%) scale(1.09);background:var(--gold-soft)}
+.yt-play svg{width:40%;height:40%;margin-left:8%}
+.yt-play:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.yt-pie{position:absolute;left:0;right:0;bottom:0;z-index:2;pointer-events:none;
+  padding:14px clamp(14px,3vw,20px);font-size:.82rem;font-weight:600;color:var(--cream);
+  text-shadow:0 1px 8px rgba(0,0,0,.55)}
+.yt-lite iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* --- El video en la seccion "El pueblo" del inicio ----------- */
+.about-video{margin-top:clamp(46px,6vw,72px)}
+.about-video-head{max-width:660px;margin:0 0 22px}
+.about-video-head h3{font-family:Fraunces,Georgia,serif;color:var(--forest);
+  font-size:clamp(1.4rem,3.2vw,2rem);margin:0 0 8px}
+.about-video-head p{color:var(--ink-mut);font-size:1rem;margin:0}
+.about-video .yt-lite{max-width:980px}
+.about-video-pie{max-width:980px;margin:12px 0 0;font-size:.83rem;color:var(--ink-mut)}
+
+/* --- La cita del himno pasa a ser un enlace ------------------
+   Eran <div>; ahora son <span> dentro de un <a>, asi que hay que
+   devolverles el display:block. */
+a.vquote{display:block;text-decoration:none;color:inherit;
+  border-radius:var(--r-md);padding:10px;transition:transform .35s var(--ease)}
+a.vquote:hover{transform:translateY(-4px)}
+a.vquote:focus-visible{outline:3px solid var(--gold-soft);outline-offset:5px}
+.about-visual .vquote .q,.about-visual .vquote .qs{display:block}
+.vquote .q-cta{display:inline-block;margin-top:20px;font-size:.8rem;font-weight:800;
+  letter-spacing:.05em;color:var(--cream);border-bottom:1.5px solid var(--gold-soft);
+  padding-bottom:3px;transition:color .25s,border-color .25s}
+a.vquote:hover .q-cta{color:var(--gold-soft)}
+
+@media(max-width:760px){
+  .himno-letra{padding:24px 18px}
+  .yt-pie{font-size:.75rem;padding:11px 14px}
+}
+
+/* La cita crecio al ganar el enlace "Ver el himno completo": en movil ya no
+   cabe en la caja de 16/10 y .about-visual{overflow:hidden} la recortaba
+   (medido a 375px: 227px de contenido en 210px de caja). Debajo de 980 la
+   caja deja de tener proporcion fija y crece con el texto. */
+@media(max-width:980px){
+  .about-visual{aspect-ratio:auto;min-height:min(56vw,300px);padding:34px 24px}
+}

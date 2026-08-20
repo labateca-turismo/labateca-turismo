@@ -74,6 +74,47 @@ function initVideos() {
 }
 
 /* ============================================================
+   ▶️ YOUTUBE DIFERIDO — el visitante decide cuando contactar a Google.
+   Hasta que no toca play, la pagina solo pide la miniatura a i.ytimg.com;
+   ni cookies ni el reproductor entero. Al tocar, se inserta el iframe de
+   youtube-nocookie.com. Mismo criterio que initVideos() con Cloudinary:
+   nada pesado en la carga inicial.
+   El video NO se copia: sigue viviendo en el canal de quien lo publico y
+   las reproducciones se le cuentan a el.
+   ============================================================ */
+function initYouTube() {
+  document.querySelectorAll('.yt-lite[data-yt]').forEach(caja => {
+    const id = caja.getAttribute('data-yt');
+    if (!id || caja.dataset.ready) return;
+    caja.dataset.ready = '1';
+
+    /* maxresdefault no existe en videos viejos y YouTube responde con un
+       gris de 120x90 en vez de un 404: por eso se mide el ancho. */
+    const prueba = new Image();
+    const pon = url => { caja.style.backgroundImage = 'url("' + url + '")'; };
+    prueba.onload  = () => pon(prueba.naturalWidth > 200
+      ? 'https://i.ytimg.com/vi/' + id + '/maxresdefault.jpg'
+      : 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg');
+    prueba.onerror = () => pon('https://i.ytimg.com/vi/' + id + '/hqdefault.jpg');
+    prueba.src = 'https://i.ytimg.com/vi/' + id + '/maxresdefault.jpg';
+
+    caja.addEventListener('click', () => {
+      if (caja.classList.contains('cargado')) return;
+      caja.classList.add('cargado');
+      const f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id +
+              '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+      f.title = caja.getAttribute('data-yt-title') || 'Video';
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      f.setAttribute('allowfullscreen', '');
+      caja.innerHTML = '';
+      caja.appendChild(f);
+    });
+  });
+}
+
+/* ============================================================
    📍 DATOS DE LUGARES — cargados desde data/places.json
    El array se llena en init() vía fetch.
    Schema: id, categoria, verified, coordsApprox, lat, lng,
@@ -220,6 +261,13 @@ const I18N = {
     fact2_t:"Café de altura", fact2_d:"Junto con Toledo, tierra de café orgánico tipo exportación.",
     fact3_t:"Herencia colonial", fact3_d:"Templo de Nuestra Señora de las Angustias y parque principal.",
     quote:"“De verdes altares se visten tus cerros, figurando murallas de recio color.”", quote_src:"— Himno de Labateca",
+    quote_cta:"Ver el himno completo →",
+    quote_aria:"Ver el himno de Labateca completo: letra y video",
+    about_video_play:"Reproducir el video de Labateca en YouTube",
+    about_video_t:"Labateca en video",
+    about_video_d:"Un recorrido corto por el pueblo, sus calles y su paisaje, grabado por la Alcaldía Municipal.",
+    about_video_cap:"«Labateca es calidad de vida» · Alcaldía de Labateca",
+    about_video_nota:"Video del canal de YouTube de la Alcaldía de Labateca. No se copia aquí: al tocar play se abre el reproductor de YouTube y la reproducción se le cuenta al municipio.",
     places_eyebrow:"Qué visitar", places_title:"Lugares para descubrir",
     places_sub:"Filtra por categoría, guarda tus favoritos ♥ y arma tu ruta. Toca \"Cómo llegar\" para abrir Google Maps.",
     rutas_eyebrow:"Planes listos", rutas_title:"Rutas sugeridas",
@@ -348,6 +396,13 @@ const I18N = {
     fact2_t:"Highland coffee", fact2_d:"Alongside Toledo, a land of organic export-grade coffee.",
     fact3_t:"Colonial heritage", fact3_d:"Our Lady of Sorrows church and the main square.",
     quote:"“Your hills dress in green altars, shaping walls of mighty color.”", quote_src:"— Anthem of Labateca",
+    quote_cta:"Read the full anthem →",
+    quote_aria:"Read the full anthem of Labateca: lyrics and video",
+    about_video_play:"Play the Labateca video on YouTube",
+    about_video_t:"Labateca on video",
+    about_video_d:"A short tour of the town, its streets and its landscape, filmed by the Municipal Government.",
+    about_video_cap:"“Labateca is quality of life” · Municipality of Labateca",
+    about_video_nota:"Video from the YouTube channel of the Municipality of Labateca. It is not copied here: pressing play opens the YouTube player and the view is counted for the municipality.",
     places_eyebrow:"What to see", places_title:"Places to discover",
     places_sub:"Filter by category, save your favorites ♥ and build your route. Tap \"Directions\" to open Google Maps.",
     rutas_eyebrow:"Ready-made plans", rutas_title:"Suggested routes",
@@ -2479,6 +2534,7 @@ function init(){
   try { updateBadges();  } catch(e) { console.warn('updateBadges',e);  }
   try { wireLinks();     } catch(e) { console.warn('wireLinks',e);     }
   try { initVideos();    } catch(e) { console.warn('initVideos',e);    }
+  try { initYouTube();   } catch(e) { console.warn('initYouTube',e);   }
   try { loadVisitCounter(); } catch(e) { console.warn('loadVisitCounter',e); }
   try { loadWeather();   } catch(e) { console.warn('loadWeather',e);   }
   // Mapa real = iframe de Google My Maps. Se carga SOLO cuando la sección del mapa
