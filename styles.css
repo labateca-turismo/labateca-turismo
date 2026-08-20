@@ -1358,7 +1358,11 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
   color:var(--forest);margin:0 0 4px}
 .vv-rol{color:var(--gold-text);font-weight:600;font-size:.97rem;margin:0 0 18px}
 .vv-persona-txt .pb-texto{max-width:64ch}
-.vv-retrato{margin:0;position:sticky;top:96px}
+/* SIN position:sticky. Era puro adorno (el retrato acompanaba al bajar) y
+   los elementos pegados se dibujan en una CAPA APARTE del compositor. En la
+   maquina de Jose esa capa se pintaba y el resto de la pagina no: era la
+   unica foto que veia. Nada que valga un fallo de repintado. */
+.vv-retrato{margin:0}
 .vv-retrato img{width:100%;height:auto;display:block;border-radius:var(--r-md);
   box-shadow:var(--shadow-md)}
 .vv-retrato figcaption{margin-top:10px;font-size:.87rem;color:var(--ink-mut);font-style:italic}
