@@ -2568,3 +2568,87 @@ if ('serviceWorker' in navigator) {
 }
 
 init();
+
+/* ============================================================
+   VISOR DE FOLIOS DEL ACTA DE 1623
+   Lo usan pueblo.html (mosaico + destacados) y historia/auto-1623.html
+   (el boton "ver el original" al lado de cada marca de folio).
+   Si la pagina no trae #acVisor, no hace nada.
+   ============================================================ */
+(function(){
+  var visor = document.getElementById('acVisor');
+  if (!visor) return;
+
+  var img    = document.getElementById('acVisorImg');
+  var elFol  = document.getElementById('acVisorFolio');
+  var elTit  = document.getElementById('acVisorTit');
+  var elDesc = document.getElementById('acVisorDesc');
+  var link   = document.getElementById('acVisorLink');
+
+  /* El orden de navegacion sale del mosaico si lo hay; si no, de los
+     botones que acompanan a la transcripcion. Las tarjetas destacadas
+     repiten folios del mosaico, asi que no entran en el orden. */
+  var lista = [].slice.call(document.querySelectorAll('.ac-mosaico .ac-hoja'));
+  if (!lista.length) lista = [].slice.call(document.querySelectorAll('.doc-folio-facs'));
+
+  var i = 0, abridor = null;
+
+  function pinta(b){
+    if (!b) return;
+    img.src = b.dataset.full;
+    img.alt = 'Folio ' + b.dataset.folio + ' del auto de poblacion de 1623';
+    elFol.textContent  = 'Folio ' + b.dataset.folio;
+    elTit.textContent  = b.dataset.tit  || '';
+    elDesc.textContent = b.dataset.desc || '';
+    if (b.dataset.ancla) {
+      link.href = '/historia/auto-1623.html#' + b.dataset.ancla;
+      link.hidden = false;
+    } else {
+      link.hidden = true;
+    }
+  }
+
+  function abre(b){
+    var pos = lista.indexOf(b);
+    if (pos === -1) {
+      /* una tarjeta destacada: busca su folio en el orden del mosaico */
+      for (var k = 0; k < lista.length; k++) {
+        if (lista[k].dataset.folio === b.dataset.folio) { pos = k; break; }
+      }
+    }
+    i = pos === -1 ? 0 : pos;
+    pinta(lista.length ? lista[i] : b);
+    abridor = b;
+    visor.hidden = false;
+    document.body.style.overflow = 'hidden';
+    visor.querySelector('.ac-cerrar').focus();
+  }
+
+  function cierra(){
+    visor.hidden = true;
+    document.body.style.overflow = '';
+    img.src = '';
+    if (abridor) { abridor.focus(); abridor = null; }
+  }
+
+  function mueve(d){
+    if (lista.length < 2) return;
+    i = (i + d + lista.length) % lista.length;
+    pinta(lista[i]);
+  }
+
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.ac-hoja, .ac-card, .doc-folio-facs');
+    if (b) { abre(b); return; }
+    if (e.target.closest('.ac-visor-fondo, .ac-cerrar')) { cierra(); return; }
+    if (e.target.closest('.ac-nav--ant')) { mueve(-1); return; }
+    if (e.target.closest('.ac-nav--sig')) { mueve(1);  return; }
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (visor.hidden) return;
+    if (e.key === 'Escape')     { cierra(); }
+    if (e.key === 'ArrowLeft')  { mueve(-1); }
+    if (e.key === 'ArrowRight') { mueve(1); }
+  });
+})();
