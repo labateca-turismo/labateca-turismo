@@ -1407,13 +1407,19 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
        contactos. Las fotos vienen en vertical y horizontal mezcladas, y
        recortarlas todas iguales les quitaria justo lo que tienen. ------- */
 .vv-h3{font-family:Fraunces,Georgia,serif;font-size:1.7rem;color:var(--forest);margin:52px 0 6px}
-.vv-galeria{columns:3;column-gap:16px;max-width:var(--maxw);margin:26px auto 0;padding:0 24px}
-.vv-galeria figure{break-inside:avoid;margin:0 0 16px;background:var(--paper);
-  border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;
+/* CUADRICULA, no multicolumna. columns:3 es el modo menos predecible del
+   CSS y arrastra fallos de pintado y de carga diferida; ademas dejaba la
+   galeria en 2.949 px de alto en un telefono. Con tarjetas 4:3 iguales
+   queda pareja, corta y sin sorpresas. */
+.vv-galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:16px;max-width:var(--maxw);margin:26px auto 0;padding:0 24px}
+.vv-galeria figure{margin:0;background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--r-md);overflow:hidden;display:flex;flex-direction:column;
   transition:transform .25s var(--ease),box-shadow .25s}
 .vv-galeria figure:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
-.vv-galeria img{width:100%;height:auto;display:block}
-.vv-galeria figcaption{padding:11px 14px 13px;font-size:.87rem;color:var(--ink-mut);line-height:1.5}
+.vv-galeria img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.vv-galeria figcaption{padding:11px 14px 13px;font-size:.87rem;color:var(--ink-mut);
+  line-height:1.5;flex:1}
 
 /* --- Invitacion a proponer gente ---------------------------------------- */
 .vv-invita{margin-top:26px;padding:26px 28px;background:var(--cream-2);
@@ -1424,7 +1430,6 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
   .vv-persona{grid-template-columns:1fr;gap:28px}
   .vv-retrato{position:static;max-width:420px}
   .vv-corto-cuerpo{grid-template-columns:1fr;gap:26px}
-  .vv-galeria{columns:2}
 }
 @media(max-width:760px){
   .nav-bus{padding:0;width:42px;height:42px;justify-content:center;border-radius:50%}
@@ -1435,7 +1440,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
   .vv-corto{padding:24px 20px;border-radius:var(--r-md)}
   .vv-corto-cab h3{font-size:1.9rem}
   .vv-persona h3{font-size:1.6rem}
-  .vv-galeria{columns:1;padding:0 18px}
+  .vv-galeria{gap:13px;padding:0 18px}
   .vv-ancha figcaption{padding:0 18px}
   .vv-play-btn{width:60px;height:60px}
   .vv-play-btn svg{width:27px;height:27px}
@@ -1478,7 +1483,11 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
    /viva mide ~9.400 px en un telefono: sin esto, las fotos de rodaje quedan
    a seis pantallas de scroll y nadie las encuentra. El scroll-margin evita
    que el ancla quede debajo del encabezado fijo. */
-.vv-indice-barra{background:var(--cream);border-bottom:1px solid var(--line)}
+/* position+z-index: los elementos posicionados se pintan ENCIMA de los
+   estaticos aunque vayan despues en el HTML. Esta franja era el unico
+   bloque estatico entre secciones con position:relative. */
+.vv-indice-barra{background:var(--cream);border-bottom:1px solid var(--line);
+  position:relative;z-index:2}
 .vv-indice{max-width:var(--maxw);margin:0 auto;padding:20px 24px;
   display:flex;flex-wrap:wrap;align-items:center;gap:10px}
 .vv-indice span{font-size:.72rem;font-weight:800;letter-spacing:.09em;
