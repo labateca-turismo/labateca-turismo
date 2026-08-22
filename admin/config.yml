@@ -187,6 +187,39 @@ collections:
                   - { label: "Español", name: "es", widget: string, hint: "Ej: Cascadas y páramo · 15 años de experiencia" }
                   - { label: "Inglés",  name: "en", widget: string }
 
+  # ─── CONDUCTORES ──────────────────────────────────────────
+  - name: "conductores_data"
+    label: "Conductores"
+    description: "Transportistas intermunicipales y municipales/veredales. Solo agregar a quien haya firmado la autorización de datos del formato en papel."
+    files:
+      - label: "Todos los conductores"
+        name: "conductores"
+        file: "data/conductores.json"
+        format: json
+        fields:
+          - { label: "Versión", name: "version", widget: hidden, default: "1.0" }
+          - label: "Conductores"
+            name: "conductores"
+            widget: list
+            label_singular: "Conductor"
+            summary: "{{fields.nombre}} ({{fields.tipo}})"
+            fields:
+              - { label: "ID único", name: "id", widget: string, hint: "Solo minúsculas, sin espacios. Ej: juan-perez" }
+              - label: "Tipo"
+                name: "tipo"
+                widget: select
+                options:
+                  - { label: "Intermunicipal", value: "intermunicipal" }
+                  - { label: "Municipal / veredal", value: "municipal" }
+              - { label: "Nombre completo", name: "nombre", widget: string }
+              - { label: "WhatsApp", name: "whatsapp", widget: string, hint: "Formato internacional sin +. Ej: 573001234567" }
+              - { label: "Vehículo y capacidad", name: "vehiculo", widget: string, required: false }
+              - { label: "Rutas o zonas", name: "rutas", widget: string, required: false }
+              - { label: "Tarifa aprox.", name: "tarifa", widget: string, required: false }
+              - { label: "Horario disponible", name: "horario", widget: string, required: false }
+              - { label: "Notas", name: "notas", widget: text, required: false }
+              - { label: "¿Firmó la autorización de datos?", name: "verified", widget: boolean, default: true, hint: "No marcar si no hay autorización firmada del formato en papel." }
+
   # ─── RUTAS TEMÁTICAS ─────────────────────────────────────
   - name: "rutas_data"
     label: "Rutas temáticas"
