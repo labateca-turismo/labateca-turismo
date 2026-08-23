@@ -1615,4 +1615,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/lugar/pre-exequiales-la-piedad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/pre-exequiales-la-piedad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/pre-exequiales-la-piedad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/pre-exequiales-la-piedad"/>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/en/place/pre-exequiales-la-piedad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/pre-exequiales-la-piedad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/pre-exequiales-la-piedad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/pre-exequiales-la-piedad"/>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

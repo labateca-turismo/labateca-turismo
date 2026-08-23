@@ -1,5 +1,5 @@
 {
-  "version": "1.7",
+  "version": "1.8",
   "lugares": [
     {
       "id": "templo",
@@ -8,8 +8,8 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 509,
-      "mapaY": 358,
+      "mapaX": 510,
+      "mapaY": 357,
       "telefono": "",
       "nombre": {
         "es": "Parroquia Nuestra Señora de las Angustias",
@@ -96,8 +96,8 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 531,
-      "mapaY": 360,
+      "mapaX": 532,
+      "mapaY": 359,
       "telefono": "",
       "nombre": {
         "es": "Nuestra Señora de las Angustias — Patrona",
@@ -160,7 +160,7 @@
       "lat": 7.3002463,
       "lng": -72.4963025,
       "mapaX": 466,
-      "mapaY": 335,
+      "mapaY": 334,
       "telefono": "",
       "nombre": {
         "es": "Cementerio (Camposanto) de Labateca",
@@ -222,8 +222,8 @@
       "coordsApprox": false,
       "lat": 7.2997576,
       "lng": -72.494551,
-      "mapaX": 485,
-      "mapaY": 407,
+      "mapaX": 484,
+      "mapaY": 408,
       "telefono": "573213496226",
       "nombre": {
         "es": "Servicios Parroquiales y Documentos",
@@ -270,7 +270,7 @@
       "coordsApprox": false,
       "lat": 7.2996816,
       "lng": -72.49452,
-      "mapaX": 509,
+      "mapaX": 510,
       "mapaY": 376,
       "telefono": "",
       "nombre": {
@@ -338,9 +338,9 @@
       "coordsApprox": false,
       "lat": 7.300327,
       "lng": -72.494867,
-      "mapaX": 503,
-      "mapaY": 343,
-      "telefono": "573214592514",
+      "mapaX": 504,
+      "mapaY": 342,
+      "telefono": "573219592514",
       "nombre": {
         "es": "Intrínseco — Restaurante, Café y Bar",
         "en": "Intrínseco — Restaurant, Café & Bar"
@@ -407,7 +407,7 @@
       "lat": 7.3005894,
       "lng": -72.4950748,
       "mapaX": 462,
-      "mapaY": 390,
+      "mapaY": 391,
       "telefono": "",
       "telFijo": "576015948500",
       "nombre": {
@@ -460,8 +460,8 @@
       "coordsApprox": false,
       "lat": 7.30017,
       "lng": -72.494824,
-      "mapaX": 464,
-      "mapaY": 361,
+      "mapaX": 461,
+      "mapaY": 359,
       "telefono": "573123047048",
       "nombre": {
         "es": "Siscatagua A.P.C. — Acueducto y Alcantarillado",
@@ -538,8 +538,8 @@
       "coordsApprox": false,
       "lat": 7.300346,
       "lng": -72.49487,
-      "mapaX": 486,
-      "mapaY": 344,
+      "mapaX": 485,
+      "mapaY": 343,
       "telefono": "584168475520",
       "nombre": {
         "es": "Criss Studio — Uñas y Belleza",
@@ -854,7 +854,7 @@
       "lat": 7.2990524,
       "lng": -72.4949041,
       "mapaX": 495,
-      "mapaY": 354,
+      "mapaY": 353,
       "telefono": "573118913433",
       "nombre": {
         "es": "Fama y Charcutería El Corral",
@@ -911,8 +911,8 @@
       "coordsApprox": false,
       "lat": 7.29917,
       "lng": -72.494704,
-      "mapaX": 498,
-      "mapaY": 385,
+      "mapaX": 505,
+      "mapaY": 389,
       "telefono": "573222834876",
       "nombre": {
         "es": "Automercado Karen",
@@ -1105,7 +1105,7 @@
       "coordsApprox": false,
       "lat": 7.2987856,
       "lng": -72.4940529,
-      "mapaX": 459,
+      "mapaX": 458,
       "mapaY": 404,
       "telefono": "573212849284",
       "nombre": {
@@ -1235,7 +1235,7 @@
       "coordsApprox": false,
       "lat": 7.297209,
       "lng": -72.496575,
-      "mapaX": 445,
+      "mapaX": 444,
       "mapaY": 407,
       "telefono": "573108566143",
       "nombre": {
@@ -1309,7 +1309,7 @@
       "lat": 7.300349,
       "lng": -72.494849,
       "mapaX": 448,
-      "mapaY": 356,
+      "mapaY": 355,
       "telefono": "573123047768",
       "nombre": {
         "es": "Frikarnes",
@@ -1372,7 +1372,7 @@
       "lat": 7.298875,
       "lng": -72.494026,
       "mapaX": 472,
-      "mapaY": 400,
+      "mapaY": 401,
       "telefono": "573115576386",
       "nombre": {
         "es": "Siste Hogar",
@@ -1439,7 +1439,7 @@
       "coordsApprox": false,
       "lat": 7.299908,
       "lng": -72.494747,
-      "mapaX": 439,
+      "mapaX": 438,
       "mapaY": 376,
       "telefono": "573153331207",
       "nombre": {
@@ -1502,7 +1502,7 @@
       "coordsApprox": false,
       "lat": 7.3005588,
       "lng": -72.4949505,
-      "mapaX": 436,
+      "mapaX": 435,
       "mapaY": 362,
       "correo": "labatecanortedesan@registraduria.gov.co",
       "nombre": {
@@ -1556,7 +1556,7 @@
       "lat": 7.298304,
       "lng": -72.493737,
       "mapaX": 497,
-      "mapaY": 413,
+      "mapaY": 414,
       "telefono": "573212675678",
       "nombre": {
         "es": "Sofi Burger",
@@ -1743,8 +1743,8 @@
       "coordsApprox": false,
       "lat": 7.299932,
       "lng": -72.494973,
-      "mapaX": 441,
-      "mapaY": 393,
+      "mapaX": 440,
+      "mapaY": 394,
       "telefono": "573104036102",
       "nombre": {
         "es": "Papelería y Variedades Martha Sánchez",
@@ -1942,7 +1942,7 @@
       "coordsApprox": false,
       "lat": 7.299447,
       "lng": -72.494141,
-      "mapaX": 534,
+      "mapaX": 535,
       "mapaY": 388,
       "telefono": "573123504567",
       "nombre": {
@@ -2015,8 +2015,8 @@
       "coordsApprox": false,
       "lat": 7.30023,
       "lng": -72.494266,
-      "mapaX": 519,
-      "mapaY": 367,
+      "mapaX": 520,
+      "mapaY": 366,
       "telefono": "573106803058",
       "nombre": {
         "es": "Heladería Nápoles",
@@ -2088,7 +2088,7 @@
       "coordsApprox": false,
       "lat": 7.300002,
       "lng": -72.49379,
-      "mapaX": 546,
+      "mapaX": 547,
       "mapaY": 381,
       "nombre": {
         "es": "Juzgado Promiscuo Municipal de Labateca",
@@ -2500,8 +2500,8 @@
       "coordsApprox": false,
       "lat": 7.299931881265672,
       "lng": -72.49471127546606,
-      "mapaX": 487,
-      "mapaY": 377,
+      "mapaX": 486,
+      "mapaY": 370,
       "nombre": {
         "es": "SuperGiros",
         "en": "SuperGiros"
@@ -2553,7 +2553,7 @@
       "lat": 7.300103,
       "lng": -72.49476,
       "mapaX": 475,
-      "mapaY": 383,
+      "mapaY": 382,
       "telefono": "573138048438",
       "nombre": {
         "es": "La Esquinita del Sabor",
@@ -2776,8 +2776,8 @@
       "coordsApprox": false,
       "lat": 7.299401,
       "lng": -72.494427,
-      "mapaX": 497,
-      "mapaY": 399,
+      "mapaX": 496,
+      "mapaY": 400,
       "telefono": "573202435050",
       "nombre": {
         "es": "La Tienda de Ivancho",
@@ -3303,7 +3303,7 @@
       "lat": 7.298932,
       "lng": -72.49408,
       "mapaX": 498,
-      "mapaY": 441,
+      "mapaY": 442,
       "telefono": "573208491055",
       "nombre": {
         "es": "Frutas y Verduras",
@@ -3693,7 +3693,7 @@
       "lat": 7.298705,
       "lng": -72.494589,
       "mapaX": 486,
-      "mapaY": 435,
+      "mapaY": 436,
       "telefono": "573227784070",
       "nombre": {
         "es": "Barber Shop Labateca",
@@ -4475,7 +4475,7 @@
       "lat": 7.298958,
       "lng": -72.494096,
       "mapaX": 485,
-      "mapaY": 421,
+      "mapaY": 422,
       "telefono": "573208168572",
       "nombre": {
         "es": "Variedades Mafe",
@@ -4548,7 +4548,7 @@
       "lat": 7.298942,
       "lng": -72.494086,
       "mapaX": 498,
-      "mapaY": 427,
+      "mapaY": 428,
       "telefono": "573224001508",
       "nombre": {
         "es": "Sonia Villamizar — Salón de Belleza",
@@ -4892,8 +4892,8 @@
       "coordsApprox": false,
       "lat": 7.300187,
       "lng": -72.494393,
-      "mapaX": 498,
-      "mapaY": 368,
+      "mapaX": 500,
+      "mapaY": 367,
       "telefono": "573213708777",
       "nombre": {
         "es": "Varimania — Cafetería, Heladería y Variedades",
@@ -4975,8 +4975,8 @@
       "coordsApprox": false,
       "lat": 7.299134,
       "lng": -72.494693,
-      "mapaX": 485,
-      "mapaY": 393,
+      "mapaX": 483,
+      "mapaY": 394,
       "telefono": "573114041267",
       "nombre": {
         "es": "La Villa de las Flores",
@@ -5287,8 +5287,8 @@
       "coordsApprox": false,
       "lat": 7.299987,
       "lng": -72.494894,
-      "mapaX": 475,
-      "mapaY": 369,
+      "mapaX": 472,
+      "mapaY": 367,
       "telefono": "573112875551",
       "nombre": {
         "es": "Cooperacafé — Cooperativa de Caficultores del Catatumbo",
@@ -5360,8 +5360,8 @@
       "coordsApprox": false,
       "lat": 7.299857,
       "lng": -72.495088,
-      "mapaX": 463,
-      "mapaY": 376,
+      "mapaX": 462,
+      "mapaY": 377,
       "telefono": "573113460089",
       "nombre": {
         "es": "Comité de Cafeteros — Labateca",
@@ -5415,11 +5415,11 @@
       "id": "centro-de-salud",
       "categoria": "servicios",
       "verified": true,
-      "coordsApprox": true,
-      "lat": 7.29955,
-      "lng": -72.4953,
+      "coordsApprox": false,
+      "lat": 7.299372,
+      "lng": -72.495055,
       "mapaX": 450,
-      "mapaY": 383,
+      "mapaY": 384,
       "telFijo": "573219269652",
       "nombre": {
         "es": "Centro de Salud Labateca — IPS",
@@ -5466,6 +5466,64 @@
         {
           "es": "El aviso de urgencias pegado en la puerta: servicio 24 horas y el teléfono para llamar, que no recibe WhatsApp.",
           "en": "The emergency notice on the door: 24-hour service and the number to call, which does not take WhatsApp."
+        }
+      ]
+    },
+    {
+      "id": "pre-exequiales-la-piedad",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299485,
+      "lng": -72.494455,
+      "mapaX": 492,
+      "mapaY": 383,
+      "telefono": "573115286436",
+      "nombre": {
+        "es": "Pre Exequiales Caminos La Piedad",
+        "en": "Caminos La Piedad Funeral Services"
+      },
+      "desc": {
+        "es": "Servicios exequiales y planes de previsión en el casco urbano. Ocupa un local sobre la calle, con la sala de velación al fondo: paneles de listón de madera, un frontal de mármol iluminado con apliques cálidos, el catafalco, el atril y los cirios. Adelante hay una sala de espera con asientos y un cuadro de la crucifixión. Lo atiende Jhon Quintero.",
+        "en": "Funeral services and prepaid plans in the town center. It occupies a shopfront on the street, with the wake room at the back: slatted wood panelling, a lit marble front with warm sconces, the catafalque, the lectern and the candle stands. At the front there is a waiting room with seating and a painting of the crucifixion. Run by Jhon Quintero."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, a una cuadra del parque principal. Es el local de puerta ancha con el número 3-15 sobre la entrada y la fachada blanca con franja azul.",
+        "en": "In the town center, a block from the main square. It is the wide-doored premises with the number 3-15 above the entrance and a white facade with a blue band."
+      },
+      "dist": {
+        "es": "A 100 m del parque principal",
+        "en": "100 m from the main square"
+      },
+      "tiempo": {
+        "es": "Martes a domingo, 8:00 a. m. – 2:00 p. m.",
+        "en": "Tuesday to Sunday, 8:00 a.m. – 2:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "La oficina atiende de martes a domingo hasta las 2:00 p. m.; para lo urgente, escriba o llame al WhatsApp a cualquier hora.",
+        "en": "The office is open Tuesday to Sunday until 2:00 p.m.; for anything urgent, call or message the WhatsApp number at any time."
+      },
+      "fotos": [
+        "labateca/pre-exequiales-la-piedad-01",
+        "labateca/pre-exequiales-la-piedad-02",
+        "labateca/pre-exequiales-la-piedad-03"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada sobre la calle, con la puerta ancha abierta y el número 3-15 sobre la entrada.",
+          "en": "The street frontage, with its wide door open and the number 3-15 above the entrance."
+        },
+        {
+          "es": "La sala de velación: el frontal de mármol iluminado entre paneles de listón de madera, con el catafalco, el atril y los cirios.",
+          "en": "The wake room: the lit marble front between slatted wood panels, with the catafalque, lectern and candle stands."
+        },
+        {
+          "es": "La sala de espera, con los asientos y el cuadro de la crucifixión.",
+          "en": "The waiting room, with its seating and the painting of the crucifixion."
         }
       ]
     }
