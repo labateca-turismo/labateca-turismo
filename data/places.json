@@ -1,5 +1,5 @@
 {
-  "version": "1.6",
+  "version": "1.7",
   "lugares": [
     {
       "id": "templo",
@@ -8,7 +8,7 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 507,
+      "mapaX": 509,
       "mapaY": 358,
       "telefono": "",
       "nombre": {
@@ -96,8 +96,8 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 529,
-      "mapaY": 361,
+      "mapaX": 531,
+      "mapaY": 360,
       "telefono": "",
       "nombre": {
         "es": "Nuestra Señora de las Angustias — Patrona",
@@ -159,8 +159,8 @@
       "coordsApprox": false,
       "lat": 7.3002463,
       "lng": -72.4963025,
-      "mapaX": 465,
-      "mapaY": 338,
+      "mapaX": 466,
+      "mapaY": 335,
       "telefono": "",
       "nombre": {
         "es": "Cementerio (Camposanto) de Labateca",
@@ -223,7 +223,7 @@
       "lat": 7.2997576,
       "lng": -72.494551,
       "mapaX": 485,
-      "mapaY": 404,
+      "mapaY": 407,
       "telefono": "573213496226",
       "nombre": {
         "es": "Servicios Parroquiales y Documentos",
@@ -270,8 +270,8 @@
       "coordsApprox": false,
       "lat": 7.2996816,
       "lng": -72.49452,
-      "mapaX": 504,
-      "mapaY": 372,
+      "mapaX": 509,
+      "mapaY": 376,
       "telefono": "",
       "nombre": {
         "es": "Parque Principal",
@@ -338,8 +338,8 @@
       "coordsApprox": false,
       "lat": 7.300327,
       "lng": -72.494867,
-      "mapaX": 501,
-      "mapaY": 346,
+      "mapaX": 503,
+      "mapaY": 343,
       "telefono": "573214592514",
       "nombre": {
         "es": "Intrínseco — Restaurante, Café y Bar",
@@ -406,8 +406,8 @@
       "coordsApprox": false,
       "lat": 7.3005894,
       "lng": -72.4950748,
-      "mapaX": 463,
-      "mapaY": 388,
+      "mapaX": 462,
+      "mapaY": 390,
       "telefono": "",
       "telFijo": "576015948500",
       "nombre": {
@@ -460,8 +460,8 @@
       "coordsApprox": false,
       "lat": 7.30017,
       "lng": -72.494824,
-      "mapaX": 466,
-      "mapaY": 363,
+      "mapaX": 464,
+      "mapaY": 361,
       "telefono": "573123047048",
       "nombre": {
         "es": "Siscatagua A.P.C. — Acueducto y Alcantarillado",
@@ -538,8 +538,8 @@
       "coordsApprox": false,
       "lat": 7.300346,
       "lng": -72.49487,
-      "mapaX": 487,
-      "mapaY": 349,
+      "mapaX": 486,
+      "mapaY": 344,
       "telefono": "584168475520",
       "nombre": {
         "es": "Criss Studio — Uñas y Belleza",
@@ -853,8 +853,8 @@
       "coordsApprox": false,
       "lat": 7.2990524,
       "lng": -72.4949041,
-      "mapaX": 494,
-      "mapaY": 362,
+      "mapaX": 495,
+      "mapaY": 354,
       "telefono": "573118913433",
       "nombre": {
         "es": "Fama y Charcutería El Corral",
@@ -911,8 +911,8 @@
       "coordsApprox": false,
       "lat": 7.29917,
       "lng": -72.494704,
-      "mapaX": 496,
-      "mapaY": 383,
+      "mapaX": 498,
+      "mapaY": 385,
       "telefono": "573222834876",
       "nombre": {
         "es": "Automercado Karen",
@@ -979,8 +979,8 @@
       "coordsApprox": false,
       "lat": 7.298409,
       "lng": -72.493737,
-      "mapaX": 473,
-      "mapaY": 349,
+      "mapaX": 472,
+      "mapaY": 347,
       "telefono": "573144195716",
       "nombre": {
         "es": "Antojitos",
@@ -1037,8 +1037,8 @@
       "coordsApprox": false,
       "lat": 7.30008,
       "lng": -72.494792,
-      "mapaX": 458,
-      "mapaY": 375,
+      "mapaX": 451,
+      "mapaY": 369,
       "telefono": "573234521624",
       "nombre": {
         "es": "Sistemas UM",
@@ -1105,8 +1105,8 @@
       "coordsApprox": false,
       "lat": 7.2987856,
       "lng": -72.4940529,
-      "mapaX": 460,
-      "mapaY": 402,
+      "mapaX": 459,
+      "mapaY": 404,
       "telefono": "573212849284",
       "nombre": {
         "es": "Antaño Café-Bar",
@@ -1235,8 +1235,8 @@
       "coordsApprox": false,
       "lat": 7.297209,
       "lng": -72.496575,
-      "mapaX": 446,
-      "mapaY": 402,
+      "mapaX": 445,
+      "mapaY": 407,
       "telefono": "573108566143",
       "nombre": {
         "es": "Teca Bar La Barra",
@@ -1308,8 +1308,8 @@
       "coordsApprox": false,
       "lat": 7.300349,
       "lng": -72.494849,
-      "mapaX": 452,
-      "mapaY": 362,
+      "mapaX": 448,
+      "mapaY": 356,
       "telefono": "573123047768",
       "nombre": {
         "es": "Frikarnes",
@@ -1371,8 +1371,8 @@
       "coordsApprox": false,
       "lat": 7.298875,
       "lng": -72.494026,
-      "mapaX": 473,
-      "mapaY": 398,
+      "mapaX": 472,
+      "mapaY": 400,
       "telefono": "573115576386",
       "nombre": {
         "es": "Siste Hogar",
@@ -1439,8 +1439,8 @@
       "coordsApprox": false,
       "lat": 7.299908,
       "lng": -72.494747,
-      "mapaX": 444,
-      "mapaY": 375,
+      "mapaX": 439,
+      "mapaY": 376,
       "telefono": "573153331207",
       "nombre": {
         "es": "Galactic Bar",
@@ -1502,8 +1502,8 @@
       "coordsApprox": false,
       "lat": 7.3005588,
       "lng": -72.4949505,
-      "mapaX": 438,
-      "mapaY": 363,
+      "mapaX": 436,
+      "mapaY": 362,
       "correo": "labatecanortedesan@registraduria.gov.co",
       "nombre": {
         "es": "Registraduría Municipal de Labateca",
@@ -1556,7 +1556,7 @@
       "lat": 7.298304,
       "lng": -72.493737,
       "mapaX": 497,
-      "mapaY": 411,
+      "mapaY": 413,
       "telefono": "573212675678",
       "nombre": {
         "es": "Sofi Burger",
@@ -1623,8 +1623,8 @@
       "coordsApprox": false,
       "lat": 7.3008,
       "lng": -72.495177,
-      "mapaX": 440,
-      "mapaY": 349,
+      "mapaX": 437,
+      "mapaY": 347,
       "telefono": "573124097073",
       "nombre": {
         "es": "Tienda Mixta Cielo Isabella",
@@ -1686,8 +1686,8 @@
       "coordsApprox": true,
       "lat": 7.30056,
       "lng": -72.4949,
-      "mapaX": 456,
-      "mapaY": 349,
+      "mapaX": 458,
+      "mapaY": 346,
       "nombre": {
         "es": "Concejo Municipal de Labateca",
         "en": "Municipal Council of Labateca"
@@ -1743,8 +1743,8 @@
       "coordsApprox": false,
       "lat": 7.299932,
       "lng": -72.494973,
-      "mapaX": 449,
-      "mapaY": 388,
+      "mapaX": 441,
+      "mapaY": 393,
       "telefono": "573104036102",
       "nombre": {
         "es": "Papelería y Variedades Martha Sánchez",
@@ -1806,7 +1806,7 @@
       "coordsApprox": false,
       "lat": 7.299268,
       "lng": -72.494337,
-      "mapaX": 521,
+      "mapaX": 522,
       "mapaY": 396,
       "telefono": "573107963730",
       "nombre": {
@@ -1879,8 +1879,8 @@
       "coordsApprox": false,
       "lat": 7.298665,
       "lng": -72.493742,
-      "mapaX": 557,
-      "mapaY": 432,
+      "mapaX": 558,
+      "mapaY": 433,
       "telefono": "573144490474",
       "nombre": {
         "es": "Isla Mobile — Telefonía y Accesorios",
@@ -1942,7 +1942,7 @@
       "coordsApprox": false,
       "lat": 7.299447,
       "lng": -72.494141,
-      "mapaX": 533,
+      "mapaX": 534,
       "mapaY": 388,
       "telefono": "573123504567",
       "nombre": {
@@ -2015,8 +2015,8 @@
       "coordsApprox": false,
       "lat": 7.30023,
       "lng": -72.494266,
-      "mapaX": 517,
-      "mapaY": 368,
+      "mapaX": 519,
+      "mapaY": 367,
       "telefono": "573106803058",
       "nombre": {
         "es": "Heladería Nápoles",
@@ -2088,7 +2088,7 @@
       "coordsApprox": false,
       "lat": 7.300002,
       "lng": -72.49379,
-      "mapaX": 545,
+      "mapaX": 546,
       "mapaY": 381,
       "nombre": {
         "es": "Juzgado Promiscuo Municipal de Labateca",
@@ -2140,7 +2140,7 @@
       "coordsApprox": false,
       "lat": 7.298773,
       "lng": -72.493981,
-      "mapaX": 534,
+      "mapaX": 535,
       "mapaY": 416,
       "telefono": "573205777829",
       "nombre": {
@@ -2208,8 +2208,8 @@
       "coordsApprox": false,
       "lat": 7.299147,
       "lng": -72.494282,
-      "mapaX": 509,
-      "mapaY": 403,
+      "mapaX": 510,
+      "mapaY": 404,
       "telefono": "573144922534",
       "nombre": {
         "es": "Almacén Tecno-Agro",
@@ -2344,7 +2344,7 @@
       "coordsApprox": false,
       "lat": 7.299102,
       "lng": -72.494192,
-      "mapaX": 533,
+      "mapaX": 534,
       "mapaY": 402,
       "telefono": "573168725118",
       "nombre": {
@@ -2500,8 +2500,8 @@
       "coordsApprox": false,
       "lat": 7.299931881265672,
       "lng": -72.49471127546606,
-      "mapaX": 486,
-      "mapaY": 374,
+      "mapaX": 487,
+      "mapaY": 377,
       "nombre": {
         "es": "SuperGiros",
         "en": "SuperGiros"
@@ -2552,8 +2552,8 @@
       "coordsApprox": false,
       "lat": 7.300103,
       "lng": -72.49476,
-      "mapaX": 472,
-      "mapaY": 377,
+      "mapaX": 475,
+      "mapaY": 383,
       "telefono": "573138048438",
       "nombre": {
         "es": "La Esquinita del Sabor",
@@ -2777,7 +2777,7 @@
       "lat": 7.299401,
       "lng": -72.494427,
       "mapaX": 497,
-      "mapaY": 397,
+      "mapaY": 399,
       "telefono": "573202435050",
       "nombre": {
         "es": "La Tienda de Ivancho",
@@ -3171,8 +3171,8 @@
       "coordsApprox": false,
       "lat": 7.298937,
       "lng": -72.494087,
-      "mapaX": 510,
-      "mapaY": 431,
+      "mapaX": 511,
+      "mapaY": 432,
       "telefono": "573134966445",
       "nombre": {
         "es": "Restaurante Doña María",
@@ -3303,7 +3303,7 @@
       "lat": 7.298932,
       "lng": -72.49408,
       "mapaX": 498,
-      "mapaY": 439,
+      "mapaY": 441,
       "telefono": "573208491055",
       "nombre": {
         "es": "Frutas y Verduras",
@@ -3366,7 +3366,7 @@
       "lat": 7.298426,
       "lng": -72.494158,
       "mapaX": 511,
-      "mapaY": 445,
+      "mapaY": 446,
       "telefono": "573208080167",
       "nombre": {
         "es": "Droguería Central",
@@ -3428,7 +3428,7 @@
       "coordsApprox": false,
       "lat": 7.2987,
       "lng": -72.493926,
-      "mapaX": 546,
+      "mapaX": 547,
       "mapaY": 423,
       "telefono": "573185619179",
       "nombre": {
@@ -3615,7 +3615,7 @@
       "lat": 7.299067,
       "lng": -72.494904,
       "mapaX": 460,
-      "mapaY": 416,
+      "mapaY": 418,
       "telefono": "573112805177",
       "nombre": {
         "es": "La Económica JY",
@@ -3693,7 +3693,7 @@
       "lat": 7.298705,
       "lng": -72.494589,
       "mapaX": 486,
-      "mapaY": 432,
+      "mapaY": 435,
       "telefono": "573227784070",
       "nombre": {
         "es": "Barber Shop Labateca",
@@ -3745,8 +3745,8 @@
       "coordsApprox": false,
       "lat": 7.300102,
       "lng": -72.494544,
-      "mapaX": 480,
-      "mapaY": 361,
+      "mapaX": 482,
+      "mapaY": 357,
       "telefono": "573209083700",
       "nombre": {
         "es": "Supermercado Batecano",
@@ -3960,7 +3960,7 @@
       "coordsApprox": false,
       "lat": 7.295545,
       "lng": -72.493841,
-      "mapaX": 522,
+      "mapaX": 523,
       "mapaY": 424,
       "telefono": "",
       "nombre": {
@@ -4135,7 +4135,7 @@
       "lat": 7.298758,
       "lng": -72.49401,
       "mapaX": 510,
-      "mapaY": 417,
+      "mapaY": 418,
       "telefono": "573152908856",
       "nombre": {
         "es": "Restaurante Son Delicias",
@@ -4202,7 +4202,7 @@
       "coordsApprox": false,
       "lat": 7.299483,
       "lng": -72.494037,
-      "mapaX": 520,
+      "mapaX": 522,
       "mapaY": 382,
       "telefono": "573123506776",
       "nombre": {
@@ -4338,7 +4338,7 @@
       "coordsApprox": false,
       "lat": 7.29922,
       "lng": -72.494269,
-      "mapaX": 522,
+      "mapaX": 523,
       "mapaY": 410,
       "telefono": "573232158303",
       "nombre": {
@@ -4474,8 +4474,8 @@
       "coordsApprox": false,
       "lat": 7.298958,
       "lng": -72.494096,
-      "mapaX": 486,
-      "mapaY": 418,
+      "mapaX": 485,
+      "mapaY": 421,
       "telefono": "573208168572",
       "nombre": {
         "es": "Variedades Mafe",
@@ -4548,7 +4548,7 @@
       "lat": 7.298942,
       "lng": -72.494086,
       "mapaX": 498,
-      "mapaY": 425,
+      "mapaY": 427,
       "telefono": "573224001508",
       "nombre": {
         "es": "Sonia Villamizar — Salón de Belleza",
@@ -4814,6 +4814,658 @@
         {
           "es": "La vista desde el patio: Labateca abajo en el valle, con la torre de la iglesia entre los tejados y la montaña cerrando el fondo.",
           "en": "The view from the yard: Labateca down in the valley, the church tower among the roofs and the mountain closing the horizon."
+        }
+      ]
+    },
+    {
+      "id": "mil-motivos",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299579,
+      "lng": -72.495708,
+      "mapaX": 429,
+      "mapaY": 386,
+      "telefono": "573134426243",
+      "nombre": {
+        "es": "Mil Motivos",
+        "en": "Mil Motivos"
+      },
+      "desc": {
+        "es": "Miscelánea de barrio en el casco urbano, de esas que resuelven lo que uno no sabía que necesitaba. En un solo local hay flores artificiales y detalles para regalo, bisutería y papelería en las vitrinas, un estante de abarrotes y licores, una nevera de bebidas frías, dulces, mecato y hasta pocillos pintados. La atiende su propietaria, Ana Ilce Calvo Molina, y abre todos los días del año sin cerrar al mediodía.",
+        "en": "A neighborhood variety shop in the town center — the kind that solves what you did not know you needed. Under one roof there are artificial flowers and gift items, costume jewelry and stationery in the display cases, a shelf of groceries and spirits, a cooler of cold drinks, sweets, snacks and even painted mugs. Run by its owner, Ana Ilce Calvo Molina, and open every day of the year with no midday closing."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, a menos de dos cuadras del parque principal. Se reconoce por la puerta metálica y las flores de colores que se ven desde la calle.",
+        "en": "In the town center, less than two blocks from the main square. Look for the metal door and the colorful flowers visible from the street."
+      },
+      "dist": {
+        "es": "A 150 m del parque principal",
+        "en": "150 m from the main square"
+      },
+      "tiempo": {
+        "es": "Todos los días, 7:00 a. m. – 7:00 p. m.",
+        "en": "Every day, 7:00 a.m. – 7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Es de las pocas que no cierra al mediodía ni los domingos, así que sirve para lo que se le olvidó a última hora: una vela, un cuaderno, un regalo de afán o algo frío para el camino.",
+        "en": "One of the few shops that closes neither at midday nor on Sundays, so it is the place for whatever you forgot at the last minute: a candle, a notebook, a quick gift or something cold for the road."
+      },
+      "fotos": [
+        "labateca/mil-motivos-01",
+        "labateca/mil-motivos-02",
+        "labateca/mil-motivos-03",
+        "labateca/mil-motivos-04",
+        "labateca/mil-motivos-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "La entrada desde la calle, con el andén de baldosa roja y el local abierto de par en par.",
+          "en": "The entrance from the street, with its red-tiled sidewalk and the shop wide open."
+        },
+        {
+          "es": "Las flores artificiales sobre los estantes y las vitrinas con bisutería, papelería y detalles para regalo.",
+          "en": "Artificial flowers on the shelves and display cases with costume jewelry, stationery and gift items."
+        },
+        {
+          "es": "El estante de abarrotes y licores, con la vitrina de dulces y panadería al frente.",
+          "en": "The shelf of groceries and spirits, with the sweets and bakery case in front."
+        },
+        {
+          "es": "La nevera de bebidas frías, el exhibidor de dulces y los pocillos pintados.",
+          "en": "The cooler of cold drinks, the candy display and the painted mugs."
+        },
+        {
+          "es": "El exhibidor de mecato junto a la puerta, para llevar algo de camino.",
+          "en": "The snack rack by the door, for something to take along the way."
+        }
+      ]
+    },
+    {
+      "id": "varimania",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300187,
+      "lng": -72.494393,
+      "mapaX": 498,
+      "mapaY": 368,
+      "telefono": "573213708777",
+      "nombre": {
+        "es": "Varimania — Cafetería, Heladería y Variedades",
+        "en": "Varimania — Café, Ice Cream & Variety Store"
+      },
+      "desc": {
+        "es": "Cinco negocios en uno, y el aviso de la fachada los enumera sin pena: cafetería, repostería, heladería, papelería y variedades. Ocupa los bajos de una casa de dos pisos en ladrillo a la vista, frente al parque principal, con balcones de reja y aleros de teja roja sobre las ventanas. Adentro hay mesas para sentarse, un congelador de helados, una vitrina de postres y bebidas, estantes de peluches y variedades, y una fotocopiadora al fondo. La atiende su propietaria, Gladys Amparo Capacho Peñaloza.",
+        "en": "Five businesses in one, and the sign over the door lists them without apology: café, pastry shop, ice cream parlor, stationer and variety store. It occupies the ground floor of a two-story exposed-brick house facing the main square, with iron balconies and red-tiled eaves over the windows. Inside there are tables to sit at, an ice cream freezer, a case of desserts and drinks, shelves of plush toys and general goods, and a photocopier at the back. Run by its owner, Gladys Amparo Capacho Peñaloza."
+      },
+      "comoLlegar": {
+        "es": "Frente al parque principal, en la casa de ladrillo a la vista de dos pisos. El aviso junto a la puerta enumera cafetería, repostería, heladería, papelería y variedades.",
+        "en": "Facing the main square, in the two-story exposed-brick house. The sign beside the door lists café, pastry, ice cream, stationery and variety goods."
+      },
+      "dist": {
+        "es": "Frente al parque principal",
+        "en": "Facing the main square"
+      },
+      "tiempo": {
+        "es": "Martes a domingo, 8:00 a. m. – 12:30 p. m. y 2:30 – 6:30 p. m.",
+        "en": "Tuesday to Sunday, 8:00 a.m. – 12:30 p.m. and 2:30 – 6:30 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Siéntese en una de las mesas del frente: con las puertas abiertas se ve el parque entero y la parroquia de las Angustias enmarcada en el vano. Cierra los lunes y al mediodía, de 12:30 a 2:30.",
+        "en": "Take one of the front tables: with the doors open you see the whole square and Our Lady of Sorrows parish framed in the doorway. Closed on Mondays and at midday, 12:30 to 2:30."
+      },
+      "fotos": [
+        "labateca/varimania-01",
+        "labateca/varimania-02",
+        "labateca/varimania-03",
+        "labateca/varimania-04",
+        "labateca/varimania-05",
+        "labateca/varimania-06",
+        "labateca/varimania-07",
+        "labateca/varimania-08"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada de ladrillo a la vista, con el aviso que enumera cafetería, repostería, heladería, papelería y variedades.",
+          "en": "The exposed-brick facade, with the sign listing café, pastry, ice cream, stationery and variety goods."
+        },
+        {
+          "es": "El mostrador principal: vitrina de accesorios, estantes de peluches y mecato, y la fotocopiadora al fondo.",
+          "en": "The main counter: a case of accessories, shelves of plush toys and snacks, and the photocopier at the back."
+        },
+        {
+          "es": "Los estantes de variedades, con peluches, juguetes y artículos de aseo hasta el techo.",
+          "en": "The variety shelves, stacked to the ceiling with plush toys, toys and household goods."
+        },
+        {
+          "es": "La góndola del centro del local, con productos de belleza y cuidado personal.",
+          "en": "The central gondola, with beauty and personal-care products."
+        },
+        {
+          "es": "La vitrina de postres y bebidas, con los vasos de la casa listos sobre el mesón.",
+          "en": "The dessert and drinks case, with the house cups ready on the counter."
+        },
+        {
+          "es": "El congelador de helados, en el rincón de la heladería.",
+          "en": "The ice cream freezer, in the parlor corner."
+        },
+        {
+          "es": "La zona de mesas, con la decoración de corazones y el televisor encendido.",
+          "en": "The seating area, with heart decorations and the TV on."
+        },
+        {
+          "es": "La vista desde una de las mesas: por las puertas abiertas se ven el parque principal y las torres de la parroquia Nuestra Señora de las Angustias.",
+          "en": "The view from one of the tables: through the open doors, the main square and the towers of Our Lady of Sorrows parish."
+        }
+      ]
+    },
+    {
+      "id": "villa-de-las-flores",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299134,
+      "lng": -72.494693,
+      "mapaX": 485,
+      "mapaY": 393,
+      "telefono": "573114041267",
+      "nombre": {
+        "es": "La Villa de las Flores",
+        "en": "La Villa de las Flores"
+      },
+      "desc": {
+        "es": "Restaurante de comida casera en el casco urbano, a media cuadra del parque principal. Abre a las 6:30 de la mañana, así que sirve tanto para desayunar antes de salir a la montaña como para almorzar de vuelta. En la carta hay bandeja paisa, carnes sudadas con papa criolla, pastas y, la que vale el viaje, el camuro guisado: el camuro es la oveja criolla de tierra caliente, de carne más suave que la de cordero, y aquí lo sirven guisado con arroz, yuca, tajada y ensalada. La atiende su propietaria, Rosa Julia Flores Jaimes.",
+        "en": "A home-cooking restaurant in the town center, half a block from the main square. It opens at 6:30 in the morning, so it works both for breakfast before heading into the mountains and for lunch on the way back. The menu runs to bandeja paisa, braised meats with criolla potatoes, pasta and — the one worth the trip — camuro guisado: camuro is the creole hair sheep of the warm country, milder than lamb, served here stewed with rice, cassava, fried plantain and salad. Run by its owner, Rosa Julia Flores Jaimes."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, a media cuadra del parque principal. Se entra por una puerta azul con zócalo de baldosa.",
+        "en": "In the town center, half a block from the main square. The entrance is a blue door with a tiled base."
+      },
+      "dist": {
+        "es": "A 80 m del parque principal",
+        "en": "80 m from the main square"
+      },
+      "tiempo": {
+        "es": "Todos los días, 6:30 a. m. – 3:00 p. m.",
+        "en": "Every day, 6:30 a.m. – 3:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Pida el camuro guisado: es el plato que no va a encontrar fácil fuera de esta región. Si va con hambre de caminata, la bandeja paisa. Cierra a las 3:00 p. m., así que no lo deje para la tarde.",
+        "en": "Order the camuro guisado: it is the dish you will not easily find outside this region. If you are hiking-hungry, go for the bandeja paisa. It closes at 3:00 p.m., so do not leave it for the afternoon."
+      },
+      "fotos": [
+        "labateca/villa-de-las-flores-01",
+        "labateca/villa-de-las-flores-02",
+        "labateca/villa-de-las-flores-03",
+        "labateca/villa-de-las-flores-04",
+        "labateca/villa-de-las-flores-05",
+        "labateca/villa-de-las-flores-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "La entrada desde la calle, con la puerta azul y el zócalo de baldosa.",
+          "en": "The entrance from the street, with its blue door and tiled base."
+        },
+        {
+          "es": "El comedor, con las mesas y las sillas de madera naranja y la luz que entra del patio.",
+          "en": "The dining room, with orange wooden tables and chairs and light coming in from the patio."
+        },
+        {
+          "es": "La bandeja paisa: frijoles, arroz, carne molida, chicharrón, huevo, tajada, aguacate y jugo natural.",
+          "en": "The bandeja paisa: beans, rice, ground beef, pork crackling, egg, fried plantain, avocado and fresh juice."
+        },
+        {
+          "es": "El camuro guisado, con arroz, yuca, tajada y ensalada. El camuro es la oveja criolla de la región.",
+          "en": "Camuro guisado, with rice, cassava, fried plantain and salad. Camuro is the region's creole sheep."
+        },
+        {
+          "es": "Carne sudada con papa criolla, arroz y ensalada, uno de los almuerzos del día.",
+          "en": "Braised beef with criolla potatoes, rice and salad — one of the daily lunches."
+        },
+        {
+          "es": "Pasta con carne desmechada y tajadas de plátano maduro.",
+          "en": "Pasta with shredded beef and slices of ripe plantain."
+        }
+      ]
+    },
+    {
+      "id": "variedades-emanuel",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.297466,
+      "lng": -72.497513,
+      "mapaX": 350,
+      "mapaY": 443,
+      "telefono": "573229698047",
+      "nombre": {
+        "es": "Variedades Emanuel",
+        "en": "Variedades Emanuel"
+      },
+      "desc": {
+        "es": "Almacén de variedades para la casa, en la parte baja del pueblo. Aquí no se viene por un antojo sino por lo que hay que reponer: colchones, maletas y bolsos, sombrillas, telas, cobijas, papelería y útiles escolares, juguetes, globos y artículos de fiesta, y el mecato de siempre en la vitrina de la entrada. Un tapete de «Bienvenido» en la puerta y pasillos estrechos entre estantes llenos hasta arriba. Lo atiende su propietario, Jesús Cañas.",
+        "en": "A household variety store in the lower part of town. You do not come here on a whim but for what needs replacing: mattresses, suitcases and bags, umbrellas, fabrics, blankets, stationery and school supplies, toys, balloons and party goods, and the usual snacks in the case by the door. A Welcome mat at the entrance and narrow aisles between shelves stacked to the top. Run by its owner, Jesús Cañas."
+      },
+      "comoLlegar": {
+        "es": "En la parte baja del casco urbano, a unas cuatro cuadras del parque principal, bajando por la calle principal.",
+        "en": "In the lower part of the town center, about four blocks from the main square, heading down the main street."
+      },
+      "dist": {
+        "es": "A 450 m del parque principal",
+        "en": "450 m from the main square"
+      },
+      "tiempo": {
+        "es": "Todos los días, 7:00 a. m. – 12:30 p. m. y 1:30 – 7:00 p. m.",
+        "en": "Every day, 7:00 a.m. – 12:30 p.m. and 1:30 – 7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Es el sitio para lo voluminoso —un colchón, una maleta, una cobija— que no cabe en las tiendas del parque. Cierra al mediodía, de 12:30 a 1:30.",
+        "en": "This is the place for the bulky things — a mattress, a suitcase, a blanket — that do not fit in the shops around the square. Closed at midday, 12:30 to 1:30."
+      },
+      "fotos": [
+        "labateca/variedades-emanuel-01",
+        "labateca/variedades-emanuel-02",
+        "labateca/variedades-emanuel-03",
+        "labateca/variedades-emanuel-04",
+        "labateca/variedades-emanuel-05",
+        "labateca/variedades-emanuel-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "La entrada del almacén desde la calle, con los avisos de la vitrina.",
+          "en": "The store entrance from the street, with signs in the window."
+        },
+        {
+          "es": "Las sombrillas abiertas junto a la puerta y el tapete de «Bienvenido».",
+          "en": "Open umbrellas by the door and the Welcome mat."
+        },
+        {
+          "es": "Los colchones apilados y las maletas de viaje al fondo del local.",
+          "en": "Stacked mattresses and travel suitcases at the back of the store."
+        },
+        {
+          "es": "El estante de papelería, telas y artículos de fiesta, con los globos colgados.",
+          "en": "The shelf of stationery, fabrics and party goods, with balloons hanging."
+        },
+        {
+          "es": "La vitrina de juguetes y mecato junto al mostrador.",
+          "en": "The case of toys and snacks beside the counter."
+        },
+        {
+          "es": "Vista general del interior, con los pasillos entre estantes llenos hasta arriba.",
+          "en": "A general view of the interior, with aisles between shelves stacked to the top."
+        }
+      ]
+    },
+    {
+      "id": "abastos-mi-carulla",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.297129,
+      "lng": -72.498272,
+      "mapaX": 312,
+      "mapaY": 452,
+      "telefono": "573188435200",
+      "nombre": {
+        "es": "Abastos Mi Carulla — donde Libardo",
+        "en": "Abastos Mi Carulla — donde Libardo"
+      },
+      "desc": {
+        "es": "Granero grande en la parte baja del pueblo, de los que surten a media Labateca. Tiene frutas y verduras con báscula y congelador a la entrada, estantes largos de abarrotes, enlatados y productos de aseo, una sección de papelería y cuadernos, y una zona de mesas para sentarse un momento. La administra Marylin Ramírez y abre desde las 6:30 de la mañana hasta las 8:30 de la noche, todos los días.",
+        "en": "A large grocery in the lower part of town, one of those that supplies half of Labateca. Fruit and vegetables with a scale and freezer at the entrance, long shelves of groceries, canned goods and cleaning products, a stationery and notebook section, and a seating area to rest a moment. Managed by Marylin Ramírez, open from 6:30 in the morning to 8:30 at night, every day."
+      },
+      "comoLlegar": {
+        "es": "En la parte baja del casco urbano, sobre la vía principal. Se reconoce por el local esquinero de fachada blanca, iluminado hasta tarde.",
+        "en": "In the lower part of the town center, on the main road. Look for the white-fronted corner shop, lit up until late."
+      },
+      "dist": {
+        "es": "A 550 m del parque principal",
+        "en": "550 m from the main square"
+      },
+      "tiempo": {
+        "es": "Todos los días, 6:30 a. m. – 8:30 p. m.",
+        "en": "Every day, 6:30 a.m. – 8:30 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Es el surtido más completo de ese lado del pueblo y el que más tarde cierra: sirve para el mercado grande antes de subir a una vereda, o para lo que se necesite ya entrada la noche.",
+        "en": "It carries the widest range on that side of town and closes the latest: good for stocking up before heading to a vereda, or for whatever you need well into the evening."
+      },
+      "fotos": [
+        "labateca/abastos-mi-carulla-01",
+        "labateca/abastos-mi-carulla-02",
+        "labateca/abastos-mi-carulla-03",
+        "labateca/abastos-mi-carulla-04",
+        "labateca/abastos-mi-carulla-05",
+        "labateca/abastos-mi-carulla-06",
+        "labateca/abastos-mi-carulla-07",
+        "labateca/abastos-mi-carulla-08"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada al caer la tarde, con las luces encendidas y el cielo todavía azul.",
+          "en": "The storefront at dusk, lights on and the sky still blue."
+        },
+        {
+          "es": "La zona de mesas junto a la entrada, para sentarse un momento.",
+          "en": "The seating area by the entrance, to rest a moment."
+        },
+        {
+          "es": "Las frutas y verduras del día, con la báscula y el congelador.",
+          "en": "The day's fruit and vegetables, with the scale and freezer."
+        },
+        {
+          "es": "La vitrina del mostrador y los estantes del fondo.",
+          "en": "The counter case and the shelves at the back."
+        },
+        {
+          "es": "Los estantes de abarrotes, ordenados por producto de arriba abajo.",
+          "en": "The grocery shelves, arranged by product from top to bottom."
+        },
+        {
+          "es": "Enlatados, granos y productos de aseo en el pasillo central.",
+          "en": "Canned goods, grains and cleaning products in the central aisle."
+        },
+        {
+          "es": "La sección de aseo y limpieza, con la planta que cuelga sobre el pasillo.",
+          "en": "The cleaning section, with the plant hanging over the aisle."
+        },
+        {
+          "es": "El rincón de papelería: cuadernos, útiles escolares y artículos de oficina.",
+          "en": "The stationery corner: notebooks, school supplies and office items."
+        }
+      ]
+    },
+    {
+      "id": "tienda-mixta-julia",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.297384,
+      "lng": -72.497733,
+      "mapaX": 336,
+      "mapaY": 445,
+      "telefono": "573114749354",
+      "nombre": {
+        "es": "Tienda Mixta Julia",
+        "en": "Tienda Mixta Julia"
+      },
+      "desc": {
+        "es": "Tienda mixta de las de verdad: la que tiene de todo un poco y abre a las seis de la mañana. Frutas y verduras en canastillas a la entrada, nevera de bebidas frías, pan del día, mecato, abarrotes, aseo y cuidado personal, y hasta una pared de herramientas y artículos de ferretería. Al fondo hay unas mesas para tomarse algo. La atiende su propietario, Miguel Ángel Capacho Rozo.",
+        "en": "A proper mixed shop: a bit of everything, open from six in the morning. Fruit and vegetables in crates by the door, a cooler of cold drinks, the day's bread, snacks, groceries, cleaning and personal-care products, and even a wall of tools and hardware. At the back there are a few tables to sit and have something. Run by its owner, Miguel Ángel Capacho Rozo."
+      },
+      "comoLlegar": {
+        "es": "En la parte baja del casco urbano, a unas cuatro cuadras del parque principal. De noche se reconoce fácil porque es el local iluminado sobre la vía.",
+        "en": "In the lower part of the town center, about four blocks from the main square. At night it is easy to spot as the lit shopfront on the road."
+      },
+      "dist": {
+        "es": "A 480 m del parque principal",
+        "en": "480 m from the main square"
+      },
+      "tiempo": {
+        "es": "Todos los días, 6:00 a. m. – 8:00 p. m.",
+        "en": "Every day, 6:00 a.m. – 8:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Es la primera que abre en ese sector, a las 6:00 a. m., así que sirve para el desayuno o el avío antes de arrancar temprano. Y si se le rompió algo en el camino, tiene la pared de herramientas.",
+        "en": "It is the first to open in that area, at 6:00 a.m., so it works for breakfast or trail supplies before an early start. And if something broke along the way, there is the wall of tools."
+      },
+      "fotos": [
+        "labateca/tienda-mixta-julia-01",
+        "labateca/tienda-mixta-julia-02",
+        "labateca/tienda-mixta-julia-03",
+        "labateca/tienda-mixta-julia-04",
+        "labateca/tienda-mixta-julia-05",
+        "labateca/tienda-mixta-julia-06",
+        "labateca/tienda-mixta-julia-07",
+        "labateca/tienda-mixta-julia-08"
+      ],
+      "fotosCap": [
+        {
+          "es": "La tienda de noche, iluminada sobre la vía, con la montaña detrás.",
+          "en": "The shop at night, lit up on the roadside, with the mountain behind."
+        },
+        {
+          "es": "Las canastillas de frutas y verduras junto a la entrada.",
+          "en": "Crates of fruit and vegetables beside the entrance."
+        },
+        {
+          "es": "La nevera de bebidas frías y la vitrina del pan del día.",
+          "en": "The cooler of cold drinks and the case of the day's bread."
+        },
+        {
+          "es": "El exhibidor de mecato y, arriba, la pared de herramientas y ferretería.",
+          "en": "The snack display and, above it, the wall of tools and hardware."
+        },
+        {
+          "es": "Los estantes de abarrotes, de piso a techo.",
+          "en": "The grocery shelves, floor to ceiling."
+        },
+        {
+          "es": "La sección de aseo y cuidado personal.",
+          "en": "The cleaning and personal-care section."
+        },
+        {
+          "es": "Más estantes de aseo y productos de limpieza en el pasillo del fondo.",
+          "en": "More cleaning-product shelves in the back aisle."
+        },
+        {
+          "es": "Las mesas del fondo, para sentarse a tomar algo.",
+          "en": "The tables at the back, to sit and have something."
+        }
+      ]
+    },
+    {
+      "id": "cooperacafe",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299987,
+      "lng": -72.494894,
+      "mapaX": 475,
+      "mapaY": 369,
+      "telefono": "573112875551",
+      "nombre": {
+        "es": "Cooperacafé — Cooperativa de Caficultores del Catatumbo",
+        "en": "Cooperacafé — Catatumbo Coffee Growers' Cooperative"
+      },
+      "desc": {
+        "es": "El punto donde el café de Labateca se pesa, se analiza y se vende. La Cooperativa de Caficultores del Catatumbo nació en 1980 en Convención, fundada por un grupo de líderes caficultores de la región, y hoy tiene puntos de compra en buena parte de Norte de Santander; este es el de Labateca. El caficultor llega con su carga, le toman una muestra, la trillan en la oficina para medir el factor de rendimiento y le pagan de contado. En el mismo local funciona un almacén de provisión agrícola con fertilizantes, agroquímicos y herramienta. La administra Gabriela Astrid García Luna.",
+        "en": "The place where Labateca's coffee is weighed, graded and sold. The Catatumbo Coffee Growers' Cooperative was founded in 1980 in Convención by a group of the region's grower leaders, and today runs buying points across much of Norte de Santander; this is the Labateca one. A grower arrives with a load, a sample is drawn and hulled in the office to measure the yield factor, and payment is made on the spot. The same premises house an agricultural supply store with fertilizers, agrochemicals and tools. Managed by Gabriela Astrid García Luna."
+      },
+      "comoLlegar": {
+        "es": "Calle 2 n.º 2-14, barrio Divino Niño, a un par de cuadras del parque principal. Se reconoce por el aviso de «Cooperacafé» sobre la puerta y la bodega de bultos al fondo.",
+        "en": "Calle 2 no. 2-14, Divino Niño neighborhood, a couple of blocks from the main square. Look for the Cooperacafé sign over the door and the warehouse of sacks at the back."
+      },
+      "dist": {
+        "es": "A 120 m del parque principal",
+        "en": "120 m from the main square"
+      },
+      "tiempo": {
+        "es": "Martes a sábado, 7:00 a. m. – 12:00 m. y 1:35 – 5:00 p. m.",
+        "en": "Tuesday to Saturday, 7:00 a.m. – 12:00 noon and 1:35 – 5:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Si viaja en cosecha, vale la pena asomarse: ver cómo trillan la muestra y calculan el factor de rendimiento explica en cinco minutos de qué vive el municipio. Cierra domingos y lunes.",
+        "en": "If you are visiting during harvest, it is worth looking in: watching them hull a sample and work out the yield factor explains in five minutes what the town lives on. Closed Sundays and Mondays."
+      },
+      "fotos": [
+        "labateca/cooperacafe-01",
+        "labateca/cooperacafe-02",
+        "labateca/cooperacafe-03",
+        "labateca/cooperacafe-04",
+        "labateca/cooperacafe-05",
+        "labateca/cooperacafe-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada, con el aviso de Cooperacafé sobre la puerta.",
+          "en": "The facade, with the Cooperacafé sign over the door."
+        },
+        {
+          "es": "La bodega, con los bultos de café alineados contra la pared.",
+          "en": "The warehouse, sacks of coffee lined up along the wall."
+        },
+        {
+          "es": "Los bultos apilados y marcados, listos para salir hacia la trilladora.",
+          "en": "Sacks stacked and marked, ready to leave for the mill."
+        },
+        {
+          "es": "La báscula y las bandejas donde se analiza la muestra que trae cada caficultor.",
+          "en": "The scale and the trays where each grower's sample is graded."
+        },
+        {
+          "es": "El café en almendra sobre la zaranda, después de trillar la muestra.",
+          "en": "Green coffee on the sieve, after the sample has been hulled."
+        },
+        {
+          "es": "El afiche del almacén de provisión agrícola: fertilizantes, maquinaria, agroquímicos y otros insumos.",
+          "en": "The agricultural supply store's poster: fertilizers, machinery, agrochemicals and other inputs."
+        }
+      ]
+    },
+    {
+      "id": "comite-cafeteros",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299857,
+      "lng": -72.495088,
+      "mapaX": 463,
+      "mapaY": 376,
+      "telefono": "573113460089",
+      "nombre": {
+        "es": "Comité de Cafeteros — Labateca",
+        "en": "Coffee Growers' Committee — Labateca"
+      },
+      "desc": {
+        "es": "La oficina del gremio cafetero en el municipio, del Comité Departamental de Norte de Santander de la Federación Nacional de Cafeteros. En la Federación se procura el bienestar del caficultor colombiano a través de una efectiva organización gremial, democrática y representativa, y además de representar sus intereses a nivel nacional e internacional, aquí se hacen tres cosas: se desarrolla Extensión Rural, con extensionistas que visitan las fincas y atienden las inquietudes de los productores en la oficina del municipio; se gestionan alianzas y proyectos para el gremio; y se vela por la calidad del café colombiano aplicando la normatividad vigente a todos los procesos del beneficio. Lo atiende Ricardo Sánchez.",
+        "en": "The coffee guild's office in the municipality, part of the Norte de Santander Departmental Committee of the National Federation of Coffee Growers. The Federation works for the wellbeing of Colombian coffee growers through an effective, democratic and representative guild organization; beyond representing their interests nationally and internationally, three things happen here: Rural Extension, with field officers who visit farms and answer growers' questions at the municipal office; the management of partnerships and projects for the guild; and safeguarding the quality of Colombian coffee by applying current standards across every stage of processing. Run by Ricardo Sánchez."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, a un par de cuadras del parque principal. La puerta tiene al lado la placa de la Federación Nacional de Cafeteros de Colombia — Comité Departamental de N. de S.",
+        "en": "In the town center, a couple of blocks from the main square. Beside the door is the plaque of the National Federation of Coffee Growers of Colombia — Norte de Santander Departmental Committee."
+      },
+      "dist": {
+        "es": "A 100 m del parque principal",
+        "en": "100 m from the main square"
+      },
+      "tiempo": {
+        "es": "Sábados 7:00 a. m. – 1:00 p. m. en la oficina · Martes a viernes 7:00 a. m. – 6:00 p. m. en el campo",
+        "en": "Saturdays 7:00 a.m. – 1:00 p.m. at the office · Tuesday to Friday 7:00 a.m. – 6:00 p.m. in the field"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Entre semana el extensionista está en las fincas, no en la oficina: si necesita atención presencial, el sábado por la mañana es el día. Para lo demás, escríbale antes por WhatsApp.",
+        "en": "On weekdays the extension officer is out on the farms, not at the office: if you need to be seen in person, Saturday morning is the day. For anything else, message ahead on WhatsApp."
+      },
+      "fotos": [
+        "labateca/comite-cafeteros-01",
+        "labateca/comite-cafeteros-02",
+        "labateca/comite-cafeteros-03"
+      ],
+      "fotosCap": [
+        {
+          "es": "Un cafetal de Labateca con vista al valle: café bajo sombrío, como se cultiva en el municipio.",
+          "en": "A Labateca coffee grove overlooking the valley: shade-grown coffee, as the municipality farms it."
+        },
+        {
+          "es": "El cafetal en flor bajo los árboles de sombrío, con la montaña cerrando el fondo.",
+          "en": "The grove in blossom beneath the shade trees, with the mountain closing the horizon."
+        },
+        {
+          "es": "Café sembrado bajo guamos altos: el sombrío protege el grano y sostiene el suelo de la ladera.",
+          "en": "Coffee planted under tall guamo trees: the shade protects the bean and holds the hillside soil."
+        }
+      ]
+    },
+    {
+      "id": "centro-de-salud",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": true,
+      "lat": 7.29955,
+      "lng": -72.4953,
+      "mapaX": 450,
+      "mapaY": 383,
+      "telFijo": "573219269652",
+      "nombre": {
+        "es": "Centro de Salud Labateca — IPS",
+        "en": "Labateca Health Center — IPS"
+      },
+      "desc": {
+        "es": "El centro de salud del municipio, la IPS Labateca, adscrita a la E.S.E. Hospital Regional Suroriental. Funciona en una casa blanca de una planta, con zócalo de ladrillo y rejas blancas en las ventanas, y su lema pintado en el frontis: «Nuestro compromiso: su salud». Presta consulta de medicina general y odontología por cita, y tiene servicio de urgencias las 24 horas, todos los días.",
+        "en": "The municipal health center, IPS Labateca, part of the E.S.E. Hospital Regional Suroriental network. It occupies a white single-story house with a brick base and white grilles on the windows, its motto painted on the pediment: 'Our commitment: your health'. It offers general medicine and dental consultations by appointment, and 24-hour emergency care, every day."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, a pocas cuadras del parque principal. Se reconoce por la casa blanca de una planta con el letrero «Centro de Salud Labateca» sobre la puerta.",
+        "en": "In the town center, a few blocks from the main square. Look for the white single-story house with the Centro de Salud Labateca sign over the door."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In town center"
+      },
+      "tiempo": {
+        "es": "Urgencias 24 horas, todos los días · Citas: odontología lunes a viernes 9:00 – 10:00 a. m.; medicina general lunes a viernes 10:00 – 11:00 a. m.",
+        "en": "24-hour emergency care, every day · Appointments: dentistry Monday to Friday 9:00 – 10:00 a.m.; general medicine Monday to Friday 10:00 – 11:00 a.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Para urgencias, llame al 321 926 9652. El aviso de la puerta lo advierte en letra grande: ese número es solo para llamadas, no reciben WhatsApp. Las citas de odontología se piden de 9 a 10 de la mañana y las de medicina general de 10 a 11, de lunes a viernes.",
+        "en": "For emergencies, call 321 926 9652. The sign on the door says it in large letters: that number is for calls only, they do not take WhatsApp. Dental appointments are requested from 9 to 10 a.m. and general medicine from 10 to 11 a.m., Monday to Friday."
+      },
+      "fotos": [
+        "labateca/centro-de-salud-01",
+        "labateca/centro-de-salud-02",
+        "labateca/centro-de-salud-03"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada, con el letrero «Centro de Salud Labateca» y el lema «Nuestro compromiso: su salud».",
+          "en": "The facade, with the Centro de Salud Labateca sign and the motto 'Our commitment: your health'."
+        },
+        {
+          "es": "El costado del edificio sobre la calle, con el zócalo de ladrillo y las rejas blancas.",
+          "en": "The side of the building along the street, with its brick base and white window grilles."
+        },
+        {
+          "es": "El aviso de urgencias pegado en la puerta: servicio 24 horas y el teléfono para llamar, que no recibe WhatsApp.",
+          "en": "The emergency notice on the door: 24-hour service and the number to call, which does not take WhatsApp."
         }
       ]
     }
