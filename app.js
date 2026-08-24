@@ -2243,9 +2243,24 @@ function _variado(n){
    el ranking sigue leyendo la ficha COMPLETA aquí en el navegador, el lugar
    por el que preguntan siempre asciende a detallado. */
 
-/* ~5.280 tokens: el mismo gasto que producción ya venía corriendo sin problema
-   con solo 30 lugares. Es un techo medido, no supuesto. */
-const CTX_PRESUPUESTO = 18000;
+/* ~8.800 tokens. Subido de 18.000 a 30.000 el 24 ago 2026, con 88 lugares.
+
+   Los 18.000 originales se fijaron cuando el sitio tenía 30 lugares y ahí
+   sobraban; con 88 el piso llegó a 16.679 y solo UNA ficha alcanzaba a subir
+   a detalle. Se notaba: a «arma un plan de dos días» el asistente mandaba al
+   visitante al Centro de Salud y a desayunar a una papelería, porque de la
+   línea compacta solo sabe el nombre y la categoría.
+
+   El límite NO es del modelo: llama-3.1-8b-instruct-fast tiene una ventana de
+   128.000 tokens y nuestro directorio entero, con todas las fichas en detalle,
+   son 16.910 tokens — el 13 % de la ventana. Se acaban los datos antes que el
+   contexto. Lo que sí cuesta es lo que sube el visitante desde el celular
+   (22,8 → 37,1 KB por pregunta) y la cuota diaria gratis de Cloudflare.
+
+   30.000 es donde se satura la calidad: medido, con 30.000 el plan de dos días
+   sale limpio y con 57.494 (todo en detalle) no sale mejor, solo pesa el doble.
+   Deja ~30 fichas en detalle y aguanta bastante más de 100 lugares. */
+const CTX_PRESUPUESTO = 30000;
 
 /* "bares" no aparece dentro de "bar", ni "tiendas" dentro de "tienda": el
    buscador compara texto literal. Y la gente escribe en plural justo cuando
@@ -2317,11 +2332,19 @@ function _detalle(p){
    mandar los dos duplica los kilobytes que sube el visitante. */
 function _soloL(m){ const o = {}; o[lang] = (m || {})[lang] || ''; return o; }
 
-/* Lo mínimo para que el lugar EXISTA para el modelo y pueda nombrarlo. */
+/* Lo mínimo para que el lugar EXISTA para el modelo y pueda nombrarlo.
+
+   Ojo con el horario: aquí va CRUDO, sin la aclaración de _horaClara. Esa
+   coletilla —«(lunes a domingo, incluye sábado y domingo)»— son 43 caracteres
+   repetidos en cada uno de los ~43 lugares que dicen «Todos los días»: 1.848
+   caracteres de presupuesto gastados en explicar cuarenta y tres veces algo
+   que las instrucciones del worker ya dicen UNA vez («Si un lugar dice
+   "Todos los días", eso incluye sábados y domingos»). En la ficha detallada
+   sí se conserva, que son pocas y ahí no pesa. */
 function _compacto(p){
   const o = { id:p.id, nombre:_soloL(p.nombre), telefono:p.telefono, desc:{}, tiempo:{} };
   o.desc[lang]   = '[' + (p.categoria || p.cat || '') + ']';
-  o.tiempo[lang] = _horaClara(p);
+  o.tiempo[lang] = (p.tiempo || {})[lang] || '';
   return o;
 }
 
