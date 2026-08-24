@@ -1768,3 +1768,41 @@ a.vquote:hover .q-cta{color:var(--gold-soft)}
   border-radius:99px;padding:8px 18px;font-size:.85rem;font-weight:700;text-decoration:none;
   transition:transform .2s}
 .cond-wa:hover{transform:translateY(-2px)}
+
+/* ============================================================
+   ARCHIVO FOTOGRÁFICO ANTIGUO (/historia/fotos-antiguas)
+   Rejilla de fichas + visor propio de la página.
+   ============================================================ */
+.fa-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin:22px 0 42px}
+.fa-fig{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
+.fa-fig:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.fa-abrir{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;line-height:0}
+.fa-abrir:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+.fa-fig img{width:100%;height:auto;aspect-ratio:5/4;object-fit:contain;display:block;background:var(--cream-2)}
+.fa-fig figcaption{padding:12px 14px 15px;font-size:.83rem;line-height:1.55;color:var(--ink-mut);text-align:left}
+.fa-num{display:inline-block;font-weight:800;font-size:.68rem;letter-spacing:.08em;color:var(--gold-text);
+  background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin-right:7px;vertical-align:1px}
+
+.fa-visor[hidden]{display:none}
+.fa-visor{position:fixed;inset:0;z-index:9998;background:rgba(15,20,17,.95);
+  display:grid;place-items:center;padding:clamp(14px,4vw,40px)}
+.fa-visor-fig{margin:0;max-width:min(96vw,1300px);display:flex;flex-direction:column;gap:14px;align-items:center}
+.fa-visor img{max-width:100%;max-height:72vh;width:auto;height:auto;object-fit:contain;
+  border-radius:6px;box-shadow:var(--shadow-lg);background:var(--cream-2)}
+.fa-visor figcaption{color:var(--cream);font-size:.9rem;line-height:1.6;max-width:70ch;text-align:center;opacity:.92}
+.fa-visor figcaption .fa-num{background:transparent;color:var(--gold-soft);border-color:rgba(246,239,227,.35)}
+.fa-cerrar,.fa-nav{position:absolute;background:rgba(246,239,227,.12);color:var(--cream);border:0;
+  border-radius:999px;cursor:pointer;display:grid;place-items:center;transition:background .2s}
+.fa-cerrar:hover,.fa-nav:hover{background:rgba(246,239,227,.28)}
+.fa-cerrar:focus-visible,.fa-nav:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.fa-cerrar{top:16px;right:16px;width:44px;height:44px;font-size:1.15rem}
+.fa-nav{top:50%;transform:translateY(-50%);width:48px;height:48px;font-size:2rem;line-height:0;padding-bottom:5px}
+.fa-ant{left:12px}
+.fa-sig{right:12px}
+@media(max-width:640px){
+  .fa-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+  .fa-fig figcaption{padding:10px 11px 12px;font-size:.78rem}
+  .fa-visor img{max-height:62vh}
+  .fa-nav{width:40px;height:40px;font-size:1.6rem}
+}
