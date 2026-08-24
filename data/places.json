@@ -5526,6 +5526,670 @@
           "en": "The waiting room, with its seating and the painting of the crucifixion."
         }
       ]
+    },
+    {
+      "id": "am-bar",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299188,
+      "lng": -72.4943,
+      "mapaX": 516,
+      "mapaY": 407,
+      "telefono": "573186217423",
+      "nombre": {
+        "es": "AM-BAR Café",
+        "en": "AM-BAR Café"
+      },
+      "desc": {
+        "es": "Bar y café del casco urbano de Labateca, a pocos pasos del Parque Principal. Abre de noche: la fachada se reconoce por el aviso de neón azul sobre la puerta. Adentro hay dos ambientes —un salón con mesas y bancas de madera y un rincón de sofás con mesa baja—, piso de baldosa amarilla y vinotinto, guirnaldas de luces en el techo y un muro negro con un letrero de neón. Propietario: Leonardo Hernández. Atiende viernes, sábado y domingo, de 3:00 p. m. a 12:00 a. m.",
+        "en": "Bar and café in the town center of Labateca, a few steps from the Main Square. It opens at night: you'll know the front by the blue neon sign above the door. Inside there are two areas — a room with wooden tables and benches, and a corner with sofas around a low table — yellow-and-burgundy tiled floors, string lights across the ceiling and a black wall with a neon sign. Owner: Leonardo Hernández. Open Friday, Saturday and Sunday, 3:00 p.m. to 12:00 a.m."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, a pocas cuadras del Parque Principal. Se llega a pie en minutos desde cualquier punto del pueblo.",
+        "en": "In the town center, a few blocks from the Main Square. A few minutes' walk from anywhere in town."
+      },
+      "dist": {
+        "es": "Casco urbano",
+        "en": "Town center"
+      },
+      "tiempo": {
+        "es": "Viernes a domingo, 3:00 p. m. – 12:00 a. m.",
+        "en": "Friday to Sunday, 3:00 p.m. – 12:00 a.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Es sitio de noche y de fin de semana: entre semana no abre. Si vas en grupo, el rincón de los sofás es el que se llena primero. WhatsApp: 318 621 7423.",
+        "en": "It's a night and weekend spot — closed on weekdays. If you're in a group, the sofa corner is the one that fills up first. WhatsApp: +57 318 621 7423."
+      },
+      "fotos": [
+        "labateca/am-bar-01",
+        "labateca/am-bar-02",
+        "labateca/am-bar-03",
+        "labateca/am-bar-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada de noche, con el aviso de neón de AM-BAR encendido sobre las dos puertas.",
+          "en": "The front at night, with the AM-BAR neon sign lit above the two doorways."
+        },
+        {
+          "es": "Vista general del salón: sofás, mesas de madera, la barra al fondo y luces colgadas del techo.",
+          "en": "General view of the room: sofas, wooden tables, the bar at the back and lights strung from the ceiling."
+        },
+        {
+          "es": "El muro negro del fondo, con un letrero de neón rosado y una columna de listones de madera iluminada.",
+          "en": "The black back wall, with a pink neon sign and a lit column of wooden slats."
+        },
+        {
+          "es": "El rincón de los sofás, con mesa baja de madera y cuadros de cervecería en la pared.",
+          "en": "The sofa corner, with a low wooden table and beer-themed prints on the wall."
+        }
+      ]
+    },
+    {
+      "id": "bike-rafa",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.311156,
+      "lng": -72.494954,
+      "telefono": "573114813901",
+      "nombre": {
+        "es": "Estadero Bike Rafa",
+        "en": "Bike Rafa Roadside Stop"
+      },
+      "desc": {
+        "es": "Estadero de carretera a poco más de un kilómetro al norte del pueblo, sobre la vía y junto al cauce del río. La casa está pintada al estilo de los pueblos cafeteros: zócalo amarillo, rosado y azul, puertas y ventanas de colores, hojas colgando del alero. Bajo el corredor hay una vitrina de mostrador, mesas redondas y sillas; atrás, un jardín con girasoles de lata en la cerca, un columpio de madera y árboles frutales. Afuera, junto a la carretera, hay rines y llantas pintados haciendo de jardinera al pie de una bandera de Colombia. Propietario: Rafael Nilson Parada Vargas.",
+        "en": "A roadside stop a little over a kilometer north of town, right on the highway beside the riverbed. The house is painted in the style of Colombia's coffee towns: yellow, pink and blue skirting, brightly colored doors and windows, leaves hanging from the eaves. Under the porch there's a display counter, round tables and chairs; behind it, a garden with tin sunflowers on the fence, a wooden swing and fruit trees. Out front by the road, painted wheel rims and tires serve as planters at the foot of a Colombian flag. Owner: Rafael Nilson Parada Vargas."
+      },
+      "comoLlegar": {
+        "es": "Sobre la carretera, a ~1,3 km al norte del Parque Principal de Labateca. Se llega en carro, en moto o caminando por la vía.",
+        "en": "On the main road, about 1.3 km north of Labateca's Main Square. Reachable by car, motorbike or on foot along the road."
+      },
+      "dist": {
+        "es": "~1,3 km al norte del pueblo",
+        "en": "~1.3 km north of town"
+      },
+      "tiempo": {
+        "es": "Lun–vie 7:00 a. m. – 5:00 p. m. · Fines de semana y festivos 9:00 a. m. – 8:00 p. m.",
+        "en": "Mon–Fri 7:00 a.m. – 5:00 p.m. · Weekends and holidays 9:00 a.m. – 8:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Parada natural para quien sube o baja en bicicleta o en moto: queda justo sobre la vía y abre desde las siete de la mañana entre semana. El jardín de atrás, con el columpio y el río sonando, es el mejor sitio para sentarse. WhatsApp: 311 481 3901.",
+        "en": "A natural stop for anyone riding up or down by bike or motorbike: it sits right on the road and opens at seven in the morning on weekdays. The back garden, with the swing and the river close by, is the best place to sit. WhatsApp: +57 311 481 3901."
+      },
+      "fotos": [
+        "labateca/bike-rafa-01",
+        "labateca/bike-rafa-02",
+        "labateca/bike-rafa-03",
+        "labateca/bike-rafa-04",
+        "labateca/bike-rafa-05",
+        "labateca/bike-rafa-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada con el aviso de Estadero Bike Rafa y el zócalo pintado a la manera de los pueblos cafeteros.",
+          "en": "The front with the Estadero Bike Rafa sign and skirting painted in coffee-town style."
+        },
+        {
+          "es": "La casa vista desde el costado, con el cauce de piedras del río y las montañas al fondo.",
+          "en": "The house seen from the side, with the river's stony bed and the mountains behind."
+        },
+        {
+          "es": "El estadero desde la vía destapada que pasa por el frente.",
+          "en": "The roadside stop seen from the unpaved road that runs past the front."
+        },
+        {
+          "es": "El mostrador bajo el corredor: vitrina, sillas y mesas redondas contra el muro pintado de flores.",
+          "en": "The counter under the porch: display case, chairs and round tables against the flower-painted wall."
+        },
+        {
+          "es": "El jardín de atrás, con girasoles de lata en la cerca, un columpio de madera y árboles frutales.",
+          "en": "The back garden, with tin sunflowers on the fence, a wooden swing and fruit trees."
+        },
+        {
+          "es": "La curva de la carretera frente al estadero, con la bandera de Colombia y las llantas pintadas.",
+          "en": "The bend in the road in front of the stop, with the Colombian flag and painted tires."
+        }
+      ]
+    },
+    {
+      "id": "los-robles",
+      "categoria": "hospedaje",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300113,
+      "lng": -72.494497,
+      "mapaX": 491,
+      "mapaY": 362,
+      "telefono": "573112327066",
+      "nombre": {
+        "es": "Hotel Los Robles",
+        "en": "Hotel Los Robles"
+      },
+      "desc": {
+        "es": "Hotel en una casona de dos plantas frente al Parque Principal, con patio central, balcón corrido de balaustres de madera y pisos de baldosa de colores. Está montado como un pequeño museo del pueblo: por los muros cuelgan retratos al óleo de personajes de Labateca, y debajo de cada uno hay un objeto de otra época —radios de válvulas, un tocadiscos Motorola, una máquina de escribir con su rimero de discos de acetato, una balanza de hierro, una maleta de viaje, un televisor de tubo—. Las habitaciones son sencillas, con cama, mesa de noche y baño. Atiende las 24 horas. Propietario: Óscar Orlando Rozo Parada.",
+        "en": "A hotel in a two-story colonial house facing the Main Square, with a central courtyard, a wooden-balustrade gallery running around the upper floor and colorful tiled floors. It is set up as a small museum of the town: oil portraits of Labateca's local characters hang along the walls, and beneath each one sits an object from another era — valve radios, a Motorola record player, a typewriter with a stack of vinyl LPs, an iron scale, a travel suitcase, a tube television. The rooms are simple, with a bed, bedside table and bathroom. Open 24 hours. Owner: Óscar Orlando Rozo Parada."
+      },
+      "comoLlegar": {
+        "es": "Frente al Parque Principal de Labateca. Desde la puerta se ve el parque y la torre del templo.",
+        "en": "Facing Labateca's Main Square. The park and the church tower are visible from the doorway."
+      },
+      "dist": {
+        "es": "Frente al Parque Principal",
+        "en": "On the Main Square"
+      },
+      "tiempo": {
+        "es": "Atención 24 horas",
+        "en": "Open 24 hours"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Vale la pena recorrer los corredores aunque no te quedes: la colección de retratos y de objetos antiguos es de las cosas más particulares que hay en el pueblo. Reservas por WhatsApp: 311 232 7066.",
+        "en": "Worth walking the galleries even if you're not staying: the collection of portraits and antiques is one of the most singular things in town. Bookings via WhatsApp: +57 311 232 7066."
+      },
+      "fotos": [
+        "labateca/los-robles-01",
+        "labateca/los-robles-02",
+        "labateca/los-robles-03",
+        "labateca/los-robles-04",
+        "labateca/los-robles-05",
+        "labateca/los-robles-06",
+        "labateca/los-robles-07",
+        "labateca/los-robles-08",
+        "labateca/los-robles-09",
+        "labateca/los-robles-10",
+        "labateca/los-robles-11"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada de dos plantas, blanca con pilastras rojas, sobre el andén del Parque Principal.",
+          "en": "The two-story front, white with red pilasters, on the sidewalk of the Main Square."
+        },
+        {
+          "es": "El patio central con el balcón corrido de madera y las mesas del comedor abajo.",
+          "en": "The central courtyard with its wooden gallery above and the dining tables below."
+        },
+        {
+          "es": "La recepción, con la escalera de madera, un televisor de tubo y un burro de cerámica con sombrero.",
+          "en": "The reception, with the wooden staircase, a tube television and a ceramic donkey wearing a hat."
+        },
+        {
+          "es": "Una de las habitaciones: cama sencilla, mesa de noche de madera y piso de baldosa.",
+          "en": "One of the rooms: a single bed, wooden bedside table and tiled floor."
+        },
+        {
+          "es": "La puerta de entrada abierta hacia el Parque Principal y su palma.",
+          "en": "The front door open onto the Main Square and its palm tree."
+        },
+        {
+          "es": "Retrato al óleo titulado «Lucía», junto a una máquina de coser y una maleta antigua.",
+          "en": "An oil portrait titled 'Lucía', beside a sewing machine and an old suitcase."
+        },
+        {
+          "es": "Retrato titulado «Elí» sobre tres radios de válvulas apilados.",
+          "en": "A portrait titled 'Elí' above three stacked valve radios."
+        },
+        {
+          "es": "Retrato de un señor de bigote sobre una grabadora, un VHS y un tocadiscos Motorola.",
+          "en": "A portrait of a man with a moustache above a boombox, a VCR and a Motorola record player."
+        },
+        {
+          "es": "Retrato de una señora de sombrero negro, con una máquina de escribir y un rimero de discos de acetato debajo.",
+          "en": "A portrait of a woman in a black hat, with a typewriter and a stack of vinyl records below."
+        },
+        {
+          "es": "Retrato titulado «Jaimito» sobre una balanza de hierro.",
+          "en": "A portrait titled 'Jaimito' above an iron scale."
+        },
+        {
+          "es": "Un relieve enmarcado de la Última Cena y, debajo, el retrato de un campesino con su vaca.",
+          "en": "A framed relief of the Last Supper and, below it, a portrait of a farmer with his cow."
+        }
+      ]
+    },
+    {
+      "id": "electricos-centro",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299229,
+      "lng": -72.494276,
+      "mapaX": 523,
+      "mapaY": 414,
+      "telefono": "573118099903",
+      "nombre": {
+        "es": "Eléctricos Centro Labateca",
+        "en": "Eléctricos Centro Labateca"
+      },
+      "desc": {
+        "es": "Almacén de materiales eléctricos en el casco urbano, en una casa blanca de portada en arco con marco vinotinto. Vende lo de un almacén del ramo: tableros y cajas de breakers, rollos de cable y alambre, tomas e interruptores, luminarias, tubería conduit y canaleta. Propietario: Julio Carrillo. Abre todos los días, de 7:30 a. m. a 12:00 m. y de 2:00 a 5:00 p. m.",
+        "en": "An electrical supply store in the town center, in a white house with an arched doorway framed in burgundy. It stocks what the trade needs: breaker panels and boxes, cable and wire spools, outlets and switches, light fittings, conduit and trunking. Owner: Julio Carrillo. Open daily, 7:30 a.m. to 12:00 noon and 2:00 to 5:00 p.m."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, a pocas cuadras del Parque Principal. Se llega a pie en minutos.",
+        "en": "In the town center, a few blocks from the Main Square. A few minutes on foot."
+      },
+      "dist": {
+        "es": "Casco urbano",
+        "en": "Town center"
+      },
+      "tiempo": {
+        "es": "Todos los días, 7:30 a. m. – 12:00 m. y 2:00 – 5:00 p. m.",
+        "en": "Daily, 7:30 a.m. – 12:00 noon and 2:00 – 5:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Cierra al mediodía: si vas por un repuesto, cuenta con la franja de 12 a 2. WhatsApp: 311 809 9903.",
+        "en": "It closes at midday: if you need a part, plan around the 12-to-2 break. WhatsApp: +57 311 809 9903."
+      },
+      "fotos": [
+        "labateca/electricos-centro-01",
+        "labateca/electricos-centro-02",
+        "labateca/electricos-centro-03"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada blanca con la portada en arco y el marco vinotinto, con la puerta abierta.",
+          "en": "The white front with its arched doorway framed in burgundy, door open."
+        },
+        {
+          "es": "El mostrador: tableros eléctricos, cajas de breakers, rollos de cable, tomas e interruptores.",
+          "en": "The counter: breaker panels, boxes, cable spools, outlets and switches."
+        },
+        {
+          "es": "Tubería conduit y canaleta apoyadas contra la pared, junto a los rollos de alambre.",
+          "en": "Conduit and trunking leaning against the wall, next to the wire spools."
+        }
+      ]
+    },
+    {
+      "id": "bellavista",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299375,
+      "lng": -72.494233,
+      "mapaX": 530,
+      "mapaY": 392,
+      "telefono": "573208531744",
+      "nombre": {
+        "es": "Bellavista",
+        "en": "Bellavista"
+      },
+      "desc": {
+        "es": "Bar y salón de eventos frente al Parque Principal, en un segundo piso con corredor de columnas y balcón a la calle. El salón es amplio y despejado —mesas y sillas negras sobre piso de granito, cinta de luz turquesa bordeando todo el techo y un mural de una mujer en el muro del fondo—, y es el que alquilan para eventos y celebraciones. La barra está forrada con un aviso antiguo de Ron Viejo de Caldas. Desde la puerta del balcón se ven el parque, las casas y las montañas. Administradora: Anayibe Mónoga Durán.",
+        "en": "A bar and event hall facing the Main Square, on a second floor with a colonnaded walkway and a balcony over the street. The room is large and open — black tables and chairs on a terrazzo floor, a turquoise LED strip running around the whole ceiling and a mural of a woman on the back wall — and it is the space they rent out for events and celebrations. The bar counter is clad with a vintage Ron Viejo de Caldas sign. From the balcony door you can see the park, the rooftops and the mountains. Manager: Anayibe Mónoga Durán."
+      },
+      "comoLlegar": {
+        "es": "Frente al Parque Principal, en el corredor de columnas; se sube por los escalones con pasamanos. Desde el andén se ve la torre del reloj del templo.",
+        "en": "Facing the Main Square, along the colonnaded walkway; go up the steps with the handrail. The church clock tower is visible from the sidewalk."
+      },
+      "dist": {
+        "es": "Frente al Parque Principal",
+        "en": "On the Main Square"
+      },
+      "tiempo": {
+        "es": "Viernes a domingo, 2:00 p. m. – 11:00 p. m.",
+        "en": "Friday to Sunday, 2:00 p.m. – 11:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Se alquila para eventos: es el salón más amplio de los que dan al parque, así que si estás organizando algo en el pueblo, pregunta ahí primero. WhatsApp: 320 853 1744.",
+        "en": "Available to rent for events: it is the largest hall of those facing the park, so if you're organizing something in town, ask here first. WhatsApp: +57 320 853 1744."
+      },
+      "fotos": [
+        "labateca/bellavista-01",
+        "labateca/bellavista-02",
+        "labateca/bellavista-03",
+        "labateca/bellavista-04",
+        "labateca/bellavista-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada: corredor de columnas blancas con zócalo vinotinto y el aviso de Bellavista sobre la puerta; a la izquierda, la torre del reloj del templo.",
+          "en": "The front: white columns with burgundy skirting and the Bellavista sign above the door; to the left, the church clock tower."
+        },
+        {
+          "es": "El salón amplio, con mesas y sillas negras, la cinta de luz turquesa en el techo y el mural del fondo.",
+          "en": "The large hall, with black tables and chairs, the turquoise light strip on the ceiling and the mural at the back."
+        },
+        {
+          "es": "La barra, forrada con un aviso antiguo de Ron Viejo de Caldas, y la estantería de licores detrás.",
+          "en": "The bar, clad with a vintage Ron Viejo de Caldas sign, and the liquor shelving behind it."
+        },
+        {
+          "es": "La puerta del balcón, con el pueblo y las montañas al fondo.",
+          "en": "The balcony door, with the town and the mountains beyond."
+        },
+        {
+          "es": "Las neveras de vidrio con gaseosas y cervezas frías.",
+          "en": "The glass-front coolers with soft drinks and cold beer."
+        }
+      ]
+    },
+    {
+      "id": "soma-aguascalientes",
+      "categoria": "naturaleza",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.214763,
+      "lng": -72.446588,
+      "telefono": "573224626352",
+      "nombre": {
+        "es": "Soma Grill y Aguascalientes",
+        "en": "Soma Grill & Hot Springs"
+      },
+      "desc": {
+        "es": "Estadero al aire libre a la orilla del río, con un pozo de aguas calientes al que se llega caminando desde la entrada. Queda en jurisdicción de San Bernardo, sobre el mismo camino que sube a la Cascada El Chorrerón, así que suele hacerse en la misma salida. El sitio tiene kioscos de guadua con techo de zinc, mesas con sombrillas rojas en el prado, una zona de fogata, un mirador con pufs abierto a la montaña y guirnaldas de luces para la noche. De comer sacan carnes y costillas al asador, hamburguesas y cocteles. El pozo queda a unos 740 metros de la entrada, por un sendero de tierra con baranda de guadua: es una poza de agua tibia entre piedras enormes pulidas por el río. Propietaria: Sofía Parada.",
+        "en": "An open-air riverside spot with a hot-water pool reached on foot from the entrance. It lies within San Bernardo, on the same road that climbs to the El Chorrerón waterfall, so it is usually done on the same outing. The place has bamboo-framed shelters with zinc roofs, tables with red umbrellas on the lawn, a fire pit, a lookout with beanbags open to the mountainside, and string lights for the evening. The kitchen turns out grilled meats and ribs, burgers and cocktails. The pool is about 740 meters in from the entrance, along a dirt path with a bamboo handrail: a warm pool among huge boulders polished smooth by the river. Owner: Sofía Parada."
+      },
+      "comoLlegar": {
+        "es": "Desde Labateca son unos 39 minutos y 15,5 km por carretera hacia San Bernardo —así lo marca el poste de señales que hay en el propio sitio—. La entrada está sobre el camino, a mano derecha pasando el puente, bajo un portal de tubos con el letrero SOMA. Desde ahí al pozo hay un kilómetro escaso a pie, con la ruta GPS dibujada en el mapa.",
+        "en": "From Labateca it is about 39 minutes and 15.5 km by road toward San Bernardo — as marked on the signpost at the site itself. The entrance is on the road, to the right after the bridge, under a metal arch with the SOMA sign. From there it is a scant kilometer on foot to the pool, with the GPS route drawn on the map."
+      },
+      "dist": {
+        "es": "15,5 km desde Labateca · ~1 km a pie hasta el pozo",
+        "en": "15.5 km from Labateca · ~1 km on foot to the pool"
+      },
+      "tiempo": {
+        "es": "Sábados y domingos, 8:00 a. m. – 9:00 p. m.",
+        "en": "Saturdays and Sundays, 8:00 a.m. – 9:00 p.m."
+      },
+      "dificultad": {
+        "es": "Fácil · el sendero al pozo es corto y con baranda",
+        "en": "Easy · the path to the pool is short and has a handrail"
+      },
+      "recomendacion": {
+        "es": "Solo abre sábados y domingos. Cobran el paso en la entrada, así que lleva efectivo. El sendero al pozo es de tierra: con lluvia se pone resbaloso y conviene calzado con agarre. Si vas a la Cascada El Chorrerón, este sitio queda de camino. WhatsApp: 322 462 6352.",
+        "en": "Open Saturdays and Sundays only. There is a charge to pass at the entrance, so bring cash. The path to the pool is dirt: it gets slippery in the rain, so wear shoes with grip. If you're heading to the El Chorrerón waterfall, this place is on the way. WhatsApp: +57 322 462 6352."
+      },
+      "track": "data/tracks/soma-aguascalientes.gpx",
+      "fotos": [
+        "labateca/soma-aguascalientes-01",
+        "labateca/soma-aguascalientes-02",
+        "labateca/soma-aguascalientes-03",
+        "labateca/soma-aguascalientes-04",
+        "labateca/soma-aguascalientes-05",
+        "labateca/soma-aguascalientes-06",
+        "labateca/soma-aguascalientes-07",
+        "labateca/soma-aguascalientes-08",
+        "labateca/soma-aguascalientes-09",
+        "labateca/soma-aguascalientes-10",
+        "labateca/soma-aguascalientes-11",
+        "labateca/soma-aguascalientes-12"
+      ],
+      "fotosCap": [
+        {
+          "es": "El estadero visto desde arriba: los techos rojos, las sombrillas en el prado, el río de piedras y las montañas de San Bernardo.",
+          "en": "The site seen from above: red roofs, umbrellas on the lawn, the stony river and the mountains of San Bernardo."
+        },
+        {
+          "es": "La entrada, con el portal de tubos y el letrero SOMA sobre el camino destapado.",
+          "en": "The entrance, with the metal arch and the SOMA sign over the unpaved road."
+        },
+        {
+          "es": "El pozo de aguas calientes: una poza verdosa entre piedras enormes pulidas por el río.",
+          "en": "The hot-water pool: a green pool among huge boulders polished smooth by the river."
+        },
+        {
+          "es": "El sendero al pozo, tallado en la ladera y con baranda de guadua, bajo un árbol grande.",
+          "en": "The path to the pool, cut into the hillside with a bamboo handrail, under a large tree."
+        },
+        {
+          "es": "El mirador cubierto, con pufs sobre grama y una mesita de tablas, abierto a la montaña.",
+          "en": "The covered lookout, with beanbags on turf and a plank table, open to the mountainside."
+        },
+        {
+          "es": "Cocteles escarchados con moras, fresas y rodajas de limón, servidos en el jardín.",
+          "en": "Frosted cocktails with berries, strawberries and lemon slices, served in the garden."
+        },
+        {
+          "es": "Una hamburguesa servida sobre hoja de plátano, con papas criollas y salsas en plato de barro.",
+          "en": "A burger served on a plantain leaf, with criolla potatoes and sauces in a clay dish."
+        },
+        {
+          "es": "Costillar y carne colgados del asador, con plátanos maduros en la parrilla.",
+          "en": "Ribs and meat hanging over the grill, with sweet plantains on the rack."
+        },
+        {
+          "es": "La fogata encendida y, en la mesa, chocolate con queso, malvaviscos y arepa.",
+          "en": "The lit fire pit and, on the table, hot chocolate with cheese, marshmallows and arepa."
+        },
+        {
+          "es": "Un montaje de cumpleaños: arco de globos sobre la pared de tablas y letras iluminadas.",
+          "en": "A birthday setup: a balloon arch on the plank wall and lit letters."
+        },
+        {
+          "es": "El lavamanos: un balde de metal con grifo montado sobre un tronco, con el río al fondo.",
+          "en": "The washbasin: a metal bucket with a tap mounted on a log, with the river behind."
+        },
+        {
+          "es": "El poste de señales del sitio, con las distancias a Labateca, Toledo, Pamplona y Chinácota.",
+          "en": "The site's signpost, with distances to Labateca, Toledo, Pamplona and Chinácota."
+        }
+      ]
+    },
+    {
+      "id": "chorreron",
+      "categoria": "naturaleza",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.197292,
+      "lng": -72.463103,
+      "telefono": "",
+      "nombre": {
+        "es": "Cascada El Chorrerón",
+        "en": "El Chorrerón Waterfall"
+      },
+      "desc": {
+        "es": "Salto de agua muy alto que cae por la garganta entre dos montañas, en jurisdicción de San Bernardo. Se ve desde lejos como un hilo blanco sobre el verde, y de cerca cae por una pared de roca levantando una neblina de agua permanente. La llegada está marcada con un portal de dos horcones y un travesaño de madera con el nombre tallado, justo con la cascada al fondo. El recorrido fue registrado en campo con GPS y la traza está dibujada en el mapa.",
+        "en": "A very tall waterfall dropping through the gorge between two mountains, within San Bernardo. From a distance it reads as a white thread against the green; up close it falls down a rock wall, throwing up a permanent mist. The arrival point is marked by two posts and a wooden crossbeam with the name carved into it, framed against the falls. The route was field-recorded with GPS and the track is drawn on the map."
+      },
+      "comoLlegar": {
+        "es": "Desde Labateca son unos 35 minutos en vehículo hasta el puente de Zambrano, en San Bernardo: ahí arranca la ruta GPS del mapa y hasta ahí llega Google Maps. Del puente en adelante se sigue por camino destapado —unos 10 minutos en moto— y el último tramo se hace a pie, unos 20 minutos hasta el salto. En el camino se cruza un puente colgante peatonal con piso de tablas. La traza que registramos ese día mide 8 km y +466 m de desnivel desde el puente, pero incluye vueltas y paradas: quien conoce el camino lo hace en bastante menos.",
+        "en": "From Labateca it is about 35 minutes by vehicle to the Zambrano bridge, in San Bernardo: that is where the GPS route on the map begins, and as far as Google Maps will take you. From the bridge you continue on an unpaved track — about 10 minutes by motorbike — and the last stretch is on foot, some 20 minutes to the falls. Along the way you cross a plank-decked suspension footbridge. The track we recorded that day measures 8 km and +466 m of elevation gain from the bridge, but it includes detours and stops: anyone who knows the way does it in considerably less."
+      },
+      "dist": {
+        "es": "~8 km desde el puente de Zambrano · +466 m",
+        "en": "~8 km from the Zambrano bridge · +466 m"
+      },
+      "tiempo": {
+        "es": "~35 min en vehículo + ~30 min entre moto y caminata",
+        "en": "~35 min by vehicle + ~30 min by motorbike and on foot"
+      },
+      "dificultad": {
+        "es": "Moderada",
+        "en": "Moderate"
+      },
+      "recomendacion": {
+        "es": "En el camino hay una valla que anuncia un valor de ingreso; la casilla del precio estaba en blanco el día del recorrido, y en la entrada por el estadero Soma cobran el paso, así que lleva efectivo. Ve con calzado de agarre —el último tramo es trocha y la neblina del salto lo mantiene húmedo— y descarga el mapa antes de salir, porque no hay señal. Sal temprano: son casi dos horas de ida contando el trayecto en carro. Soma y Aguascalientes quedan de camino, si quieres rematar el día ahí.",
+        "en": "There is a sign along the way announcing an entry fee; the price box was blank on the day of the visit, and at the entrance by the Soma roadside stop there is a charge to pass, so bring cash. Wear shoes with grip — the last stretch is a rough path kept damp by the mist from the falls — and download the map before setting out, as there is no signal. Leave early: it's nearly two hours each way counting the drive. Soma and its hot springs are on the way, if you want to end the day there."
+      },
+      "track": "data/tracks/chorreron.gpx",
+      "trailhead": {
+        "lat": 7.202502,
+        "lng": -72.44331
+      },
+      "fotos": [
+        "labateca/chorreron-01",
+        "labateca/chorreron-02",
+        "labateca/chorreron-03",
+        "labateca/chorreron-04",
+        "labateca/chorreron-05",
+        "labateca/chorreron-06",
+        "labateca/chorreron-07",
+        "labateca/chorreron-08",
+        "labateca/chorreron-09",
+        "labateca/chorreron-10"
+      ],
+      "fotosCap": [
+        {
+          "es": "El portal de llegada: dos horcones y un travesaño de madera con «Cascada El Chorrerón» tallado, y el salto justo detrás.",
+          "en": "The arrival gate: two posts and a wooden beam with 'Cascada El Chorrerón' carved into it, the falls right behind."
+        },
+        {
+          "es": "El salto visto de cerca, cayendo por la pared de roca entre la neblina de agua.",
+          "en": "The falls up close, dropping down the rock wall through the mist."
+        },
+        {
+          "es": "La cascada enmarcada por una rama cubierta de musgo que cruza el encuadre.",
+          "en": "The waterfall framed by a moss-covered branch crossing the view."
+        },
+        {
+          "es": "El salto completo visto de lejos, a contraluz, con el sol entrando por la garganta.",
+          "en": "The full drop seen from a distance, backlit, with sun coming through the gorge."
+        },
+        {
+          "es": "La cascada como un hilo blanco entre las dos montañas, vista desde la ladera del camino.",
+          "en": "The waterfall as a white thread between the two mountains, seen from the hillside along the way."
+        },
+        {
+          "es": "El puente de Zambrano, la estructura metálica amarilla donde arranca la ruta.",
+          "en": "The Zambrano bridge, the yellow steel structure where the route begins."
+        },
+        {
+          "es": "El puente colgante peatonal, con piso de tablas y malla verde a los lados.",
+          "en": "The suspension footbridge, with a plank deck and green mesh along the sides."
+        },
+        {
+          "es": "Un tramo del camino destapado, con una talanquera roja a un costado.",
+          "en": "A stretch of the unpaved track, with a red gate to one side."
+        },
+        {
+          "es": "La valla del camino, con fotos de la cascada y las casillas de información y valor de ingreso.",
+          "en": "The roadside sign, with photos of the falls and boxes for information and the entry fee."
+        },
+        {
+          "es": "Un aviso de «Prohibido cazar» de Corponor amarrado a un árbol del bosque.",
+          "en": "A Corponor 'No hunting' sign tied to a tree in the forest."
+        }
+      ]
+    },
+    {
+      "id": "sendero-mariano",
+      "categoria": "cultura",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.29735,
+      "lng": -72.498102,
+      "mapaX": 300,
+      "mapaY": 458,
+      "telefono": "",
+      "nombre": {
+        "es": "Sendero Mariano",
+        "en": "Marian Trail"
+      },
+      "desc": {
+        "es": "Camino devocional que sube desde el borde del casco urbano por la vía a la vereda La Laguna. A lo largo del recorrido hay siete estaciones dedicadas a los Siete Dolores de la Virgen María; cada una es una talla en relieve, pintada a color y montada sobre un horcón dentro de un aro de metal, acompañada de una placa con el título del Dolor, la cita bíblica y una oración. En orden: la profecía de Simeón (Lucas 2,22-35), la huida a Egipto (Mateo 2,13-15), la pérdida de Jesús en el templo (Lucas 2,41-50), el encuentro con Jesús cargando la cruz (IV estación del Vía Crucis), la crucifixión (Juan 19,17-39), María recibe el cuerpo de Jesús (Marcos 15,42-46) y el entierro y la soledad de María (Juan 19,38-42). Arriba, donde termina el camino, hay una cruz de hierro, una imagen de la Virgen, una cruz de madera plantada entre las piedras y un sepulcro de piedra con una roca pintada al lado que dice: «No está aquí, porque ha resucitado, tal como dijo» (Mateo 28,6). Desde ahí se ve el pueblo entero y el valle.",
+        "en": "A devotional path climbing from the edge of town along the road to the La Laguna hamlet. Seven stations dedicated to the Seven Sorrows of the Virgin Mary line the route; each is a painted relief carving mounted on a post inside a metal ring, with a plaque giving the title of the Sorrow, the scripture reference and a prayer. In order: the prophecy of Simeon (Luke 2:22-35), the flight into Egypt (Matthew 2:13-15), the loss of Jesus in the temple (Luke 2:41-50), the meeting with Jesus carrying the cross (fourth Station of the Cross), the crucifixion (John 19:17-39), Mary receiving the body of Jesus (Mark 15:42-46), and the burial and the solitude of Mary (John 19:38-42). At the top, where the path ends, stand an iron cross, an image of the Virgin, a wooden cross planted among the stones, and a stone tomb with a painted boulder beside it reading: 'He is not here; he has risen, just as he said' (Matthew 28:6). From there you can see the whole town and the valley."
+      },
+      "comoLlegar": {
+        "es": "El camino arranca en el borde occidental del casco urbano, a unos 450 metros del Parque Principal, y sube por la vía a la vereda La Laguna. Del arranque a la cima hay unos 900 metros en línea recta, todo cuesta arriba. El primer tramo es placa de concreto entre eucaliptos.",
+        "en": "The path starts at the western edge of town, about 450 meters from the Main Square, and climbs along the road to the La Laguna hamlet. From the start to the top it is roughly 900 meters as the crow flies, all uphill. The first stretch is a concrete lane between eucalyptus trees."
+      },
+      "dist": {
+        "es": "~900 m cuesta arriba desde el borde del pueblo",
+        "en": "~900 m uphill from the edge of town"
+      },
+      "tiempo": {
+        "es": "Abierto siempre · peregrinación el primer sábado de cada mes",
+        "en": "Always open · pilgrimage on the first Saturday of every month"
+      },
+      "dificultad": {
+        "es": "Fácil–moderada · es corto pero todo en subida",
+        "en": "Easy–moderate · short but all uphill"
+      },
+      "recomendacion": {
+        "es": "El primer sábado de cada mes se hace la peregrinación por el sendero: es el día para recorrerlo con la gente del pueblo. Cualquier otro día está abierto y se sube solo. Ve temprano o al atardecer —a mediodía pega el sol y no hay sombra en la parte alta— y detente en cada estación: las tallas están hechas una por una y no se repiten.",
+        "en": "On the first Saturday of every month there is a pilgrimage along the trail: that is the day to walk it with the people of the town. Any other day it is open and you can climb on your own. Go early or at dusk — at midday the sun is strong and there is no shade at the top — and stop at each station: the carvings were made one by one and no two are alike."
+      },
+      "fotos": [
+        "labateca/sendero-mariano-01",
+        "labateca/sendero-mariano-02",
+        "labateca/sendero-mariano-03",
+        "labateca/sendero-mariano-04",
+        "labateca/sendero-mariano-05",
+        "labateca/sendero-mariano-06",
+        "labateca/sendero-mariano-07",
+        "labateca/sendero-mariano-08",
+        "labateca/sendero-mariano-09",
+        "labateca/sendero-mariano-10",
+        "labateca/sendero-mariano-11",
+        "labateca/sendero-mariano-12",
+        "labateca/sendero-mariano-13"
+      ],
+      "fotosCap": [
+        {
+          "es": "La cruz de madera plantada entre las piedras de la cima, con el valle y las nubes bajas al fondo.",
+          "en": "The wooden cross planted among the stones at the top, with the valley and low clouds behind."
+        },
+        {
+          "es": "El punto de partida: la placa de concreto que sube entre eucaliptos desde el borde del pueblo.",
+          "en": "The starting point: the concrete lane climbing between eucalyptus trees from the edge of town."
+        },
+        {
+          "es": "Primer Dolor: la profecía de Simeón, entre las buganvillas.",
+          "en": "First Sorrow: the prophecy of Simeon, among the bougainvillea."
+        },
+        {
+          "es": "Segundo Dolor: la huida a Egipto, con San José llevando el burro.",
+          "en": "Second Sorrow: the flight into Egypt, with Saint Joseph leading the donkey."
+        },
+        {
+          "es": "Tercer Dolor: la pérdida de Jesús en el templo de Jerusalén, bajo el arco de piedra.",
+          "en": "Third Sorrow: the loss of Jesus in the temple of Jerusalem, under the stone arch."
+        },
+        {
+          "es": "Cuarto Dolor: el encuentro con Jesús cargando la cruz.",
+          "en": "Fourth Sorrow: the meeting with Jesus carrying the cross."
+        },
+        {
+          "es": "Quinto Dolor: la crucifixión, tallada en el horcón y cubierta de buganvillas.",
+          "en": "Fifth Sorrow: the crucifixion, carved on the post and covered in bougainvillea."
+        },
+        {
+          "es": "Sexto Dolor: María recibe el cuerpo de Jesús, enmarcada por los helechos.",
+          "en": "Sixth Sorrow: Mary receives the body of Jesus, framed by ferns."
+        },
+        {
+          "es": "Séptimo Dolor: el entierro de Jesús y la soledad de María, con el valle detrás.",
+          "en": "Seventh Sorrow: the burial of Jesus and the solitude of Mary, with the valley behind."
+        },
+        {
+          "es": "Una de las placas: el título del Dolor, la cita bíblica y la oración de la estación.",
+          "en": "One of the plaques: the title of the Sorrow, the scripture reference and the station's prayer."
+        },
+        {
+          "es": "La cima: la cruz de hierro sobre el montículo de piedras y la imagen de la Virgen al pie.",
+          "en": "The summit: the iron cross on the mound of stones, with the image of the Virgin at its foot."
+        },
+        {
+          "es": "El final del camino: el sepulcro de piedra con su bóveda, la banca y la piedra rodante al lado.",
+          "en": "The end of the path: the stone tomb with its vault, the bench and the rolling stone beside it."
+        },
+        {
+          "es": "La piedra pintada junto al sepulcro: «No está aquí, porque ha resucitado, tal como dijo» (Mateo 28,6).",
+          "en": "The painted stone beside the tomb: 'He is not here; he has risen, just as he said' (Matthew 28:6)."
+        }
+      ]
     }
   ]
 }
