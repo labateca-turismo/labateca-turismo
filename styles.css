@@ -1543,8 +1543,13 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
 .vv-indice a:hover,.vv-indice a:active{background:var(--gold);border-color:var(--gold);
   color:var(--forest);transform:translateY(-1px)}
 .vv-indice a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+/* La ultima del indice de /pueblo no es un ancla: sale a otra pagina.
+   En terracota para que no se lea como una seccion mas de la misma. */
+.vv-indice a.vv-indice-otra{background:var(--clay);border-color:var(--clay)}
+.vv-indice a.vv-indice-otra:hover,.vv-indice a.vv-indice-otra:active{
+  background:var(--gold);border-color:var(--gold);color:var(--forest)}
 #calendario,#cine,#corto,#fotos,#gente,#llegar,#municipal,#carmen,
-#acta,#virgen{scroll-margin-top:104px}
+#acta,#virgen,#resumen,#linea,#trece,#biblioteca,#videos,#laminas{scroll-margin-top:104px}
 @media(max-width:760px){
   .vv-indice{padding:18px 18px 0;gap:7px}
   .vv-indice a{padding:7px 13px;font-size:.84rem}
