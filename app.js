@@ -4,6 +4,14 @@
 const CONFIG = {
   // Número de WhatsApp en formato internacional, SIN "+" ni espacios
   whatsapp: "573209060582",
+  // Guía local: la persona del pueblo que atiende al visitante para
+  // orientación y recorridos. Sale en tres sitios (botón del hero, barra de
+  // /lugares y canal de contacto) y los tres leen de aquí. En el HTML queda
+  // además un href de respaldo, escrito a mano, por si el JS no carga.
+  guiaLocal: {
+    tel:     "573212737469",   // internacional, sin "+" ni espacios
+    visible: "321 273 7469"    // como se lee en pantalla
+  },
   // Correo de contacto
   email: "labatecacolombia@gmail.com",
   // Clave gratuita de Web3Forms (https://web3forms.com) para recibir el formulario por correo.
@@ -245,6 +253,11 @@ const I18N = {
     hero_tag:"Donde la montaña guarda volcanes de Dios",
     hero_lead:"Cascadas de hasta 100 metros, café de altura y el Páramo de Santurbán. Una perla escondida del suroriente nortesantandereano, lista para descubrirse.",
     hero_btn1:"Explorar lugares", hero_btn2:"Ver mapa",
+    gl_btn:"Comunícate con el guía local",
+    gl_title:"¿Prefieres que alguien te acompañe?",
+    gl_sub:"Te orienta por WhatsApp: cómo llegar, cómo están los caminos y qué alcanzas a ver hoy.",
+    gl_wa:"Escríbele", gl_call:"Llamar",
+    gl_msg:"Hola, lo contacto desde la guía turística de Labateca. Quisiera orientación para visitar el pueblo.",
     w_loading:"Consultando clima…", w_place:"Clima en Labateca", w_feels:"Sensación",
     stat_alt:"m.s.n.m.", stat_dist:"km a Cúcuta", stat_temp:"Promedio",
     dist_btn:"Calcular distancia desde mi ubicación",
@@ -321,6 +334,7 @@ const I18N = {
     pdf_btn:"Descargar guía PDF", pdf_sub:"Guía completa de lugares · sin conexión",
     pdf_generating:"Generando PDF…", pdf_done:"¡PDF listo! Revisa tus descargas.",
     ch_wa:"Respuesta rápida · toca para chatear", ch_mail_t:"Correo",
+    ch_guia_t:"Guía local", ch_guia:"Orientación y recorridos · toca para chatear",
     ch_loc_t:"Cómo llegar", ch_loc_d:"Parque Principal de Labateca",
     f_name:"Nombre", f_name_ph:"Tu nombre", f_email:"Correo", f_topic:"Tema",
     f_topic1:"Recomendaciones de viaje", f_topic2:"Hospedaje", f_topic3:"Guía local", f_topic4:"Otro",
@@ -380,6 +394,11 @@ const I18N = {
     hero_tag:"Where the mountains keep God's volcanoes",
     hero_lead:"Waterfalls up to 100 meters tall, high-altitude coffee and the Santurbán Páramo. A hidden gem of southeastern Norte de Santander, waiting to be discovered.",
     hero_btn1:"Explore places", hero_btn2:"View map",
+    gl_btn:"Message the local guide",
+    gl_title:"Would you rather go with someone who knows the way?",
+    gl_sub:"Answers on WhatsApp: how to get there, what shape the trails are in, and what fits into your day.",
+    gl_wa:"Message", gl_call:"Call",
+    gl_msg:"Hi! I found you on the Labateca tourism guide. I would like some help planning my visit.",
     w_loading:"Checking weather…", w_place:"Weather in Labateca", w_feels:"Feels like",
     stat_alt:"m.a.s.l.", stat_dist:"km to Cúcuta", stat_temp:"Average",
     dist_btn:"Calculate distance from my location",
@@ -456,6 +475,7 @@ const I18N = {
     pdf_btn:"Download PDF guide", pdf_sub:"Full place guide · offline ready",
     pdf_generating:"Generating PDF…", pdf_done:"PDF ready! Check your downloads.",
     ch_wa:"Quick reply · tap to chat", ch_mail_t:"Email",
+    ch_guia_t:"Local guide", ch_guia:"Orientation and tours · tap to chat",
     ch_loc_t:"Directions", ch_loc_d:"Labateca Main Square",
     f_name:"Name", f_name_ph:"Your name", f_email:"Email", f_topic:"Topic",
     f_topic1:"Travel recommendations", f_topic2:"Lodging", f_topic3:"Local guide", f_topic4:"Other",
@@ -1094,6 +1114,31 @@ function setLang(l){
   es.setAttribute("aria-pressed",l==="es"?"true":"false");
   en.setAttribute("aria-pressed",l==="en"?"true":"false");
   applyI18n(); renderFilters(); renderPlaces(); renderGallery(); renderDrawer(); renderRutas();
+  wireGuia();   // el mensaje que va precargado en WhatsApp cambia de idioma
+}
+
+/* ============================================================
+   GUÍA LOCAL — un solo número, varios botones
+   Los enlaces ya vienen escritos en el HTML para que funcionen sin JS
+   (son enlaces, no botones: deben servir aunque falle todo lo demás).
+   Esto los reescribe desde CONFIG y con el mensaje en el idioma activo.
+   ============================================================ */
+function guiaTel(){ return String((CONFIG.guiaLocal||{}).tel||'').replace(/[^0-9]/g,''); }
+
+function wireGuia(){
+  const tel = guiaTel();
+  document.querySelectorAll('.js-guia-wa').forEach(a=>{
+    // Sin número no dejamos un botón que no lleva a ninguna parte.
+    if(!tel){ a.style.display='none'; return; }
+    a.href = `https://wa.me/${tel}?text=${encodeURIComponent(t('gl_msg')).replace(/'/g,'%27')}`;
+  });
+  document.querySelectorAll('.js-guia-tel').forEach(a=>{
+    if(!tel){ a.style.display='none'; return; }
+    a.href = 'tel:+' + tel;
+  });
+  document.querySelectorAll('.js-guia-num').forEach(el=>{
+    el.textContent = (CONFIG.guiaLocal||{}).visible || '';
+  });
 }
 
 /* ============================================================
@@ -1605,6 +1650,7 @@ function wireLinks(){
   const set=(id,prop,val)=>{ const el=document.getElementById(id); if(el) el[prop]=val; };
   set("chWhatsapp","href",wa);
   set("footWa","href",wa);
+  wireGuia();
   set("chMail","href",`mailto:${CONFIG.email}`);
   set("mailText","textContent",CONFIG.email);
   set("chLoc","href",mapTown);

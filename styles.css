@@ -1811,3 +1811,46 @@ a.vquote:hover .q-cta{color:var(--gold-soft)}
   .fa-visor img{max-height:62vh}
   .fa-nav{width:40px;height:40px;font-size:1.6rem}
 }
+
+/* ============================================================
+   GUIA LOCAL
+   Verde WhatsApp a proposito: es el unico boton que saca al visitante
+   del sitio y a otra aplicacion, y conviene que se reconozca antes de
+   leerlo. El texto va en verde oscuro del bosque, no en blanco: sobre
+   ese verde el blanco queda en 1,9:1 de contraste y no se lee.
+   ============================================================ */
+.btn-wa{background:#25D366;color:var(--forest);box-shadow:var(--shadow-md)}
+.btn-wa:hover{background:#1eb955;transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.channel-ic.guia{background:var(--gold-text)}
+
+/* Barra del guia en /lugares */
+.gl-barra{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  background:var(--paper);border:1px solid var(--line);border-left:5px solid #25D366;
+  border-radius:var(--r-md);padding:16px 20px;margin:0 0 22px;box-shadow:var(--shadow-sm);
+}
+.gl-ic{font-size:1.7rem;line-height:1}
+.gl-txt{flex:1 1 280px;min-width:0}
+.gl-txt b{display:block;font-family:"Fraunces",Georgia,serif;font-size:1.06rem;color:var(--forest);line-height:1.25}
+.gl-txt span{display:block;font-size:.88rem;color:var(--ink-mut);line-height:1.5;margin-top:3px}
+.gl-acc{display:flex;gap:10px;flex-wrap:wrap}
+.gl-wa,.gl-tel{
+  display:inline-flex;align-items:center;gap:8px;border-radius:99px;
+  padding:11px 20px;font-weight:700;font-size:.9rem;white-space:nowrap;
+  transition:all .25s var(--ease);
+}
+.gl-wa{background:#25D366;color:var(--forest)}
+.gl-wa:hover{background:#1eb955;transform:translateY(-2px)}
+.gl-tel{border:1.5px solid var(--forest);color:var(--forest)}
+.gl-tel:hover{background:var(--forest);color:var(--cream);transform:translateY(-2px)}
+.gl-wa svg,.gl-tel svg{width:17px;height:17px;flex-shrink:0}
+/* En movil esta barra se mete entre el titulo y los filtros, asi que cada
+   pixel de alto retrasa la reja de lugares: la brujula y el texto comparten
+   fila (basis mas corta) y los dos botones se reparten el ancho. */
+@media(max-width:640px){
+  .gl-barra{padding:14px 16px;gap:10px 12px}
+  .gl-txt{flex:1 1 180px}
+  .gl-txt span{font-size:.85rem}
+  .gl-acc{width:100%;gap:8px;flex-wrap:nowrap}
+  .gl-wa,.gl-tel{flex:1 1 0;min-width:0;justify-content:center;padding:11px 12px}
+}
