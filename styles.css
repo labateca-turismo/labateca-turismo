@@ -2086,3 +2086,30 @@ a.vquote:hover .q-cta{color:var(--gold-soft)}
 .lb-lema{font-style:italic;color:var(--clay);font-size:.94rem;margin:6px 0 16px}
 
 .lb-rotulo-refs{font-size:.74rem!important;letter-spacing:.1em;text-transform:uppercase;color:var(--clay);font-weight:800;margin:2em 0 -.6em!important;text-align:left!important}
+
+/* ── Los quince asientos de 1623 ────────────────────────────────
+   Antes eran quince píldoras verdes con un nombre cada una. Ahora cada asiento
+   lleva además su encomendero, que es el dato que explica por qué hay tres
+   Bochagás y tres Imas en la misma lista: el nombre se repite porque la
+   encomienda se partió, no porque hubiera tres pueblos. */
+.pb-asientos{list-style:none;padding:0;margin:22px 0 30px;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px;counter-reset:asiento}
+.pb-asientos li{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-sm);
+  padding:11px 16px 11px 44px;position:relative}
+.pb-asientos li::before{counter-increment:asiento;content:counter(asiento);
+  position:absolute;left:14px;top:11px;font-family:Fraunces,Georgia,serif;font-size:.86rem;
+  font-weight:700;color:var(--clay);opacity:.75}
+.pb-asientos li b{display:block;font-size:.98rem;color:var(--forest);line-height:1.25}
+.pb-asientos li span{display:block;font-size:.8rem;color:var(--ink-mut);margin-top:2px}
+
+/* La caja que explica por qué doce, quince y veintiuno son todos correctos. */
+.pb-cuentas-caja{background:var(--cream);border:1px solid var(--line);
+  border-left:3px solid var(--clay);border-radius:0 var(--r-md) var(--r-md) 0;padding:22px 26px}
+.pb-cuentas-caja p{color:var(--ink-mut);margin:0 0 14px;max-width:74ch}
+.pb-tres-cuentas{list-style:none;padding:0;margin:0 0 16px;display:flex;flex-wrap:wrap;gap:12px}
+.pb-tres-cuentas li{background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--r-sm);padding:12px 18px;flex:1 1 190px}
+.pb-tres-cuentas b{display:block;font-family:Fraunces,Georgia,serif;font-size:1.9rem;
+  color:var(--forest);line-height:1}
+.pb-tres-cuentas span{display:block;font-size:.82rem;color:var(--ink-mut);margin-top:4px}
+.pb-cierre-caja{margin:16px 0 0!important;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
