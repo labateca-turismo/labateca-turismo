@@ -1854,3 +1854,138 @@ a.vquote:hover .q-cta{color:var(--gold-soft)}
   .gl-acc{width:100%;gap:8px;flex-wrap:nowrap}
   .gl-wa,.gl-tel{flex:1 1 0;min-width:0;justify-content:center;padding:11px 12px}
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   EL LIBRO — «Labateca: Volcanes de Dios» y sus catorce anexos
+   Lo genera gen_libro.js dentro de /pueblo y gen_anexos.js en /historia/.
+   La idea de todo esto: que ninguna afirmación del libro quede sin un camino
+   hasta el papel donde está escrita.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── La cita dentro de la prosa ────────────────────────────────
+   Discreta a propósito. El texto lleva más de cien menciones enlazadas y si
+   cada una fuera un enlace azul el capítulo sería ilegible: subrayado punteado
+   en el dorado de la casa, y ya. Al pasar el ratón dice a qué página lleva. */
+.cita{color:inherit;text-decoration:none;border-bottom:1px dotted var(--gold);
+  padding-bottom:1px;transition:background .15s var(--ease),border-color .15s}
+.cita:hover,.cita:focus-visible{background:var(--gold-soft);border-bottom-color:var(--gold-text);
+  border-radius:3px;outline:none}
+.cita::after{content:"\203A";font-size:.78em;color:var(--gold-text);margin-left:2px;vertical-align:.06em}
+
+/* ── El botón de referencia ────────────────────────────────────
+   Aquí sí, grande y visible: es el bloque de «Referencias Cruzadas Exactas»
+   del manuscrito, y es donde el lector va a querer saltar. */
+.lb-refs{background:var(--cream);border:1px solid var(--line);border-left:3px solid var(--clay);
+  border-radius:0 var(--r-md) var(--r-md) 0;padding:16px 20px 18px;margin:1.8em 0 2.2em}
+.lb-refs-tit{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);
+  font-weight:800;margin:0 0 12px!important;text-align:left!important}
+.lb-refs-lista{display:flex;flex-wrap:wrap;gap:8px}
+.doc-ref{display:flex;flex-direction:column;gap:1px;text-decoration:none;background:var(--paper);
+  border:1px solid var(--line);border-radius:var(--r-sm);padding:9px 14px;max-width:100%;
+  transition:transform .18s var(--ease),border-color .18s,box-shadow .18s}
+.doc-ref:hover,.doc-ref:focus-visible{transform:translateY(-2px);border-color:var(--forest-3);
+  box-shadow:var(--shadow-sm);outline:none}
+.doc-ref b{font-family:Fraunces,Georgia,serif;font-size:.94rem;color:var(--forest);line-height:1.25}
+.doc-ref-anio{font-size:.7rem;letter-spacing:.1em;color:var(--ink-mut);font-weight:700}
+.doc-ref-loc{font-size:.8rem;color:var(--clay);font-weight:600;margin-top:2px}
+.doc-ref--suelta{display:block;font-size:.84rem;color:var(--ink-mut);background:var(--paper);
+  border:1px dashed var(--line);border-radius:var(--r-sm);padding:8px 13px}
+
+/* ── La página impresa como ancla ──────────────────────────────
+   En una transcripción de 125 páginas el número al margen es lo que convierte
+   un botón que promete «pág. 44» en algo que de verdad se puede comprobar. */
+.doc-pag{font-family:"Hanken Grotesk",system-ui,sans-serif!important;font-size:.72rem!important;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mut)!important;font-weight:800;
+  margin:2.4em 0 1em!important;display:flex;align-items:center;gap:12px;scroll-margin-top:112px}
+.doc-pag::after{content:"";flex:1;height:1px;background:var(--line)}
+.doc-pag span{background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:3px 12px}
+
+/* El tramo que no se reproduce, dibujado. Que se vea que el texto no sigue. */
+.doc-corte{display:flex;align-items:center;gap:14px;margin:2.6em 0!important;
+  text-align:center!important;color:var(--ink-mut);font-size:.8rem;font-style:italic}
+.doc-corte::before,.doc-corte::after{content:"";flex:1;border-top:1px dashed var(--line)}
+
+/* Barra para saltar de página en las transcripciones largas. */
+.doc-saltos{display:flex;flex-wrap:wrap;gap:6px;align-items:center;background:var(--cream);
+  border:1px solid var(--line);border-radius:var(--r-md);padding:14px 18px;margin:0 0 32px}
+.doc-saltos span{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-mut);font-weight:800;margin-right:6px}
+.doc-saltos a{text-decoration:none;font-size:.82rem;font-weight:700;color:var(--forest);
+  background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
+.doc-saltos a:hover{background:var(--forest);color:var(--cream)}
+
+/* ── Al llegar desde un botón ──────────────────────────────────
+   Un destello y ya. Sin esto el lector cae en mitad de una página de 125
+   páginas y no sabe en qué párrafo lo dejaron. */
+@keyframes doc-llegada{
+  0%{background:var(--gold-soft);box-shadow:0 0 0 8px var(--gold-soft)}
+  100%{background:transparent;box-shadow:0 0 0 8px transparent}
+}
+.doc-destino{animation:doc-llegada 2.4s var(--ease) forwards;border-radius:var(--r-sm)}
+@media(prefers-reduced-motion:reduce){.doc-destino{animation:none;background:var(--gold-soft)}}
+
+.doc-guia{margin:1.6em 0 .5em!important;text-align:left!important;color:var(--forest)}
+.doc-clave{font-size:1.02rem;color:var(--ink-mut);margin:0 0 18px;max-width:62ch}
+.doc-antetitulo{font-size:.72rem!important;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--clay);font-weight:800;margin:2.4em 0 .2em!important;text-align:left!important}
+
+/* ── La sección del libro dentro de /pueblo ────────────────── */
+.pb-sec--libro{background:linear-gradient(var(--cream-2),var(--paper) 320px)}
+.lb-kicker{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);
+  font-weight:800;margin:0 0 6px}
+.lb-frente{display:grid;grid-template-columns:1fr 1.4fr;gap:22px;margin:26px 0 22px}
+.lb-dedica,.lb-prologo{background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--r-md);padding:20px 24px;box-shadow:var(--shadow-sm)}
+.lb-dedica{border-left:3px solid var(--gold)}
+.lb-dedica p,.lb-prologo p{font-size:.94rem;color:var(--ink-mut);margin:0 0 .9em;text-align:justify}
+.lb-dedica p:last-child,.lb-prologo p:last-child{margin-bottom:0}
+.lb-rotulo{font-size:.7rem!important;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--clay)!important;font-weight:800;margin:0 0 10px!important;text-align:left!important}
+.lb-aparato{background:var(--forest);color:var(--cream);border-radius:var(--r-md);
+  padding:16px 22px;font-size:.92rem;margin:0 0 22px}
+.lb-aparato strong{color:var(--gold-soft)}
+.lb-aparato a{color:var(--gold-soft);font-weight:700}
+
+.lb-indice{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--paper);
+  border:1px solid var(--line);border-radius:var(--r-md);padding:16px 20px;margin:0 0 34px}
+.lb-indice span{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-mut);font-weight:800;width:100%;margin-bottom:2px}
+.lb-indice a{text-decoration:none;font-size:.84rem;font-weight:700;color:var(--forest);
+  background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+.lb-indice a:hover{background:var(--forest);color:var(--cream)}
+
+.lb-cuerpo{max-width:74ch;margin:0 auto}
+.lb-cap{font-family:Fraunces,Georgia,serif;font-size:1.7rem;color:var(--forest);line-height:1.18;
+  margin:2.6em 0 .8em;padding-top:1.2em;border-top:2px solid var(--line);scroll-margin-top:112px}
+.lb-cap:first-child{margin-top:0;padding-top:0;border-top:0}
+.lb-cap-num{display:block;font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:.7rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--clay);font-weight:800;margin-bottom:6px}
+.lb-cuerpo h4{font-family:Fraunces,Georgia,serif;font-size:1.14rem;color:var(--forest-2);
+  line-height:1.25;margin:2em 0 .6em;scroll-margin-top:112px}
+.lb-guia{margin:1.5em 0 .4em!important;text-align:left!important;color:var(--forest-2)}
+
+.lb-glosario{background:var(--cream);border:1px solid var(--line);border-radius:var(--r-md);
+  padding:22px 26px;margin:1.6em 0}
+.lb-glosario dt{font-family:Fraunces,Georgia,serif;font-size:1.02rem;color:var(--forest);margin-top:16px}
+.lb-glosario dt:first-child{margin-top:0}
+.lb-glosario dd{margin:4px 0 0;font-size:.93rem;color:var(--ink-mut);text-align:justify}
+.lb-biblio{margin:1.4em 0 0;padding-left:1.4em}
+.lb-biblio li{font-size:.9rem;color:var(--ink-mut);margin-bottom:.7em;text-align:left}
+
+/* La portada de /pueblo anuncia el libro. */
+.pb-hero-libro{margin:16px 0 10px}
+.pb-hero-libro a{display:inline-block;background:var(--gold);color:var(--forest);
+  text-decoration:none;font-weight:800;padding:11px 20px;border-radius:999px;font-size:.95rem}
+.pb-hero-libro a:hover{background:var(--gold-soft)}
+.pb-hero-libro span{display:block;margin-top:8px;font-size:.82rem;color:var(--cream-2);opacity:.85}
+
+.pb-doc-autor{font-size:.84rem!important;color:var(--forest-3)!important;font-weight:700;
+  margin:0 0 8px!important}
+.pb-doc-alcance{display:inline-block;font-size:.72rem;color:var(--ink-mut);background:var(--cream);
+  border-radius:999px;padding:4px 11px;font-weight:700}
+
+@media(max-width:820px){
+  .lb-frente{grid-template-columns:1fr}
+  .lb-cap{font-size:1.42rem}
+  .doc-ref{width:100%}
+}
