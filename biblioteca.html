@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>La biblioteca de Labateca · Todo lo que el pueblo tiene por escrito</title>
+<meta name="description" content="La biblioteca digital de Labateca: 15 obras sobre la historia del municipio y su región, con el texto de cada una y el libro «Volcanes de Dios» que las cita." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#16352a" />
+<link rel="canonical" href="https://labateca-turismo.labatecacolombia.workers.dev/biblioteca" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="es_CO" />
+<meta property="og:title" content="La biblioteca de Labateca · Todo lo que el pueblo tiene por escrito" />
+<meta property="og:description" content="La biblioteca digital de Labateca: 15 obras sobre la historia del municipio y su región, con el texto de cada una y el libro «Volcanes de Dios» que las cita." />
+<meta property="og:url" content="https://labateca-turismo.labatecacolombia.workers.dev/biblioteca" />
+<meta property="og:image" content="https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_630,c_fill,g_auto,f_jpg,q_auto/labateca/templo-01" />
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16.png" />
+<link rel="manifest" href="/manifest.json" />
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" media="print" onload="this.media='all'"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700;800&display=swap" />
+<noscript><link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700;800&display=swap" /></noscript>
+<link rel="stylesheet" href="/styles.css?v=164">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "La biblioteca de Labateca",
+  "inLanguage": "es",
+  "about": {
+    "@type": "Place",
+    "name": "Labateca, Norte de Santander, Colombia"
+  },
+  "description": "La biblioteca digital de Labateca: 15 obras sobre la historia del municipio y su región, con el texto de cada una y el libro «Volcanes de Dios» que las cita.",
+  "url": "https://labateca-turismo.labatecacolombia.workers.dev/biblioteca"
+}
+</script>
+</head>
+<body>
+
+<a href="#contenido" class="skip-link" data-i18n="skip_link">Saltar al contenido</a>
+
+<header id="header">
+  <div class="wrap nav">
+    <a href="/" class="brand" aria-label="Labateca - Inicio">
+      <img class="brand-mark" src="https://res.cloudinary.com/dwotodtoa/image/upload/w_120,h_120,c_fill,f_auto,q_auto/labateca/logo-templo" alt="" width="42" height="42" />
+      <span><span class="brand-name">Labateca</span><br><span class="brand-sub" data-i18n="brand_sub">Volcanes de Dios</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks" role="navigation" aria-label="Navegación principal">
+      <li style="list-style:none"><button class="nav-close" onclick="toggleMenu()" aria-label="Cerrar menú" data-i18n-aria="nav_close_aria">✕</button></li>
+      <li><a href="/#inicio" data-i18n="nav_home">Inicio</a></li>
+      <li><a href="/pueblo.html" aria-current="page" data-i18n="nav_about">El pueblo</a></li>
+      <li><a href="/lugares.html" data-i18n="nav_places">Lugares</a></li>
+      <li><a href="/viva" data-i18n="nav_viva">Labateca viva</a></li>
+      <li><a href="/#rutas" data-i18n="nav_routes">Rutas</a></li>
+      <li><a href="/#mapa" data-i18n="nav_map">Mapa</a></li>
+      <li><a href="/#galeria" data-i18n="nav_gallery">Galería</a></li>
+      <li><a href="/#contacto" data-i18n="nav_contact">Contacto</a></li>
+    </ul>
+    <div class="nav-tools">
+      <a class="nav-bus" href="/transporte" data-i18n-aria="nav_bus_aria" aria-label="Transporte: buses y horarios">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v11"/><path d="M4 11h16"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/><path d="M4 17h16"/></svg>
+        <span data-i18n="nav_bus">Transporte</span>
+      </a>
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button id="langEs" class="active" onclick="setLang('es')" aria-pressed="true" lang="es" aria-label="Español">ES</button>
+        <button id="langEn" onclick="setLang('en')" aria-pressed="false" lang="en" aria-label="English">EN</button>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menú" data-i18n-aria="menu_aria" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+<article class="doc bi">
+  <div class="wrap doc-wrap">
+    <nav class="doc-migas" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/pueblo.html">El pueblo</a> › <span>La biblioteca</span></nav>
+
+    <header class="doc-head">
+      <p class="doc-kicker">Biblioteca digital</p>
+      <h1>Todo lo que Labateca tiene por escrito</h1>
+      <p class="doc-sub">Las 15 obras que sostienen la historia del municipio, cada
+      una con su texto y su ficha. Es adonde llevan los botones del libro.</p>
+      <ul class="doc-datos">
+        <li><b>15</b> obras</li>
+        <li><b>11</b> con el texto completo</li>
+        <li><b>3</b> por derecho de cita</li>
+        <li>De <b>1560</b> a <b>2026</b></li>
+      </ul>
+      <p class="doc-aviso">Cada obra dice con qué derecho está publicada. Los textos históricos de
+      <b>Silvano Pabón Villamizar</b> van con su autorización; los de dominio público, completos; y
+      de las obras de autor vivo se reproducen únicamente los pasajes que el libro cita, con su
+      referencia, al amparo del <b>artículo 31 de la Ley 23 de 1982</b>.</p>
+      <p class="doc-acciones">
+        <a class="doc-btn" href="/libro.html">El libro que las cita</a>
+        <a class="doc-btn doc-btn--ghost" href="/libro.html#cronologia">La cronología</a>
+        <a class="doc-btn doc-btn--ghost" href="/pueblo.html">El pueblo</a>
+      </p>
+    </header>
+
+    <div class="bi-cuerpo">
+      <h2 class="bi-anaquel">Sobre Labateca</h2>
+      <p class="bi-intro">Las obras que hablan de este pueblo y de nadie más: la crónica del párroco de 1922, las dos memorias escritas por sus hijos, la revista que vino a contarlo en 2024, el acta de fundación y el estudio de archivo que la desenterró.</p>
+      <div class="bi-rejilla">
+      <article class="bi-ficha">
+        <p class="bi-tipo">Crónica parroquial</p>
+        <h3><a href="/historia/valle-de-las-angustias.html">Valle de las Angustias</a></h3>
+        <p class="bi-autor">Pbro. Samuel Ramírez R. · <b>1922</b></p>
+        <p class="bi-clave">La crónica más antigua del pueblo. El párroco Ramírez escribió en 1922 la historia de la Virgen, los milagros, las peregrinaciones y el pleito con Toledo, apoyado en lo que quedaba del archivo parroquial después del incendio de 1729.</p>
+        <p class="bi-pie">Imprenta Diocesana, Pamplona</p>
+        <p class="bi-acc">
+          <a class="doc-btn" href="/historia/valle-de-las-angustias.html">Leer el texto</a>
+          
+          <span class="bi-estado bi-estado--completo">Texto completo</span>
+          <span class="bi-citada">10 pasajes citados por el libro</span>
+        </p>
+      </article>
+      <article class="bi-ficha">
+        <p class="bi-tipo">Memoria del pueblo</p>
+        <h3><a href="/historia/corazon-de-mis-recuerdos.html">Labateca: Corazón de mis Recuerdos</a></h3>
+        <p class="bi-autor">Josefina Jaimes Santander · <b>2020</b></p>
+        <p class="bi-clave">La memoria viva: lo que el pueblo se cuenta a sí mismo. Es la fuente que más veces cita el libro, y también la que más veces hay que contrastar contra el archivo.</p>
+        <p class="bi-pie">Cúcuta, enero de 2020</p>
+        <p class="bi-acc">
+          <a class="doc-btn" href="/historia/corazon-de-mis-recuerdos.html">Leer el texto</a>
+          
+          <span class="bi-estado bi-estado--citas">Pasajes citados · derecho de cita</span>
+          <span class="bi-citada">9 pasajes citados por el libro</span>
+        </p>
+      </article>
+      <article class="bi-ficha">
+        <p class="bi-tipo">Memorias</p>
+        <h3><a href="/historia/vivencias-en-mi-pueblo.html">Vivencias en mi Pueblo</a></h3>
+        <p class="bi-autor">Pedro Guillermo Buitrago Martínez · <b>2011</b></p>
+        <p class="bi-clave">Memorias y versos. Aporta las fechas del colegio, el robo de las joyas de 1997 y el alud de San Josecito, y es la fuente que corrige a «Corazón» en varias fechas.</p>
+        <p class="bi-pie">Primera edición, San Gil, Santander</p>
+        <p class="bi-acc">
+          <a class="doc-btn" href="/historia/vivencias-en-mi-pueblo.html">Leer el texto</a>
+          
+          <span class="bi-estado bi-estado--citas">Pasajes citados · derecho de cita</span>
+          <span class="bi-citada">8 pasajes citados por el libro</span>
+        </p>
+      </article>
+      <article class="bi-ficha">
+        <p class="bi-tipo">Revista universitaria</p>
+        <h3><a href="/historia/redactando-14.html">Redactando · 14ª edición</a></h3>
+        <p class="bi-autor">Universidad de Pamplona · <b>2024</b></p>
+        <p class="bi-clave">Dieciséis estudiantes de periodismo bajaron a Labateca en 2024 y contaron el pueblo de hoy: el café, las cascadas, el carnaval, los mitos y la gente. Es la fuente más reciente del libro, y de ella sale el subtítulo «Volcanes de Dios».</p>
+        <p class="bi-pie">Departamento de Comunicación Social, Pamplona · julio de 2024</p>
+        <p class="bi-acc">
+          <a class="doc-btn" href="/historia/redactando-14.html">Leer el texto</a>
+          
+          <span class="bi-estado bi-estado--citas">Pasajes citados · derecho de cita</span>
+          <span class="bi-citada">4 pasajes citados por el libro</span>
+        </p>
+      </article>
+      <article class="bi-ficha">
+        <p class="bi-tipo">Estudio histórico</p>
+        <h3><a href="/historia/pueblo-de-indios.html">El Pueblo de Indios de Labateca</a></h3>
+        <p class="bi-autor">Silvano Pabón Villamizar · <b>1995</b></p>
+        <p class="bi-clave">El estudio de archivo que fundó todo lo demás: de dónde salió el pueblo, quiénes lo poblaron y con qué papeles. Ya estaba publicado en el sitio, con sus 63 notas.</p>
+        <p class="bi-pie">Monografía histórica municipal, mecanografiado, Cúcuta</p>
+        <p class="bi-acc">
+          <a class="doc-btn" href="/historia/pueblo-de-indios.html">Leer el texto</a>
+          <a class="doc-btn doc-btn--ghost" href="/docs/pueblo-de-indios-de-labateca.pdf" target="_blank" rel="noopener">PDF</a>
+          <span class="bi-estado bi-estado--completo">Texto completo</span>
+          <span class="bi-citada">4 pasajes citados por el libro</span>
+        </p>
+      </article>
+      <article class="bi-ficha">
+        <p class="bi-tipo">Investigación académica</p>
+        <h3><a href="/docs/cofradia-angustias-labateca-ferreira-2001.pdf" target="_blank" rel="noopener">La cofradía de Nuestra Señora de las Angustias</a></h3>
+        <p class="bi-autor">Carmen Adriana Ferreira Esparza · <b>2001</b></p>
+        <p class="bi-clave">Cómo una hermandad de caciques se volvió la institución más rica del pueblo, y cómo su plata salvó el resguardo de la venta en 1778.</p>
+        <p class="bi-pie">Universidad Industrial de Santander · publicado en acceso abierto</p>
+        <p class="bi-acc">
+          <a class="doc-btn" href="/docs/cofradia-angustias-labateca-ferreira-2001.pdf" target="_blank" rel="noopener">Abrir el PDF</a>
+          
+          <span class="bi-estado bi-estado--pdf">PDF de acceso abierto</span>
+          
+        </p>
+      </article>
+      <article class="bi-ficha">
+        <p class="bi-tipo">Fuente primaria</p>
+        <h3><a href="/historia/auto-1623.html">Auto de Población del Valle de los Locos</a></h3>
+        <p class="bi-autor">Oidor Juan de Villabona y Zubiaurre · <b>1623</b></p>
+        <p class="bi-clave">El acto por el que Labateca fue poblada el 19 de julio de 1623, hoja por hoja: los quince pueblos, sus encomenderos y las cifras de aquel día.</p>
+        <p class="bi-pie">AGN, Visitas de Boyacá, Tomo SC.62, ff. 563r-570v</p>
+        <p class="bi-acc">
+          <a class="doc-btn" href="/historia/auto-1623.html">Leer el texto</a>
+          <a class="doc-btn doc-btn--ghost" href="/docs/auto-de-poblacion-labateca-1623.pdf" target="_blank" rel="noopener">PDF</a>
+          <span class="bi-estado bi-estado--completo">Texto completo</span>
+          
+        </p>
+      </article>
+      </div>
+
+      <h2 class="bi-anaquel">La historia regional donde aparece Labateca</h2>
+      <p class="bi-intro">Labateca no se explica sola: fue parte de la provincia de Pamplona y del mundo chitarero. Estos trabajos cuentan esa historia mayor, y son de donde salen las fechas que el libro contrasta contra la tradición oral.</p>
+      <div class="bi-rejilla">
+      <article class="bi-ficha">
+        <p class="bi-tipo">Estudio etnohistórico</p>
+        <h3><a href="/historia/los-chitareros.html">Los Chitareros</a></h3>
+        <p class="bi-autor">Silvano Pabón Villamizar · <b>1992</b></p>
+        <p class="bi-clave">Quiénes vivían aquí antes. Tejían algodón, cargaban calabazos —los «chitareros» que les dieron el nombre— y ocupaban las cuchillas de toda la provincia de Pamplona.</p>
+        <p class="bi-pie">Escuela de Historia, Universidad Industrial de Santander, Bucaramanga</p>
+        <p class="bi-acc">
+          <a class="doc-btn" href="/historia/los-chitareros.html">Leer el texto</a>
+          
+          <span class="bi-estado bi-estado--completo">Texto completo</span>
+          <span class="bi-citada">2 pasajes citados por el libro</span>
+        </p>
+      </article>
+      <article class="bi-ficha">
+        <p class="bi-tipo">Estudio histórico</p>
+        <h3><a href="/historia/region-de-occidente.html">Poblamiento de la Región de Occidente</a></h3>
+        <p class="bi-autor">Silvano Pabón Villamizar · <b>2014</b></p>
+        <p class="bi-clave">Cómo se poblaron los pueblos vecinos, con la misma mecánica jurídica que Labateca: primero ciudad, luego pueblo de indios, luego parroquia de blancos.</p>
+        <p class="bi-pie">Gobernación de Norte de Santander, Secretaría de Cultura</p>
+        <p class="bi-acc">
+          <a class="doc-btn" href="/historia/region-de-occidente.html">Leer el texto</a>
+          
+          <span class="bi-estado bi-estado--completo">Texto completo</span>
+          <span class="bi-citada">3 pasajes citados por el libro</span>
+        </p>
+      </article>
+      <article class="bi-ficha">
+        <p class="bi-tipo">Estudio histórico</p>
+        <h3><a href="/historia/poblamiento-norte-santander.html">Poblamiento, orígenes e institucionalidad</a></h3>
+        <p class="bi-autor">Silvano Pabón Villamizar · <b>2015</b></p>
+        <p class="bi-clave">Las cinco categorías jurídicas del poblamiento —ciudad, pueblo de indios, parroquia, villa, municipio— que explican por qué Labateca tiene cuatro fechas de origen y no una.</p>
+        <p class="bi-pie">Alcaldía de San José de Cúcuta · Edición Bicentenario</p>
+        <p class="bi-acc">
+          <a class="doc-btn" href="/historia/poblamiento-norte-santander.html">Leer el texto</a>
+          
+          <span class="bi-estado bi-estado--completo">Texto completo</span>
+          <span class="bi-citada">2 pasajes citados por el libro</span>
+        </p>
+      </article>
+      <article class="bi-ficha">
+        <p class="bi-tipo">Crónica de viaje</p>
+        <h3><a href="/historia/peregrinacion-de-alpha.html">La Peregrinación de Alpha</a></h3>
+        <p class="bi-autor">Manuel Ancízar · <b>1853</b></p>
+        <p class="bi-clave">El único retrato de la comarca escrito por un forastero en el siglo XIX. Ancízar venía de secretario de la Comisión Corográfica y anotaba lo que veía: casas pajizas, clima, escuelas, cuántos habitantes había.</p>
+        <p class="bi-pie">Imprenta de El Neo-granadino, Bogotá · Tomo II, capítulos XXXVIII y XXXIX</p>
+        <p class="bi-acc">
+          <a class="doc-btn" href="/historia/peregrinacion-de-alpha.html">Leer el texto</a>
+          
+          <span class="bi-estado bi-estado--completo">Texto completo</span>
+          
+        </p>
+      </article>
+      </div>
+
+      <h2 class="bi-anaquel">Fichas de investigación y contraste</h2>
+      <p class="bi-intro">Obras que el libro discute pero que no están digitalizadas. De cada una se compiló una ficha con sus tesis, sus páginas citadas y lo que el archivo confirma o desmiente.</p>
+      <div class="bi-rejilla">
+      <article class="bi-ficha">
+        <p class="bi-tipo">Ficha de investigación</p>
+        <h3><a href="/historia/regimen-del-resguardo.html">El régimen del resguardo en Santander</a></h3>
+        <p class="bi-autor">Compilación de José Rafael Cáceres Garavito · <b>2026</b></p>
+        <p class="bi-clave">Qué era exactamente un resguardo, por qué no se podía vender, y cómo el de Labateca sobrevivió a la orden de extinción de 1778 cuando casi ninguno lo logró.</p>
+        <p class="bi-pie">sobre MARTÍNEZ GARNICA, Armando (1993). Gobernación de Santander, Bucaramanga</p>
+        <p class="bi-acc">
+          <a class="doc-btn" href="/historia/regimen-del-resguardo.html">Leer el texto</a>
+          
+          <span class="bi-estado bi-estado--completo">Texto completo</span>
+          
+        </p>
+      </article>
+      <article class="bi-ficha">
+        <p class="bi-tipo">Ficha de contraste</p>
+        <h3><a href="/historia/america-dolor-inedito.html">América Dolor Inédito</a></h3>
+        <p class="bi-autor">Compilación de José Rafael Cáceres Garavito · <b>2026</b></p>
+        <p class="bi-clave">Los tres debates donde la tradición y el archivo no coinciden: si los indios del valle eran caribes, cómo murió de verdad el encomendero Gonzalo Serrano, y por qué los de Socarima recibieron a Ursúa como libertador.</p>
+        <p class="bi-pie">sobre RICO VILLAMIZAR, José de Jesús (1992). Editorial Antares, Bogotá</p>
+        <p class="bi-acc">
+          <a class="doc-btn" href="/historia/america-dolor-inedito.html">Leer el texto</a>
+          
+          <span class="bi-estado bi-estado--completo">Texto completo</span>
+          
+        </p>
+      </article>
+      <article class="bi-ficha">
+        <p class="bi-tipo">Ficha de investigación</p>
+        <h3><a href="/historia/haciendas-cafeteras.html">Las haciendas cafeteras y la historiografía regional</a></h3>
+        <p class="bi-autor">Compilación de José Rafael Cáceres Garavito · <b>2026</b></p>
+        <p class="bi-clave">De dónde salió el café que hoy sostiene a 947 familias, quién validó el santuario ante la Iglesia nacional, y quién levantó el mapa de las encomiendas de Pamplona.</p>
+        <p class="bi-pie">sobre SUÁREZ PLATA (1994), MEZANZA (1920s) y PÁEZ COURVEL (1940s)</p>
+        <p class="bi-acc">
+          <a class="doc-btn" href="/historia/haciendas-cafeteras.html">Leer el texto</a>
+          
+          <span class="bi-estado bi-estado--completo">Texto completo</span>
+          
+        </p>
+      </article>
+      <article class="bi-ficha">
+        <p class="bi-tipo">Inventario de fuentes</p>
+        <h3><a href="/historia/bibliografia.html">Informe de investigación bibliográfica</a></h3>
+        <p class="bi-autor">Compilación de José Rafael Cáceres Garavito · <b>2026</b></p>
+        <p class="bi-clave">El mapa de todo lo demás: siete estudios académicos, tres crónicas, los tres ejes que atraviesan la historiografía y los archivos donde está lo que falta por leer.</p>
+        <p class="bi-pie">Proyecto «Labateca, Volcanes de Dios»</p>
+        <p class="bi-acc">
+          <a class="doc-btn" href="/historia/bibliografia.html">Leer el texto</a>
+          
+          <span class="bi-estado bi-estado--completo">Texto completo</span>
+          
+        </p>
+      </article>
+      </div>
+
+      <h2 class="bi-anaquel">Y además, en este mismo sitio</h2>
+      <p class="bi-intro">No son libros, pero son documentos: fotografías, láminas y patrimonio
+      que el pueblo también tiene guardado.</p>
+      <div class="bi-rejilla">
+      <article class="bi-ficha">
+        <p class="bi-tipo">Archivo fotográfico · 1914-2003</p>
+        <h3><a href="/historia/fotos-antiguas.html">Las fotos antiguas de Labateca</a></h3>
+        <p class="bi-autor">251 fotografías en 15 secciones</p>
+        <p class="bi-clave">El pueblo antes de que hubiera una cámara en cada bolsillo: las procesiones, la feria de ganado, el templo en obra, el puente en construcción y una orla municipal de 1914 con la nómina escrita a mano.</p>
+        <p class="bi-acc"><a class="doc-btn" href="/historia/fotos-antiguas.html">Ver el archivo</a></p>
+      </article>
+      <article class="bi-ficha">
+        <p class="bi-tipo">Relato · Siglos XVI-XXI</p>
+        <h3><a href="/historia/virgen-de-las-angustias.html">La Virgen que salvó el resguardo</a></h3>
+        <p class="bi-autor">Sobre la investigación de Ferreira Esparza</p>
+        <p class="bi-clave">El lienzo hallado en Bochagá en 1560, la cofradía de los caciques de 1633 y el pleito de 1778, contados de corrido y sin notas de archivo.</p>
+        <p class="bi-acc"><a class="doc-btn" href="/historia/virgen-de-las-angustias.html">Leer el relato</a></p>
+      </article>
+      <article class="bi-ficha">
+        <p class="bi-tipo">Patrimonio · Municipal</p>
+        <h3><a href="/historia/himno-de-labateca.html">El himno de Labateca</a></h3>
+        <p class="bi-autor">Letra y música</p>
+        <p class="bi-clave">La letra completa del himno municipal, verso por verso.</p>
+        <p class="bi-acc"><a class="doc-btn" href="/historia/himno-de-labateca.html">Ver el himno</a></p>
+      </article>
+      <article class="bi-ficha">
+        <p class="bi-tipo">Láminas · 8 módulos</p>
+        <h3><a href="/pueblo.html#laminas">Las 155 láminas de la historia regional</a></h3>
+        <p class="bi-autor">Silvano Pabón Villamizar</p>
+        <p class="bi-clave">De «Antes de los cristianos» a «Los rieles de la ciudad»: ocho módulos ilustrados que se pueden ver en pantalla o descargar en PDF.</p>
+        <p class="bi-acc"><a class="doc-btn" href="/pueblo.html#laminas">Ver las láminas</a></p>
+      </article>
+      </div>
+    </div>
+
+    <p class="doc-volver"><a href="/pueblo.html">← Volver a El pueblo</a></p>
+  </div>
+</article>
+</main>
+
+<footer class="doc-pie">
+  <div class="wrap">
+    <p>© <span id="year"></span> Labateca · Volcanes de Dios — Biblioteca digital de Labateca.</p>
+    <p>Página creada por <strong>José Rafael Cáceres Garavito</strong> con la comunidad labatequense.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  function ir(saltar) {
+    var id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    /* «auto» a la fuerza: el sitio lleva scroll-behavior:smooth, y una página
+       de 125 páginas puede tener el destino a setenta mil píxeles. Animar eso
+       tarda una eternidad o se queda a medias. */
+    if (saltar) el.scrollIntoView({ behavior: "auto", block: "start" });
+    el.classList.remove("doc-destino");
+    void el.offsetWidth;
+    el.classList.add("doc-destino");
+  }
+  window.addEventListener("hashchange", function () { ir(false); });
+  window.addEventListener("load", function () { setTimeout(function () { ir(true); }, 60); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { ir(true); });
+  if (document.readyState !== "loading") ir(true);
+  else document.addEventListener("DOMContentLoaded", function () { ir(true); });
+})();
+</script>
+<script src="/app.js"></script>
+</body>
+</html>

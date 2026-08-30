@@ -1977,7 +1977,7 @@ a.vquote:hover .q-cta{color:var(--gold-soft)}
 .pb-hero-libro a{display:inline-block;background:var(--gold);color:var(--forest);
   text-decoration:none;font-weight:800;padding:11px 20px;border-radius:999px;font-size:.95rem}
 .pb-hero-libro a:hover{background:var(--gold-soft)}
-.pb-hero-libro span{display:block;margin-top:8px;font-size:.82rem;color:var(--cream-2);opacity:.85}
+.pb-hero-libro span{display:block;margin-top:8px;font-size:.82rem;color:var(--ink-mut)}
 
 .pb-doc-autor{font-size:.84rem!important;color:var(--forest-3)!important;font-weight:700;
   margin:0 0 8px!important}
@@ -1989,3 +1989,100 @@ a.vquote:hover .q-cta{color:var(--gold-soft)}
   .lb-cap{font-size:1.42rem}
   .doc-ref{width:100%}
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   LA BIBLIOTECA — /libro, /biblioteca y la cronología de /pueblo
+   Lo generan gen_libro.js, gen_biblioteca.js y gen_pueblo.js.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── La cronología ──────────────────────────────────────────────
+   Cuarenta renglones que son cuarenta enlaces. Cada uno lleva tres cosas: el
+   año grande a la izquierda para poder recorrerla con la vista, el hecho y su
+   importancia en medio, y a la derecha —o debajo, en el celular— el apartado
+   adonde va a caer. Ese último dato es el que convierte la tabla en un índice:
+   sin él, el lector no sabe qué le espera al otro lado del clic. */
+.cr{margin:0 0 2.4em}
+.cr-intro{color:var(--ink-mut);font-size:.95rem;margin:0 0 26px;max-width:70ch}
+.cr-siglo{margin:0 0 30px}
+.cr-siglo-tit{font-family:Fraunces,Georgia,serif;font-size:1.02rem;color:var(--forest-3);
+  margin:0 0 10px;display:flex;align-items:baseline;gap:12px;font-weight:600}
+.cr-siglo-tit span{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:.7rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--clay);font-weight:800;
+  background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:3px 12px}
+
+.cr-lista{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.cr-hito{margin:0}
+.cr-hito a{display:grid;grid-template-columns:78px 1fr 210px;gap:16px;align-items:baseline;
+  text-decoration:none;color:inherit;background:var(--paper);border:1px solid var(--line);
+  border-left:3px solid transparent;border-radius:var(--r-sm);padding:12px 16px;
+  transition:border-color .16s var(--ease),background .16s,transform .16s}
+.cr-hito a:hover,.cr-hito a:focus-visible{border-left-color:var(--clay);
+  background:var(--cream);transform:translateX(2px);outline:none}
+.cr-anio{font-family:Fraunces,Georgia,serif;font-size:1.12rem;font-weight:700;
+  color:var(--forest);white-space:nowrap}
+.cr-medio{min-width:0}
+.cr-hecho{display:block;font-size:.98rem;color:var(--ink);line-height:1.35}
+.cr-sig{display:block;font-size:.86rem;color:var(--ink-mut);margin-top:3px;line-height:1.5}
+.cr-ir{font-size:.76rem;color:var(--clay);font-weight:600;line-height:1.35;
+  border-left:1px solid var(--line);padding-left:14px}
+.cr-hito a:hover .cr-ir{color:var(--forest)}
+.cr-ir::after{content:" \2192";font-weight:800}
+.cr-cierre{margin:22px 0 0}
+
+@media(max-width:860px){
+  .cr-hito a{grid-template-columns:64px 1fr;gap:6px 14px}
+  .cr-ir{grid-column:2;border-left:0;padding-left:0;padding-top:6px;
+    border-top:1px dashed var(--line);margin-top:4px}
+}
+
+/* ── La portada del libro dentro de El pueblo ────────────────── */
+.lb-tarjeta{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--gold);
+  border-radius:0 var(--r-md) var(--r-md) 0;padding:24px 28px;margin:22px 0 34px;
+  box-shadow:var(--shadow-sm)}
+.lb-tarjeta p{color:var(--ink-mut);margin:0 0 16px;max-width:72ch}
+.lb-cuentas{list-style:none;display:flex;flex-wrap:wrap;gap:10px 26px;margin:0 0 18px;padding:0}
+.lb-cuentas li{font-size:.86rem;color:var(--ink-mut)}
+.lb-cuentas b{font-family:Fraunces,Georgia,serif;font-size:1.3rem;color:var(--forest);
+  display:block;line-height:1.1}
+.lb-tarjeta-acc{display:flex;flex-wrap:wrap;gap:10px;margin:0!important}
+
+/* ── La página del libro ────────────────────────────────────── */
+.lb-libro .lb-cuerpo{max-width:74ch;margin:0 auto}
+.lb-head .doc-datos{margin-bottom:18px}
+.lb-cierre{font-size:.9rem;color:var(--ink-mut);background:var(--cream);
+  border-radius:var(--r-sm);padding:14px 18px;margin-top:2em}
+
+/* ── La biblioteca ──────────────────────────────────────────── */
+.bi-cuerpo{margin-top:8px}
+.bi-anaquel{font-family:Fraunces,Georgia,serif;font-size:1.4rem;color:var(--forest);
+  margin:44px 0 6px;padding-top:20px;border-top:2px solid var(--line);scroll-margin-top:112px}
+.bi-cuerpo .bi-anaquel:first-child{margin-top:0;padding-top:0;border-top:0}
+.bi-intro{color:var(--ink-mut);font-size:.93rem;margin:0 0 22px;max-width:72ch}
+.bi-rejilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+.bi-ficha{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);
+  padding:22px 24px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+.bi-tipo{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);
+  font-weight:800;margin:0 0 8px}
+.bi-ficha h3{font-family:Fraunces,Georgia,serif;font-size:1.12rem;line-height:1.25;margin:0 0 6px}
+.bi-ficha h3 a{color:var(--forest);text-decoration:none}
+.bi-ficha h3 a:hover{text-decoration:underline}
+.bi-autor{font-size:.85rem;color:var(--forest-3);font-weight:700;margin:0 0 10px}
+.bi-clave{font-size:.92rem;color:var(--ink-mut);margin:0 0 12px;flex:1}
+.bi-pie{font-size:.76rem;color:var(--ink-mut);opacity:.8;margin:0 0 14px;font-style:italic}
+.bi-acc{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0!important}
+.bi-estado{font-size:.7rem;font-weight:700;border-radius:999px;padding:4px 11px;
+  background:var(--cream);color:var(--ink-mut)}
+.bi-estado--citas{background:#f6e6d8;color:var(--clay)}
+.bi-estado--pdf{background:#e4ece6;color:var(--forest-3)}
+.bi-citada{font-size:.72rem;color:var(--ink-mut);width:100%}
+
+@media(max-width:600px){
+  .bi-rejilla{grid-template-columns:1fr}
+  .lb-tarjeta{padding:20px}
+}
+
+.lb-nota-portal{font-size:.9rem;color:var(--ink-mut);margin:1.2em 0!important;text-align:left!important}
+
+.lb-lema{font-style:italic;color:var(--clay);font-size:.94rem;margin:6px 0 16px}
+
+.lb-rotulo-refs{font-size:.74rem!important;letter-spacing:.1em;text-transform:uppercase;color:var(--clay);font-weight:800;margin:2em 0 -.6em!important;text-align:left!important}
