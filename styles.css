@@ -2113,3 +2113,34 @@ a.vquote:hover .q-cta{color:var(--gold-soft)}
   color:var(--forest);line-height:1}
 .pb-tres-cuentas span{display:block;font-size:.82rem;color:var(--ink-mut);margin-top:4px}
 .pb-cierre-caja{margin:16px 0 0!important;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+/* ── Lo que el libro le añade a una foto ────────────────────────
+   Va debajo del pie y visiblemente separado: el pie describe lo que se ve,
+   esto es lo que dice una fuente. Que no se confundan es la mitad del asunto.
+   La foto que lleva cruce se marca con un filo dorado a la izquierda para que
+   se distinga de un vistazo entre doscientas cincuenta. */
+.fa-fig--cruce{border-left:3px solid var(--gold)}
+.fa-cruce{margin:0 14px 14px;padding:12px 14px;background:var(--cream);
+  border:1px solid var(--line);border-radius:var(--r-sm);font-size:.8rem;line-height:1.55}
+.fa-cruce p{margin:0 0 8px;color:var(--ink-mut);text-align:left}
+.fa-cruce p:last-child{margin-bottom:0}
+.fa-cruce-tit{font-size:.68rem!important;letter-spacing:.1em;text-transform:uppercase;
+  font-weight:800;color:var(--clay)!important}
+.fa-cruce-falta{border-top:1px dashed var(--line);padding-top:8px;font-style:italic}
+.fa-cruce-ir a{color:var(--forest);font-weight:700;text-decoration:none;
+  border-bottom:1px solid var(--gold)}
+.fa-cruce-ir a:hover{background:var(--gold-soft)}
+
+/* ── La glosa de pueblo vs encomienda ───────────────────────────
+   Dos definiciones enfrentadas: es lo que desarma la confusión de las tres
+   cuentas, así que va destacado y no como un párrafo más. */
+.pb-glosa{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:10px}
+.pb-glosa li{background:var(--paper);border:1px solid var(--line);
+  border-left:3px solid var(--forest-3);border-radius:0 var(--r-sm) var(--r-sm) 0;
+  padding:11px 16px;font-size:.92rem;color:var(--ink-mut)}
+.pb-glosa li b{color:var(--forest)}
+.pb-ejemplo{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-sm);
+  padding:14px 18px;margin:0 0 16px!important}
+.pb-tres-cuentas small{display:block;font-size:.76rem;color:var(--ink-mut);
+  margin-top:6px;line-height:1.5;opacity:.9}
+.pb-tres-cuentas span em{font-style:italic;color:var(--clay)}
