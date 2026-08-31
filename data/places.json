@@ -1,5 +1,5 @@
 {
-  "version": "1.8",
+  "version": "1.9",
   "lugares": [
     {
       "id": "templo",
@@ -8,8 +8,8 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 510,
-      "mapaY": 357,
+      "mapaX": 513,
+      "mapaY": 356,
       "telefono": "",
       "nombre": {
         "es": "Parroquia Nuestra Señora de las Angustias",
@@ -96,8 +96,8 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 532,
-      "mapaY": 359,
+      "mapaX": 534,
+      "mapaY": 355,
       "telefono": "",
       "nombre": {
         "es": "Nuestra Señora de las Angustias — Patrona",
@@ -159,8 +159,8 @@
       "coordsApprox": false,
       "lat": 7.3002463,
       "lng": -72.4963025,
-      "mapaX": 466,
-      "mapaY": 334,
+      "mapaX": 464,
+      "mapaY": 329,
       "telefono": "",
       "nombre": {
         "es": "Cementerio (Camposanto) de Labateca",
@@ -222,8 +222,8 @@
       "coordsApprox": false,
       "lat": 7.2997576,
       "lng": -72.494551,
-      "mapaX": 484,
-      "mapaY": 408,
+      "mapaX": 485,
+      "mapaY": 405,
       "telefono": "573213496226",
       "nombre": {
         "es": "Servicios Parroquiales y Documentos",
@@ -270,8 +270,8 @@
       "coordsApprox": false,
       "lat": 7.2996816,
       "lng": -72.49452,
-      "mapaX": 510,
-      "mapaY": 376,
+      "mapaX": 514,
+      "mapaY": 375,
       "telefono": "",
       "nombre": {
         "es": "Parque Principal",
@@ -338,8 +338,8 @@
       "coordsApprox": false,
       "lat": 7.300327,
       "lng": -72.494867,
-      "mapaX": 504,
-      "mapaY": 342,
+      "mapaX": 505,
+      "mapaY": 340,
       "telefono": "573219592514",
       "nombre": {
         "es": "Intrínseco — Restaurante, Café y Bar",
@@ -406,8 +406,8 @@
       "coordsApprox": false,
       "lat": 7.3005894,
       "lng": -72.4950748,
-      "mapaX": 462,
-      "mapaY": 391,
+      "mapaX": 460,
+      "mapaY": 393,
       "telefono": "",
       "telFijo": "576015948500",
       "nombre": {
@@ -460,8 +460,8 @@
       "coordsApprox": false,
       "lat": 7.30017,
       "lng": -72.494824,
-      "mapaX": 461,
-      "mapaY": 359,
+      "mapaX": 462,
+      "mapaY": 356,
       "telefono": "573123047048",
       "nombre": {
         "es": "Siscatagua A.P.C. — Acueducto y Alcantarillado",
@@ -538,8 +538,8 @@
       "coordsApprox": false,
       "lat": 7.300346,
       "lng": -72.49487,
-      "mapaX": 485,
-      "mapaY": 343,
+      "mapaX": 491,
+      "mapaY": 337,
       "telefono": "584168475520",
       "nombre": {
         "es": "Criss Studio — Uñas y Belleza",
@@ -853,7 +853,7 @@
       "coordsApprox": false,
       "lat": 7.2990524,
       "lng": -72.4949041,
-      "mapaX": 495,
+      "mapaX": 499,
       "mapaY": 353,
       "telefono": "573118913433",
       "nombre": {
@@ -911,8 +911,8 @@
       "coordsApprox": false,
       "lat": 7.29917,
       "lng": -72.494704,
-      "mapaX": 505,
-      "mapaY": 389,
+      "mapaX": 504,
+      "mapaY": 385,
       "telefono": "573222834876",
       "nombre": {
         "es": "Automercado Karen",
@@ -979,8 +979,8 @@
       "coordsApprox": false,
       "lat": 7.298409,
       "lng": -72.493737,
-      "mapaX": 472,
-      "mapaY": 347,
+      "mapaX": 478,
+      "mapaY": 333,
       "telefono": "573144195716",
       "nombre": {
         "es": "Antojitos",
@@ -1037,8 +1037,8 @@
       "coordsApprox": false,
       "lat": 7.30008,
       "lng": -72.494792,
-      "mapaX": 451,
-      "mapaY": 369,
+      "mapaX": 442,
+      "mapaY": 376,
       "telefono": "573234521624",
       "nombre": {
         "es": "Sistemas UM",
@@ -1106,7 +1106,7 @@
       "lat": 7.2987856,
       "lng": -72.4940529,
       "mapaX": 458,
-      "mapaY": 404,
+      "mapaY": 407,
       "telefono": "573212849284",
       "nombre": {
         "es": "Antaño Café-Bar",
@@ -1236,7 +1236,7 @@
       "lat": 7.297209,
       "lng": -72.496575,
       "mapaX": 444,
-      "mapaY": 407,
+      "mapaY": 409,
       "telefono": "573108566143",
       "nombre": {
         "es": "Teca Bar La Barra",
@@ -1308,8 +1308,8 @@
       "coordsApprox": false,
       "lat": 7.300349,
       "lng": -72.494849,
-      "mapaX": 448,
-      "mapaY": 355,
+      "mapaX": 447,
+      "mapaY": 353,
       "telefono": "573123047768",
       "nombre": {
         "es": "Frikarnes",
@@ -1371,7 +1371,7 @@
       "coordsApprox": false,
       "lat": 7.298875,
       "lng": -72.494026,
-      "mapaX": 472,
+      "mapaX": 471,
       "mapaY": 401,
       "telefono": "573115576386",
       "nombre": {
@@ -1439,8 +1439,8 @@
       "coordsApprox": false,
       "lat": 7.299908,
       "lng": -72.494747,
-      "mapaX": 438,
-      "mapaY": 376,
+      "mapaX": 429,
+      "mapaY": 373,
       "telefono": "573153331207",
       "nombre": {
         "es": "Galactic Bar",
@@ -1502,8 +1502,8 @@
       "coordsApprox": false,
       "lat": 7.3005588,
       "lng": -72.4949505,
-      "mapaX": 435,
-      "mapaY": 362,
+      "mapaX": 436,
+      "mapaY": 361,
       "correo": "labatecanortedesan@registraduria.gov.co",
       "nombre": {
         "es": "Registraduría Municipal de Labateca",
@@ -1555,8 +1555,8 @@
       "coordsApprox": false,
       "lat": 7.298304,
       "lng": -72.493737,
-      "mapaX": 497,
-      "mapaY": 414,
+      "mapaX": 488,
+      "mapaY": 418,
       "telefono": "573212675678",
       "nombre": {
         "es": "Sofi Burger",
@@ -1623,7 +1623,7 @@
       "coordsApprox": false,
       "lat": 7.3008,
       "lng": -72.495177,
-      "mapaX": 437,
+      "mapaX": 434,
       "mapaY": 347,
       "telefono": "573124097073",
       "nombre": {
@@ -1686,8 +1686,8 @@
       "coordsApprox": true,
       "lat": 7.30056,
       "lng": -72.4949,
-      "mapaX": 458,
-      "mapaY": 346,
+      "mapaX": 445,
+      "mapaY": 339,
       "nombre": {
         "es": "Concejo Municipal de Labateca",
         "en": "Municipal Council of Labateca"
@@ -1743,8 +1743,8 @@
       "coordsApprox": false,
       "lat": 7.299932,
       "lng": -72.494973,
-      "mapaX": 440,
-      "mapaY": 394,
+      "mapaX": 435,
+      "mapaY": 398,
       "telefono": "573104036102",
       "nombre": {
         "es": "Papelería y Variedades Martha Sánchez",
@@ -1806,8 +1806,8 @@
       "coordsApprox": false,
       "lat": 7.299268,
       "lng": -72.494337,
-      "mapaX": 522,
-      "mapaY": 396,
+      "mapaX": 518,
+      "mapaY": 389,
       "telefono": "573107963730",
       "nombre": {
         "es": "Tienda Tres Esquinas",
@@ -1879,8 +1879,8 @@
       "coordsApprox": false,
       "lat": 7.298665,
       "lng": -72.493742,
-      "mapaX": 558,
-      "mapaY": 433,
+      "mapaX": 560,
+      "mapaY": 434,
       "telefono": "573144490474",
       "nombre": {
         "es": "Isla Mobile — Telefonía y Accesorios",
@@ -1942,8 +1942,8 @@
       "coordsApprox": false,
       "lat": 7.299447,
       "lng": -72.494141,
-      "mapaX": 535,
-      "mapaY": 388,
+      "mapaX": 541,
+      "mapaY": 382,
       "telefono": "573123504567",
       "nombre": {
         "es": "Variedades Martha — Miscelánea y Efecty",
@@ -2015,8 +2015,8 @@
       "coordsApprox": false,
       "lat": 7.30023,
       "lng": -72.494266,
-      "mapaX": 520,
-      "mapaY": 366,
+      "mapaX": 524,
+      "mapaY": 365,
       "telefono": "573106803058",
       "nombre": {
         "es": "Heladería Nápoles",
@@ -2088,8 +2088,8 @@
       "coordsApprox": false,
       "lat": 7.300002,
       "lng": -72.49379,
-      "mapaX": 547,
-      "mapaY": 381,
+      "mapaX": 555,
+      "mapaY": 380,
       "nombre": {
         "es": "Juzgado Promiscuo Municipal de Labateca",
         "en": "Labateca Municipal Court (Juzgado Promiscuo Municipal)"
@@ -2140,8 +2140,8 @@
       "coordsApprox": false,
       "lat": 7.298773,
       "lng": -72.493981,
-      "mapaX": 535,
-      "mapaY": 416,
+      "mapaX": 539,
+      "mapaY": 419,
       "telefono": "573205777829",
       "nombre": {
         "es": "Moto Repuesto Doble AA",
@@ -2208,8 +2208,8 @@
       "coordsApprox": false,
       "lat": 7.299147,
       "lng": -72.494282,
-      "mapaX": 510,
-      "mapaY": 404,
+      "mapaX": 498,
+      "mapaY": 408,
       "telefono": "573144922534",
       "nombre": {
         "es": "Almacén Tecno-Agro",
@@ -2281,8 +2281,8 @@
       "coordsApprox": false,
       "lat": 7.298917,
       "lng": -72.493682,
-      "mapaX": 553,
-      "mapaY": 411,
+      "mapaX": 552,
+      "mapaY": 409,
       "telefono": "573184471211",
       "nombre": {
         "es": "Droguería María José",
@@ -2344,8 +2344,8 @@
       "coordsApprox": false,
       "lat": 7.299102,
       "lng": -72.494192,
-      "mapaX": 534,
-      "mapaY": 402,
+      "mapaX": 545,
+      "mapaY": 396,
       "telefono": "573168725118",
       "nombre": {
         "es": "Panadería Maxipan",
@@ -2500,8 +2500,8 @@
       "coordsApprox": false,
       "lat": 7.299931881265672,
       "lng": -72.49471127546606,
-      "mapaX": 486,
-      "mapaY": 370,
+      "mapaX": 479,
+      "mapaY": 373,
       "nombre": {
         "es": "SuperGiros",
         "en": "SuperGiros"
@@ -2552,8 +2552,8 @@
       "coordsApprox": false,
       "lat": 7.300103,
       "lng": -72.49476,
-      "mapaX": 475,
-      "mapaY": 382,
+      "mapaX": 469,
+      "mapaY": 383,
       "telefono": "573138048438",
       "nombre": {
         "es": "La Esquinita del Sabor",
@@ -2625,8 +2625,8 @@
       "coordsApprox": false,
       "lat": 7.298122,
       "lng": -72.493567,
-      "mapaX": 555,
-      "mapaY": 446,
+      "mapaX": 556,
+      "mapaY": 447,
       "telefono": "573123106831",
       "nombre": {
         "es": "Taller de Motos El Toro",
@@ -2708,8 +2708,8 @@
       "coordsApprox": false,
       "lat": 7.29849,
       "lng": -72.493971,
-      "mapaX": 530,
-      "mapaY": 450,
+      "mapaX": 529,
+      "mapaY": 452,
       "telefono": "573123106831",
       "nombre": {
         "es": "Supermercado El Campesino",
@@ -2776,8 +2776,8 @@
       "coordsApprox": false,
       "lat": 7.299401,
       "lng": -72.494427,
-      "mapaX": 496,
-      "mapaY": 400,
+      "mapaX": 494,
+      "mapaY": 395,
       "telefono": "573202435050",
       "nombre": {
         "es": "La Tienda de Ivancho",
@@ -3171,8 +3171,8 @@
       "coordsApprox": false,
       "lat": 7.298937,
       "lng": -72.494087,
-      "mapaX": 511,
-      "mapaY": 432,
+      "mapaX": 507,
+      "mapaY": 437,
       "telefono": "573134966445",
       "nombre": {
         "es": "Restaurante Doña María",
@@ -3235,7 +3235,7 @@
       "lat": 7.298332,
       "lng": -72.493707,
       "mapaX": 542,
-      "mapaY": 443,
+      "mapaY": 447,
       "telefono": "573123106831",
       "nombre": {
         "es": "Centro Naturista Salud & Vida",
@@ -3302,8 +3302,8 @@
       "coordsApprox": false,
       "lat": 7.298932,
       "lng": -72.49408,
-      "mapaX": 498,
-      "mapaY": 442,
+      "mapaX": 497,
+      "mapaY": 446,
       "telefono": "573208491055",
       "nombre": {
         "es": "Frutas y Verduras",
@@ -3365,8 +3365,8 @@
       "coordsApprox": false,
       "lat": 7.298426,
       "lng": -72.494158,
-      "mapaX": 511,
-      "mapaY": 446,
+      "mapaX": 510,
+      "mapaY": 450,
       "telefono": "573208080167",
       "nombre": {
         "es": "Droguería Central",
@@ -3428,7 +3428,7 @@
       "coordsApprox": false,
       "lat": 7.2987,
       "lng": -72.493926,
-      "mapaX": 547,
+      "mapaX": 552,
       "mapaY": 423,
       "telefono": "573185619179",
       "nombre": {
@@ -3541,8 +3541,8 @@
       "coordsApprox": false,
       "lat": 7.298516,
       "lng": -72.494867,
-      "mapaX": 472,
-      "mapaY": 430,
+      "mapaX": 466,
+      "mapaY": 432,
       "telefono": "573007685165",
       "nombre": {
         "es": "Axel Tiendas",
@@ -3614,8 +3614,8 @@
       "coordsApprox": false,
       "lat": 7.299067,
       "lng": -72.494904,
-      "mapaX": 460,
-      "mapaY": 418,
+      "mapaX": 458,
+      "mapaY": 421,
       "telefono": "573112805177",
       "nombre": {
         "es": "La Económica JY",
@@ -3692,8 +3692,8 @@
       "coordsApprox": false,
       "lat": 7.298705,
       "lng": -72.494589,
-      "mapaX": 486,
-      "mapaY": 436,
+      "mapaX": 483,
+      "mapaY": 443,
       "telefono": "573227784070",
       "nombre": {
         "es": "Barber Shop Labateca",
@@ -3745,8 +3745,8 @@
       "coordsApprox": false,
       "lat": 7.300102,
       "lng": -72.494544,
-      "mapaX": 482,
-      "mapaY": 357,
+      "mapaX": 486,
+      "mapaY": 350,
       "telefono": "573209083700",
       "nombre": {
         "es": "Supermercado Batecano",
@@ -3960,8 +3960,8 @@
       "coordsApprox": false,
       "lat": 7.295545,
       "lng": -72.493841,
-      "mapaX": 523,
-      "mapaY": 424,
+      "mapaX": 529,
+      "mapaY": 429,
       "telefono": "",
       "nombre": {
         "es": "Monumento a la Virgen del Carmen",
@@ -4071,8 +4071,8 @@
       "coordsApprox": false,
       "lat": 7.298245,
       "lng": -72.493673,
-      "mapaX": 523,
-      "mapaY": 438,
+      "mapaX": 521,
+      "mapaY": 440,
       "telefono": "573143571569",
       "nombre": {
         "es": "Concentrados JL",
@@ -4134,8 +4134,8 @@
       "coordsApprox": false,
       "lat": 7.298758,
       "lng": -72.49401,
-      "mapaX": 510,
-      "mapaY": 418,
+      "mapaX": 515,
+      "mapaY": 425,
       "telefono": "573152908856",
       "nombre": {
         "es": "Restaurante Son Delicias",
@@ -4202,8 +4202,8 @@
       "coordsApprox": false,
       "lat": 7.299483,
       "lng": -72.494037,
-      "mapaX": 522,
-      "mapaY": 382,
+      "mapaX": 528,
+      "mapaY": 379,
       "telefono": "573123506776",
       "nombre": {
         "es": "Bazar Nuestra Señora de las Angustias",
@@ -4265,8 +4265,8 @@
       "coordsApprox": false,
       "lat": 7.298612,
       "lng": -72.493918,
-      "mapaX": 535,
-      "mapaY": 430,
+      "mapaX": 542,
+      "mapaY": 433,
       "telefono": "573125841908",
       "nombre": {
         "es": "Tienda Mixta Las Delicias",
@@ -4338,8 +4338,8 @@
       "coordsApprox": false,
       "lat": 7.29922,
       "lng": -72.494269,
-      "mapaX": 523,
-      "mapaY": 410,
+      "mapaX": 535,
+      "mapaY": 406,
       "telefono": "573232158303",
       "nombre": {
         "es": "Variedades Ludwing",
@@ -4474,8 +4474,8 @@
       "coordsApprox": false,
       "lat": 7.298958,
       "lng": -72.494096,
-      "mapaX": 485,
-      "mapaY": 422,
+      "mapaX": 479,
+      "mapaY": 429,
       "telefono": "573208168572",
       "nombre": {
         "es": "Variedades Mafe",
@@ -4547,8 +4547,8 @@
       "coordsApprox": false,
       "lat": 7.298942,
       "lng": -72.494086,
-      "mapaX": 498,
-      "mapaY": 428,
+      "mapaX": 493,
+      "mapaY": 433,
       "telefono": "573224001508",
       "nombre": {
         "es": "Sonia Villamizar — Salón de Belleza",
@@ -4610,8 +4610,8 @@
       "coordsApprox": false,
       "lat": 7.298638,
       "lng": -72.49365,
-      "mapaX": 547,
-      "mapaY": 398,
+      "mapaX": 559,
+      "mapaY": 396,
       "telefono": "573219833791",
       "nombre": {
         "es": "Linaje Barber Estudio",
@@ -4824,8 +4824,8 @@
       "coordsApprox": false,
       "lat": 7.299579,
       "lng": -72.495708,
-      "mapaX": 429,
-      "mapaY": 386,
+      "mapaX": 427,
+      "mapaY": 387,
       "telefono": "573134426243",
       "nombre": {
         "es": "Mil Motivos",
@@ -4892,8 +4892,8 @@
       "coordsApprox": false,
       "lat": 7.300187,
       "lng": -72.494393,
-      "mapaX": 500,
-      "mapaY": 367,
+      "mapaX": 503,
+      "mapaY": 366,
       "telefono": "573213708777",
       "nombre": {
         "es": "Varimania — Cafetería, Heladería y Variedades",
@@ -4975,8 +4975,8 @@
       "coordsApprox": false,
       "lat": 7.299134,
       "lng": -72.494693,
-      "mapaX": 483,
-      "mapaY": 394,
+      "mapaX": 481,
+      "mapaY": 391,
       "telefono": "573114041267",
       "nombre": {
         "es": "La Villa de las Flores",
@@ -5049,7 +5049,7 @@
       "lat": 7.297466,
       "lng": -72.497513,
       "mapaX": 350,
-      "mapaY": 443,
+      "mapaY": 438,
       "telefono": "573229698047",
       "nombre": {
         "es": "Variedades Emanuel",
@@ -5287,8 +5287,8 @@
       "coordsApprox": false,
       "lat": 7.299987,
       "lng": -72.494894,
-      "mapaX": 472,
-      "mapaY": 367,
+      "mapaX": 476,
+      "mapaY": 360,
       "telefono": "573112875551",
       "nombre": {
         "es": "Cooperacafé — Cooperativa de Caficultores del Catatumbo",
@@ -5360,8 +5360,8 @@
       "coordsApprox": false,
       "lat": 7.299857,
       "lng": -72.495088,
-      "mapaX": 462,
-      "mapaY": 377,
+      "mapaX": 456,
+      "mapaY": 379,
       "telefono": "573113460089",
       "nombre": {
         "es": "Comité de Cafeteros — Labateca",
@@ -5418,8 +5418,8 @@
       "coordsApprox": false,
       "lat": 7.299372,
       "lng": -72.495055,
-      "mapaX": 450,
-      "mapaY": 384,
+      "mapaX": 446,
+      "mapaY": 389,
       "telFijo": "573219269652",
       "nombre": {
         "es": "Centro de Salud Labateca — IPS",
@@ -5476,8 +5476,8 @@
       "coordsApprox": false,
       "lat": 7.299485,
       "lng": -72.494455,
-      "mapaX": 492,
-      "mapaY": 383,
+      "mapaX": 491,
+      "mapaY": 381,
       "telefono": "573115286436",
       "nombre": {
         "es": "Pre Exequiales Caminos La Piedad",
@@ -5534,8 +5534,8 @@
       "coordsApprox": false,
       "lat": 7.299188,
       "lng": -72.4943,
-      "mapaX": 516,
-      "mapaY": 407,
+      "mapaX": 512,
+      "mapaY": 412,
       "telefono": "573186217423",
       "nombre": {
         "es": "AM-BAR Café",
@@ -5668,8 +5668,8 @@
       "coordsApprox": false,
       "lat": 7.300113,
       "lng": -72.494497,
-      "mapaX": 491,
-      "mapaY": 362,
+      "mapaX": 489,
+      "mapaY": 363,
       "telefono": "573112327066",
       "nombre": {
         "es": "Hotel Los Robles",
@@ -5766,8 +5766,8 @@
       "coordsApprox": false,
       "lat": 7.299229,
       "lng": -72.494276,
-      "mapaX": 523,
-      "mapaY": 414,
+      "mapaX": 525,
+      "mapaY": 416,
       "telefono": "573118099903",
       "nombre": {
         "es": "Eléctricos Centro Labateca",
@@ -5824,7 +5824,7 @@
       "coordsApprox": false,
       "lat": 7.299375,
       "lng": -72.494233,
-      "mapaX": 530,
+      "mapaX": 531,
       "mapaY": 392,
       "telefono": "573208531744",
       "nombre": {
@@ -5921,7 +5921,6 @@
         "es": "Solo abre sábados y domingos. Cobran el paso en la entrada, así que lleva efectivo. El sendero al pozo es de tierra: con lluvia se pone resbaloso y conviene calzado con agarre. Si vas a la Cascada El Chorrerón, este sitio queda de camino. WhatsApp: 322 462 6352.",
         "en": "Open Saturdays and Sundays only. There is a charge to pass at the entrance, so bring cash. The path to the pool is dirt: it gets slippery in the rain, so wear shoes with grip. If you're heading to the El Chorrerón waterfall, this place is on the way. WhatsApp: +57 322 462 6352."
       },
-      "track": "data/tracks/soma-aguascalientes.gpx",
       "fotos": [
         "labateca/soma-aguascalientes-01",
         "labateca/soma-aguascalientes-02",
@@ -5985,7 +5984,8 @@
           "es": "El poste de señales del sitio, con las distancias a Labateca, Toledo, Pamplona y Chinácota.",
           "en": "The site's signpost, with distances to Labateca, Toledo, Pamplona and Chinácota."
         }
-      ]
+      ],
+      "track": "data/tracks/soma-aguascalientes.gpx"
     },
     {
       "id": "chorreron",
@@ -6022,11 +6022,6 @@
       "recomendacion": {
         "es": "En el camino hay una valla que anuncia un valor de ingreso; la casilla del precio estaba en blanco el día del recorrido, y en la entrada por el estadero Soma cobran el paso, así que lleva efectivo. Ve con calzado de agarre —el último tramo es trocha y la neblina del salto lo mantiene húmedo— y descarga el mapa antes de salir, porque no hay señal. Sal temprano: son casi dos horas de ida contando el trayecto en carro. Soma y Aguascalientes quedan de camino, si quieres rematar el día ahí.",
         "en": "There is a sign along the way announcing an entry fee; the price box was blank on the day of the visit, and at the entrance by the Soma roadside stop there is a charge to pass, so bring cash. Wear shoes with grip — the last stretch is a rough path kept damp by the mist from the falls — and download the map before setting out, as there is no signal. Leave early: it's nearly two hours each way counting the drive. Soma and its hot springs are on the way, if you want to end the day there."
-      },
-      "track": "data/tracks/chorreron.gpx",
-      "trailhead": {
-        "lat": 7.202502,
-        "lng": -72.44331
       },
       "fotos": [
         "labateca/chorreron-01",
@@ -6081,7 +6076,12 @@
           "es": "Un aviso de «Prohibido cazar» de Corponor amarrado a un árbol del bosque.",
           "en": "A Corponor 'No hunting' sign tied to a tree in the forest."
         }
-      ]
+      ],
+      "track": "data/tracks/chorreron.gpx",
+      "trailhead": {
+        "lat": 7.202502,
+        "lng": -72.44331
+      }
     },
     {
       "id": "sendero-mariano",
@@ -6188,6 +6188,888 @@
         {
           "es": "La piedra pintada junto al sepulcro: «No está aquí, porque ha resucitado, tal como dijo» (Mateo 28,6).",
           "en": "The painted stone beside the tomb: 'He is not here; he has risen, just as he said' (Matthew 28:6)."
+        }
+      ]
+    },
+    {
+      "id": "alcaldia",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300488,
+      "lng": -72.495014,
+      "mapaX": 452,
+      "mapaY": 366,
+      "telefono": "3144798925",
+      "correo": "alcaldia@labateca-nortedesantander.gov.co",
+      "nombre": {
+        "es": "Alcaldía Municipal de Labateca",
+        "en": "Labateca Town Hall"
+      },
+      "desc": {
+        "es": "El Palacio Municipal es el edificio de gobierno de Labateca y, por dentro, uno de los espacios más bonitos del pueblo: dos plantas alrededor de un patio central de baldosa de barro, con una roseta labrada en el piso, barandas de hierro y dos grandes murales pintados en los muros —uno de la cosecha, con café, plátano y frutas de la tierra; otro del pueblo antiguo, con el templo y las casas de teja—. Una placa de bronce junto a la entrada fecha la obra: fue construida el 7 de agosto de 1961, bajo la gobernación del doctor Miguel García Herreros, con Antonio Guerrero Gallardo como contralor, Germán Hernández Duplat en Obras Públicas y el arquitecto Jaime Pacheco S. Aquí funcionan el Despacho del Alcalde, la Secretaría General y de Gobierno, Planeación, Hacienda, Desarrollo Social, Agricultura y Turismo, Control Interno, el Sisbén, la Comisaría de Familia, la Inspección de Policía, la Personería, la Registraduría del Estado Civil y el Juzgado Promiscuo Municipal. Las fotografías de esta ficha se publican con autorización del Municipio de Labateca (Resolución 322 del 25 de agosto de 2026).",
+        "en": "The Municipal Palace is Labateca's seat of government and, inside, one of the handsomest spaces in town: two floors around a clay-tiled courtyard with a carved rosette in the floor, iron railings and two large painted murals — one of the harvest, with coffee, plantain and local fruit; the other of the old town, with the church and its tiled roofs. A bronze plaque by the entrance dates the building: it was completed on 7 August 1961, under governor Miguel García Herreros, with Antonio Guerrero Gallardo as comptroller, Germán Hernández Duplat at Public Works and architect Jaime Pacheco S. It houses the Mayor's Office, the Secretariats of Government, Planning, Finance, Social Development, Agriculture and Tourism, Internal Control, the Sisbén desk, the Family Commissariat, the Police Inspectorate, the Ombudsman, the Civil Registry and the Municipal Court. The photographs on this page are published by permission of the Municipality of Labateca (Resolution 322 of 25 August 2026)."
+      },
+      "comoLlegar": {
+        "es": "En el Parque Principal, carrera 2 n.º 4-37, código postal 54050. Es el edificio blanco de dos plantas con arcos que da a la plaza, al lado del Banco Agrario.",
+        "en": "On the Main Square, carrera 2 no. 4-37, postal code 54050. The two-storey white building with arches facing the plaza, next to the Banco Agrario."
+      },
+      "dist": {
+        "es": "En el Parque Principal",
+        "en": "On the Main Square"
+      },
+      "tiempo": {
+        "es": "Lunes a viernes en horario de oficina · conmutador 314 479 8925",
+        "en": "Monday to Friday, office hours · switchboard +57 314 479 8925"
+      },
+      "dificultad": {
+        "es": "Entidad pública · acceso fácil",
+        "en": "Public institution · easy access"
+      },
+      "recomendacion": {
+        "es": "Entra al patio aunque no lleves trámite: los dos murales y la placa de 1961 están a la vista y valen la visita. Cada dependencia tiene su propio correo institucional —alcaldia@, planeacion@, secretariadehacienda@, comisaria@, inspeccionpolicia@, sisben@ y desarrollosocial@labateca-nortedesantander.gov.co—; la Secretaría de Hacienda atiende en el 314 485 3127 y Familias en Acción en el 311 292 3068.",
+        "en": "Step into the courtyard even if you have no paperwork to do: the two murals and the 1961 plaque are right there and worth the visit. Each department has its own official e-mail — alcaldia@, planeacion@, secretariadehacienda@, comisaria@, inspeccionpolicia@, sisben@ and desarrollosocial@labateca-nortedesantander.gov.co; the Finance Secretariat answers on +57 314 485 3127 and Familias en Acción on +57 311 292 3068."
+      },
+      "fotos": [
+        "labateca/alcaldia-01",
+        "labateca/alcaldia-02",
+        "labateca/alcaldia-03",
+        "labateca/alcaldia-04",
+        "labateca/alcaldia-05",
+        "labateca/alcaldia-06",
+        "labateca/alcaldia-07",
+        "labateca/alcaldia-08",
+        "labateca/alcaldia-09",
+        "labateca/alcaldia-10",
+        "labateca/alcaldia-11"
+      ],
+      "fotosCap": [
+        {
+          "es": "El patio central del Palacio Municipal, con el mural del pueblo antiguo al fondo y la roseta labrada en el piso de barro.",
+          "en": "The Municipal Palace's central courtyard, with the mural of the old town at the back and the carved rosette in the clay floor."
+        },
+        {
+          "es": "El mural de la cosecha —café, plátano y frutas de la tierra— pintado en el muro del patio.",
+          "en": "The harvest mural — coffee, plantain and local fruit — painted on the courtyard wall."
+        },
+        {
+          "es": "El zaguán de entrada desde la plaza, con el piso en baldosa y la puerta de reja al fondo.",
+          "en": "The entrance hall from the square, with its tiled floor and the iron gate at the far end."
+        },
+        {
+          "es": "La galería alta y el mural del pueblo antiguo, visto desde el segundo piso.",
+          "en": "The upper gallery and the mural of the old town, seen from the second floor."
+        },
+        {
+          "es": "La galería del segundo piso con las oficinas y el mural de la cosecha.",
+          "en": "The second-floor gallery with the offices and the harvest mural."
+        },
+        {
+          "es": "Las oficinas del segundo piso alrededor del patio abierto.",
+          "en": "The second-floor offices around the open courtyard."
+        },
+        {
+          "es": "El tablero de dependencias en el poste central del patio.",
+          "en": "The department board on the central post of the courtyard."
+        },
+        {
+          "es": "El directorio del edificio: Juzgado, Personería, Registraduría, Comisaría de Familia, Despacho del Alcalde, Tesorería, Planeación y Control Interno.",
+          "en": "The building directory: Court, Ombudsman, Civil Registry, Family Commissariat, Mayor's Office, Treasury, Planning and Internal Control."
+        },
+        {
+          "es": "El letrero de baldosa «Alcaldía de Labateca» en el muro interior.",
+          "en": "The tiled 'Alcaldía de Labateca' sign on the inner wall."
+        },
+        {
+          "es": "La placa de bronce de la entrada: «Edificio Municipal de Labateca», agosto 7 de 1961.",
+          "en": "The bronze plaque at the entrance: 'Edificio Municipal de Labateca', 7 August 1961."
+        },
+        {
+          "es": "La calle y el campanario del templo, vistos desde el balcón de la Alcaldía.",
+          "en": "The street and the church bell tower, seen from the Town Hall balcony."
+        }
+      ]
+    },
+    {
+      "id": "biblioteca-publica",
+      "categoria": "cultura",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299768,
+      "lng": -72.493641,
+      "mapaX": 537,
+      "mapaY": 369,
+      "telefono": "3144798925",
+      "correo": "secretariadegobierno@labateca-nortedesantander.gov.co",
+      "nombre": {
+        "es": "Biblioteca Pública Municipal Hermana María Isaura Cardona Zapata",
+        "en": "Sister María Isaura Cardona Zapata Public Library"
+      },
+      "desc": {
+        "es": "La biblioteca del pueblo cumple 42 años. Nació por el Acuerdo Municipal 007 del 19 de noviembre de 1983, adscrita a la casa de la cultura, con una donación de 1.500 libros del Ministerio de Educación Nacional. En 2004, por el Acuerdo 019, tomó el nombre de la hermana María Isaura Cardona Zapata, en agradecimiento a las religiosas del Instituto Misionero de Santa Teresita, que estuvieron 58 años educando a la niñez y la juventud labatequense. Anduvo por medio pueblo antes de tener casa propia: primero en el primer piso del edificio municipal, luego en la parte baja del parque —la antigua escuela de niños—, después en la planta vieja del colegio sobre la carrera 3.ª. En 2005 se presentó un proyecto a la Embajada del Japón, fue aprobado, y el 17 de septiembre de 2006 se inauguró la sede actual en el barrio Quinta Real, contigua a la emisora comunitaria y al santuario. Hoy pertenece a la Red Nacional y Departamental de Bibliotecas Públicas, se rige por la Ley 1379 de 2010 y presta los diez servicios bibliotecarios básicos, incluida la extensión rural con los «morrales viajeros». Las fotografías de esta ficha se publican con autorización del Municipio de Labateca (Resolución 322 del 25 de agosto de 2026).",
+        "en": "The town library is 42 years old. It was created by Municipal Agreement 007 of 19 November 1983, attached to the house of culture, with a donation of 1,500 books from the Ministry of Education. In 2004, by Agreement 019, it took the name of Sister María Isaura Cardona Zapata, in gratitude to the nuns of the Missionary Institute of Saint Thérèse, who spent 58 years teaching the children and young people of Labateca. It moved around town for years before it had a home: first the ground floor of the municipal building, then the lower end of the square — the old boys' school — then the old wing of the secondary school on carrera 3. In 2005 a proposal was put to the Embassy of Japan, it was approved, and on 17 September 2006 the present building opened in the Quinta Real neighbourhood, next to the community radio station and the shrine. It belongs to the National and Departmental Network of Public Libraries, is governed by Law 1379 of 2010, and provides the ten basic library services, including rural outreach with its 'travelling backpacks'. The photographs on this page are published by permission of the Municipality of Labateca (Resolution 322 of 25 August 2026)."
+      },
+      "comoLlegar": {
+        "es": "En el barrio Quinta Real, contigua al Templo Parroquial y al Santuario de Nuestra Señora de las Angustias, al lado de la emisora comunitaria. Es la casa de ladrillo con techo de teja roja y el nombre pintado a mano en el muro.",
+        "en": "In the Quinta Real neighbourhood, next to the parish church and the Shrine of Our Lady of Sorrows, beside the community radio station. It is the brick building with a red tiled roof and the name hand-painted on the wall."
+      },
+      "dist": {
+        "es": "A un costado del templo, en el casco urbano",
+        "en": "Beside the church, in the town centre"
+      },
+      "tiempo": {
+        "es": "Abierta en horario escolar · consulta en sala, préstamo externo e internet gratis",
+        "en": "Open during school hours · reading room, lending and free internet"
+      },
+      "dificultad": {
+        "es": "Entrada libre · acceso fácil",
+        "en": "Free entry · easy access"
+      },
+      "recomendacion": {
+        "es": "Es un lugar de encuentro, no solo un depósito de libros: aquí funciona la Escuela de Formación Artística y Cultural en Literatura, Escritura y Oralidad, creada por el Acuerdo 008 de 2016, y de aquí salen tres programas de la emisora Morena FM Stéreo —el Informativo Cultural los lunes, Pildoritas Literarias los martes y Fábrica de Cuentos los jueves—. La biblioteca apoyó la cartilla «Labateca, rompe el silencio: fragmentos de memoria», en homenaje a las víctimas del municipio, y la cartilla «Redactando · Volcanes de Dios» de la Universidad de Pamplona, que puedes leer completa en la biblioteca digital de este sitio.",
+        "en": "It is a meeting place, not just a book store: it hosts the School of Artistic and Cultural Training in Literature, Writing and Oral Tradition, created by Agreement 008 of 2016, and three programmes on Morena FM Stereo come out of here — the Cultural News on Mondays, Literary Pills on Tuesdays and Story Factory on Thursdays. The library supported the booklet 'Labateca, break the silence: fragments of memory', in homage to the municipality's victims, and the booklet 'Redactando · Volcanes de Dios' from the University of Pamplona, which you can read in full in this site's digital library."
+      },
+      "fotos": [
+        "labateca/biblioteca-publica-01",
+        "labateca/biblioteca-publica-02",
+        "labateca/biblioteca-publica-03",
+        "labateca/biblioteca-publica-04",
+        "labateca/biblioteca-publica-05",
+        "labateca/biblioteca-publica-06",
+        "labateca/biblioteca-publica-07",
+        "labateca/biblioteca-publica-08",
+        "labateca/biblioteca-publica-09",
+        "labateca/biblioteca-publica-10"
+      ],
+      "fotosCap": [
+        {
+          "es": "El nombre pintado a mano en la fachada: «Biblioteca Pública María Isaura Cardona Z.».",
+          "en": "The name hand-painted on the façade: 'Biblioteca Pública María Isaura Cardona Z.'."
+        },
+        {
+          "es": "La sede propia, inaugurada el 17 de septiembre de 2006 con apoyo de la Embajada del Japón.",
+          "en": "The library's own building, opened on 17 September 2006 with support from the Embassy of Japan."
+        },
+        {
+          "es": "La sala infantil, con su alfombra de colores, los cojines y la estantería baja.",
+          "en": "The children's room, with its coloured mat, cushions and low shelving."
+        },
+        {
+          "es": "Las mesas de trabajo de la Sala General, bajo la estructura de madera del techo.",
+          "en": "The work tables of the General Room, under the wooden roof structure."
+        },
+        {
+          "es": "La Sala General vista desde la entrada, con la cercha roja a la vista.",
+          "en": "The General Room seen from the entrance, with the red roof truss exposed."
+        },
+        {
+          "es": "Los estantes de la colección general.",
+          "en": "The shelves of the general collection."
+        },
+        {
+          "es": "Parte de la colección actualizada que llega de la Biblioteca Nacional y de la Red Departamental.",
+          "en": "Part of the up-to-date collection that arrives from the National Library and the Departmental Network."
+        },
+        {
+          "es": "Los pasillos entre estantes.",
+          "en": "The aisles between the shelves."
+        },
+        {
+          "es": "Estantería de consulta y material multimedia.",
+          "en": "Reference shelving and multimedia material."
+        },
+        {
+          "es": "El retrato de la hermana María Isaura Cardona Zapata, misionera teresita, que da nombre a la biblioteca.",
+          "en": "The portrait of Sister María Isaura Cardona Zapata, Teresian missionary, after whom the library is named."
+        }
+      ]
+    },
+    {
+      "id": "casa-del-anciano",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.297622,
+      "lng": -72.497339,
+      "mapaX": 350,
+      "mapaY": 451,
+      "telefono": "3202347720",
+      "nombre": {
+        "es": "Casa del Anciano Teresita de Lisieux",
+        "en": "Teresita de Lisieux Home for the Elderly"
+      },
+      "desc": {
+        "es": "El Centro de Vida y Bienestar del Adulto Mayor Santa Teresita de Lisieux —el ancianato del pueblo, que todos llaman «Hogar de Vida»— se inauguró el 21 de noviembre de 2003. La placa de la entrada deja constancia de quiénes lo hicieron posible: la administración del alcalde José Eugenio Cáceres S. (2001-2003) con el tesorero Tito A. Capacho R., el Concejo Municipal presidido por Evelio Valencia P., la Asociación de Exalumnos Teresianos asesorada por la hermana María E. Gómez V., y la comunidad y la colonia labatequenses. La cierra una frase de Santa Teresita: «Nada es pequeño cuando el amor es grande». Es una casa de una sola planta, con corredores anchos de baldosa roja, jardín y una terraza desde la que se ve el valle entero. Las fotografías de esta ficha se publican con autorización del Municipio de Labateca (Resolución 322 del 25 de agosto de 2026).",
+        "en": "The Santa Teresita de Lisieux Centre for the Life and Wellbeing of Older Adults — the town's care home, which everyone calls 'Hogar de Vida' — opened on 21 November 2003. The plaque at the entrance records who made it possible: the administration of mayor José Eugenio Cáceres S. (2001-2003) with treasurer Tito A. Capacho R., the Municipal Council chaired by Evelio Valencia P., the Association of Teresian Alumni advised by Sister María E. Gómez V., and the people of Labateca at home and abroad. It closes with a line from Saint Thérèse: 'Nothing is small when love is great.' It is a single-storey house with wide red-tiled corridors, a garden and a terrace looking out over the whole valley. The photographs on this page are published by permission of the Municipality of Labateca (Resolution 322 of 25 August 2026)."
+      },
+      "comoLlegar": {
+        "es": "En el borde suroccidental del casco urbano, sobre la vía que sale del pueblo. Es la casa larga de una planta con el letrero «Hogar de Vida Sta. Teresita Lisieux» pintado sobre la ventana y el portón rojo de reja.",
+        "en": "On the south-western edge of town, on the road leading out. It is the long single-storey building with 'Hogar de Vida Sta. Teresita Lisieux' painted above the window and a red iron gate."
+      },
+      "dist": {
+        "es": "Borde suroccidental del casco urbano",
+        "en": "South-western edge of town"
+      },
+      "tiempo": {
+        "es": "Visitas de 9:00 a 11:00 a. m. y de 2:00 a 4:00 p. m. · celular 320 234 7720",
+        "en": "Visiting hours 9:00–11:00 a.m. and 2:00–4:00 p.m. · mobile +57 320 234 7720"
+      },
+      "dificultad": {
+        "es": "Institución municipal · visitas con registro previo",
+        "en": "Municipal institution · visitors must sign in"
+      },
+      "recomendacion": {
+        "es": "Si vas a visitar, hay reglas y son en serio: se registra la visita y se entra al salón principal, no a las habitaciones, y no se le deja dinero en efectivo a los residentes. Tampoco se puede llevar gaseosa, jugos de caja o botella, chocolates ni dulces: alteran las dietas y la salud de los adultos mayores. Lo que sí reciben, y les hace falta, son donaciones de ropa, comida, medicinas y dinero. Un detalle bonito: la biblioteca pública sube cada tanto a hacerles lectura en voz alta.",
+        "en": "If you visit, there are rules and they are meant seriously: sign the visitors' book and stay in the main hall, not the bedrooms, and do not leave cash with residents. Soft drinks, boxed or bottled juices, chocolates and sweets are not allowed either: they upset the residents' diets and health. What they do accept, and need, are donations of clothing, food, medicine and money. One nice detail: the public library comes up now and then to read aloud to them."
+      },
+      "fotos": [
+        "labateca/casa-del-anciano-01",
+        "labateca/casa-del-anciano-02",
+        "labateca/casa-del-anciano-03",
+        "labateca/casa-del-anciano-04",
+        "labateca/casa-del-anciano-05",
+        "labateca/casa-del-anciano-06",
+        "labateca/casa-del-anciano-07",
+        "labateca/casa-del-anciano-08",
+        "labateca/casa-del-anciano-09",
+        "labateca/casa-del-anciano-10"
+      ],
+      "fotosCap": [
+        {
+          "es": "El letrero pintado sobre la ventana: «Hogar de Vida Sta. Teresita Lisieux».",
+          "en": "The sign painted above the window: 'Hogar de Vida Sta. Teresita Lisieux'."
+        },
+        {
+          "es": "La casa vista de frente, con las palmas del jardín.",
+          "en": "The building seen from the front, with the garden palms."
+        },
+        {
+          "es": "El portón rojo de reja, en la entrada desde la calle.",
+          "en": "The red iron gate at the street entrance."
+        },
+        {
+          "es": "El costado de la casa y el camino de acceso.",
+          "en": "The side of the house and the access path."
+        },
+        {
+          "es": "El corredor interior, en baldosa roja, que reparte a las habitaciones y al salón principal.",
+          "en": "The red-tiled inner corridor leading to the bedrooms and the main hall."
+        },
+        {
+          "es": "La terraza del fondo, con el valle abierto detrás de la baranda.",
+          "en": "The rear terrace, with the valley opening out beyond the railing."
+        },
+        {
+          "es": "El jardín y el tejado de la casa al atardecer.",
+          "en": "The garden and the roof of the house at dusk."
+        },
+        {
+          "es": "El aviso de normas y horarios de visita en la entrada.",
+          "en": "The notice of rules and visiting hours at the entrance."
+        },
+        {
+          "es": "La placa de la inauguración, 21 de noviembre de 2003, con los nombres de quienes hicieron posible la casa.",
+          "en": "The inauguration plaque, 21 November 2003, naming those who made the home possible."
+        },
+        {
+          "es": "El acuerdo municipal enmarcado en el salón.",
+          "en": "The framed municipal agreement in the hall."
+        }
+      ]
+    },
+    {
+      "id": "estadio-jesus-nunez",
+      "categoria": "cultura",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.2967226,
+      "lng": -72.4966247,
+      "mapaX": 392,
+      "mapaY": 442,
+      "nombre": {
+        "es": "Estadio Jesús Núñez",
+        "en": "Jesús Núñez Stadium"
+      },
+      "desc": {
+        "es": "El estadio municipal de Labateca, encajado entre los árboles en la parte baja del pueblo. Tiene cancha reglamentaria con la grama rayada al corte, graderías de concreto a un costado, cerramiento en malla y —lo que lo cambió todo— torres de iluminación: se juega de noche, y de noche es cuando se llena. Es el escenario de los campeonatos veredales e intermunicipales y el sitio donde el pueblo se junta los fines de semana. Las fotografías de esta ficha se publican con autorización del Municipio de Labateca (Resolución 322 del 25 de agosto de 2026).",
+        "en": "Labateca's municipal stadium, set among the trees at the lower end of town. It has a full-size pitch with the grass cut in stripes, a concrete stand along one side, mesh fencing and — the thing that changed everything — floodlight towers: matches are played at night, and at night is when it fills up. It hosts the village and inter-municipal championships and is where the town gathers at weekends. The photographs on this page are published by permission of the Municipality of Labateca (Resolution 322 of 25 August 2026)."
+      },
+      "comoLlegar": {
+        "es": "En la parte baja del casco urbano, bajando desde el parque hacia el sur. Se entra por el portón verde de reja con el letrero amarillo.",
+        "en": "At the lower end of town, downhill from the square heading south. The entrance is the green iron gate with the yellow sign."
+      },
+      "dist": {
+        "es": "A unos 400 m del Parque Principal",
+        "en": "About 400 m from the Main Square"
+      },
+      "tiempo": {
+        "es": "Abierto según programación · los partidos importantes son de noche",
+        "en": "Open according to fixtures · the big matches are at night"
+      },
+      "dificultad": {
+        "es": "Acceso fácil · terreno plano",
+        "en": "Easy access · flat ground"
+      },
+      "recomendacion": {
+        "es": "Ve a un partido nocturno: con las torres encendidas, el verde de la cancha contra el negro de los árboles es la mejor postal del pueblo, y el ambiente de gradería es de pueblo entero. Si vas de día, la vista desde arriba muestra por qué la cancha se cuida tanto.",
+        "en": "Go to a night match: with the floodlights on, the green of the pitch against the black of the trees is the best picture in town, and the whole village is in the stand. If you go by day, the view from above shows why the pitch is looked after so carefully."
+      },
+      "fotos": [
+        "labateca/estadio-jesus-nunez-01",
+        "labateca/estadio-jesus-nunez-02",
+        "labateca/estadio-jesus-nunez-03",
+        "labateca/estadio-jesus-nunez-04",
+        "labateca/estadio-jesus-nunez-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "La cancha vista desde el aire, con la grama rayada al corte y las graderías abajo.",
+          "en": "The pitch seen from the air, the grass cut in stripes and the stand below."
+        },
+        {
+          "es": "La cancha iluminada de noche, con las torres encendidas.",
+          "en": "The pitch lit up at night, with the floodlight towers on."
+        },
+        {
+          "es": "Vista nocturna desde el costado, con la gradería y la caseta al fondo.",
+          "en": "Night view from the side, with the stand and the hut at the back."
+        },
+        {
+          "es": "El cerramiento en malla y la cancha encendida detrás.",
+          "en": "The mesh fencing with the lit pitch behind it."
+        },
+        {
+          "es": "El portón verde de entrada al estadio, desde la calle.",
+          "en": "The green entrance gate to the stadium, from the street."
+        }
+      ]
+    },
+    {
+      "id": "estacion-policia",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300403,
+      "lng": -72.494939,
+      "mapaX": 472,
+      "mapaY": 346,
+      "telefono": "3186304751",
+      "nombre": {
+        "es": "Estación de Policía de Labateca",
+        "en": "Labateca Police Station"
+      },
+      "desc": {
+        "es": "La estación de la Policía Nacional en Labateca ocupa un inmueble del municipio, a media cuadra del parque: fachada blanca y ladrillo a la vista, con el nombre en letras de relieve y la estrella policial sobre el muro. El servicio que presta en un municipio como este es sobre todo de cercanía: el modelo de vigilancia por cuadrantes, con una patrulla asignada al casco urbano y a las veredas, atención de riñas y casos de convivencia, acompañamiento en fiestas patronales, ferias y partidos, control en la vía a Pamplona y a Chitagá, y el trabajo con la Inspección de Policía y la Comisaría de Familia que funcionan en la Alcaldía. Para el visitante es, además, el sitio donde preguntar si algo se perdió o si hay novedad en alguna vía. Las fotografías de esta ficha se publican con autorización del Municipio de Labateca (Resolución 322 del 25 de agosto de 2026).",
+        "en": "The National Police station in Labateca occupies a municipal building half a block from the square: a white and exposed-brick façade with the name in relief lettering and the police star on the wall. In a town this size the work is mostly neighbourhood policing: the quadrant model, with a patrol assigned to the town and the outlying hamlets, handling disputes and community matters, providing cover at the patron-saint festival, fairs and football matches, road checks on the Pamplona and Chitagá routes, and working alongside the Police Inspectorate and the Family Commissariat based at the Town Hall. For a visitor it is also the place to ask if something has been lost or if there is any news on the roads. The photographs on this page are published by permission of the Municipality of Labateca (Resolution 322 of 25 August 2026)."
+      },
+      "comoLlegar": {
+        "es": "A media cuadra del Parque Principal, sobre la calle que sube. Se reconoce por las letras en relieve «Estación de Policía Labateca» y la estrella blanca en el muro.",
+        "en": "Half a block from the Main Square, on the street going uphill. Recognisable by the relief lettering 'Estación de Policía Labateca' and the white star on the wall."
+      },
+      "dist": {
+        "es": "A media cuadra del Parque Principal",
+        "en": "Half a block from the Main Square"
+      },
+      "tiempo": {
+        "es": "Servicio permanente · cuadrante 318 630 4751 · emergencias 123",
+        "en": "Always staffed · quadrant line +57 318 630 4751 · emergencies 123"
+      },
+      "dificultad": {
+        "es": "Entidad pública · acceso fácil",
+        "en": "Public institution · easy access"
+      },
+      "recomendacion": {
+        "es": "Guarda el número del cuadrante —318 630 4751— antes de salir a caminar veredas o cascadas: es la línea directa de la patrulla del municipio y responde más rápido que cualquier otra. Para emergencias, el 123. Las fotografías de esta ficha son únicamente de la fachada desde el espacio público, que es lo que autoriza la resolución municipal.",
+        "en": "Save the quadrant number — +57 318 630 4751 — before setting off to the hamlets or the waterfalls: it is the direct line to the town patrol and answers faster than anything else. For emergencies, dial 123. The photographs on this page show only the façade from public space, which is what the municipal resolution authorises."
+      },
+      "fotos": [
+        "labateca/estacion-policia-01",
+        "labateca/estacion-policia-02",
+        "labateca/estacion-policia-03"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada de la estación, con el nombre en letras de relieve y la estrella policial.",
+          "en": "The station façade, with the name in relief lettering and the police star."
+        },
+        {
+          "es": "El frente de la estación desde la acera, en ladrillo a la vista y muro blanco.",
+          "en": "The front of the station from the pavement, in exposed brick and whitewash."
+        },
+        {
+          "es": "Las motocicletas del cuadrante parqueadas frente a la estación.",
+          "en": "The quadrant patrol motorcycles parked in front of the station."
+        }
+      ]
+    },
+    {
+      "id": "cic-labateca",
+      "categoria": "cultura",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.296242,
+      "lng": -72.497868,
+      "mapaX": 286,
+      "mapaY": 485,
+      "nombre": {
+        "es": "Centro de Integración Ciudadana (CIC)",
+        "en": "Citizen Integration Centre (CIC)"
+      },
+      "desc": {
+        "es": "El CIC es la cancha cubierta de Labateca: una placa polideportiva bajo una cubierta metálica de gran luz, con el piso pintado por zonas de juego, graderías de colores y parque infantil al lado. Al estar techada sirve llueva o truene, y por eso terminó siendo el salón grande del pueblo: microfútbol, baloncesto y voleibol, pero también actos del colegio, jornadas de salud, ferias, asambleas y bailes. Está en la parte alta del casco urbano, con el valle abierto detrás.",
+        "en": "The CIC is Labateca's covered court: a multi-sport slab under a wide-span metal roof, with the floor painted in playing zones, brightly coloured bleachers and a playground beside it. Being roofed, it works rain or shine, and so it has ended up as the town's big hall: five-a-side football, basketball and volleyball, but also school events, health days, fairs, assemblies and dances. It sits in the upper part of town, with the valley opening out behind."
+      },
+      "comoLlegar": {
+        "es": "En la parte alta del casco urbano, subiendo por el costado occidental. Se ve desde lejos por la cubierta metálica; en el muro está el letrero «CIC · Centro Integración Ciudadana · Labateca».",
+        "en": "In the upper part of town, climbing along the western side. The metal roof is visible from a distance; the wall carries the sign 'CIC · Centro Integración Ciudadana · Labateca'."
+      },
+      "dist": {
+        "es": "A unos 500 m del Parque Principal, cuesta arriba",
+        "en": "About 500 m uphill from the Main Square"
+      },
+      "tiempo": {
+        "es": "Abierto casi siempre · techado, sirve con lluvia",
+        "en": "Open most of the time · roofed, works in the rain"
+      },
+      "dificultad": {
+        "es": "Acceso fácil · última cuadra en subida",
+        "en": "Easy access · the last block is uphill"
+      },
+      "recomendacion": {
+        "es": "Es el mejor sitio del pueblo para ver deporte de barrio sin sol encima, y por la tarde se llena de niños en el parque infantil de al lado. Asómate al borde: desde ahí se ve el valle y buena parte del casco urbano.",
+        "en": "It is the best place in town to watch neighbourhood sport out of the sun, and in the afternoon it fills with children on the playground next door. Walk to the edge: from there you can see the valley and much of the town."
+      },
+      "fotos": [
+        "labateca/cic-labateca-01",
+        "labateca/cic-labateca-02",
+        "labateca/cic-labateca-03",
+        "labateca/cic-labateca-04",
+        "labateca/cic-labateca-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "El letrero del Centro de Integración Ciudadana de Labateca.",
+          "en": "The sign of Labateca's Citizen Integration Centre."
+        },
+        {
+          "es": "La cancha bajo la cubierta, con las graderías de colores y las montañas al fondo.",
+          "en": "The court under the roof, with coloured bleachers and the mountains behind."
+        },
+        {
+          "es": "El piso pintado por zonas de juego y el parque infantil al costado.",
+          "en": "The floor painted in playing zones, with the playground alongside."
+        },
+        {
+          "es": "La estructura metálica de la cubierta, vista desde afuera.",
+          "en": "The metal roof structure, seen from outside."
+        },
+        {
+          "es": "El acceso desde la calle, con el muro y el andén de entrada.",
+          "en": "The street entrance, with the wall and the access path."
+        }
+      ]
+    },
+    {
+      "id": "cens-labateca",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300046,
+      "lng": -72.494692,
+      "mapaX": 466,
+      "mapaY": 369,
+      "telefono": "6075824444",
+      "correo": "cens@cens.com.co",
+      "nombre": {
+        "es": "CENS · Oficina de atención en Labateca",
+        "en": "CENS · Customer Service Office in Labateca"
+      },
+      "desc": {
+        "es": "Punto de atención de Centrales Eléctricas del Norte de Santander (CENS), la empresa que presta el servicio de energía en el municipio. Aquí se paga la factura, se radican reclamos por cobros o por el servicio, se piden nuevas conexiones y se reportan daños en la red. Funciona en una casa del centro, a pocos pasos del parque.",
+        "en": "Service point of Centrales Eléctricas del Norte de Santander (CENS), the company that supplies electricity to the municipality. Here you can pay your bill, file complaints about charges or supply, request new connections and report network faults. It operates from a house in the town centre, a few steps from the square."
+      },
+      "comoLlegar": {
+        "es": "En el centro del pueblo, a menos de una cuadra del Parque Principal.",
+        "en": "In the town centre, less than a block from the Main Square."
+      },
+      "dist": {
+        "es": "A menos de una cuadra del parque",
+        "en": "Less than a block from the square"
+      },
+      "tiempo": {
+        "es": "Lunes a viernes 7:00–11:30 a. m. y 1:00–4:00 p. m. · sábados 8:00 a. m.–12:00 m.",
+        "en": "Monday to Friday 7:00–11:30 a.m. and 1:00–4:00 p.m. · Saturdays 8:00 a.m.–12:00 noon"
+      },
+      "dificultad": {
+        "es": "Oficina de servicio público · acceso fácil",
+        "en": "Public utility office · easy access"
+      },
+      "recomendacion": {
+        "es": "Antes de hacer el viaje, ten en cuenta que casi todo se resuelve sin ir: el bot de WhatsApp «Lucía» atiende en el 323 231 5115, la línea gratuita nacional es la 018000 414115 y el portal de autogestión es censvirtual.sistemasentry.com.co. Para trámites que sí exigen ventanilla, el horario del sábado es corto: cierra a las 12.",
+        "en": "Before making the trip, bear in mind that almost everything can be sorted without going in person: the WhatsApp bot 'Lucía' answers on +57 323 231 5115, the free national line is 018000 414115 and the self-service portal is censvirtual.sistemasentry.com.co. For matters that do need the counter, Saturday hours are short: it closes at noon."
+      },
+      "fotos": [
+        "labateca/cens-labateca-01",
+        "labateca/cens-labateca-02"
+      ],
+      "fotosCap": [
+        {
+          "es": "La casa del centro donde funciona la oficina de atención de CENS.",
+          "en": "The house in the town centre where the CENS service office operates."
+        },
+        {
+          "es": "El aviso de horarios de atención y los canales de autogestión, en la puerta.",
+          "en": "The notice of opening hours and self-service channels, on the door."
+        }
+      ]
+    },
+    {
+      "id": "hospedaje-la-profe",
+      "categoria": "hospedaje",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298691,
+      "lng": -72.495398,
+      "mapaX": 470,
+      "mapaY": 415,
+      "telefono": "3123079138",
+      "nombre": {
+        "es": "Hospedaje La Profe",
+        "en": "Hospedaje La Profe"
+      },
+      "desc": {
+        "es": "Hospedaje sencillo y limpio en el casco urbano, atendido por doña Blanca Parada, su propietaria. Se arriendan habitaciones con servicios incluidos: cama, televisor, baño con ducha y cocina de uso común, en una casa de patio con corredor y piso de baldosa. Es de las opciones más prácticas para quien llega a pasar la noche en Labateca sin complicarse, y atiende a toda hora.",
+        "en": "A simple, clean guesthouse in the town centre, run by its owner doña Blanca Parada. Rooms are let with services included: bed, television, bathroom with shower and a shared kitchen, in a courtyard house with a tiled corridor. It is one of the most practical options for anyone arriving to spend the night in Labateca without fuss, and it is open at any hour."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a un par de cuadras del Parque Principal. La ubicación exacta está en el mapa; sigue el pin.",
+        "en": "In Labateca's town centre, a couple of blocks from the Main Square. The exact location is on the map; follow the pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In the town centre"
+      },
+      "tiempo": {
+        "es": "Atiende 24 horas · WhatsApp 312 307 9138",
+        "en": "Open 24 hours · WhatsApp +57 312 307 9138"
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Escribe o llama antes por WhatsApp al 312 307 9138 para apartar habitación, sobre todo en fiestas patronales y fines de semana de campeonato, que es cuando el pueblo se llena. Doña Blanca también tiene Variedades Blanca, aquí mismo en el pueblo.",
+        "en": "Message or call ahead on WhatsApp at +57 312 307 9138 to hold a room, especially during the patron-saint festival and championship weekends, when the town fills up. Doña Blanca also runs Variedades Blanca, here in the same town."
+      },
+      "fotos": [
+        "labateca/hospedaje-la-profe-01",
+        "labateca/hospedaje-la-profe-02",
+        "labateca/hospedaje-la-profe-03",
+        "labateca/hospedaje-la-profe-04",
+        "labateca/hospedaje-la-profe-05",
+        "labateca/hospedaje-la-profe-06",
+        "labateca/hospedaje-la-profe-07"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada del hospedaje, con la puerta de reja a la calle.",
+          "en": "The guesthouse façade, with its iron door onto the street."
+        },
+        {
+          "es": "Habitación con cama doble y televisor.",
+          "en": "A room with a double bed and television."
+        },
+        {
+          "es": "Otra de las habitaciones, con ventana a la calle.",
+          "en": "Another of the rooms, with a window onto the street."
+        },
+        {
+          "es": "Habitación con televisor y closet.",
+          "en": "A room with television and wardrobe."
+        },
+        {
+          "es": "El corredor interior que reparte a las habitaciones.",
+          "en": "The inner corridor leading to the rooms."
+        },
+        {
+          "es": "La cocina de uso común.",
+          "en": "The shared kitchen."
+        },
+        {
+          "es": "El baño con ducha, en baldosa.",
+          "en": "The tiled bathroom with shower."
+        }
+      ]
+    },
+    {
+      "id": "miami-bar",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299323,
+      "lng": -72.49432,
+      "mapaX": 521,
+      "mapaY": 402,
+      "telefono": "3102289043",
+      "nombre": {
+        "es": "Miami Bar",
+        "en": "Miami Bar"
+      },
+      "desc": {
+        "es": "Bar de barra larga en madera rústica, hecha con troncos y tablón, en un local pintado de rojo y verde con luces de colores y un mural de acordeón en la pared. Tiene neveras de cerveza y gaseosa, mecato, sonido y pantalla, y una ventana grande por la que entra la vista del pueblo. Lo administra María Segura. Es sitio de tarde y de noche: entre semana cierra a las once, y los fines de semana la cosa se estira hasta las dos de la mañana.",
+        "en": "A bar with a long rustic counter built from tree trunks and planks, in a room painted red and green with coloured lights and an accordion mural on the wall. It has beer and soft-drink coolers, snacks, sound system and a screen, plus a big window that lets the view of the town in. It is run by María Segura. This is an afternoon and evening place: on weekdays it closes at eleven, and at weekends it runs until two in the morning."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, muy cerca del Parque Principal. Se reconoce por el letrero luminoso «Miami Bar» detrás de la barra.",
+        "en": "In the town centre, very close to the Main Square. Recognisable by the illuminated 'Miami Bar' sign behind the counter."
+      },
+      "dist": {
+        "es": "A una cuadra del Parque Principal",
+        "en": "A block from the Main Square"
+      },
+      "tiempo": {
+        "es": "Lunes a viernes 2:00 p. m.–11:00 p. m. · fines de semana 2:00 p. m.–2:00 a. m.",
+        "en": "Monday to Friday 2:00 p.m.–11:00 p.m. · weekends 2:00 p.m.–2:00 a.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Siéntate en la punta de la barra que da a la ventana: es el mejor puesto del local y desde ahí se ve la calle y las montañas. Para reservar o preguntar por eventos, WhatsApp al 310 228 9043.",
+        "en": "Sit at the end of the counter by the window: it is the best seat in the place, with the street and the mountains in view. To book or ask about events, WhatsApp +57 310 228 9043."
+      },
+      "fotos": [
+        "labateca/miami-bar-01",
+        "labateca/miami-bar-02",
+        "labateca/miami-bar-03",
+        "labateca/miami-bar-04",
+        "labateca/miami-bar-05"
+      ],
+      "fotosCap": [
+        {
+          "es": "El letrero luminoso «Miami Bar» sobre la barra de troncos.",
+          "en": "The illuminated 'Miami Bar' sign above the log counter."
+        },
+        {
+          "es": "La barra junto a la ventana, con la vista del pueblo al fondo.",
+          "en": "The counter by the window, with the view over the town."
+        },
+        {
+          "es": "La barra en madera rústica y la zona de servicio.",
+          "en": "The rustic wooden counter and the service area."
+        },
+        {
+          "es": "El mural del acordeón y la barra alta contra la pared.",
+          "en": "The accordion mural and the high counter against the wall."
+        },
+        {
+          "es": "Las neveras de bebidas y el mecato.",
+          "en": "The drinks coolers and the snacks."
+        }
+      ]
+    },
+    {
+      "id": "peluqueria-mary",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299311,
+      "lng": -72.49446,
+      "mapaX": 508,
+      "mapaY": 398,
+      "telefono": "3208310880",
+      "nombre": {
+        "es": "Peluquería Mary",
+        "en": "Peluquería Mary"
+      },
+      "desc": {
+        "es": "Peluquería de barrio atendida por su propietaria, Mary Luz Maldonado. Corte, peinado, lavado y tinturado, en un local pequeño y arreglado con silla hidráulica, espejo, lavacabezas rojo y una sala de espera con sofá. Vende además productos para el cabello. Abre todos los días, incluidos domingos, partiendo la jornada al mediodía.",
+        "en": "A neighbourhood hairdresser run by its owner, Mary Luz Maldonado. Cutting, styling, washing and colouring, in a small, well-kept salon with a hydraulic chair, mirror, red backwash basin and a waiting area with a sofa. Hair products are also sold. It opens every day, Sundays included, breaking for lunch at midday."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, a una cuadra larga del Parque Principal. Sigue el pin del mapa.",
+        "en": "In the town centre, a long block from the Main Square. Follow the map pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In the town centre"
+      },
+      "tiempo": {
+        "es": "Todos los días 9:00 a. m.–1:00 p. m. y 2:30–7:00 p. m.",
+        "en": "Every day 9:00 a.m.–1:00 p.m. and 2:30–7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Llama antes al 320 831 0880 si vas por tintura o algo que lleve tiempo: es un puesto solo y en día de mercado o víspera de fiesta se llena. Abre también los domingos, que es cuando casi todo lo demás cierra.",
+        "en": "Call ahead on +57 320 831 0880 if you want colouring or anything that takes time: there is only one chair and on market day or the eve of a festival it fills up. It also opens on Sundays, when almost everything else is shut."
+      },
+      "fotos": [
+        "labateca/peluqueria-mary-01",
+        "labateca/peluqueria-mary-02",
+        "labateca/peluqueria-mary-03",
+        "labateca/peluqueria-mary-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "El puesto de trabajo, con la silla, el espejo y la sala de espera.",
+          "en": "The work station, with the chair, mirror and waiting area."
+        },
+        {
+          "es": "El lavacabezas rojo, al fondo del local.",
+          "en": "The red backwash basin at the far end of the salon."
+        },
+        {
+          "es": "La vitrina de productos para el cabello.",
+          "en": "The display case of hair products."
+        },
+        {
+          "es": "La entrada desde la calle.",
+          "en": "The entrance from the street."
+        }
+      ]
+    },
+    {
+      "id": "variedades-blanca",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299019,
+      "lng": -72.494173,
+      "mapaX": 502,
+      "mapaY": 422,
+      "telefono": "3123079138",
+      "nombre": {
+        "es": "Variedades Blanca",
+        "en": "Variedades Blanca"
+      },
+      "desc": {
+        "es": "Almacén de ropa y calzado atendido por su propietaria, doña Blanca Parada. Tiene chaquetas, camisas, jeans, ropa de niño y de dama, y una pared entera de zapatos: tenis, botas, sandalias y pantuflas, ordenados por talla en estantes de madera. Es de esos almacenes de pueblo donde se encuentra de todo un poco, y lo que no está se consigue: doña Blanca trae por encargo.",
+        "en": "A clothing and footwear shop run by its owner, doña Blanca Parada. Jackets, shirts, jeans, children's and women's clothing, and a whole wall of shoes: trainers, boots, sandals and slippers, arranged by size on wooden racks. It is one of those village shops where you find a bit of everything — and what is not there can be got: doña Blanca orders it in."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano, sobre la calle comercial cerca del Parque Principal. Se reconoce por el aviso rosado «Variedades Blanca» sobre la puerta.",
+        "en": "In the town centre, on the shopping street near the Main Square. Recognisable by the pink 'Variedades Blanca' sign above the door."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In the town centre"
+      },
+      "tiempo": {
+        "es": "Todos los días 8:00 a. m.–7:00 p. m.",
+        "en": "Every day 8:00 a.m.–7:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Si no ves tu talla o el modelo que buscas, pregunta: lo que no hay se trae por encargo. WhatsApp 312 307 9138. Doña Blanca también atiende el Hospedaje La Profe, así que por el mismo número resuelves ropa y dónde dormir.",
+        "en": "If you cannot see your size or the model you want, ask: what is not in stock can be ordered in. WhatsApp +57 312 307 9138. Doña Blanca also runs Hospedaje La Profe, so the same number sorts out both clothes and a bed for the night."
+      },
+      "fotos": [
+        "labateca/variedades-blanca-01",
+        "labateca/variedades-blanca-02",
+        "labateca/variedades-blanca-03",
+        "labateca/variedades-blanca-04",
+        "labateca/variedades-blanca-05",
+        "labateca/variedades-blanca-06",
+        "labateca/variedades-blanca-07",
+        "labateca/variedades-blanca-08"
+      ],
+      "fotosCap": [
+        {
+          "es": "La entrada del almacén, con el aviso rosado sobre la puerta.",
+          "en": "The shop entrance, with the pink sign above the door."
+        },
+        {
+          "es": "Ropa de dama y de niño colgada en la pared del fondo.",
+          "en": "Women's and children's clothing hung on the back wall."
+        },
+        {
+          "es": "Chaquetas colgadas sobre el estante de zapatos.",
+          "en": "Jackets hanging above the shoe rack."
+        },
+        {
+          "es": "La pared de calzado: tenis, sandalias y pantuflas por talla.",
+          "en": "The footwear wall: trainers, sandals and slippers by size."
+        },
+        {
+          "es": "Más calzado, con las chaquetas encima.",
+          "en": "More footwear, with the jackets above."
+        },
+        {
+          "es": "El interior del almacén, con la imagen de la Virgen de Guadalupe en el maniquí.",
+          "en": "Inside the shop, with the image of the Virgin of Guadalupe on the mannequin."
+        },
+        {
+          "es": "Vista general del local y sus estantes.",
+          "en": "General view of the shop and its shelving."
+        },
+        {
+          "es": "El estante de jeans y pantalones.",
+          "en": "The rack of jeans and trousers."
+        }
+      ]
+    },
+    {
+      "id": "dulce-arte",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300203,
+      "lng": -72.496283,
+      "mapaX": 459,
+      "mapaY": 342,
+      "telefono": "3159265334",
+      "nombre": {
+        "es": "Dulce Arte L&L",
+        "en": "Dulce Arte L&L"
+      },
+      "desc": {
+        "es": "Desayunos sorpresa y detalles por encargo, de Liseth Alexandra Lizcano Ramón. Arma canastas y cajas de madera con desayuno —fruta picada, pandebonos, jugos, avena, chocolatinas—, con globo inflado, moño y tarjeta personalizada, y las entrega a domicilio en el pueblo. Hace versiones para cumpleaños, aniversarios, Día del Hombre y Día de la Madre. Su lema lo resume: «pequeños detalles que crean grandes momentos».",
+        "en": "Surprise breakfasts and gift hampers to order, from Liseth Alexandra Lizcano Ramón. She builds wooden crates and baskets with breakfast inside — cut fruit, cheese breads, juices, oat drinks, chocolate bars — finished with an inflated balloon, a ribbon and a personalised card, and delivers them around town. She makes versions for birthdays, anniversaries, Men's Day and Mother's Day. Her motto sums it up: 'small details that create great moments'."
+      },
+      "comoLlegar": {
+        "es": "Trabaja por encargo y entrega a domicilio en el casco urbano de Labateca. Se pide por WhatsApp al 315 926 5334.",
+        "en": "She works to order and delivers around Labateca's town centre. Order by WhatsApp on +57 315 926 5334."
+      },
+      "dist": {
+        "es": "Entrega a domicilio en el casco urbano",
+        "en": "Home delivery within the town"
+      },
+      "tiempo": {
+        "es": "Pedidos a toda hora por WhatsApp 315 926 5334",
+        "en": "Orders at any hour via WhatsApp +57 315 926 5334"
+      },
+      "dificultad": {
+        "es": "Por encargo · entrega a domicilio",
+        "en": "To order · home delivery"
+      },
+      "recomendacion": {
+        "es": "Encarga con un día de anticipación y dile qué quieres que diga la tarjeta: la arma personalizada, con el nombre y el motivo. Si es para sorprender a alguien en el pueblo, ella misma lo lleva.",
+        "en": "Order a day ahead and tell her what you want the card to say: she makes it to order, with the name and the occasion. If it is to surprise someone in town, she delivers it herself."
+      },
+      "fotos": [
+        "labateca/dulce-arte-01",
+        "labateca/dulce-arte-02",
+        "labateca/dulce-arte-03"
+      ],
+      "fotosCap": [
+        {
+          "es": "Cajas de Día del Hombre, con moño azul, cerveza y mecato.",
+          "en": "Men's Day crates, with a blue ribbon, beer and snacks."
+        },
+        {
+          "es": "Canasta de cumpleaños con globo, dulces y corona de madera.",
+          "en": "A birthday basket with balloon, sweets and a wooden crown."
+        },
+        {
+          "es": "El logotipo de Dulce Arte L&L: desayunos sorpresa y detalles.",
+          "en": "The Dulce Arte L&L logo: surprise breakfasts and gifts."
         }
       ]
     }
