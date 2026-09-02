@@ -201,6 +201,12 @@ producción. Nada de CDN: lo que haga falta, servido desde el sitio.
 lo alcanza. Cada página bilingüe declara `data-title-key` en su `<body>` y
 `applyI18n()` lo cambia. Sin eso, `?lang=en` dejaba la pestaña en español.
 
+**Cloudinary va sin credenciales.** Ni el sitio, ni los tres `subir_*.py`,
+ni los workers usan `api_key` o `api_secret`: todo sube por el preset **sin
+firma** `labateca_visitantes` y se entrega por URL pública. Por eso rotar la
+clave (hecho el 2 de septiembre de 2026, la filtrada quedó en *Disabled*) no
+rompió nada. Si algún día hace falta una API key, que **no** sea Master Admin.
+
 **El service worker sirve archivos viejos al probar en local.** Si un cambio
 en `app.js` o `styles.css` «no aparece», casi siempre es eso: hay que
 desregistrar el SW y borrar los cachés, o subir la versión.
@@ -258,9 +264,7 @@ a temporal y `os.replace`.
 - **Hospedaje: solo 3**, y el hotel principal dijo que no. Es el hueco de
   producto más grande de la guía.
 - **69 fotos antiguas retenidas** esperando firmas de Ley 1581.
-- **Regenerar el API Secret de Cloudinary** (quedó expuesto una vez).
-  Es autoservicio: consola → Settings → API Keys → *Generate New Access Key*.
-  No rompe nada: el sitio sube fotos con un preset sin firma.
+
 
 ---
 
