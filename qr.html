@@ -9,7 +9,7 @@
 <meta name="robots" content="noindex, follow" />
 
 <!-- QR Code library (vanilla, sin dependencias) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="/qr-encoder.js"></script>
 
 <!-- Fuentes -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -198,10 +198,12 @@ body{font-family:"Hanken Grotesk",system-ui,sans-serif;background:#f0ebe0;color:
 
 <script>
 // ── Configuración ──────────────────────────────────────────
-// Cambia BASE_URL cuando publiques el sitio
-const BASE_URL = window.location.hostname === 'localhost'
-  ? `http://${window.location.host}`
-  : 'https://labateca-turismo.co';  // ← tu dominio final
+/* La URL sale del sitio donde se esta viendo esta pagina. Antes estaba
+   escrita a mano como 'https://labateca-turismo.co', un dominio que NO
+   EXISTE (NXDOMAIN): todo cartel impreso desde aqui llevaba a la nada.
+   Asi funciona hoy con workers.dev, en local, y el dia que haya dominio
+   propio se ajusta solo, sin que nadie tenga que acordarse. */
+const BASE_URL = window.location.origin;
 
 const CAT_LABELS = {
   naturaleza:  'Naturaleza',
@@ -283,15 +285,18 @@ function renderGrid() {
 
     grid.appendChild(card);
 
-    // Generar QR
-    new QRCode(document.getElementById('qr_' + p.id), {
-      text:           qrUrl,
-      width:          qrSize,
-      height:         qrSize,
-      colorDark:      CAT_COLORS[cat] || '#16352a',
-      colorLight:     '#ffffff',
-      correctLevel:   QRCode.CorrectLevel.M
+    /* Nivel H (30 % de correccion): estos carteles se pegan en la calle
+       y tienen que seguir leyendose sucios, despintados o rotos de una
+       esquina. El SVG ademas se imprime nitido a cualquier tamano. */
+    document.getElementById('qr_' + p.id).innerHTML = QRLab.svg(qrUrl, {
+      nivel:  'H',
+      margen: 2,
+      color:  CAT_COLORS[cat] || '#16352a',
+      fondo:  '#ffffff',
+      alt:    'Codigo QR de ' + nameEs
     });
+    const svgEl = document.querySelector('#qr_' + CSS.escape(p.id) + ' svg');
+    if (svgEl) { svgEl.setAttribute('width', qrSize); svgEl.setAttribute('height', qrSize); }
   });
 }
 

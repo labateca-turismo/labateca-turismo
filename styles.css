@@ -2373,3 +2373,27 @@ footer .solo-es{background:transparent;border-color:rgba(255,255,255,.28);color:
   .himno-creditos{grid-template-columns:1fr;gap:1px 0}
   .himno-creditos dd{margin:0 0 8px}
 }
+
+/* ── Sección del código QR (gen_qr.js) ───────────────────────
+   Va al final del archivo por la misma razón de siempre: aquí gana
+   por orden de aparición y no la pisa ninguna regla anterior. */
+.qr-sec{padding:56px 0;background:var(--cream,#f6efe3);border-top:1px solid var(--line,#e2d8c4)}
+.qr-caja{display:flex;align-items:center;gap:34px;flex-wrap:wrap;
+  background:#fff;border:1px solid var(--line,#e2d8c4);border-radius:20px;padding:28px 32px}
+.qr-codigo{margin:0;flex:0 0 auto;line-height:0}
+.qr-codigo img{display:block;width:200px;height:200px;border-radius:10px}
+.qr-texto{flex:1 1 300px;min-width:0}
+.qr-texto h2{margin:6px 0 10px}
+.qr-texto p{margin:0 0 14px;line-height:1.6}
+.qr-url{font-size:14px;word-break:break-all}
+.qr-url a{color:var(--forest-3,#2d6149);font-weight:600}
+.btn-qr{display:inline-block;padding:11px 20px;border-radius:99px;
+  background:var(--forest,#16352a);color:var(--cream,#f6efe3);
+  text-decoration:none;font-weight:700;font-size:15px}
+.btn-qr:hover{opacity:.9}
+.qr-nota{margin:12px 0 0!important;font-size:13.5px;color:var(--ink-mut,#6a6357)}
+@media(max-width:560px){
+  .qr-caja{padding:22px;gap:22px;justify-content:center;text-align:center}
+  .qr-codigo img{width:170px;height:170px}
+  .qr-url{text-align:center}
+}
