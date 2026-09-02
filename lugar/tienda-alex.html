@@ -112,6 +112,17 @@ figcaption{font-size:14.5px;color:var(--ink-mut);margin-top:8px}
 .volver{margin:44px 0 0;padding:22px;background:var(--forest);color:var(--cream);
  border-radius:var(--r);text-align:center}
 .volver p{margin:0 0 14px;font-size:17px}
+/* Llamado a opinar. Hasta la v173 estas 222 fichas -que es donde aterriza
+   el trafico de Google- no ofrecian ninguna forma de dejar una resena: la
+   unica puerta estaba dentro de la app. El enlace lleva a la guia con el
+   panel de opiniones ya abierto (?lugar=ID&resenas=1). No se pone en las
+   fichas pendientes: no tiene sentido pedir opinion de un sitio del que
+   todavia no publicamos nada. */
+.opinar{margin:38px 0 0;padding:20px 22px;background:var(--cream);
+ border:1px solid var(--line);border-left:4px solid var(--gold);
+ border-radius:var(--r);text-align:center}
+.opinar p{margin:0 0 14px;font-size:16px;color:var(--ink)}
+.opinar strong{color:var(--forest)}
 footer.pie{border-top:1px solid var(--line);padding:26px 0;font-size:14px;color:var(--ink-mut)}
 footer.pie a{color:var(--ink-mut)}
 footer.pie .pie-creador{margin-top:8px;opacity:.72}
@@ -274,6 +285,12 @@ footer.pie .pie-creador strong{font-weight:600}
       <span>La tienda de esquina de toda la vida, en pleno casco urbano de…</span></a></li>
   </ul>
   <p class="masdeesto"><a href="/categoria/tiendas">Ver los 35 →</a></p>
+
+  <div class="opinar">
+    <p><strong>¿Ya estuviste aquí?</strong>
+       Cuenta cómo te fue. Tu reseña le sirve al siguiente visitante más que cualquier folleto.</p>
+    <a class="btn p" href="/?lugar=tienda-alex&amp;resenas=1&amp;lang=es">Dejar una reseña</a>
+  </div>
 
   <div class="volver">
     <p>Esta ficha es parte de la guía turística de Labateca: 111 lugares, mapa interactivo, clima en vivo y rutas.</p>

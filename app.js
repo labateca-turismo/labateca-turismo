@@ -342,6 +342,16 @@ const I18N = {
     foot_about:"Guía turística comunitaria de Labateca, Norte de Santander. Hecha por y para quienes aman este rincón de montaña.",
     foot_creator:"Creada por <strong>José Rafael Cáceres Garavito</strong> con la comunidad labatequense.",
     nav_viva:"Labateca viva", nav_bus:"Transporte", nav_bus_aria:"Transporte: buses y horarios",
+    bs_open:"Buscar", bs_aria:"Buscar en el sitio",
+    bs_ph:"Busca una cascada, un restaurante, la historia…",
+    bs_title:"Buscar en Labateca",
+    bs_close:"Cerrar la búsqueda",
+    bs_hint:"Escribe para buscar entre los lugares, la historia y el libro.",
+    bs_none:"No encontramos nada con eso.",
+    bs_none_tip:"Prueba con menos palabras, o pregúntale al guía local por WhatsApp.",
+    bs_g_lugares:"Lugares", bs_g_paginas:"Historia y páginas",
+    bs_count:"resultados", bs_count_1:"resultado",
+    bs_pendiente:"ficha pendiente",
     foot_explore:"Explora", foot_useful:"Útil", foot_directions:"Cómo llegar",
     foot_collaborate:"¿Tienes un negocio? Aparece aquí",
     foot_qr:"Carteles QR",
@@ -483,6 +493,16 @@ const I18N = {
     foot_about:"A community travel guide to Labateca, Norte de Santander. Made by and for those who love this mountain corner.",
     foot_creator:"Created by <strong>José Rafael Cáceres Garavito</strong> with the Labateca community.",
     nav_viva:"Living Labateca", nav_bus:"Transport", nav_bus_aria:"Transport: buses and timetables",
+    bs_open:"Search", bs_aria:"Search the site",
+    bs_ph:"Find a waterfall, a restaurant, the history…",
+    bs_title:"Search Labateca",
+    bs_close:"Close search",
+    bs_hint:"Type to search across places, history and the book.",
+    bs_none:"We found nothing for that.",
+    bs_none_tip:"Try fewer words, or ask the local guide on WhatsApp.",
+    bs_g_lugares:"Places", bs_g_paginas:"History and pages",
+    bs_count:"results", bs_count_1:"result",
+    bs_pendiente:"entry pending",
     foot_explore:"Explore", foot_useful:"Useful", foot_directions:"Directions",
     foot_collaborate:"Have a business? Get listed",
     foot_qr:"QR Posters",
@@ -2602,6 +2622,7 @@ function init(){
   try { renderDrawer();  } catch(e) { console.warn('renderDrawer',e);  }
   try { updateBadges();  } catch(e) { console.warn('updateBadges',e);  }
   try { wireLinks();     } catch(e) { console.warn('wireLinks',e);     }
+  try { initBuscador(); } catch(e) { console.warn('initBuscador',e); }
   try { initVideos();    } catch(e) { console.warn('initVideos',e);    }
   try { initYouTube();   } catch(e) { console.warn('initYouTube',e);   }
   try { loadVisitCounter(); } catch(e) { console.warn('loadVisitCounter',e); }
@@ -2666,8 +2687,19 @@ function _checkLugarParam() {
     // Scroll a la sección de lugares y abrir el lightbox
     const secLugares = document.getElementById('lugares');
     if (secLugares) secLugares.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // Pequeño delay para que el scroll empiece antes de abrir el modal
-    setTimeout(() => openLightbox(lugarId), 600);
+    /* ?resenas=1 lleva DIRECTO al panel de opiniones, sin abrir el visor de
+       fotos. Lo usan las 222 fichas estáticas de /lugar/, que es donde
+       aterriza el tráfico de Google y donde hasta ahora no había ninguna
+       forma de dejar una reseña: la única puerta estaba dentro de la app.
+       Abrir los dos superponía el visor encima y el visitante que venía a
+       opinar terminaba mirando fotos. */
+    const _quiereResenas = params.get('resenas') === '1' && CONFIG.reviewsWorkerUrl;
+    if (_quiereResenas) {
+      setTimeout(() => { try { openReviews(lugarId); } catch(e){} }, 600);
+    } else {
+      // Pequeño delay para que el scroll empiece antes de abrir el modal
+      setTimeout(() => openLightbox(lugarId), 600);
+    }
   } catch(e) { /* ignorar */ }
 }
 
@@ -2694,6 +2726,304 @@ if ('serviceWorker' in navigator) {
       .then(reg => { console.log('[SW] Registrado:', reg.scope); reg.update(); })
       .catch(err => console.warn('[SW] Error al registrar:', err));
   });
+}
+
+
+/* ============================================================
+   🔎 BUSCADOR
+   ------------------------------------------------------------
+   El sitio tenía 111 lugares, un libro, 17 páginas de historia y
+   251 fotos antiguas, y ninguna forma de buscar: había que navegar
+   hasta encontrar. Esto añade una sola caja que busca en todo.
+
+   Decisiones:
+   · Se normalizan los acentos en los DOS lados (consulta e índice).
+     Sin esto "siscata" no encuentra "Siscatá" y "angustias" no
+     encuentra "Angustias", que es justo como escribe la gente en el
+     celular.
+   · Los lugares se leen de PLACES en el momento de buscar, no en un
+     índice construido al arrancar: PLACES llega por fetch después
+     del primer pintado, y un índice hecho antes saldría vacío.
+   · El disparador va en la barra solo desde 431px. Por debajo, los
+     controles ya ocupan los 44px mínimos de WCAG 2.5.8 y no cabe
+     uno más sin volver a cortar el nombre del sitio, así que ahí
+     vive dentro del menú.
+   ============================================================ */
+
+/* Páginas de contenido que no son lugares. Se escriben a mano porque
+   son pocas y no hay índice del sitio; las palabras extra son los
+   términos por los que la gente busca, no los del título. */
+const BS_PAGINAS = [
+  { url:"/pueblo",    es:"El pueblo · historia desde 1623", en:"The town · history since 1623",
+    kes:"historia origen fundacion chitareros indigenas resguardo 1623 pueblo de indios", ken:"history origins founding indigenous" },
+  { url:"/libro",     es:"El libro «Volcanes de Dios»", en:"The book “God's Volcanoes”",
+    kes:"libro completo volcanes de dios cronologia", ken:"book complete chronology" },
+  { url:"/biblioteca", es:"La biblioteca de Labateca", en:"The Labateca library",
+    kes:"biblioteca documentos fuentes lecturas archivo", ken:"library documents sources readings" },
+  { url:"/viva",      es:"Labateca viva · ferias, fiestas, gente y cine", en:"Living Labateca · fairs, festivals, people and cinema",
+    kes:"ferias fiestas candelaria angustias cine pelicula gente musica", ken:"fairs festivals cinema film people music" },
+  { url:"/transporte", es:"Transporte · buses y horarios", en:"Transport · buses and timetables",
+    kes:"bus buses transporte horarios cucuta pamplona bucaramanga como llegar carro moto", ken:"bus buses transport timetables how to get there" },
+  { url:"/lugares",   es:"Todos los lugares", en:"All places",
+    kes:"lugares directorio mapa categorias", ken:"places directory map categories" },
+  { url:"/proponer",  es:"Propón tu lugar o negocio", en:"Suggest your place or business",
+    kes:"proponer agregar negocio sumar aparecer registrar", ken:"suggest add business join register" },
+  { url:"/historia/fotos-antiguas", es:"Las fotos antiguas de Labateca", en:"The old photographs of Labateca",
+    kes:"fotos antiguas archivo album viejas historicas retratos", ken:"old photos archive album historic portraits" },
+  { url:"/historia/himno-de-labateca", es:"El Himno de Labateca", en:"The Labateca Anthem",
+    kes:"himno letra cancion musica verdes altares", ken:"anthem lyrics song music" },
+  { url:"/historia/virgen-de-las-angustias", es:"La Virgen que salvó el resguardo", en:"The Virgin who saved the reservation",
+    kes:"virgen angustias patrona morenita milagro aparicion bochaga", ken:"virgin sorrows patron saint miracle apparition" },
+  { url:"/historia/auto-1623", es:"Auto de Población del Valle de los Locos, 1623", en:"Founding Charter of the Valley of the Madmen, 1623",
+    kes:"auto poblacion 1623 valle de los locos villabona zubiaurre fundacion trece pueblos", ken:"founding charter 1623 valley madmen" },
+  { url:"/historia/los-chitareros", es:"Los Chitareros · Silvano Pabón, 1992", en:"The Chitarero people · Silvano Pabón, 1992",
+    kes:"chitareros indigenas prehispanico laches uwa tunebo", ken:"chitarero indigenous pre-hispanic" },
+  { url:"/historia/pueblo-de-indios", es:"El Pueblo de Indios de Labateca", en:"The Indian Town of Labateca",
+    kes:"pueblo de indios encomienda doctrina colonial", ken:"indian town colonial encomienda" },
+  { url:"/historia/valle-de-las-angustias", es:"Valle de las Angustias · Samuel Ramírez, 1922", en:"Valley of Sorrows · Samuel Ramírez, 1922",
+    kes:"valle angustias ramirez 1922 veredas altitud", ken:"valley sorrows 1922" },
+  { url:"/historia/peregrinacion-de-alpha", es:"La Peregrinación de Alpha · Manuel Ancízar, 1853", en:"Alpha's Pilgrimage · Manuel Ancízar, 1853",
+    kes:"ancizar 1853 peregrinacion alpha comision corografica viaje", ken:"ancizar 1853 pilgrimage chorographic" },
+  { url:"/historia/corazon-de-mis-recuerdos", es:"Corazón de mis Recuerdos · Josefina Jaimes, 2020", en:"Heart of my Memories · Josefina Jaimes, 2020",
+    kes:"josefina jaimes recuerdos memorias 2020", ken:"josefina jaimes memories 2020" },
+  { url:"/historia/vivencias-en-mi-pueblo", es:"Vivencias en mi Pueblo · Pedro Buitrago, 2011", en:"Life in my Town · Pedro Buitrago, 2011",
+    kes:"buitrago vivencias 2011 memorias", ken:"buitrago 2011 memories" },
+  { url:"/historia/redactando-14", es:"Redactando · 14ª edición, U. de Pamplona, 2024", en:"Redactando · 14th edition, U. de Pamplona, 2024",
+    kes:"redactando revista universidad pamplona 2024 reportajes", ken:"magazine university pamplona 2024" },
+  { url:"/historia/haciendas-cafeteras", es:"Las haciendas cafeteras", en:"The coffee estates",
+    kes:"cafe cafeteras haciendas cultivo economia", ken:"coffee estates farming economy" },
+  { url:"/historia/regimen-del-resguardo", es:"El régimen del resguardo en Santander", en:"The reservation system in Santander",
+    kes:"resguardo tierras indigenas santander", ken:"reservation indigenous land santander" },
+  { url:"/historia/poblamiento-norte-santander", es:"Poblamiento, orígenes e institucionalidad", en:"Settlement, origins and institutions",
+    kes:"poblamiento origenes pabon norte de santander", ken:"settlement origins pabon" },
+  { url:"/historia/region-de-occidente", es:"Poblamiento de la Región de Occidente", en:"Settlement of the Western Region",
+    kes:"region occidente poblamiento pabon", ken:"western region settlement" },
+  { url:"/historia/america-dolor-inedito", es:"América Dolor Inédito", en:"América Dolor Inédito",
+    kes:"america dolor inedito compilacion", ken:"compilation" },
+  { url:"/historia/bibliografia", es:"Informe de investigación bibliográfica", en:"Bibliographic research report",
+    kes:"bibliografia fuentes investigacion referencias", ken:"bibliography sources research references" }
+];
+
+/* Quita acentos y pasa a minúsculas, para comparar como escribe la gente. */
+function bsNorm(s){
+  return String(s || "")
+    .toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+/* Devuelve {lugares, paginas}. Puntúa: el nombre pesa más que el texto,
+   y empezar por el término pesa más que contenerlo. */
+function bsBuscar(q){
+  const term = bsNorm(q).trim();
+  if (term.length < 2) return { lugares: [], paginas: [] };
+  const palabras = term.split(/\s+/).filter(Boolean);
+
+  const puntua = (nombre, cuerpo) => {
+    const n = bsNorm(nombre), c = bsNorm(cuerpo);
+    let p = 0;
+    for (const w of palabras){
+      if (n.startsWith(w))      p += 10;
+      else if (n.includes(w))   p += 6;
+      else if (c.includes(w))   p += 2;
+      else return 0;            // todas las palabras deben aparecer
+    }
+    return p;
+  };
+
+  const lugares = (PLACES || []).map(l => {
+    const nombre = (l.nombre || {})[lang] || (l.nombre || {}).es || "";
+    const cuerpo = [(l.desc||{})[lang], (l.comoLlegar||{})[lang],
+                    (l.recomendacion||{})[lang], l.categoria].join(" ");
+    return { l, p: puntua(nombre, cuerpo), nombre };
+  }).filter(x => x.p > 0).sort((a,b) => b.p - a.p).slice(0, 8);
+
+  const paginas = BS_PAGINAS.map(pg => {
+    const nombre = pg[lang] || pg.es;
+    const cuerpo = (lang === "en" ? pg.ken : pg.kes) || "";
+    return { pg, p: puntua(nombre, cuerpo), nombre };
+  }).filter(x => x.p > 0).sort((a,b) => b.p - a.p).slice(0, 6);
+
+  return { lugares, paginas };
+}
+
+/* ── Interfaz ── */
+let _bsIdx = -1;          // opción resaltada con el teclado
+let _bsAntes = null;      // a quién devolverle el foco al cerrar
+
+function bsMontar(){
+  if (document.getElementById("buscador")) return;
+
+  const ov = document.createElement("div");
+  ov.id = "buscador";
+  ov.hidden = true;
+  ov.setAttribute("role", "dialog");
+  ov.setAttribute("aria-modal", "true");
+  ov.setAttribute("aria-labelledby", "bsTitulo");
+  ov.innerHTML =
+    '<div class="bs-caja">' +
+      '<div class="bs-cab">' +
+        '<h2 id="bsTitulo" class="sr-only" data-i18n="bs_title">Buscar en Labateca</h2>' +
+        '<svg class="bs-lupa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
+             'stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>' +
+        '<input id="bsInput" type="search" autocomplete="off" spellcheck="false" ' +
+               'data-i18n-ph="bs_ph" data-i18n-aria="bs_aria" ' +
+               'aria-controls="bsRes" aria-expanded="false" role="combobox">' +
+        '<button class="bs-x" onclick="bsCerrar()" data-i18n-aria="bs_close" aria-label="Cerrar la búsqueda">✕</button>' +
+      '</div>' +
+      '<div id="bsRes" class="bs-res" role="listbox"></div>' +
+    '</div>';
+  ov.addEventListener("click", e => { if (e.target === ov) bsCerrar(); });
+  document.body.appendChild(ov);
+
+  const inp = ov.querySelector("#bsInput");
+  inp.addEventListener("input", bsPintar);
+  inp.addEventListener("keydown", bsTeclas);
+}
+
+function bsAbrir(){
+  bsMontar();
+  const ov = document.getElementById("buscador");
+  _bsAntes = document.activeElement;
+  ov.hidden = false;
+  document.body.style.overflow = "hidden";
+  const inp = document.getElementById("bsInput");
+  inp.value = ""; _bsIdx = -1;
+  bsPintar();
+  setTimeout(() => inp.focus(), 30);
+}
+
+function bsCerrar(){
+  const ov = document.getElementById("buscador");
+  if (!ov || ov.hidden) return;
+  ov.hidden = true;
+  document.body.style.overflow = "";
+  if (_bsAntes && _bsAntes.focus) _bsAntes.focus();
+}
+
+function bsPintar(){
+  const inp = document.getElementById("bsInput");
+  const caja = document.getElementById("bsRes");
+  if (!inp || !caja) return;
+  const q = inp.value;
+
+  if (bsNorm(q).trim().length < 2){
+    caja.innerHTML = '<p class="bs-vacio">' + escHtml(t("bs_hint")) + '</p>';
+    inp.setAttribute("aria-expanded", "false");
+    _bsIdx = -1;
+    return;
+  }
+
+  const { lugares, paginas } = bsBuscar(q);
+  const total = lugares.length + paginas.length;
+  inp.setAttribute("aria-expanded", total ? "true" : "false");
+
+  if (!total){
+    caja.innerHTML = '<p class="bs-vacio"><b>' + escHtml(t("bs_none")) + '</b><br>' +
+                     escHtml(t("bs_none_tip")) + '</p>';
+    _bsIdx = -1;
+    return;
+  }
+
+  let h = "", i = 0;
+
+  if (lugares.length){
+    h += '<div class="bs-grupo">' + escHtml(t("bs_g_lugares")) + '</div>';
+    for (const x of lugares){
+      const cat = escHtml(t("fil_" + (x.l.categoria || x.l.cat)) || "");
+      const marca = x.l.pendiente ? ' <em class="bs-pend">· ' + escHtml(t("bs_pendiente")) + '</em>' : "";
+      h += '<a class="bs-item" role="option" aria-selected="false" data-i="' + i + '" ' +
+           'href="/lugar/' + encodeURIComponent(x.l.id) + '">' +
+           '<span class="bs-n">' + escHtml(x.nombre) + '</span>' +
+           '<span class="bs-m">' + cat + marca + '</span></a>';
+      i++;
+    }
+  }
+  if (paginas.length){
+    h += '<div class="bs-grupo">' + escHtml(t("bs_g_paginas")) + '</div>';
+    for (const x of paginas){
+      h += '<a class="bs-item" role="option" aria-selected="false" data-i="' + i + '" ' +
+           'href="' + x.pg.url + '">' +
+           '<span class="bs-n">' + escHtml(x.nombre) + '</span></a>';
+      i++;
+    }
+  }
+  h += '<p class="bs-total">' + total + " " +
+       escHtml(total === 1 ? t("bs_count_1") : t("bs_count")) + '</p>';
+
+  caja.innerHTML = h;
+  _bsIdx = -1;
+}
+
+function bsTeclas(e){
+  const items = [].slice.call(document.querySelectorAll("#bsRes .bs-item"));
+  if (e.key === "Escape"){ e.preventDefault(); bsCerrar(); return; }
+  if (!items.length) return;
+
+  if (e.key === "ArrowDown" || e.key === "ArrowUp"){
+    e.preventDefault();
+    _bsIdx += (e.key === "ArrowDown" ? 1 : -1);
+    if (_bsIdx < 0) _bsIdx = items.length - 1;
+    if (_bsIdx >= items.length) _bsIdx = 0;
+    items.forEach((el, n) => {
+      const on = n === _bsIdx;
+      el.classList.toggle("sel", on);
+      el.setAttribute("aria-selected", on ? "true" : "false");
+      if (on) el.scrollIntoView({ block: "nearest" });
+    });
+  }
+  if (e.key === "Enter"){
+    const el = items[_bsIdx] || items[0];
+    if (el){ e.preventDefault(); window.location.href = el.getAttribute("href"); }
+  }
+}
+
+function initBuscador(){
+  bsMontar();
+
+  /* Disparador en la barra (solo ≥431px, ver el CSS: abajo no cabe sin
+     recortar otra vez el nombre del sitio). */
+  const tools = document.querySelector(".nav-tools");
+  if (tools && !document.querySelector(".bs-btn")){
+    const b = document.createElement("button");
+    b.className = "icon-btn bs-btn";
+    b.type = "button";
+    b.setAttribute("data-i18n-aria", "bs_aria");
+    b.setAttribute("aria-label", "Buscar en el sitio");
+    b.onclick = bsAbrir;
+    b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
+                  'stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/>' +
+                  '<path d="m20 20-3.5-3.5"/></svg>';
+    tools.insertBefore(b, tools.firstChild);
+  }
+
+  /* Y dentro del menú, que es el único acceso en pantallas pequeñas. */
+  const menu = document.getElementById("navLinks");
+  if (menu && !menu.querySelector(".bs-menu")){
+    const li = document.createElement("li");
+    li.className = "bs-menu";
+    li.innerHTML = '<a href="#" data-i18n="bs_open">Buscar</a>';
+    li.querySelector("a").addEventListener("click", e => {
+      e.preventDefault();
+      if (typeof toggleMenu === "function" && menu.classList.contains("open")) toggleMenu();
+      bsAbrir();
+    });
+    const primero = menu.querySelector("li:nth-child(2)");
+    menu.insertBefore(li, primero || null);
+  }
+
+  /* Atajos de teclado: "/" y Ctrl/Cmd+K, como en cualquier buscador. */
+  document.addEventListener("keydown", e => {
+    const ov = document.getElementById("buscador");
+    const escribiendo = /^(INPUT|TEXTAREA|SELECT)$/.test((e.target.tagName || "")) ||
+                        e.target.isContentEditable;
+    if (e.key === "Escape" && ov && !ov.hidden){ bsCerrar(); return; }
+    if (escribiendo) return;
+    if (e.key === "/" || ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k")){
+      e.preventDefault(); bsAbrir();
+    }
+  });
+
+  applyI18n();
 }
 
 init();

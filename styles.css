@@ -712,6 +712,22 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;
   .gal.big{grid-column:span 2;grid-row:span 1}
   #map{height:400px}
 }
+/* El nombre del sitio se cortaba a «L…» en casi todo teléfono. Medido a
+   375px: la marca necesita 91px y solo le quedaban 39. La cuenta era
+   375 − 28 de relleno − 244 de controles − 10 de separación = 93 para toda
+   la marca, y de ahí el logo se lleva 42 y la separación 12.
+   Por debajo de ~427px pasaba siempre: iPhone SE 375, Pixel 393, iPhone 14
+   Pro Max 430. El espacio se saca de los controles y del logo, NO del
+   nombre: la marca es lo único que no se puede recortar sin que el sitio
+   deje de decir cómo se llama. Con esto quedan ~87px para 71 que necesita. */
+@media(max-width:430px){
+  .wrap.nav{gap:8px;padding-left:10px;padding-right:10px}
+  .nav-links{left:10px;right:10px}
+  .brand{gap:8px}
+  .brand-mark{width:38px;height:38px}
+  .brand-name{font-size:1.05rem}
+  .nav-tools{gap:4px}
+}
 @media(max-width:420px){
   .stat-grid{grid-template-columns:1fr 1fr}
   .stat:last-child{grid-column:1/-1}
@@ -2144,3 +2160,94 @@ a.vquote:hover .q-cta{color:var(--gold-soft)}
 .pb-tres-cuentas small{display:block;font-size:.76rem;color:var(--ink-mut);
   margin-top:6px;line-height:1.5;opacity:.9}
 .pb-tres-cuentas span em{font-style:italic;color:var(--clay)}
+
+/* ============================================================
+   ENCABEZADO EN MOVIL — que el sitio diga como se llama
+   ------------------------------------------------------------
+   Va al FINAL del archivo a proposito: .nav-bus se declara otra vez
+   en la linea ~1366 y en dos media queries mas, asi que una regla
+   puesta antes la perdia por orden de aparicion.
+
+   Medido a 375px: los controles ocupan 238px que no se pueden
+   reducir (min-width:44px por WCAG 2.5.8, area tactil minima), y al
+   nombre le quedaban 63px de los 71 que necesita. El unico control
+   prescindible es el atajo del bus: su destino ya esta en el menu
+   (li.solo-movil), asi que ocultarlo no quita nada y libera 46px.
+   ============================================================ */
+.solo-movil{display:none}
+@media(max-width:430px){
+  .nav-bus{display:none}
+  .solo-movil{display:list-item}
+}
+/* A 320px (iPhone SE de primera generacion) todavia le faltaban 17px.
+   Ahi el logo y el nombre ceden un poco mas; por debajo de eso ya no hay
+   telefonos en circulacion. */
+@media(max-width:340px){
+  .brand{gap:6px}
+  .brand-mark{width:30px;height:30px}
+  .brand-name{font-size:.92rem}
+}
+
+/* ============================================================
+   BUSCADOR
+   ------------------------------------------------------------
+   Una sola caja que busca en los 111 lugares, las 17 paginas de
+   historia y el libro. Se abre con el icono de la barra, con
+   «Buscar» dentro del menu, o con la tecla "/".
+
+   El icono de la barra solo aparece desde 431px: por debajo, los
+   tres controles que quedan ya ocupan los 44px minimos de WCAG
+   2.5.8 y un cuarto volveria a cortar el nombre del sitio. Ahi el
+   acceso es el del menu.
+   ============================================================ */
+.bs-btn{display:none}
+@media(min-width:431px){ .bs-btn{display:inline-flex} }
+
+#buscador{
+  position:fixed;inset:0;z-index:4000;
+  background:rgba(18,33,27,.55);backdrop-filter:blur(3px);
+  display:flex;align-items:flex-start;justify-content:center;
+  padding:min(12vh,90px) 16px 16px;
+}
+#buscador[hidden]{display:none}
+.bs-caja{
+  width:min(620px,100%);background:var(--paper,#fff);
+  border-radius:var(--r-md,18px);box-shadow:0 24px 60px rgba(18,33,27,.32);
+  overflow:hidden;display:flex;flex-direction:column;max-height:min(70vh,560px);
+}
+.bs-cab{display:flex;align-items:center;gap:10px;padding:12px 14px;
+  border-bottom:1px solid var(--line)}
+.bs-lupa{width:20px;height:20px;flex:0 0 auto;color:var(--forest);opacity:.7}
+#bsInput{
+  flex:1 1 auto;min-width:0;border:0;background:transparent;
+  font:400 1.02rem/1.4 inherit;color:var(--ink);padding:8px 0;
+}
+#bsInput:focus{outline:none}
+#bsInput::-webkit-search-cancel-button{display:none}
+.bs-x{flex:0 0 auto;min-width:44px;min-height:44px;border:0;background:transparent;
+  color:var(--ink-mut);font-size:1.05rem;cursor:pointer;border-radius:50%}
+.bs-x:hover{background:var(--cream);color:var(--forest)}
+.bs-x:focus-visible{outline:3px solid var(--forest);outline-offset:2px}
+
+.bs-res{overflow-y:auto;padding:6px 0 10px}
+.bs-grupo{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--clay);font-weight:700;padding:12px 18px 6px}
+.bs-item{
+  display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  padding:11px 18px;text-decoration:none;color:var(--ink);min-height:44px;
+}
+.bs-item:hover,.bs-item.sel{background:var(--cream)}
+.bs-item.sel{box-shadow:inset 3px 0 0 var(--forest)}
+.bs-item:focus-visible{outline:3px solid var(--forest);outline-offset:-3px}
+.bs-n{font-weight:600;line-height:1.35}
+.bs-m{flex:0 0 auto;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--ink-mut);white-space:nowrap}
+.bs-pend{font-style:normal;color:var(--clay)}
+.bs-vacio{margin:0;padding:26px 20px;text-align:center;color:var(--ink-mut);
+  font-size:.94rem;line-height:1.6}
+.bs-total{margin:0;padding:12px 18px 4px;font-size:.76rem;color:var(--ink-mut);
+  border-top:1px solid var(--line)}
+@media(max-width:520px){
+  #buscador{padding:0}
+  .bs-caja{max-height:100vh;height:100%;border-radius:0;width:100%}
+}

@@ -112,6 +112,17 @@ figcaption{font-size:14.5px;color:var(--ink-mut);margin-top:8px}
 .volver{margin:44px 0 0;padding:22px;background:var(--forest);color:var(--cream);
  border-radius:var(--r);text-align:center}
 .volver p{margin:0 0 14px;font-size:17px}
+/* Llamado a opinar. Hasta la v173 estas 222 fichas -que es donde aterriza
+   el trafico de Google- no ofrecian ninguna forma de dejar una resena: la
+   unica puerta estaba dentro de la app. El enlace lleva a la guia con el
+   panel de opiniones ya abierto (?lugar=ID&resenas=1). No se pone en las
+   fichas pendientes: no tiene sentido pedir opinion de un sitio del que
+   todavia no publicamos nada. */
+.opinar{margin:38px 0 0;padding:20px 22px;background:var(--cream);
+ border:1px solid var(--line);border-left:4px solid var(--gold);
+ border-radius:var(--r);text-align:center}
+.opinar p{margin:0 0 14px;font-size:16px;color:var(--ink)}
+.opinar strong{color:var(--forest)}
 footer.pie{border-top:1px solid var(--line);padding:26px 0;font-size:14px;color:var(--ink-mut)}
 footer.pie a{color:var(--ink-mut)}
 footer.pie .pie-creador{margin-top:8px;opacity:.72}
@@ -226,6 +237,12 @@ footer.pie .pie-creador strong{font-weight:600}
       <span>The classic corner store right in Labateca&#39;s town center (Carrera 2…</span></a></li>
   </ul>
   <p class="masdeesto"><a href="/en/category/shops">See all 35 →</a></p>
+
+  <div class="opinar">
+    <p><strong>Have you been here?</strong>
+       Tell us how it went. Your review helps the next visitor more than any brochure.</p>
+    <a class="btn p" href="/?lugar=isla-mobile&amp;resenas=1&amp;lang=en">Leave a review</a>
+  </div>
 
   <div class="volver">
     <p>This listing is part of the Labateca tourism guide: 111 places, an interactive map, live weather and routes.</p>
