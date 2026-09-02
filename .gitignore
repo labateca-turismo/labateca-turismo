@@ -10,3 +10,8 @@ Thumbs.db
 node_modules/
 fotos-originales/
 fotos-web/
+
+# Respaldos que dejan los scripts al editar datos (places.json.bak-FECHA,
+# app.js.bak-FECHA). Dos se colaron al repo en la v171 y hasta se estaban
+# publicando en el sitio; no vuelven a entrar.
+*.bak-*
