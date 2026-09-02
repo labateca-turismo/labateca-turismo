@@ -2395,4 +2395,76 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/lugar/excii</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/excii"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/excii"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/excii"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/en/place/excii</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/excii"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/excii"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/excii"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/lugar/disco-bar-la-barra</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/disco-bar-la-barra"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/disco-bar-la-barra"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/disco-bar-la-barra"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/en/place/disco-bar-la-barra</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/disco-bar-la-barra"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/disco-bar-la-barra"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/disco-bar-la-barra"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/lugar/carpinteria-velazco</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/carpinteria-velazco"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/carpinteria-velazco"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/carpinteria-velazco"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/en/place/carpinteria-velazco</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/carpinteria-velazco"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/carpinteria-velazco"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/carpinteria-velazco"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/lugar/personeria-labateca</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/personeria-labateca"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/personeria-labateca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/personeria-labateca"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://labateca-turismo.labatecacolombia.workers.dev/en/place/personeria-labateca</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/personeria-labateca"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://labateca-turismo.labatecacolombia.workers.dev/en/place/personeria-labateca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/personeria-labateca"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

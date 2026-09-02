@@ -8,8 +8,8 @@ Bilingüe español/inglés. Sin frameworks, sin bundler, sin paso de compilació
 > corregirlo**. Estuvo desactualizado desde junio hasta el 2 de septiembre de
 > 2026 y en ese lapso hizo más daño que bien.
 
-**Estado al 2 de septiembre de 2026 (v191):** 111 lugares · 566 fotos ·
-6 rutas temáticas · 281 páginas HTML · 275 URLs en el sitemap.
+**Estado al 2 de septiembre de 2026 (v192):** 115 lugares · 594 fotos ·
+6 rutas temáticas · 290 páginas HTML · 284 URLs en el sitemap.
 
 ---
 
@@ -211,6 +211,27 @@ firma** `labateca_visitantes` y se entrega por URL pública. Por eso rotar la
 clave (hecho el 2 de septiembre de 2026, la filtrada quedó en *Disabled*) no
 rompió nada. Si algún día hace falta una API key, que **no** sea Master Admin.
 
+**En `places.json` no cabe una sola etiqueta HTML.** Todos los textos salen
+escapados: `gen_seo.js` pasa `desc`, `comoLlegar`, `recomendacion` y también
+el **pie de foto** por `esc()`, y `app.js` pinta el pie con `textContent`.
+Un `<b>` puesto en un `fotosCap` se lee **literal** en la página. Pasó en el
+lote 15-b con los correos del directorio de la Alcaldía y se quitó en v192.
+Si algo tiene que ir en negrita o ser un enlace, se cambia la plantilla, no
+el dato.
+
+**Hay dos bares llamados «La Barra» y no tienen nada que ver.**
+`teca-bar-la-barra` (Dioselina Vera, mural y mesas de billar) y
+`disco-bar-la-barra` (María Segura, sobre el Parque Principal) están a unos
+300 m, con dueñas y teléfonos distintos. Las dos fichas se avisan la una de
+la otra en la recomendación: si alguien «unifica» los duplicados, rompe eso.
+
+**`pines_lote15.js` solo mira los que tienen `lat`/`lng`.** Antes no: metía
+también a las **pendientes**, que entran sin coordenadas a propósito, y
+`fx()`/`fy()` devolvían `NaN` → `JSON.stringify` los escribe como `null` →
+las nueve pendientes quedaban con `"mapaX": null`, que **no** es lo mismo
+que no tener la clave. Se arregló en v192, pero si vuelve a aparecer un
+`"mapaX": null` en `places.json`, es esto.
+
 **El service worker sirve archivos viejos al probar en local.** Si un cambio
 en `app.js` o `styles.css` «no aparece», casi siempre es eso: hay que
 desregistrar el SW y borrar los cachés, o subir la versión.
@@ -276,6 +297,12 @@ a temporal y `os.replace`.
 - **Hospedaje: solo 3**, y el hotel principal dijo que no. Es el hueco de
   producto más grande de la guía.
 - **69 fotos antiguas retenidas** esperando firmas de Ley 1581.
+- **Supermercado La Y: falta el formato firmado.** La carpeta trae seis
+  fotos buenas, pero el PDF que venía dentro **no es su permiso**: es una
+  copia exacta —mismo md5— del de Americana de Carnes. Sin formato no hay
+  ficha (regla 3), y falta además el pin. Las fotos están sin hornear y sin
+  subir a Cloudinary, esperando. Es lo más rápido de cerrar del proyecto:
+  una firma y una coordenada.
 
 
 ---

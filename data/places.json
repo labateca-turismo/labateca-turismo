@@ -1,5 +1,5 @@
 {
-  "version": "1.12",
+  "version": "1.13",
   "lugares": [
     {
       "id": "templo",
@@ -96,8 +96,8 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 535,
-      "mapaY": 353,
+      "mapaX": 539,
+      "mapaY": 351,
       "telefono": "",
       "nombre": {
         "es": "Nuestra Señora de las Angustias — Patrona",
@@ -222,8 +222,8 @@
       "coordsApprox": false,
       "lat": 7.2997576,
       "lng": -72.494551,
-      "mapaX": 485,
-      "mapaY": 404,
+      "mapaX": 480,
+      "mapaY": 408,
       "telefono": "573213496226",
       "nombre": {
         "es": "Servicios Parroquiales y Documentos",
@@ -270,8 +270,8 @@
       "coordsApprox": false,
       "lat": 7.2996816,
       "lng": -72.49452,
-      "mapaX": 515,
-      "mapaY": 372,
+      "mapaX": 519,
+      "mapaY": 368,
       "telefono": "",
       "nombre": {
         "es": "Parque Principal",
@@ -339,7 +339,7 @@
       "lat": 7.300327,
       "lng": -72.494867,
       "mapaX": 505,
-      "mapaY": 340,
+      "mapaY": 339,
       "telefono": "573219592514",
       "nombre": {
         "es": "Intrínseco — Restaurante, Café y Bar",
@@ -406,8 +406,8 @@
       "coordsApprox": false,
       "lat": 7.3005894,
       "lng": -72.4950748,
-      "mapaX": 459,
-      "mapaY": 393,
+      "mapaX": 460,
+      "mapaY": 397,
       "telefono": "",
       "telFijo": "576015948500",
       "nombre": {
@@ -538,8 +538,8 @@
       "coordsApprox": false,
       "lat": 7.300346,
       "lng": -72.49487,
-      "mapaX": 491,
-      "mapaY": 337,
+      "mapaX": 492,
+      "mapaY": 336,
       "telefono": "584168475520",
       "nombre": {
         "es": "Criss Studio — Uñas y Belleza",
@@ -911,8 +911,8 @@
       "coordsApprox": false,
       "lat": 7.29917,
       "lng": -72.494704,
-      "mapaX": 505,
-      "mapaY": 382,
+      "mapaX": 509,
+      "mapaY": 378,
       "telefono": "573222834876",
       "nombre": {
         "es": "Automercado Karen",
@@ -980,7 +980,7 @@
       "lat": 7.298409,
       "lng": -72.493737,
       "mapaX": 478,
-      "mapaY": 333,
+      "mapaY": 332,
       "telefono": "573144195716",
       "nombre": {
         "es": "Antojitos",
@@ -1038,7 +1038,7 @@
       "lat": 7.30008,
       "lng": -72.494792,
       "mapaX": 442,
-      "mapaY": 375,
+      "mapaY": 380,
       "telefono": "573234521624",
       "nombre": {
         "es": "Sistemas UM",
@@ -1105,8 +1105,8 @@
       "coordsApprox": false,
       "lat": 7.2987856,
       "lng": -72.4940529,
-      "mapaX": 453,
-      "mapaY": 405,
+      "mapaX": 451,
+      "mapaY": 408,
       "telefono": "573212849284",
       "nombre": {
         "es": "Antaño Café-Bar",
@@ -1173,6 +1173,8 @@
       "coordsApprox": false,
       "lat": 7.281153,
       "lng": -72.530685,
+      "mapaX": 240,
+      "mapaY": 492,
       "telefono": "573114804352",
       "correo": "antonioaza38@hotmail.es",
       "nombre": {
@@ -1235,8 +1237,8 @@
       "coordsApprox": false,
       "lat": 7.297209,
       "lng": -72.496575,
-      "mapaX": 440,
-      "mapaY": 411,
+      "mapaX": 438,
+      "mapaY": 413,
       "telefono": "573108566143",
       "nombre": {
         "es": "Teca Bar La Barra",
@@ -1263,8 +1265,8 @@
         "en": "Easy access"
       },
       "recomendacion": {
-        "es": "Pásate por una cerveza, una partida de billar o a ver el partido. Los fines de semana el ambiente se extiende hasta las 2 de la mañana. Escribe por WhatsApp para preguntar o reservar.",
-        "en": "Drop by for a beer, a game of pool or to catch the match. On weekends the vibe runs until 2 a.m. Message on WhatsApp to ask or book."
+        "es": "Pásate por una cerveza, una partida de billar o a ver el partido. Los fines de semana el ambiente se extiende hasta las 2 de la mañana. Escribe por WhatsApp para preguntar o reservar. Ojo con el nombre: en Labateca hay dos bares que se llaman «La Barra». Este es el Teca Bar La Barra, el del mural y las mesas de billar; el otro es el Disco Bar La Barra, sobre el Parque Principal.",
+        "en": "Drop by for a beer, a game of pool or to catch the match. On weekends the vibe runs until 2 a.m. Message on WhatsApp to ask or book. Careful with the name: Labateca has two bars called 'La Barra'. This is Teca Bar La Barra, the one with the mural and the pool tables; the other is Disco Bar La Barra, on the Main Square."
       },
       "fotos": [
         "labateca/teca-bar-01",
@@ -1308,8 +1310,8 @@
       "coordsApprox": false,
       "lat": 7.300349,
       "lng": -72.494849,
-      "mapaX": 447,
-      "mapaY": 352,
+      "mapaX": 445,
+      "mapaY": 343,
       "telefono": "573123047768",
       "nombre": {
         "es": "Frikarnes",
@@ -1371,8 +1373,8 @@
       "coordsApprox": false,
       "lat": 7.298875,
       "lng": -72.494026,
-      "mapaX": 472,
-      "mapaY": 397,
+      "mapaX": 473,
+      "mapaY": 395,
       "telefono": "573115576386",
       "nombre": {
         "es": "Siste Hogar",
@@ -1439,7 +1441,7 @@
       "coordsApprox": false,
       "lat": 7.299908,
       "lng": -72.494747,
-      "mapaX": 428,
+      "mapaX": 426,
       "mapaY": 373,
       "telefono": "573153331207",
       "nombre": {
@@ -1502,8 +1504,8 @@
       "coordsApprox": false,
       "lat": 7.3005588,
       "lng": -72.4949505,
-      "mapaX": 436,
-      "mapaY": 361,
+      "mapaX": 438,
+      "mapaY": 366,
       "correo": "labatecanortedesan@registraduria.gov.co",
       "nombre": {
         "es": "Registraduría Municipal de Labateca",
@@ -1555,8 +1557,8 @@
       "coordsApprox": false,
       "lat": 7.298304,
       "lng": -72.493737,
-      "mapaX": 479,
-      "mapaY": 417,
+      "mapaX": 481,
+      "mapaY": 422,
       "telefono": "573212675678",
       "nombre": {
         "es": "Sofi Burger",
@@ -1623,8 +1625,8 @@
       "coordsApprox": false,
       "lat": 7.3008,
       "lng": -72.495177,
-      "mapaX": 434,
-      "mapaY": 347,
+      "mapaX": 431,
+      "mapaY": 340,
       "telefono": "573124097073",
       "nombre": {
         "es": "Tienda Mixta Cielo Isabella",
@@ -1687,7 +1689,7 @@
       "lat": 7.30056,
       "lng": -72.4949,
       "mapaX": 445,
-      "mapaY": 338,
+      "mapaY": 329,
       "nombre": {
         "es": "Concejo Municipal de Labateca",
         "en": "Municipal Council of Labateca"
@@ -1743,8 +1745,8 @@
       "coordsApprox": false,
       "lat": 7.299932,
       "lng": -72.494973,
-      "mapaX": 435,
-      "mapaY": 398,
+      "mapaX": 433,
+      "mapaY": 399,
       "telefono": "573104036102",
       "nombre": {
         "es": "Papelería y Variedades Martha Sánchez",
@@ -1807,7 +1809,7 @@
       "lat": 7.299268,
       "lng": -72.494337,
       "mapaX": 521,
-      "mapaY": 385,
+      "mapaY": 384,
       "telefono": "573107963730",
       "nombre": {
         "es": "Tienda Tres Esquinas",
@@ -1879,7 +1881,7 @@
       "coordsApprox": false,
       "lat": 7.298665,
       "lng": -72.493742,
-      "mapaX": 561,
+      "mapaX": 562,
       "mapaY": 435,
       "telefono": "573144490474",
       "nombre": {
@@ -1942,8 +1944,8 @@
       "coordsApprox": false,
       "lat": 7.299447,
       "lng": -72.494141,
-      "mapaX": 542,
-      "mapaY": 383,
+      "mapaX": 543,
+      "mapaY": 382,
       "telefono": "573123504567",
       "nombre": {
         "es": "Variedades Martha — Miscelánea y Efecty",
@@ -2015,8 +2017,8 @@
       "coordsApprox": false,
       "lat": 7.30023,
       "lng": -72.494266,
-      "mapaX": 525,
-      "mapaY": 362,
+      "mapaX": 527,
+      "mapaY": 357,
       "telefono": "573106803058",
       "nombre": {
         "es": "Heladería Nápoles",
@@ -2088,7 +2090,7 @@
       "coordsApprox": false,
       "lat": 7.300002,
       "lng": -72.49379,
-      "mapaX": 556,
+      "mapaX": 557,
       "mapaY": 380,
       "nombre": {
         "es": "Juzgado Promiscuo Municipal de Labateca",
@@ -2141,7 +2143,7 @@
       "lat": 7.298773,
       "lng": -72.493981,
       "mapaX": 540,
-      "mapaY": 420,
+      "mapaY": 419,
       "telefono": "573205777829",
       "nombre": {
         "es": "Moto Repuesto Doble AA",
@@ -2209,7 +2211,7 @@
       "lat": 7.299147,
       "lng": -72.494282,
       "mapaX": 493,
-      "mapaY": 416,
+      "mapaY": 415,
       "telefono": "573144922534",
       "nombre": {
         "es": "Almacén Tecno-Agro",
@@ -2281,7 +2283,7 @@
       "coordsApprox": false,
       "lat": 7.298917,
       "lng": -72.493682,
-      "mapaX": 552,
+      "mapaX": 551,
       "mapaY": 409,
       "telefono": "573184471211",
       "nombre": {
@@ -2344,7 +2346,7 @@
       "coordsApprox": false,
       "lat": 7.299102,
       "lng": -72.494192,
-      "mapaX": 546,
+      "mapaX": 547,
       "mapaY": 396,
       "telefono": "573168725118",
       "nombre": {
@@ -2501,7 +2503,7 @@
       "lat": 7.299931881265672,
       "lng": -72.49471127546606,
       "mapaX": 479,
-      "mapaY": 373,
+      "mapaY": 372,
       "nombre": {
         "es": "SuperGiros",
         "en": "SuperGiros"
@@ -2552,8 +2554,8 @@
       "coordsApprox": false,
       "lat": 7.300103,
       "lng": -72.49476,
-      "mapaX": 469,
-      "mapaY": 383,
+      "mapaX": 470,
+      "mapaY": 382,
       "telefono": "573138048438",
       "nombre": {
         "es": "La Esquinita del Sabor",
@@ -2776,8 +2778,8 @@
       "coordsApprox": false,
       "lat": 7.299401,
       "lng": -72.494427,
-      "mapaX": 495,
-      "mapaY": 392,
+      "mapaX": 489,
+      "mapaY": 398,
       "telefono": "573202435050",
       "nombre": {
         "es": "La Tienda de Ivancho",
@@ -2849,7 +2851,7 @@
       "coordsApprox": false,
       "lat": 7.296239,
       "lng": -72.498977,
-      "mapaX": 225,
+      "mapaX": 223,
       "mapaY": 507,
       "telefono": "573107821429",
       "nombre": {
@@ -2958,7 +2960,7 @@
       "lat": 7.296239,
       "lng": -72.498977,
       "mapaX": 237,
-      "mapaY": 500,
+      "mapaY": 506,
       "telefono": "573107821429",
       "nombre": {
         "es": "Estadero Fuente de Soda Mirador de Mi Bateca",
@@ -3171,7 +3173,7 @@
       "coordsApprox": false,
       "lat": 7.298937,
       "lng": -72.494087,
-      "mapaX": 507,
+      "mapaX": 508,
       "mapaY": 438,
       "telefono": "573134966445",
       "nombre": {
@@ -3234,8 +3236,8 @@
       "coordsApprox": false,
       "lat": 7.298332,
       "lng": -72.493707,
-      "mapaX": 542,
-      "mapaY": 447,
+      "mapaX": 543,
+      "mapaY": 453,
       "telefono": "573123106831",
       "nombre": {
         "es": "Centro Naturista Salud & Vida",
@@ -3303,7 +3305,7 @@
       "lat": 7.298932,
       "lng": -72.49408,
       "mapaX": 497,
-      "mapaY": 447,
+      "mapaY": 448,
       "telefono": "573208491055",
       "nombre": {
         "es": "Frutas y Verduras",
@@ -3428,8 +3430,8 @@
       "coordsApprox": false,
       "lat": 7.2987,
       "lng": -72.493926,
-      "mapaX": 554,
-      "mapaY": 423,
+      "mapaX": 560,
+      "mapaY": 419,
       "telefono": "573185619179",
       "nombre": {
         "es": "Ateca Bar Café Restaurante",
@@ -3541,7 +3543,7 @@
       "coordsApprox": false,
       "lat": 7.298516,
       "lng": -72.494867,
-      "mapaX": 465,
+      "mapaX": 463,
       "mapaY": 438,
       "telefono": "573007685165",
       "nombre": {
@@ -3614,8 +3616,8 @@
       "coordsApprox": false,
       "lat": 7.299067,
       "lng": -72.494904,
-      "mapaX": 454,
-      "mapaY": 420,
+      "mapaX": 453,
+      "mapaY": 422,
       "telefono": "573112805177",
       "nombre": {
         "es": "La Económica JY",
@@ -3693,7 +3695,7 @@
       "lat": 7.298705,
       "lng": -72.494589,
       "mapaX": 483,
-      "mapaY": 444,
+      "mapaY": 447,
       "telefono": "573227784070",
       "nombre": {
         "es": "Barber Shop Labateca",
@@ -3745,8 +3747,8 @@
       "coordsApprox": false,
       "lat": 7.300102,
       "lng": -72.494544,
-      "mapaX": 485,
-      "mapaY": 350,
+      "mapaX": 486,
+      "mapaY": 349,
       "telefono": "573209083700",
       "nombre": {
         "es": "Supermercado Batecano",
@@ -3961,7 +3963,7 @@
       "lat": 7.295545,
       "lng": -72.493841,
       "mapaX": 531,
-      "mapaY": 431,
+      "mapaY": 430,
       "telefono": "",
       "nombre": {
         "es": "Monumento a la Virgen del Carmen",
@@ -4134,7 +4136,7 @@
       "coordsApprox": false,
       "lat": 7.298758,
       "lng": -72.49401,
-      "mapaX": 518,
+      "mapaX": 517,
       "mapaY": 427,
       "telefono": "573152908856",
       "nombre": {
@@ -4203,7 +4205,7 @@
       "lat": 7.299483,
       "lng": -72.494037,
       "mapaX": 531,
-      "mapaY": 375,
+      "mapaY": 374,
       "telefono": "573123506776",
       "nombre": {
         "es": "Bazar Nuestra Señora de las Angustias",
@@ -4265,8 +4267,8 @@
       "coordsApprox": false,
       "lat": 7.298612,
       "lng": -72.493918,
-      "mapaX": 545,
-      "mapaY": 434,
+      "mapaX": 541,
+      "mapaY": 439,
       "telefono": "573125841908",
       "nombre": {
         "es": "Tienda Mixta Las Delicias",
@@ -4338,7 +4340,7 @@
       "coordsApprox": false,
       "lat": 7.29922,
       "lng": -72.494269,
-      "mapaX": 536,
+      "mapaX": 537,
       "mapaY": 406,
       "telefono": "573232158303",
       "nombre": {
@@ -4474,8 +4476,8 @@
       "coordsApprox": false,
       "lat": 7.298958,
       "lng": -72.494096,
-      "mapaX": 479,
-      "mapaY": 431,
+      "mapaX": 477,
+      "mapaY": 435,
       "telefono": "573208168572",
       "nombre": {
         "es": "Variedades Mafe",
@@ -4610,7 +4612,7 @@
       "coordsApprox": false,
       "lat": 7.298638,
       "lng": -72.49365,
-      "mapaX": 560,
+      "mapaX": 561,
       "mapaY": 396,
       "telefono": "573219833791",
       "nombre": {
@@ -4892,8 +4894,8 @@
       "coordsApprox": false,
       "lat": 7.300187,
       "lng": -72.494393,
-      "mapaX": 502,
-      "mapaY": 366,
+      "mapaX": 503,
+      "mapaY": 365,
       "telefono": "573213708777",
       "nombre": {
         "es": "Varimania — Cafetería, Heladería y Variedades",
@@ -4975,8 +4977,8 @@
       "coordsApprox": false,
       "lat": 7.299134,
       "lng": -72.494693,
-      "mapaX": 482,
-      "mapaY": 387,
+      "mapaX": 483,
+      "mapaY": 385,
       "telefono": "573114041267",
       "nombre": {
         "es": "La Villa de las Flores",
@@ -5287,7 +5289,7 @@
       "coordsApprox": false,
       "lat": 7.299987,
       "lng": -72.494894,
-      "mapaX": 475,
+      "mapaX": 476,
       "mapaY": 359,
       "telefono": "573112875551",
       "nombre": {
@@ -5360,8 +5362,8 @@
       "coordsApprox": false,
       "lat": 7.299857,
       "lng": -72.495088,
-      "mapaX": 455,
-      "mapaY": 379,
+      "mapaX": 456,
+      "mapaY": 383,
       "telefono": "573113460089",
       "nombre": {
         "es": "Comité de Cafeteros — Labateca",
@@ -5418,8 +5420,8 @@
       "coordsApprox": false,
       "lat": 7.299372,
       "lng": -72.495055,
-      "mapaX": 445,
-      "mapaY": 389,
+      "mapaX": 446,
+      "mapaY": 393,
       "telFijo": "573219269652",
       "nombre": {
         "es": "Centro de Salud Labateca — IPS",
@@ -5476,8 +5478,8 @@
       "coordsApprox": false,
       "lat": 7.299485,
       "lng": -72.494455,
-      "mapaX": 492,
-      "mapaY": 377,
+      "mapaX": 493,
+      "mapaY": 376,
       "telefono": "573115286436",
       "nombre": {
         "es": "Pre Exequiales Caminos La Piedad",
@@ -5534,8 +5536,8 @@
       "coordsApprox": false,
       "lat": 7.299188,
       "lng": -72.4943,
-      "mapaX": 513,
-      "mapaY": 413,
+      "mapaX": 512,
+      "mapaY": 414,
       "telefono": "573186217423",
       "nombre": {
         "es": "AM-BAR Café",
@@ -5597,6 +5599,8 @@
       "coordsApprox": false,
       "lat": 7.311156,
       "lng": -72.494954,
+      "mapaX": 387,
+      "mapaY": 278,
       "telefono": "573114813901",
       "nombre": {
         "es": "Estadero Bike Rafa",
@@ -5669,7 +5673,7 @@
       "lat": 7.300113,
       "lng": -72.494497,
       "mapaX": 489,
-      "mapaY": 363,
+      "mapaY": 362,
       "telefono": "573112327066",
       "nombre": {
         "es": "Hotel Los Robles",
@@ -5767,7 +5771,7 @@
       "lat": 7.299229,
       "lng": -72.494276,
       "mapaX": 526,
-      "mapaY": 416,
+      "mapaY": 417,
       "telefono": "573118099903",
       "nombre": {
         "es": "Eléctricos Centro Labateca",
@@ -5825,7 +5829,7 @@
       "lat": 7.299375,
       "lng": -72.494233,
       "mapaX": 533,
-      "mapaY": 393,
+      "mapaY": 392,
       "telefono": "573208531744",
       "nombre": {
         "es": "Bellavista",
@@ -5892,6 +5896,8 @@
       "coordsApprox": false,
       "lat": 7.214763,
       "lng": -72.446588,
+      "mapaX": 1077,
+      "mapaY": 769,
       "telefono": "573224626352",
       "nombre": {
         "es": "Soma Grill y Aguascalientes",
@@ -5994,6 +6000,8 @@
       "coordsApprox": false,
       "lat": 7.197292,
       "lng": -72.463103,
+      "mapaX": 930,
+      "mapaY": 869,
       "telefono": "",
       "nombre": {
         "es": "Cascada El Chorrerón",
@@ -6199,7 +6207,7 @@
       "lat": 7.300488,
       "lng": -72.495014,
       "mapaX": 452,
-      "mapaY": 365,
+      "mapaY": 370,
       "correo": "alcaldia@labateca-nortedesantander.gov.co",
       "nombre": {
         "es": "Alcaldía Municipal de Labateca",
@@ -6272,8 +6280,8 @@
           "en": "The department board on the central post of the courtyard. The Town Hall switchboard is +57 314 479 8925 and covers nearly every office; the Finance Secretariat has its own line on +57 314 485 3127 and Familias en Acción on +57 311 292 3068."
         },
         {
-          "es": "El directorio del edificio. Correos institucionales, oficina por oficina — todos terminan en @labateca-nortedesantander.gov.co salvo dos: Despacho del Alcalde <b>alcaldia@</b> · Secretaría General y de Gobierno, Talento Humano y la Biblioteca Pública <b>secretariadegobierno@</b> · Planeación, Infraestructura y Obras Públicas <b>planeacion@</b> · Hacienda y Asuntos Fiscales <b>secretariadehacienda@</b> · Desarrollo Social y Familias en Acción <b>desarrollosocial@</b> · Sisbén <b>sisben@</b> · Inspección de Policía <b>inspeccionpolicia@</b> · Comisaría de Familia, Trabajadora Social y Psicóloga <b>comisaria@</b> · Agricultura y Turismo <b>secretariadeagriculturalabatec@gmail.com</b> · Control Interno <b>controlinternolabateca@gmail.com</b>.",
-          "en": "The building directory. Official e-mail addresses, office by office — all end in @labateca-nortedesantander.gov.co except two: Mayor's Office <b>alcaldia@</b> · General Secretariat of Government, Human Resources and the Public Library <b>secretariadegobierno@</b> · Planning, Infrastructure and Public Works <b>planeacion@</b> · Finance and Fiscal Affairs <b>secretariadehacienda@</b> · Social Development and Familias en Acción <b>desarrollosocial@</b> · Sisbén <b>sisben@</b> · Police Inspectorate <b>inspeccionpolicia@</b> · Family Commissariat, Social Worker and Psychologist <b>comisaria@</b> · Agriculture and Tourism <b>secretariadeagriculturalabatec@gmail.com</b> · Internal Control <b>controlinternolabateca@gmail.com</b>."
+          "es": "El directorio del edificio. Correos institucionales, oficina por oficina — todos terminan en @labateca-nortedesantander.gov.co salvo dos: Despacho del Alcalde alcaldia@ · Secretaría General y de Gobierno, Talento Humano y la Biblioteca Pública secretariadegobierno@ · Planeación, Infraestructura y Obras Públicas planeacion@ · Hacienda y Asuntos Fiscales secretariadehacienda@ · Desarrollo Social y Familias en Acción desarrollosocial@ · Sisbén sisben@ · Inspección de Policía inspeccionpolicia@ · Comisaría de Familia, Trabajadora Social y Psicóloga comisaria@ · Agricultura y Turismo secretariadeagriculturalabatec@gmail.com · Control Interno controlinternolabateca@gmail.com.",
+          "en": "The building directory. Official e-mail addresses, office by office — all end in @labateca-nortedesantander.gov.co except two: Mayor's Office alcaldia@ · General Secretariat of Government, Human Resources and the Public Library secretariadegobierno@ · Planning, Infrastructure and Public Works planeacion@ · Finance and Fiscal Affairs secretariadehacienda@ · Social Development and Familias en Acción desarrollosocial@ · Sisbén sisben@ · Police Inspectorate inspeccionpolicia@ · Family Commissariat, Social Worker and Psychologist comisaria@ · Agriculture and Tourism secretariadeagriculturalabatec@gmail.com · Internal Control controlinternolabateca@gmail.com."
         },
         {
           "es": "El letrero de baldosa «Alcaldía de Labateca» en el muro interior.",
@@ -6297,8 +6305,8 @@
       "coordsApprox": false,
       "lat": 7.299768,
       "lng": -72.493641,
-      "mapaX": 541,
-      "mapaY": 366,
+      "mapaX": 542,
+      "mapaY": 365,
       "correo": "secretariadegobierno@labateca-nortedesantander.gov.co",
       "nombre": {
         "es": "Biblioteca Pública Municipal Hermana María Isaura Cardona Zapata",
@@ -6552,7 +6560,7 @@
       "lat": 7.300403,
       "lng": -72.494939,
       "mapaX": 472,
-      "mapaY": 346,
+      "mapaY": 345,
       "nombre": {
         "es": "Estación de Policía de Labateca",
         "en": "Labateca Police Station"
@@ -6676,8 +6684,8 @@
       "coordsApprox": false,
       "lat": 7.300046,
       "lng": -72.494692,
-      "mapaX": 465,
-      "mapaY": 369,
+      "mapaX": 466,
+      "mapaY": 368,
       "correo": "cens@cens.com.co",
       "nombre": {
         "es": "CENS · Oficina de atención en Labateca",
@@ -6731,7 +6739,7 @@
       "lat": 7.298691,
       "lng": -72.495398,
       "mapaX": 467,
-      "mapaY": 424,
+      "mapaY": 425,
       "telefono": "573123079138",
       "nombre": {
         "es": "Hospedaje La Profe",
@@ -6876,7 +6884,7 @@
       "coordsApprox": false,
       "lat": 7.299311,
       "lng": -72.49446,
-      "mapaX": 511,
+      "mapaX": 512,
       "mapaY": 395,
       "telefono": "573208310880",
       "nombre": {
@@ -6939,7 +6947,7 @@
       "coordsApprox": false,
       "lat": 7.299019,
       "lng": -72.494173,
-      "mapaX": 504,
+      "mapaX": 503,
       "mapaY": 425,
       "telefono": "573123079138",
       "nombre": {
@@ -7022,8 +7030,8 @@
       "coordsApprox": false,
       "lat": 7.300203,
       "lng": -72.496283,
-      "mapaX": 458,
-      "mapaY": 342,
+      "mapaX": 459,
+      "mapaY": 341,
       "telefono": "573159265334",
       "nombre": {
         "es": "Dulce Arte L&L",
@@ -7095,7 +7103,7 @@
       "coordsApprox": false,
       "lat": 7.298436,
       "lng": -72.49378,
-      "mapaX": 501,
+      "mapaX": 502,
       "mapaY": 405,
       "telefono": "573134210399",
       "nombre": {
@@ -7158,7 +7166,7 @@
       "coordsApprox": false,
       "lat": 7.298724,
       "lng": -72.495402,
-      "mapaX": 467,
+      "mapaX": 466,
       "mapaY": 410,
       "telefono": "573106011566",
       "nombre": {
@@ -7570,6 +7578,317 @@
       },
       "fotos": [],
       "fotosCap": []
+    },
+    {
+      "id": "excii",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.298677,
+      "lng": -72.493899,
+      "mapaX": 550,
+      "mapaY": 429,
+      "telefono": "573142000824",
+      "nombre": {
+        "es": "EXCII · Boutique & Accesorios",
+        "en": "EXCII · Boutique & Accessories"
+      },
+      "desc": {
+        "es": "Boutique de ropa y accesorios en el casco urbano, de Eddy Lisbeth Parada. Es un local grande, de piso claro y luz blanca, con la ropa repartida por secciones: un aro dorado en la mitad del salón con lo que va llegando, una pared entera de camisas y camisetas, otra de chaquetas y buzos, un mueble de jeans doblados por tallas y un rincón de ropa interior y medias. Hay para mujer, hombre y niño. En el mostrador, en vitrina, están los accesorios: gorras, aretes, moños, bisutería y perfumería. Y hay una segunda cosa que no se adivina desde afuera: EXCII también hace documentos —impresiones, fotocopias, certificados de contraloría, procuraduría y de libertad y tradición, copias de escrituras, contratos de arrendamiento y de compraventa, trámites de tránsito, cambio de propietario de vehículo venezolano y trámites ante el IGAC—.",
+        "en": "A clothing and accessories boutique in the town centre, run by Eddy Lisbeth Parada. It is a large room with a pale floor and white light, the stock laid out by section: a gold hoop rack in the middle of the floor with whatever has just come in, one whole wall of shirts and tees, another of jackets and hoodies, a unit of jeans folded by size, and a corner for underwear and socks. There is womenswear, menswear and children's. On the counter, under glass, are the accessories: caps, earrings, hair ties, costume jewellery and perfume. And there is a second business you would not guess from the street: EXCII also handles paperwork — printing, photocopying, comptroller, inspector-general and land-registry certificates, copies of deeds, rental and sale contracts, vehicle paperwork, transfer of ownership for Venezuelan-plated vehicles, and IGAC land-registry procedures."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a unos 130 m del Parque Principal, en la misma esquina del Ateca Bar Café Restaurante. Sigue el pin del mapa.",
+        "en": "In Labateca's town centre, about 130 m from the Main Square, on the same corner as Ateca Bar Café Restaurante. Follow the map pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In the town centre"
+      },
+      "tiempo": {
+        "es": "9:00 a. m.–12:00 m. y 3:00–6:30 p. m.",
+        "en": "9:00 a.m.–12:00 noon and 3:00–6:30 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Cierra al mediodía y vuelve a las tres: si vas de paso, la ventana de la mañana es la más corta. Para el viajero lo útil no es solo la ropa —si te hace falta imprimir, sacar una copia o pedir un certificado en línea, aquí lo hacen, y en el pueblo no hay muchos sitios donde—. Puedes preguntar antes por WhatsApp al 314 200 0824.",
+        "en": "It closes at midday and reopens at three, so the morning window is the short one if you are passing through. For a traveller the useful part is not only the clothes — if you need something printed, a photocopy, or an online certificate pulled, they do it here, and there are not many places in town that do. You can ask ahead on WhatsApp at +57 314 200 0824."
+      },
+      "fotos": [
+        "labateca/excii-01",
+        "labateca/excii-02",
+        "labateca/excii-03",
+        "labateca/excii-04",
+        "labateca/excii-05",
+        "labateca/excii-06",
+        "labateca/excii-07",
+        "labateca/excii-08",
+        "labateca/excii-09",
+        "labateca/excii-10",
+        "labateca/excii-11"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada, con la vitrina de la boutique. En la pared, el aviso de corresponsal bancario de Bancolombia y, debajo, el cartel de los trámites de documentos.",
+          "en": "The shopfront, with the boutique window. On the wall, the Bancolombia banking correspondent sign and, below it, the board listing the paperwork services."
+        },
+        {
+          "es": "El aro dorado en la mitad del salón, con la novedad colgada alrededor.",
+          "en": "The gold hoop rack in the middle of the floor, with the new arrivals hung around it."
+        },
+        {
+          "es": "El pasillo de camisas, camisetas y polos.",
+          "en": "The aisle of shirts, tees and polos."
+        },
+        {
+          "es": "Los pantalones colgados en fila, y la mesa de buzos y sudaderas al fondo.",
+          "en": "Trousers hung in a row, with the table of sweatshirts behind."
+        },
+        {
+          "es": "El mueble de jeans, doblados y ordenados por tallas.",
+          "en": "The jeans unit, folded and sorted by size."
+        },
+        {
+          "es": "La pared de chaquetas: acolchadas, cortavientos y de invierno.",
+          "en": "The jacket wall: padded, windbreakers and winter coats."
+        },
+        {
+          "es": "Buzos oscuros arriba y abrigos de peluche abajo, junto a las blusas de color.",
+          "en": "Dark hoodies above and fleece coats below, next to the coloured blouses."
+        },
+        {
+          "es": "Chaquetas de borrego y la mesa de camisetas dobladas por color.",
+          "en": "Shearling jackets and the table of tees folded by colour."
+        },
+        {
+          "es": "El sector de ropa interior, medias y accesorios pequeños.",
+          "en": "The underwear, socks and small-accessories section."
+        },
+        {
+          "es": "El mostrador: gorras, perfumería, bisutería y aretes en vitrina.",
+          "en": "The counter: caps, perfume, costume jewellery and earrings under glass."
+        },
+        {
+          "es": "El cartel de la fachada con la lista completa de trámites de documentos.",
+          "en": "The shopfront board with the full list of paperwork services."
+        }
+      ]
+    },
+    {
+      "id": "disco-bar-la-barra",
+      "categoria": "gastronomia",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.299473,
+      "lng": -72.494461,
+      "mapaX": 499,
+      "mapaY": 388,
+      "telefono": "573102289043",
+      "nombre": {
+        "es": "Disco Bar La Barra",
+        "en": "Disco Bar La Barra"
+      },
+      "desc": {
+        "es": "Bar de puerta ancha sobre el Parque Principal, de María Segura. Por dentro es un salón largo de paredes amarillas, con mesas y bancos de madera maciza, cuadros de músicos vallenatos y de una banda de porro colgados a la altura de la vista, y los avisos de «La Barra» en madera y neón. La barra tiene tapa roja y encima una pérgola de listones con matas colgantes y las copas guindadas; detrás, la nevera de cervezas y gaseosas, el estante de licores y la vitrina de pasabocas. Hay pantalla para el partido y para la música. Abre desde las once de la mañana todos los días.",
+        "en": "A wide-doored bar on the Main Square, run by María Segura. Inside it is a long room with yellow walls, solid-wood tables and stools, framed pictures of vallenato musicians and a porro band hung at eye level, and the 'La Barra' signs in wood and neon. The bar has a red top with a slatted pergola above it, trailing plants and glasses hanging from it; behind, the beer and soft-drink fridge, the spirits shelf and the snack case. There is a screen for the match and for music. It opens from eleven in the morning, every day."
+      },
+      "comoLlegar": {
+        "es": "Sobre el Parque Principal de Labateca, a unos 25 m de la plaza. Sigue el pin del mapa.",
+        "en": "On Labateca's Main Square, about 25 m from the plaza. Follow the map pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In the town centre"
+      },
+      "tiempo": {
+        "es": "Entre semana 11:00 a. m.–11:00 p. m. · fines de semana 11:00 a. m.–2:00 a. m.",
+        "en": "Weekdays 11:00 a.m.–11:00 p.m. · weekends 11:00 a.m.–2:00 a.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Es el bar del parque: se llega caminando desde cualquier punto del casco urbano y el fin de semana la noche se alarga hasta las dos de la mañana. Ojo con el nombre: en Labateca hay dos bares que se llaman «La Barra» y no tienen nada que ver. Este es el Disco Bar La Barra, de María Segura, en el parque; el otro es el Teca Bar La Barra, el del mural y las mesas de billar, a unas tres cuadras. Escríbele por WhatsApp al 310 228 9043.",
+        "en": "This is the bar on the square: you can walk to it from anywhere in town, and at weekends the night runs until two in the morning. Careful with the name: Labateca has two bars called 'La Barra' and they are unrelated. This is Disco Bar La Barra, María Segura's, on the square; the other is Teca Bar La Barra, the one with the mural and the pool tables, about three blocks away. Message on WhatsApp at +57 310 228 9043."
+      },
+      "fotos": [
+        "labateca/disco-barra-01",
+        "labateca/disco-barra-02",
+        "labateca/disco-barra-03",
+        "labateca/disco-barra-04"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada abierta al parque, con las mesas altas y el salón al fondo.",
+          "en": "The open frontage onto the square, with the high tables and the room beyond."
+        },
+        {
+          "es": "El salón de paredes amarillas, con los cuadros de músicos y los avisos de La Barra.",
+          "en": "The yellow-walled room, with the musician pictures and the La Barra signs."
+        },
+        {
+          "es": "La barra de tapa roja bajo la pérgola de listones y matas colgantes.",
+          "en": "The red-topped bar under the slatted pergola with its trailing plants."
+        },
+        {
+          "es": "El estante de licores, la cristalería y la vitrina de pasabocas.",
+          "en": "The spirits shelf, the glassware and the snack case."
+        }
+      ]
+    },
+    {
+      "id": "carpinteria-velazco",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300945,
+      "lng": -72.495169,
+      "mapaX": 435,
+      "mapaY": 353,
+      "telefono": "573152837961",
+      "nombre": {
+        "es": "Carpintería Velazco",
+        "en": "Velazco Carpentry Workshop"
+      },
+      "desc": {
+        "es": "Carpintería y ebanistería de Iván Adrián Velazco Contreras. Trabaja a la medida: armado de muebles, restauración de muebles viejos y fabricación de puertas, camas, comedores y demás piezas de ebanistería. El taller es de los de verdad —piso de aserrín, techo de zinc, la montaña asomando por el costado abierto— y ahí están la sierra de mesa, la canteadora, una sierra sinfín armada en el propio taller y el armario de herramientas con los discos, los formones y los cepillos colgados en la puerta. Lo que sale de ahí se ve en las fotos: un mueble esquinero de escritorio y biblioteca, un centro de entretenimiento en madera oscura, un escritorio de cajones con llave, una mecedora y una cama pintada.",
+        "en": "A carpentry and cabinetmaking workshop run by Iván Adrián Velazco Contreras. Everything is made to measure: assembling furniture, restoring old pieces, and building doors, beds, dining tables and other cabinetwork. The workshop is the real thing — sawdust floor, zinc roof, the mountain showing through the open side — and in it are the table saw, the jointer, a band saw built on site, and the tool cupboard with blades, chisels and planes hung on the door. What comes out of it is in the photos: a corner desk and bookcase unit, a dark-wood entertainment centre, a desk with lockable drawers, a rocking chair and a painted bed."
+      },
+      "comoLlegar": {
+        "es": "En el casco urbano de Labateca, a unos 160 m del Parque Principal, subiendo hacia el Banco Agrario y la Registraduría. Sigue el pin del mapa.",
+        "en": "In Labateca's town centre, about 160 m from the Main Square, up towards the Banco Agrario and the Registry Office. Follow the map pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In the town centre"
+      },
+      "tiempo": {
+        "es": "Lunes a viernes 8:00 a. m.–12:00 m. y 2:00–6:00 p. m.",
+        "en": "Monday to Friday 8:00 a.m.–12:00 noon and 2:00–6:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil",
+        "en": "Easy access"
+      },
+      "recomendacion": {
+        "es": "Es trabajo a la medida, así que lo que ahorra tiempo es llegar con las medidas y una foto de referencia; con eso te da precio. También restaura: si tienes en la casa un mueble viejo de los buenos, aquí lo vuelven a poner en pie en vez de botarlo. Escríbele por WhatsApp al 315 283 7961. Cierra al mediodía y los fines de semana.",
+        "en": "It is all made to measure, so the thing that saves time is arriving with your measurements and a reference photo; with that he can quote you. He also restores: if you have an old, well-made piece at home, it gets put back on its feet here instead of thrown out. Message on WhatsApp at +57 315 283 7961. Closed at midday and at weekends."
+      },
+      "fotos": [
+        "labateca/carpinteria-velazco-01",
+        "labateca/carpinteria-velazco-02",
+        "labateca/carpinteria-velazco-03",
+        "labateca/carpinteria-velazco-04",
+        "labateca/carpinteria-velazco-05",
+        "labateca/carpinteria-velazco-06",
+        "labateca/carpinteria-velazco-07",
+        "labateca/carpinteria-velazco-08",
+        "labateca/carpinteria-velazco-09",
+        "labateca/carpinteria-velazco-10",
+        "labateca/carpinteria-velazco-11"
+      ],
+      "fotosCap": [
+        {
+          "es": "Mueble esquinero de escritorio y biblioteca, armado en el taller, con la montaña detrás.",
+          "en": "A corner desk-and-bookcase unit, assembled in the workshop, with the mountain behind."
+        },
+        {
+          "es": "Centro de entretenimiento en madera oscura, con puertas de panel y cajones.",
+          "en": "A dark-wood entertainment centre, with panelled doors and drawers."
+        },
+        {
+          "es": "Biblioteca y mueble de televisor en tono grafito, ya instalado.",
+          "en": "A graphite-toned bookcase and TV unit, installed."
+        },
+        {
+          "es": "Escritorio de tres cajones con cerradura, terminado y esperando entrega.",
+          "en": "A three-drawer desk with a lock, finished and waiting to be delivered."
+        },
+        {
+          "es": "Mecedora en madera maciza, con el brazo y el respaldo torneados a mano.",
+          "en": "A solid-wood rocking chair, arms and back shaped by hand."
+        },
+        {
+          "es": "Cama pintada con espaldar de paneles, sacada a la calle para la foto.",
+          "en": "A painted bed with a panelled headboard, brought out to the street for the photo."
+        },
+        {
+          "es": "La sierra de mesa del taller, entre listones y aserrín.",
+          "en": "The workshop's table saw, among battens and sawdust."
+        },
+        {
+          "es": "La canteadora, con su motor y la correa a la vista.",
+          "en": "The jointer, its motor and belt in plain sight."
+        },
+        {
+          "es": "La sierra circular del patio, montada sobre su banco de hierro.",
+          "en": "The yard's circular saw, mounted on its iron bench."
+        },
+        {
+          "es": "La sierra sinfín, armada en el propio taller.",
+          "en": "The band saw, built in the workshop itself."
+        },
+        {
+          "es": "El armario de herramientas: discos, formones, cepillos y llaves en la puerta.",
+          "en": "The tool cupboard: blades, chisels, planes and spanners on the door."
+        }
+      ]
+    },
+    {
+      "id": "personeria-labateca",
+      "categoria": "servicios",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.300474,
+      "lng": -72.495015,
+      "mapaX": 448,
+      "mapaY": 357,
+      "nombre": {
+        "es": "Personería Municipal de Labateca",
+        "en": "Municipal Ombudsman's Office (Personería) of Labateca"
+      },
+      "desc": {
+        "es": "La Personería es el Ministerio Público en el municipio: el organismo que guarda y promueve los derechos humanos, protege el interés público y vigila la conducta de quienes ejercen funciones públicas. Es donde el ciudadano radica quejas, peticiones y reclamos contra la administración, pide orientación para un derecho de petición o una acción de tutela, y donde se atiende a la población en condición de vulnerabilidad. Funciona en el Palacio Municipal, en la planta alta que da al patio de baldosa; la placa de «República de Colombia · Ministerio Público» está en la pared, junto a la puerta, y afuera hay sillas de espera.",
+        "en": "The Personería is the Public Ministry at municipal level: the body that safeguards and promotes human rights, protects the public interest and oversees the conduct of those holding public office. It is where citizens file complaints, petitions and claims against the administration, ask for guidance on a right-of-petition or a tutela (constitutional protection action), and where people in vulnerable situations are assisted. It works from the Town Hall, on the upper floor overlooking the tiled courtyard; the 'Republic of Colombia · Public Ministry' plaque is on the wall beside the door, and there are waiting chairs outside."
+      },
+      "comoLlegar": {
+        "es": "En el Palacio Municipal de Labateca —el edificio de la Alcaldía, sobre un costado del Parque Principal—, en la planta alta. Se sube por la escalera del patio. Sigue el pin del mapa.",
+        "en": "In Labateca's Town Hall — the Alcaldía building, on one side of the Main Square — on the upper floor. Take the courtyard staircase. Follow the map pin."
+      },
+      "dist": {
+        "es": "En el casco urbano",
+        "en": "In the town centre"
+      },
+      "tiempo": {
+        "es": "8:00 a. m.–12:00 m. y 2:00–6:00 p. m.",
+        "en": "8:00 a.m.–12:00 noon and 2:00–6:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil · en la planta alta, se sube por escalera",
+        "en": "Easy access · on the upper floor, reached by stairs"
+      },
+      "recomendacion": {
+        "es": "La atención es presencial y en el horario de arriba: cierra al mediodía. Esta ficha va sin teléfono, así que hay que ir en persona. Si vas por una queja o un derecho de petición, lleva por escrito lo que quieres radicar y una copia para que te la sellen. Ya que estás, el patio del Palacio Municipal —con sus murales y la roseta labrada en el piso— está a la vista y vale la pena.",
+        "en": "Attention is in person and within the hours above: it closes at midday. This entry carries no telephone number, so you have to go in person. If you are going with a complaint or a right-of-petition, take it in writing plus a copy for them to stamp. While you are there, the Town Hall courtyard — with its murals and the carved rosette in the floor — is right there and worth a look."
+      },
+      "fotos": [
+        "labateca/personeria-01",
+        "labateca/personeria-02"
+      ],
+      "fotosCap": [
+        {
+          "es": "La placa: «República de Colombia · Ministerio Público · Personería Municipal de Labateca».",
+          "en": "The plaque: 'Republic of Colombia · Public Ministry · Municipal Personería of Labateca'."
+        },
+        {
+          "es": "La entrada de la oficina en la planta alta del Palacio Municipal, con la placa a un lado y las sillas de espera al otro.",
+          "en": "The office entrance on the Town Hall's upper floor, with the plaque on one side and the waiting chairs on the other."
+        }
+      ]
     }
   ]
 }
