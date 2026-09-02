@@ -1,183 +1,212 @@
-# Proyecto: Sitio web turístico de Labateca — Brief para Claude Code
+# Labateca · Volcanes de Dios — cómo está hecho este sitio
 
-> **Cómo usar este archivo:** colócalo en la raíz del proyecto (junto a `index.html`). Si trabajas con **Claude Code**, puedes renombrarlo a `CLAUDE.md` y lo cargará automáticamente como contexto. Luego pídele a Code que vaya resolviendo las tareas de la sección 6 en orden.
+Guía turística del municipio de **Labateca, Norte de Santander (Colombia)**.
+Bilingüe español/inglés. Sin frameworks, sin bundler, sin paso de compilación.
 
----
+> Este archivo se carga solo como contexto al abrir el proyecto. Si algo de
+> aquí no coincide con el código, **el código manda y este archivo hay que
+> corregirlo**. Estuvo desactualizado desde junio hasta el 2 de septiembre de
+> 2026 y en ese lapso hizo más daño que bien.
 
-## 1. Objetivo del proyecto
-
-Sitio web turístico **bilingüe (Español / Inglés)** del municipio de **Labateca, Norte de Santander (Colombia)**. La meta es conectar a los turistas —antes y durante su visita— con información práctica de cada lugar: ubicación, clima, distancias, tiempos de recorrido, cómo llegar (Google Maps), teléfonos y recomendaciones.
-
-**Identidad:** "Labateca · Volcanes de Dios" (el nombre significa "volcanes de Dios" en lengua chitarera). Tono cálido, de montaña, editorial.
-
----
-
-## 2. Estado actual
-
-Ya existe un archivo **`index.html`** completo y funcional (un solo archivo, sin frameworks ni paso de compilación). Funciones ya implementadas:
-
-- Encabezado fijo con logo SVG, menú responsive (hamburguesa en móvil) y selector de idioma ES/EN.
-- **Hero** con clima en vivo (API Open-Meteo, sin clave), datos clave y **distancia dinámica** desde la ubicación del visitante (Geolocation API + fórmula de Haversine) con botón a la ruta real en Google Maps.
-- Sección "El pueblo" con historia y datos.
-- **Lugares filtrables** por categoría, con favoritos (♥) y planificador de rutas (drawer "Mi ruta" que genera enlace multi-parada de Google Maps).
-- **Mapa interactivo** (Leaflet + OpenStreetMap) con marcadores y respaldo si no carga.
-- **Galería** (actualmente con placeholders elegantes, pendiente de fotos reales).
-- **Formulario de contacto** que envía por Web3Forms y, si no hay clave configurada, cae automáticamente a WhatsApp.
-- **SEO**: title, meta description, Open Graph, Twitter Card, datos estructurados JSON-LD (TouristDestination), favicon SVG en línea, HTML semántico.
-- Animaciones suaves (reveal al hacer scroll, hover, etc.) y `prefers-reduced-motion` respetado.
+**Estado al 2 de septiembre de 2026 (v183):** 111 lugares · 566 fotos ·
+269 páginas HTML · 263 URLs en el sitemap · `app.js` 3.160 líneas ·
+`styles.css` 2.375 líneas.
 
 ---
 
-## 3. Stack técnico
+## 1. Lo primero: cómo se despliega
 
-- **HTML5 + CSS3 + JavaScript vanilla.** Sin frameworks, sin build step, sin dependencias de NPM en el sitio. Mantener así (simplicidad y portabilidad).
-- **Tipografía:** Fraunces (display) + Hanken Grotesk (cuerpo), vía Google Fonts.
-- **Estilos:** CSS con variables (`:root`). Paleta: verde bosque (`--forest`), terracota/café (`--clay`), dorado (`--gold`), crema (`--cream`/`--paper`).
-- **APIs externas (todas gratis, sin backend):**
-  - Open-Meteo → clima en vivo (sin API key).
-  - Leaflet 1.9.4 + OpenStreetMap → mapa (CDN).
-  - Web3Forms → formulario de contacto (requiere `access_key` gratuita).
-- **Geolocation API** + Haversine → distancia desde el visitante.
-- **localStorage** (con respaldo en memoria mediante el helper `store`) → favoritos, ruta e idioma.
+El sitio vive en **Cloudflare Workers** (no Pages) y está **conectado a
+GitHub: se despliega solo al empujar a `main`**. Tarda de segundos a varios
+minutos; si no aparece, esperar, no re-empujar.
 
----
+**El orden correcto, siempre:**
 
-## 4. Estructura del código (NO romper estos contratos)
-
-Todo el JavaScript está dentro de `index.html`, al final, en un único bloque `<script>`. Piezas clave:
-
-### `CONFIG` (al inicio del script — lo único que el dueño edita a mano)
-```js
-const CONFIG = {
-  whatsapp: "573000000000",     // WhatsApp en formato internacional, sin "+"
-  email: "hola@labateca-turismo.co",
-  web3formsKey: "TU_ACCESS_KEY",// si está sin configurar, el formulario usa WhatsApp
-  townCoords: { lat: 7.3167, lng: -72.4833 }, // Parque Principal de Labateca
-  social: { instagram:"#", facebook:"#", tiktok:"#" }
-};
+```bash
+python subir_version.py NNN     # desde la carpeta del proyecto, no desde files/
+node gen_seo.js
+cd files && git add -A && git commit -m "vNNN: ..." && git push origin main
 ```
 
-### `PLACES` (array de lugares). Esquema de cada elemento:
-```js
-{
-  id:"templo",                 // identificador único (string)
-  cat:"cultura",               // naturaleza | cultura | gastronomia | hospedaje
-  verified:true,               // true = dato confirmado | false = "por verificar"
-  coordsApprox:false,          // true = la ubicación GPS es aproximada
-  lat:7.3167, lng:-72.4833,    // coordenadas (mapa y Google Maps)
-  phone:"",                    // teléfono internacional sin "+", o "" si no aplica
-  name:{ es:"...", en:"..." },
-  desc:{ es:"...", en:"..." },
-  dist:{ es:"...", en:"..." },
-  time:{ es:"...", en:"..." },
-  diff:{ es:"...", en:"..." },
-  rec:{ es:"...", en:"..." },
-  img:""                       // (actual) URL única de foto; "" = placeholder
-}
+`subir_version.py` toca **tres sitios que tienen que ir sincronizados**:
+`CACHE_VERSION` en `sw.js`, el precache de `/styles.css?v=NNN` dentro de
+`sw.js`, y el `<link>` de las 25 páginas escritas a mano.
+
+> ⚠️ **Nunca subir la versión con `sed`.** Un `sed 's/labateca-v182/v183/'`
+> solo cambia `CACHE_VERSION` y deja el CSS de las 25 páginas en la versión
+> anterior: el visitante sigue viendo la hoja de estilos vieja. Ya pasó.
+
+**Los tres workers NO se despliegan con el sitio.** `.assetsignore` los
+excluye a propósito. Se actualizan **pegando el `.js` en el panel de
+Cloudflare**:
+
+| Worker | Qué hace | Ojo |
+|---|---|---|
+| `worker-chat.js` | Asistente de IA (Workers AI, Llama 3.1) | Usa la vinculación `env.AI`. Desplegarlo por CLI sin declarar `[ai] binding = "AI"` **la borra y rompe el chat** |
+| `worker-reviews.js` | Reseñas + visitas + eventos (D1) | Panel `/moderar?key=…` y `/stats?key=…` |
+| `worker-cms-auth.js` | OAuth del panel Sveltia | |
+
+---
+
+## 2. Cómo está organizado
+
+```
+labateca proyect/
+├─ files/              ← ESTO es el repo git y lo que se publica
+│  ├─ index.html, lugares.html, pueblo.html, viva.html, libro.html…
+│  ├─ historia/        ← 17 páginas de fuentes históricas (a mano)
+│  ├─ lugar/           ← 111 fichas ES   ┐
+│  ├─ en/place/        ← 111 fichas EN   │ GENERADAS: no editar a mano,
+│  ├─ categoria/       ← 6 categorías ES │ se reescriben en cada corrida
+│  ├─ en/category/     ← 6 categorías EN ┘
+│  ├─ data/places.json ← FUENTE ÚNICA de los lugares
+│  ├─ media/           ← el MP3 del himno
+│  ├─ app.js, styles.css, sw.js
+│  └─ worker-*.js      ← no se publican (.assetsignore)
+└─ *.js, *.py          ← generadores y scripts de lote (fuera del repo)
 ```
 
-### `I18N` (diccionario ES/EN)
-- Patrón: los textos estáticos del HTML llevan `data-i18n="clave"` (o `data-i18n-ph` para placeholders). La función `applyI18n()` los reemplaza, y `setLang(l)` re-renderiza todo.
-- **Regla de oro:** cualquier texto nuevo de interfaz debe agregarse a `I18N.es` y `I18N.en`. Nada de texto "quemado" en un solo idioma.
+**Generadores** (se corren desde la carpeta del proyecto, no desde `files/`):
 
-### Helpers y funciones (no cambiar sus nombres/contratos)
-- `store.get/set` → localStorage con respaldo en memoria (`memStore`). Claves: `lab_favs`, `lab_route`, `lab_lang`.
-- Render: `renderFilters()`, `renderPlaces()`, `renderGallery()`, `renderDrawer()`.
-- Favoritos/ruta: `toggleFav(id)`, `toggleRoute(id)`, `clearRoute()`, `updateBadges()`.
-- Distancia: `calcDistance()`, `haversineKm(...)`.
-- Clima: `loadWeather()`, `paintWeather()` (con respaldo a ~20 °C si falla la API).
-- Mapa: `initMap()` (con respaldo visual si Leaflet no carga).
-- `init()` arranca todo al final del script.
+- **`gen_seo.js`** — el importante. De `places.json` escribe las 234 páginas
+  de lugar y categoría en los dos idiomas, el `sitemap.xml` y el directorio
+  de `lugares.html`. Se puede correr las veces que sea.
+- `gen_pueblo.js`, `gen_libro.js`, `gen_biblioteca.js`, `gen_antiguas.js`,
+  `gen_anexos.js` — cada uno arma su página.
+- `poner_beacon.py` — el beacon de analítica en las páginas a mano.
+- `add_loteNN` / `bake_loteNN` / `subir_*` — carga de lotes de lugares y fotos.
 
 ---
 
-## 5. Principios y decisiones (respetar siempre)
+## 3. Contratos que no se rompen
 
-1. **Datos de campo y comunidad, NO de la web.** La información en línea sobre Labateca está desactualizada. Lo no confirmado se marca con `verified:false` y/o `coordsApprox:true` (la interfaz ya muestra una etiqueta amarilla "por verificar").
-2. **No inventar coordenadas GPS.** Si no se conocen, dejar aproximadas y marcarlas. Las exactas se levantan en campo con el celular.
-3. **Optimización de imágenes obligatoria.** Nunca servir fotos de 8 MB. Objetivo: ~1600 px de ancho, formato WebP, ~200–300 KB por foto. Usar carga diferida (`loading="lazy"`, ya presente).
-4. **Privacidad primero.** La geolocalización se pide SOLO cuando el usuario hace clic, nunca al cargar la página.
-5. **Sin frameworks ni build step.** Mantener vanilla y portátil.
-6. **Bilingüe completo.** Toda nueva cadena va en ES y EN.
-7. **Hosting decidido:** fotos en **Cloudinary** (gratis, auto-optimiza, ~25 GB) + sitio en **Cloudflare Pages** (gratis, transferencia ilimitada). Requiere **HTTPS** (lo dan ambos), que es lo que activa geolocalización, mapa y clima.
+### `data/places.json`
 
----
+```json
+{ "id":"templo", "categoria":"cultura", "verified":true, "pendiente":false,
+  "coordsApprox":false, "lat":7.29, "lng":-72.49, "mapaX":513, "mapaY":355,
+  "telefono":"57...", "nombre":{"es":"","en":""}, "desc":{"es":"","en":""},
+  "comoLlegar":{}, "dist":{}, "tiempo":{}, "dificultad":{}, "recomendacion":{},
+  "fotos":["labateca/templo-01"], "fotosCap":[{"es":"","en":""}] }
+```
 
-## 6. Tareas pendientes (en orden de prioridad)
+Categorías: `naturaleza · cultura · gastronomia · hospedaje · comercio · servicios`.
+Opcionales: `telFijo`, `correo`, `track`, `trailhead`, `wikiloc`, `fotosAviso`.
 
-### 🔴 Prioridad alta
+- **`pendiente: true`** = ficha reportada pero **sin levantar en campo**. Entra
+  **sin `lat`/`lng`, sin `mapaX`/`mapaY` y con `fotos: []` a propósito**: poner
+  la coordenada del pueblo mandaría a la gente al parque a buscar una cascada.
+  El código ya lo soporta en los dos lados. Hoy hay 9.
+- **`verified: false`** pinta la etiqueta amarilla «por verificar».
 
-**T1. Integración de imágenes con Cloudinary.**
-- Agregar `cloudName: "TU_CLOUD_NAME"` a `CONFIG`.
-- Crear un helper para construir URLs optimizadas, p. ej.:
-  ```js
-  function cldUrl(publicId, transform){
-    return `https://res.cloudinary.com/${CONFIG.cloudName}/image/upload/${transform}/${publicId}`;
-  }
-  // Miniatura tarjeta: "w_640,h_400,c_fill,f_auto,q_auto"
-  // Foto grande (lightbox): "w_1600,f_auto,q_auto"
-  ```
-- Extender el esquema de `PLACES`: cambiar `img:""` por **`photos: ["public_id_1", "public_id_2", ...]`** (varios IDs de Cloudinary por lugar). Mantener compatibilidad: si `photos` está vacío, mostrar el placeholder actual.
-- Las tarjetas usan la primera foto como miniatura optimizada.
+### Traducción
 
-**T2. Galería tipo *lightbox*.**
-- Al hacer clic en una miniatura, abrir un overlay a pantalla completa con la foto grande.
-- Navegación anterior/siguiente, leyenda (bilingüe), botón cerrar, soporte de teclado (Esc, ← →) y swipe en móvil.
-- Vanilla, accesible (focus trap, `aria-*`), sin librerías. Reusar las variables CSS de la paleta.
-- La sección "Galería" debe alimentarse de las fotos de `PLACES` (no de placeholders fijos).
+Los textos de interfaz llevan `data-i18n` (o `-ph` / `-aria`) y viven en
+`I18N.es` / `I18N.en` en `app.js`. **Toda cadena nueva va en los dos idiomas.**
 
-**T3. Cargar los ~50 sitios reales.**
-- Ampliar `PLACES` con los datos reales (los proveerá el dueño). Respetar el esquema y las banderas `verified`/`coordsApprox`.
-- A 50 sitios conviene **externalizar los datos**: mover `PLACES` (y opcionalmente `I18N`) a un archivo aparte, p. ej. `data/places.js`, e incluirlo con `<script src>`. Mantiene `index.html` manejable.
+> `applyI18n()` **reescribe el `innerHTML`** de todo lo que lleva `data-i18n`.
+> Cualquier cosa que se inyecte dentro de esos elementos hay que repintarla
+> DESPUÉS —es lo que hace `marcarSoloES()` al final de `setLang()`—.
 
-### 🟡 Prioridad media
+### Qué es bilingüe de verdad y qué no
 
-**T4. Script de optimización en lote** (para preparar las fotos antes de subirlas a Cloudinary).
-- Crear un script Node con **sharp** que lea una carpeta `fotos-originales/`, redimensione a 1600 px de ancho máx., convierta a WebP (calidad ~80) y escriba en `fotos-web/`.
-- Incluir instrucciones de uso (`npm i sharp` → `node optimize.js`). Alternativa sin Node: comando de ImageMagick.
+- **Sí:** `index.html` (159 claves) y `lugares.html` (60). Con `?lang=en`
+  salen enteras en inglés. Las 111 fichas y las 6 categorías tienen su gemela
+  en `/en/`.
+- **No:** `pueblo`, `viva`, `transporte`, `libro`, `biblioteca`, las legales y
+  16 de las 17 de historia. Tienen el armazón traducido y **el cuerpo en
+  español**. Se enlazan igual, pero marcados con la etiqueta `ES` y
+  `hreflang="es"` (`marcarSoloES()` en `app.js`, `marcaES()` en `gen_seo.js`).
 
-**T5. Despliegue en Cloudflare Pages.**
-- El sitio es estático: basta con desplegar la carpeta. Documentar los pasos (arrastrar/soltar o conectar repositorio Git) y la opción de dominio propio.
+### Otros
 
-**T6. Secciones nuevas (opcionales).**
-- "Eventos y fiestas" (calendario anual del municipio).
-- "Cómo llegar paso a paso" desde Cúcuta, Pamplona y Bucaramanga.
-
-### 🟢 Futuro / opcional
-
-**T7. Tiempo de manejo dentro de la página** (sin abrir Google Maps), usando OpenRouteService (clave gratuita) en `calcDistance()`.
-
-**T8. Aportes de la comunidad/negocios** — definir un flujo sencillo (por ahora, el formulario; a futuro, un mini-panel).
+- `store.get/set` para `localStorage`, nunca directo (tiene respaldo en
+  memoria). Claves: `lab_favs`, `lab_route`, `lab_lang`, `lab_visit_day`.
+- Sin frameworks ni dependencias en el sitio publicado.
 
 ---
 
-## 7. Cómo correr y probar localmente
+## 4. Reglas duras, aprendidas a golpes
 
-- No hay build. Para que **geolocalización, mapa y clima** funcionen, servir por HTTP local o HTTPS (no abrir como `file://`):
-  ```bash
-  python3 -m http.server 8000
-  # luego abrir http://localhost:8000
-  ```
-- Probar: cambio de idioma ES/EN, favoritos, "Mi ruta", botón de distancia (pide permiso de ubicación), formulario (debe caer a WhatsApp si no hay `web3formsKey`).
+**Encabezado.** Los controles llevan `min-width:44px` por **WCAG 2.5.8** (área
+táctil mínima) y **no se encogen**. Cuando el encabezado no cuadre: medir
+(`ancho − padding − nav-tools − gap`) y sacar el espacio quitando o fusionando
+controles, **nunca recortando el nombre del sitio**. Así se resolvió: el icono
+del bus se oculta bajo 430px (su destino está en el menú) y el par ES/EN se
+volvió **un solo botón bajo 760px** ocultando el activo.
+
+**`styles.css` tiene reglas duplicadas.** `.nav-bus` se declara en cuatro
+sitios; una regla puesta antes de la línea ~1366 la pierde por orden de
+aparición. Lo que tenga que ganar seguro, **al final del archivo**.
+
+**La marca del encabezado.** Entre el nombre y «Volcanes de Dios» hay un
+`<br>`, y el alto de esas dos líneas lo manda el **interlineado heredado del
+padre**, no el de cada `span`. Por eso `.brand>span` es una columna flex con
+el `<br>` oculto.
+
+**El service worker sirve archivos viejos al probar en local.** Si un cambio
+en `app.js` o `styles.css` «no aparece», casi siempre es eso: hay que
+desregistrar el SW y borrar los cachés, o subir la versión.
+
+**Cloudflare no sirve peticiones `Range`** para archivos estáticos: no manda
+`Accept-Ranges` y responde 200 en vez de 206. Por eso el audio del himno se
+oye pero **no se puede adelantar**.
+
+**`gen_seo.js` con fichas sin fotos ni coordenadas:** omite `geo` e `image`
+del JSON-LD y las metas `geo.position`/`ICBM`, cambia «Cómo llegar» por
+«Preguntarle al guía local», oculta la sección de fotos, y la portada social
+de cada categoría toma **el primer lugar que sí tenga foto**.
+
+**En este PC:** los heredocs de bash se comen las barras invertidas — para
+scripts largos, usar la herramienta Write. Y `io.open(p,"w")` **trunca antes
+de escribir**: si el `.write()` falla, el archivo queda en cero bytes. Escribir
+a temporal y `os.replace`.
 
 ---
 
-## 8. Restricciones para Claude Code
+## 5. Principios del proyecto
 
-- **No** introducir frameworks, bundlers ni dependencias en el sitio en producción (sharp es solo para el script de build de imágenes, fuera del sitio).
-- **No** usar `localStorage` sin el patrón `store` con respaldo en memoria.
-- **No** romper el patrón `data-i18n` ni dejar texto en un solo idioma.
-- **No** quitar los respaldos (fallback) de mapa, clima y geolocalización.
-- **No** inventar datos ni coordenadas; respetar las banderas `verified`/`coordsApprox`.
-- Mantener accesibilidad y responsive en todo lo nuevo.
+1. **Datos de campo y de la comunidad, no de internet.** Lo que hay en línea
+   sobre Labateca está desactualizado o mal.
+2. **No inventar nada.** Ni coordenadas, ni horarios, ni nombres de lugares.
+   Si no se sabe, se marca como pendiente o se dice que no se sabe. La IA del
+   chat tiene esta regla en su prompt y una guarda dura que la obliga.
+3. **Si el dueño no firmó, no entra.** Los negocios están porque quisieron.
+   Ver `NO_AUTORIZADOS.md` (fuera de `files/`, no se publica) y las fotos
+   retenidas en `notas_rest/`.
+4. **Sin fotos de menores identificables** ni de terceros sin consentimiento.
+5. **Nunca publicar cédulas.** Están en los formatos de Ley 1581, no en el sitio.
+6. La salida cuando falta un dato es siempre **el guía local: 321 273 7469**.
 
 ---
 
-## 9. Datos verificados de Labateca (referencia)
+## 6. Pendiente de verdad
 
-- Significado: "volcanes de Dios" (lengua chitarera). Municipio desde 1930.
-- Altitud ~1.566 m s. n. m., clima templado ~20 °C. A ~113 km de Cúcuta (~3,5 h en bus).
-- Coordenadas del casco urbano: ~7.3167, -72.4833.
-- Atractivos: Templo Nuestra Señora de las Angustias (lienzo original de la Virgen + pila bautismal de piedra colonial), Parque Principal, Casa de la Cultura, Cascada La Lirgua, Laguna Negra, Páramo de Santurbán (>2.000 hectáreas del municipio).
-- Gastronomía típica: arequipe de café, quesillo de ahuyama, bocadillos, guarapo de frutas, hayacas de maíz.
-- *(Las coordenadas de cascadas, Laguna Negra y páramo están como aproximadas: verificar en campo.)*
+- **Dominio propio.** Sigue en `labateca-turismo.labatecacolombia.workers.dev`.
+  Al comprarlo: cambiar `SITIO` en `gen_seo.js`, `ALLOWED_ORIGINS` en los
+  workers, y volver a correr los generadores.
+- **Traducir el cuerpo** de `pueblo`, `viva`, `transporte`, `libro`,
+  `biblioteca` e historia. Es traducción real, no enrutado.
+- **Reseñas en cero.** El sistema funciona; falta pedirlas. Revisar `/moderar`
+  por si hay enviadas y sin aprobar.
+- **Hospedaje: solo 3**, y el hotel principal dijo que no. Es el hueco de
+  producto más grande de la guía.
+- **69 fotos antiguas retenidas** esperando firmas de Ley 1581.
+- El **título de `/lugares?lang=en`** sigue en español (no está en el `I18N`).
+- Confirmar el compositor del himno: `libro.html` dice **Luis Raúl** Vera
+  Bastos y «Vivencias en mi Pueblo» dice **Pedro Rafael**.
+
+---
+
+## 7. Datos del municipio (verificados)
+
+Labateca, «volcanes de Dios» en lengua chitarera. Poblada como **pueblo de
+indios el 19 de julio de 1623** por el oidor Juan de Villabona y Zubiaurre,
+juntando trece capitanías indígenas; municipio desde **1930**. **7.123
+habitantes** (DANE 2023), 253 km², **1.566 m s. n. m.**, ~20 °C, a 113 km de
+Cúcuta (~3,5 h). Más de 2.000 ha en el **Páramo de Santurbán**. Patrona:
+**Nuestra Señora de las Angustias**, aparecida en **Bochagá, vereda de
+Toledo**. Casco urbano: 7.2996816, −72.49452.
+
+Historia documentada por **Silvano Pabón Villamizar** (UIS). Las fuentes están
+transcritas en `LIBRO LABATECA/` y publicadas en `/historia/` y `/biblioteca`.
