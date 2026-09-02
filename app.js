@@ -1225,7 +1225,7 @@ function setLang(l){
   es.setAttribute("aria-pressed",l==="es"?"true":"false");
   en.setAttribute("aria-pressed",l==="en"?"true":"false");
   applyI18n(); renderFilters(); renderPlaces(); renderGallery(); renderDrawer(); renderRutas();
-  marcarSoloES();   // la marca «ES» se repinta: applyI18n la borra
+  marcarSoloES(); enrutarTransporte();   // la marca «ES» se repinta: applyI18n la borra
   wireGuia();   // el mensaje que va precargado en WhatsApp cambia de idioma
 }
 
@@ -2715,7 +2715,7 @@ function init(){
   try { updateBadges();  } catch(e) { console.warn('updateBadges',e);  }
   try { wireLinks();     } catch(e) { console.warn('wireLinks',e);     }
   try { initBuscador(); } catch(e) { console.warn('initBuscador',e); }
-  try { marcarSoloES();  } catch(e) { console.warn('marcarSoloES',e);  }
+  try { marcarSoloES(); enrutarTransporte();  } catch(e) { console.warn('marcarSoloES',e);  }
   try { initVideos();    } catch(e) { console.warn('initVideos',e);    }
   try { initYouTube();   } catch(e) { console.warn('initYouTube',e);   }
   try { loadVisitCounter(); } catch(e) { console.warn('loadVisitCounter',e); }
@@ -3086,8 +3086,22 @@ function bsTeclas(e){
    reescribe el innerHTML de todo lo que lleva data-i18n y se
    llevaría por delante la marca.
    ============================================================ */
-const SOLO_ES = ['/pueblo', '/viva', '/transporte', '/libro',
+/* /transporte YA NO va aqui: desde la v191 tiene gemela en ingles en
+   /en/transport, asi que en vez de marcarse con la etiqueta ES se
+   reescribe al idioma que toca (ver enrutarTransporte). */
+const SOLO_ES = ['/pueblo', '/viva', '/libro',
                  '/biblioteca', '/privacidad', '/terminos', '/proponer'];
+
+/* Manda los enlaces de transporte a la version del idioma activo. Se llama
+   junto a marcarSoloES() -despues de applyI18n(), que reescribe innerHTML-,
+   porque el enlace del menu movil lleva data-i18n y se repinta. */
+function enrutarTransporte(){
+  const destino = (lang === 'en') ? '/en/transport' : '/transporte';
+  document.querySelectorAll('a[href="/transporte"], a[href="/en/transport"]').forEach(a => {
+    a.setAttribute('href', destino);
+    if (lang === 'en') a.setAttribute('hreflang', 'en'); else a.removeAttribute('hreflang');
+  });
+}
 
 function marcarSoloES(){
   document.querySelectorAll('a[href]').forEach(a => {

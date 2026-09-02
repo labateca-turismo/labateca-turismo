@@ -8,7 +8,7 @@ Bilingüe español/inglés. Sin frameworks, sin bundler, sin paso de compilació
 > corregirlo**. Estuvo desactualizado desde junio hasta el 2 de septiembre de
 > 2026 y en ese lapso hizo más daño que bien.
 
-**Estado al 2 de septiembre de 2026 (v188):** 111 lugares · 566 fotos ·
+**Estado al 2 de septiembre de 2026 (v191):** 111 lugares · 566 fotos ·
 6 rutas temáticas · 281 páginas HTML · 275 URLs en el sitemap.
 
 ---
@@ -145,9 +145,13 @@ Los textos de interfaz llevan `data-i18n` (o `-ph` / `-aria`) y viven en
 ### Qué es bilingüe de verdad y qué no
 
 - **Sí:** `index.html` (159 claves) y `lugares.html` (60). Con `?lang=en`
-  salen enteras en inglés. Las 111 fichas y las 6 categorías tienen su gemela
-  en `/en/`.
-- **No:** `pueblo`, `viva`, `transporte`, `libro`, `biblioteca`, las legales y
+  salen enteras en inglés. Las 111 fichas, las 6 categorías y las 6 rutas
+  tienen su gemela en `/en/`. **`/transporte` tiene gemela traducida a mano
+  en `/en/transport`** (v191): es prosa, no interfaz, así que no se resolvió
+  con `data-i18n` sino con una página aparte, igual que las fichas. Las dos se
+  declaran mutuamente con `hreflang` y `enrutarTransporte()` en `app.js`
+  reescribe los enlaces al idioma activo.
+- **No:** `pueblo`, `viva`, `libro`, `biblioteca`, las legales y
   16 de las 17 de historia. Tienen el armazón traducido y **el cuerpo en
   español**. Se enlazan igual, pero marcados con la etiqueta `ES` y
   `hreflang="es"` (`marcarSoloES()` en `app.js`, `marcaES()` en `gen_seo.js`).
@@ -257,8 +261,16 @@ a temporal y `os.replace`.
 - **Levantar el páramo en campo.** La ruta existe como tarjeta «en
   preparación» y remite al guía. Laguna Negra y La Ovejera siguen sin
   coordenadas.
-- **Traducir el cuerpo** de `pueblo`, `viva`, `transporte`, `libro`,
-  `biblioteca` e historia. Es traducción real, no enrutado.
+- **Traducir el cuerpo** de `pueblo`, `viva`, `libro`, `biblioteca` e
+  historia. Es traducción real, no enrutado. `/transporte` ya está hecha
+  (v191) y sirve de molde: página gemela bajo `/en/`, `hreflang` en las dos,
+  su entrada en el sitemap de `gen_seo.js`, y salir de `SOLO_ES`.
+- **`guias.json` y `conductores.json` están vacíos.** Las secciones existen y
+  se encienden solas cuando el archivo tenga entradas. Para los guías falta
+  el **nombre** del guía local (en el proyecto solo está el teléfono) y su
+  consentimiento; los conductores los está levantando José.
+- **El formulario no llega por correo:** `web3formsKey` sigue en
+  `"TU_ACCESS_KEY"`, así que `app.js` cae al respaldo de WhatsApp.
 - **Reseñas en cero.** El sistema funciona; falta pedirlas. Revisar `/moderar`
   por si hay enviadas y sin aprobar.
 - **Hospedaje: solo 3**, y el hotel principal dijo que no. Es el hueco de

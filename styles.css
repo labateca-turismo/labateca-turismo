@@ -2400,3 +2400,19 @@ footer .solo-es{background:transparent;border-color:rgba(255,255,255,.28);color:
 .btn-qr.sec{background:transparent;color:var(--forest,#16352a);
   border:1px solid var(--line,#e2d8c4);margin-left:8px}
 @media(max-width:560px){.btn-qr.sec{margin:10px 0 0}}
+
+/* ── Cambio de idioma en las páginas estáticas ───────────────
+   /transporte y /en/transport no cargan app.js, así que no tienen el
+   par de botones ES/EN de la portada: llevan un enlace simple a su
+   gemela. Sobrio, para que el botón dorado del bus siga mandando.
+   Al final del archivo, como todo lo que tiene que ganar por orden. */
+.nav-lang{display:inline-flex;align-items:center;padding:8px 13px;border-radius:999px;
+  border:1px solid var(--line);background:transparent;color:var(--forest);
+  font-weight:700;font-size:.85rem;line-height:1;white-space:nowrap;text-decoration:none;
+  min-width:44px;min-height:44px;justify-content:center;   /* WCAG 2.5.8 */
+  transition:background .2s,border-color .2s}
+.nav-lang:hover{background:var(--cream);border-color:var(--forest-3)}
+.nav-lang:focus-visible{outline:3px solid var(--forest);outline-offset:2px}
+/* Bajo 430px manda el nombre del sitio: el idioma se alcanza igual desde
+   la gemela, y el encabezado no da para tres controles. */
+@media(max-width:430px){ .nav-lang{display:none} }
