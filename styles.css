@@ -2186,8 +2186,8 @@ a.vquote:hover .q-cta{color:var(--gold-soft)}
    telefonos en circulacion. */
 @media(max-width:340px){
   .brand{gap:6px}
-  .brand-mark{width:30px;height:30px}
-  .brand-name{font-size:.92rem}
+  .brand-mark{width:28px;height:28px}
+  .brand-name{font-size:.88rem}
 }
 
 /* ============================================================
@@ -2297,3 +2297,21 @@ a.vquote:hover .q-cta{color:var(--gold-soft)}
 /* En el PC el menu es horizontal y la lupa ya esta a la vista: ahi
    «Buscar» dentro del menu sobra. */
 @media(min-width:761px){ .bs-menu{display:none} }
+
+/* ============================================================
+   «VOLCANES DE DIOS» VUELVE AL ENCABEZADO EN MOVIL
+   ------------------------------------------------------------
+   Estaba oculto desde antes del buscador: era la forma vieja de
+   ganar sitio cuando el encabezado no cabia. Al fusionar el
+   selector de idioma en un solo boton se liberaron 52px y ya hay
+   espacio, pero no para el tamano original: a 375px quedan 105px
+   libres y el subtitulo mide exactamente 105. Se muestra algo mas
+   pequeno y con menos espaciado entre letras, que entra con
+   holgura real.
+
+   Por debajo de 360px sigue oculto: ahi no cabe comodo ni el
+   nombre solo.
+   ============================================================ */
+@media(min-width:360px) and (max-width:760px){
+  .brand-sub{display:block;font-size:.5rem;letter-spacing:.1em}
+}
