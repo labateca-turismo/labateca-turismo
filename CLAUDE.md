@@ -8,9 +8,8 @@ Bilingüe español/inglés. Sin frameworks, sin bundler, sin paso de compilació
 > corregirlo**. Estuvo desactualizado desde junio hasta el 2 de septiembre de
 > 2026 y en ese lapso hizo más daño que bien.
 
-**Estado al 2 de septiembre de 2026 (v184):** 111 lugares · 566 fotos ·
-6 rutas temáticas · 281 páginas HTML · 275 URLs en el sitemap ·
-`app.js` 3.231 líneas · `styles.css` 2.375 líneas.
+**Estado al 2 de septiembre de 2026 (v188):** 111 lugares · 566 fotos ·
+6 rutas temáticas · 281 páginas HTML · 275 URLs en el sitemap.
 
 ---
 
@@ -77,6 +76,9 @@ labateca proyect/
 - **`check_rutas.js`** — valida `rutas.json`. **Correrlo ANTES de `gen_seo.js`.**
 - `gen_pueblo.js`, `gen_libro.js`, `gen_biblioteca.js`, `gen_antiguas.js`,
   `gen_anexos.js` — cada uno arma su página.
+- **`gen_qr.js`** — el código QR del sitio (SVG y PNG) y su sección en la
+  portada. Usa `files/qr-encoder.js` (codificador propio, sin dependencias,
+  que también sirve a `/qr`) y `png.js` (escribe PNG con el zlib de Node).
 - `poner_beacon.py` — el beacon de analítica en las páginas a mano.
 - `add_loteNN` / `bake_loteNN` / `subir_*` — carga de lotes de lugares y fotos.
 
@@ -185,6 +187,20 @@ Peor: una ficha **pendiente** entra sin `lat`, así que la URL salía
 por eso el contador de la tarjeta cuenta paradas **resueltas**, no las que
 declara el JSON. **Correr `node check_rutas.js` antes de cada despliegue.**
 
+**El QR impreso ata el sitio a esta dirección.** Un QR no caduca: es la
+dirección escrita en cuadritos. Lo que muere es la dirección. Hay carteles
+pegados en el pueblo con `labateca-turismo.labatecacolombia.workers.dev`
+dentro, así que **esa dirección no se puede borrar nunca**. Si algún día hay
+dominio propio, el worker viejo se deja vivo redirigiendo al nuevo.
+
+**La CSP solo deja scripts de `'self'` y de Cloudflare.** `/qr` cargaba la
+librería de QR desde cdnjs y por eso nunca pintó un solo código en
+producción. Nada de CDN: lo que haga falta, servido desde el sitio.
+
+**El `<title>` vive en el `<head>`,** así que el barrido de `[data-i18n]` no
+lo alcanza. Cada página bilingüe declara `data-title-key` en su `<body>` y
+`applyI18n()` lo cambia. Sin eso, `?lang=en` dejaba la pestaña en español.
+
 **El service worker sirve archivos viejos al probar en local.** Si un cambio
 en `app.js` o `styles.css` «no aparece», casi siempre es eso: hay que
 desregistrar el SW y borrar los cachés, o subir la versión.
@@ -242,9 +258,9 @@ a temporal y `os.replace`.
 - **Hospedaje: solo 3**, y el hotel principal dijo que no. Es el hueco de
   producto más grande de la guía.
 - **69 fotos antiguas retenidas** esperando firmas de Ley 1581.
-- El **título de `/lugares?lang=en`** sigue en español (no está en el `I18N`).
-- Confirmar el compositor del himno: `libro.html` dice **Luis Raúl** Vera
-  Bastos y «Vivencias en mi Pueblo» dice **Pedro Rafael**.
+- **Regenerar el API Secret de Cloudinary** (quedó expuesto una vez).
+  Es autoservicio: consola → Settings → API Keys → *Generate New Access Key*.
+  No rompe nada: el sitio sube fotos con un preset sin firma.
 
 ---
 
@@ -257,6 +273,14 @@ habitantes** (DANE 2023), 253 km², **1.566 m s. n. m.**, ~20 °C, a 113 km de
 Cúcuta (~3,5 h). Más de 2.000 ha en el **Páramo de Santurbán**. Patrona:
 **Nuestra Señora de las Angustias**, aparecida en **Bochagá, vereda de
 Toledo**. Casco urbano: 7.2996816, −72.49452.
+
+**Himno:** letra de Adolfo León Capacho Peñaloza, música de **Pedro Rafael
+Vera Bastos** (confirmado por José, sept. 2026; coincide con «Vivencias en mi
+Pueblo», que lo imprime con sus créditos al pie), interpretación del profesor
+Iván Delgado, estrenado el 21 de noviembre de 1997. El libro atribuía la
+música a *Luis Raúl* Vera Bastos, el número 17 de la promoción de 1968: esa
+anotación se quitó del manuscrito v24, el nombre del graduado se dejó como lo
+trae el mosaico.
 
 Historia documentada por **Silvano Pabón Villamizar** (UIS). Las fuentes están
 transcritas en `LIBRO LABATECA/` y publicadas en `/historia/` y `/biblioteca`.

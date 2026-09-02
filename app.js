@@ -287,6 +287,8 @@ const I18N = {
     rutas_sub:"Elige una ruta y se cargará automáticamente en tu planificador. Puedes añadir o quitar lugares a tu gusto.",
     rutas_btn:"Usar esta ruta", rutas_btn_active:"✓ Ruta cargada",
     rutas_lugares:"lugares", rutas_duracion:"Duración", rutas_dificultad:"Dificultad",
+    head_home:"Labateca · Volcanes de Dios | Guía turística de Norte de Santander",
+    head_lugares:"Lugares para descubrir · Labateca | Volcanes de Dios",
     qr_eyebrow:"Para compartir", qr_title:"Llévate la guía",
     qr_sub:"Apunta la cámara del celular al código y se abre esta misma guía. Sirve para pasársela a alguien sin tener que dictarle la dirección.",
     qr_bajar:"Descargar para imprimir",
@@ -453,6 +455,8 @@ const I18N = {
     rutas_sub:"Pick a route and it loads automatically into your planner. Add or remove places as you wish.",
     rutas_btn:"Use this route", rutas_btn_active:"✓ Route loaded",
     rutas_lugares:"places", rutas_duracion:"Duration", rutas_dificultad:"Difficulty",
+    head_home:"Labateca · Volcanes de Dios | Travel guide to Norte de Santander, Colombia",
+    head_lugares:"Places to discover · Labateca | Volcanes de Dios",
     qr_eyebrow:"Share it", qr_title:"Take the guide with you",
     qr_sub:"Point your phone camera at the code and this same guide opens. Handy for passing it on without dictating the address.",
     qr_bajar:"Download for printing",
@@ -1196,6 +1200,11 @@ function applyRoute(rutaId) {
    ============================================================ */
 function applyI18n(){
   document.documentElement.lang=lang;
+  /* El <title> vive en el <head>, asi que el barrido de [data-i18n] no lo
+     alcanza: con ?lang=en la pestana seguia diciendo "Lugares para
+     descubrir". Cada pagina bilingue declara su clave en el <body>. */
+  const kt=document.body&&document.body.getAttribute("data-title-key");
+  if(kt&&I18N[lang][kt]) document.title=I18N[lang][kt];
   document.querySelectorAll("[data-i18n]").forEach(el=>{
     const k=el.getAttribute("data-i18n");
     if(I18N[lang][k]!==undefined) el.innerHTML=I18N[lang][k];
