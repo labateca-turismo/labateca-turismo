@@ -141,6 +141,88 @@ footer.pie .pie-creador strong{font-weight:600}
   dl.datos{grid-template-columns:1fr;gap:4px 0;padding:18px}
   dl.datos dt{margin-top:12px}
   dl.datos dt:first-child{margin-top:0}
+}
+/* ── Rutas ───────────────────────────────────────────────────
+   Bloque "esta ficha es parada de una ruta" y paginas de ruta. */
+.en-ruta{margin:34px 0 0;padding:20px 22px;border:1px solid var(--line);
+ border-left:4px solid var(--rc,var(--forest-3));border-radius:var(--r);background:var(--rcs,var(--paper))}
+.en-ruta+.en-ruta{margin-top:14px}
+.en-ruta .er-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.en-ruta .er-ico{font-size:22px;line-height:1}
+.en-ruta .er-tit{font-weight:700;color:var(--forest);text-decoration:none;font-size:17px}
+.en-ruta .er-tit:hover{text-decoration:underline}
+.en-ruta .er-pos{margin-left:auto;font-size:13px;font-weight:700;color:var(--rc,var(--forest-3));
+ background:#fff;border:1px solid var(--line);border-radius:99px;padding:3px 11px;white-space:nowrap}
+.en-ruta .er-guion{margin:0 0 12px;font-size:15.5px;line-height:1.6;color:var(--ink)}
+.en-ruta .er-nav{display:flex;gap:10px;flex-wrap:wrap;font-size:14px}
+.en-ruta .er-nav a{display:inline-block;padding:7px 13px;background:#fff;border:1px solid var(--line);
+ border-radius:99px;text-decoration:none;color:var(--ink);font-weight:600}
+.en-ruta .er-nav a:hover{border-color:var(--rc,var(--forest-3))}
+.en-ruta .er-nav .er-todo{background:var(--rc,var(--forest-3));color:#fff;border-color:transparent}
+/* Cabecera de la pagina de ruta */
+.ruta-hero{margin:8px 0 30px;padding:26px;border-radius:var(--r);
+ background:var(--rcs,var(--cream));border:1px solid var(--line);border-top:5px solid var(--rc,var(--forest-3))}
+.ruta-hero .rh-ico{font-size:38px;line-height:1}
+.ruta-hero h1{margin:8px 0 6px}
+.ruta-hero .rh-idea{margin:0 0 14px;font-family:Fraunces,Georgia,serif;font-size:20px;
+ line-height:1.4;color:var(--rc,var(--forest-3))}
+.ruta-hero .rh-desc{margin:0;font-size:17px;line-height:1.65;color:var(--ink)}
+.rh-datos{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.rh-datos li{background:#fff;border:1px solid var(--line);border-radius:99px;
+ padding:6px 13px;font-size:14px;font-weight:600;color:var(--ink)}
+.rh-datos li b{font-weight:800;color:var(--ink-mut);font-size:12px;text-transform:uppercase;
+ letter-spacing:.06em;margin-right:6px}
+.tema{margin:26px 0;padding:20px 22px;background:var(--forest);color:var(--cream);
+ border-radius:var(--r)}
+.tema b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.09em;
+ opacity:.72;margin-bottom:7px}
+.tema p{margin:0;font-size:18px;line-height:1.55;font-family:Fraunces,Georgia,serif}
+/* Las paradas, en orden */
+ol.paradas{list-style:none;margin:0;padding:0;counter-reset:par}
+ol.paradas>li{position:relative;padding:0 0 26px 54px;counter-increment:par}
+ol.paradas>li::before{content:counter(par);position:absolute;left:0;top:0;
+ width:34px;height:34px;border-radius:50%;background:var(--rc,var(--forest-3));color:#fff;
+ display:grid;place-items:center;font-weight:800;font-size:15px}
+/* La linea que une las paradas: hace que se lea como recorrido y no
+   como lista suelta. La ultima no la lleva. */
+ol.paradas>li::after{content:"";position:absolute;left:16px;top:38px;bottom:6px;
+ width:2px;background:var(--line)}
+ol.paradas>li:last-child{padding-bottom:0}
+ol.paradas>li:last-child::after{display:none}
+ol.paradas h3{margin:4px 0 4px;font-size:20px}
+ol.paradas h3 a{color:var(--forest);text-decoration:none}
+ol.paradas h3 a:hover{text-decoration:underline}
+.par-rol{display:inline-block;font-size:11.5px;font-weight:800;text-transform:uppercase;
+ letter-spacing:.07em;padding:3px 9px;border-radius:99px;margin-bottom:2px}
+.par-rol.focal{background:var(--rc,var(--forest-3));color:#fff}
+.par-rol.principal{background:#fff;border:1px solid var(--line);color:var(--ink-mut)}
+.par-rol.complementario{background:transparent;border:1px dashed var(--line);color:var(--ink-mut)}
+.par-guion{margin:6px 0 10px;font-size:16px;line-height:1.65}
+.par-meta{margin:0 0 8px;font-size:14px;color:var(--ink-mut)}
+.par-foto{border-radius:14px;margin:0 0 10px;width:100%;height:auto;display:block}
+/* Listas de apoyo: lecturas, donde dormir, fuentes */
+.ruta-apoyo{margin:30px 0 0;padding:20px 22px;background:var(--paper);
+ border:1px solid var(--line);border-radius:var(--r)}
+.ruta-apoyo h2{margin:0 0 10px;font-size:19px}
+.ruta-apoyo ul{margin:0;padding-left:20px}
+.ruta-apoyo li{margin:5px 0;font-size:15.5px}
+.ruta-apoyo li span{color:var(--ink-mut);font-size:14px}
+/* Ruta en preparacion: sin paradas, salida al guia local. */
+.ruta-prep{margin:26px 0;padding:22px;border:1px dashed var(--line);
+ border-radius:var(--r);background:var(--paper)}
+.ruta-prep p{margin:0 0 14px;font-size:16.5px;line-height:1.65}
+.otras-rutas{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ margin:0;padding:0;list-style:none}
+.otras-rutas a{display:block;padding:14px 16px;background:#fff;border:1px solid var(--line);
+ border-radius:var(--r);text-decoration:none;font-weight:600;color:var(--ink)}
+.otras-rutas a:hover{border-color:var(--forest-3)}
+.otras-rutas a span{display:block;font-weight:400;font-size:14px;color:var(--ink-mut);margin-top:3px}
+@media(max-width:520px){
+  .ruta-hero{padding:20px}
+  .ruta-hero .rh-idea{font-size:18px}
+  ol.paradas>li{padding-left:44px}
+  ol.paradas>li::before{width:28px;height:28px;font-size:13px}
+  ol.paradas>li::after{left:13px;top:32px}
 }</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristAttraction","@id":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/biblioteca-publica#lugar","name":"Biblioteca Pública Municipal Hermana María Isaura Cardona Zapata","description":"La biblioteca del pueblo cumple 42 años. Nació por el Acuerdo Municipal 007 del 19 de noviembre de 1983, adscrita a la casa de la cultura, con una donación de 1.500 libros del Ministerio de Educación Nacional. En 2004, por el Acuerdo 019, tomó el nombre de la hermana María Isaura Cardona Zapata, en agradecimiento a las religiosas del Instituto Misionero de Santa Teresita, que estuvieron 58 años educando a la niñez y la juventud labatequense. Anduvo por medio pueblo antes de tener casa propia: primero en el primer piso del edificio municipal, luego en la parte baja del parque —la antigua escuela de niños—, después en la planta vieja del colegio sobre la carrera 3.ª. En 2005 se presentó un proyecto a la Embajada del Japón, fue aprobado, y el 17 de septiembre de 2006 se inauguró la sede actual en el barrio Quinta Real, contigua a la emisora comunitaria y al santuario. Hoy pertenece a la Red Nacional y Departamental de Bibliotecas Públicas, se rige por la Ley 1379 de 2010 y presta los diez servicios bibliotecarios básicos, incluida la extensión rural con los «morrales viajeros». Las fotografías de esta ficha se publican con autorización del Municipio de Labateca (Resolución 322 del 25 de agosto de 2026).","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/biblioteca-publica","address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"},"image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/biblioteca-publica-01","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/biblioteca-publica-02","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/biblioteca-publica-03","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/biblioteca-publica-04","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/biblioteca-publica-05","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/biblioteca-publica-06"],"geo":{"@type":"GeoCoordinates","latitude":7.299768,"longitude":-72.493641},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.299768,-72.493641","email":"secretariadegobierno@labateca-nortedesantander.gov.co"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Qué ver en Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/categoria/que-ver"},{"@type":"ListItem","position":4,"name":"Biblioteca Pública Municipal Hermana María Isaura Cardona Zapata","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/biblioteca-publica"}]}</script>
@@ -190,6 +272,18 @@ footer.pie .pie-creador strong{font-weight:600}
 
     <p class="tip"><b>Consejo:</b> Es un lugar de encuentro, no solo un depósito de libros: aquí funciona la Escuela de Formación Artística y Cultural en Literatura, Escritura y Oralidad, creada por el Acuerdo 008 de 2016, y de aquí salen tres programas de la emisora Morena FM Stéreo —el Informativo Cultural los lunes, Pildoritas Literarias los martes y Fábrica de Cuentos los jueves—. La biblioteca apoyó la cartilla «Labateca, rompe el silencio: fragmentos de memoria», en homenaje a las víctimas del municipio, y la cartilla «Redactando · Volcanes de Dios» de la Universidad de Pamplona, que puedes leer completa en la biblioteca digital de este sitio.</p>
     
+
+  <aside class="en-ruta" style="--rc:#a4562f;--rcs:#f5e4db">
+    <div class="er-top"><span class="er-ico">🪶</span>
+      <a class="er-tit" href="/ruta/origen.html">El pueblo de indios de 1623</a>
+      <span class="er-pos">Parada 3 de 4 · Si te queda tiempo</span></div>
+    <p class="er-guion">Nació en 1983 con 1.500 libros donados por el Ministerio de Educación y lleva el nombre de la hermana María Isaura Cardona Zapata, en agradecimiento a las religiosas que educaron al pueblo durante 58 años. Es el lugar donde la memoria oral del municipio se volvió papel.</p>
+    <div class="er-nav">
+      <a href="/lugar/templo">← Parroquia Nuestra Señora de las Angustias</a>
+      <a href="/lugar/tumba-cacique-bateca">Tumba del Cacique Bateca →</a>
+      <a class="er-todo" href="/ruta/origen.html">Ver la ruta completa</a>
+    </div>
+  </aside>
 
 
     <h2>Fotos</h2>

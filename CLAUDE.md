@@ -8,9 +8,9 @@ Bilingüe español/inglés. Sin frameworks, sin bundler, sin paso de compilació
 > corregirlo**. Estuvo desactualizado desde junio hasta el 2 de septiembre de
 > 2026 y en ese lapso hizo más daño que bien.
 
-**Estado al 2 de septiembre de 2026 (v183):** 111 lugares · 566 fotos ·
-269 páginas HTML · 263 URLs en el sitemap · `app.js` 3.160 líneas ·
-`styles.css` 2.375 líneas.
+**Estado al 2 de septiembre de 2026 (v184):** 111 lugares · 566 fotos ·
+6 rutas temáticas · 281 páginas HTML · 275 URLs en el sitemap ·
+`app.js` 3.231 líneas · `styles.css` 2.375 líneas.
 
 ---
 
@@ -59,7 +59,10 @@ labateca proyect/
 │  ├─ en/place/        ← 111 fichas EN   │ GENERADAS: no editar a mano,
 │  ├─ categoria/       ← 6 categorías ES │ se reescriben en cada corrida
 │  ├─ en/category/     ← 6 categorías EN ┘
+│  ├─ ruta/            ← 6 páginas de ruta ES  ┐ GENERADAS
+│  ├─ en/route/        ← 6 páginas de ruta EN  ┘
 │  ├─ data/places.json ← FUENTE ÚNICA de los lugares
+│  ├─ data/rutas.json  ← FUENTE ÚNICA de las rutas
 │  ├─ media/           ← el MP3 del himno
 │  ├─ app.js, styles.css, sw.js
 │  └─ worker-*.js      ← no se publican (.assetsignore)
@@ -68,9 +71,10 @@ labateca proyect/
 
 **Generadores** (se corren desde la carpeta del proyecto, no desde `files/`):
 
-- **`gen_seo.js`** — el importante. De `places.json` escribe las 234 páginas
-  de lugar y categoría en los dos idiomas, el `sitemap.xml` y el directorio
-  de `lugares.html`. Se puede correr las veces que sea.
+- **`gen_seo.js`** — el importante. De `places.json` y `rutas.json` escribe
+  las 246 páginas de lugar, categoría y ruta en los dos idiomas, el
+  `sitemap.xml` y el directorio de `lugares.html`. Se puede correr siempre.
+- **`check_rutas.js`** — valida `rutas.json`. **Correrlo ANTES de `gen_seo.js`.**
 - `gen_pueblo.js`, `gen_libro.js`, `gen_biblioteca.js`, `gen_antiguas.js`,
   `gen_anexos.js` — cada uno arma su página.
 - `poner_beacon.py` — el beacon de analítica en las páginas a mano.
@@ -98,6 +102,34 @@ Opcionales: `telFijo`, `correo`, `track`, `trailhead`, `wikiloc`, `fotosAviso`.
   la coordenada del pueblo mandaría a la gente al parque a buscar una cascada.
   El código ya lo soporta en los dos lados. Hoy hay 9.
 - **`verified: false`** pinta la etiqueta amarilla «por verificar».
+
+### `data/rutas.json`
+
+Sigue la metodología de guiones temáticos de Fontur/MinCIT: una ruta no es
+una lista de ids, es un producto con **idea fuerza**, **tema central** y
+**paradas ordenadas con un rol**.
+
+```json
+{ "id":"fe", "estado":"activa", "modo":"autoguiada",
+  "icono":"🕊️", "color":"#3f5b8f", "colorSoft":"#e3e9f4",
+  "nombre":{}, "ideaFuerza":{}, "desc":{}, "temaCentral":{},
+  "duracion":{}, "dificultad":{}, "inicio":{}, "cuando":{}, "recomendacion":{},
+  "paradas":[ {"id":"templo","rol":"focal","guion":{"es":"","en":""}} ],
+  "lecturas":["virgen-angustias"], "alojamiento":["la-pena"],
+  "paginas":[{"url":"/historia/…","titulo":{}}] }
+```
+
+Roles: `focal` · `principal` · `complementario`. `estado`: `activa` o
+`preparacion` (sin paradas, remite al guía local).
+
+Las tres listas de apoyo **no son paradas** y por eso van aparte:
+
+- **`lecturas`** — fichas que se leen, no puntos que se visitan. `templo` y
+  `virgen-angustias` comparten coordenadas: si la patrona fuera parada, la
+  ruta mandaría a Google Maps el mismo punto dos veces.
+- **`alojamiento`** — dónde dormir. La Peña es cabaña con vista al cañón,
+  no una parada del recorrido.
+- **`paginas`** — fuentes históricas del propio sitio.
 
 ### Traducción
 
@@ -144,6 +176,15 @@ aparición. Lo que tenga que ganar seguro, **al final del archivo**.
 padre**, no el de cada `span`. Por eso `.brand>span` es una columna flex con
 el `<br>` oculto.
 
+**Las rutas se pudren solas.** En junio `rutas.json` citaba 13 lugares; en
+septiembre 9 ya no existían y nadie se dio cuenta, porque `renderDrawer`
+hacía `.filter(Boolean)` y los huérfanos desaparecían callados: la tarjeta
+prometía 4 paradas, el cajón entregaba 2 y la Ruta del Café entregaba 0.
+Peor: una ficha **pendiente** entra sin `lat`, así que la URL salía
+`…/dir/7.29,-72.49/undefined,undefined`. Por eso existe `check_rutas.js` y
+por eso el contador de la tarjeta cuenta paradas **resueltas**, no las que
+declara el JSON. **Correr `node check_rutas.js` antes de cada despliegue.**
+
 **El service worker sirve archivos viejos al probar en local.** Si un cambio
 en `app.js` o `styles.css` «no aparece», casi siempre es eso: hay que
 desregistrar el SW y borrar los cachés, o subir la versión.
@@ -185,6 +226,15 @@ a temporal y `os.replace`.
 - **Dominio propio.** Sigue en `labateca-turismo.labatecacolombia.workers.dev`.
   Al comprarlo: cambiar `SITIO` en `gen_seo.js`, `ALLOWED_ORIGINS` en los
   workers, y volver a correr los generadores.
+- **Ruta del Café.** La cadena está completa y es caminable —Comité de
+  Cafeteros, Cooperacafé (pesan, trillan y pagan de contado), Café BTK
+  (tostión y empaque) y los cafés que la sirven—, y los horarios dejan una
+  sola ventana: **sábado en la mañana**. Falta la ficha de una **finca
+  cafetera**; sin ella la ruta no se publica. Es la ficha con más retorno
+  del proyecto.
+- **Levantar el páramo en campo.** La ruta existe como tarjeta «en
+  preparación» y remite al guía. Laguna Negra y La Ovejera siguen sin
+  coordenadas.
 - **Traducir el cuerpo** de `pueblo`, `viva`, `transporte`, `libro`,
   `biblioteca` e historia. Es traducción real, no enrutado.
 - **Reseñas en cero.** El sistema funciona; falta pedirlas. Revisar `/moderar`

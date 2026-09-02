@@ -287,6 +287,16 @@ const I18N = {
     rutas_sub:"Elige una ruta y se cargará automáticamente en tu planificador. Puedes añadir o quitar lugares a tu gusto.",
     rutas_btn:"Usar esta ruta", rutas_btn_active:"✓ Ruta cargada",
     rutas_lugares:"lugares", rutas_duracion:"Duración", rutas_dificultad:"Dificultad",
+    rutas_parada:"parada", rutas_paradas:"paradas", rutas_ver:"Ver la ruta completa →",
+    rutas_prep:"En preparación", rutas_btn_guia:"Preguntarle al guía",
+    rutas_idea:"La idea", rutas_tema:"Lo que te llevas", rutas_cuando:"Cuándo ir",
+    rutas_modo:"Cómo se hace", rutas_paradas_t:"Las paradas, en orden",
+    rutas_lecturas:"Para leer antes de ir", rutas_dormir:"Dónde dormir en esta ruta",
+    rutas_fuentes:"Fuentes en este sitio",
+    rol_focal:"Parada principal", rol_principal:"Parada", rol_complementario:"Si te queda tiempo",
+    ruta_pertenece:"Esta ficha es parte de una ruta", ruta_parada_n:"Parada",
+    ruta_de:"de", ruta_anterior:"Anterior", ruta_siguiente:"Siguiente",
+    ruta_lectura_de:"Lectura de la ruta", ruta_dormir_de:"Alojamiento de la ruta",
     nav_routes:"Rutas",
     map_eyebrow:"Ubícate", map_title:"Todo Labateca en un mapa", map_sub:"Explora cada lugar, mira las distancias y abre la navegación con un toque.",
     map_tab_real:"Mapa real", map_tab_ilustrado:"Mapa ilustrado",
@@ -438,6 +448,16 @@ const I18N = {
     rutas_sub:"Pick a route and it loads automatically into your planner. Add or remove places as you wish.",
     rutas_btn:"Use this route", rutas_btn_active:"✓ Route loaded",
     rutas_lugares:"places", rutas_duracion:"Duration", rutas_dificultad:"Difficulty",
+    rutas_parada:"stop", rutas_paradas:"stops", rutas_ver:"See the full route →",
+    rutas_prep:"In preparation", rutas_btn_guia:"Ask the guide",
+    rutas_idea:"The idea", rutas_tema:"What you take away", rutas_cuando:"When to go",
+    rutas_modo:"How it works", rutas_paradas_t:"The stops, in order",
+    rutas_lecturas:"Read before you go", rutas_dormir:"Where to sleep on this route",
+    rutas_fuentes:"Sources on this site",
+    rol_focal:"Main stop", rol_principal:"Stop", rol_complementario:"If you have time",
+    ruta_pertenece:"This place is part of a route", ruta_parada_n:"Stop",
+    ruta_de:"of", ruta_anterior:"Previous", ruta_siguiente:"Next",
+    ruta_lectura_de:"Reading for the route", ruta_dormir_de:"Lodging on the route",
     nav_routes:"Routes",
     map_eyebrow:"Find your way", map_title:"All of Labateca on one map", map_sub:"Explore every place, check distances and launch navigation with one tap.",
     map_tab_real:"Real map", map_tab_ilustrado:"Illustrated map",
@@ -761,8 +781,25 @@ function renderDrawer(){
       </button>
     </div>`;
   }).join("");
-  // ruta de Google Maps: del pueblo a través de cada parada (ignora ids huérfanos)
-  const stops=route.map(id=>PLACES.find(x=>x.id===id)).filter(Boolean).map(p=>`${p.lat},${p.lng}`);
+  /* Ruta de Google Maps: del pueblo a través de cada parada.
+     Ignora ids huérfanos Y lugares sin coordenadas. Lo segundo no estaba
+     y era un fallo vivo: las fichas pendientes entran sin lat/lng, así que
+     la URL salía ".../dir/7.29,-72.49/undefined,undefined". Si no queda
+     ninguna parada con coordenadas, el botón se apaga en vez de mandar a
+     una URL rota. */
+  const puntos=[`${CONFIG.townCoords.lat},${CONFIG.townCoords.lng}`]
+    .concat(route.map(id=>PLACES.find(x=>x.id===id))
+                 .filter(p=>p&&p.lat!=null&&p.lng!=null)
+                 .map(p=>`${p.lat},${p.lng}`));
+  /* Quitar puntos repetidos seguidos: el Parque Principal tiene las mismas
+     coordenadas que el punto de partida, así que la Ruta del pueblo de
+     indios mandaba a Google el mismo punto dos veces y le pintaba un primer
+     tramo de cero metros. */
+  const stops=puntos.filter((p,i)=>i===0||p!==puntos[i-1]).slice(1);
+  if(!stops.length){
+    btn.style.opacity=".5"; btn.style.pointerEvents="none"; btn.removeAttribute("href");
+    return;
+  }
   const dir=`https://www.google.com/maps/dir/${CONFIG.townCoords.lat},${CONFIG.townCoords.lng}/${stops.join("/")}`;
   btn.style.opacity="1"; btn.style.pointerEvents="auto"; btn.setAttribute("href",dir);
 }
@@ -1044,30 +1081,65 @@ async function loadRutas() {
   }
 }
 
+/* Ids de las paradas de una ruta, en orden y solo las que de verdad
+   existen y tienen coordenadas. Es la única fuente para el contador de la
+   tarjeta y para el planificador: antes la tarjeta contaba r.lugares.length
+   y el cajón recibía otra cosa, así que prometía 4 paradas y entregaba 2. */
+function paradasDe(r) {
+  return (r.paradas || [])
+    .map(p => PLACES.find(x => x.id === p.id))
+    .filter(p => p && !p.pendiente && p.lat != null && p.lng != null)
+    .map(p => p.id);
+}
+
+/* URL de la página propia de la ruta (la que indexa Google). */
+function urlRuta(id) {
+  return lang === 'es' ? `/ruta/${id}.html` : `/en/route/${id}.html`;
+}
+
 function renderRutas() {
   const grid = document.getElementById('rutasGrid');
   if (!grid || !RUTAS.length) return;
 
   grid.innerHTML = RUTAS.map((r, i) => {
     const nombre   = escHtml(r.nombre[lang]      || r.nombre.es);
+    const idea     = escHtml((r.ideaFuerza||{})[lang] || (r.ideaFuerza||{}).es || '');
     const desc     = escHtml(r.desc[lang]        || r.desc.es);
     const duracion = escHtml(r.duracion[lang]    || r.duracion.es);
     const dific    = escHtml(r.dificultad[lang]  || r.dificultad.es);
     const rec      = escHtml(r.recomendacion[lang] || r.recomendacion.es || '');
-    const nLugares = r.lugares.length;
+    const enPrep   = r.estado === 'preparacion';
 
-    // Cuántos de los lugares de esta ruta ya están en "Mi ruta"
-    const yaEnRuta = r.lugares.every(id => route.includes(id));
+    const ids      = paradasDe(r);
+    const nParadas = ids.length;
+    const yaEnRuta = nParadas > 0 && ids.every(id => route.includes(id));
+
+    /* Una ruta en preparación no manda a nadie a ningún lado: remite al
+       guía local, igual que las fichas pendientes. */
+    const accion = enPrep
+      ? `<a class="ruta-btn prep" href="https://wa.me/${guiaTel()}?text=${encodeURIComponent(lang==='es'
+            ? `Hola, vi la ${r.nombre.es} en la guía de Labateca y quiero saber si es posible subir.`
+            : `Hi! I saw the ${r.nombre.en} on the Labateca guide and I would like to know if it is possible to go up.`)}"
+           target="_blank" rel="noopener noreferrer">${IC.wa}<span>${t('rutas_btn_guia')}</span></a>`
+      : `<button class="ruta-btn" onclick="applyRoute('${escJs(r.id)}')" aria-label="${t('rutas_btn')}: ${nombre}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M6 16V8a4 4 0 0 1 4-4h4"/><path d="M18 8v8a4 4 0 0 1-4 4h-1"/></svg>
+          <span id="rutaBtn_${r.id}">${yaEnRuta ? t('rutas_btn_active') : t('rutas_btn')}</span>
+        </button>`;
+
+    const contador = enPrep
+      ? `<div class="ruta-lugares-count prep">${t('rutas_prep')}</div>`
+      : `<div class="ruta-lugares-count">${nParadas} ${nParadas === 1 ? t('rutas_parada') : t('rutas_paradas')}</div>`;
 
     return `
-    <div class="ruta-card" style="--ruta-color:${r.color};--ruta-color-soft:${r.colorSoft};animation:cardIn .4s var(--ease) both;animation-delay:${i * 0.08}s">
+    <div class="ruta-card${enPrep ? ' es-prep' : ''}" style="--ruta-color:${r.color};--ruta-color-soft:${r.colorSoft};animation:cardIn .4s var(--ease) both;animation-delay:${i * 0.08}s">
       <div class="ruta-accent"></div>
       <div class="ruta-body">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
           <div class="ruta-icon">${r.icono}</div>
-          <div class="ruta-lugares-count">${nLugares} ${t('rutas_lugares')}</div>
+          ${contador}
         </div>
         <div class="ruta-name">${nombre}</div>
+        ${idea ? `<div class="ruta-idea">${idea}</div>` : ''}
         <div class="ruta-desc">${desc}</div>
         <div class="ruta-meta">
           <span class="ruta-chip">
@@ -1080,10 +1152,8 @@ function renderRutas() {
           </span>
         </div>
         ${rec ? `<div class="ruta-rec">${rec}</div>` : ''}
-        <button class="ruta-btn" onclick="applyRoute('${escJs(r.id)}')" aria-label="${t('rutas_btn')}: ${nombre}">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M6 16V8a4 4 0 0 1 4-4h4"/><path d="M18 8v8a4 4 0 0 1-4 4h-1"/></svg>
-          <span id="rutaBtn_${r.id}">${yaEnRuta ? t('rutas_btn_active') : t('rutas_btn')}</span>
-        </button>
+        ${accion}
+        <a class="ruta-mas" href="${urlRuta(r.id)}">${t('rutas_ver')}</a>
       </div>
     </div>`;
   }).join('');
@@ -1095,8 +1165,9 @@ function applyRoute(rutaId) {
   const ruta = RUTAS.find(r => r.id === rutaId);
   if (!ruta) return;
 
-  // Reemplazar la ruta actual con los lugares de esta ruta
-  route = [...ruta.lugares];
+  // Reemplazar la ruta actual con las paradas de esta ruta
+  route = paradasDe(ruta);
+  if (!route.length) return;
   store.set('lab_route', route);
 
   // Actualizar UI

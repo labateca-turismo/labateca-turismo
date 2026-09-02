@@ -1,57 +1,329 @@
 {
-  "version": "1.0",
+  "version": "2.0",
+  "nota": "Estructura segun la metodologia de guiones tematicos de Fontur/MinCIT: cada ruta tiene idea fuerza, tema central y paradas ORDENADAS con un rol (focal / principal / complementario). 'lecturas' son fichas que se leen pero no se visitan como punto aparte. 'paginas' son fuentes historicas del sitio. 'alojamiento' son sitios donde dormir, NO paradas. Validar siempre con: node check_rutas.js",
+  "roles": ["focal", "principal", "complementario"],
   "rutas": [
     {
-      "id": "cultural",
-      "icono": "🏛️",
-      "color": "#bd5d34",
-      "colorSoft": "#f5e6de",
-      "nombre":      { "es": "Ruta Cultural",         "en": "Cultural Route" },
-      "desc":        { "es": "El alma histórica de Labateca: el templo colonial, el parque principal, la Casa de la Cultura y las artesanías chitareras. Perfecta para empezar la visita.", "en": "The historic soul of Labateca: the colonial church, main square, House of Culture and Chitarera crafts. Perfect for starting your visit." },
-      "duracion":    { "es": "2–3 horas",             "en": "2–3 hours" },
-      "dificultad":  { "es": "Fácil",                 "en": "Easy" },
-      "inicio":      { "es": "Parque Principal",       "en": "Main Square" },
-      "recomendacion": { "es": "Empieza en el parque y recorre todo a pie. Pregunta en la Casa de la Cultura por el horario del templo.", "en": "Start at the square and walk everywhere. Ask at the House of Culture about the church's opening hours." },
-      "lugares": ["parque", "templo", "casa-cultura", "artesanias"]
+      "id": "origen",
+      "icono": "🪶",
+      "color": "#a4562f",
+      "colorSoft": "#f5e4db",
+      "estado": "activa",
+      "modo": "autoguiada",
+      "nombre": { "es": "El pueblo de indios de 1623", "en": "The Indian Town of 1623" },
+      "ideaFuerza": { "es": "Labateca no se fundó: se juntó.", "en": "Labateca was not founded: it was gathered." },
+      "desc": {
+        "es": "El origen del municipio no es una fundación de españoles con acta y plaza, sino una orden de reunir en un solo sitio a trece capitanías indígenas que ya vivían aquí. Esta ruta recorre lo que quedó de esa decisión: la plaza donde se juntaron, el templo que la selló, la biblioteca que guarda la memoria escrita y, a 3,6 km por el camino real, la tumba donde el pueblo todavía le lleva flores a su cacique.",
+        "en": "The town's origin is not a Spanish founding with a charter and a square, but an order to gather thirteen Indigenous chieftaincies that already lived here into one place. This route follows what that decision left behind: the square where they gathered, the church that sealed it, the library holding the written memory and, 3.6 km along the old royal road, the tomb where townspeople still bring flowers to their cacique."
+      },
+      "temaCentral": {
+        "es": "El pueblo que hoy se camina en veinte minutos es el resultado de una orden de 1623 que obligó a trece comunidades a vivir juntas. Cuatro siglos después todavía se le agradece por escrito al cacique.",
+        "en": "The town you can walk across in twenty minutes is the result of a 1623 order that forced thirteen communities to live together. Four centuries later people still thank the cacique in writing."
+      },
+      "duracion": { "es": "Media jornada", "en": "Half a day" },
+      "dificultad": { "es": "Fácil en el pueblo · 3,6 km por camino destapado hasta la tumba", "en": "Easy in town · 3.6 km of unpaved road to the tomb" },
+      "inicio": { "es": "Parque Principal", "en": "Main Square" },
+      "cuando": {
+        "es": "Cualquier día. La biblioteca abre en horario escolar, así que si quieres entrar, ve entre semana y en la mañana.",
+        "en": "Any day. The library opens on school hours, so come on a weekday morning if you want to go in."
+      },
+      "recomendacion": {
+        "es": "Lee primero el Auto de Población de 1623 en la sección de historia del sitio: la ruta se entiende distinto cuando ya sabes qué decía el documento. Para la tumba del cacique lleva agua y calzado cerrado.",
+        "en": "Read the 1623 Auto de Población in the site's history section first: the route reads differently once you know what the document said. Bring water and closed shoes for the cacique's tomb."
+      },
+      "paradas": [
+        {
+          "id": "parque",
+          "rol": "focal",
+          "guion": {
+            "es": "Estás parado en el sitio que la orden de 1623 escogió. «Labateca» es palabra chitarera y el pueblo la traduce como «volcanes de Dios». Mira alrededor antes de entrar al templo: la plaza, la iglesia y las calles empinadas son el molde que impuso el reordenamiento colonial, repetido en decenas de pueblos de indios de esta cordillera.",
+            "en": "You are standing on the site the 1623 order chose. «Labateca» is a Chitarero word that the town translates as «God's volcanoes». Look around before entering the church: the square, the church and the steep streets are the mould imposed by colonial resettlement, repeated in dozens of Indian towns along this range."
+          }
+        },
+        {
+          "id": "templo",
+          "rol": "principal",
+          "guion": {
+            "es": "El templo le puso fecha oficial a lo que ya existía: en 1719 el sitio pasó a ser Parroquia Nuestra Señora de las Angustias. Fíjate en la pila bautismal colonial —es el mueble donde quedaron inscritos los nombres de las familias— y en el camarín del altar mayor, con los «milagros» de oro que los devotos siguen ofrendando.",
+            "en": "The church put an official date on what already existed: in 1719 the site became the Parish of Our Lady of Sorrows. Look for the colonial baptismal font — the piece of furniture where the families' names were first written down — and the niche above the main altar, with the gold «milagros» devotees still offer."
+          }
+        },
+        {
+          "id": "biblioteca-publica",
+          "rol": "complementario",
+          "guion": {
+            "es": "Nació en 1983 con 1.500 libros donados por el Ministerio de Educación y lleva el nombre de la hermana María Isaura Cardona Zapata, en agradecimiento a las religiosas que educaron al pueblo durante 58 años. Es el lugar donde la memoria oral del municipio se volvió papel.",
+            "en": "It opened in 1983 with 1,500 books donated by the Ministry of Education and carries the name of Sister María Isaura Cardona Zapata, in gratitude to the nuns who taught here for 58 years. It is where the town's oral memory became paper."
+          }
+        },
+        {
+          "id": "tumba-cacique-bateca",
+          "rol": "focal",
+          "guion": {
+            "es": "Aquí termina la ruta y empieza lo que no cabe en un documento. Sobre el camino real, un sepulcro de piedra y cal cerrado con reja. Alrededor de la abertura hay placas de metal fundido: «Doy gracias al Cacique Bateca por favor recibido». No es una ruina: es un sitio de devoción vivo. La autoridad que el Auto de 1623 quiso reemplazar sigue recibiendo agradecimientos cuatro siglos después.",
+            "en": "The route ends here, and what does not fit in a document begins. On the old royal road, a tomb of stone and lime closed with an iron grate. Around the opening hang cast-metal plaques: «I thank Cacique Bateca for a favour received». This is not a ruin: it is a living place of devotion. The authority the 1623 order set out to replace is still being thanked four centuries later."
+          }
+        }
+      ],
+      "lecturas": ["virgen-angustias"],
+      "paginas": [
+        { "url": "/historia/pueblo-de-indios.html", "titulo": { "es": "El Pueblo de Indios de Labateca", "en": "The Indian Town of Labateca" } },
+        { "url": "/historia/auto-1623.html", "titulo": { "es": "Auto de Población del Valle de los Locos, 1623", "en": "Settlement Order of the Valle de los Locos, 1623" } },
+        { "url": "/historia/los-chitareros.html", "titulo": { "es": "Los Chitareros — Silvano Pabón Villamizar", "en": "The Chitareros — Silvano Pabón Villamizar" } }
+      ]
     },
     {
-      "id": "naturaleza",
-      "icono": "🌿",
+      "id": "fe",
+      "icono": "🕊️",
+      "color": "#3f5b8f",
+      "colorSoft": "#e3e9f4",
+      "estado": "activa",
+      "modo": "autoguiada",
+      "nombre": { "es": "Ruta Mariana", "en": "Marian Route" },
+      "ideaFuerza": { "es": "Un pueblo entero organizado alrededor de una aparición.", "en": "An entire town organised around an apparition." },
+      "desc": {
+        "es": "Cinco fiestas al año, una peregrinación mensual, siete estaciones talladas en la subida y una capilla en la salida del pueblo para bendecir a los que se van. La devoción a la Virgen no es un adorno en Labateca: es lo que marca el calendario, el camino y los libros donde está escrita la historia de las familias.",
+        "en": "Five feast days a year, a monthly pilgrimage, seven carved stations on the climb and a chapel at the edge of town to bless those leaving. Devotion to the Virgin is not decoration in Labateca: it sets the calendar, the road and the books where family history is written."
+      },
+      "temaCentral": {
+        "es": "La Patrona no se apareció en el pueblo sino en Bochagá, y aun así el pueblo se ordenó alrededor de ella: sus cinco fiestas mandan el año, y en el camposanto los registros de defunciones llegan hasta 1712.",
+        "en": "The patron saint did not appear in the town but in Bochagá, and still the town arranged itself around her: her five feasts rule the year, and in the churchyard the burial records reach back to 1712."
+      },
+      "duracion": { "es": "2–3 horas, a pie", "en": "2–3 hours, on foot" },
+      "dificultad": { "es": "Fácil · el Sendero Mariano es corto pero todo en subida", "en": "Easy · the Marian Trail is short but entirely uphill" },
+      "inicio": { "es": "Parroquia Nuestra Señora de las Angustias", "en": "Our Lady of Sorrows Parish" },
+      "cuando": {
+        "es": "Cualquier día. El primer sábado de cada mes hay peregrinación por el Sendero Mariano. Las cinco solemnidades de la Patrona son el 2 y el 15 de febrero, el 15 de agosto, el 21 de noviembre y el 8 de diciembre; en esos días el pueblo se llena.",
+        "en": "Any day. There is a pilgrimage along the Marian Trail on the first Saturday of each month. The patron saint's five solemnities fall on 2 and 15 February, 15 August, 21 November and 8 December; the town fills up on those days."
+      },
+      "recomendacion": {
+        "es": "Empieza temprano y entra al templo antes o después de la eucaristía de 7 a. m. para no interrumpir. El Sendero Mariano se sube mejor en la mañana, con sombra. El camposanto se visita con respeto.",
+        "en": "Start early and enter the church before or after the 7 a.m. mass so as not to interrupt. The Marian Trail is best climbed in the morning, in the shade. Visit the churchyard respectfully."
+      },
+      "paradas": [
+        {
+          "id": "templo",
+          "rol": "focal",
+          "guion": {
+            "es": "Empieza donde está ella. La imagen de la Patrona se venera en el camarín del altar mayor, sobre un trono tallado en madera, y a su alrededor cuelgan los «milagros» de oro: pequeñas figuras que los devotos ofrendan cuando reciben un favor. Cada una es un agradecimiento con nombre y fecha aunque no los lleve escritos.",
+            "en": "Begin where she is. The patron's image is venerated in the niche above the main altar, on a carved wooden throne, surrounded by hanging gold «milagros»: small figures devotees offer when a favour is granted. Each one is a thank-you with a name and a date, even if neither is written on it."
+          }
+        },
+        {
+          "id": "sendero-mariano",
+          "rol": "focal",
+          "guion": {
+            "es": "Novecientos metros cuesta arriba con siete estaciones dedicadas a los Siete Dolores de María: la profecía de Simeón, la huida a Egipto, el Niño perdido en el templo, y así hasta el sepulcro. Cada estación es una talla en relieve con su placa, su cita bíblica y su oración. Súbelo despacio: está hecho para leerse, no para recorrerse.",
+            "en": "Nine hundred metres uphill with seven stations for the Seven Sorrows of Mary: Simeon's prophecy, the flight into Egypt, the child lost in the temple, and on to the burial. Each station is a carved relief with its plaque, its scripture and its prayer. Climb slowly: it was made to be read, not covered."
+          }
+        },
+        {
+          "id": "cementerio",
+          "rol": "principal",
+          "guion": {
+            "es": "El camposanto está ligado a la parroquia desde el origen. La Parroquia conserva los libros de defunciones desde 1712: tres siglos de apellidos labatequenses en orden. Es el archivo más antiguo y más consultado del municipio, y la razón por la que aquí se puede reconstruir una familia entera.",
+            "en": "The churchyard has been tied to the parish from the start. The parish keeps burial records dating to 1712: three centuries of Labateca surnames in order. It is the town's oldest and most consulted archive, and the reason an entire family can be reconstructed here."
+          }
+        },
+        {
+          "id": "virgen-conductores",
+          "rol": "complementario",
+          "guion": {
+            "es": "La última parada antes de salir del pueblo, junto a la plaza de toros. En Colombia la Virgen del Carmen es la patrona de los conductores, y por eso su capilla está justo a la orilla de la vía: quien sale se persigna al pasar y le encomienda el viaje. El 16 de julio se bendicen aquí los carros y las motos.",
+            "en": "The last stop before leaving town, beside the bullring. In Colombia the Virgin of Carmen is the patron of drivers, which is why her chapel sits right at the roadside: those leaving cross themselves as they pass and commend the journey to her. On 16 July cars and motorbikes are blessed here."
+          }
+        }
+      ],
+      "lecturas": ["virgen-angustias"],
+      "paginas": [
+        { "url": "/historia/virgen-de-las-angustias.html", "titulo": { "es": "La Virgen que salvó el resguardo", "en": "The Virgin who saved the reservation" } },
+        { "url": "/historia/valle-de-las-angustias.html", "titulo": { "es": "Valle de las Angustias — Pbro. Samuel Ramírez R., 1922", "en": "Valle de las Angustias — Fr. Samuel Ramírez R., 1922" } }
+      ]
+    },
+    {
+      "id": "cerca",
+      "icono": "⛰️",
+      "color": "#6b7a2f",
+      "colorSoft": "#eef1dd",
+      "estado": "activa",
+      "modo": "autoguiada",
+      "nombre": { "es": "Cascada y mirador, media jornada", "en": "Waterfall and Lookout, Half a Day" },
+      "ideaFuerza": { "es": "Una cascada y un almuerzo con vista, sin salir del radio de tres kilómetros.", "en": "A waterfall and lunch with a view, all within three kilometres." },
+      "desc": {
+        "es": "La salida más fácil de organizar del municipio: se sube a la Cascada de Siscata por un sendero que arranca en el mismo casco urbano y se remata almorzando en El Pedregal, una finca-mirador desde donde se ve el pueblo vecino de Toledo. Ida y vuelta en una mañana larga.",
+        "en": "The easiest outing in town to organise: climb to the Siscata Waterfall on a trail that starts in the town itself, then finish with lunch at El Pedregal, a lookout farm with views across to the neighbouring town of Toledo. There and back in one long morning."
+      },
+      "temaCentral": {
+        "es": "No hace falta un día entero ni un carro para ver agua cayendo en Labateca: la primera cascada empieza donde termina la última calle.",
+        "en": "You need neither a whole day nor a car to see falling water in Labateca: the first waterfall starts where the last street ends."
+      },
+      "duracion": { "es": "3–4 horas", "en": "3–4 hours" },
+      "dificultad": { "es": "Moderada · 3,6 km a pie y +342 m de subida hasta la cascada", "en": "Moderate · 3.6 km on foot and +342 m of climb to the waterfall" },
+      "inicio": { "es": "Casco urbano", "en": "Town centre" },
+      "cuando": {
+        "es": "El Pedregal atiende los fines de semana, así que la ruta completa es de sábado o domingo. Procura estar en la cascada hacia las 10 a. m., que es cuando le entra el sol.",
+        "en": "El Pedregal serves on weekends, so the full route is a Saturday or Sunday plan. Try to be at the waterfall around 10 a.m., when the sun reaches it."
+      },
+      "recomendacion": {
+        "es": "Calzado de agarre y mapa descargado antes de salir: la traza de Siscata está grabada con GPS y se puede seguir sin señal. Sube primero y almuerza después.",
+        "en": "Grippy shoes and a downloaded map before you leave: the Siscata track was GPS-recorded and can be followed without signal. Climb first, eat afterwards."
+      },
+      "paradas": [
+        {
+          "id": "cascada-siscata",
+          "rol": "focal",
+          "guion": {
+            "es": "El sendero arranca en el casco urbano y sube 342 metros en unos 3,6 km. La traza está registrada en campo con GPS, así que la puedes seguir en el mapa aunque se caiga la señal. Llega hacia las diez de la mañana: es la hora en que el sol entra a la garganta y el salto se ve completo.",
+            "en": "The trail starts in the town centre and climbs 342 metres over some 3.6 km. The track was GPS-recorded in the field, so you can follow it on the map even with no signal. Arrive around ten in the morning: that is when the sun enters the gorge and the fall is fully lit."
+          }
+        },
+        {
+          "id": "pedregal",
+          "rol": "focal",
+          "guion": {
+            "es": "Finca turística a kilómetro y medio del pueblo que junta tres cosas que rara vez van juntas: mirador, cocina y un Santo Sepulcro con cruces en el mismo predio. Desde la terraza se ven las montañas y, al fondo, Toledo. La atiende don Óscar Rozo.",
+            "en": "A farm a kilometre and a half from town that combines three things rarely found together: a lookout, a kitchen, and a Holy Sepulchre with crosses on the same grounds. From the terrace you see the mountains and, beyond, Toledo. Run by don Óscar Rozo."
+          }
+        }
+      ],
+      "lecturas": [],
+      "paginas": []
+    },
+    {
+      "id": "camino-real",
+      "icono": "🥾",
       "color": "#2d6149",
       "colorSoft": "#deeee7",
-      "nombre":      { "es": "Ruta de Naturaleza",    "en": "Nature Route" },
-      "desc":        { "es": "Agua, verde y frescura. Desde la espectacular Cascada La Lirgua hasta el balneario El Molino y la Quebrada Los Monos. Lleva calzado impermeable.", "en": "Water, greenery and fresh air. From the spectacular La Lirgua Waterfall to El Molino swimming hole and Los Monos creek. Bring waterproof shoes." },
-      "duracion":    { "es": "Día completo",          "en": "Full day" },
-      "dificultad":  { "es": "Media",                 "en": "Moderate" },
-      "inicio":      { "es": "Casco urbano",          "en": "Town center" },
-      "recomendacion": { "es": "Sal temprano. Lleva lunch, ropa de cambio y protector solar. Recomienda guía local para La Lirgua.", "en": "Start early. Bring lunch, spare clothes and sunscreen. A local guide is recommended for La Lirgua." },
-      "lugares": ["lirgua", "balneario-molino", "quebrada-monos"]
+      "estado": "activa",
+      "modo": "mixta",
+      "nombre": { "es": "Del camino real a las Cascadas de Lirgua", "en": "From the Royal Road to the Lirgua Waterfalls" },
+      "ideaFuerza": { "es": "Una sola vía al suroccidente reúne la tumba del cacique y la cascada insignia del municipio.", "en": "A single road southwest links the cacique's tomb and the town's flagship waterfall." },
+      "desc": {
+        "es": "Seis kilómetros de camino al occidente que concentran lo mejor del municipio fuera del pueblo: el sepulcro del Cacique Bateca sobre el camino real y, más adelante, las dos cascadas de Lirgua dentro de un predio que una familia cuida y trabaja a mano. A mitad de camino queda La Peña, donde se puede dormir y convertir la salida en dos días.",
+        "en": "Six kilometres of road west that hold the best the town has to offer outside its streets: Cacique Bateca's tomb on the old royal road and, further on, the two Lirgua waterfalls inside a property a family tends and works by hand. Halfway along lies La Peña, where you can sleep and turn the outing into two days."
+      },
+      "temaCentral": {
+        "es": "El mismo camino que los cronistas llamaron real lleva hoy a un sepulcro indígena que sigue recibiendo flores y a una cascada que una familia mantiene con escalones de piedra hechos a mano. La vía es vieja; el cuidado es de ahora.",
+        "en": "The same road the chroniclers called royal leads today to an Indigenous tomb that still receives flowers and to a waterfall a family maintains with hand-laid stone steps. The road is old; the care is present-day."
+      },
+      "duracion": { "es": "Día completo · dos días si duermes en La Peña", "en": "Full day · two days if you sleep at La Peña" },
+      "dificultad": { "es": "Media · sendero de 1,6 km con escalones de piedra, barro y un cruce de quebrada", "en": "Moderate · 1.6 km trail with stone steps, mud and a stream crossing" },
+      "inicio": { "es": "Parque Principal, saliendo al suroccidente", "en": "Main Square, heading southwest" },
+      "cuando": {
+        "es": "Lirgua atiende todos los días de 6:00 a. m. a 5:00 p. m. Sal temprano: el sendero se camina mejor con luz y el predio cierra a las cinco.",
+        "en": "Lirgua is open every day from 6:00 a.m. to 5:00 p.m. Leave early: the trail is better walked in daylight and the property closes at five."
+      },
+      "recomendacion": {
+        "es": "Para entrar a Lirgua hay que pedir las llaves en la casa junto al puente y se paga una entrada por persona; lleva efectivo. Es un predio privado que una familia cuida: no dejes basura y respeta los senderos y los jardines. Calzado antideslizante, sí o sí.",
+        "en": "To enter Lirgua you must ask for the keys at the house by the bridge, and there is a per-person entrance fee; bring cash. It is private land tended by a family: leave no rubbish and respect the paths and gardens. Non-slip footwear is essential."
+      },
+      "paradas": [
+        {
+          "id": "tumba-cacique-bateca",
+          "rol": "principal",
+          "guion": {
+            "es": "A 3,6 km del pueblo, sobre el camino real, un sepulcro de piedra y cal con reja de hierro. Las placas de metal alrededor de la abertura son agradecimientos: «Doy gracias al Cacique Bateca por favor recibido». Párate un momento antes de seguir: la vía por la que vas subiendo es la misma que aparece en las crónicas.",
+            "en": "3.6 km from town, on the old royal road, a tomb of stone and lime with an iron grate. The metal plaques around the opening are thank-yous: «I thank Cacique Bateca for a favour received». Pause before moving on: the road you are climbing is the one that appears in the chronicles."
+          }
+        },
+        {
+          "id": "lirgua",
+          "rol": "focal",
+          "guion": {
+            "es": "Dos cascadas sobre la misma quebrada. La primera, Lirgua, cae de alto y con buen caudal sobre una poza de roca; quebrada arriba, Dos Brazos se abre en dos chorros paralelos sobre una pared cubierta de musgo. El sendero entre ambas mide 1,6 km y sube 140 metros, de 1.620 a 1.760 m sobre el nivel del mar. Los escalones de piedra, los jardines y los letreros pintados a mano los hizo la familia propietaria: estás caminando sobre trabajo de alguien.",
+            "en": "Two waterfalls on the same stream. The first, Lirgua, drops high and strong into a rock pool; upstream, Dos Brazos splits into two parallel jets over a moss-covered wall. The trail between them runs 1.6 km and climbs 140 metres, from 1,620 to 1,760 m above sea level. The stone steps, gardens and hand-painted signs were made by the owning family: you are walking on someone's work."
+          }
+        }
+      ],
+      "lecturas": [],
+      "alojamiento": ["la-pena"],
+      "paginas": []
     },
     {
-      "id": "cafe",
-      "icono": "☕",
-      "color": "#8b5e3c",
-      "colorSoft": "#f2e8df",
-      "nombre":      { "es": "Ruta del Café",         "en": "Coffee Route" },
-      "desc":        { "es": "Vive el proceso del café de exportación y termina probando los dulces típicos del pueblo: arequipe de café, quesillo de ahuyama y bocadillos artesanales.", "en": "Experience export-grade coffee from farm to cup, then taste local sweets: coffee arequipe, squash quesillo and artisan bocadillos." },
-      "duracion":    { "es": "3–4 horas",             "en": "3–4 hours" },
-      "dificultad":  { "es": "Fácil",                 "en": "Easy" },
-      "inicio":      { "es": "Casco urbano",          "en": "Town center" },
-      "recomendacion": { "es": "Coordina la visita a la finca cafetera con anticipación. Los dulces se consiguen mejor los días de mercado.", "en": "Arrange the coffee farm visit in advance. Local sweets are best found on market days." },
-      "lugares": ["cafe", "dulces", "restaurante-paramo"]
+      "id": "san-bernardo",
+      "icono": "♨️",
+      "color": "#1f6f8b",
+      "colorSoft": "#dbeef5",
+      "estado": "activa",
+      "modo": "mixta",
+      "nombre": { "es": "Agua caliente y cascada", "en": "Hot Springs and Waterfall" },
+      "ideaFuerza": { "es": "Se camina hasta un salto de 466 metros de subida y se remata metido en agua tibia.", "en": "Hike 466 metres up to a waterfall, then finish soaking in warm water." },
+      "desc": {
+        "es": "La salida larga del municipio, hacia el sur en jurisdicción de San Bernardo. Se pasa por el samán viejo del puente, se sube a la Cascada El Chorrerón —un hilo blanco que cae por la garganta entre dos montañas— y se termina el día en Aguascalientes, un pozo de agua tibia entre piedras enormes, con el estadero Soma al lado para comer.",
+        "en": "The town's long outing, heading south into San Bernardo. You pass the old saman tree by the bridge, climb to the El Chorrerón waterfall — a white thread falling through the gorge between two mountains — and end the day at Aguascalientes, a warm pool among huge boulders, with the Soma grill beside it for food."
+      },
+      "temaCentral": {
+        "es": "El mismo camino da las dos caras del agua en un día: la que cae con fuerza desde 466 metros más arriba y la que sale tibia del suelo para meterse uno dentro.",
+        "en": "One road gives you both faces of water in a single day: the kind that falls hard from 466 metres above, and the kind that comes out of the ground warm enough to sit in."
+      },
+      "duracion": { "es": "Día completo · casi dos horas solo de ida", "en": "Full day · nearly two hours each way" },
+      "dificultad": { "es": "Moderada · último tramo en trocha, húmedo por la neblina del salto", "en": "Moderate · the last stretch is rough track, kept damp by the spray" },
+      "inicio": { "es": "Casco urbano, saliendo hacia San Bernardo", "en": "Town centre, heading toward San Bernardo" },
+      "cuando": {
+        "es": "Sal temprano: son casi dos horas de ida contando el trayecto en vehículo. No hay señal en el camino.",
+        "en": "Leave early: it is nearly two hours out, counting the drive. There is no phone signal on the way."
+      },
+      "recomendacion": {
+        "es": "Lleva efectivo: en la entrada por el estadero Soma cobran el paso. Calzado de agarre y mapa descargado antes de salir, porque no hay señal. Las trazas de El Chorrerón y de Aguascalientes están grabadas con GPS y dibujadas en el mapa del sitio.",
+        "en": "Bring cash: there is a crossing fee at the Soma entrance. Grippy shoes and a downloaded map before you leave, since there is no signal. The El Chorrerón and Aguascalientes tracks were GPS-recorded and are drawn on the site map."
+      },
+      "paradas": [
+        {
+          "id": "el-saman",
+          "rol": "complementario",
+          "guion": {
+            "es": "Queda justo sobre la vía, a 2,7 km del pueblo, así que no es un desvío: es una parada de cinco minutos. Un samán enorme y viejo al borde del puente, con la copa abierta como un paraguas sobre la carretera. En sus ramas viven quiches, orquídeas, helechos y barbas de viejo: un jardín colgante encima de la vía.",
+            "en": "It sits right on the road, 2.7 km from town, so it is not a detour: it is a five-minute stop. A huge old saman tree at the edge of the bridge, its crown spread like an umbrella over the road. Bromeliads, orchids, ferns and old-man's-beard live in its branches: a hanging garden above the roadway."
+          }
+        },
+        {
+          "id": "chorreron",
+          "rol": "focal",
+          "guion": {
+            "es": "Ocho kilómetros desde el puente de Zambrano y 466 metros de subida. Se ve desde lejos como un hilo blanco sobre el verde y, de cerca, cae por una pared de roca levantando una neblina permanente. La llegada está marcada con un portal de dos horcones y un travesaño de madera con el nombre tallado, justo con la cascada al fondo. Hazla primero, con las piernas frescas.",
+            "en": "Eight kilometres from the Zambrano bridge and 466 metres of climb. From afar it looks like a white thread on the green; up close it falls down a rock wall throwing up permanent spray. The arrival is marked by a gateway of two posts and a wooden crossbeam with the name carved into it, the waterfall right behind. Do this first, on fresh legs."
+          }
+        },
+        {
+          "id": "soma-aguascalientes",
+          "rol": "focal",
+          "guion": {
+            "es": "El remate del día, y está pensado así: la propia ficha de El Chorrerón lo recomienda. Del portal al pozo hay unos 740 metros por un sendero de tierra con baranda de guadua. El pozo es agua tibia entre piedras enormes pulidas por el río. Arriba, en el estadero, hay carnes al asador, kioscos de guadua, zona de fogata y un mirador con pufs. La atiende Sofía Parada.",
+            "en": "The end of the day, and it is meant that way: the El Chorrerón entry itself recommends it. From the gate to the pool is about 740 metres along a dirt path with a bamboo handrail. The pool is warm water among huge boulders polished by the river. Up at the grill there are meats on the fire, bamboo shelters, a fire pit and a lookout with beanbags. Run by Sofía Parada."
+          }
+        }
+      ],
+      "lecturas": [],
+      "paginas": []
     },
     {
       "id": "paramo",
-      "icono": "⛰️",
-      "color": "#1f4a39",
-      "colorSoft": "#d8ece4",
-      "nombre":      { "es": "Ruta del Páramo",       "en": "Páramo Route" },
-      "desc":        { "es": "La ruta más exigente y más recompensante. Frailejones, Laguna Negra, el sector Labateca del Páramo de Santurbán y una vista panorámica desde el Mirador La Cumbre.", "en": "The most demanding and rewarding route. Frailejones, Black Lagoon, the Labateca sector of Santurbán Páramo and panoramic views from La Cumbre viewpoint." },
-      "duracion":    { "es": "Día completo + guía",   "en": "Full day + guide" },
-      "dificultad":  { "es": "Exigente",              "en": "Challenging" },
-      "inicio":      { "es": "Alcaldía de Labateca",  "en": "Labateca Town Hall" },
-      "recomendacion": { "es": "Obligatorio con guía certificado. Lleva ropa de abrigo, bastones y mucha agua. Clima impredecible.", "en": "Certified guide required. Bring warm layers, trekking poles and plenty of water. Unpredictable weather." },
-      "lugares": ["mirador-cumbre", "laguna-negra", "santurban"]
+      "icono": "🌫️",
+      "color": "#5b6b7a",
+      "colorSoft": "#e6eaee",
+      "estado": "preparacion",
+      "modo": "guiada",
+      "nombre": { "es": "Ruta del Páramo", "en": "Páramo Route" },
+      "ideaFuerza": { "es": "Más de 2.000 hectáreas de Labateca están en el Páramo de Santurbán.", "en": "More than 2,000 hectares of Labateca lie within the Santurbán Páramo." },
+      "desc": {
+        "es": "Labateca tiene más de 2.000 hectáreas dentro del Páramo de Santurbán, con la Laguna Negra y los sectores altos hacia La Ovejera. Todavía no hemos levantado esos sitios en campo: no tenemos coordenadas verificadas, ni cabecera de sendero, ni tiempos medidos. Antes que publicar una ruta inventada, preferimos decirlo: esta está en preparación. Si quieres subir, habla con el guía local y él te dice qué es posible hoy.",
+        "en": "Labateca holds over 2,000 hectares inside the Santurbán Páramo, including Laguna Negra and the high sectors toward La Ovejera. We have not yet surveyed these sites in the field: we have no verified coordinates, no trailhead and no measured times. Rather than publish an invented route, we would rather say so: this one is in preparation. If you want to go up, talk to the local guide and he will tell you what is possible today."
+      },
+      "temaCentral": {
+        "es": "Preferimos no tener la ruta a tenerla mal. El páramo se sube con guía o no se sube.",
+        "en": "We would rather not have the route than have it wrong. The páramo is climbed with a guide or not at all."
+      },
+      "duracion": { "es": "Por definir", "en": "To be defined" },
+      "dificultad": { "es": "Exigente", "en": "Challenging" },
+      "inicio": { "es": "Por definir", "en": "To be defined" },
+      "cuando": { "es": "Consulta con el guía local", "en": "Check with the local guide" },
+      "recomendacion": {
+        "es": "Escríbele al guía local por WhatsApp antes de planear cualquier subida al páramo.",
+        "en": "Message the local guide on WhatsApp before planning any climb into the páramo."
+      },
+      "paradas": [],
+      "lecturas": ["laguna-negra", "sendero-ovejera-vista-hermosa"],
+      "paginas": []
     }
   ]
 }

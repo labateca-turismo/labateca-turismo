@@ -141,6 +141,88 @@ footer.pie .pie-creador strong{font-weight:600}
   dl.datos{grid-template-columns:1fr;gap:4px 0;padding:18px}
   dl.datos dt{margin-top:12px}
   dl.datos dt:first-child{margin-top:0}
+}
+/* ── Rutas ───────────────────────────────────────────────────
+   Bloque "esta ficha es parada de una ruta" y paginas de ruta. */
+.en-ruta{margin:34px 0 0;padding:20px 22px;border:1px solid var(--line);
+ border-left:4px solid var(--rc,var(--forest-3));border-radius:var(--r);background:var(--rcs,var(--paper))}
+.en-ruta+.en-ruta{margin-top:14px}
+.en-ruta .er-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.en-ruta .er-ico{font-size:22px;line-height:1}
+.en-ruta .er-tit{font-weight:700;color:var(--forest);text-decoration:none;font-size:17px}
+.en-ruta .er-tit:hover{text-decoration:underline}
+.en-ruta .er-pos{margin-left:auto;font-size:13px;font-weight:700;color:var(--rc,var(--forest-3));
+ background:#fff;border:1px solid var(--line);border-radius:99px;padding:3px 11px;white-space:nowrap}
+.en-ruta .er-guion{margin:0 0 12px;font-size:15.5px;line-height:1.6;color:var(--ink)}
+.en-ruta .er-nav{display:flex;gap:10px;flex-wrap:wrap;font-size:14px}
+.en-ruta .er-nav a{display:inline-block;padding:7px 13px;background:#fff;border:1px solid var(--line);
+ border-radius:99px;text-decoration:none;color:var(--ink);font-weight:600}
+.en-ruta .er-nav a:hover{border-color:var(--rc,var(--forest-3))}
+.en-ruta .er-nav .er-todo{background:var(--rc,var(--forest-3));color:#fff;border-color:transparent}
+/* Cabecera de la pagina de ruta */
+.ruta-hero{margin:8px 0 30px;padding:26px;border-radius:var(--r);
+ background:var(--rcs,var(--cream));border:1px solid var(--line);border-top:5px solid var(--rc,var(--forest-3))}
+.ruta-hero .rh-ico{font-size:38px;line-height:1}
+.ruta-hero h1{margin:8px 0 6px}
+.ruta-hero .rh-idea{margin:0 0 14px;font-family:Fraunces,Georgia,serif;font-size:20px;
+ line-height:1.4;color:var(--rc,var(--forest-3))}
+.ruta-hero .rh-desc{margin:0;font-size:17px;line-height:1.65;color:var(--ink)}
+.rh-datos{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.rh-datos li{background:#fff;border:1px solid var(--line);border-radius:99px;
+ padding:6px 13px;font-size:14px;font-weight:600;color:var(--ink)}
+.rh-datos li b{font-weight:800;color:var(--ink-mut);font-size:12px;text-transform:uppercase;
+ letter-spacing:.06em;margin-right:6px}
+.tema{margin:26px 0;padding:20px 22px;background:var(--forest);color:var(--cream);
+ border-radius:var(--r)}
+.tema b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.09em;
+ opacity:.72;margin-bottom:7px}
+.tema p{margin:0;font-size:18px;line-height:1.55;font-family:Fraunces,Georgia,serif}
+/* Las paradas, en orden */
+ol.paradas{list-style:none;margin:0;padding:0;counter-reset:par}
+ol.paradas>li{position:relative;padding:0 0 26px 54px;counter-increment:par}
+ol.paradas>li::before{content:counter(par);position:absolute;left:0;top:0;
+ width:34px;height:34px;border-radius:50%;background:var(--rc,var(--forest-3));color:#fff;
+ display:grid;place-items:center;font-weight:800;font-size:15px}
+/* La linea que une las paradas: hace que se lea como recorrido y no
+   como lista suelta. La ultima no la lleva. */
+ol.paradas>li::after{content:"";position:absolute;left:16px;top:38px;bottom:6px;
+ width:2px;background:var(--line)}
+ol.paradas>li:last-child{padding-bottom:0}
+ol.paradas>li:last-child::after{display:none}
+ol.paradas h3{margin:4px 0 4px;font-size:20px}
+ol.paradas h3 a{color:var(--forest);text-decoration:none}
+ol.paradas h3 a:hover{text-decoration:underline}
+.par-rol{display:inline-block;font-size:11.5px;font-weight:800;text-transform:uppercase;
+ letter-spacing:.07em;padding:3px 9px;border-radius:99px;margin-bottom:2px}
+.par-rol.focal{background:var(--rc,var(--forest-3));color:#fff}
+.par-rol.principal{background:#fff;border:1px solid var(--line);color:var(--ink-mut)}
+.par-rol.complementario{background:transparent;border:1px dashed var(--line);color:var(--ink-mut)}
+.par-guion{margin:6px 0 10px;font-size:16px;line-height:1.65}
+.par-meta{margin:0 0 8px;font-size:14px;color:var(--ink-mut)}
+.par-foto{border-radius:14px;margin:0 0 10px;width:100%;height:auto;display:block}
+/* Listas de apoyo: lecturas, donde dormir, fuentes */
+.ruta-apoyo{margin:30px 0 0;padding:20px 22px;background:var(--paper);
+ border:1px solid var(--line);border-radius:var(--r)}
+.ruta-apoyo h2{margin:0 0 10px;font-size:19px}
+.ruta-apoyo ul{margin:0;padding-left:20px}
+.ruta-apoyo li{margin:5px 0;font-size:15.5px}
+.ruta-apoyo li span{color:var(--ink-mut);font-size:14px}
+/* Ruta en preparacion: sin paradas, salida al guia local. */
+.ruta-prep{margin:26px 0;padding:22px;border:1px dashed var(--line);
+ border-radius:var(--r);background:var(--paper)}
+.ruta-prep p{margin:0 0 14px;font-size:16.5px;line-height:1.65}
+.otras-rutas{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ margin:0;padding:0;list-style:none}
+.otras-rutas a{display:block;padding:14px 16px;background:#fff;border:1px solid var(--line);
+ border-radius:var(--r);text-decoration:none;font-weight:600;color:var(--ink)}
+.otras-rutas a:hover{border-color:var(--forest-3)}
+.otras-rutas a span{display:block;font-weight:400;font-size:14px;color:var(--ink-mut);margin-top:3px}
+@media(max-width:520px){
+  .ruta-hero{padding:20px}
+  .ruta-hero .rh-idea{font-size:18px}
+  ol.paradas>li{padding-left:44px}
+  ol.paradas>li::before{width:28px;height:28px;font-size:13px}
+  ol.paradas>li::after{left:13px;top:32px}
 }</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristAttraction","@id":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/tumba-cacique-bateca#lugar","name":"Tomb of Cacique Bateca","description":"On the old royal road, some 3.6 km southwest of town, stands a stone-and-lime tomb that the people of Labateca know as the tomb of Cacique Bateca. The chamber is closed with an iron grate and, around the opening, cast metal plaques carry messages of thanks: 'I give thanks to Cacique Bateca for a favour granted.' This is not merely a relic: it is a living devotional site where people still leave flowers and plaques. The name is not invented: the records of the Royal Audiencia show that on 4 May 1560 the Oidor Tomás López questioned, in the lodgings at Labateca, 'Batecabala, cacique' of the town, held in encomienda by Captain Andrés de Acevedo, through an interpreter. That this tomb is his is local tradition, not a fact verified by archaeologists; what is certain is that the cacique's name was written into sixteenth-century papers and still lives in Labateca's memory.","url":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/tumba-cacique-bateca","address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"},"image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/tumba-cacique-bateca-01","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/tumba-cacique-bateca-02","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/tumba-cacique-bateca-03","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/tumba-cacique-bateca-04","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/tumba-cacique-bateca-05","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/tumba-cacique-bateca-06"],"geo":{"@type":"GeoCoordinates","latitude":7.277147,"longitude":-72.518257},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.277147,-72.518257"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Places","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"What to see in Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/en/category/what-to-see"},{"@type":"ListItem","position":4,"name":"Tomb of Cacique Bateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/tumba-cacique-bateca"}]}</script>
@@ -188,6 +270,29 @@ footer.pie .pie-creador strong{font-weight:600}
 
     <p class="tip"><b>Tip:</b> Go with a guide or a neighbour who knows the royal road, and visit respectfully: for many families in Labateca this is a sacred site, not an attraction. Do not move or touch the plaques, the flowers or the grate. Pair the visit with the history of the Labateca pueblo de indios in the EL PUEBLO section.</p>
     
+
+  <aside class="en-ruta" style="--rc:#a4562f;--rcs:#f5e4db">
+    <div class="er-top"><span class="er-ico">🪶</span>
+      <a class="er-tit" href="/en/route/origen.html">The Indian Town of 1623</a>
+      <span class="er-pos">Stop 4 of 4 · Main stop</span></div>
+    <p class="er-guion">The route ends here, and what does not fit in a document begins. On the old royal road, a tomb of stone and lime closed with an iron grate. Around the opening hang cast-metal plaques: «I thank Cacique Bateca for a favour received». This is not a ruin: it is a living place of devotion. The authority the 1623 order set out to replace is still being thanked four centuries later.</p>
+    <div class="er-nav">
+      <a href="/en/place/biblioteca-publica">← Sister María Isaura Cardona Zapata Public Library</a>
+
+      <a class="er-todo" href="/en/route/origen.html">See the full route</a>
+    </div>
+  </aside>
+  <aside class="en-ruta" style="--rc:#2d6149;--rcs:#deeee7">
+    <div class="er-top"><span class="er-ico">🥾</span>
+      <a class="er-tit" href="/en/route/camino-real.html">From the Royal Road to the Lirgua Waterfalls</a>
+      <span class="er-pos">Stop 1 of 2 · Stop</span></div>
+    <p class="er-guion">3.6 km from town, on the old royal road, a tomb of stone and lime with an iron grate. The metal plaques around the opening are thank-yous: «I thank Cacique Bateca for a favour received». Pause before moving on: the road you are climbing is the one that appears in the chronicles.</p>
+    <div class="er-nav">
+
+      <a href="/en/place/lirgua">Lirgua and Dos Brazos Waterfalls →</a>
+      <a class="er-todo" href="/en/route/camino-real.html">See the full route</a>
+    </div>
+  </aside>
 
 
     <h2>Photos</h2>

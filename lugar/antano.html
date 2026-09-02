@@ -141,6 +141,88 @@ footer.pie .pie-creador strong{font-weight:600}
   dl.datos{grid-template-columns:1fr;gap:4px 0;padding:18px}
   dl.datos dt{margin-top:12px}
   dl.datos dt:first-child{margin-top:0}
+}
+/* ── Rutas ───────────────────────────────────────────────────
+   Bloque "esta ficha es parada de una ruta" y paginas de ruta. */
+.en-ruta{margin:34px 0 0;padding:20px 22px;border:1px solid var(--line);
+ border-left:4px solid var(--rc,var(--forest-3));border-radius:var(--r);background:var(--rcs,var(--paper))}
+.en-ruta+.en-ruta{margin-top:14px}
+.en-ruta .er-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.en-ruta .er-ico{font-size:22px;line-height:1}
+.en-ruta .er-tit{font-weight:700;color:var(--forest);text-decoration:none;font-size:17px}
+.en-ruta .er-tit:hover{text-decoration:underline}
+.en-ruta .er-pos{margin-left:auto;font-size:13px;font-weight:700;color:var(--rc,var(--forest-3));
+ background:#fff;border:1px solid var(--line);border-radius:99px;padding:3px 11px;white-space:nowrap}
+.en-ruta .er-guion{margin:0 0 12px;font-size:15.5px;line-height:1.6;color:var(--ink)}
+.en-ruta .er-nav{display:flex;gap:10px;flex-wrap:wrap;font-size:14px}
+.en-ruta .er-nav a{display:inline-block;padding:7px 13px;background:#fff;border:1px solid var(--line);
+ border-radius:99px;text-decoration:none;color:var(--ink);font-weight:600}
+.en-ruta .er-nav a:hover{border-color:var(--rc,var(--forest-3))}
+.en-ruta .er-nav .er-todo{background:var(--rc,var(--forest-3));color:#fff;border-color:transparent}
+/* Cabecera de la pagina de ruta */
+.ruta-hero{margin:8px 0 30px;padding:26px;border-radius:var(--r);
+ background:var(--rcs,var(--cream));border:1px solid var(--line);border-top:5px solid var(--rc,var(--forest-3))}
+.ruta-hero .rh-ico{font-size:38px;line-height:1}
+.ruta-hero h1{margin:8px 0 6px}
+.ruta-hero .rh-idea{margin:0 0 14px;font-family:Fraunces,Georgia,serif;font-size:20px;
+ line-height:1.4;color:var(--rc,var(--forest-3))}
+.ruta-hero .rh-desc{margin:0;font-size:17px;line-height:1.65;color:var(--ink)}
+.rh-datos{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.rh-datos li{background:#fff;border:1px solid var(--line);border-radius:99px;
+ padding:6px 13px;font-size:14px;font-weight:600;color:var(--ink)}
+.rh-datos li b{font-weight:800;color:var(--ink-mut);font-size:12px;text-transform:uppercase;
+ letter-spacing:.06em;margin-right:6px}
+.tema{margin:26px 0;padding:20px 22px;background:var(--forest);color:var(--cream);
+ border-radius:var(--r)}
+.tema b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.09em;
+ opacity:.72;margin-bottom:7px}
+.tema p{margin:0;font-size:18px;line-height:1.55;font-family:Fraunces,Georgia,serif}
+/* Las paradas, en orden */
+ol.paradas{list-style:none;margin:0;padding:0;counter-reset:par}
+ol.paradas>li{position:relative;padding:0 0 26px 54px;counter-increment:par}
+ol.paradas>li::before{content:counter(par);position:absolute;left:0;top:0;
+ width:34px;height:34px;border-radius:50%;background:var(--rc,var(--forest-3));color:#fff;
+ display:grid;place-items:center;font-weight:800;font-size:15px}
+/* La linea que une las paradas: hace que se lea como recorrido y no
+   como lista suelta. La ultima no la lleva. */
+ol.paradas>li::after{content:"";position:absolute;left:16px;top:38px;bottom:6px;
+ width:2px;background:var(--line)}
+ol.paradas>li:last-child{padding-bottom:0}
+ol.paradas>li:last-child::after{display:none}
+ol.paradas h3{margin:4px 0 4px;font-size:20px}
+ol.paradas h3 a{color:var(--forest);text-decoration:none}
+ol.paradas h3 a:hover{text-decoration:underline}
+.par-rol{display:inline-block;font-size:11.5px;font-weight:800;text-transform:uppercase;
+ letter-spacing:.07em;padding:3px 9px;border-radius:99px;margin-bottom:2px}
+.par-rol.focal{background:var(--rc,var(--forest-3));color:#fff}
+.par-rol.principal{background:#fff;border:1px solid var(--line);color:var(--ink-mut)}
+.par-rol.complementario{background:transparent;border:1px dashed var(--line);color:var(--ink-mut)}
+.par-guion{margin:6px 0 10px;font-size:16px;line-height:1.65}
+.par-meta{margin:0 0 8px;font-size:14px;color:var(--ink-mut)}
+.par-foto{border-radius:14px;margin:0 0 10px;width:100%;height:auto;display:block}
+/* Listas de apoyo: lecturas, donde dormir, fuentes */
+.ruta-apoyo{margin:30px 0 0;padding:20px 22px;background:var(--paper);
+ border:1px solid var(--line);border-radius:var(--r)}
+.ruta-apoyo h2{margin:0 0 10px;font-size:19px}
+.ruta-apoyo ul{margin:0;padding-left:20px}
+.ruta-apoyo li{margin:5px 0;font-size:15.5px}
+.ruta-apoyo li span{color:var(--ink-mut);font-size:14px}
+/* Ruta en preparacion: sin paradas, salida al guia local. */
+.ruta-prep{margin:26px 0;padding:22px;border:1px dashed var(--line);
+ border-radius:var(--r);background:var(--paper)}
+.ruta-prep p{margin:0 0 14px;font-size:16.5px;line-height:1.65}
+.otras-rutas{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ margin:0;padding:0;list-style:none}
+.otras-rutas a{display:block;padding:14px 16px;background:#fff;border:1px solid var(--line);
+ border-radius:var(--r);text-decoration:none;font-weight:600;color:var(--ink)}
+.otras-rutas a:hover{border-color:var(--forest-3)}
+.otras-rutas a span{display:block;font-weight:400;font-size:14px;color:var(--ink-mut);margin-top:3px}
+@media(max-width:520px){
+  .ruta-hero{padding:20px}
+  .ruta-hero .rh-idea{font-size:18px}
+  ol.paradas>li{padding-left:44px}
+  ol.paradas>li::before{width:28px;height:28px;font-size:13px}
+  ol.paradas>li::after{left:13px;top:32px}
 }</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","@id":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/antano#lugar","name":"Antaño Café-Bar","description":"Café-bar temático de ambiente vintage en el casco urbano de Labateca: paredes decoradas con discos de vinilo, tocadiscos, radios y teléfonos antiguos, faroles e hiedra. Un rincón nostálgico para tomar café, compartir una pizza artesanal o una bebida. Conserva fotografías históricas del pueblo.","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/antano","address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"},"image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/antano-02","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/antano-01","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/antano-03","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/antano-04","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/antano-05"],"geo":{"@type":"GeoCoordinates","latitude":7.2987856,"longitude":-72.4940529},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.2987856,-72.4940529","telephone":"+573212849284"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Dónde comer en Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/categoria/donde-comer"},{"@type":"ListItem","position":4,"name":"Antaño Café-Bar","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/antano"}]}</script>
@@ -189,6 +271,8 @@ footer.pie .pie-creador strong{font-weight:600}
 
     <p class="tip"><b>Consejo:</b> Ve al atardecer por un café o una pizza en un ambiente nostálgico. Fíjate en los vinilos, los radios antiguos y las fotos históricas del pueblo.</p>
     
+
+
 
 
     <h2>Fotos</h2>
