@@ -1,5 +1,5 @@
 {
-  "version": "1.10",
+  "version": "1.12",
   "lugares": [
     {
       "id": "templo",
@@ -7228,6 +7228,348 @@
           "en": "The courtyard and corridor seen from the far end."
         }
       ]
+    },
+    {
+      "id": "cascada-la-vega",
+      "categoria": "naturaleza",
+      "verified": false,
+      "pendiente": true,
+      "coordsApprox": true,
+      "telefono": "",
+      "nombre": {
+        "es": "Cascada La Vega",
+        "en": "La Vega Waterfall"
+      },
+      "desc": {
+        "es": "Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la dificultad y las fotografías. Se publica ahora para dejar constancia de que existe; el contenido se completa apenas se confirme.",
+        "en": "Entry in preparation. This place has no verified information yet: the exact location, walking time, difficulty and photographs are still to be recorded in the field. It is listed now so it is on record; the content will be completed once confirmed."
+      },
+      "comoLlegar": {
+        "es": "Por confirmar. Mientras tanto, no vayas por tu cuenta: pregúntale al guía local del municipio, que conoce el camino y su estado real. WhatsApp +57 321 273 7469.",
+        "en": "To be confirmed. In the meantime, do not go on your own: ask the town's local guide, who knows the route and its real condition. WhatsApp +57 321 273 7469."
+      },
+      "dist": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "tiempo": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "dificultad": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "recomendacion": {
+        "es": "Ficha pendiente por actualizar. Si conoces este lugar y quieres aportar datos o fotos, escríbenos desde la sección «Proponer un lugar». Para visitarlo con orientación, contacta al guía local: WhatsApp +57 321 273 7469.",
+        "en": "Entry pending update. If you know this place and want to contribute details or photos, write to us from the “Suggest a place” section. To visit it with guidance, contact the local guide: WhatsApp +57 321 273 7469."
+      },
+      "fotos": [],
+      "fotosCap": []
+    },
+    {
+      "id": "cascada-el-retiro",
+      "categoria": "naturaleza",
+      "verified": false,
+      "pendiente": true,
+      "coordsApprox": true,
+      "telefono": "",
+      "nombre": {
+        "es": "Cascada El Retiro",
+        "en": "El Retiro Waterfall"
+      },
+      "desc": {
+        "es": "Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la dificultad y las fotografías. Se publica ahora para dejar constancia de que existe; el contenido se completa apenas se confirme.",
+        "en": "Entry in preparation. This place has no verified information yet: the exact location, walking time, difficulty and photographs are still to be recorded in the field. It is listed now so it is on record; the content will be completed once confirmed."
+      },
+      "comoLlegar": {
+        "es": "Por confirmar. Mientras tanto, no vayas por tu cuenta: pregúntale al guía local del municipio, que conoce el camino y su estado real. WhatsApp +57 321 273 7469.",
+        "en": "To be confirmed. In the meantime, do not go on your own: ask the town's local guide, who knows the route and its real condition. WhatsApp +57 321 273 7469."
+      },
+      "dist": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "tiempo": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "dificultad": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "recomendacion": {
+        "es": "Ficha pendiente por actualizar. Si conoces este lugar y quieres aportar datos o fotos, escríbenos desde la sección «Proponer un lugar». Para visitarlo con orientación, contacta al guía local: WhatsApp +57 321 273 7469.",
+        "en": "Entry pending update. If you know this place and want to contribute details or photos, write to us from the “Suggest a place” section. To visit it with guidance, contact the local guide: WhatsApp +57 321 273 7469."
+      },
+      "fotos": [],
+      "fotosCap": []
+    },
+    {
+      "id": "cascada-la-golondrina",
+      "categoria": "naturaleza",
+      "verified": false,
+      "pendiente": true,
+      "coordsApprox": true,
+      "telefono": "",
+      "nombre": {
+        "es": "Cascada La Golondrina",
+        "en": "La Golondrina Waterfall"
+      },
+      "desc": {
+        "es": "Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la dificultad y las fotografías. Se publica ahora para dejar constancia de que existe; el contenido se completa apenas se confirme.",
+        "en": "Entry in preparation. This place has no verified information yet: the exact location, walking time, difficulty and photographs are still to be recorded in the field. It is listed now so it is on record; the content will be completed once confirmed."
+      },
+      "comoLlegar": {
+        "es": "Por confirmar. Mientras tanto, no vayas por tu cuenta: pregúntale al guía local del municipio, que conoce el camino y su estado real. WhatsApp +57 321 273 7469.",
+        "en": "To be confirmed. In the meantime, do not go on your own: ask the town's local guide, who knows the route and its real condition. WhatsApp +57 321 273 7469."
+      },
+      "dist": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "tiempo": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "dificultad": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "recomendacion": {
+        "es": "Ficha pendiente por actualizar. Si conoces este lugar y quieres aportar datos o fotos, escríbenos desde la sección «Proponer un lugar». Para visitarlo con orientación, contacta al guía local: WhatsApp +57 321 273 7469.",
+        "en": "Entry pending update. If you know this place and want to contribute details or photos, write to us from the “Suggest a place” section. To visit it with guidance, contact the local guide: WhatsApp +57 321 273 7469."
+      },
+      "fotos": [],
+      "fotosCap": []
+    },
+    {
+      "id": "cascada-san-francisco",
+      "categoria": "naturaleza",
+      "verified": false,
+      "pendiente": true,
+      "coordsApprox": true,
+      "telefono": "",
+      "nombre": {
+        "es": "Cascada San Francisco",
+        "en": "San Francisco Waterfall"
+      },
+      "desc": {
+        "es": "Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la dificultad y las fotografías. Se publica ahora para dejar constancia de que existe; el contenido se completa apenas se confirme.",
+        "en": "Entry in preparation. This place has no verified information yet: the exact location, walking time, difficulty and photographs are still to be recorded in the field. It is listed now so it is on record; the content will be completed once confirmed."
+      },
+      "comoLlegar": {
+        "es": "Por confirmar. Mientras tanto, no vayas por tu cuenta: pregúntale al guía local del municipio, que conoce el camino y su estado real. WhatsApp +57 321 273 7469.",
+        "en": "To be confirmed. In the meantime, do not go on your own: ask the town's local guide, who knows the route and its real condition. WhatsApp +57 321 273 7469."
+      },
+      "dist": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "tiempo": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "dificultad": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "recomendacion": {
+        "es": "Ficha pendiente por actualizar. Si conoces este lugar y quieres aportar datos o fotos, escríbenos desde la sección «Proponer un lugar». Para visitarlo con orientación, contacta al guía local: WhatsApp +57 321 273 7469.",
+        "en": "Entry pending update. If you know this place and want to contribute details or photos, write to us from the “Suggest a place” section. To visit it with guidance, contact the local guide: WhatsApp +57 321 273 7469."
+      },
+      "fotos": [],
+      "fotosCap": []
+    },
+    {
+      "id": "cascada-angelina",
+      "categoria": "naturaleza",
+      "verified": false,
+      "pendiente": true,
+      "coordsApprox": true,
+      "telefono": "",
+      "nombre": {
+        "es": "Cascada Angelina",
+        "en": "Angelina Waterfall"
+      },
+      "desc": {
+        "es": "Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la dificultad y las fotografías. Se publica ahora para dejar constancia de que existe; el contenido se completa apenas se confirme.",
+        "en": "Entry in preparation. This place has no verified information yet: the exact location, walking time, difficulty and photographs are still to be recorded in the field. It is listed now so it is on record; the content will be completed once confirmed."
+      },
+      "comoLlegar": {
+        "es": "Por confirmar. Mientras tanto, no vayas por tu cuenta: pregúntale al guía local del municipio, que conoce el camino y su estado real. WhatsApp +57 321 273 7469.",
+        "en": "To be confirmed. In the meantime, do not go on your own: ask the town's local guide, who knows the route and its real condition. WhatsApp +57 321 273 7469."
+      },
+      "dist": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "tiempo": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "dificultad": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "recomendacion": {
+        "es": "Ficha pendiente por actualizar. Si conoces este lugar y quieres aportar datos o fotos, escríbenos desde la sección «Proponer un lugar». Para visitarlo con orientación, contacta al guía local: WhatsApp +57 321 273 7469.",
+        "en": "Entry pending update. If you know this place and want to contribute details or photos, write to us from the “Suggest a place” section. To visit it with guidance, contact the local guide: WhatsApp +57 321 273 7469."
+      },
+      "fotos": [],
+      "fotosCap": []
+    },
+    {
+      "id": "sendero-ovejera-vista-hermosa",
+      "categoria": "naturaleza",
+      "verified": false,
+      "pendiente": true,
+      "coordsApprox": true,
+      "telefono": "",
+      "nombre": {
+        "es": "Sendero La Ovejera Vista Hermosa",
+        "en": "La Ovejera Vista Hermosa Trail"
+      },
+      "desc": {
+        "es": "Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la dificultad y las fotografías. Se publica ahora para dejar constancia de que existe; el contenido se completa apenas se confirme.",
+        "en": "Entry in preparation. This place has no verified information yet: the exact location, walking time, difficulty and photographs are still to be recorded in the field. It is listed now so it is on record; the content will be completed once confirmed."
+      },
+      "comoLlegar": {
+        "es": "Por confirmar. Mientras tanto, no vayas por tu cuenta: pregúntale al guía local del municipio, que conoce el camino y su estado real. WhatsApp +57 321 273 7469.",
+        "en": "To be confirmed. In the meantime, do not go on your own: ask the town's local guide, who knows the route and its real condition. WhatsApp +57 321 273 7469."
+      },
+      "dist": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "tiempo": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "dificultad": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "recomendacion": {
+        "es": "Ficha pendiente por actualizar. Si conoces este lugar y quieres aportar datos o fotos, escríbenos desde la sección «Proponer un lugar». Para visitarlo con orientación, contacta al guía local: WhatsApp +57 321 273 7469.",
+        "en": "Entry pending update. If you know this place and want to contribute details or photos, write to us from the “Suggest a place” section. To visit it with guidance, contact the local guide: WhatsApp +57 321 273 7469."
+      },
+      "fotos": [],
+      "fotosCap": []
+    },
+    {
+      "id": "laguna-negra",
+      "categoria": "naturaleza",
+      "verified": false,
+      "pendiente": true,
+      "coordsApprox": true,
+      "telefono": "",
+      "nombre": {
+        "es": "Laguna Negra",
+        "en": "Laguna Negra (Black Lagoon)"
+      },
+      "desc": {
+        "es": "Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la dificultad y las fotografías. Se publica ahora para dejar constancia de que existe; el contenido se completa apenas se confirme.",
+        "en": "Entry in preparation. This place has no verified information yet: the exact location, walking time, difficulty and photographs are still to be recorded in the field. It is listed now so it is on record; the content will be completed once confirmed."
+      },
+      "comoLlegar": {
+        "es": "Por confirmar. Mientras tanto, no vayas por tu cuenta: pregúntale al guía local del municipio, que conoce el camino y su estado real. WhatsApp +57 321 273 7469.",
+        "en": "To be confirmed. In the meantime, do not go on your own: ask the town's local guide, who knows the route and its real condition. WhatsApp +57 321 273 7469."
+      },
+      "dist": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "tiempo": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "dificultad": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "recomendacion": {
+        "es": "Ficha pendiente por actualizar. Si conoces este lugar y quieres aportar datos o fotos, escríbenos desde la sección «Proponer un lugar». Para visitarlo con orientación, contacta al guía local: WhatsApp +57 321 273 7469.",
+        "en": "Entry pending update. If you know this place and want to contribute details or photos, write to us from the “Suggest a place” section. To visit it with guidance, contact the local guide: WhatsApp +57 321 273 7469."
+      },
+      "fotos": [],
+      "fotosCap": []
+    },
+    {
+      "id": "sendero-alto-siscata",
+      "categoria": "naturaleza",
+      "verified": false,
+      "pendiente": true,
+      "coordsApprox": true,
+      "telefono": "",
+      "nombre": {
+        "es": "Sendero sobre la Cascada de Siscata",
+        "en": "Trail above the Siscata Waterfall"
+      },
+      "desc": {
+        "es": "Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la dificultad y las fotografías. Se publica ahora para dejar constancia de que existe; el contenido se completa apenas se confirme.",
+        "en": "Entry in preparation. This place has no verified information yet: the exact location, walking time, difficulty and photographs are still to be recorded in the field. It is listed now so it is on record; the content will be completed once confirmed."
+      },
+      "comoLlegar": {
+        "es": "Por confirmar. Mientras tanto, no vayas por tu cuenta: pregúntale al guía local del municipio, que conoce el camino y su estado real. WhatsApp +57 321 273 7469.",
+        "en": "To be confirmed. In the meantime, do not go on your own: ask the town's local guide, who knows the route and its real condition. WhatsApp +57 321 273 7469."
+      },
+      "dist": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "tiempo": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "dificultad": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "recomendacion": {
+        "es": "Ficha pendiente por actualizar. Si conoces este lugar y quieres aportar datos o fotos, escríbenos desde la sección «Proponer un lugar». Para visitarlo con orientación, contacta al guía local: WhatsApp +57 321 273 7469.",
+        "en": "Entry pending update. If you know this place and want to contribute details or photos, write to us from the “Suggest a place” section. To visit it with guidance, contact the local guide: WhatsApp +57 321 273 7469."
+      },
+      "fotos": [],
+      "fotosCap": []
+    },
+    {
+      "id": "centro-rehabilitacion",
+      "categoria": "servicios",
+      "verified": false,
+      "pendiente": true,
+      "coordsApprox": true,
+      "telefono": "",
+      "nombre": {
+        "es": "Centro de Rehabilitación de la Alcaldía",
+        "en": "Municipal Rehabilitation Centre"
+      },
+      "desc": {
+        "es": "Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la dificultad y las fotografías. Se publica ahora para dejar constancia de que existe; el contenido se completa apenas se confirme.",
+        "en": "Entry in preparation. This place has no verified information yet: the exact location, walking time, difficulty and photographs are still to be recorded in the field. It is listed now so it is on record; the content will be completed once confirmed."
+      },
+      "comoLlegar": {
+        "es": "Por confirmar. Mientras tanto, no vayas por tu cuenta: pregúntale al guía local del municipio, que conoce el camino y su estado real. WhatsApp +57 321 273 7469.",
+        "en": "To be confirmed. In the meantime, do not go on your own: ask the town's local guide, who knows the route and its real condition. WhatsApp +57 321 273 7469."
+      },
+      "dist": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "tiempo": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "dificultad": {
+        "es": "Por confirmar",
+        "en": "To be confirmed"
+      },
+      "recomendacion": {
+        "es": "Ficha pendiente por actualizar. Si conoces este lugar y quieres aportar datos o fotos, escríbenos desde la sección «Proponer un lugar». Para visitarlo con orientación, contacta al guía local: WhatsApp +57 321 273 7469.",
+        "en": "Entry pending update. If you know this place and want to contribute details or photos, write to us from the “Suggest a place” section. To visit it with guidance, contact the local guide: WhatsApp +57 321 273 7469."
+      },
+      "fotos": [],
+      "fotosCap": []
     }
   ]
 }

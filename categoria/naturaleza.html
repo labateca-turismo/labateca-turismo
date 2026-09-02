@@ -57,6 +57,12 @@ main{padding:26px 0 56px}
  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
 .lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+/* Ficha sin fotos todavia: marco sobrio en vez de imagen rota. */
+.lista .sinfoto{width:100%;aspect-ratio:16/10;display:flex;align-items:center;
+ justify-content:center;background:var(--cream);border-bottom:1px solid var(--line);
+ text-decoration:none}
+.lista .sinfoto span{font:600 13px/1.3 system-ui,sans-serif;letter-spacing:.06em;
+ text-transform:uppercase;color:var(--ink-mut);opacity:.75}
 .lista .cuerpo{padding:16px 18px 18px}
 .lista h3{margin:0 0 6px;font:700 19px/1.25 Fraunces,Georgia,serif}
 .lista h3 a{color:var(--forest);text-decoration:none}
@@ -114,7 +120,7 @@ footer.pie .pie-creador strong{font-weight:600}
   dl.datos dt{margin-top:12px}
   dl.datos dt:first-child{margin-top:0}
 }</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Cascadas y naturaleza en Labateca","description":"Lo que trae a la gente de fuera: las cascadas de Lirgua y Dos Brazos, la de Siscatá — a la que se llega por un sendero a pie, no en carro —, el centro turístico La Peña y el samán centenario. Lleva calzado que agarre y agua; en época de lluvias los caminos se ponen resbalosos y el caudal sube.","url":"https://labateca-turismo.labatecacolombia.workers.dev/categoria/naturaleza","inLanguage":"es-CO","isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"},"about":{"@type":"Place","name":"Labateca","address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"}},"mainEntity":{"@type":"ItemList","numberOfItems":6,"itemListElement":[{"@type":"ListItem","position":1,"name":"Cascada de Siscata","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/cascada-siscata"},{"@type":"ListItem","position":2,"name":"Cascada El Chorrerón","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/chorreron"},{"@type":"ListItem","position":3,"name":"Cascadas de Lirgua y Dos Brazos","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/lirgua"},{"@type":"ListItem","position":4,"name":"Centro Turístico La Peña","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/la-pena"},{"@type":"ListItem","position":5,"name":"El Samán","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/el-saman"},{"@type":"ListItem","position":6,"name":"Soma Grill y Aguascalientes","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/soma-aguascalientes"}]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Cascadas y naturaleza en Labateca","description":"Lo que trae a la gente de fuera: las cascadas de Lirgua y Dos Brazos, la de Siscatá — a la que se llega por un sendero a pie, no en carro —, el centro turístico La Peña y el samán centenario. Lleva calzado que agarre y agua; en época de lluvias los caminos se ponen resbalosos y el caudal sube.","url":"https://labateca-turismo.labatecacolombia.workers.dev/categoria/naturaleza","inLanguage":"es-CO","isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"},"about":{"@type":"Place","name":"Labateca","address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"}},"mainEntity":{"@type":"ItemList","numberOfItems":14,"itemListElement":[{"@type":"ListItem","position":1,"name":"Cascada Angelina","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/cascada-angelina"},{"@type":"ListItem","position":2,"name":"Cascada de Siscata","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/cascada-siscata"},{"@type":"ListItem","position":3,"name":"Cascada El Chorrerón","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/chorreron"},{"@type":"ListItem","position":4,"name":"Cascada El Retiro","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/cascada-el-retiro"},{"@type":"ListItem","position":5,"name":"Cascada La Golondrina","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/cascada-la-golondrina"},{"@type":"ListItem","position":6,"name":"Cascada La Vega","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/cascada-la-vega"},{"@type":"ListItem","position":7,"name":"Cascada San Francisco","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/cascada-san-francisco"},{"@type":"ListItem","position":8,"name":"Cascadas de Lirgua y Dos Brazos","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/lirgua"},{"@type":"ListItem","position":9,"name":"Centro Turístico La Peña","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/la-pena"},{"@type":"ListItem","position":10,"name":"El Samán","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/el-saman"},{"@type":"ListItem","position":11,"name":"Laguna Negra","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/laguna-negra"},{"@type":"ListItem","position":12,"name":"Sendero La Ovejera Vista Hermosa","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/sendero-ovejera-vista-hermosa"},{"@type":"ListItem","position":13,"name":"Sendero sobre la Cascada de Siscata","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/sendero-alto-siscata"},{"@type":"ListItem","position":14,"name":"Soma Grill y Aguascalientes","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/soma-aguascalientes"}]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Cascadas y naturaleza en Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/categoria/naturaleza"}]}</script>
 </head>
 <body>
@@ -143,6 +149,14 @@ footer.pie .pie-creador strong{font-weight:600}
 
   <ul class="lista">
     <li>
+      <a href="/lugar/cascada-angelina" class="sinfoto" tabindex="-1" aria-hidden="true"><span>Sin fotos todavía</span></a>
+      <div class="cuerpo">
+        <h3><a href="/lugar/cascada-angelina">Cascada Angelina</a></h3>
+        <p>Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la…</p>
+        <p class="horario">Por confirmar</p>
+      </div>
+    </li>
+    <li>
       <a href="/lugar/cascada-siscata" tabindex="-1" aria-hidden="true">
         <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_640,h_400,c_fill,g_auto,f_auto,q_auto/labateca/siscata-01"
              srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_480,h_300,c_fill,g_auto,f_auto,q_auto/labateca/siscata-01 480w, https://res.cloudinary.com/dwotodtoa/image/upload/w_640,h_400,c_fill,g_auto,f_auto,q_auto/labateca/siscata-01 640w"
@@ -164,6 +178,38 @@ footer.pie .pie-creador strong{font-weight:600}
         <h3><a href="/lugar/chorreron">Cascada El Chorrerón</a></h3>
         <p>Salto de agua muy alto que cae por la garganta entre dos montañas, en jurisdicción de San Bernardo. Se ve desde lejos como un hilo blanco sobre el…</p>
         <p class="horario">~35 min en vehículo + ~30 min entre moto y caminata</p>
+      </div>
+    </li>
+    <li>
+      <a href="/lugar/cascada-el-retiro" class="sinfoto" tabindex="-1" aria-hidden="true"><span>Sin fotos todavía</span></a>
+      <div class="cuerpo">
+        <h3><a href="/lugar/cascada-el-retiro">Cascada El Retiro</a></h3>
+        <p>Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la…</p>
+        <p class="horario">Por confirmar</p>
+      </div>
+    </li>
+    <li>
+      <a href="/lugar/cascada-la-golondrina" class="sinfoto" tabindex="-1" aria-hidden="true"><span>Sin fotos todavía</span></a>
+      <div class="cuerpo">
+        <h3><a href="/lugar/cascada-la-golondrina">Cascada La Golondrina</a></h3>
+        <p>Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la…</p>
+        <p class="horario">Por confirmar</p>
+      </div>
+    </li>
+    <li>
+      <a href="/lugar/cascada-la-vega" class="sinfoto" tabindex="-1" aria-hidden="true"><span>Sin fotos todavía</span></a>
+      <div class="cuerpo">
+        <h3><a href="/lugar/cascada-la-vega">Cascada La Vega</a></h3>
+        <p>Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la…</p>
+        <p class="horario">Por confirmar</p>
+      </div>
+    </li>
+    <li>
+      <a href="/lugar/cascada-san-francisco" class="sinfoto" tabindex="-1" aria-hidden="true"><span>Sin fotos todavía</span></a>
+      <div class="cuerpo">
+        <h3><a href="/lugar/cascada-san-francisco">Cascada San Francisco</a></h3>
+        <p>Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la…</p>
+        <p class="horario">Por confirmar</p>
       </div>
     </li>
     <li>
@@ -203,6 +249,30 @@ footer.pie .pie-creador strong{font-weight:600}
       </div>
     </li>
     <li>
+      <a href="/lugar/laguna-negra" class="sinfoto" tabindex="-1" aria-hidden="true"><span>Sin fotos todavía</span></a>
+      <div class="cuerpo">
+        <h3><a href="/lugar/laguna-negra">Laguna Negra</a></h3>
+        <p>Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la…</p>
+        <p class="horario">Por confirmar</p>
+      </div>
+    </li>
+    <li>
+      <a href="/lugar/sendero-ovejera-vista-hermosa" class="sinfoto" tabindex="-1" aria-hidden="true"><span>Sin fotos todavía</span></a>
+      <div class="cuerpo">
+        <h3><a href="/lugar/sendero-ovejera-vista-hermosa">Sendero La Ovejera Vista Hermosa</a></h3>
+        <p>Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la…</p>
+        <p class="horario">Por confirmar</p>
+      </div>
+    </li>
+    <li>
+      <a href="/lugar/sendero-alto-siscata" class="sinfoto" tabindex="-1" aria-hidden="true"><span>Sin fotos todavía</span></a>
+      <div class="cuerpo">
+        <h3><a href="/lugar/sendero-alto-siscata">Sendero sobre la Cascada de Siscata</a></h3>
+        <p>Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la…</p>
+        <p class="horario">Por confirmar</p>
+      </div>
+    </li>
+    <li>
       <a href="/lugar/soma-aguascalientes" tabindex="-1" aria-hidden="true">
         <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_640,h_400,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-01"
              srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_480,h_300,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-01 480w, https://res.cloudinary.com/dwotodtoa/image/upload/w_640,h_400,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-01 640w"
@@ -220,7 +290,7 @@ footer.pie .pie-creador strong{font-weight:600}
   <p><a href="/categoria/donde-comer">Dónde comer en Labateca</a> · <a href="/categoria/donde-dormir">Dónde dormir en Labateca</a> · <a href="/categoria/tiendas">Tiendas y comercio en Labateca</a> · <a href="/categoria/servicios">Servicios en Labateca</a> · <a href="/categoria/que-ver">Qué ver en Labateca</a></p>
 
   <div class="volver">
-    <p>La guía completa trae los 102 lugares en un mapa, con clima en vivo y rutas armadas.</p>
+    <p>La guía completa trae los 111 lugares en un mapa, con clima en vivo y rutas armadas.</p>
     <a class="btn s" href="/lugares">Ver la guía completa</a>
   </div>
 </main>

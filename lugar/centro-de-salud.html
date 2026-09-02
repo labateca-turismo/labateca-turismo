@@ -61,6 +61,12 @@ main{padding:26px 0 56px}
  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
 .lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+/* Ficha sin fotos todavia: marco sobrio en vez de imagen rota. */
+.lista .sinfoto{width:100%;aspect-ratio:16/10;display:flex;align-items:center;
+ justify-content:center;background:var(--cream);border-bottom:1px solid var(--line);
+ text-decoration:none}
+.lista .sinfoto span{font:600 13px/1.3 system-ui,sans-serif;letter-spacing:.06em;
+ text-transform:uppercase;color:var(--ink-mut);opacity:.75}
 .lista .cuerpo{padding:16px 18px 18px}
 .lista h3{margin:0 0 6px;font:700 19px/1.25 Fraunces,Georgia,serif}
 .lista h3 a{color:var(--forest);text-decoration:none}
@@ -118,7 +124,7 @@ footer.pie .pie-creador strong{font-weight:600}
   dl.datos dt{margin-top:12px}
   dl.datos dt:first-child{margin-top:0}
 }</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/centro-de-salud#lugar","name":"Centro de Salud Labateca — IPS","description":"El centro de salud del municipio, la IPS Labateca, adscrita a la E.S.E. Hospital Regional Suroriental. Funciona en una casa blanca de una planta, con zócalo de ladrillo y rejas blancas en las ventanas, y su lema pintado en el frontis: «Nuestro compromiso: su salud». Presta consulta de medicina general y odontología por cita, y tiene servicio de urgencias las 24 horas, todos los días.","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/centro-de-salud","image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/centro-de-salud-01","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/centro-de-salud-02","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/centro-de-salud-03"],"address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"geo":{"@type":"GeoCoordinates","latitude":7.299372,"longitude":-72.495055},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.299372,-72.495055","isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/centro-de-salud#lugar","name":"Centro de Salud Labateca — IPS","description":"El centro de salud del municipio, la IPS Labateca, adscrita a la E.S.E. Hospital Regional Suroriental. Funciona en una casa blanca de una planta, con zócalo de ladrillo y rejas blancas en las ventanas, y su lema pintado en el frontis: «Nuestro compromiso: su salud». Presta consulta de medicina general y odontología por cita, y tiene servicio de urgencias las 24 horas, todos los días.","url":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/centro-de-salud","address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"},"image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/centro-de-salud-01","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/centro-de-salud-02","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/centro-de-salud-03"],"geo":{"@type":"GeoCoordinates","latitude":7.299372,"longitude":-72.495055},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.299372,-72.495055"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Lugares","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Servicios en Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/categoria/servicios"},{"@type":"ListItem","position":4,"name":"Centro de Salud Labateca — IPS","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugar/centro-de-salud"}]}</script>
 </head>
 <body>
@@ -211,10 +217,10 @@ footer.pie .pie-creador strong{font-weight:600}
     <li><a href="/lugar/juzgado-labateca">Juzgado Promiscuo Municipal de Labateca
       <span>Es el despacho judicial del municipio, parte de la Rama Judicial de…</span></a></li>
   </ul>
-  <p class="masdeesto"><a href="/categoria/servicios">Ver los 22 →</a></p>
+  <p class="masdeesto"><a href="/categoria/servicios">Ver los 23 →</a></p>
 
   <div class="volver">
-    <p>Esta ficha es parte de la guía turística de Labateca: 102 lugares, mapa interactivo, clima en vivo y rutas.</p>
+    <p>Esta ficha es parte de la guía turística de Labateca: 111 lugares, mapa interactivo, clima en vivo y rutas.</p>
     <a class="btn s" href="/lugares">Ver la guía completa</a>
   </div>
 </main>

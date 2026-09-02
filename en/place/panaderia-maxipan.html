@@ -61,6 +61,12 @@ main{padding:26px 0 56px}
  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
 .lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+/* Ficha sin fotos todavia: marco sobrio en vez de imagen rota. */
+.lista .sinfoto{width:100%;aspect-ratio:16/10;display:flex;align-items:center;
+ justify-content:center;background:var(--cream);border-bottom:1px solid var(--line);
+ text-decoration:none}
+.lista .sinfoto span{font:600 13px/1.3 system-ui,sans-serif;letter-spacing:.06em;
+ text-transform:uppercase;color:var(--ink-mut);opacity:.75}
 .lista .cuerpo{padding:16px 18px 18px}
 .lista h3{margin:0 0 6px;font:700 19px/1.25 Fraunces,Georgia,serif}
 .lista h3 a{color:var(--forest);text-decoration:none}
@@ -118,7 +124,7 @@ footer.pie .pie-creador strong{font-weight:600}
   dl.datos dt{margin-top:12px}
   dl.datos dt:first-child{margin-top:0}
 }</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","@id":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/panaderia-maxipan#lugar","name":"Maxipan Bakery","description":"A bakery in Labateca's town center with fresh bread every day: soft rolls, mogollas, roscones, cheese bread, puff pastries and a variety of oven-baked goods. You'll also find crackers and snacks (Saltín Noel, Tosh, Yupis), sweets, Hit juices, sodas and cold drinks to go with them. A great spot for breakfast or an afternoon snack. Managed by Diego Ordóñez.","url":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/panaderia-maxipan","image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/panaderia-maxipan-01","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/panaderia-maxipan-02","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/panaderia-maxipan-03","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/panaderia-maxipan-04"],"address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"geo":{"@type":"GeoCoordinates","latitude":7.299102,"longitude":-72.494192},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.299102,-72.494192","isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"},"telephone":"+573168725118"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","@id":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/panaderia-maxipan#lugar","name":"Maxipan Bakery","description":"A bakery in Labateca's town center with fresh bread every day: soft rolls, mogollas, roscones, cheese bread, puff pastries and a variety of oven-baked goods. You'll also find crackers and snacks (Saltín Noel, Tosh, Yupis), sweets, Hit juices, sodas and cold drinks to go with them. A great spot for breakfast or an afternoon snack. Managed by Diego Ordóñez.","url":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/panaderia-maxipan","address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"},"image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/panaderia-maxipan-01","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/panaderia-maxipan-02","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/panaderia-maxipan-03","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/panaderia-maxipan-04"],"geo":{"@type":"GeoCoordinates","latitude":7.299102,"longitude":-72.494192},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.299102,-72.494192","telephone":"+573168725118"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Places","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"Where to eat in Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/en/category/where-to-eat"},{"@type":"ListItem","position":4,"name":"Maxipan Bakery","item":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/panaderia-maxipan"}]}</script>
 </head>
 <body>
@@ -222,7 +228,7 @@ footer.pie .pie-creador strong{font-weight:600}
   <p class="masdeesto"><a href="/en/category/where-to-eat">See all 26 →</a></p>
 
   <div class="volver">
-    <p>This listing is part of the Labateca tourism guide: 102 places, an interactive map, live weather and routes.</p>
+    <p>This listing is part of the Labateca tourism guide: 111 places, an interactive map, live weather and routes.</p>
     <a class="btn s" href="/lugares">Open the full guide</a>
   </div>
 </main>

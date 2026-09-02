@@ -61,6 +61,12 @@ main{padding:26px 0 56px}
  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
 .lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+/* Ficha sin fotos todavia: marco sobrio en vez de imagen rota. */
+.lista .sinfoto{width:100%;aspect-ratio:16/10;display:flex;align-items:center;
+ justify-content:center;background:var(--cream);border-bottom:1px solid var(--line);
+ text-decoration:none}
+.lista .sinfoto span{font:600 13px/1.3 system-ui,sans-serif;letter-spacing:.06em;
+ text-transform:uppercase;color:var(--ink-mut);opacity:.75}
 .lista .cuerpo{padding:16px 18px 18px}
 .lista h3{margin:0 0 6px;font:700 19px/1.25 Fraunces,Georgia,serif}
 .lista h3 a{color:var(--forest);text-decoration:none}
@@ -118,7 +124,7 @@ footer.pie .pie-creador strong{font-weight:600}
   dl.datos dt{margin-top:12px}
   dl.datos dt:first-child{margin-top:0}
 }</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristAttraction","@id":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/virgen-angustias#lugar","name":"Our Lady of Sorrows — Patroness","description":"She is the patroness of the municipality. Tradition tells that she appeared to the indigenous woman María Berbecí, near Bochagá —formerly Pueblo Viejo—, between 1560 and 1630. It is a deeply miraculous image; through its devotion and the fervor of the people, it gathers thousands of faithful at each of the five special celebrations held in her honor throughout the year. Her image is venerated in the shrine of the main altar, upon a wood-carved throne where devotees offer golden 'milagros' in gratitude.","url":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/virgen-angustias","image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/virgen-01","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/virgen-02","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/virgen-03","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/virgen-04c"],"address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"geo":{"@type":"GeoCoordinates","latitude":7.299582,"longitude":-72.4938511},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.299582,-72.4938511","isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristAttraction","@id":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/virgen-angustias#lugar","name":"Our Lady of Sorrows — Patroness","description":"She is the patroness of the municipality. Tradition tells that she appeared to the indigenous woman María Berbecí, near Bochagá —formerly Pueblo Viejo—, between 1560 and 1630. It is a deeply miraculous image; through its devotion and the fervor of the people, it gathers thousands of faithful at each of the five special celebrations held in her honor throughout the year. Her image is venerated in the shrine of the main altar, upon a wood-carved throne where devotees offer golden 'milagros' in gratitude.","url":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/virgen-angustias","address":{"@type":"PostalAddress","addressLocality":"Labateca","addressRegion":"Norte de Santander","addressCountry":"CO"},"isPartOf":{"@type":"WebSite","name":"Labateca · Volcanes de Dios","url":"https://labateca-turismo.labatecacolombia.workers.dev/"},"image":["https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/virgen-01","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/virgen-02","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/virgen-03","https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_jpg,q_auto/labateca/virgen-04c"],"geo":{"@type":"GeoCoordinates","latitude":7.299582,"longitude":-72.4938511},"hasMap":"https://www.google.com/maps/search/?api=1&query=7.299582,-72.4938511"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://labateca-turismo.labatecacolombia.workers.dev/"},{"@type":"ListItem","position":2,"name":"Places","item":"https://labateca-turismo.labatecacolombia.workers.dev/lugares"},{"@type":"ListItem","position":3,"name":"What to see in Labateca","item":"https://labateca-turismo.labatecacolombia.workers.dev/en/category/what-to-see"},{"@type":"ListItem","position":4,"name":"Our Lady of Sorrows — Patroness","item":"https://labateca-turismo.labatecacolombia.workers.dev/en/place/virgen-angustias"}]}</script>
 </head>
 <body>
@@ -221,7 +227,7 @@ footer.pie .pie-creador strong{font-weight:600}
   <p class="masdeesto"><a href="/en/category/what-to-see">See all 10 →</a></p>
 
   <div class="volver">
-    <p>This listing is part of the Labateca tourism guide: 102 places, an interactive map, live weather and routes.</p>
+    <p>This listing is part of the Labateca tourism guide: 111 places, an interactive map, live weather and routes.</p>
     <a class="btn s" href="/lugares">Open the full guide</a>
   </div>
 </main>
