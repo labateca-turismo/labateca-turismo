@@ -7,7 +7,7 @@
      - network-first      → datos dinámicos (clima Open-Meteo)
    ============================================================ */
 
-const CACHE_VERSION = 'labateca-v181';
+const CACHE_VERSION = 'labateca-v182';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE   = `${CACHE_VERSION}-images`;
 const DATA_CACHE    = `${CACHE_VERSION}-data`;
@@ -24,7 +24,7 @@ const PRECACHE_URLS = [
   '/historia/himno-de-labateca.html',
   '/historia/fotos-antiguas.html',
   '/en/history/our-lady-of-sorrows.html',
-  '/styles.css?v=181',
+  '/styles.css?v=182',
   '/app.js',
   '/offline.html',
   '/manifest.json',
@@ -122,6 +122,15 @@ self.addEventListener('fetch', event => {
     event.respondWith(staleWhileRevalidate(request, DATA_CACHE));
     return;
   }
+
+  /* 3-bis. Media (el MP3 del himno) → SIN interceptar.
+     Un <audio> no pide el archivo entero: pide trozos con la cabecera
+     Range para poder adelantar. Si el service worker responde con el
+     archivo completo y un 200, el navegador no puede buscar dentro de la
+     pista y en algunos casos ni la reproduce. Dejarlo pasar directo hace
+     que el servidor conteste 206 como debe. Tampoco conviene cachearlo:
+     son 2 MB que casi nadie va a oír dos veces. */
+  if (url.pathname.startsWith('/media/')) return;
 
   /* 4. CUALQUIER host externo -> SIN interceptar.
      Antes iban a cacheFirst y NUNCA funciono. El service worker se sirve con

@@ -2334,3 +2334,25 @@ a.vquote:hover .q-cta{color:var(--gold-soft)}
 }
 .nav-links .solo-es{background:transparent}
 footer .solo-es{background:transparent;border-color:rgba(255,255,255,.28);color:inherit;opacity:.8}
+
+/* ============================================================
+   REPRODUCTOR DEL HIMNO
+   ------------------------------------------------------------
+   Sustituye al video de YouTube que habia antes en
+   /historia/himno-de-labateca. El MP3 se sirve desde el propio
+   sitio (files/media/), asi que no hay terceros de por medio:
+   ni rastreo, ni publicidad, ni una peticion a YouTube.
+
+   preload="none" en el HTML: los 2 MB solo se bajan si la
+   persona toca reproducir.
+   ============================================================ */
+.himno-audio{
+  margin:0 0 18px;padding:18px 20px;background:var(--cream);
+  border:1px solid var(--line);border-left:4px solid var(--gold);
+  border-radius:var(--r-md,16px);
+}
+.himno-audio figcaption{
+  font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--clay);margin:0 0 12px;
+}
+.himno-audio audio{width:100%;display:block;height:44px}
