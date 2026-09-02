@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+# /qr es la herramienta interna que arma los carteles de los 111 lugares.
+# No es contenido para el visitante y no aporta nada en un buscador.
+Disallow: /qr
 
 Sitemap: https://labateca-turismo.labatecacolombia.workers.dev/sitemap.xml
