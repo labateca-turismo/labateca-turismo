@@ -1092,9 +1092,10 @@ function paradasDe(r) {
     .map(p => p.id);
 }
 
-/* URL de la página propia de la ruta (la que indexa Google). */
+/* URL de la página propia de la ruta (la que indexa Google). Sin ".html":
+   Cloudflare sirve /ruta/cerca y responde 307 a /ruta/cerca.html. */
 function urlRuta(id) {
-  return lang === 'es' ? `/ruta/${id}.html` : `/en/route/${id}.html`;
+  return lang === 'es' ? `/ruta/${id}` : `/en/route/${id}`;
 }
 
 function renderRutas() {
