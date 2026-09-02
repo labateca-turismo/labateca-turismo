@@ -1134,6 +1134,7 @@ function setLang(l){
   es.setAttribute("aria-pressed",l==="es"?"true":"false");
   en.setAttribute("aria-pressed",l==="en"?"true":"false");
   applyI18n(); renderFilters(); renderPlaces(); renderGallery(); renderDrawer(); renderRutas();
+  marcarSoloES();   // la marca «ES» se repinta: applyI18n la borra
   wireGuia();   // el mensaje que va precargado en WhatsApp cambia de idioma
 }
 
@@ -2623,6 +2624,7 @@ function init(){
   try { updateBadges();  } catch(e) { console.warn('updateBadges',e);  }
   try { wireLinks();     } catch(e) { console.warn('wireLinks',e);     }
   try { initBuscador(); } catch(e) { console.warn('initBuscador',e); }
+  try { marcarSoloES();  } catch(e) { console.warn('marcarSoloES',e);  }
   try { initVideos();    } catch(e) { console.warn('initVideos',e);    }
   try { initYouTube();   } catch(e) { console.warn('initYouTube',e);   }
   try { loadVisitCounter(); } catch(e) { console.warn('loadVisitCounter',e); }
@@ -2975,6 +2977,51 @@ function bsTeclas(e){
     const el = items[_bsIdx] || items[0];
     if (el){ e.preventDefault(); window.location.href = el.getAttribute("href"); }
   }
+}
+
+/* ============================================================
+   🇬🇧 AVISO DE CONTENIDO SOLO EN ESPAÑOL
+   ------------------------------------------------------------
+   Las 111 fichas y las 6 categorías sí están traducidas, y la guía
+   misma cambia de idioma entera. Pero /pueblo, /viva, /transporte,
+   /libro y las páginas legales tienen el armazón traducido y el
+   CUERPO solo en español.
+
+   Cuando la guía está en inglés esos enlaces se marcan con «ES»,
+   igual que en las fichas generadas: avisar antes de que pulsen es
+   mejor que prometer inglés y entregar español.
+
+   Tiene que correr DESPUÉS de applyI18n(), porque esa función
+   reescribe el innerHTML de todo lo que lleva data-i18n y se
+   llevaría por delante la marca.
+   ============================================================ */
+const SOLO_ES = ['/pueblo', '/viva', '/transporte', '/libro',
+                 '/biblioteca', '/privacidad', '/terminos', '/proponer'];
+
+function marcarSoloES(){
+  document.querySelectorAll('a[href]').forEach(a => {
+    const base = (a.getAttribute('href') || '')
+      .split('?')[0].split('#')[0].replace(/\.html$/, '');
+    if (SOLO_ES.indexOf(base) === -1) return;
+    /* Los controles de solo icono se saltan: llevan data-i18n-aria en vez
+       de texto visible (su etiqueta va oculta), así que la marca sería lo
+       ÚNICO que se ve dentro del botón redondo. El del bus es el caso. */
+    if (a.hasAttribute('data-i18n-aria')) return;
+    const marca = a.querySelector('.solo-es');
+    if (lang === 'en') {
+      a.setAttribute('hreflang', 'es');
+      if (!marca) {
+        const s = document.createElement('span');
+        s.className = 'solo-es';
+        s.title = 'Only available in Spanish';
+        s.textContent = 'ES';
+        a.appendChild(s);
+      }
+    } else {
+      a.removeAttribute('hreflang');
+      if (marca) marca.remove();
+    }
+  });
 }
 
 function initBuscador(){

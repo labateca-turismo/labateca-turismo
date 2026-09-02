@@ -45,6 +45,13 @@ header.top a{color:#fff;text-decoration:none}
 .brand small{display:block;font-weight:400;font-size:12px;opacity:.75;letter-spacing:.08em;text-transform:uppercase}
 header.top nav{margin-left:auto;display:flex;gap:18px;font-size:15px;flex-wrap:wrap}
 header.top nav a:hover{text-decoration:underline}
+/* Marca «ES» en las paginas en ingles: avisa que ese enlace lleva a
+   contenido escrito solo en espanol. Prometer ingles y entregar
+   espanol es peor que avisarlo antes de que pulsen. */
+.solo-es{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.08em;
+ vertical-align:2px;margin-left:3px;padding:1px 4px;border-radius:4px;
+ background:var(--cream);color:var(--ink-mut);border:1px solid var(--line)}
+footer.pie .solo-es{background:transparent}
 main{padding:26px 0 56px}
 .miga{font-size:14px;color:var(--ink-mut);margin:0 0 18px}
 .miga a{color:var(--ink-mut)}
@@ -138,22 +145,22 @@ footer.pie .pie-creador strong{font-weight:600}
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="/">
+    <a class="brand" href="/?lang=en">
       <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_84,h_84,c_fill,f_auto,q_auto/labateca/logo-templo" alt="" width="42" height="42">
       <span>Labateca<small>Volcanes de Dios</small></span>
     </a>
     <nav>
-      <a href="/lugares">All places</a>
-      <a href="/pueblo">The town</a>
-      <a href="/viva">Living Labateca</a>
+      <a href="/lugares?lang=en">All places</a>
+      <a href="/pueblo" hreflang="es">The town <span class="solo-es" title="Only available in Spanish">ES</span></a>
+      <a href="/viva" hreflang="es">Living Labateca <span class="solo-es" title="Only available in Spanish">ES</span></a>
       <a href="https://labateca-turismo.labatecacolombia.workers.dev/categoria/donde-comer" hreflang="es">Español</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
-  <p class="miga"><a href="/">Home</a> ›
-    <a href="/lugares">Places</a> › Where to eat in Labateca</p>
+  <p class="miga"><a href="/?lang=en">Home</a> ›
+    <a href="/lugares?lang=en">Places</a> › Where to eat in Labateca</p>
 
   <h1>Where to eat in Labateca</h1>
   <p class="lead">The day in Labateca starts at the bakery and at the cafés that open at 6:30 a.m. with black coffee, empanadas and broth. Lunch is the set menu; by the afternoon come the burgers, the ice cream and the grill, and on weekends the bars and open-air spots beside the football pitch. Almost everything is a few blocks from the main square, so you can walk from one to the next.</p>
@@ -478,16 +485,16 @@ footer.pie .pie-creador strong{font-weight:600}
 
   <div class="volver">
     <p>The full guide puts all 111 places on a map, with live weather and ready-made routes.</p>
-    <a class="btn s" href="/lugares">Open the full guide</a>
+    <a class="btn s" href="/lugares?lang=en">Open the full guide</a>
   </div>
 </main>
 
 <footer class="pie">
   <div class="wrap">
     © 2026 Labateca Turismo ·
-    <a href="/">Home</a> ·
-    <a href="/pueblo">Town history</a> ·
-    <a href="/privacidad">Privacy</a>
+    <a href="/?lang=en">Home</a> ·
+    <a href="/pueblo" hreflang="es">Town history <span class="solo-es" title="Only available in Spanish">ES</span></a> ·
+    <a href="/privacidad" hreflang="es">Privacy <span class="solo-es" title="Only available in Spanish">ES</span></a>
     <div class="pie-creador">Created by <strong>José Rafael Cáceres Garavito</strong> with the Labateca community.</div>
   </div>
 </footer>

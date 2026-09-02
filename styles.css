@@ -2315,3 +2315,22 @@ a.vquote:hover .q-cta{color:var(--gold-soft)}
 @media(min-width:360px) and (max-width:760px){
   .brand-sub{display:block;font-size:.5rem;letter-spacing:.1em}
 }
+
+/* ============================================================
+   MARCA «ES» — contenido que solo existe en espanol
+   ------------------------------------------------------------
+   Las 111 fichas y las 6 categorias si estan traducidas, y la guia
+   cambia de idioma entera. Pero /pueblo, /viva, /transporte, /libro
+   y las paginas legales tienen el armazon traducido y el CUERPO solo
+   en espanol. Con la guia en ingles esos enlaces llevan esta marca.
+   La pone marcarSoloES() en app.js; la misma regla existe dentro de
+   las paginas generadas por gen_seo.js.
+   ============================================================ */
+.solo-es{
+  display:inline-block;font-size:9px;font-weight:700;letter-spacing:.08em;
+  vertical-align:2px;margin-left:5px;padding:1px 4px;border-radius:4px;
+  background:var(--cream);color:var(--ink-mut);
+  border:1px solid var(--line);line-height:1.5;
+}
+.nav-links .solo-es{background:transparent}
+footer .solo-es{background:transparent;border-color:rgba(255,255,255,.28);color:inherit;opacity:.8}

@@ -49,6 +49,13 @@ header.top a{color:#fff;text-decoration:none}
 .brand small{display:block;font-weight:400;font-size:12px;opacity:.75;letter-spacing:.08em;text-transform:uppercase}
 header.top nav{margin-left:auto;display:flex;gap:18px;font-size:15px;flex-wrap:wrap}
 header.top nav a:hover{text-decoration:underline}
+/* Marca «ES» en las paginas en ingles: avisa que ese enlace lleva a
+   contenido escrito solo en espanol. Prometer ingles y entregar
+   espanol es peor que avisarlo antes de que pulsen. */
+.solo-es{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.08em;
+ vertical-align:2px;margin-left:3px;padding:1px 4px;border-radius:4px;
+ background:var(--cream);color:var(--ink-mut);border:1px solid var(--line)}
+footer.pie .solo-es{background:transparent}
 main{padding:26px 0 56px}
 .miga{font-size:14px;color:var(--ink-mut);margin:0 0 18px}
 .miga a{color:var(--ink-mut)}
@@ -147,17 +154,17 @@ footer.pie .pie-creador strong{font-weight:600}
       <span>Labateca<small>Volcanes de Dios</small></span>
     </a>
     <nav>
-      <a href="/lugares">All places</a>
-      <a href="/pueblo">The town</a>
-      <a href="/viva">Living Labateca</a>
+      <a href="/lugares?lang=en">All places</a>
+      <a href="/pueblo" hreflang="es">The town <span class="solo-es" title="Only available in Spanish">ES</span></a>
+      <a href="/viva" hreflang="es">Living Labateca <span class="solo-es" title="Only available in Spanish">ES</span></a>
       <a href="https://labateca-turismo.labatecacolombia.workers.dev/lugar/registraduria" hreflang="es">Español</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
-  <p class="miga"><a href="/">Home</a> ›
-    <a href="/lugares">Places</a> ›
+  <p class="miga"><a href="/?lang=en">Home</a> ›
+    <a href="/lugares?lang=en">Places</a> ›
     <a href="/en/category/services">Services in Labateca</a> › Civil Registry Office (Registraduría)</p>
 
   <article>
@@ -169,7 +176,7 @@ footer.pie .pie-creador strong{font-weight:600}
       <a class="btn p" href="https://www.google.com/maps/search/?api=1&query=7.3005588,-72.4949505" target="_blank" rel="noopener">Get directions</a>
       
       
-      <a class="btn s" href="/?lugar=registraduria">See it on the map</a>
+      <a class="btn s" href="/?lugar=registraduria&amp;lang=en">See it on the map</a>
     </div>
 
     <dl class="datos">
@@ -230,16 +237,16 @@ footer.pie .pie-creador strong{font-weight:600}
 
   <div class="volver">
     <p>This listing is part of the Labateca tourism guide: 111 places, an interactive map, live weather and routes.</p>
-    <a class="btn s" href="/lugares">Open the full guide</a>
+    <a class="btn s" href="/lugares?lang=en">Open the full guide</a>
   </div>
 </main>
 
 <footer class="pie">
   <div class="wrap">
     © 2026 Labateca Turismo ·
-    <a href="/">Home</a> ·
-    <a href="/pueblo">Town history</a> ·
-    <a href="/privacidad">Privacy</a>
+    <a href="/?lang=en">Home</a> ·
+    <a href="/pueblo" hreflang="es">Town history <span class="solo-es" title="Only available in Spanish">ES</span></a> ·
+    <a href="/privacidad" hreflang="es">Privacy <span class="solo-es" title="Only available in Spanish">ES</span></a>
     <div class="pie-creador">Created by <strong>José Rafael Cáceres Garavito</strong> with the Labateca community.</div>
   </div>
 </footer>
