@@ -2397,3 +2397,6 @@ footer .solo-es{background:transparent;border-color:rgba(255,255,255,.28);color:
   .qr-codigo img{width:170px;height:170px}
   .qr-url{text-align:center}
 }
+.btn-qr.sec{background:transparent;color:var(--forest,#16352a);
+  border:1px solid var(--line,#e2d8c4);margin-left:8px}
+@media(max-width:560px){.btn-qr.sec{margin:10px 0 0}}
