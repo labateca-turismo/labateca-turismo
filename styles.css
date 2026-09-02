@@ -720,7 +720,9 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;
    Pro Max 430. El espacio se saca de los controles y del logo, NO del
    nombre: la marca es lo único que no se puede recortar sin que el sitio
    deje de decir cómo se llama. Con esto quedan ~87px para 71 que necesita. */
-@media(max-width:430px){
+/* Hasta 520 y no 430: entre 431 y 520 vuelven a convivir la lupa Y el icono
+   del bus, y con el encabezado ancho al nombre le quedaba 1px de margen. */
+@media(max-width:520px){
   .wrap.nav{gap:8px;padding-left:10px;padding-right:10px}
   .nav-links{left:10px;right:10px}
   .brand{gap:8px}
@@ -2251,3 +2253,47 @@ a.vquote:hover .q-cta{color:var(--gold-soft)}
   #buscador{padding:0}
   .bs-caja{max-height:100vh;height:100%;border-radius:0;width:100%}
 }
+
+/* ============================================================
+   MARCA — logo y texto como un solo bloque
+   ------------------------------------------------------------
+   En el PC el nombre y «Volcanes de Dios» se separaban 13px y el
+   bloque de texto quedaba MAS ALTO que el logo (56px contra 42px),
+   asi que la marca se veia partida en dos.
+
+   La causa: entre los dos <span> hay un <br>, y el alto de esas dos
+   lineas lo manda el interlineado heredado del padre (28px), no el
+   de cada span. Con una columna flex el <br> sobra y el espacio se
+   controla a mano. Aplica al encabezado y al pie, que comparten la
+   misma estructura.
+   ============================================================ */
+.brand>span{display:flex;flex-direction:column;justify-content:center;gap:2px;line-height:1}
+.brand>span br{display:none}
+.brand-name{display:block;line-height:1.02}
+.brand-sub{display:block;line-height:1.15}
+/* En movil el subtitulo sigue oculto: se redeclara aqui porque la regla
+   de arriba es posterior a la del bloque de 760px y la ganaba. */
+@media(max-width:760px){ .brand-sub{display:none} }
+
+/* ============================================================
+   IDIOMA: UN SOLO BOTON EN PANTALLAS ESTRECHAS
+   ------------------------------------------------------------
+   ES/EN ocupaba 96px con dos botones de 44 (WCAG 2.5.8), pero solo
+   uno es accionable: el otro es el idioma en el que YA estas. Al
+   ocultar el activo queda un boton que dice a que idioma cambias,
+   se liberan 52px y la lupa cabe en cualquier telefono.
+
+   No toca el JavaScript: los dos botones siguen en el DOM, asi que
+   setLang(), init() y los aria-pressed funcionan igual.
+   ============================================================ */
+@media(max-width:760px){
+  .lang-toggle button.active{display:none}
+}
+
+/* Con el espacio liberado, la lupa ya cabe en todos los anchos.
+   Antes se escondia por debajo de 431px, y entre 431 y 480 -donde
+   convivia con el icono del bus- volvia a cortar el nombre. */
+.bs-btn{display:inline-flex}
+/* En el PC el menu es horizontal y la lupa ya esta a la vista: ahi
+   «Buscar» dentro del menu sobra. */
+@media(min-width:761px){ .bs-menu{display:none} }
