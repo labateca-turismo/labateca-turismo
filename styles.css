@@ -2356,3 +2356,20 @@ footer .solo-es{background:transparent;border-color:rgba(255,255,255,.28);color:
   color:var(--clay);margin:0 0 12px;
 }
 .himno-audio audio{width:100%;display:block;height:44px}
+
+/* Creditos del himno, bajo el reproductor. Van en <dl> porque son pares
+   de rotulo y valor, no una lista suelta. */
+.himno-creditos{
+  display:grid;grid-template-columns:auto 1fr;gap:4px 14px;
+  margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line);
+  font-size:.9rem;
+}
+.himno-creditos dt{
+  font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--clay);align-self:center;
+}
+.himno-creditos dd{margin:0;color:var(--ink)}
+@media(max-width:480px){
+  .himno-creditos{grid-template-columns:1fr;gap:1px 0}
+  .himno-creditos dd{margin:0 0 8px}
+}
