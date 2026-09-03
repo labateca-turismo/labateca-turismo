@@ -35,7 +35,7 @@
 <noscript><link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700;800&display=swap" /></noscript>
 
-<link rel="stylesheet" href="/styles.css?v=193">
+<link rel="stylesheet" href="/styles.css?v=194">
 
 <script type="application/ld+json">
 {
@@ -181,8 +181,10 @@
          (data/conductores.json). Hidden until at least one entry has
          tipo:"intermunicipal". -->
     <div class="cond-bloque" id="condInter" style="display:none">
-      <h3 class="cond-subtitulo">Drivers you can contact directly</h3>
-      <p class="cond-intro">People and companies who have authorised us to publish their details for this trip.</p>
+      <h3 class="cond-subtitulo">The buses, one by one</h3>
+      <p class="cond-intro">The companies and routes that run these journeys, with the times
+      they gave us themselves. <strong>Confirm them when you call</strong>: they change with
+      the road, the season and public holidays.</p>
       <div class="cond-grid" id="condInterGrid"></div>
     </div>
   </div>
@@ -203,6 +205,10 @@
          empty the notice below shows; as soon as an entry has tipo:"municipal"
          the notice hides and the grid appears. -->
     <div class="cond-grid" id="condMunGrid" style="display:none"></div>
+    <p class="cond-intro" id="condMunNota" style="display:none">These drivers registered
+    with us and authorised us to publish their details. They have not given us fixed
+    timetables or fares yet: <strong>the trip and the price are agreed directly with
+    each of them</strong>, which is how it has always worked here.</p>
 
     <div class="tr-pendiente" id="trPendiente">
       <h3>We are still gathering this part</h3>
@@ -293,21 +299,28 @@ function toggleMenu(){
       return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
     });
   }
+  /* Text fields arrive either as a plain string or as {es,en}: the same
+     conductores.json feeds this page and the Spanish /transporte. */
+  function T(v){
+    if (v == null) return '';
+    if (typeof v === 'string') return v;
+    return v.en || v.es || '';
+  }
   function tarjeta(c){
     var tel = String(c.whatsapp||'').replace(/[^0-9]/g,'');
     var wa = tel ? '<a class="cond-wa" href="https://wa.me/'+tel+'?text='+
       encodeURIComponent('Hi! I found you on the Labateca guide, about transport.')+
       '" target="_blank" rel="noopener noreferrer">WhatsApp</a>' : '';
     var filas = [
-      c.vehiculo ? ['🚗', c.vehiculo] : null,
-      c.rutas    ? ['📍', c.rutas]    : null,
-      c.horario  ? ['🕒', c.horario]  : null
+      T(c.vehiculo) ? ['🚗', T(c.vehiculo)] : null,
+      T(c.rutas)    ? ['📍', T(c.rutas)]    : null,
+      T(c.horario)  ? ['🕒', T(c.horario)]  : null
     ].filter(Boolean).map(function(par){
       return '<li><span aria-hidden="true">'+par[0]+'</span> '+escHtml(par[1])+'</li>';
     }).join('');
-    return '<div class="cond-card reveal in"><h4>'+escHtml(c.nombre)+'</h4>'+
+    return '<div class="cond-card reveal in"><h4>'+escHtml(T(c.nombre))+'</h4>'+
       '<ul class="cond-datos">'+filas+'</ul>'+
-      (c.notas ? '<p class="cond-notas">'+escHtml(c.notas)+'</p>' : '')+
+      (T(c.notas) ? '<p class="cond-notas">'+escHtml(T(c.notas))+'</p>' : '')+
       wa+'</div>';
   }
   fetch('/data/conductores.json').then(function(r){ return r.json(); }).then(function(j){
@@ -326,6 +339,8 @@ function toggleMenu(){
     if(gridMun && mun.length){
       gridMun.innerHTML = mun.map(tarjeta).join('');
       gridMun.style.display = '';
+      var nota = document.getElementById('condMunNota');
+      if(nota) nota.style.display = '';
       var pend = document.getElementById('trPendiente');
       if(pend) pend.style.display = 'none';
     }

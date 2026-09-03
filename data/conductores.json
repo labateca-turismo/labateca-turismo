@@ -1,4 +1,205 @@
 {
-  "version": "1.0",
-  "conductores": []
+  "version": "1.1",
+  "_nota": "Datos del REGISTRO DE TRANSPORTISTAS ALIADOS (hojas 1 y 2, 2 sep 2026) y de los avisos que las mismas empresas hacen circular. Los cuatro municipales firmaron la autorizacion de Ley 1581; los intermunicipales todavia no: son empresas y rutas cuyos telefonos y horarios ellas mismas publican, y Jose autorizo publicarlos mientras se recogen las firmas. Las placas solo se escriben cuando se leen sin duda en una foto real del vehiculo o en el formato.",
+  "conductores": [
+    {
+      "id": "motilones",
+      "tipo": "intermunicipal",
+      "nombre": "Los Motilones — Yorman Capacho",
+      "whatsapp": "573112001221",
+      "vehiculo": {
+        "es": "Bus blanco N.º 61, placa SND-077",
+        "en": "White bus no. 61, plate SND-077"
+      },
+      "rutas": {
+        "es": "Cúcuta ⇄ Labateca",
+        "en": "Cúcuta ⇄ Labateca"
+      },
+      "horario": {
+        "es": "Sale de Cúcuta 5:00 a. m. y llega a Labateca 8:30 a. m. · Sale de Labateca 1:30 p. m. y llega a Cúcuta 5:00 p. m.",
+        "en": "Leaves Cúcuta 5:00 a.m., arrives in Labateca 8:30 a.m. · Leaves Labateca 1:30 p.m., arrives in Cúcuta 5:00 p.m."
+      }
+    },
+    {
+      "id": "cotranal-034",
+      "tipo": "intermunicipal",
+      "nombre": "Cotranal · Ruta 034",
+      "whatsapp": "573124794992",
+      "vehiculo": {
+        "es": "Bus Cotranal 034, blanco y verde",
+        "en": "Cotranal bus no. 034, white and green"
+      },
+      "rutas": {
+        "es": "Cúcuta · Toledo · Labateca",
+        "en": "Cúcuta · Toledo · Labateca"
+      },
+      "horario": {
+        "es": "Cúcuta – Toledo – Labateca: 9:20 a. m. · Labateca – Cúcuta: 3:15 p. m. · Toledo – Cúcuta: 4:00 p. m.",
+        "en": "Cúcuta – Toledo – Labateca: 9:20 a.m. · Labateca – Cúcuta: 3:15 p.m. · Toledo – Cúcuta: 4:00 p.m."
+      },
+      "notas": {
+        "es": "Ellos mismos piden reservar el puesto con tiempo.",
+        "en": "They ask you to reserve your seat ahead of time."
+      }
+    },
+    {
+      "id": "cotranal-buseta",
+      "tipo": "intermunicipal",
+      "nombre": {
+        "es": "Cotranal · buseta Labateca – Toledo – Cúcuta",
+        "en": "Cotranal · Labateca – Toledo – Cúcuta minibus"
+      },
+      "whatsapp": "573142882001",
+      "vehiculo": {
+        "es": "Buseta Volkswagen blanca",
+        "en": "White Volkswagen minibus"
+      },
+      "rutas": {
+        "es": "Labateca · Toledo · Cúcuta",
+        "en": "Labateca · Toledo · Cúcuta"
+      },
+      "horario": {
+        "es": "Sale de Labateca 5:50 a. m. y de Toledo 6:30 a. m. · Regresa de Cúcuta 2:00 p. m.",
+        "en": "Leaves Labateca 5:50 a.m. and Toledo 6:30 a.m. · Returns from Cúcuta 2:00 p.m."
+      },
+      "notas": {
+        "es": "Servicio todos los días. Lleva pasajeros y encomiendas.",
+        "en": "Runs every day. Carries passengers and parcels."
+      }
+    },
+    {
+      "id": "concorde",
+      "tipo": "intermunicipal",
+      "nombre": "Concorde — Transportes Providencia",
+      "whatsapp": "573025786826",
+      "vehiculo": {
+        "es": "Bus Concorde N.º 2383, negro y plateado, placa ESX-855",
+        "en": "Concorde bus no. 2383, black and silver, plate ESX-855"
+      },
+      "rutas": {
+        "es": "Cúcuta ⇄ San Bernardo, el corregimiento de Labateca",
+        "en": "Cúcuta ⇄ San Bernardo, Labateca's outlying township"
+      },
+      "horario": {
+        "es": "Sale de Cúcuta 4:00 a. m. · Regresa de San Bernardo 5:30 a. m.",
+        "en": "Leaves Cúcuta 4:00 a.m. · Returns from San Bernardo 5:30 a.m."
+      }
+    },
+    {
+      "id": "cotranal-naranja",
+      "tipo": "intermunicipal",
+      "nombre": {
+        "es": "Cotranal · bus naranja",
+        "en": "Cotranal · orange bus"
+      },
+      "whatsapp": "573118353089",
+      "vehiculo": {
+        "es": "Bus naranja, placa SQJ-116",
+        "en": "Orange bus, plate SQJ-116"
+      },
+      "rutas": {
+        "es": "Pamplona · Lejía · Labateca · Toledo",
+        "en": "Pamplona · Lejía · Labateca · Toledo"
+      },
+      "horario": {
+        "es": "Sale de Pamplona 10:00 a. m., Lejía 10:20 a. m., Labateca 11:40 a. m. y llega a Toledo 12:15 p. m. · Regresa de Toledo 4:00 p. m., Labateca 4:15 p. m., Lejía 5:40 p. m. y llega a Pamplona 6:00 p. m.",
+        "en": "Leaves Pamplona 10:00 a.m., Lejía 10:20 a.m., Labateca 11:40 a.m., arriving in Toledo 12:15 p.m. · Returns from Toledo 4:00 p.m., Labateca 4:15 p.m., Lejía 5:40 p.m., arriving in Pamplona 6:00 p.m."
+      },
+      "notas": {
+        "es": "Lleva encomiendas. Otros números de la ruta: 321 416 4081 y 311 690 1345.",
+        "en": "Carries parcels. Other numbers for this route: +57 321 416 4081 and +57 311 690 1345."
+      }
+    },
+    {
+      "id": "cotranal-amarilla",
+      "tipo": "intermunicipal",
+      "nombre": {
+        "es": "Cotranal · bus amarillo",
+        "en": "Cotranal · yellow bus"
+      },
+      "whatsapp": "573214164081",
+      "vehiculo": {
+        "es": "Bus Chevrolet amarillo",
+        "en": "Yellow Chevrolet bus"
+      },
+      "rutas": {
+        "es": "Labateca · Lejía · Pamplona, y de vuelta hasta Toledo",
+        "en": "Labateca · Lejía · Pamplona, and back through to Toledo"
+      },
+      "horario": {
+        "es": "Sale de Labateca 5:00 a. m., Lejía 6:30 a. m. y llega a Pamplona 6:45 a. m. · Regresa de Pamplona 1:30 p. m., Lejía 2:00 p. m., Labateca 3:30 p. m. y Toledo 3:45 p. m.",
+        "en": "Leaves Labateca 5:00 a.m., Lejía 6:30 a.m., arriving in Pamplona 6:45 a.m. · Returns from Pamplona 1:30 p.m., Lejía 2:00 p.m., Labateca 3:30 p.m. and Toledo 3:45 p.m."
+      },
+      "notas": {
+        "es": "Lleva encomiendas. Otros números de la ruta: 311 835 3089 y 311 690 1345.",
+        "en": "Carries parcels. Other numbers for this route: +57 311 835 3089 and +57 311 690 1345."
+      }
+    },
+    {
+      "id": "cotranal-toledo-pamplona",
+      "tipo": "intermunicipal",
+      "nombre": "Cotranal · Toledo – Pamplona",
+      "whatsapp": "573107649852",
+      "vehiculo": {
+        "es": "Buses Cotranal, blancos y verdes",
+        "en": "Cotranal buses, white and green"
+      },
+      "rutas": {
+        "es": "Toledo · Labateca · Pamplona",
+        "en": "Toledo · Labateca · Pamplona"
+      },
+      "horario": {
+        "es": "Sale de Toledo 5:30 a. m. y 7:00 a. m. · Regresa de Pamplona 11:30 a. m. y 2:45 p. m.",
+        "en": "Leaves Toledo 5:30 a.m. and 7:00 a.m. · Returns from Pamplona 11:30 a.m. and 2:45 p.m."
+      },
+      "notas": {
+        "es": "Segundo número: 302 562 0913.",
+        "en": "Second number: +57 302 562 0913."
+      }
+    },
+    {
+      "id": "jesus-alirio-montanez",
+      "tipo": "municipal",
+      "nombre": "Jesús Alirio Montañez",
+      "whatsapp": "573229455253",
+      "vehiculo": {
+        "es": "Chevrolet Esteem plateado, con parrilla en el techo",
+        "en": "Silver Chevrolet Esteem with a roof rack"
+      }
+    },
+    {
+      "id": "luis-javier-montanez",
+      "tipo": "municipal",
+      "nombre": "Luis Javier Montañez",
+      "whatsapp": "573219178969",
+      "vehiculo": {
+        "es": "Toyota Hilux doble cabina verde oscuro, con carpa",
+        "en": "Dark green Toyota Hilux double cab with a canopy"
+      },
+      "notas": {
+        "es": "Camioneta alta: es la que sirve para los caminos destapados de las veredas.",
+        "en": "A high pickup — the kind that handles the unpaved rural roads."
+      }
+    },
+    {
+      "id": "javier-arturo-montanez",
+      "tipo": "municipal",
+      "nombre": "Javier Arturo Montañez",
+      "whatsapp": "573118898958",
+      "vehiculo": {
+        "es": "Chevrolet Swift, placa BFG-038",
+        "en": "Chevrolet Swift, plate BFG-038"
+      }
+    },
+    {
+      "id": "deiner-santiago-garcia",
+      "tipo": "municipal",
+      "nombre": "Deiner Santiago García Rincón",
+      "whatsapp": "573115601500",
+      "vehiculo": {
+        "es": "Mazda 323 plateado, placa amarilla de servicio público BUQ-804",
+        "en": "Silver Mazda 323, yellow public-service plate BUQ-804"
+      }
+    }
+  ]
 }

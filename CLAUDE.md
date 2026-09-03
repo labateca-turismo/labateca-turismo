@@ -8,7 +8,7 @@ Bilingüe español/inglés. Sin frameworks, sin bundler, sin paso de compilació
 > corregirlo**. Estuvo desactualizado desde junio hasta el 2 de septiembre de
 > 2026 y en ese lapso hizo más daño que bien.
 
-**Estado al 2 de septiembre de 2026 (v193):** 116 lugares · 600 fotos ·
+**Estado al 2 de septiembre de 2026 (v194):** 116 lugares · 600 fotos ·
 6 rutas temáticas · 292 páginas HTML · 286 URLs en el sitemap.
 
 ---
@@ -116,6 +116,32 @@ Opcionales: `telFijo`, `correo`, `track`, `trailhead`, `wikiloc`, `fotosAviso`,
   `gen_seo.js` los parte (`parrafos()`); el primero lleva `class="lead"`. Se
   usa cuando después de la descripción va texto que no es nuestro —la misión
   de la Personería, por ejemplo—. El resto de los campos es un solo párrafo.
+
+### `data/conductores.json`
+
+Alimenta a la vez `/transporte` y `/en/transport`, que **no cargan `app.js`**:
+cada página trae su propio lector, su propio `escHtml()` y su propio `T()`.
+
+```json
+{ "id":"motilones", "tipo":"intermunicipal", "nombre":"Los Motilones",
+  "whatsapp":"573112001221",
+  "vehiculo":{"es":"","en":""}, "rutas":{"es":"","en":""},
+  "horario":{"es":"","en":""}, "notas":{"es":"","en":""} }
+```
+
+- **`tipo`** vale `"intermunicipal"` o `"municipal"`, escrito así exactamente:
+  de eso depende en qué sección cae la tarjeta.
+- **`whatsapp`** son 12 dígitos, `57` + los diez del celular. Sin espacios ni
+  `+`; el lector limpia lo que no sea dígito, pero el dato entra limpio.
+- **Los campos de texto aceptan cadena suelta o `{es,en}`.** `T()` escoge el
+  idioma en cada página. Un nombre propio va como cadena; «bus naranja» va
+  bilingüe, porque en la página inglesa se lee.
+- **`vehiculo` es para reconocer el carro en la plaza**, no para el registro:
+  marca, color y seña. **La placa solo se escribe si se lee sin duda** en una
+  foto del vehículo o en el formato. Dos de las del registro quedaron
+  ilegibles y se dejaron por fuera: una placa equivocada es peor que ninguna.
+- En cuanto haya un `"municipal"`, el aviso de «esta parte la estamos
+  levantando» se apaga solo y aparece `#condMunNota` en su lugar.
 
 ### `data/rutas.json`
 
@@ -303,10 +329,18 @@ a temporal y `os.replace`.
   historia. Es traducción real, no enrutado. `/transporte` ya está hecha
   (v191) y sirve de molde: página gemela bajo `/en/`, `hreflang` en las dos,
   su entrada en el sitemap de `gen_seo.js`, y salir de `SOLO_ES`.
-- **`guias.json` y `conductores.json` están vacíos.** Las secciones existen y
-  se encienden solas cuando el archivo tenga entradas. Para los guías falta
-  el **nombre** del guía local (en el proyecto solo está el teléfono) y su
-  consentimiento; los conductores los está levantando José.
+- **`guias.json` sigue vacío.** La sección existe y se enciende sola cuando el
+  archivo tenga entradas. Falta el **nombre** del guía local —en el proyecto
+  solo está el teléfono— y su consentimiento.
+- **Falta la firma de los siete intermunicipales** de `conductores.json`
+  (hoja 2 del registro). José decidió publicarlos igual: son empresas y rutas
+  cuyos teléfonos y horarios ellas mismas hacen circular en avisos. Conviene
+  recogerlas, y quedan dos hojas del registro (3 y 4) sin escanear.
+- **El bus de la Providencia —«Goyo», placa XHB-489— tiene foto pero no tiene
+  datos:** no aparece en las hojas escaneadas. Sin teléfono ni horario no
+  entra.
+- **Una cifra por confirmar:** el WhatsApp de Javier Arturo Montañez
+  (`3118898958`) lleva el último dígito corregido a mano en el formato.
 - **El formulario no llega por correo:** `web3formsKey` sigue en
   `"TU_ACCESS_KEY"`, así que `app.js` cae al respaldo de WhatsApp.
 - **Reseñas en cero.** El sistema funciona; falta pedirlas. Revisar `/moderar`
