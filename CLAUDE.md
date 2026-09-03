@@ -8,8 +8,8 @@ Bilingüe español/inglés. Sin frameworks, sin bundler, sin paso de compilació
 > corregirlo**. Estuvo desactualizado desde junio hasta el 2 de septiembre de
 > 2026 y en ese lapso hizo más daño que bien.
 
-**Estado al 2 de septiembre de 2026 (v192):** 115 lugares · 594 fotos ·
-6 rutas temáticas · 290 páginas HTML · 284 URLs en el sitemap.
+**Estado al 2 de septiembre de 2026 (v193):** 116 lugares · 600 fotos ·
+6 rutas temáticas · 292 páginas HTML · 286 URLs en el sitemap.
 
 ---
 
@@ -97,13 +97,25 @@ labateca proyect/
 ```
 
 Categorías: `naturaleza · cultura · gastronomia · hospedaje · comercio · servicios`.
-Opcionales: `telFijo`, `correo`, `track`, `trailhead`, `wikiloc`, `fotosAviso`.
+Opcionales: `telFijo`, `correo`, `track`, `trailhead`, `wikiloc`, `fotosAviso`,
+`mapaFuera`.
 
 - **`pendiente: true`** = ficha reportada pero **sin levantar en campo**. Entra
   **sin `lat`/`lng`, sin `mapaX`/`mapaY` y con `fotos: []` a propósito**: poner
   la coordenada del pueblo mandaría a la gente al parque a buscar una cascada.
   El código ya lo soporta en los dos lados. Hoy hay 9.
 - **`verified: false`** pinta la etiqueta amarilla «por verificar».
+- **`mapaFuera: true`** = tiene `lat`/`lng` de verdad, pero **no va en el mapa
+  ilustrado**, que solo dibuja el casco urbano. Su pin caería en un punto del
+  pueblo donde el lugar no está. Hoy son cinco: La Peña, Bike Rafa, Soma,
+  el Chorrerón y el Supermercado La Y. `pines_lote15.js` los respeta.
+- **`telefono` es opcional.** La Personería tachó la casilla del teléfono en su
+  formato y su ficha va sin él: `gen_seo.js` simplemente no pinta la fila de
+  WhatsApp. No hay que inventar un número para llenar el hueco.
+- **`desc` admite párrafos**, separándolos con una **línea en blanco**.
+  `gen_seo.js` los parte (`parrafos()`); el primero lleva `class="lead"`. Se
+  usa cuando después de la descripción va texto que no es nuestro —la misión
+  de la Personería, por ejemplo—. El resto de los campos es un solo párrafo.
 
 ### `data/rutas.json`
 
@@ -217,7 +229,8 @@ el **pie de foto** por `esc()`, y `app.js` pinta el pie con `textContent`.
 Un `<b>` puesto en un `fotosCap` se lee **literal** en la página. Pasó en el
 lote 15-b con los correos del directorio de la Alcaldía y se quitó en v192.
 Si algo tiene que ir en negrita o ser un enlace, se cambia la plantilla, no
-el dato.
+el dato. Lo único que el dato puede pedir es un **salto de párrafo en `desc`**,
+con una línea en blanco, y eso porque `gen_seo.js` lo entiende a propósito.
 
 **Hay dos bares llamados «La Barra» y no tienen nada que ver.**
 `teca-bar-la-barra` (Dioselina Vera, mural y mesas de billar) y
@@ -225,12 +238,16 @@ el dato.
 300 m, con dueñas y teléfonos distintos. Las dos fichas se avisan la una de
 la otra en la recomendación: si alguien «unifica» los duplicados, rompe eso.
 
-**`pines_lote15.js` solo mira los que tienen `lat`/`lng`.** Antes no: metía
-también a las **pendientes**, que entran sin coordenadas a propósito, y
-`fx()`/`fy()` devolvían `NaN` → `JSON.stringify` los escribe como `null` →
-las nueve pendientes quedaban con `"mapaX": null`, que **no** es lo mismo
-que no tener la clave. Se arregló en v192, pero si vuelve a aparecer un
-`"mapaX": null` en `places.json`, es esto.
+**`pines_lote15.js` salta a las pendientes y a las `mapaFuera`.** Dos veces
+seguidas metió a quien no debía. Con las **pendientes**, que entran sin
+coordenadas, `fx()`/`fy()` devolvían `NaN` → `JSON.stringify` lo escribe como
+`null` → quedaban con `"mapaX": null`, que **no** es lo mismo que no tener la
+clave. Y a **La Peña, Bike Rafa, Soma y el Chorrerón** les volvió a poner pin
+del mapa ilustrado: en el lote 15 se les había quitado **a mano**, y un paso
+manual se olvida —se olvidó en el 16 y salió publicado en la v192—. Por eso
+ahora la decisión vive en el dato (`mapaFuera: true`) y no en la memoria de
+nadie. Si vuelve a aparecer un `"mapaX": null`, o un pin del casco urbano
+sobre un lugar que está a kilómetros, es esto.
 
 **El service worker sirve archivos viejos al probar en local.** Si un cambio
 en `app.js` o `styles.css` «no aparece», casi siempre es eso: hay que
@@ -297,12 +314,6 @@ a temporal y `os.replace`.
 - **Hospedaje: solo 3**, y el hotel principal dijo que no. Es el hueco de
   producto más grande de la guía.
 - **69 fotos antiguas retenidas** esperando firmas de Ley 1581.
-- **Supermercado La Y: falta el formato firmado.** La carpeta trae seis
-  fotos buenas, pero el PDF que venía dentro **no es su permiso**: es una
-  copia exacta —mismo md5— del de Americana de Carnes. Sin formato no hay
-  ficha (regla 3), y falta además el pin. Las fotos están sin hornear y sin
-  subir a Cloudinary, esperando. Es lo más rápido de cerrar del proyecto:
-  una firma y una coordenada.
 
 
 ---

@@ -1,5 +1,5 @@
 {
-  "version": "1.13",
+  "version": "1.14",
   "lugares": [
     {
       "id": "templo",
@@ -96,7 +96,7 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 539,
+      "mapaX": 540,
       "mapaY": 351,
       "telefono": "",
       "nombre": {
@@ -160,7 +160,7 @@
       "lat": 7.3002463,
       "lng": -72.4963025,
       "mapaX": 464,
-      "mapaY": 329,
+      "mapaY": 328,
       "telefono": "",
       "nombre": {
         "es": "Cementerio (Camposanto) de Labateca",
@@ -730,6 +730,12 @@
         "es": "Procura estar en la cascada hacia las 10 a. m. para disfrutar del sol y sus hermosos paisajes. Ve con calzado de agarre y descarga el mapa offline antes de salir.",
         "en": "Aim to reach the waterfall around 10 a.m. to enjoy the sun and the beautiful scenery. Wear grippy footwear and download the offline map before leaving."
       },
+      "track": "data/tracks/Cascada_siscata.gpx",
+      "trailhead": {
+        "lat": 7.299865,
+        "lng": -72.494603
+      },
+      "wikiloc": "https://loc.wiki/t/269503883?h=2m4va5w5om&wa=sd&la=es",
       "fotos": [
         "labateca/siscata-01",
         "labateca/siscata-02",
@@ -738,12 +744,6 @@
         "labateca/siscata-05",
         "labateca/siscata-06"
       ],
-      "track": "data/tracks/Cascada_siscata.gpx",
-      "trailhead": {
-        "lat": 7.299865,
-        "lng": -72.494603
-      },
-      "wikiloc": "https://loc.wiki/t/269503883?h=2m4va5w5om&wa=sd&la=es",
       "fotosCap": [
         {
           "es": "El salto principal de Siscata cayendo sobre la poza, entre paredes de roca y vegetación.",
@@ -809,6 +809,8 @@
         "es": "Abre los fines de semana. Para comer, reserva con anticipación por WhatsApp con don Óscar. Ve al atardecer por la vista a las montañas y al pueblo de Toledo.",
         "en": "Open on weekends. For meals, reserve in advance via WhatsApp with Mr. Óscar. Go at sunset for the view of the mountains and the town of Toledo."
       },
+      "track": "data/tracks/pedregal.gpx",
+      "wikiloc": "https://loc.wiki/t/269295597?h=2m4va5w5om&wa=sd&la=es",
       "fotos": [
         "labateca/pedregal-02",
         "labateca/pedregal-04",
@@ -817,8 +819,6 @@
         "labateca/pedregal-05",
         "labateca/pedregal-08"
       ],
-      "track": "data/tracks/pedregal.gpx",
-      "wikiloc": "https://loc.wiki/t/269295597?h=2m4va5w5om&wa=sd&la=es",
       "fotosCap": [
         {
           "es": "La terraza del mirador al atardecer, con el valle y el pueblo al fondo.",
@@ -1173,8 +1173,7 @@
       "coordsApprox": false,
       "lat": 7.281153,
       "lng": -72.530685,
-      "mapaX": 240,
-      "mapaY": 492,
+      "mapaFuera": true,
       "telefono": "573114804352",
       "correo": "antonioaza38@hotmail.es",
       "nombre": {
@@ -1626,7 +1625,7 @@
       "lat": 7.3008,
       "lng": -72.495177,
       "mapaX": 431,
-      "mapaY": 340,
+      "mapaY": 339,
       "telefono": "573124097073",
       "nombre": {
         "es": "Tienda Mixta Cielo Isabella",
@@ -3695,7 +3694,7 @@
       "lat": 7.298705,
       "lng": -72.494589,
       "mapaX": 483,
-      "mapaY": 447,
+      "mapaY": 448,
       "telefono": "573227784070",
       "nombre": {
         "es": "Barber Shop Labateca",
@@ -3813,6 +3812,10 @@
       "categoria": "naturaleza",
       "verified": true,
       "coordsApprox": false,
+      "lat": 7.276603,
+      "lng": -72.486316,
+      "mapaX": 534,
+      "mapaY": 470,
       "telefono": "",
       "nombre": {
         "es": "El Samán",
@@ -3870,11 +3873,7 @@
           "es": "El samán al borde del río, con el agua crecida corriendo entre las piedras.",
           "en": "The samán at the river's edge, with the swollen water running between the boulders."
         }
-      ],
-      "lat": 7.276603,
-      "lng": -72.486316,
-      "mapaX": 534,
-      "mapaY": 470
+      ]
     },
     {
       "id": "tumba-cacique-bateca",
@@ -4476,7 +4475,7 @@
       "coordsApprox": false,
       "lat": 7.298958,
       "lng": -72.494096,
-      "mapaX": 477,
+      "mapaX": 476,
       "mapaY": 435,
       "telefono": "573208168572",
       "nombre": {
@@ -5290,7 +5289,7 @@
       "lat": 7.299987,
       "lng": -72.494894,
       "mapaX": 476,
-      "mapaY": 359,
+      "mapaY": 358,
       "telefono": "573112875551",
       "nombre": {
         "es": "Cooperacafé — Cooperativa de Caficultores del Catatumbo",
@@ -5599,8 +5598,7 @@
       "coordsApprox": false,
       "lat": 7.311156,
       "lng": -72.494954,
-      "mapaX": 387,
-      "mapaY": 278,
+      "mapaFuera": true,
       "telefono": "573114813901",
       "nombre": {
         "es": "Estadero Bike Rafa",
@@ -5896,8 +5894,7 @@
       "coordsApprox": false,
       "lat": 7.214763,
       "lng": -72.446588,
-      "mapaX": 1077,
-      "mapaY": 769,
+      "mapaFuera": true,
       "telefono": "573224626352",
       "nombre": {
         "es": "Soma Grill y Aguascalientes",
@@ -5927,6 +5924,7 @@
         "es": "Solo abre sábados y domingos. Cobran el paso en la entrada, así que lleva efectivo. El sendero al pozo es de tierra: con lluvia se pone resbaloso y conviene calzado con agarre. Si vas a la Cascada El Chorrerón, este sitio queda de camino. WhatsApp: 322 462 6352.",
         "en": "Open Saturdays and Sundays only. There is a charge to pass at the entrance, so bring cash. The path to the pool is dirt: it gets slippery in the rain, so wear shoes with grip. If you're heading to the El Chorrerón waterfall, this place is on the way. WhatsApp: +57 322 462 6352."
       },
+      "track": "data/tracks/soma-aguascalientes.gpx",
       "fotos": [
         "labateca/soma-aguascalientes-01",
         "labateca/soma-aguascalientes-02",
@@ -5990,8 +5988,7 @@
           "es": "El poste de señales del sitio, con las distancias a Labateca, Toledo, Pamplona y Chinácota.",
           "en": "The site's signpost, with distances to Labateca, Toledo, Pamplona and Chinácota."
         }
-      ],
-      "track": "data/tracks/soma-aguascalientes.gpx"
+      ]
     },
     {
       "id": "chorreron",
@@ -6000,8 +5997,7 @@
       "coordsApprox": false,
       "lat": 7.197292,
       "lng": -72.463103,
-      "mapaX": 930,
-      "mapaY": 869,
+      "mapaFuera": true,
       "telefono": "",
       "nombre": {
         "es": "Cascada El Chorrerón",
@@ -6030,6 +6026,11 @@
       "recomendacion": {
         "es": "En el camino hay una valla que anuncia un valor de ingreso; la casilla del precio estaba en blanco el día del recorrido, y en la entrada por el estadero Soma cobran el paso, así que lleva efectivo. Ve con calzado de agarre —el último tramo es trocha y la neblina del salto lo mantiene húmedo— y descarga el mapa antes de salir, porque no hay señal. Sal temprano: son casi dos horas de ida contando el trayecto en carro. Soma y Aguascalientes quedan de camino, si quieres rematar el día ahí.",
         "en": "There is a sign along the way announcing an entry fee; the price box was blank on the day of the visit, and at the entrance by the Soma roadside stop there is a charge to pass, so bring cash. Wear shoes with grip — the last stretch is a rough path kept damp by the mist from the falls — and download the map before setting out, as there is no signal. Leave early: it's nearly two hours each way counting the drive. Soma and its hot springs are on the way, if you want to end the day there."
+      },
+      "track": "data/tracks/chorreron.gpx",
+      "trailhead": {
+        "lat": 7.202502,
+        "lng": -72.44331
       },
       "fotos": [
         "labateca/chorreron-01",
@@ -6084,12 +6085,7 @@
           "es": "Un aviso de «Prohibido cazar» de Corponor amarrado a un árbol del bosque.",
           "en": "A Corponor 'No hunting' sign tied to a tree in the forest."
         }
-      ],
-      "track": "data/tracks/chorreron.gpx",
-      "trailhead": {
-        "lat": 7.202502,
-        "lng": -72.44331
-      }
+      ]
     },
     {
       "id": "sendero-mariano",
@@ -6208,6 +6204,7 @@
       "lng": -72.495014,
       "mapaX": 452,
       "mapaY": 370,
+      "telFijo": "573144798925",
       "correo": "alcaldia@labateca-nortedesantander.gov.co",
       "nombre": {
         "es": "Alcaldía Municipal de Labateca",
@@ -6295,8 +6292,7 @@
           "es": "La calle y el campanario del templo, vistos desde el balcón de la Alcaldía.",
           "en": "The street and the church bell tower, seen from the Town Hall balcony."
         }
-      ],
-      "telFijo": "573144798925"
+      ]
     },
     {
       "id": "biblioteca-publica",
@@ -6307,6 +6303,7 @@
       "lng": -72.493641,
       "mapaX": 542,
       "mapaY": 365,
+      "telFijo": "573144798925",
       "correo": "secretariadegobierno@labateca-nortedesantander.gov.co",
       "nombre": {
         "es": "Biblioteca Pública Municipal Hermana María Isaura Cardona Zapata",
@@ -6389,8 +6386,7 @@
           "es": "El retrato de la hermana María Isaura Cardona Zapata, misionera teresita, que da nombre a la biblioteca.",
           "en": "The portrait of Sister María Isaura Cardona Zapata, Teresian missionary, after whom the library is named."
         }
-      ],
-      "telFijo": "573144798925"
+      ]
     },
     {
       "id": "casa-del-anciano",
@@ -6401,6 +6397,7 @@
       "lng": -72.497339,
       "mapaX": 350,
       "mapaY": 451,
+      "telFijo": "573202347720",
       "nombre": {
         "es": "Casa del Anciano Teresita de Lisieux",
         "en": "Teresita de Lisieux Home for the Elderly"
@@ -6482,8 +6479,7 @@
           "es": "El acuerdo municipal enmarcado en el salón.",
           "en": "The framed municipal agreement in the hall."
         }
-      ],
-      "telFijo": "573202347720"
+      ]
     },
     {
       "id": "estadio-jesus-nunez",
@@ -6561,6 +6557,7 @@
       "lng": -72.494939,
       "mapaX": 472,
       "mapaY": 345,
+      "telFijo": "573186304751",
       "nombre": {
         "es": "Estación de Policía de Labateca",
         "en": "Labateca Police Station"
@@ -6607,8 +6604,7 @@
           "es": "Las motocicletas del cuadrante parqueadas frente a la estación.",
           "en": "The quadrant patrol motorcycles parked in front of the station."
         }
-      ],
-      "telFijo": "573186304751"
+      ]
     },
     {
       "id": "cic-labateca",
@@ -6686,6 +6682,7 @@
       "lng": -72.494692,
       "mapaX": 466,
       "mapaY": 368,
+      "telFijo": "576075824444",
       "correo": "cens@cens.com.co",
       "nombre": {
         "es": "CENS · Oficina de atención en Labateca",
@@ -6728,8 +6725,7 @@
           "es": "El aviso de horarios de atención y los canales de autogestión, en la puerta.",
           "en": "The notice of opening hours and self-service channels, on the door."
         }
-      ],
-      "telFijo": "576075824444"
+      ]
     },
     {
       "id": "hospedaje-la-profe",
@@ -7104,7 +7100,7 @@
       "lat": 7.298436,
       "lng": -72.49378,
       "mapaX": 502,
-      "mapaY": 405,
+      "mapaY": 404,
       "telefono": "573134210399",
       "nombre": {
         "es": "Americana de Carnes",
@@ -7632,8 +7628,8 @@
       ],
       "fotosCap": [
         {
-          "es": "La fachada, con la vitrina de la boutique. En la pared, el aviso de corresponsal bancario de Bancolombia y, debajo, el cartel de los trámites de documentos.",
-          "en": "The shopfront, with the boutique window. On the wall, the Bancolombia banking correspondent sign and, below it, the board listing the paperwork services."
+          "es": "La fachada, con la vitrina de la boutique y, en la pared, el cartel de los trámites de documentos.",
+          "en": "The shopfront, with the boutique window and, on the wall, the board listing the paperwork services."
         },
         {
           "es": "El aro dorado en la mitad del salón, con la novedad colgada alrededor.",
@@ -7852,8 +7848,8 @@
         "en": "Municipal Ombudsman's Office (Personería) of Labateca"
       },
       "desc": {
-        "es": "La Personería es el Ministerio Público en el municipio: el organismo que guarda y promueve los derechos humanos, protege el interés público y vigila la conducta de quienes ejercen funciones públicas. Es donde el ciudadano radica quejas, peticiones y reclamos contra la administración, pide orientación para un derecho de petición o una acción de tutela, y donde se atiende a la población en condición de vulnerabilidad. Funciona en el Palacio Municipal, en la planta alta que da al patio de baldosa; la placa de «República de Colombia · Ministerio Público» está en la pared, junto a la puerta, y afuera hay sillas de espera.",
-        "en": "The Personería is the Public Ministry at municipal level: the body that safeguards and promotes human rights, protects the public interest and oversees the conduct of those holding public office. It is where citizens file complaints, petitions and claims against the administration, ask for guidance on a right-of-petition or a tutela (constitutional protection action), and where people in vulnerable situations are assisted. It works from the Town Hall, on the upper floor overlooking the tiled courtyard; the 'Republic of Colombia · Public Ministry' plaque is on the wall beside the door, and there are waiting chairs outside."
+        "es": "La Personería es el Ministerio Público en el municipio: el organismo que guarda y promueve los derechos humanos, protege el interés público y vigila la conducta de quienes ejercen funciones públicas. Es donde el ciudadano radica quejas, peticiones y reclamos contra la administración, pide orientación para un derecho de petición o una acción de tutela, y donde se atiende a la población en condición de vulnerabilidad. Funciona en el Palacio Municipal, en la planta alta que da al patio de baldosa; la placa de «República de Colombia · Ministerio Público» está en la pared, junto a la puerta, y afuera hay sillas de espera.\n\nSu misión, tal como la tienen escrita: «La Personería Municipal, como organismo público encargado de desempeñar el control administrativo del municipio de Labateca, Norte de Santander, tiene el compromiso de ejercer la vigilancia de la conducta de quienes ejecutan funciones públicas, procurando velar por la guarda y promoción de los derechos humanos, y la protección del interés público; fundamentado en la democracia participativa, en el ejercicio de la vigilancia y aplicación de los principios constitucionales de igualdad, moralidad e imparcialidad, para garantizar a la comunidad un eficiente y eficaz control de manera independiente, profesional y transparente».",
+        "en": "The Personería is the Public Ministry at municipal level: the body that safeguards and promotes human rights, protects the public interest and oversees the conduct of those holding public office. It is where citizens file complaints, petitions and claims against the administration, ask for guidance on a right-of-petition or a tutela (constitutional protection action), and where people in vulnerable situations are assisted. It works from the Town Hall, on the upper floor overlooking the tiled courtyard; the 'Republic of Colombia · Public Ministry' plaque is on the wall beside the door, and there are waiting chairs outside.\n\nTheir mission, as they have it written up in the office (translated): “The Municipal Personería, as the public body charged with the administrative oversight of the municipality of Labateca, Norte de Santander, undertakes to supervise the conduct of those who carry out public functions, seeking to safeguard and promote human rights and to protect the public interest; grounded in participatory democracy and in the exercise and application of the constitutional principles of equality, morality and impartiality, so as to guarantee the community efficient and effective oversight, carried out independently, professionally and transparently.”"
       },
       "comoLlegar": {
         "es": "En el Palacio Municipal de Labateca —el edificio de la Alcaldía, sobre un costado del Parque Principal—, en la planta alta. Se sube por la escalera del patio. Sigue el pin del mapa.",
@@ -7887,6 +7883,78 @@
         {
           "es": "La entrada de la oficina en la planta alta del Palacio Municipal, con la placa a un lado y las sillas de espera al otro.",
           "en": "The office entrance on the Town Hall's upper floor, with the plaque on one side and the waiting chairs on the other."
+        }
+      ]
+    },
+    {
+      "id": "supermercado-la-y",
+      "categoria": "comercio",
+      "verified": true,
+      "coordsApprox": false,
+      "lat": 7.318409,
+      "lng": -72.508787,
+      "mapaFuera": true,
+      "telefono": "573123106831",
+      "nombre": {
+        "es": "Supermercado La Y",
+        "en": "Supermercado La Y"
+      },
+      "desc": {
+        "es": "Tienda-supermercado a la orilla de la vía rural, a unos 2,6 km al noroccidente del casco urbano, de Gerson Enrique Fernández —el mismo del Supermercado El Campesino, Salud & Vida y el Taller El Toro, que quedan en el pueblo—. Son dos locales bajo techo de zinc con vigas azules, piso de baldosa roja y una terraza con matas y vista a la montaña. Adentro está la canasta completa: granos, pastas, aceite, enlatados, aseo, panela y dulces en la estantería; una vitrina refrigerada con pan y bebida; canastas de fruta y verdura del día —papa, cebolla, zanahoria, tomate, habichuela, repollo, plátano y yuca—; mecato y gaseosa fría. Afuera, contra la pared, se apilan las canastas de cerveza.",
+        "en": "A shop-cum-supermarket at the roadside, about 2.6 km north-west of the town centre, run by Gerson Enrique Fernández — the same man behind Supermercado El Campesino, Salud & Vida and Taller El Toro, all three in town. It is two units under a zinc roof on blue beams, with a red-tiled floor and a terrace with plants and a view of the mountain. Inside is the full basket: grains, pasta, oil, tinned food, cleaning products, panela and sweets on the shelves; a refrigerated case with bread and drinks; crates of the day's fruit and vegetables — potato, onion, carrot, tomato, green beans, cabbage, plantain and cassava; snacks and cold soft drinks. Outside, stacked against the wall, are the beer crates."
+      },
+      "comoLlegar": {
+        "es": "Saliendo del casco urbano hacia el noroccidente, a unos 2,6 km por la vía. Está a la orilla, con los dos locales abiertos hacia la carretera. Se llega en carro, en moto o caminando. Sigue el pin del mapa.",
+        "en": "Leaving the town centre to the north-west, about 2.6 km along the road. It sits right at the roadside, both units opening onto the road. You can get there by car, by motorbike or on foot. Follow the map pin."
+      },
+      "dist": {
+        "es": "~2,6 km del casco urbano",
+        "en": "~2.6 km from the town centre"
+      },
+      "tiempo": {
+        "es": "8:00 a. m.–12:00 m. y 2:00–6:00 p. m.",
+        "en": "8:00 a.m.–12:00 noon and 2:00–6:00 p.m."
+      },
+      "dificultad": {
+        "es": "Acceso fácil · a la orilla de la vía",
+        "en": "Easy access · right at the roadside"
+      },
+      "recomendacion": {
+        "es": "Es tienda de vía: víveres, fruta, mecato y bebida fría en un punto donde no hay otra cosa cerca, así que si vas de paso conviene parar. Cierra al mediodía. El WhatsApp, 312 310 6831, es el mismo de sus otros tres negocios del pueblo —Supermercado El Campesino, Salud & Vida y Taller El Toro—, así que por ahí puedes encargar antes de subir.",
+        "en": "This is a roadside shop: groceries, fruit, snacks and cold drinks at a point where there is nothing else nearby, so it is worth stopping if you are passing. It closes at midday. The WhatsApp number, +57 312 310 6831, is the same one used by his other three businesses in town — Supermercado El Campesino, Salud & Vida and Taller El Toro — so you can order ahead through it before heading up."
+      },
+      "fotos": [
+        "labateca/la-y-01",
+        "labateca/la-y-02",
+        "labateca/la-y-03",
+        "labateca/la-y-04",
+        "labateca/la-y-05",
+        "labateca/la-y-06"
+      ],
+      "fotosCap": [
+        {
+          "es": "Los dos locales abiertos hacia la vía, bajo el techo de zinc con vigas azules.",
+          "en": "The two units opening onto the road, under the zinc roof on blue beams."
+        },
+        {
+          "es": "La terraza con matas, las canastas de cerveza apiladas y la montaña al fondo.",
+          "en": "The terrace with its plants, the stacked beer crates and the mountain behind."
+        },
+        {
+          "es": "Adentro: la estantería de víveres y la vitrina refrigerada con el pan.",
+          "en": "Inside: the grocery shelves and the refrigerated case with the bread."
+        },
+        {
+          "es": "Enlatados, aseo y granos en los entrepaños, y el mostrador de dulces y confitería.",
+          "en": "Tins, cleaning products and grains on the shelves, and the sweets counter."
+        },
+        {
+          "es": "Las canastas de fruta y verdura del día: papa, cebolla, zanahoria, tomate, habichuela, repollo, plátano y yuca.",
+          "en": "Crates of the day's fruit and vegetables: potato, onion, carrot, tomato, green beans, cabbage, plantain and cassava."
+        },
+        {
+          "es": "El rack de mecato bajo el televisor y, a un lado, la caja de herramientas y el compresor con su manguera de aire.",
+          "en": "The snack rack under the television and, to one side, the toolbox and the air compressor with its hose."
         }
       ]
     }
