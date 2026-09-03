@@ -8,7 +8,7 @@ Bilingüe español/inglés. Sin frameworks, sin bundler, sin paso de compilació
 > corregirlo**. Estuvo desactualizado desde junio hasta el 2 de septiembre de
 > 2026 y en ese lapso hizo más daño que bien.
 
-**Estado al 2 de septiembre de 2026 (v195):** 116 lugares · 600 fotos ·
+**Estado al 2 de septiembre de 2026 (v196):** 116 lugares · 600 fotos ·
 6 rutas temáticas · 292 páginas HTML · 286 URLs en el sitemap.
 
 ---
@@ -140,12 +140,21 @@ cada página trae su propio lector, su propio `escHtml()` y su propio `T()`.
   marca, color y seña. **La placa solo se escribe si se lee sin duda** en una
   foto del vehículo o en el formato. Dos de las del registro quedaron
   ilegibles y se dejaron por fuera: una placa equivocada es peor que ninguna.
-- **`foto` es opcional** y es el `public_id` de Cloudinary, con el prefijo
-  `labateca/transporte-`. Solo la llevan los que mandaron **fotografía real
-  del vehículo**; las cinco rutas Cotranal van sin ella a propósito, porque de
-  esas solo hay **avisos publicitarios**, que son diseño de la empresa: de
-  ellos se toman los datos, que son hechos, y no la imagen. La tarjeta sin
-  foto simplemente empieza por el título.
+- **`foto` es opcional** y es el `public_id` de Cloudinary. Hay **dos clases
+  de imagen y no se pintan igual**:
+  - **`foto` sola** (`labateca/transporte-…`) = fotografía real del vehículo.
+    Se recorta a 16:9 y llena el ancho de la tarjeta.
+  - **`foto` + `fotoTipo:"aviso"`** (`labateca/aviso-…`) = la pieza
+    publicitaria de la propia empresa, que los transportistas entregaron para
+    salir en la guía. Va **completa y con su propia forma** (`aspect-ratio:
+    auto`), porque lo útil de ella son los horarios impresos y cualquier
+    recorte los corta. Y lleva **pie —«Aviso de la propia empresa»—** para que
+    no se lea como foto nuestra del bus.
+
+  Las capturas de WhatsApp traen bandas negras; `bake_avisos.py` las recorta
+  por detección de filas oscuras. La del 034 tenía 222 px, casi un tercio.
+
+  La tarjeta sin imagen simplemente empieza por el título.
 - En cuanto haya un `"municipal"`, el aviso de «esta parte la estamos
   levantando» se apaga solo y aparece `#condMunNota` en su lugar.
 
@@ -345,6 +354,12 @@ a temporal y `os.replace`.
 - **Quedan las hojas 3 y 4 del registro sin escanear.** La 1 llegó dos veces:
   la segunda vez traía la fila 7 llena, que era Goyo. Vale la pena volver a
   pedirlas cuando se llenen más filas.
+- **Los cinco avisos de Cotranal son provisionales.** José los publicó para
+  que la tarjeta no quedara vacía, con el plan de **reemplazarlos por fotos
+  de verdad del bus**. Cuando lleguen: hornear con `bake_transporte.py`,
+  subir como `labateca/transporte-…`, cambiar el `foto` y **quitar el
+  `fotoTipo`** —con eso el pie desaparece solo—. Falta también la del carro
+  de Javier Arturo, que es el único sin imagen.
 - **El formulario no llega por correo:** `web3formsKey` sigue en
   `"TU_ACCESS_KEY"`, así que `app.js` cae al respaldo de WhatsApp.
 - **Reseñas en cero.** El sistema funciona; falta pedirlas. Revisar `/moderar`

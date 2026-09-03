@@ -2433,3 +2433,28 @@ footer .solo-es{background:transparent;border-color:rgba(255,255,255,.28);color:
   border-radius:13px 13px 0 0;
   background:var(--line);
 }
+
+/* ── Aviso de la empresa dentro de la tarjeta de conductor ────────────
+   No es lo mismo que la foto del vehiculo. La pieza publicitaria trae
+   los horarios impresos, asi que va COMPLETA y CON SU PROPIA FORMA:
+   `aspect-ratio:auto`. Recortarla a 16:9 como la foto cortaria justo las
+   horas, que es lo unico que sirve de ella; y meterla en una caja fija
+   tampoco funciona, porque hay avisos verticales de 2:3 y uno apaisado
+   de 3:2 -- el apaisado quedaba flotando en medio de una caja vacia. Al
+   dejarla con su forma, cada aviso ocupa lo que necesita y nada mas.
+   Lleva pie para que no se lea como foto nuestra del bus. */
+.cond-foto--aviso{
+  aspect-ratio:auto;
+  height:auto;
+  object-fit:contain;
+  background:var(--cream-2);
+  margin-bottom:8px;
+  border-radius:13px 13px 0 0;
+}
+.cond-pie{
+  margin:0 0 12px;
+  font-size:.72rem;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  color:var(--ink-mut);
+}

@@ -1,6 +1,6 @@
 {
-  "version": "1.2",
-  "_nota": "Datos del REGISTRO DE TRANSPORTISTAS ALIADOS (hojas 1 y 2, 2 sep 2026) y de los avisos que las mismas empresas hacen circular. Los cuatro municipales firmaron la autorizacion de Ley 1581; los intermunicipales todavia no: son empresas y rutas cuyos telefonos y horarios ellas mismas publican, y Jose autorizo publicarlos mientras se recogen las firmas. Las placas solo se escriben cuando se leen sin duda en una foto real del vehiculo o en el formato.",
+  "version": "1.3",
+  "_nota": "Datos del REGISTRO DE TRANSPORTISTAS ALIADOS (hojas 1 y 2, 2 sep 2026) y de los avisos que las mismas empresas hacen circular. Los cuatro municipales firmaron la autorizacion de Ley 1581; los intermunicipales todavia no: son empresas y rutas cuyos telefonos y horarios ellas mismas publican, y Jose autorizo publicarlos mientras se recogen las firmas. Las placas solo se escriben cuando se leen sin duda en una foto real del vehiculo o en el formato. `foto` sin `fotoTipo` es fotografia del vehiculo; con `fotoTipo:\"aviso\"` es la pieza publicitaria de la propia empresa, que los transportistas entregaron para salir en la guia: se pinta completa, sin recortar y con su pie. Se reemplazan por fotos de verdad cuando las haya.",
   "conductores": [
     {
       "id": "motilones",
@@ -26,6 +26,8 @@
       "tipo": "intermunicipal",
       "nombre": "Cotranal · Ruta 034",
       "whatsapp": "573124794992",
+      "foto": "labateca/aviso-cotranal-034",
+      "fotoTipo": "aviso",
       "vehiculo": {
         "es": "Bus Cotranal 034, blanco y verde",
         "en": "Cotranal bus no. 034, white and green"
@@ -51,6 +53,8 @@
         "en": "Cotranal · Labateca – Toledo – Cúcuta minibus"
       },
       "whatsapp": "573142882001",
+      "foto": "labateca/aviso-cotranal-buseta",
+      "fotoTipo": "aviso",
       "vehiculo": {
         "es": "Buseta Volkswagen blanca",
         "en": "White Volkswagen minibus"
@@ -118,6 +122,8 @@
         "en": "Cotranal · orange bus"
       },
       "whatsapp": "573118353089",
+      "foto": "labateca/aviso-cotranal-naranja",
+      "fotoTipo": "aviso",
       "vehiculo": {
         "es": "Bus naranja, placa SQJ-116",
         "en": "Orange bus, plate SQJ-116"
@@ -143,6 +149,8 @@
         "en": "Cotranal · yellow bus"
       },
       "whatsapp": "573214164081",
+      "foto": "labateca/aviso-cotranal-amarilla",
+      "fotoTipo": "aviso",
       "vehiculo": {
         "es": "Bus Chevrolet amarillo",
         "en": "Yellow Chevrolet bus"
@@ -165,6 +173,8 @@
       "tipo": "intermunicipal",
       "nombre": "Cotranal · Toledo – Pamplona",
       "whatsapp": "573107649852",
+      "foto": "labateca/aviso-cotranal-toledo-pamplona",
+      "fotoTipo": "aviso",
       "vehiculo": {
         "es": "Buses Cotranal, blancos y verdes",
         "en": "Cotranal buses, white and green"

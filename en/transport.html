@@ -35,7 +35,7 @@
 <noscript><link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700;800&display=swap" /></noscript>
 
-<link rel="stylesheet" href="/styles.css?v=195">
+<link rel="stylesheet" href="/styles.css?v=196">
 
 <script type="application/ld+json">
 {
@@ -322,10 +322,24 @@ function toggleMenu(){
        vehicle have one. The five Cotranal routes deliberately go without --
        for those we only have promotional flyers, which are the company's
        own artwork. */
-    var foto = c.foto ? '<img class="cond-foto" loading="lazy" decoding="async" '+
-      'width="640" height="360" src="https://res.cloudinary.com/dwotodtoa/image/upload/w_640,h_360,c_fill,g_auto,f_auto,q_auto/'+
-      encodeURI(c.foto)+'" alt="' + escHtml('Vehicle of ') + escHtml(T(c.nombre))+'">' : '';
-    return '<div class="cond-card reveal in">'+foto+'<h4>'+escHtml(T(c.nombre))+'</h4>'+
+    /* Two different things can sit in `foto`, and they are not drawn the
+       same way:
+       - a photograph of the vehicle: cropped to 16:9, fills the card.
+       - `fotoTipo:"aviso"`: the company's own promotional flyer. It goes in
+         WHOLE, uncropped (c_fit + object-fit:contain), because what is
+         useful about it are the printed timetables, and cropping cuts them
+         off. It also gets a caption, so it does not read as our own photo. */
+    var img = '', pie = '';
+    if (c.foto) {
+      var aviso = c.fotoTipo === 'aviso';
+      img = '<img class="cond-foto'+(aviso ? ' cond-foto--aviso' : '')+'" '+
+        'loading="lazy" decoding="async" src="https://res.cloudinary.com/dwotodtoa/image/upload/'+
+        (aviso ? 'w_720,h_900,c_fit' : 'w_640,h_360,c_fill,g_auto')+',f_auto,q_auto/'+
+        encodeURI(c.foto)+'" alt="'+
+        escHtml((aviso ? 'Flyer for ' : 'Vehicle of ') + T(c.nombre))+'">';
+      if (aviso) pie = '<p class="cond-pie">Flyer from the company itself</p>';
+    }
+    return '<div class="cond-card reveal in">'+img+pie+'<h4>'+escHtml(T(c.nombre))+'</h4>'+
       '<ul class="cond-datos">'+filas+'</ul>'+
       (T(c.notas) ? '<p class="cond-notas">'+escHtml(T(c.notas))+'</p>' : '')+
       wa+'</div>';
