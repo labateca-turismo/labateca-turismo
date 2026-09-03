@@ -383,8 +383,13 @@ en `app.js` o `styles.css` «no aparece», casi siempre es eso: hay que
 desregistrar el SW y borrar los cachés, o subir la versión.
 
 **Cloudflare no sirve peticiones `Range`** para archivos estáticos: no manda
-`Accept-Ranges` y responde 200 en vez de 206. Por eso el audio del himno se
-oye pero **no se puede adelantar**.
+`Accept-Ranges` y responde 200 en vez de 206. Comprobado otra vez el 3 de
+septiembre de 2026 pidiendo `bytes=1000000-1000999` de un video: contestó 200
+con los 19 MB enteros. Por eso el himno y **los dos videos se reproducen pero
+no se pueden adelantar**: el navegador solo puede ir de corrido desde el
+principio. Con `+faststart` arrancan rápido y duran poco más de un minuto, así
+que se aguanta; si algún día entra un video largo, hay que servirlo desde un
+sitio que sí responda 206.
 
 **`gen_seo.js` con fichas sin fotos ni coordenadas:** omite `geo` e `image`
 del JSON-LD y las metas `geo.position`/`ICBM`, cambia «Cómo llegar» por
