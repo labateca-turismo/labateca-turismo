@@ -8,8 +8,9 @@ Bilingüe español/inglés. Sin frameworks, sin bundler, sin paso de compilació
 > corregirlo**. Estuvo desactualizado desde junio hasta el 2 de septiembre de
 > 2026 y en ese lapso hizo más daño que bien.
 
-**Estado al 3 de septiembre de 2026 (v198):** 116 lugares · 606 fotos ·
-6 rutas temáticas · 12 conductores · 292 páginas HTML · 286 URLs en el sitemap.
+**Estado al 3 de septiembre de 2026 (v199):** 116 lugares · 606 fotos ·
+6 rutas temáticas · 12 conductores · 2 videos · 292 páginas HTML · 286 URLs
+en el sitemap.
 
 ---
 
@@ -62,7 +63,7 @@ labateca proyect/
 │  ├─ en/route/        ← 6 páginas de ruta EN  ┘
 │  ├─ data/places.json ← FUENTE ÚNICA de los lugares
 │  ├─ data/rutas.json  ← FUENTE ÚNICA de las rutas
-│  ├─ media/           ← el MP3 del himno
+│  ├─ media/           ← el MP3 del himno y los dos videos (35 MB)
 │  ├─ app.js, styles.css, sw.js
 │  └─ worker-*.js      ← no se publican (.assetsignore)
 └─ *.js, *.py          ← generadores y scripts de lote (fuera del repo)
@@ -338,6 +339,44 @@ antes de subir a una cascada. Ahora Open-Meteo entrega también `hourly` y
 `daily`, y la tarjeta pinta tres cosas: si **llueve ahora**, **a qué hora
 empieza** si no llueve todavía, y una tira de **12 barras** con la probabilidad
 hora por hora. El respaldo de met.no arma la misma tira con sus propios campos.
+
+### Los dos videos de «Cómo usar la app» (v199)
+
+`/media/recorrido-por-la-guia.mp4` (1:05) y `/media/como-crear-tu-ruta.mp4`
+(1:24), grabados por José con la pantalla del celular y su voz.
+
+**Los originales pesaban 202 y 276 MB**: el celular graba a 27 Mbps. Quedaron
+en 15 y 19 MB con `ffmpeg`, **sin bajar la resolución** —el contenido es texto
+de pantalla y encogerlo le quita lo único que importa—. Se les recortó la barra
+de estado del teléfono, donde el cronómetro rojo de la grabación corría durante
+todo el video, y la barra de navegación de abajo: quedan en **1080 × 2180**.
+
+```bash
+# lo que se corrió (ffmpeg vino de: pip install imageio-ffmpeg)
+ffmpeg -i original.mp4 \n  -vf "crop=1080:2180:0:112,fps=30" \n  -c:v libx264 -preset medium -crf 26 -pix_fmt yuv420p \n  -c:a aac -b:a 80k -ac 1 -movflags +faststart  salida.mp4
+```
+
+- **`-movflags +faststart` no es opcional**: sin él el índice del MP4 queda al
+  final del archivo y el navegador tiene que bajarlo entero antes de pintar el
+  primer fotograma.
+- **Cloudflare tiene un tope de 25 MiB por archivo estático.** El de «crear tu
+  ruta» salió en 27 MB con CRF fijo, así que va a **bitrate objetivo en dos
+  pasadas** (1700 kbps), que sí garantiza el tamaño.
+- **Van servidos desde el propio sitio**, como el MP3 del himno y por el mismo
+  motivo: nadie de fuera cuenta quién los vio. La **regla 3-bis del service
+  worker deja pasar `/media/` sin interceptar**, que es justo lo que un
+  `<video>` necesita.
+- **La tarjeta entiende dos orígenes**: `data-video` (public_id de Cloudinary,
+  que saca la portada del primer fotograma) o `data-video-src` (archivo
+  nuestro, que necesita `data-video-poster` hecho a mano). `data-video-dur`
+  pinta la duración sobre la portada.
+- **La portada se escoge, no se toma del segundo cero.** Los dos videos
+  arrancan en la portada del sitio, así que sus miniaturas salían idénticas.
+  La de «crear tu ruta» se sacó del segundo 62, donde se ve el cajón de la
+  ruta con sus cuatro paradas.
+- Los **botones de Wikiloc de las fichas** (Cascada de Siscata, Mirador El
+  Pedregal) no tienen nada que ver con esto y siguen funcionando. Lo que se
+  quitó fue la **tarjeta de video** de Wikiloc, que nunca tuvo video.
 
 **El service worker sirve archivos viejos al probar en local.** Si un cambio
 en `app.js` o `styles.css` «no aparece», casi siempre es eso: hay que
