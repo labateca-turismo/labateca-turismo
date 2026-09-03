@@ -2458,3 +2458,13 @@ footer .solo-es{background:transparent;border-color:rgba(255,255,255,.28);color:
   text-transform:uppercase;
   color:var(--ink-mut);
 }
+
+/* ── Aviso de «a la espera de verificación» en /pueblo ────────────────
+   Reusa .vv-nota pero con mas aire arriba y abajo: va suelto entre el
+   hero y el indice, sin seccion que lo contenga, y sin esto queda
+   pegado a los dos. El icono de reloj marca que es un estado -- esta
+   pendiente-- y no una advertencia de peligro. */
+.pb-verificacion{
+  margin:26px 0 6px;
+  font-size:.95rem;
+}

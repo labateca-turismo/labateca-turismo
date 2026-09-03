@@ -8,7 +8,7 @@ Bilingüe español/inglés. Sin frameworks, sin bundler, sin paso de compilació
 > corregirlo**. Estuvo desactualizado desde junio hasta el 2 de septiembre de
 > 2026 y en ese lapso hizo más daño que bien.
 
-**Estado al 2 de septiembre de 2026 (v196):** 116 lugares · 600 fotos ·
+**Estado al 2 de septiembre de 2026 (v197):** 116 lugares · 600 fotos ·
 6 rutas temáticas · 292 páginas HTML · 286 URLs en el sitemap.
 
 ---
@@ -340,6 +340,10 @@ a temporal y `os.replace`.
 - **Levantar el páramo en campo.** La ruta existe como tarjeta «en
   preparación» y remite al guía. Laguna Negra y La Ovejera siguen sin
   coordenadas.
+- **`/pueblo` lleva desde la v197 un aviso de «a la espera de verificación
+  oficial»**, arriba del todo. No dice que la historia sea dudosa —las fuentes
+  están enlazadas— sino que **ninguna entidad la ha revisado ni certificado**,
+  que es distinto. Si algún día la Alcaldía o una academia lo revisa, se quita.
 - **Traducir el cuerpo** de `pueblo`, `viva`, `libro`, `biblioteca` e
   historia. Es traducción real, no enrutado. `/transporte` ya está hecha
   (v191) y sirve de molde: página gemela bajo `/en/`, `hreflang` en las dos,
@@ -366,7 +370,10 @@ a temporal y `os.replace`.
   por si hay enviadas y sin aprobar.
 - **Hospedaje: solo 3**, y el hotel principal dijo que no. Es el hueco de
   producto más grande de la guía.
-- **69 fotos antiguas retenidas** esperando firmas de Ley 1581.
+- **71 fotos antiguas retenidas** esperando firmas de Ley 1581 —11 del primer
+  lote y 60 del segundo—. Las 60 del segundo están listadas una por una en
+  `notas_rest/retenidas.txt`: 22 con menores y 38 con adultos identificables.
+  (Aquí decía 69, que eran las líneas del archivo, no las fotos.)
 
 
 ---
