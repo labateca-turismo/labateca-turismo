@@ -84,7 +84,7 @@
 <!-- ====== PDF (jsPDF — carga diferida, solo cuando el usuario pide el PDF) ====== -->
 <!-- Se inyecta dinámicamente en generatePDF() para no afectar la carga inicial -->
 
-<link rel="stylesheet" href="/styles.css?v=198">
+<link rel="stylesheet" href="/styles.css?v=199">
 </head>
 <body data-title-key="head_home">
 
@@ -339,30 +339,33 @@
     <div class="sec-head reveal">
       <span class="eyebrow" data-i18n="usar_eyebrow">Guía rápida</span>
       <h2 data-i18n="usar_title">Cómo usar la app</h2>
-      <p data-i18n="usar_sub">Videos cortos para aprovecharla en segundos. ¿Buscas qué visitar? Toca el botón y explora todos los lugares.</p>
+      <p data-i18n="usar_sub">Dos videos de poco más de un minuto, grabados en el pueblo. ¿Buscas qué visitar? Toca el botón y explora todos los lugares.</p>
     </div>
 
-    <div class="video-grid reveal d1" id="videoGrid">
-      <figure class="video-card" data-video="">
-        <button class="video-ph" type="button" aria-label="Reproducir video">
+    <!-- Los dos videos viven en /media/ del propio sitio, no en un
+         servicio de fuera. Solo se descargan cuando alguien toca play. -->
+    <div class="video-grid video-grid--vertical reveal d1" id="videoGrid">
+      <figure class="video-card video-card--vertical"
+              data-video-src="/media/recorrido-por-la-guia.mp4"
+              data-video-poster="/media/recorrido-por-la-guia.jpg"
+              data-video-dur="1:05">
+        <button class="video-ph" type="button" data-i18n-aria="usar_play_aria"
+                aria-label="Reproducir video">
           <svg class="video-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="11" opacity=".15"/><path d="M9.5 7.5v9l7-4.5z"/></svg>
           <span class="video-soon" data-i18n="usar_video_soon">Video próximamente</span>
         </button>
-        <figcaption data-i18n="usar_v1">Encontrar lugares y armar tu ruta</figcaption>
+        <figcaption data-i18n="usar_v1">Recorrido por la guía</figcaption>
       </figure>
-      <figure class="video-card" data-video="">
-        <button class="video-ph" type="button" aria-label="Reproducir video">
+      <figure class="video-card video-card--vertical"
+              data-video-src="/media/como-crear-tu-ruta.mp4"
+              data-video-poster="/media/como-crear-tu-ruta.jpg"
+              data-video-dur="1:24">
+        <button class="video-ph" type="button" data-i18n-aria="usar_play_aria"
+                aria-label="Reproducir video">
           <svg class="video-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="11" opacity=".15"/><path d="M9.5 7.5v9l7-4.5z"/></svg>
           <span class="video-soon" data-i18n="usar_video_soon">Video próximamente</span>
         </button>
-        <figcaption data-i18n="usar_v2">Navegar senderos con GPS (Wikiloc)</figcaption>
-      </figure>
-      <figure class="video-card" data-video="">
-        <button class="video-ph" type="button" aria-label="Reproducir video">
-          <svg class="video-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="11" opacity=".15"/><path d="M9.5 7.5v9l7-4.5z"/></svg>
-          <span class="video-soon" data-i18n="usar_video_soon">Video próximamente</span>
-        </button>
-        <figcaption data-i18n="usar_v3">El mapa, el clima y "Cómo llegar"</figcaption>
+        <figcaption data-i18n="usar_v2">Cómo crear tu ruta</figcaption>
       </figure>
     </div>
 

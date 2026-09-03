@@ -59,20 +59,44 @@ function cldVideoPoster(publicId) {
   if (!publicId || !CONFIG.cloudName) return '';
   return `https://res.cloudinary.com/${CONFIG.cloudName}/video/upload/so_0,w_700,c_fill,f_auto,q_auto/${publicId}.jpg`;
 }
-/* Convierte cada .video-card[data-video] con public_id en un video con portada
-   que SOLO se descarga al dar play (no afecta la carga inicial). Si data-video
-   está vacío, deja el placeholder "Video próximamente". */
+/* Convierte cada tarjeta de video en un reproductor con portada que SOLO
+   se descarga al dar play: la carga inicial de la portada no se toca.
+
+   Hay dos formas de decirle de dónde sale el video, y entiende las dos:
+
+     data-video="labateca/algo"        → public_id de Cloudinary
+     data-video-src="/media/algo.mp4"  → archivo del propio sitio
+
+   La segunda es la que usan los dos videos de «Cómo usar la app»: son
+   grabaciones de pantalla de José y viven en /media/, igual que el MP3
+   del himno, sin servicios de por medio. Con Cloudinary la portada la
+   saca el propio servicio del primer fotograma; con un archivo nuestro
+   hay que dársela hecha en data-video-poster.
+
+   Si la tarjeta no trae ninguna de las dos, se queda el "Video
+   próximamente" y no pasa nada. */
 function initVideos() {
-  document.querySelectorAll('.video-card[data-video]').forEach(card => {
-    const id = card.getAttribute('data-video');
-    const ph = card.querySelector('.video-ph');
-    if (!id || !ph || card.dataset.ready) return;     // sin video aún → placeholder
+  document.querySelectorAll('.video-card[data-video], .video-card[data-video-src]').forEach(card => {
+    const cld   = card.getAttribute('data-video');
+    const local = card.getAttribute('data-video-src');
+    const ph    = card.querySelector('.video-ph');
+    if ((!cld && !local) || !ph || card.dataset.ready) return;   // sin video aún → placeholder
     card.dataset.ready = '1';
-    const poster = cldVideoPoster(id);
+    const src    = local || cldVideo(cld);
+    const poster = card.getAttribute('data-video-poster') || (cld ? cldVideoPoster(cld) : '');
     if (poster) { ph.style.backgroundImage = `url("${poster}")`; ph.classList.add('has-poster'); }
+    /* La duración, encima de la portada. Es lo primero que uno quiere
+       saber antes de tocar play, sobre todo con datos del celular. */
+    const dur = card.getAttribute('data-video-dur');
+    if (dur) {
+      const pill = document.createElement('span');
+      pill.className = 'video-dur';
+      pill.textContent = dur;
+      ph.appendChild(pill);
+    }
     ph.addEventListener('click', () => {
       const v = document.createElement('video');
-      v.src = cldVideo(id);
+      v.src = src;
       v.controls = true; v.autoplay = true; v.playsInline = true; v.preload = 'none';
       if (poster) v.setAttribute('poster', poster);
       ph.replaceWith(v);
@@ -386,8 +410,10 @@ const I18N = {
     cta_drive:"Llegar al inicio", cta_trail:"Ver sendero",
     cta_llamar:"Llamar", cta_llamar_t:"Llamar a la línea de atención",
     cta_wikiloc:"Navegar (GPS)", cta_wikiloc_t:"Abre el sendero en Wikiloc: te guía con tu ubicación en vivo y funciona sin señal (descarga la ruta antes de salir).",
-    usar_eyebrow:"Guía rápida", usar_title:"Cómo usar la app", usar_sub:"Videos cortos para aprovecharla en segundos. ¿Buscas qué visitar? Toca el botón y explora todos los lugares.",
-    usar_video_soon:"Video próximamente", usar_v1:"Encontrar lugares y armar tu ruta", usar_v2:"Navegar senderos con GPS (Wikiloc)", usar_v3:"El mapa, el clima y \"Cómo llegar\"", usar_cta:"Ver todos los lugares",
+    usar_eyebrow:"Guía rápida", usar_title:"Cómo usar la app", usar_sub:"Dos videos de poco más de un minuto, grabados en el pueblo. ¿Buscas qué visitar? Toca el botón y explora todos los lugares.",
+    usar_video_soon:"Video próximamente", usar_play_aria:"Reproducir el video",
+    usar_v1:"Recorrido por la guía", usar_v2:"Cómo crear tu ruta",
+    usar_cta:"Ver todos los lugares",
     back_home:"Volver al inicio",
     visits_label:"visitas", visits_aria:"Personas que han visitado el sitio",
     fil_all:"Todos", fil_naturaleza:"Naturaleza", fil_cultura:"Cultura", fil_gastronomia:"Gastronomía", fil_hospedaje:"Hospedaje", fil_comercio:"Comercio", fil_servicios:"Servicios", fil_fav:"♥ Favoritos",
@@ -560,8 +586,10 @@ const I18N = {
     cta_drive:"Drive to start", cta_trail:"View trail",
     cta_llamar:"Call", cta_llamar_t:"Call the phone line",
     cta_wikiloc:"Navigate (GPS)", cta_wikiloc_t:"Open the trail in Wikiloc: it guides you with your live location and works with no signal (download the route before you leave).",
-    usar_eyebrow:"Quick guide", usar_title:"How to use the app", usar_sub:"Short videos to get the most out of it in seconds. Looking for places to visit? Tap the button and explore them all.",
-    usar_video_soon:"Video coming soon", usar_v1:"Find places and build your route", usar_v2:"Navigate trails with GPS (Wikiloc)", usar_v3:"The map, weather and \"Directions\"", usar_cta:"See all places",
+    usar_eyebrow:"Quick guide", usar_title:"How to use the app", usar_sub:"Two videos of just over a minute, recorded in the town. Looking for places to visit? Tap the button and explore them all.",
+    usar_video_soon:"Video coming soon", usar_play_aria:"Play the video",
+    usar_v1:"A tour of the guide", usar_v2:"How to build your route",
+    usar_cta:"See all places",
     back_home:"Back to home",
     visits_label:"visits", visits_aria:"People who have visited the site",
     fil_all:"All", fil_naturaleza:"Nature", fil_cultura:"Culture", fil_gastronomia:"Food", fil_hospedaje:"Lodging", fil_comercio:"Shops", fil_servicios:"Services", fil_fav:"♥ Favorites",

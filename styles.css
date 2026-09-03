@@ -2600,3 +2600,46 @@ footer .solo-es{background:transparent;border-color:rgba(255,255,255,.28);color:
 .map-pop-lista li:first-child{ border-top:0 }
 .map-pop-lista a{ font-size:.86rem;font-weight:700;color:var(--forest-2);text-decoration:none;margin:0 }
 .map-pop-lista a:hover{ color:var(--clay);text-decoration:underline }
+
+
+/* ── LOS DOS VIDEOS DE «CÓMO USAR LA APP» ───────────────────
+   Son grabaciones de la pantalla del celular: verticales, 1080x2180
+   una vez quitada la barra de estado. En la tarjeta 16:10 de siempre
+   saldrían con dos barras negras enormes a los lados, así que estas
+   van angostas, altas y centradas. La clase --vertical deja intacta
+   la tarjeta horizontal para el día que haya un video apaisado. */
+/* Flex y no rejilla: con repeat(auto-fit,...) sobra una pista vacia al
+   final y su hueco desplaza el par doce pixeles a la izquierda. */
+.video-grid--vertical{
+  display:flex;flex-wrap:wrap;justify-content:center;
+}
+.video-grid--vertical .video-card{flex:0 1 288px;max-width:288px}
+.video-card--vertical .video-ph,
+.video-card--vertical video{ aspect-ratio:1080/2180 }
+
+/* La portada es una captura de la guía, o sea casi blanca: el triángulo
+   blanco de play se perdía encima. Un velo verde de arriba abajo lo
+   devuelve y además hace que la tarjeta se lea como un video. */
+.video-card .video-ph.has-poster::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(22,53,42,.10) 0%,rgba(22,53,42,.38) 100%);
+}
+.video-card .video-play{position:relative}
+
+.video-dur{
+  position:absolute;right:10px;bottom:10px;
+  font-size:.72rem;font-weight:800;letter-spacing:.02em;
+  font-variant-numeric:tabular-nums;
+  background:rgba(22,53,42,.8);color:var(--cream);
+  padding:2px 9px;border-radius:99px;
+}
+
+@media (max-width:600px){
+  /* En móvil la rejilla general pasa a una sola columna. Estos dos
+     caben de dos en dos incluso en pantalla angosta, porque son
+     angostos: dejarlos apilados obligaría a bajar dos pantallas. */
+  .video-grid--vertical{gap:.9rem}
+  .video-grid--vertical .video-card{
+    flex:0 1 calc(50% - .45rem);max-width:calc(50% - .45rem);
+  }
+}
