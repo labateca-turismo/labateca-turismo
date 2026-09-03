@@ -84,7 +84,7 @@
 <!-- ====== PDF (jsPDF — carga diferida, solo cuando el usuario pide el PDF) ====== -->
 <!-- Se inyecta dinámicamente en generatePDF() para no afectar la carga inicial -->
 
-<link rel="stylesheet" href="/styles.css?v=197">
+<link rel="stylesheet" href="/styles.css?v=198">
 </head>
 <body data-title-key="head_home">
 
@@ -196,6 +196,9 @@
           <span class="weather-chip" id="wWind">💨 — km/h</span>
           <span class="weather-chip" id="wUV">☀️ UV —</span>
         </div>
+        <!-- ¿Llueve ahora? y probabilidad hora por hora -->
+        <div class="wx-rain" id="wRainLine" hidden></div>
+        <div class="wx-horas" id="wHoras" hidden></div>
         <div class="weather-footer">
           <span class="weather-place" data-i18n="w_place">Clima en Labateca</span>
           <span class="weather-updated" id="wUpdated"></span>
@@ -424,8 +427,11 @@
     <!-- Nota bajo el mapa ilustrado -->
     <div class="map-note" id="mapIlustradoNote" style="display:none">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      <span data-i18n="map_ilustrado_note">Mapa artístico de referencia · toca un punto para ver la ficha · “Cómo llegar” abre Google Maps con la ubicación real</span>
+      <span data-i18n="map_ilustrado_note">Calles, parque, parroquia y río tal como están en OpenStreetMap · toca un punto para ver la ficha · “Cómo llegar” abre Google Maps con la ubicación real</span>
     </div>
+
+    <!-- Lugares que quedan fuera del lienzo del dibujo -->
+    <div class="map-fuera" id="mapFuera" hidden></div>
 
     <div class="map-fallback" id="mapFallback" data-i18n="map_fallback">El mapa interactivo se cargará cuando publiques el sitio. Mientras tanto, cada lugar tiene su botón “Cómo llegar”.</div>
   </div>

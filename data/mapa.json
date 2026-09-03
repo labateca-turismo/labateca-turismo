@@ -1,0 +1,18 @@
+{
+  "generado": "2026-09-03",
+  "imagen": "/images/mapa-labateca.svg",
+  "w": 1200,
+  "h": 1050,
+  "metrosPorPx": 1,
+  "centro": {
+    "lat": 7.29835,
+    "lng": -72.4952
+  },
+  "vista": {
+    "x0": 74,
+    "y0": 147,
+    "x1": 840,
+    "y1": 939
+  },
+  "atribucion": "Base cartográfica © colaboradores de OpenStreetMap (ODbL)"
+}

@@ -8,8 +8,8 @@ Bilingüe español/inglés. Sin frameworks, sin bundler, sin paso de compilació
 > corregirlo**. Estuvo desactualizado desde junio hasta el 2 de septiembre de
 > 2026 y en ese lapso hizo más daño que bien.
 
-**Estado al 2 de septiembre de 2026 (v197):** 116 lugares · 600 fotos ·
-6 rutas temáticas · 292 páginas HTML · 286 URLs en el sitemap.
+**Estado al 3 de septiembre de 2026 (v198):** 116 lugares · 606 fotos ·
+6 rutas temáticas · 12 conductores · 292 páginas HTML · 286 URLs en el sitemap.
 
 ---
 
@@ -105,10 +105,14 @@ Opcionales: `telFijo`, `correo`, `track`, `trailhead`, `wikiloc`, `fotosAviso`,
   la coordenada del pueblo mandaría a la gente al parque a buscar una cascada.
   El código ya lo soporta en los dos lados. Hoy hay 9.
 - **`verified: false`** pinta la etiqueta amarilla «por verificar».
-- **`mapaFuera: true`** = tiene `lat`/`lng` de verdad, pero **no va en el mapa
-  ilustrado**, que solo dibuja el casco urbano. Su pin caería en un punto del
-  pueblo donde el lugar no está. Hoy son cinco: La Peña, Bike Rafa, Soma,
-  el Chorrerón y el Supermercado La Y. `pines_lote15.js` los respeta.
+- **`mapaX` / `mapaY` NO se escriben a mano.** Los calcula `pines_mapa.js`
+  desde `lat`/`lng` con la misma proyección con la que se dibujó el mapa
+  (ver «El mapa ilustrado» más abajo). Después de agregar lugares:
+  `node gen_mapa.js && node pines_mapa.js`.
+- **`mapaFuera: true`** = el lugar tiene `lat`/`lng` de verdad pero **cae
+  fuera del lienzo**, que cubre 1.200 × 1.050 m alrededor del casco. Lo pone
+  y lo quita `pines_mapa.js`; **no se edita a mano**. Hoy son once, y la
+  página los lista debajo del mapa con su distancia real.
 - **`telefono` es opcional.** La Personería tachó la casilla del teléfono en su
   formato y su ficha va sin él: `gen_seo.js` simplemente no pinta la fila de
   WhatsApp. No hay que inventar un número para llenar el hueco.
@@ -279,16 +283,61 @@ con una línea en blanco, y eso porque `gen_seo.js` lo entiende a propósito.
 300 m, con dueñas y teléfonos distintos. Las dos fichas se avisan la una de
 la otra en la recomendación: si alguien «unifica» los duplicados, rompe eso.
 
-**`pines_lote15.js` salta a las pendientes y a las `mapaFuera`.** Dos veces
-seguidas metió a quien no debía. Con las **pendientes**, que entran sin
-coordenadas, `fx()`/`fy()` devolvían `NaN` → `JSON.stringify` lo escribe como
-`null` → quedaban con `"mapaX": null`, que **no** es lo mismo que no tener la
-clave. Y a **La Peña, Bike Rafa, Soma y el Chorrerón** les volvió a poner pin
-del mapa ilustrado: en el lote 15 se les había quitado **a mano**, y un paso
-manual se olvida —se olvidó en el 16 y salió publicado en la v192—. Por eso
-ahora la decisión vive en el dato (`mapaFuera: true`) y no en la memoria de
-nadie. Si vuelve a aparecer un `"mapaX": null`, o un pin del casco urbano
-sobre un lugar que está a kilómetros, es esto.
+**`pines_lote15.js` y `fix_pines.js` quedaron obsoletos en la v198** y
+arrancan con un `process.exit(1)`. Ponían los pines «artísticamente» y los
+separaban a empujones cuando se encimaban; correrlos hoy movería los puntos
+de su sitio real. Antes de eso dieron dos regresiones seguidas: a las fichas
+**pendientes** les escribían `"mapaX": null` (que no es lo mismo que no tener
+la clave), y a los lugares lejanos les devolvían un pin dentro del pueblo
+porque quitárselo era un paso **manual** —y un paso manual se olvida: se
+olvidó en el lote 16 y salió publicado en la v192—. Hoy no hay paso manual:
+`pines_mapa.js` calcula el punto o marca `mapaFuera`, y no hay tercera opción.
+
+### El mapa ilustrado (v198)
+
+Ya no es un dibujo inventado. `mapa/osm_labateca.json` son los datos reales de
+**OpenStreetMap** descargados el 3 de septiembre de 2026: las carreras 1 a 12,
+las calles 1 a 5, el Parque Principal, la parroquia, la alcaldía, el puesto de
+salud, el cementerio, la cancha Jesús Núñez, la plaza de toros, los colegios,
+las manchas de bosque y el río Culagá.
+
+```
+mapa_proj.js     la proyección: (lat,lng) -> (x,y). Un solo sitio decide.
+gen_mapa.js      dibuja  files/images/mapa-labateca.svg + data/mapa.json
+pines_mapa.js    recalcula mapaX/mapaY de TODOS los lugares
+```
+
+**Las tres piezas comparten `mapa_proj.js`.** Si no compartieran la cuenta, los
+puntos caerían al lado de la calle que les toca. El lienzo son 1.200 × 1.050 px
+= 1.200 × 1.050 m, **1 px = 1 m**, centrado en 7.29835 / −72.49520.
+
+Control de que la cuenta cierra: el pin de la **alcaldía** queda a 9 m del
+polígono del edificio en OSM, el de la **Virgen de las Angustias** a 22 m de la
+parroquia y el del **cementerio** a 23 m. Y `ferre-agro-tk`, cuya ficha dice «a
+unos 500 metros del parque», cae a 509 m medidos. Si algún día un control de
+estos se dispara, es que se movió la proyección.
+
+- **`data/mapa.json`** lo escribe `gen_mapa.js` y lo lee `app.js`: medidas del
+  lienzo y encuadre inicial. Antes esos números estaban a mano en `app.js`
+  (1000 × 700) y el día que el dibujo cambió de tamaño nadie los actualizó.
+- **El SVG se carga con `L.imageOverlay`, o sea como imagen**: adentro no corre
+  JavaScript, no entra CSS de fuera y **no cargan tipografías web**. Solo
+  familias que ya estén en el equipo (Georgia, system-ui).
+- **La página agrupa los pines.** 74 de los 96 puntos tienen un vecino a menos
+  de 16 px: sueltos, el centro del pueblo es una mancha. La rejilla es propia,
+  de unas 30 líneas —`markercluster` es un script de CDN y el CSP no lo deja—.
+- **Atribución obligatoria.** Los datos son de OpenStreetMap bajo **ODbL**: el
+  crédito va escrito en el propio SVG y en la nota bajo el mapa. No se quita.
+- Para volver a bajar los datos de OSM (si el pueblo cambia en el mapa), la
+  consulta a Overpass está anotada en la cabecera de `mapa/osm_labateca.json`.
+
+### El clima dice si llueve (v198)
+
+El widget mostraba «Nublado / 0 mm» y con eso no se sabía lo único que importa
+antes de subir a una cascada. Ahora Open-Meteo entrega también `hourly` y
+`daily`, y la tarjeta pinta tres cosas: si **llueve ahora**, **a qué hora
+empieza** si no llueve todavía, y una tira de **12 barras** con la probabilidad
+hora por hora. El respaldo de met.no arma la misma tira con sus propios campos.
 
 **El service worker sirve archivos viejos al probar en local.** Si un cambio
 en `app.js` o `styles.css` «no aparece», casi siempre es eso: hay que

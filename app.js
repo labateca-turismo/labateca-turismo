@@ -259,6 +259,9 @@ const I18N = {
     gl_wa:"Escríbele", gl_call:"Llamar",
     gl_msg:"Hola, lo contacto desde la guía turística de Labateca. Quisiera orientación para visitar el pueblo.",
     w_loading:"Consultando clima…", w_place:"Clima en Labateca", w_feels:"Sensación",
+    w_rain_now:"Está lloviendo ahora", w_rain_none:"Sin lluvia en las próximas 12 horas",
+    w_rain_soon:"Lluvia probable desde", w_rain_hours:"Próximas 12 horas",
+    w_rain_prob:"probabilidad de lluvia", w_today:"hoy", w_rain_light:"Lloviznando ahora",
     stat_alt:"m.s.n.m.", stat_dist:"km a Cúcuta", stat_temp:"Promedio",
     dist_btn:"Calcular distancia desde mi ubicación",
     dist_locating:"Ubicándote…",
@@ -343,7 +346,10 @@ const I18N = {
     rv_thanks:"¡Gracias! Tu opinión quedó en revisión y pronto será publicada.",
     rv_photo_big:"La foto es muy pesada (máximo 8 MB).",
     rv_rate:"Se han enviado varias opiniones seguidas desde esta conexión. Espera un rato e inténtalo de nuevo.",
-    map_ilustrado_note:"Mapa artístico de referencia · toca un punto para ver la ficha · \"Cómo llegar\" abre Google Maps con la ubicación real",
+    map_il_leyenda:"Categorías", map_il_fuera:"Fuera de este dibujo:",
+    map_il_aqui:"{n} lugares en este punto",
+    map_il_error:"No pude cargar el mapa ilustrado. El mapa real sigue funcionando.",
+    map_ilustrado_note:"Calles, parque, parroquia y río tal como están en OpenStreetMap · toca un punto para ver la ficha · \"Cómo llegar\" abre Google Maps con la ubicación real",
     map_fallback:"No pudimos cargar el mapa interactivo. Revisa tu conexión e inténtalo de nuevo, o usa el botón \"Cómo llegar\" de cada lugar.",
     gal_eyebrow:"Postales", gal_title:"Galería", gal_sub:"Reemplaza estos espacios por tus propias fotos (mejor calidad y sin problemas de derechos).",
     contact_eyebrow:"Hablemos", contact_title:"¿Planeas tu visita?",
@@ -427,6 +433,9 @@ const I18N = {
     gl_wa:"Message", gl_call:"Call",
     gl_msg:"Hi! I found you on the Labateca tourism guide. I would like some help planning my visit.",
     w_loading:"Checking weather…", w_place:"Weather in Labateca", w_feels:"Feels like",
+    w_rain_now:"It is raining right now", w_rain_none:"No rain in the next 12 hours",
+    w_rain_soon:"Rain likely from", w_rain_hours:"Next 12 hours",
+    w_rain_prob:"chance of rain", w_today:"today", w_rain_light:"Drizzling right now",
     stat_alt:"m.a.s.l.", stat_dist:"km to Cúcuta", stat_temp:"Average",
     dist_btn:"Calculate distance from my location",
     dist_locating:"Locating you…",
@@ -511,7 +520,10 @@ const I18N = {
     rv_thanks:"Thank you! Your review is pending approval and will be published soon.",
     rv_photo_big:"The photo is too large (8 MB max).",
     rv_rate:"Several reviews were sent from this connection in a row. Please wait a while and try again.",
-    map_ilustrado_note:"Artistic reference map · tap a dot to see the place card · \"Directions\" opens Google Maps with the real location",
+    map_il_leyenda:"Categories", map_il_fuera:"Beyond this drawing:",
+    map_il_aqui:"{n} places at this spot",
+    map_il_error:"The illustrated map could not load. The real map still works.",
+    map_ilustrado_note:"Streets, square, parish church and river as mapped on OpenStreetMap · tap a dot to see the place card · \"Directions\" opens Google Maps with the real location",
     map_fallback:"We couldn't load the interactive map. Check your connection and try again, or use each place's \"Directions\" button.",
     gal_eyebrow:"Postcards", gal_title:"Gallery", gal_sub:"Replace these slots with your own photos (better quality and no copyright issues).",
     contact_eyebrow:"Let's talk", contact_title:"Planning your visit?",
@@ -1291,7 +1303,10 @@ function _fetchTimeout(url,ms){
 
 async function _weatherOpenMeteo(){
   const {lat,lng}=CONFIG.townCoords;
-  const url=`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation,uv_index,cloud_cover&timezone=America/Bogota`;
+  const url=`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}`+
+    `&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation,uv_index,cloud_cover`+
+    `&hourly=precipitation_probability,precipitation,weather_code`+
+    `&daily=precipitation_sum&forecast_days=2&timezone=America/Bogota`;
   const r=await _fetchTimeout(url,6000);
   if(!r.ok) throw new Error('http '+r.status);
   const d=await r.json();
@@ -1305,7 +1320,9 @@ async function _weatherOpenMeteo(){
     wind:Math.round(c.wind_speed_10m??0),
     rain:+(c.precipitation??0).toFixed(1),
     uv:Math.round(c.uv_index??0),
-    cloud:c.cloud_cover??0
+    cloud:c.cloud_cover??0,
+    mmHoy:+(((d.daily||{}).precipitation_sum||[0])[0]??0).toFixed(1),
+    horas:_horasOpenMeteo(d)
   };
   paintWeather();
 }
@@ -1335,7 +1352,9 @@ async function _weatherMetNo(){
     wind:Math.round((det.wind_speed??0)*3.6),
     rain:+(((next.details||{}).precipitation_amount)??0).toFixed(1),
     uv:Math.round(det.ultraviolet_index_clear_sky??0),
-    cloud:Math.round(det.cloud_area_fraction??0)
+    cloud:Math.round(det.cloud_area_fraction??0),
+    mmHoy:_mmHoyMetNo(d),
+    horas:_horasMetNo(d)
   };
   paintWeather();
 }
@@ -1349,12 +1368,127 @@ function paintWeather(){
   document.getElementById("wFeels").textContent=`${t('w_feels')}: ${lw.feels}°C`;
   document.getElementById("wCondition").textContent=w[lang];
   document.getElementById("wHumidity").textContent=`💧 ${lw.hum}%`;
-  document.getElementById("wRain").textContent=`🌧 ${lw.rain} mm`;
+  document.getElementById("wRain").textContent=`🌧 ${_mm(lw.mmHoy!=null?lw.mmHoy:lw.rain)} mm ${t('w_today')}`;
   document.getElementById("wWind").textContent=`💨 ${lw.wind} km/h`;
   document.getElementById("wUV").textContent=`☀️ UV ${lw.uv}`;
   const now=new Date();
   const timeStr=now.toLocaleTimeString(lang==="es"?'es-CO':'en-US',{hour:'2-digit',minute:'2-digit'});
   document.getElementById("wUpdated").textContent=lang==="es"?`Act. ${timeStr}`:`Upd. ${timeStr}`;
+  paintRain();
+}
+
+
+/* ── ¿ESTÁ LLOVIENDO? ────────────────────────────────────────
+   Códigos WMO que son lluvia de verdad (llovizna incluida). Los
+   45/48 son neblina: mojan, pero no son lluvia y no se anuncian
+   como tal. */
+const WCODE_LLUVIA = [51,53,55,56,57,61,63,65,66,67,80,81,82,95,96,99];
+const WCODE_LLOVIZNA = [51,53,55,56,57];
+
+/* Coma decimal en español, punto en inglés. */
+function _mm(n){
+  const s=(Number(n)||0).toFixed(1);
+  return lang==="es" ? s.replace(".",",") : s;
+}
+/* "13" para la barra; "1 p. m." para la frase. */
+function _horaCorta(iso){ return iso.slice(11,13); }
+function _horaLarga(iso){
+  const d=new Date(iso.replace(" ","T"));
+  if(isNaN(d)) return iso.slice(11,16);
+  return d.toLocaleTimeString(lang==="es"?"es-CO":"en-US",{hour:"numeric",minute:"2-digit"})
+          .replace(":00","");
+}
+
+/* Doce horas desde la hora en curso. Open-Meteo entrega arreglos
+   paralelos y la hora actual viene en current.time. */
+function _horasOpenMeteo(d){
+  const h=d.hourly; if(!h||!h.time) return [];
+  const marca=((d.current||{}).time||"").slice(0,13)+":00";
+  let i=h.time.indexOf(marca);
+  if(i<0) i=0;
+  const out=[];
+  for(let k=i;k<i+12&&k<h.time.length;k++){
+    out.push({ iso:h.time[k],
+               prob:Math.round((h.precipitation_probability||[])[k]||0),
+               mm:+(((h.precipitation||[])[k])||0).toFixed(1),
+               code:(h.weather_code||[])[k]??0 });
+  }
+  return out;
+}
+/* met.no ya viene ordenado por hora: se toman las 12 primeras. */
+function _horasMetNo(d){
+  const ts=((d.properties||{}).timeseries)||[];
+  return ts.slice(0,12).map(p=>{
+    const n1=(p.data&&p.data.next_1_hours)||{};
+    const det=n1.details||{};
+    const sym=((n1.summary||{}).symbol_code||"").split("_")[0];
+    return { iso:p.time.slice(0,16),
+             prob:Math.round(det.probability_of_precipitation??0),
+             mm:+((det.precipitation_amount??0)).toFixed(1),
+             code:METNO_WMO[sym]??0 };
+  });
+}
+function _mmHoyMetNo(d){
+  const hoy=new Date().toISOString().slice(0,10);
+  const ts=((d.properties||{}).timeseries)||[];
+  let s=0;
+  ts.slice(0,24).forEach(p=>{
+    if(p.time.slice(0,10)!==hoy) return;
+    const det=(((p.data||{}).next_1_hours||{}).details)||{};
+    s+=det.precipitation_amount||0;
+  });
+  return +s.toFixed(1);
+}
+
+/* Pinta la línea de estado y la tira de 12 horas. */
+function paintRain(){
+  const linea=document.getElementById("wRainLine");
+  const tira =document.getElementById("wHoras");
+  if(!linea||!lastWeather) return;
+  const w=lastWeather, horas=w.horas||[];
+
+  const llueveAhora = (w.rain>0) || WCODE_LLUVIA.indexOf(w.code)>=0;
+  const llovizna    = WCODE_LLOVIZNA.indexOf(w.code)>=0 && !(w.rain>0.4);
+
+  /* Primera hora futura con lluvia razonablemente probable. */
+  let prox=null;
+  for(let i=1;i<horas.length;i++){
+    if(horas[i].prob>=50 || horas[i].mm>=0.3){ prox=horas[i]; break; }
+  }
+
+  let clase, icono, texto;
+  if(llueveAhora){
+    clase="wx-rain--si"; icono="🌧️";
+    texto=`<b>${llovizna?t('w_rain_light'):t('w_rain_now')}</b>`+
+          (w.rain>0?` · ${_mm(w.rain)} mm`:"");
+  } else if(prox){
+    clase="wx-rain--pronto"; icono="🌦️";
+    /* En español la hora lleva artículo, y la una lo lleva en singular. */
+    const h24=+prox.iso.slice(11,13), h12=h24%12===0?12:h24%12;
+    const art=lang==="es" ? (h12===1?"la ":"las ") : "";
+    texto=`<b>${t('w_rain_soon')} ${art}${_horaLarga(prox.iso)}</b> · ${prox.prob}%`;
+  } else {
+    clase="wx-rain--no"; icono="🌤️";
+    texto=`<b>${t('w_rain_none')}</b>`;
+  }
+  linea.className="wx-rain "+clase;
+  linea.innerHTML=`<span class="wx-rain-ico">${icono}</span><span>${texto}</span>`;
+  linea.hidden=false;
+
+  if(!tira) return;
+  if(!horas.length){ tira.hidden=true; return; }
+  const barras=horas.map((x,i)=>{
+    const alto=Math.max(3,Math.round(x.prob*0.34));   // 0–100 % → 3–34 px
+    const alta=x.prob>=50?" wx-b--alta":"";
+    const tit=`${_horaLarga(x.iso)} · ${x.prob}% ${t('w_rain_prob')}`+
+              (x.mm>0?` · ${_mm(x.mm)} mm`:"");
+    return `<div class="wx-b${alta}" title="${escHtml(tit)}">`+
+           `<i style="height:${alto}px"></i>`+
+           `<span>${i%3===0?_horaCorta(x.iso):""}</span></div>`;
+  }).join("");
+  tira.innerHTML=`<div class="wx-horas-tit">${t('w_rain_hours')}</div>`+
+                 `<div class="wx-barras">${barras}</div>`;
+  tira.hidden=false;
 }
 
 /* ============================================================
@@ -1660,96 +1794,241 @@ function switchMap(type) {
    ============================================================ */
 function initMapIlustrado() {
   if (typeof L === 'undefined') return;
-  try {
-    // Dimensiones del canvas del mapa ilustrado (coinciden con el SVG)
-    const IMG_W = 1000, IMG_H = 700;
-    // En CRS.Simple: [lat, lng] = [filaDesdeAbajo, columna]
-    // Para pixel de pantalla (x, y): lat = IMG_H - y, lng = x
-    const bounds = [[0, 0], [IMG_H, IMG_W]];
-
-    const mapIl = L.map('map-ilustrado', {
-      crs: L.CRS.Simple,
-      minZoom: -2,
-      maxZoom: 2,
-      zoomSnap: 0.25,
-      zoomDelta: 0.5,
-      attributionControl: false,
-      zoomControl: true
+  fetch('/data/mapa.json', { cache: 'no-cache' })
+    .then(r => r.json())
+    .then(m => _construirMapaIlustrado(m))
+    .catch(e => {
+      console.warn('[Labateca] no pude leer data/mapa.json:', e.message);
+      const cont = document.getElementById('map-ilustrado');
+      if (cont) cont.innerHTML =
+        '<p style="padding:26px;text-align:center;color:#6a6357">' + t('map_il_error') + '</p>';
     });
-    window._leafletMapIlustrado = mapIl;
+}
 
-    // Imagen base del mapa ilustrado
-    L.imageOverlay('/images/mapa-ilustrado-placeholder.svg', bounds, {
-      interactive: false
-    }).addTo(mapIl);
-    mapIl.fitBounds(bounds, { padding: [10, 10] });
+/* Colores por categoría. Son los mismos que usan las fichas. */
+const CAT_COLOR = {
+  naturaleza:  '#2d6149',
+  cultura:     '#bd5d34',
+  gastronomia: '#d4a23f',
+  hospedaje:   '#3d8ec0',
+  comercio:    '#8a5a9c',
+  servicios:   '#3d5a80'
+};
 
-    // Icono personalizado para los marcadores del mapa ilustrado
-    const iconBase = (color) => L.divIcon({
-      className: '',
-      html: `<div style="
-        width:18px;height:18px;
-        background:${color};
-        border:2.5px solid #fbf8f1;
-        border-radius:50%;
-        box-shadow:0 2px 8px rgba(0,0,0,.4);
-        cursor:pointer;
-        transition:transform .2s;
-      "></div>`,
-      iconSize: [18, 18],
-      iconAnchor: [9, 9],
-      popupAnchor: [0, -12]
-    });
+function _construirMapaIlustrado(M) {
+  const IMG_W = M.w, IMG_H = M.h;
+  /* CRS.Simple: [lat, lng] = [fila desde abajo, columna].
+     Para un píxel de pantalla (x, y): lat = IMG_H - y, lng = x. */
+  const aLatLng = (x, y) => [IMG_H - y, x];
+  const bordes  = [[0, 0], [IMG_H, IMG_W]];
 
-    // Colores por categoría
-    const CAT_COLOR = {
-      naturaleza:  '#2d6149',
-      cultura:     '#bd5d34',
-      gastronomia: '#d4a23f',
-      hospedaje:   '#7bb3d4',
-      comercio:    '#8a5a9c',
-      servicios:   '#3d5a80'
-    };
+  const mapIl = L.map('map-ilustrado', {
+    crs: L.CRS.Simple,
+    minZoom: -2.5,
+    maxZoom: 2.5,
+    zoomSnap: 0,
+    zoomDelta: 0.6,
+    wheelPxPerZoomLevel: 140,
+    attributionControl: false,
+    zoomControl: true,
+    maxBoundsViscosity: 0.7
+  });
+  window._leafletMapIlustrado = mapIl;
 
-    // Dibujar marcadores
-    PLACES.forEach(p => {
-      // Necesitamos mapaX y mapaY para posicionar en el ilustrado
-      if (p.mapaX == null || p.mapaY == null) return;
+  L.imageOverlay(M.imagen, bordes, { interactive: false, alt: '' }).addTo(mapIl);
+  mapIl.setMaxBounds([[-140, -140], [IMG_H + 140, IMG_W + 140]]);
 
-      // Conversión: pixel (x=mapaX, y=mapaY) → Leaflet [lat, lng]
-      const latlng = [IMG_H - p.mapaY, p.mapaX];
-      const cat    = p.categoria || p.cat || 'naturaleza';
-      const color  = CAT_COLOR[cat] || '#bd5d34';
-      const gmaps  = `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`;
-
-      const nombre   = escHtml(placeName(p));
-      const dist     = escHtml((p.dist        || {})[lang] || '');
-      const dific    = escHtml((p.dificultad  || p.diff || {})[lang] || '');
-      const rec      = escHtml((p.recomendacion || p.rec || {})[lang] || '');
-      const catLabel = t('fil_' + cat);
-      const notaVerif= !p.verified
-        ? `<span style="display:inline-block;margin-top:5px;font-size:.72rem;background:#d4a23f;color:#16352a;padding:2px 7px;border-radius:99px;font-weight:800">${t('verify_badge')}</span>`
-        : '';
-
-      const popup = `
-        <div class="map-pop">
-          <div style="font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:${color};margin-bottom:4px">${catLabel}</div>
-          <b>${nombre}</b>
-          ${notaVerif}
-          ${dist || dific ? `<span class="map-pop-stats">${[dist, dific].filter(Boolean).join(' · ')}</span>` : ''}
-          ${rec ? `<span class="map-pop-rec">${rec}</span>` : ''}
-          <a href="${gmaps}" target="_blank" rel="noopener noreferrer" onclick="trackEvent('${escJs(p.id)}','ruta')">${IC.navi} ${t('cta_how')}</a>
-        </div>`;
-
-      L.marker(latlng, { icon: iconBase(color) })
-        .addTo(mapIl)
-        .bindPopup(popup, { maxWidth: 260, minWidth: 180 });
-    });
-
-    setTimeout(() => mapIl.invalidateSize(), 300);
-  } catch(e) {
-    console.warn('[Labateca] Error inicializando mapa ilustrado:', e);
+  /* Encuadre de arranque: el casco urbano, no el lienzo entero. */
+  const v = M.vista || { x0: 0, y0: 0, x1: IMG_W, y1: IMG_H };
+  const vistaCasco = [aLatLng(v.x0, v.y1), aLatLng(v.x1, v.y0)];
+  /* Se calcula el zoom en vez de leerlo después de fitBounds: con
+     animación, getZoom() todavía devuelve el anterior y el tope no
+     se aplicaba. El piso solo evita que en una pantalla muy angosta
+     el pueblo quede del tamaño de una moneda; para el detalle está
+     el zoom, y los pines mantienen su tamaño en pantalla. */
+  const Z_MIN = -1.55;
+  const centroVista = aLatLng((v.x0 + v.x1) / 2, (v.y0 + v.y1) / 2);
+  function encuadrar() {
+    const z = mapIl.getBoundsZoom(vistaCasco, false, L.point(12, 12));
+    mapIl.setView(centroVista, Math.max(z, Z_MIN), { animate: false });
   }
+  encuadrar();
+
+  /* ── Los lugares que sí caen dentro del dibujo ─────────────
+     El pin ya no se pone a mano: mapaX / mapaY los calcula
+     pines_mapa.js desde el GPS con la misma proyección con la
+     que se dibujó el mapa. */
+  const puntos = PLACES.filter(p =>
+    typeof p.mapaX === 'number' && typeof p.mapaY === 'number' && !p.mapaFuera);
+
+  const capa = L.layerGroup().addTo(mapIl);
+  const apagadas = new Set();          // categorías ocultas por la leyenda
+
+  const catDe = p => p.categoria || p.cat || 'naturaleza';
+
+  function popupDe(p) {
+    const cat   = catDe(p);
+    const color = CAT_COLOR[cat] || '#bd5d34';
+    const gmaps = `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`;
+    const dist  = escHtml((p.dist || {})[lang] || '');
+    const dific = escHtml((p.dificultad || p.diff || {})[lang] || '');
+    const rec   = escHtml((p.recomendacion || p.rec || {})[lang] || '');
+    const aviso = !p.verified
+      ? `<span class="map-pop-verif">${t('verify_badge')}</span>` : '';
+    return `
+      <div class="map-pop">
+        <div class="map-pop-cat" style="color:${color}">${t('fil_' + cat)}</div>
+        <b>${escHtml(placeName(p))}</b>
+        ${aviso}
+        ${dist || dific ? `<span class="map-pop-stats">${[dist, dific].filter(Boolean).join(' · ')}</span>` : ''}
+        ${rec ? `<span class="map-pop-rec">${rec}</span>` : ''}
+        <a href="${gmaps}" target="_blank" rel="noopener noreferrer"
+           onclick="trackEvent('${escJs(p.id)}','ruta')">${IC.navi} ${t('cta_how')}</a>
+      </div>`;
+  }
+
+  function iconoLugar(color) {
+    return L.divIcon({
+      className: 'pin-wrap',
+      html: `<span class="pin-il" style="--pin:${color}"></span>`,
+      iconSize: [16, 16], iconAnchor: [8, 8], popupAnchor: [0, -10]
+    });
+  }
+  function iconoGrupo(n) {
+    const d = n < 5 ? 30 : n < 12 ? 36 : 42;
+    return L.divIcon({
+      className: 'pin-wrap',
+      html: `<span class="pin-grupo" style="width:${d}px;height:${d}px">${n}</span>`,
+      iconSize: [d, d], iconAnchor: [d / 2, d / 2]
+    });
+  }
+
+  /* ── Agrupar lo que se solapa ──────────────────────────────
+     Rejilla sencilla: se divide la vista en celdas de 42 px de
+     PANTALLA y lo que cae en la misma celda se junta. Al acercar,
+     la celda vale menos píxeles del dibujo y los grupos se abren
+     solos. No hace falta librería: markercluster es un script de
+     CDN y el CSP del sitio no deja cargar scripts de fuera. */
+  const CELDA = 42;
+  function repintar() {
+    capa.clearLayers();
+    const escala = mapIl.getZoomScale(mapIl.getZoom(), 0);   // px pantalla por px dibujo
+    const celda  = CELDA / Math.max(escala, 0.05);
+    const cubos  = new Map();
+
+    puntos.forEach(p => {
+      if (apagadas.has(catDe(p))) return;
+      const k = Math.floor(p.mapaX / celda) + ':' + Math.floor(p.mapaY / celda);
+      if (!cubos.has(k)) cubos.set(k, []);
+      cubos.get(k).push(p);
+    });
+
+    cubos.forEach(grupo => {
+      if (grupo.length === 1) {
+        const p = grupo[0];
+        L.marker(aLatLng(p.mapaX, p.mapaY),
+                 { icon: iconoLugar(CAT_COLOR[catDe(p)] || '#bd5d34'),
+                   riseOnHover: true, title: placeName(p) })
+          .addTo(capa)
+          .bindPopup(popupDe(p), { maxWidth: 268, minWidth: 190 })
+          .bindTooltip(escHtml(placeName(p)), { direction: 'top', offset: [0, -9], opacity: .96 });
+        return;
+      }
+      const cx = grupo.reduce((s, p) => s + p.mapaX, 0) / grupo.length;
+      const cy = grupo.reduce((s, p) => s + p.mapaY, 0) / grupo.length;
+      const nombres = grupo.slice(0, 6).map(p => escHtml(placeName(p)));
+      if (grupo.length > 6) nombres.push('…');
+      const xs = grupo.map(p => p.mapaX), ys = grupo.map(p => p.mapaY);
+      const ancho = Math.max(Math.max(...xs) - Math.min(...xs),
+                             Math.max(...ys) - Math.min(...ys));
+      /* ¿Acercar los separa? Si ni en el zoom máximo quedan a 26 px
+         unos de otros -están en el mismo edificio- acercar no sirve
+         y el grupo abre su listado. */
+      const separables = ancho * Math.pow(2, mapIl.getMaxZoom()) > 26;
+      const m = L.marker(aLatLng(cx, cy), { icon: iconoGrupo(grupo.length), riseOnHover: true })
+        .addTo(capa)
+        .bindTooltip(nombres.join('<br>'), { direction: 'top', offset: [0, -14], opacity: .96 });
+
+      if (separables) {
+        m.on('click', () => mapIl.flyToBounds(
+          [aLatLng(Math.min(...xs) - 26, Math.max(...ys) + 26),
+           aLatLng(Math.max(...xs) + 26, Math.min(...ys) - 26)],
+          { maxZoom: 2.4, duration: .5 }));
+      } else {
+        const base = lang === 'en' ? '/en/place/' : '/lugar/';
+        m.bindPopup(
+          '<div class="map-pop map-pop-lista">' +
+          '<b>' + escHtml(t('map_il_aqui').replace('{n}', grupo.length)) + '</b>' +
+          '<ul>' + grupo.map(p =>
+            '<li><a href="' + base + encodeURIComponent(p.id) + '">' +
+            escHtml(placeName(p)) + '</a></li>').join('') +
+          '</ul></div>', { maxWidth: 250, minWidth: 180 });
+      }
+    });
+  }
+  mapIl.on('zoomend', repintar);
+  repintar();
+
+  /* ── Leyenda: además de explicar el color, filtra ─────────── */
+  const cats = [...new Set(puntos.map(catDe))]
+    .sort((a, b) => t('fil_' + a).localeCompare(t('fil_' + b), lang));
+  const leyenda = L.control({ position: 'bottomright' });
+  leyenda.onAdd = function () {
+    const d = L.DomUtil.create('div', 'map-leyenda');
+    d.innerHTML =
+      `<button type="button" class="map-ley-tit" aria-expanded="true">${t('map_il_leyenda')}</button>` +
+      '<div class="map-ley-lista">' +
+      cats.map(c =>
+        `<button type="button" class="map-ley-it" data-cat="${escHtml(c)}">` +
+        `<i style="background:${CAT_COLOR[c] || '#bd5d34'}"></i>` +
+        `<span>${t('fil_' + c)}</span></button>`).join('') +
+      '</div>';
+    L.DomEvent.disableClickPropagation(d);
+    L.DomEvent.disableScrollPropagation(d);
+    d.querySelector('.map-ley-tit').addEventListener('click', () => {
+      const abierta = !d.classList.toggle('cerrada');
+      d.querySelector('.map-ley-tit').setAttribute('aria-expanded', String(abierta));
+    });
+    d.querySelectorAll('.map-ley-it').forEach(b => {
+      b.addEventListener('click', () => {
+        const c = b.dataset.cat;
+        if (apagadas.has(c)) { apagadas.delete(c); b.classList.remove('off'); }
+        else { apagadas.add(c); b.classList.add('off'); }
+        repintar();
+      });
+    });
+    return d;
+  };
+  leyenda.addTo(mapIl);
+
+  /* ── Los que no caben en el dibujo ─────────────────────────
+     Lirgua está a 6 km y El Chorrerón a 12: antes se pintaban
+     dentro del pueblo, que es sencillamente falso. Ahora salen
+     debajo del mapa, con su distancia y su enlace a Google. */
+  pintarLugaresFuera();
+
+  setTimeout(() => { mapIl.invalidateSize(); encuadrar(); }, 300);
+}
+
+/* Lista de los lugares que quedan fuera del lienzo del dibujo. */
+function pintarLugaresFuera() {
+  const cont = document.getElementById('mapFuera');
+  if (!cont) return;
+  const fuera = PLACES
+    .filter(p => p.mapaFuera && typeof p.lat === 'number' && typeof p.lng === 'number')
+    .map(p => ({ p, km: haversineKm(CONFIG.townCoords.lat, CONFIG.townCoords.lng, p.lat, p.lng) }))
+    .sort((a, b) => a.km - b.km);
+  if (!fuera.length) { cont.hidden = true; return; }
+  cont.innerHTML =
+    `<span class="map-fuera-tit">${t('map_il_fuera')}</span>` +
+    fuera.map(({ p, km }) => {
+      const g = `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`;
+      const d = km < 1 ? Math.round(km * 1000) + ' m'
+                       : (lang === 'es' ? km.toFixed(1).replace('.', ',') : km.toFixed(1)) + ' km';
+      return `<a class="map-fuera-chip" href="${g}" target="_blank" rel="noopener noreferrer"
+        onclick="trackEvent('${escJs(p.id)}','ruta')">${escHtml(placeName(p))}<b>${d}</b></a>`;
+    }).join('');
+  cont.hidden = false;
 }
 
 /* ============================================================

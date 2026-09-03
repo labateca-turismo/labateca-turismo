@@ -1,5 +1,5 @@
 {
-  "version": "1.14",
+  "version": "1.16",
   "lugares": [
     {
       "id": "templo",
@@ -8,8 +8,8 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 513,
-      "mapaY": 355,
+      "mapaX": 748.9,
+      "mapaY": 388.8,
       "telefono": "",
       "nombre": {
         "es": "Parroquia Nuestra Señora de las Angustias",
@@ -96,8 +96,8 @@
       "coordsApprox": false,
       "lat": 7.299582,
       "lng": -72.4938511,
-      "mapaX": 540,
-      "mapaY": 351,
+      "mapaX": 748.9,
+      "mapaY": 388.8,
       "telefono": "",
       "nombre": {
         "es": "Nuestra Señora de las Angustias — Patrona",
@@ -159,8 +159,8 @@
       "coordsApprox": false,
       "lat": 7.3002463,
       "lng": -72.4963025,
-      "mapaX": 464,
-      "mapaY": 328,
+      "mapaX": 478.3,
+      "mapaY": 315.3,
       "telefono": "",
       "nombre": {
         "es": "Cementerio (Camposanto) de Labateca",
@@ -222,8 +222,8 @@
       "coordsApprox": false,
       "lat": 7.2997576,
       "lng": -72.494551,
-      "mapaX": 480,
-      "mapaY": 408,
+      "mapaX": 671.7,
+      "mapaY": 369.4,
       "telefono": "573213496226",
       "nombre": {
         "es": "Servicios Parroquiales y Documentos",
@@ -270,8 +270,8 @@
       "coordsApprox": false,
       "lat": 7.2996816,
       "lng": -72.49452,
-      "mapaX": 519,
-      "mapaY": 368,
+      "mapaX": 675.1,
+      "mapaY": 377.8,
       "telefono": "",
       "nombre": {
         "es": "Parque Principal",
@@ -338,8 +338,8 @@
       "coordsApprox": false,
       "lat": 7.300327,
       "lng": -72.494867,
-      "mapaX": 505,
-      "mapaY": 339,
+      "mapaX": 636.8,
+      "mapaY": 306.4,
       "telefono": "573219592514",
       "nombre": {
         "es": "Intrínseco — Restaurante, Café y Bar",
@@ -406,8 +406,8 @@
       "coordsApprox": false,
       "lat": 7.3005894,
       "lng": -72.4950748,
-      "mapaX": 460,
-      "mapaY": 397,
+      "mapaX": 613.8,
+      "mapaY": 277.4,
       "telefono": "",
       "telFijo": "576015948500",
       "nombre": {
@@ -460,8 +460,8 @@
       "coordsApprox": false,
       "lat": 7.30017,
       "lng": -72.494824,
-      "mapaX": 462,
-      "mapaY": 355,
+      "mapaX": 641.5,
+      "mapaY": 323.8,
       "telefono": "573123047048",
       "nombre": {
         "es": "Siscatagua A.P.C. — Acueducto y Alcantarillado",
@@ -538,8 +538,8 @@
       "coordsApprox": false,
       "lat": 7.300346,
       "lng": -72.49487,
-      "mapaX": 492,
-      "mapaY": 336,
+      "mapaX": 636.4,
+      "mapaY": 304.3,
       "telefono": "584168475520",
       "nombre": {
         "es": "Criss Studio — Uñas y Belleza",
@@ -591,8 +591,6 @@
       "coordsApprox": false,
       "lat": 7.272325,
       "lng": -72.544543,
-      "mapaX": 220,
-      "mapaY": 520,
       "telefono": "",
       "nombre": {
         "es": "Cascadas de Lirgua y Dos Brazos",
@@ -690,7 +688,8 @@
           "es": "La quebrada a lo largo del recorrido entre las dos cascadas, entre roca, musgo y monte húmedo.",
           "en": "The creek along the route between the two waterfalls, amid rock, moss and damp forest."
         }
-      ]
+      ],
+      "mapaFuera": true
     },
     {
       "id": "cascada-siscata",
@@ -699,8 +698,6 @@
       "coordsApprox": false,
       "lat": 7.303682,
       "lng": -72.514713,
-      "mapaX": 299,
-      "mapaY": 478,
       "telefono": "",
       "nombre": {
         "es": "Cascada de Siscata",
@@ -769,7 +766,8 @@
           "es": "La grieta de roca en la parte baja del recorrido, donde está la bocatoma del acueducto.",
           "en": "The rock crevice at the lower end of the trail, where the water intake sits."
         }
-      ]
+      ],
+      "mapaFuera": true
     },
     {
       "id": "pedregal",
@@ -778,8 +776,6 @@
       "coordsApprox": false,
       "lat": 7.2991571,
       "lng": -72.5043657,
-      "mapaX": 360,
-      "mapaY": 410,
       "telefono": "573112327066",
       "nombre": {
         "es": "Mirador El Pedregal",
@@ -844,7 +840,8 @@
           "es": "Otra vista de la gruta y la cruz blanca, en el filo del mirador.",
           "en": "Another view of the grotto and the white cross, on the edge of the lookout."
         }
-      ]
+      ],
+      "mapaFuera": true
     },
     {
       "id": "fama-el-corral",
@@ -853,8 +850,8 @@
       "coordsApprox": false,
       "lat": 7.2990524,
       "lng": -72.4949041,
-      "mapaX": 499,
-      "mapaY": 352,
+      "mapaX": 632.7,
+      "mapaY": 447.3,
       "telefono": "573118913433",
       "nombre": {
         "es": "Fama y Charcutería El Corral",
@@ -911,8 +908,8 @@
       "coordsApprox": false,
       "lat": 7.29917,
       "lng": -72.494704,
-      "mapaX": 509,
-      "mapaY": 378,
+      "mapaX": 654.8,
+      "mapaY": 434.3,
       "telefono": "573222834876",
       "nombre": {
         "es": "Automercado Karen",
@@ -979,8 +976,8 @@
       "coordsApprox": false,
       "lat": 7.298409,
       "lng": -72.493737,
-      "mapaX": 478,
-      "mapaY": 332,
+      "mapaX": 761.5,
+      "mapaY": 518.5,
       "telefono": "573144195716",
       "nombre": {
         "es": "Antojitos",
@@ -1037,8 +1034,8 @@
       "coordsApprox": false,
       "lat": 7.30008,
       "lng": -72.494792,
-      "mapaX": 442,
-      "mapaY": 380,
+      "mapaX": 645.1,
+      "mapaY": 333.7,
       "telefono": "573234521624",
       "nombre": {
         "es": "Sistemas UM",
@@ -1105,8 +1102,8 @@
       "coordsApprox": false,
       "lat": 7.2987856,
       "lng": -72.4940529,
-      "mapaX": 451,
-      "mapaY": 408,
+      "mapaX": 726.7,
+      "mapaY": 476.8,
       "telefono": "573212849284",
       "nombre": {
         "es": "Antaño Café-Bar",
@@ -1236,8 +1233,8 @@
       "coordsApprox": false,
       "lat": 7.297209,
       "lng": -72.496575,
-      "mapaX": 438,
-      "mapaY": 413,
+      "mapaX": 448.2,
+      "mapaY": 651.2,
       "telefono": "573108566143",
       "nombre": {
         "es": "Teca Bar La Barra",
@@ -1309,8 +1306,8 @@
       "coordsApprox": false,
       "lat": 7.300349,
       "lng": -72.494849,
-      "mapaX": 445,
-      "mapaY": 343,
+      "mapaX": 638.8,
+      "mapaY": 304,
       "telefono": "573123047768",
       "nombre": {
         "es": "Frikarnes",
@@ -1372,8 +1369,8 @@
       "coordsApprox": false,
       "lat": 7.298875,
       "lng": -72.494026,
-      "mapaX": 473,
-      "mapaY": 395,
+      "mapaX": 729.6,
+      "mapaY": 466.9,
       "telefono": "573115576386",
       "nombre": {
         "es": "Siste Hogar",
@@ -1440,8 +1437,8 @@
       "coordsApprox": false,
       "lat": 7.299908,
       "lng": -72.494747,
-      "mapaX": 426,
-      "mapaY": 373,
+      "mapaX": 650,
+      "mapaY": 352.7,
       "telefono": "573153331207",
       "nombre": {
         "es": "Galactic Bar",
@@ -1503,8 +1500,8 @@
       "coordsApprox": false,
       "lat": 7.3005588,
       "lng": -72.4949505,
-      "mapaX": 438,
-      "mapaY": 366,
+      "mapaX": 627.5,
+      "mapaY": 280.8,
       "correo": "labatecanortedesan@registraduria.gov.co",
       "nombre": {
         "es": "Registraduría Municipal de Labateca",
@@ -1556,8 +1553,8 @@
       "coordsApprox": false,
       "lat": 7.298304,
       "lng": -72.493737,
-      "mapaX": 481,
-      "mapaY": 422,
+      "mapaX": 761.5,
+      "mapaY": 530.1,
       "telefono": "573212675678",
       "nombre": {
         "es": "Sofi Burger",
@@ -1624,8 +1621,8 @@
       "coordsApprox": false,
       "lat": 7.3008,
       "lng": -72.495177,
-      "mapaX": 431,
-      "mapaY": 339,
+      "mapaX": 602.5,
+      "mapaY": 254.1,
       "telefono": "573124097073",
       "nombre": {
         "es": "Tienda Mixta Cielo Isabella",
@@ -1687,8 +1684,8 @@
       "coordsApprox": true,
       "lat": 7.30056,
       "lng": -72.4949,
-      "mapaX": 445,
-      "mapaY": 329,
+      "mapaX": 633.1,
+      "mapaY": 280.6,
       "nombre": {
         "es": "Concejo Municipal de Labateca",
         "en": "Municipal Council of Labateca"
@@ -1744,8 +1741,8 @@
       "coordsApprox": false,
       "lat": 7.299932,
       "lng": -72.494973,
-      "mapaX": 433,
-      "mapaY": 399,
+      "mapaX": 625.1,
+      "mapaY": 350.1,
       "telefono": "573104036102",
       "nombre": {
         "es": "Papelería y Variedades Martha Sánchez",
@@ -1807,8 +1804,8 @@
       "coordsApprox": false,
       "lat": 7.299268,
       "lng": -72.494337,
-      "mapaX": 521,
-      "mapaY": 384,
+      "mapaX": 695.3,
+      "mapaY": 423.5,
       "telefono": "573107963730",
       "nombre": {
         "es": "Tienda Tres Esquinas",
@@ -1880,8 +1877,8 @@
       "coordsApprox": false,
       "lat": 7.298665,
       "lng": -72.493742,
-      "mapaX": 562,
-      "mapaY": 435,
+      "mapaX": 761,
+      "mapaY": 490.2,
       "telefono": "573144490474",
       "nombre": {
         "es": "Isla Mobile — Telefonía y Accesorios",
@@ -1943,8 +1940,8 @@
       "coordsApprox": false,
       "lat": 7.299447,
       "lng": -72.494141,
-      "mapaX": 543,
-      "mapaY": 382,
+      "mapaX": 716.9,
+      "mapaY": 403.7,
       "telefono": "573123504567",
       "nombre": {
         "es": "Variedades Martha — Miscelánea y Efecty",
@@ -2016,8 +2013,8 @@
       "coordsApprox": false,
       "lat": 7.30023,
       "lng": -72.494266,
-      "mapaX": 527,
-      "mapaY": 357,
+      "mapaX": 703.1,
+      "mapaY": 317.1,
       "telefono": "573106803058",
       "nombre": {
         "es": "Heladería Nápoles",
@@ -2089,8 +2086,8 @@
       "coordsApprox": false,
       "lat": 7.300002,
       "lng": -72.49379,
-      "mapaX": 557,
-      "mapaY": 380,
+      "mapaX": 755.7,
+      "mapaY": 342.3,
       "nombre": {
         "es": "Juzgado Promiscuo Municipal de Labateca",
         "en": "Labateca Municipal Court (Juzgado Promiscuo Municipal)"
@@ -2141,8 +2138,8 @@
       "coordsApprox": false,
       "lat": 7.298773,
       "lng": -72.493981,
-      "mapaX": 540,
-      "mapaY": 419,
+      "mapaX": 734.6,
+      "mapaY": 478.2,
       "telefono": "573205777829",
       "nombre": {
         "es": "Moto Repuesto Doble AA",
@@ -2209,8 +2206,8 @@
       "coordsApprox": false,
       "lat": 7.299147,
       "lng": -72.494282,
-      "mapaX": 493,
-      "mapaY": 415,
+      "mapaX": 701.4,
+      "mapaY": 436.9,
       "telefono": "573144922534",
       "nombre": {
         "es": "Almacén Tecno-Agro",
@@ -2282,8 +2279,8 @@
       "coordsApprox": false,
       "lat": 7.298917,
       "lng": -72.493682,
-      "mapaX": 551,
-      "mapaY": 409,
+      "mapaX": 767.6,
+      "mapaY": 462.3,
       "telefono": "573184471211",
       "nombre": {
         "es": "Droguería María José",
@@ -2345,8 +2342,8 @@
       "coordsApprox": false,
       "lat": 7.299102,
       "lng": -72.494192,
-      "mapaX": 547,
-      "mapaY": 396,
+      "mapaX": 711.3,
+      "mapaY": 441.8,
       "telefono": "573168725118",
       "nombre": {
         "es": "Panadería Maxipan",
@@ -2408,8 +2405,8 @@
       "coordsApprox": false,
       "lat": 7.297252,
       "lng": -72.49704,
-      "mapaX": 342,
-      "mapaY": 473,
+      "mapaX": 396.8,
+      "mapaY": 646.4,
       "telefono": "573114554780",
       "nombre": {
         "es": "Tienda Alex",
@@ -2501,8 +2498,8 @@
       "coordsApprox": false,
       "lat": 7.299931881265672,
       "lng": -72.49471127546606,
-      "mapaX": 479,
-      "mapaY": 372,
+      "mapaX": 654,
+      "mapaY": 350.1,
       "nombre": {
         "es": "SuperGiros",
         "en": "SuperGiros"
@@ -2553,8 +2550,8 @@
       "coordsApprox": false,
       "lat": 7.300103,
       "lng": -72.49476,
-      "mapaX": 470,
-      "mapaY": 382,
+      "mapaX": 648.6,
+      "mapaY": 331.2,
       "telefono": "573138048438",
       "nombre": {
         "es": "La Esquinita del Sabor",
@@ -2626,8 +2623,8 @@
       "coordsApprox": false,
       "lat": 7.298122,
       "lng": -72.493567,
-      "mapaX": 556,
-      "mapaY": 448,
+      "mapaX": 780.3,
+      "mapaY": 550.2,
       "telefono": "573123106831",
       "nombre": {
         "es": "Taller de Motos El Toro",
@@ -2709,8 +2706,8 @@
       "coordsApprox": false,
       "lat": 7.29849,
       "lng": -72.493971,
-      "mapaX": 529,
-      "mapaY": 452,
+      "mapaX": 735.7,
+      "mapaY": 509.5,
       "telefono": "573123106831",
       "nombre": {
         "es": "Supermercado El Campesino",
@@ -2777,8 +2774,8 @@
       "coordsApprox": false,
       "lat": 7.299401,
       "lng": -72.494427,
-      "mapaX": 489,
-      "mapaY": 398,
+      "mapaX": 685.4,
+      "mapaY": 408.8,
       "telefono": "573202435050",
       "nombre": {
         "es": "La Tienda de Ivancho",
@@ -2850,8 +2847,8 @@
       "coordsApprox": false,
       "lat": 7.296239,
       "lng": -72.498977,
-      "mapaX": 223,
-      "mapaY": 507,
+      "mapaX": 183,
+      "mapaY": 758.4,
       "telefono": "573107821429",
       "nombre": {
         "es": "Hospedaje Mirador de Mi Bateca",
@@ -2958,8 +2955,8 @@
       "coordsApprox": false,
       "lat": 7.296239,
       "lng": -72.498977,
-      "mapaX": 237,
-      "mapaY": 506,
+      "mapaX": 183,
+      "mapaY": 758.4,
       "telefono": "573107821429",
       "nombre": {
         "es": "Estadero Fuente de Soda Mirador de Mi Bateca",
@@ -3031,8 +3028,8 @@
       "coordsApprox": false,
       "lat": 7.298035,
       "lng": -72.496432,
-      "mapaX": 378,
-      "mapaY": 446,
+      "mapaX": 464,
+      "mapaY": 559.8,
       "telefono": "573507282468",
       "nombre": {
         "es": "Tienda El Trébol",
@@ -3109,8 +3106,8 @@
       "coordsApprox": false,
       "lat": 7.296766,
       "lng": -72.497689,
-      "mapaX": 304,
-      "mapaY": 491,
+      "mapaX": 325.2,
+      "mapaY": 700.1,
       "telefono": "573124193241",
       "nombre": {
         "es": "Mundo Leo — Variedades",
@@ -3172,8 +3169,8 @@
       "coordsApprox": false,
       "lat": 7.298937,
       "lng": -72.494087,
-      "mapaX": 508,
-      "mapaY": 438,
+      "mapaX": 722.9,
+      "mapaY": 460.1,
       "telefono": "573134966445",
       "nombre": {
         "es": "Restaurante Doña María",
@@ -3235,8 +3232,8 @@
       "coordsApprox": false,
       "lat": 7.298332,
       "lng": -72.493707,
-      "mapaX": 543,
-      "mapaY": 453,
+      "mapaX": 764.9,
+      "mapaY": 527,
       "telefono": "573123106831",
       "nombre": {
         "es": "Centro Naturista Salud & Vida",
@@ -3303,8 +3300,8 @@
       "coordsApprox": false,
       "lat": 7.298932,
       "lng": -72.49408,
-      "mapaX": 497,
-      "mapaY": 448,
+      "mapaX": 723.7,
+      "mapaY": 460.6,
       "telefono": "573208491055",
       "nombre": {
         "es": "Frutas y Verduras",
@@ -3366,8 +3363,8 @@
       "coordsApprox": false,
       "lat": 7.298426,
       "lng": -72.494158,
-      "mapaX": 510,
-      "mapaY": 452,
+      "mapaX": 715.1,
+      "mapaY": 516.6,
       "telefono": "573208080167",
       "nombre": {
         "es": "Droguería Central",
@@ -3429,8 +3426,8 @@
       "coordsApprox": false,
       "lat": 7.2987,
       "lng": -72.493926,
-      "mapaX": 560,
-      "mapaY": 419,
+      "mapaX": 740.7,
+      "mapaY": 486.3,
       "telefono": "573185619179",
       "nombre": {
         "es": "Ateca Bar Café Restaurante",
@@ -3542,8 +3539,8 @@
       "coordsApprox": false,
       "lat": 7.298516,
       "lng": -72.494867,
-      "mapaX": 463,
-      "mapaY": 438,
+      "mapaX": 636.8,
+      "mapaY": 506.6,
       "telefono": "573007685165",
       "nombre": {
         "es": "Axel Tiendas",
@@ -3615,8 +3612,8 @@
       "coordsApprox": false,
       "lat": 7.299067,
       "lng": -72.494904,
-      "mapaX": 453,
-      "mapaY": 422,
+      "mapaX": 632.7,
+      "mapaY": 445.7,
       "telefono": "573112805177",
       "nombre": {
         "es": "La Económica JY",
@@ -3693,8 +3690,8 @@
       "coordsApprox": false,
       "lat": 7.298705,
       "lng": -72.494589,
-      "mapaX": 483,
-      "mapaY": 448,
+      "mapaX": 667.5,
+      "mapaY": 485.7,
       "telefono": "573227784070",
       "nombre": {
         "es": "Barber Shop Labateca",
@@ -3746,8 +3743,8 @@
       "coordsApprox": false,
       "lat": 7.300102,
       "lng": -72.494544,
-      "mapaX": 486,
-      "mapaY": 349,
+      "mapaX": 672.4,
+      "mapaY": 331.3,
       "telefono": "573209083700",
       "nombre": {
         "es": "Supermercado Batecano",
@@ -3814,8 +3811,6 @@
       "coordsApprox": false,
       "lat": 7.276603,
       "lng": -72.486316,
-      "mapaX": 534,
-      "mapaY": 470,
       "telefono": "",
       "nombre": {
         "es": "El Samán",
@@ -3873,7 +3868,8 @@
           "es": "El samán al borde del río, con el agua crecida corriendo entre las piedras.",
           "en": "The samán at the river's edge, with the swollen water running between the boulders."
         }
-      ]
+      ],
+      "mapaFuera": true
     },
     {
       "id": "tumba-cacique-bateca",
@@ -3882,8 +3878,6 @@
       "coordsApprox": false,
       "lat": 7.277147,
       "lng": -72.518257,
-      "mapaX": 352,
-      "mapaY": 487,
       "telefono": "",
       "nombre": {
         "es": "Tumba del Cacique Bateca",
@@ -3952,7 +3946,8 @@
           "es": "Esta foto muestra restos humanos.",
           "en": "This photo shows human remains."
         }
-      }
+      },
+      "mapaFuera": true
     },
     {
       "id": "virgen-conductores",
@@ -3961,8 +3956,8 @@
       "coordsApprox": false,
       "lat": 7.295545,
       "lng": -72.493841,
-      "mapaX": 531,
-      "mapaY": 430,
+      "mapaX": 750.1,
+      "mapaY": 835.2,
       "telefono": "",
       "nombre": {
         "es": "Monumento a la Virgen del Carmen",
@@ -4009,8 +4004,6 @@
       "coordsApprox": false,
       "lat": 7.278305,
       "lng": -72.501947,
-      "mapaX": 443,
-      "mapaY": 478,
       "telefono": "573138049658",
       "nombre": {
         "es": "K&S — Montallantas y Cafetería",
@@ -4063,7 +4056,8 @@
           "es": "Vista general del lote desde la carretera: el taller, el kiosco y el espacio para parquear junto a la vía.",
           "en": "General view of the lot from the road: the workshop, the kiosk and the parking space beside the highway."
         }
-      ]
+      ],
+      "mapaFuera": true
     },
     {
       "id": "concentrados-jl",
@@ -4072,8 +4066,8 @@
       "coordsApprox": false,
       "lat": 7.298245,
       "lng": -72.493673,
-      "mapaX": 521,
-      "mapaY": 441,
+      "mapaX": 768.6,
+      "mapaY": 536.6,
       "telefono": "573143571569",
       "nombre": {
         "es": "Concentrados JL",
@@ -4135,8 +4129,8 @@
       "coordsApprox": false,
       "lat": 7.298758,
       "lng": -72.49401,
-      "mapaX": 517,
-      "mapaY": 427,
+      "mapaX": 731.4,
+      "mapaY": 479.9,
       "telefono": "573152908856",
       "nombre": {
         "es": "Restaurante Son Delicias",
@@ -4203,8 +4197,8 @@
       "coordsApprox": false,
       "lat": 7.299483,
       "lng": -72.494037,
-      "mapaX": 531,
-      "mapaY": 374,
+      "mapaX": 728.4,
+      "mapaY": 399.7,
       "telefono": "573123506776",
       "nombre": {
         "es": "Bazar Nuestra Señora de las Angustias",
@@ -4266,8 +4260,8 @@
       "coordsApprox": false,
       "lat": 7.298612,
       "lng": -72.493918,
-      "mapaX": 541,
-      "mapaY": 439,
+      "mapaX": 741.6,
+      "mapaY": 496,
       "telefono": "573125841908",
       "nombre": {
         "es": "Tienda Mixta Las Delicias",
@@ -4339,8 +4333,8 @@
       "coordsApprox": false,
       "lat": 7.29922,
       "lng": -72.494269,
-      "mapaX": 537,
-      "mapaY": 406,
+      "mapaX": 702.8,
+      "mapaY": 428.8,
       "telefono": "573232158303",
       "nombre": {
         "es": "Variedades Ludwing",
@@ -4407,8 +4401,8 @@
       "coordsApprox": false,
       "lat": 7.297249,
       "lng": -72.496505,
-      "mapaX": 427,
-      "mapaY": 422,
+      "mapaX": 455.9,
+      "mapaY": 646.7,
       "telefono": "573182088372",
       "nombre": {
         "es": "Tercer Tiempo",
@@ -4475,8 +4469,8 @@
       "coordsApprox": false,
       "lat": 7.298958,
       "lng": -72.494096,
-      "mapaX": 476,
-      "mapaY": 435,
+      "mapaX": 721.9,
+      "mapaY": 457.8,
       "telefono": "573208168572",
       "nombre": {
         "es": "Variedades Mafe",
@@ -4548,8 +4542,8 @@
       "coordsApprox": false,
       "lat": 7.298942,
       "lng": -72.494086,
-      "mapaX": 493,
-      "mapaY": 434,
+      "mapaX": 723,
+      "mapaY": 459.5,
       "telefono": "573224001508",
       "nombre": {
         "es": "Sonia Villamizar — Salón de Belleza",
@@ -4611,8 +4605,8 @@
       "coordsApprox": false,
       "lat": 7.298638,
       "lng": -72.49365,
-      "mapaX": 561,
-      "mapaY": 396,
+      "mapaX": 771.1,
+      "mapaY": 493.2,
       "telefono": "573219833791",
       "nombre": {
         "es": "Linaje Barber Estudio",
@@ -4669,8 +4663,8 @@
       "coordsApprox": false,
       "lat": 7.302609,
       "lng": -72.497921,
-      "mapaX": 324,
-      "mapaY": 287,
+      "mapaX": 299.6,
+      "mapaY": 54.1,
       "telefono": "573133036828",
       "nombre": {
         "es": "Ferre Agro TK — Ferretería y Agroinsumos",
@@ -4747,8 +4741,8 @@
       "coordsApprox": false,
       "lat": 7.302647,
       "lng": -72.497887,
-      "mapaX": 338,
-      "mapaY": 280,
+      "mapaX": 303.3,
+      "mapaY": 49.9,
       "telefono": "573124193241",
       "nombre": {
         "es": "Café BTK",
@@ -4825,8 +4819,8 @@
       "coordsApprox": false,
       "lat": 7.299579,
       "lng": -72.495708,
-      "mapaX": 427,
-      "mapaY": 387,
+      "mapaX": 543.9,
+      "mapaY": 389.1,
       "telefono": "573134426243",
       "nombre": {
         "es": "Mil Motivos",
@@ -4893,8 +4887,8 @@
       "coordsApprox": false,
       "lat": 7.300187,
       "lng": -72.494393,
-      "mapaX": 503,
-      "mapaY": 365,
+      "mapaX": 689.1,
+      "mapaY": 321.9,
       "telefono": "573213708777",
       "nombre": {
         "es": "Varimania — Cafetería, Heladería y Variedades",
@@ -4976,8 +4970,8 @@
       "coordsApprox": false,
       "lat": 7.299134,
       "lng": -72.494693,
-      "mapaX": 483,
-      "mapaY": 385,
+      "mapaX": 656,
+      "mapaY": 438.3,
       "telefono": "573114041267",
       "nombre": {
         "es": "La Villa de las Flores",
@@ -5049,8 +5043,8 @@
       "coordsApprox": false,
       "lat": 7.297466,
       "lng": -72.497513,
-      "mapaX": 350,
-      "mapaY": 438,
+      "mapaX": 344.6,
+      "mapaY": 622.7,
       "telefono": "573229698047",
       "nombre": {
         "es": "Variedades Emanuel",
@@ -5122,8 +5116,8 @@
       "coordsApprox": false,
       "lat": 7.297129,
       "lng": -72.498272,
-      "mapaX": 312,
-      "mapaY": 452,
+      "mapaX": 260.8,
+      "mapaY": 660,
       "telefono": "573188435200",
       "nombre": {
         "es": "Abastos Mi Carulla — donde Libardo",
@@ -5205,8 +5199,8 @@
       "coordsApprox": false,
       "lat": 7.297384,
       "lng": -72.497733,
-      "mapaX": 336,
-      "mapaY": 445,
+      "mapaX": 320.3,
+      "mapaY": 631.8,
       "telefono": "573114749354",
       "nombre": {
         "es": "Tienda Mixta Julia",
@@ -5288,8 +5282,8 @@
       "coordsApprox": false,
       "lat": 7.299987,
       "lng": -72.494894,
-      "mapaX": 476,
-      "mapaY": 358,
+      "mapaX": 633.8,
+      "mapaY": 344,
       "telefono": "573112875551",
       "nombre": {
         "es": "Cooperacafé — Cooperativa de Caficultores del Catatumbo",
@@ -5361,8 +5355,8 @@
       "coordsApprox": false,
       "lat": 7.299857,
       "lng": -72.495088,
-      "mapaX": 456,
-      "mapaY": 383,
+      "mapaX": 612.4,
+      "mapaY": 358.4,
       "telefono": "573113460089",
       "nombre": {
         "es": "Comité de Cafeteros — Labateca",
@@ -5419,8 +5413,8 @@
       "coordsApprox": false,
       "lat": 7.299372,
       "lng": -72.495055,
-      "mapaX": 446,
-      "mapaY": 393,
+      "mapaX": 616,
+      "mapaY": 412,
       "telFijo": "573219269652",
       "nombre": {
         "es": "Centro de Salud Labateca — IPS",
@@ -5477,8 +5471,8 @@
       "coordsApprox": false,
       "lat": 7.299485,
       "lng": -72.494455,
-      "mapaX": 493,
-      "mapaY": 376,
+      "mapaX": 682.3,
+      "mapaY": 399.5,
       "telefono": "573115286436",
       "nombre": {
         "es": "Pre Exequiales Caminos La Piedad",
@@ -5535,8 +5529,8 @@
       "coordsApprox": false,
       "lat": 7.299188,
       "lng": -72.4943,
-      "mapaX": 512,
-      "mapaY": 414,
+      "mapaX": 699.4,
+      "mapaY": 432.3,
       "telefono": "573186217423",
       "nombre": {
         "es": "AM-BAR Café",
@@ -5670,8 +5664,8 @@
       "coordsApprox": false,
       "lat": 7.300113,
       "lng": -72.494497,
-      "mapaX": 489,
-      "mapaY": 362,
+      "mapaX": 677.6,
+      "mapaY": 330.1,
       "telefono": "573112327066",
       "nombre": {
         "es": "Hotel Los Robles",
@@ -5768,8 +5762,8 @@
       "coordsApprox": false,
       "lat": 7.299229,
       "lng": -72.494276,
-      "mapaX": 526,
-      "mapaY": 417,
+      "mapaX": 702,
+      "mapaY": 427.8,
       "telefono": "573118099903",
       "nombre": {
         "es": "Eléctricos Centro Labateca",
@@ -5826,8 +5820,8 @@
       "coordsApprox": false,
       "lat": 7.299375,
       "lng": -72.494233,
-      "mapaX": 533,
-      "mapaY": 392,
+      "mapaX": 706.8,
+      "mapaY": 411.7,
       "telefono": "573208531744",
       "nombre": {
         "es": "Bellavista",
@@ -6094,8 +6088,8 @@
       "coordsApprox": false,
       "lat": 7.29735,
       "lng": -72.498102,
-      "mapaX": 300,
-      "mapaY": 458,
+      "mapaX": 279.6,
+      "mapaY": 635.6,
       "telefono": "",
       "nombre": {
         "es": "Sendero Mariano",
@@ -6202,8 +6196,8 @@
       "coordsApprox": false,
       "lat": 7.300488,
       "lng": -72.495014,
-      "mapaX": 452,
-      "mapaY": 370,
+      "mapaX": 620.5,
+      "mapaY": 288.6,
       "telFijo": "573144798925",
       "correo": "alcaldia@labateca-nortedesantander.gov.co",
       "nombre": {
@@ -6301,8 +6295,8 @@
       "coordsApprox": false,
       "lat": 7.299768,
       "lng": -72.493641,
-      "mapaX": 542,
-      "mapaY": 365,
+      "mapaX": 772.1,
+      "mapaY": 368.2,
       "telFijo": "573144798925",
       "correo": "secretariadegobierno@labateca-nortedesantander.gov.co",
       "nombre": {
@@ -6395,8 +6389,8 @@
       "coordsApprox": false,
       "lat": 7.297622,
       "lng": -72.497339,
-      "mapaX": 350,
-      "mapaY": 451,
+      "mapaX": 363.8,
+      "mapaY": 605.5,
       "telFijo": "573202347720",
       "nombre": {
         "es": "Casa del Anciano Teresita de Lisieux",
@@ -6488,8 +6482,8 @@
       "coordsApprox": false,
       "lat": 7.2967226,
       "lng": -72.4966247,
-      "mapaX": 392,
-      "mapaY": 442,
+      "mapaX": 442.7,
+      "mapaY": 704.9,
       "nombre": {
         "es": "Estadio Jesús Núñez",
         "en": "Jesús Núñez Stadium"
@@ -6555,8 +6549,8 @@
       "coordsApprox": false,
       "lat": 7.300403,
       "lng": -72.494939,
-      "mapaX": 472,
-      "mapaY": 345,
+      "mapaX": 628.8,
+      "mapaY": 298,
       "telFijo": "573186304751",
       "nombre": {
         "es": "Estación de Policía de Labateca",
@@ -6613,8 +6607,8 @@
       "coordsApprox": false,
       "lat": 7.296242,
       "lng": -72.497868,
-      "mapaX": 286,
-      "mapaY": 485,
+      "mapaX": 305.4,
+      "mapaY": 758.1,
       "nombre": {
         "es": "Centro de Integración Ciudadana (CIC)",
         "en": "Citizen Integration Centre (CIC)"
@@ -6680,8 +6674,8 @@
       "coordsApprox": false,
       "lat": 7.300046,
       "lng": -72.494692,
-      "mapaX": 466,
-      "mapaY": 368,
+      "mapaX": 656.1,
+      "mapaY": 337.5,
       "telFijo": "576075824444",
       "correo": "cens@cens.com.co",
       "nombre": {
@@ -6734,8 +6728,8 @@
       "coordsApprox": false,
       "lat": 7.298691,
       "lng": -72.495398,
-      "mapaX": 467,
-      "mapaY": 425,
+      "mapaX": 578.1,
+      "mapaY": 487.3,
       "telefono": "573123079138",
       "nombre": {
         "es": "Hospedaje La Profe",
@@ -6812,8 +6806,8 @@
       "coordsApprox": false,
       "lat": 7.299323,
       "lng": -72.49432,
-      "mapaX": 523,
-      "mapaY": 403,
+      "mapaX": 697.2,
+      "mapaY": 417.4,
       "telefono": "573102289043",
       "nombre": {
         "es": "Miami Bar",
@@ -6880,8 +6874,8 @@
       "coordsApprox": false,
       "lat": 7.299311,
       "lng": -72.49446,
-      "mapaX": 512,
-      "mapaY": 395,
+      "mapaX": 681.7,
+      "mapaY": 418.7,
       "telefono": "573208310880",
       "nombre": {
         "es": "Peluquería Mary",
@@ -6943,8 +6937,8 @@
       "coordsApprox": false,
       "lat": 7.299019,
       "lng": -72.494173,
-      "mapaX": 503,
-      "mapaY": 425,
+      "mapaX": 713.4,
+      "mapaY": 451,
       "telefono": "573123079138",
       "nombre": {
         "es": "Variedades Blanca",
@@ -7026,8 +7020,8 @@
       "coordsApprox": false,
       "lat": 7.300203,
       "lng": -72.496283,
-      "mapaX": 459,
-      "mapaY": 341,
+      "mapaX": 480.4,
+      "mapaY": 320.1,
       "telefono": "573159265334",
       "nombre": {
         "es": "Dulce Arte L&L",
@@ -7099,8 +7093,8 @@
       "coordsApprox": false,
       "lat": 7.298436,
       "lng": -72.49378,
-      "mapaX": 502,
-      "mapaY": 404,
+      "mapaX": 756.8,
+      "mapaY": 515.5,
       "telefono": "573134210399",
       "nombre": {
         "es": "Americana de Carnes",
@@ -7162,8 +7156,8 @@
       "coordsApprox": false,
       "lat": 7.298724,
       "lng": -72.495402,
-      "mapaX": 466,
-      "mapaY": 410,
+      "mapaX": 577.7,
+      "mapaY": 483.6,
       "telefono": "573106011566",
       "nombre": {
         "es": "Restaurante y Hospedaje Donde Conchita",
@@ -7582,8 +7576,8 @@
       "coordsApprox": false,
       "lat": 7.298677,
       "lng": -72.493899,
-      "mapaX": 550,
-      "mapaY": 429,
+      "mapaX": 743.7,
+      "mapaY": 488.8,
       "telefono": "573142000824",
       "nombre": {
         "es": "EXCII · Boutique & Accesorios",
@@ -7680,8 +7674,8 @@
       "coordsApprox": false,
       "lat": 7.299473,
       "lng": -72.494461,
-      "mapaX": 499,
-      "mapaY": 388,
+      "mapaX": 681.6,
+      "mapaY": 400.8,
       "telefono": "573102289043",
       "nombre": {
         "es": "Disco Bar La Barra",
@@ -7743,8 +7737,8 @@
       "coordsApprox": false,
       "lat": 7.300945,
       "lng": -72.495169,
-      "mapaX": 435,
-      "mapaY": 353,
+      "mapaX": 603.4,
+      "mapaY": 238.1,
       "telefono": "573152837961",
       "nombre": {
         "es": "Carpintería Velazco",
@@ -7841,8 +7835,8 @@
       "coordsApprox": false,
       "lat": 7.300474,
       "lng": -72.495015,
-      "mapaX": 448,
-      "mapaY": 357,
+      "mapaX": 620.4,
+      "mapaY": 290.1,
       "nombre": {
         "es": "Personería Municipal de Labateca",
         "en": "Municipal Ombudsman's Office (Personería) of Labateca"

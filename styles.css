@@ -2468,3 +2468,135 @@ footer .solo-es{background:transparent;border-color:rgba(255,255,255,.28);color:
   margin:26px 0 6px;
   font-size:.95rem;
 }
+
+
+/* ── ¿ESTÁ LLOVIENDO? (widget de clima) ─────────────────────
+   Una linea de estado con color propio segun la respuesta, y una
+   tira de 12 barras con la probabilidad hora por hora. La barra se
+   apaga por debajo del 50 %: asi el ojo ve de un golpe a que hora
+   cambia el dia. */
+.wx-rain{
+  display:flex;align-items:center;gap:9px;
+  font-size:.84rem;line-height:1.35;font-weight:600;
+  border-radius:13px;padding:9px 13px;margin:0 0 12px;
+}
+.wx-rain b{font-weight:800}
+.wx-rain-ico{font-size:1.05rem;line-height:1;flex-shrink:0}
+.wx-rain--si{background:rgba(61,90,128,.14);color:#2f4c6b}
+.wx-rain--si .wx-rain-ico{animation:wxGota 1.8s ease-in-out infinite}
+.wx-rain--pronto{background:rgba(212,162,63,.18);color:var(--gold-text)}
+.wx-rain--no{background:rgba(22,53,42,.07);color:var(--forest-2)}
+@keyframes wxGota{0%,100%{transform:translateY(0)}50%{transform:translateY(2.5px)}}
+
+.wx-horas{margin:0 0 12px}
+.wx-horas-tit{
+  font-size:.64rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ink-mut);font-weight:800;margin-bottom:7px;
+}
+.wx-barras{display:flex;align-items:flex-end;gap:4px;height:52px}
+.wx-b{
+  flex:1;min-width:0;height:100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;
+}
+.wx-b i{
+  display:block;width:100%;max-width:15px;border-radius:5px;
+  background:linear-gradient(180deg,#8fb6d8,#3d5a80);
+  opacity:.38;transition:opacity .35s var(--ease);
+}
+.wx-b--alta i{opacity:1}
+.wx-b span{font-size:.6rem;font-weight:700;color:var(--ink-mut);height:11px;line-height:11px}
+@media (prefers-reduced-motion:reduce){ .wx-rain--si .wx-rain-ico{animation:none} }
+
+
+/* ── MAPA ILUSTRADO: PINES, GRUPOS Y LEYENDA ────────────────
+   El dibujo pasó a ser cartografía real (OpenStreetMap) y los
+   puntos se calculan desde el GPS de cada ficha. Como el pueblo
+   es pequeño, 74 de los 96 puntos tienen un vecino a menos de 16
+   px: por eso la página los agrupa y por eso el pin es chico. */
+#map-ilustrado{ background:#f7f2e6 }
+.pin-wrap{ background:none; border:0 }
+.pin-il{
+  display:block;width:16px;height:16px;border-radius:50%;
+  background:var(--pin,#bd5d34);
+  border:2.5px solid #fdfaf3;
+  box-shadow:0 2px 7px rgba(29,26,21,.42);
+  transition:transform .18s var(--ease), box-shadow .18s var(--ease);
+}
+.pin-wrap:hover .pin-il{ transform:scale(1.45); box-shadow:0 4px 14px rgba(29,26,21,.5) }
+.pin-grupo{
+  display:grid;place-items:center;border-radius:50%;
+  background:radial-gradient(circle at 34% 30%, #37795c, var(--forest));
+  color:var(--cream);font-weight:800;font-size:.82rem;
+  border:2.5px solid rgba(253,250,243,.94);
+  box-shadow:0 3px 12px rgba(22,53,42,.45);
+  transition:transform .18s var(--ease);
+}
+.pin-wrap:hover .pin-grupo{ transform:scale(1.1) }
+
+.map-pop-cat{
+  font-size:.68rem;font-weight:800;letter-spacing:.1em;
+  text-transform:uppercase;margin-bottom:4px;
+}
+.map-pop-verif{
+  display:inline-block;margin-top:5px;font-size:.7rem;background:var(--gold);
+  color:var(--forest);padding:2px 8px;border-radius:99px;font-weight:800;
+}
+
+/* Leyenda: explica el color y además apaga categorías. */
+.map-leyenda{
+  background:rgba(253,250,243,.94);border:1px solid var(--line);
+  border-radius:14px;box-shadow:var(--shadow-sm);overflow:hidden;
+  font-family:inherit;max-width:172px;
+}
+.map-ley-tit{
+  display:block;width:100%;text-align:left;cursor:pointer;
+  font:inherit;font-size:.64rem;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-mut);
+  background:none;border:0;padding:8px 12px 6px;
+}
+.map-ley-tit::after{ content:" ▾" }
+.map-leyenda.cerrada .map-ley-tit::after{ content:" ▸" }
+.map-leyenda.cerrada .map-ley-lista{ display:none }
+.map-ley-lista{ display:flex;flex-direction:column;padding:0 6px 7px }
+.map-ley-it{
+  display:flex;align-items:center;gap:7px;cursor:pointer;
+  font:inherit;font-size:.76rem;font-weight:600;color:var(--ink);
+  background:none;border:0;border-radius:8px;padding:4px 6px;text-align:left;
+  transition:background .2s;
+}
+.map-ley-it:hover{ background:rgba(22,53,42,.07) }
+.map-ley-it i{ width:11px;height:11px;border-radius:50%;flex-shrink:0 }
+.map-ley-it.off{ opacity:.4 }
+.map-ley-it.off span{ text-decoration:line-through }
+
+/* Los que no caben en el dibujo: van debajo, con su distancia. */
+.map-fuera{
+  display:flex;flex-wrap:wrap;align-items:center;gap:7px;
+  margin-top:12px;
+}
+.map-fuera-tit{
+  font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;
+  font-weight:800;color:var(--gold-soft);margin-right:2px;
+}
+.map-fuera-chip{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.78rem;font-weight:700;color:var(--cream);
+  background:rgba(246,239,227,.1);border:1px solid rgba(246,239,227,.22);
+  border-radius:99px;padding:4px 11px;text-decoration:none;
+  transition:background .25s, transform .25s var(--ease);
+}
+.map-fuera-chip:hover{ background:rgba(246,239,227,.2);transform:translateY(-2px) }
+.map-fuera-chip b{ font-weight:800;color:var(--gold-soft);font-size:.72rem }
+
+@media (min-width:860px){ #map-ilustrado{ height:580px } }
+@media (max-width:640px){
+  #map-ilustrado{ height:440px }
+  .map-leyenda{ max-width:132px }
+  .map-ley-it{ font-size:.7rem }
+}
+
+.map-pop-lista ul{ margin:6px 0 0;padding:0;list-style:none }
+.map-pop-lista li{ margin:0;padding:3px 0;border-top:1px solid var(--line) }
+.map-pop-lista li:first-child{ border-top:0 }
+.map-pop-lista a{ font-size:.86rem;font-weight:700;color:var(--forest-2);text-decoration:none;margin:0 }
+.map-pop-lista a:hover{ color:var(--clay);text-decoration:underline }
