@@ -439,8 +439,10 @@ Toledo**. Casco urbano: 7.2996816, −72.49452.
 
 **Himno:** letra de Adolfo León Capacho Peñaloza, música de **Pedro Rafael
 Vera Bastos** (confirmado por José, sept. 2026; coincide con «Vivencias en mi
-Pueblo», que lo imprime con sus créditos al pie), interpretación del profesor
-Iván Delgado, estrenado el 21 de noviembre de 1997. El libro atribuía la
+Pueblo», que lo imprime con sus créditos al pie), **interpretación de Carlos
+Alberto Rojas** (corregido por José el 3 sep 2026; antes decía «profesor Iván
+Delgado», que era el dato equivocado —no volver a ponerlo—), estrenado el 21 de
+noviembre de 1997. El libro atribuía la
 música a *Luis Raúl* Vera Bastos, el número 17 de la promoción de 1968: esa
 anotación se quitó del manuscrito v24, el nombre del graduado se dejó como lo
 trae el mosaico.
