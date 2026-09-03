@@ -8,7 +8,7 @@ Bilingüe español/inglés. Sin frameworks, sin bundler, sin paso de compilació
 > corregirlo**. Estuvo desactualizado desde junio hasta el 2 de septiembre de
 > 2026 y en ese lapso hizo más daño que bien.
 
-**Estado al 3 de septiembre de 2026 (v199):** 116 lugares · 606 fotos ·
+**Estado al 3 de septiembre de 2026 (v200):** 116 lugares · 606 fotos ·
 6 rutas temáticas · 12 conductores · 2 videos · 292 páginas HTML · 286 URLs
 en el sitemap.
 
@@ -402,6 +402,62 @@ de escribir**: si el `.write()` falla, el archivo queda en cero bytes. Escribir
 a temporal y `os.replace`.
 
 ---
+
+### Las coordenadas del pueblo: una sola cifra (v200)
+
+**7.29968 / −72.49452.** Es el Parque Principal, medido. Va en tres sitios y
+tienen que decir lo mismo:
+
+```
+files/index.html   JSON-LD  TouristDestination.geo   <- lo que lee Google
+files/pueblo.html  JSON-LD  Place.geo
+files/data/guia.json  ES y EN                        <- lo que lee el modelo
+```
+
+Hasta la v200 los tres decían **7.3167 / −72.4833**, que es la cifra
+redondeada de los directorios genéricos y cae **2,4 km** fuera del pueblo.
+Ese es el punto con el que Google arma el panel del municipio y lo ubica en
+el mapa de resultados, y era el que el asistente le daba al visitante. Este
+archivo ya traía la buena en «Datos del municipio»; nadie las comparó.
+**Si se toca una, se tocan las tres.**
+
+### Ninguna cifra en el hero sin ficha que la respalde (v200)
+
+El hero y el `og:description` decían «Cascadas de hasta 100 metros». Ninguna
+de las 116 fichas menciona una altura: la única del sitio son los 25 metros
+de la copa del samán. Se quitó. **Antes de escribir un número en la portada,
+tiene que estar primero en la ficha del lugar, con su fuente.** La portada es
+lo único que ve quien comparte el enlace por WhatsApp; si ahí hay un dato
+inventado, el sitio entero deja de merecer confianza.
+
+### El candado del chat (v200)
+
+`worker-chat.js` corría `env.AI.run` **sin ningún límite de peticiones**. Lo
+único que lo protegía era comparar el `Origin`, y un `Origin` se escribe a
+mano con una línea de `curl`. Peor: la guía del municipio y los lugares
+llegaban **desde el navegador** y se pegaban tal cual en las instrucciones
+del modelo, así que con el `Origin` puesto cualquiera mandaba su propio
+contexto y su propia pregunta. Era una IA gratis a cuenta de la factura.
+
+Tres cerrojos, todos dentro del worker:
+
+- **`dentroDelCupo(ip)`** — 8 preguntas por minuto y 60 por hora, contadas en
+  la memoria del isolate. No hay nada que configurar. No es global (Cloudflare
+  puede levantar varios isolates), pero como cada visitante cae casi siempre
+  en el mismo centro de datos, ataja el abuso real. Si además se crea el
+  binding **`RATE_LIMITER`** en el panel, el código lo usa y el límite pasa a
+  ser global de verdad.
+- **`guiaDelSitio(lang)`** — la guía maestra ya no viene del cliente: el
+  worker lee `/data/guia.json` del propio sitio y la cachea una hora. El
+  cliente sigue mandando `body.guia` y el worker **la ignora**; se dejó así a
+  propósito para que nada se rompa mientras el worker no esté pegado.
+- **`MAX_CTX_CHARS = 34000`** — el sitio se autolimita a 30.000 caracteres
+  (`CTX_PRESUPUESTO` en `app.js`), pero el worker aceptaba hasta 468.000
+  (130 lugares × 6 campos × 600). Eso no era un prompt, era una factura.
+
+**Los tres workers se pegan a mano en el panel de Cloudflare** (están en
+`.assetsignore`, no se despliegan con el sitio). Un cambio en `worker-chat.js`
+no llega solo por hacer push.
 
 ## 5. Principios del proyecto
 
