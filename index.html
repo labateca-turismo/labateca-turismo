@@ -18,7 +18,7 @@
 <meta property="og:locale" content="es_CO" />
 <meta property="og:locale:alternate" content="en_US" />
 <meta property="og:title" content="Labateca · Volcanes de Dios" />
-<meta property="og:description" content="Cascadas de hasta 100 m, café de exportación y el Páramo de Santurbán. Tu guía completa para visitar Labateca, Norte de Santander." />
+<meta property="og:description" content="Cascadas, café de altura y el Páramo de Santurbán. Tu guía completa para visitar Labateca, Norte de Santander." />
 <meta property="og:site_name" content="Labateca Turismo" />
 <meta property="og:url" content="https://labateca-turismo.labatecacolombia.workers.dev/" />
 <meta property="og:image" content="https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_630,c_fill,g_auto,f_jpg,q_auto/labateca/templo-01" />
@@ -55,8 +55,8 @@
   "touristType": ["Ecoturismo", "Turismo cultural", "Turismo de naturaleza"],
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 7.3167,
-    "longitude": -72.4833
+    "latitude": 7.29968,
+    "longitude": -72.49452
   },
   "containedInPlace": {
     "@type": "AdministrativeArea",
@@ -84,7 +84,7 @@
 <!-- ====== PDF (jsPDF — carga diferida, solo cuando el usuario pide el PDF) ====== -->
 <!-- Se inyecta dinámicamente en generatePDF() para no afectar la carga inicial -->
 
-<link rel="stylesheet" href="/styles.css?v=199">
+<link rel="stylesheet" href="/styles.css?v=200">
 </head>
 <body data-title-key="head_home">
 
@@ -156,7 +156,7 @@
       <span class="eyebrow reveal" data-i18n="hero_eyebrow">Norte de Santander · Colombia</span>
       <h1 class="reveal d1">Labateca<span class="accent">.</span></h1>
       <span class="hero-tag reveal d1" data-i18n="hero_tag">Donde la montaña guarda volcanes de Dios</span>
-      <p class="hero-lead reveal d2" data-i18n="hero_lead">Cascadas de hasta 100 metros, café de altura y el Páramo de Santurbán. Una perla escondida del suroriente nortesantandereano, lista para descubrirse.</p>
+      <p class="hero-lead reveal d2" data-i18n="hero_lead">Cascadas que caen por la garganta entre dos montañas, café de altura y 2.000 hectáreas de Páramo de Santurbán. A tres horas y media de Cúcuta.</p>
       <div class="hero-cta reveal d3">
         <a href="/lugares.html" class="btn btn-primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -237,7 +237,7 @@
     <div class="explora-head reveal">
       <span class="eyebrow" data-i18n="ex_eyebrow">Guía inteligente</span>
       <h2 data-i18n="ex_title">¿Qué puedes encontrar en Labateca?</h2>
-      <p class="explora-lead" data-i18n="ex_lead">Pregúntale a nuestra guía con inteligencia artificial: qué visitar, cómo llegar, qué comer o cómo armar tu recorrido. Te responde al instante, en español o inglés.</p>
+      <p class="explora-lead" data-i18n="ex_lead">Pregunta lo que quieras: qué visitar, cómo llegar, qué comer o cómo armar tu recorrido. Responde al instante, en español o en inglés, y solo con lo que dicen las fichas de esta guía.</p>
     </div>
 
     <div class="explora-box reveal d1">
@@ -267,8 +267,8 @@
   <div class="wrap about-grid">
     <div class="about-text reveal">
       <span class="eyebrow" data-i18n="about_eyebrow">El pueblo</span>
-      <h2 data-i18n="about_title">Una perla del suroriente</h2>
-      <p data-i18n="about_p1"><strong>Labateca</strong> —“volcanes de Dios” en lengua chitarera— es un municipio de montaña reconocido por su café, su ganadería y unas cascadas ecoturísticas que no envidian nada a destinos más famosos.</p>
+      <h2 data-i18n="about_title">Un pueblo con 400 años de historia escrita</h2>
+      <p data-i18n="about_p1"><strong>Labateca</strong> —“volcanes de Dios” en lengua chitarera— es un municipio de montaña que vive del café, de la ganadería y de unas cascadas a las que todavía se llega a pie.</p>
       <p data-i18n="about_p2">Más de 2.000 hectáreas de su territorio forman parte del <strong>Páramo de Santurbán</strong>, una de las grandes fábricas de agua de Norte de Santander. Su templo colonial guarda el lienzo original de la Virgen de las Angustias y una pila bautismal tallada en piedra.</p>
       <ul class="fact-list">
         <li>
@@ -386,7 +386,7 @@
     <div class="sec-head">
       <span class="eyebrow" data-i18n="rutas_eyebrow">Planes listos</span>
       <h2 data-i18n="rutas_title">Rutas sugeridas</h2>
-      <p data-i18n="rutas_sub">Elige una ruta y se cargará automáticamente en tu planificador. Puedes añadir o quitar lugares a tu gusto.</p>
+      <p data-i18n="rutas_sub">Elige una ruta y sus paradas se te guardan solas. Después quitas las que no te interesen o añades otras.</p>
     </div>
     <div class="rutas-grid" id="rutasGrid"></div>
   </div>
@@ -400,7 +400,7 @@
     <div class="sec-head reveal">
       <span class="eyebrow" data-i18n="map_eyebrow">Ubícate</span>
       <h2 data-i18n="map_title">Todo Labateca en un mapa</h2>
-      <p data-i18n="map_sub">Explora cada lugar, mira las distancias y abre la navegación con un toque.</p>
+      <p data-i18n="map_sub">Cada lugar con su punto, su distancia y el botón para que Google Maps te lleve.</p>
     </div>
 
     <!-- Toggle: Mapa real | Mapa ilustrado -->

@@ -16,6 +16,61 @@ const MAX_PLACES = 130;
 const MAX_GUIA_CHARS = 4000;
 /* 300 cortaba a media frase 38 de las 66 descripciones. */
 const MAX_FIELD_CHARS = 600;
+/* Tope al contexto COMPLETO. El sitio se autolimita a 30.000 caracteres
+   (CTX_PRESUPUESTO en app.js); esto es la malla por si la peticion no
+   viene del sitio. Sin el, 130 lugares x 6 campos x 600 caracteres dejaban
+   armar un prompt de 468.000 caracteres, o sea una factura. */
+const MAX_CTX_CHARS = 34000;
+
+/* ── LIMITE DE PETICIONES ───────────────────────────────────────
+   El chequeo de Origin no basta: un Origin se escribe a mano con curl.
+   Sin esto, cualquiera vacia la cuota diaria de Workers AI o la hace
+   cobrar. Se cuenta por IP en dos ventanas: rafagas y sostenido.
+
+   Vive en la memoria del isolate, asi que no hay nada que configurar.
+   No es global -Cloudflare puede tener varios isolates- pero como cada
+   visitante cae casi siempre en el mismo centro de datos, ataja el
+   abuso real. Para un limite global de verdad basta crear el binding
+   RATE_LIMITER en el panel: si existe, el codigo lo usa tambien. */
+const LIM_MINUTO = 8;     // preguntas por IP en 60 s
+const LIM_HORA   = 60;    // preguntas por IP en 1 h
+const _visto = new Map(); // ip -> { m:[n,t], h:[n,t] }
+
+function _cupo(bolsa, tope, ventanaMs, ahora) {
+  if (ahora - bolsa[1] > ventanaMs) { bolsa[0] = 0; bolsa[1] = ahora; }
+  bolsa[0]++;
+  return bolsa[0] <= tope;
+}
+
+function dentroDelCupo(ip) {
+  const ahora = Date.now();
+  /* El Map no crece sin freno: cuando se pasa de mil IPs se vacia entero.
+     Perder la cuenta un momento es preferible a una fuga de memoria. */
+  if (_visto.size > 1000) _visto.clear();
+  let e = _visto.get(ip);
+  if (!e) { e = { m: [0, ahora], h: [0, ahora] }; _visto.set(ip, e); }
+  const okM = _cupo(e.m, LIM_MINUTO, 60000, ahora);
+  const okH = _cupo(e.h, LIM_HORA, 3600000, ahora);
+  return okM && okH;
+}
+
+/* La guia del municipio la lee el worker del propio sitio. Antes llegaba
+   en el cuerpo de la peticion, o sea que el que llamara escribia parte de
+   las instrucciones del modelo. Se guarda en cache una hora. */
+const GUIA_URL = 'https://labateca-turismo.labatecacolombia.workers.dev/data/guia.json';
+let _guiaCache = null, _guiaCuando = 0;
+
+async function guiaDelSitio(lang) {
+  const ahora = Date.now();
+  if (!_guiaCache || ahora - _guiaCuando > 3600000) {
+    try {
+      const r = await fetch(GUIA_URL, { cf: { cacheTtl: 3600, cacheEverything: true } });
+      if (r.ok) { _guiaCache = await r.json(); _guiaCuando = ahora; }
+    } catch (e) { /* si no se puede, se responde solo con los lugares */ }
+  }
+  const g = _guiaCache && _guiaCache[lang];
+  return (typeof g === 'string') ? g.slice(0, MAX_GUIA_CHARS) : '';
+}
 
 /* Guía local del municipio. Es la salida cuando el asistente NO tiene el dato:
    antes de inventar, entrega este número. Debe coincidir con CONFIG.guiaLocal
@@ -39,6 +94,14 @@ function sinDatos(lang) {
       + 'darte un dato que no me conste. Para cascadas, senderos, recorridos o '
       + 'cómo moverte, escríbele al guía local por WhatsApp: '
       + GUIA_LOCAL.display + '.';
+}
+
+/* Idioma probable de quien llama, para el mensaje de "espera un minuto".
+   Se saca de la cabecera porque en ese punto el cuerpo aun no se ha leido
+   (y no se quiere gastar el parseo en una peticion que ya se rechazo). */
+function lang0(request) {
+  const a = request.headers.get('Accept-Language') || '';
+  return /^en\b|,\s*en\b/i.test(a) ? 'en' : 'es';
 }
 
 /* Limpia un campo de texto venido del cliente: solo string, longitud acotada */
@@ -71,12 +134,36 @@ export default {
       });
     }
 
+    /* Cupo por IP. Va DESPUES del chequeo de Origin y ANTES de leer el
+       cuerpo: una peticion rechazada no debe costar ni el parseo. */
+    const ip = request.headers.get('CF-Connecting-IP') || 'sin-ip';
+    let hayCupo = dentroDelCupo(ip);
+    if (hayCupo && env.RATE_LIMITER) {
+      try {
+        const r = await env.RATE_LIMITER.limit({ key: ip });
+        hayCupo = r.success;
+      } catch (e) { /* si el binding falla, queda el conteo en memoria */ }
+    }
+    if (!hayCupo) {
+      return new Response(JSON.stringify({
+        ok: false,
+        error: lang0(request) === 'en'
+          ? 'Too many questions in a row. Wait a minute and try again.'
+          : 'Muchas preguntas seguidas. Espera un minuto y vuelve a intentar.'
+      }), {
+        status: 429,
+        headers: Object.assign({}, cors, { 'Content-Type': 'application/json', 'Retry-After': '60' })
+      });
+    }
+
     try {
       const body = await request.json();
       const question = String(body.question || '').slice(0, MAX_QUESTION_CHARS);
       const lang     = (body.lang === 'en') ? 'en' : 'es';
       const places   = Array.isArray(body.places) ? body.places : [];
-      const guia     = (typeof body.guia === 'string') ? body.guia.slice(0, MAX_GUIA_CHARS) : '';
+      /* body.guia ya NO se usa: el cliente no escribe las instrucciones
+         del modelo. Se lee del sitio. */
+      const guia     = await guiaDelSitio(lang);
 
       if (!question.trim()) {
         return new Response(JSON.stringify({ ok: false, error: 'Empty question' }), {
@@ -106,7 +193,7 @@ export default {
         if (como) line += ' Cómo llegar: ' + como + '.';
         if (rec)  line += ' Tip: ' + rec;
         return line.trim();
-      }).filter(Boolean).join('\n');
+      }).filter(Boolean).join('\n').slice(0, MAX_CTX_CHARS);
 
       /* GUARDA DURA. Sin lugares y sin guía maestra no hay con qué responder,
          y un modelo sin datos no calla: inventa. Aquí se corta antes de la IA. */
@@ -133,7 +220,7 @@ export default {
         + 'di que ese lugar todavía no tiene información verificada. '
         + 'Si un lugar dice "Todos los días", eso incluye sábados y domingos. '
         + 'Cuando no tengas el dato, remite SIEMPRE al guía local del municipio por '
-        + 'WhatsApp (' + GUIA_LOCAL.display + '): él conoce los caminos, el estado real '
+        + 'WhatsApp (' + GUIA_LOCAL.display + '): conoce los caminos, el estado real '
         + 'de los senderos y cuánto se demora cada recorrido.\n\n'
         + (guia ? 'Sobre el municipio:\n' + guia + '\n\n' : '')
         + 'Lugares disponibles (los que traen [categoría] son el directorio completo; los demás vienen con su ficha ampliada):\n' + ctx;
