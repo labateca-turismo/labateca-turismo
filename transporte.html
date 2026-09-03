@@ -35,7 +35,7 @@
 <noscript><link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700;800&display=swap" /></noscript>
 
-<link rel="stylesheet" href="/styles.css?v=194">
+<link rel="stylesheet" href="/styles.css?v=195">
 
 <script type="application/ld+json">
 {
@@ -300,7 +300,13 @@ document.getElementById('year').textContent = new Date().getFullYear();
     ].filter(Boolean).map(function(par){
       return '<li><span aria-hidden="true">'+par[0]+'</span> '+escHtml(par[1])+'</li>';
     }).join('');
-    return '<div class="cond-card reveal in"><h4>'+escHtml(T(c.nombre))+'</h4>'+
+    /* La foto es opcional: solo la tienen los que mandaron fotografia real
+       del vehiculo. Las cinco rutas Cotranal van sin ella a proposito -- de
+       esas solo hay avisos publicitarios, que son diseño de la empresa. */
+    var foto = c.foto ? '<img class="cond-foto" loading="lazy" decoding="async" '+
+      'width="640" height="360" src="https://res.cloudinary.com/dwotodtoa/image/upload/w_640,h_360,c_fill,g_auto,f_auto,q_auto/'+
+      encodeURI(c.foto)+'" alt="' + escHtml('Vehículo de ') + escHtml(T(c.nombre))+'">' : '';
+    return '<div class="cond-card reveal in">'+foto+'<h4>'+escHtml(T(c.nombre))+'</h4>'+
       '<ul class="cond-datos">'+filas+'</ul>'+
       (T(c.notas) ? '<p class="cond-notas">'+escHtml(T(c.notas))+'</p>' : '')+
       wa+'</div>';

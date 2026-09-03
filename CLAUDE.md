@@ -8,7 +8,7 @@ Bilingüe español/inglés. Sin frameworks, sin bundler, sin paso de compilació
 > corregirlo**. Estuvo desactualizado desde junio hasta el 2 de septiembre de
 > 2026 y en ese lapso hizo más daño que bien.
 
-**Estado al 2 de septiembre de 2026 (v194):** 116 lugares · 600 fotos ·
+**Estado al 2 de septiembre de 2026 (v195):** 116 lugares · 600 fotos ·
 6 rutas temáticas · 292 páginas HTML · 286 URLs en el sitemap.
 
 ---
@@ -124,7 +124,7 @@ cada página trae su propio lector, su propio `escHtml()` y su propio `T()`.
 
 ```json
 { "id":"motilones", "tipo":"intermunicipal", "nombre":"Los Motilones",
-  "whatsapp":"573112001221",
+  "whatsapp":"573112001221", "foto":"labateca/transporte-motilones",
   "vehiculo":{"es":"","en":""}, "rutas":{"es":"","en":""},
   "horario":{"es":"","en":""}, "notas":{"es":"","en":""} }
 ```
@@ -140,6 +140,12 @@ cada página trae su propio lector, su propio `escHtml()` y su propio `T()`.
   marca, color y seña. **La placa solo se escribe si se lee sin duda** en una
   foto del vehículo o en el formato. Dos de las del registro quedaron
   ilegibles y se dejaron por fuera: una placa equivocada es peor que ninguna.
+- **`foto` es opcional** y es el `public_id` de Cloudinary, con el prefijo
+  `labateca/transporte-`. Solo la llevan los que mandaron **fotografía real
+  del vehículo**; las cinco rutas Cotranal van sin ella a propósito, porque de
+  esas solo hay **avisos publicitarios**, que son diseño de la empresa: de
+  ellos se toman los datos, que son hechos, y no la imagen. La tarjeta sin
+  foto simplemente empieza por el título.
 - En cuanto haya un `"municipal"`, el aviso de «esta parte la estamos
   levantando» se apaga solo y aparece `#condMunNota` en su lugar.
 
@@ -336,11 +342,9 @@ a temporal y `os.replace`.
   (hoja 2 del registro). José decidió publicarlos igual: son empresas y rutas
   cuyos teléfonos y horarios ellas mismas hacen circular en avisos. Conviene
   recogerlas, y quedan dos hojas del registro (3 y 4) sin escanear.
-- **El bus de la Providencia —«Goyo», placa XHB-489— tiene foto pero no tiene
-  datos:** no aparece en las hojas escaneadas. Sin teléfono ni horario no
-  entra.
-- **Una cifra por confirmar:** el WhatsApp de Javier Arturo Montañez
-  (`3118898958`) lleva el último dígito corregido a mano en el formato.
+- **Quedan las hojas 3 y 4 del registro sin escanear.** La 1 llegó dos veces:
+  la segunda vez traía la fila 7 llena, que era Goyo. Vale la pena volver a
+  pedirlas cuando se llenen más filas.
 - **El formulario no llega por correo:** `web3formsKey` sigue en
   `"TU_ACCESS_KEY"`, así que `app.js` cae al respaldo de WhatsApp.
 - **Reseñas en cero.** El sistema funciona; falta pedirlas. Revisar `/moderar`

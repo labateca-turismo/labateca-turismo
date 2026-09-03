@@ -2416,3 +2416,20 @@ footer .solo-es{background:transparent;border-color:rgba(255,255,255,.28);color:
 /* Bajo 430px manda el nombre del sitio: el idioma se alcanza igual desde
    la gemela, y el encabezado no da para tres controles. */
 @media(max-width:430px){ .nav-lang{display:none} }
+
+/* ── Foto del vehiculo en la tarjeta de conductor ─────────────────────
+   Va sangrada contra el padding de .cond-card (20px arriba, 22px a los
+   lados) para que quede al ras del borde superior. El radio es 13px y no
+   14 porque la tarjeta tiene 1px de borde. Solo la llevan los que
+   mandaron fotografia real del vehiculo; las tarjetas sin foto
+   simplemente empiezan por el titulo. */
+.cond-foto{
+  display:block;
+  width:calc(100% + 44px);
+  margin:-20px -22px 16px;
+  height:auto;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:13px 13px 0 0;
+  background:var(--line);
+}

@@ -1,5 +1,5 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "_nota": "Datos del REGISTRO DE TRANSPORTISTAS ALIADOS (hojas 1 y 2, 2 sep 2026) y de los avisos que las mismas empresas hacen circular. Los cuatro municipales firmaron la autorizacion de Ley 1581; los intermunicipales todavia no: son empresas y rutas cuyos telefonos y horarios ellas mismas publican, y Jose autorizo publicarlos mientras se recogen las firmas. Las placas solo se escriben cuando se leen sin duda en una foto real del vehiculo o en el formato.",
   "conductores": [
     {
@@ -7,6 +7,7 @@
       "tipo": "intermunicipal",
       "nombre": "Los Motilones — Yorman Capacho",
       "whatsapp": "573112001221",
+      "foto": "labateca/transporte-motilones",
       "vehiculo": {
         "es": "Bus blanco N.º 61, placa SND-077",
         "en": "White bus no. 61, plate SND-077"
@@ -72,6 +73,7 @@
       "tipo": "intermunicipal",
       "nombre": "Concorde — Transportes Providencia",
       "whatsapp": "573025786826",
+      "foto": "labateca/transporte-concorde",
       "vehiculo": {
         "es": "Bus Concorde N.º 2383, negro y plateado, placa ESX-855",
         "en": "Concorde bus no. 2383, black and silver, plate ESX-855"
@@ -83,6 +85,29 @@
       "horario": {
         "es": "Sale de Cúcuta 4:00 a. m. · Regresa de San Bernardo 5:30 a. m.",
         "en": "Leaves Cúcuta 4:00 a.m. · Returns from San Bernardo 5:30 a.m."
+      }
+    },
+    {
+      "id": "providencia",
+      "tipo": "intermunicipal",
+      "nombre": "Goyo — Transportes Providencia",
+      "whatsapp": "573107925734",
+      "foto": "labateca/transporte-providencia",
+      "vehiculo": {
+        "es": "Bus azul y plateado de la Providencia, placa XHB-489",
+        "en": "Blue and silver Providencia bus, plate XHB-489"
+      },
+      "rutas": {
+        "es": "San Bernardo · Labateca · Toledo · Chinácota · Cúcuta",
+        "en": "San Bernardo · Labateca · Toledo · Chinácota · Cúcuta"
+      },
+      "horario": {
+        "es": "Sale de San Bernardo 5:30 a. m. · Regresa de Cúcuta 11:30 a. m.",
+        "en": "Leaves San Bernardo 5:30 a.m. · Returns from Cúcuta 11:30 a.m."
+      },
+      "notas": {
+        "es": "De regreso baja por Chinácota, Toledo y Labateca hasta San Bernardo.",
+        "en": "On the way back it runs down through Chinácota, Toledo and Labateca to San Bernardo."
       }
     },
     {
@@ -162,6 +187,7 @@
       "tipo": "municipal",
       "nombre": "Jesús Alirio Montañez",
       "whatsapp": "573229455253",
+      "foto": "labateca/transporte-jesus-alirio",
       "vehiculo": {
         "es": "Chevrolet Esteem plateado, con parrilla en el techo",
         "en": "Silver Chevrolet Esteem with a roof rack"
@@ -172,6 +198,7 @@
       "tipo": "municipal",
       "nombre": "Luis Javier Montañez",
       "whatsapp": "573219178969",
+      "foto": "labateca/transporte-luis-javier",
       "vehiculo": {
         "es": "Toyota Hilux doble cabina verde oscuro, con carpa",
         "en": "Dark green Toyota Hilux double cab with a canopy"
@@ -196,6 +223,7 @@
       "tipo": "municipal",
       "nombre": "Deiner Santiago García Rincón",
       "whatsapp": "573115601500",
+      "foto": "labateca/transporte-deiner",
       "vehiculo": {
         "es": "Mazda 323 plateado, placa amarilla de servicio público BUQ-804",
         "en": "Silver Mazda 323, yellow public-service plate BUQ-804"
