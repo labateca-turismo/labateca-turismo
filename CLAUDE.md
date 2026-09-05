@@ -8,9 +8,9 @@ Bilingüe español/inglés. Sin frameworks, sin bundler, sin paso de compilació
 > corregirlo**. Estuvo desactualizado desde junio hasta el 2 de septiembre de
 > 2026 y en ese lapso hizo más daño que bien.
 
-**Estado al 3 de septiembre de 2026 (v200):** 116 lugares · 606 fotos ·
+**Estado al 5 de septiembre de 2026 (v201):** 116 lugares · 610 fotos ·
 6 rutas temáticas · 12 conductores · 2 videos · 292 páginas HTML · 286 URLs
-en el sitemap.
+en el sitemap. **8 fichas pendientes**, todas de naturaleza.
 
 ---
 
@@ -458,6 +458,59 @@ Tres cerrojos, todos dentro del worker:
 **Los tres workers se pegan a mano en el panel de Cloudflare** (están en
 `.assetsignore`, no se despliegan con el sitio). Un cambio en `worker-chat.js`
 no llega solo por hacer push.
+
+### Una ficha puede estar completa y no tener punto en el mapa (v201)
+
+El **Centro de Rehabilitación** dejó de ser ficha pendiente: tiene diez fotos,
+descripción larga y datos oficiales. Lo que **no** tiene es coordenada, porque
+nadie ha ido a la puerta a tomarla. Esas dos cosas son independientes y el
+código ya lo sabía:
+
+- `pendiente: true` significa **no hay contenido**. Pinta el aviso «ficha
+  pendiente», esconde el bloque de reseñas y `check_rutas.js` prohíbe usarla
+  como parada. Se quita cuando hay contenido, no cuando hay pin.
+- **Sin `lat`/`lng`** el generador ya se protege solo: `tieneCoord` cambia el
+  botón «Cómo llegar» por «Preguntarle al guía local», omite `geo.position` y
+  el `GeoCoordinates` del JSON-LD, y `pines_mapa.js` **no la toca**. El botón
+  «Verlo en el mapa» sigue sirviendo: `?lugar=ID` abre el visor de fotos, no
+  el mapa, así que no depende de la coordenada.
+
+No inventes una coordenada «aproximada» para que no quede el hueco. Eso es
+justo lo que se corrigió en la v198 y en la v200.
+
+### Fotos de pacientes en la puerta de un centro de salud (v201)
+
+De las once fotos del Centro de Rehabilitación se publicaron diez. La que
+falta es la única toma del edificio completo, y se cayó porque en la entrada
+hay dos personas sentadas, de frente, reconocibles. Son pacientes en la puerta
+de un servicio de salud: publicarlas es publicar **quién fue a terapia**, que
+bajo la Ley 1581 es dato sensible. No hay consentimiento firmado. El letrero
+se ve igual de bien en la foto del muro.
+
+La regla de siempre —revisar cada foto a tamaño completo antes de hornear—
+aquí tiene un filo extra: en salud no basta con que la persona no sea el tema
+de la foto.
+
+### Textos que manda el propio negocio (v201)
+
+Ateca y EXCII mandaron su propio texto y se cambió la ficha. Dos cosas que
+**no** se borran cuando eso pasa:
+
+1. **Lo que las fotos ya dicen.** El texto nuevo de EXCII es de moda y
+   accesorios, y no menciona los trámites de documentos; pero dos de sus once
+   fotos son el cartel de la fachada con la lista de trámites, y sus pies los
+   nombran. Se conservó el párrafo. Una ficha no puede contradecir sus propias
+   fotos.
+2. **Los datos ya verificados que el texto nuevo no contradice** — el nombre
+   de quien atiende, por ejemplo.
+
+Y al revés: lo que el texto nuevo **sí** contradice, manda el texto nuevo. La
+hora de cierre de Ateca desapareció porque el negocio confirmó la de apertura
+y no la de cierre; se prefiere el dato faltante al dato viejo.
+
+Los emojis y el formato de pieza publicitaria no entran en `desc`: esa cadena
+va literal al `<meta name="description">`, al `og:description` y al prompt del
+asistente.
 
 ## 5. Principios del proyecto
 

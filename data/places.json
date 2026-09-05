@@ -1,5 +1,5 @@
 {
-  "version": "1.16",
+  "version": "1.17",
   "lugares": [
     {
       "id": "templo",
@@ -3434,28 +3434,28 @@
         "en": "Ateca — Bar, Café & Restaurant"
       },
       "desc": {
-        "es": "Bar, café y restaurante en el casco urbano de Labateca, con un ambiente cálido de luces, madera y decoración acogedora. Su carta 'Made in Labateca' incluye hamburguesas gourmet (Deluxe, Búfalo, Cheddar), sándwiches y wraps, picadas y platos a la parrilla (churrasco, pollo, chorizo), entradas y una barra con cócteles, café y bebidas. Atención de Nurymar Medina.",
-        "en": "Bar, café and restaurant in Labateca's town center, with a warm atmosphere of string lights, wood and cozy décor. Its 'Made in Labateca' menu features gourmet burgers (Deluxe, Búfalo, Cheddar), sandwiches and wraps, sharing platters and grilled dishes (steak, chicken, chorizo), starters and a bar with cocktails, coffee and drinks. Run by Nurymar Medina."
+        "es": "Restaurante de comida de autor a una cuadra del Parque Principal, con ambiente de bar-café londinense: luz cálida, tonos tierra y piso de gres. La carta pasa de los setenta platos, entre hamburguesas, emparedados, submarinos, parrillas, ensaladas y platos servidos con papas o con pan árabe, y tiene además menú infantil, bebidas y coctelería. Los domingos hay almuerzo, y atiende también almuerzos a la carta y empresariales. Recibe reservas de cualquier tipo, en el local o llevando el servicio a donde se necesite. Atención de Nurymar Medina.",
+        "en": "Signature-cuisine restaurant one block from the Main Square, styled like a London bar-café: warm light, earth tones and a stoneware floor. The menu runs to more than seventy dishes — burgers, sandwiches, submarine rolls, grills, salads, and plates served with fries or with Arabic flatbread — plus a children's menu, drinks and cocktails. Lunch is served on Sundays, and it also does à la carte and corporate lunches. It takes reservations of any kind, at the restaurant or catering wherever needed. Run by Nurymar Medina."
       },
       "comoLlegar": {
-        "es": "En el casco urbano de Labateca.",
-        "en": "In Labateca's town center."
+        "es": "En el casco urbano de Labateca, a una cuadra del Parque Principal. Sigue el pin del mapa.",
+        "en": "In Labateca's town centre, one block from the Main Square. Follow the map pin."
       },
       "dist": {
-        "es": "En el casco urbano",
-        "en": "In town center"
+        "es": "A una cuadra del parque",
+        "en": "One block from the square"
       },
       "tiempo": {
-        "es": "Todos los días, 6:00 – 10:00 p. m.; domingos, 12:00 m. – 3:00 p. m.",
-        "en": "Every day, 6:00 – 10:00 p.m.; Sundays, 12:00 noon – 3:00 p.m."
+        "es": "Todos los días a partir de las 6:00 p. m. · Domingos, servicio de almuerzo",
+        "en": "Every day from 6:00 p.m. · Sunday lunch service"
       },
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
       },
       "recomendacion": {
-        "es": "El lugar para hamburguesas gourmet, picadas y una salida de noche en Labateca. Contacto por WhatsApp: 318 561 9179.",
-        "en": "The spot for gourmet burgers, sharing platters and a night out in Labateca. Contact via WhatsApp: 318 561 9179."
+        "es": "Abre de noche: si vas de paso y quieres almorzar, el día es el domingo. Reserva por WhatsApp al 318 561 9179 —también atienden reuniones y almuerzos de empresa, y llevan el servicio fuera del local si se acuerda antes—.",
+        "en": "It opens in the evening, so if you are passing through and want lunch, Sunday is the day. Book on WhatsApp at +57 318 561 9179 — they also handle group and corporate lunches, and will cater off-site if arranged in advance."
       },
       "fotos": [
         "labateca/ateca-01",
@@ -7534,40 +7534,90 @@
     {
       "id": "centro-rehabilitacion",
       "categoria": "servicios",
-      "verified": false,
-      "pendiente": true,
-      "coordsApprox": true,
+      "verified": true,
       "telefono": "",
       "nombre": {
-        "es": "Centro de Rehabilitación de la Alcaldía",
-        "en": "Municipal Rehabilitation Centre"
+        "es": "Centro de Rehabilitación de Labateca",
+        "en": "Labateca Rehabilitation Centre"
       },
       "desc": {
-        "es": "Ficha en preparación. Este lugar todavía no tiene información verificada: falta levantar en campo la ubicación exacta, el tiempo de recorrido, la dificultad y las fotografías. Se publica ahora para dejar constancia de que existe; el contenido se completa apenas se confirme.",
-        "en": "Entry in preparation. This place has no verified information yet: the exact location, walking time, difficulty and photographs are still to be recorded in the field. It is listed now so it is on record; the content will be completed once confirmed."
+        "es": "El centro de rehabilitación del municipio, en un edificio nuevo de ladrillo a la vista y techo de vigas de madera, con el nombre en letras grandes sobre el muro blanco. Adentro hay sala de espera, un pasillo de consultorios y varias salas de terapia, cada una montada para lo suyo: camillas para terapia física; un consultorio con computador; una sala de terapia ocupacional con estantes de juegos didácticos, encajables y ensartables; un gimnasio con caminadora, elíptica, escaladora y multifuerza; barras paralelas de marcha frente a un espejo, con columpio terapéutico y minitrampolín al lado; y un cuarto de psicomotricidad forrado en módulos de espuma de colores. Hay además balones terapéuticos, aros, conos y una escalera de entrenamiento. El área infantil tiene su propia mascota, un ratón recortado de tamaño natural que recibe junto a la sala de espera.\n\nLa Alcaldía informa que en el Centro de Atención Integral del municipio la EPS Sanitas mantiene tres profesionales de manera permanente —fisioterapia, terapia ocupacional y fonoaudiología—, que para ser atendido por ellas hay que llevar la autorización de la EPS, y que quien no está afiliado a Sanitas también recibe atención.",
+        "en": "The municipality’s rehabilitation centre, in a new building of exposed brick with a timber-beamed roof and the name in large letters across the white wall. Inside there is a waiting room, a corridor of consulting rooms and several therapy rooms, each fitted for its purpose: couches for physical therapy; a consulting room with a computer; an occupational-therapy room lined with shelves of learning toys, shape sorters and stacking games; a gym with treadmill, cross-trainer, stepper and multi-station weight machine; parallel walking bars facing a mirror, with a therapy swing and a mini-trampoline beside them; and a psychomotor room padded with coloured foam blocks. There are also therapy balls, hoops, cones and a training staircase. The children's area has its own mascot, a life-size cut-out mouse that greets you by the waiting room.\n\nThe Mayor's Office reports that at the municipality's Centro de Atención Integral the health insurer EPS Sanitas keeps three professionals on permanent duty — physiotherapy, occupational therapy and speech therapy — that to be seen by them you must bring the insurer's authorisation, and that people not affiliated with Sanitas are attended too."
       },
       "comoLlegar": {
-        "es": "Por confirmar. Mientras tanto, no vayas por tu cuenta: pregúntale al guía local del municipio, que conoce el camino y su estado real. WhatsApp +57 321 273 7469.",
-        "en": "To be confirmed. In the meantime, do not go on your own: ask the town's local guide, who knows the route and its real condition. WhatsApp +57 321 273 7469."
+        "es": "En el casco urbano de Labateca. Todavía no tiene punto en el mapa: falta tomar la ubicación en la puerta. Cualquiera en el pueblo indica cómo llegar, y en la Alcaldía dan razón.",
+        "en": "In Labateca's town centre. It has no map pin yet — the location still has to be taken at the door. Anyone in town can point you there, and the Mayor's Office will know."
       },
       "dist": {
-        "es": "Por confirmar",
-        "en": "To be confirmed"
+        "es": "En el casco urbano",
+        "en": "In the town centre"
       },
       "tiempo": {
-        "es": "Por confirmar",
-        "en": "To be confirmed"
+        "es": "Horario por confirmar",
+        "en": "Opening hours to be confirmed"
       },
       "dificultad": {
-        "es": "Por confirmar",
-        "en": "To be confirmed"
+        "es": "Acceso fácil, entrada a nivel",
+        "en": "Easy access, step-free entrance"
       },
       "recomendacion": {
-        "es": "Ficha pendiente por actualizar. Si conoces este lugar y quieres aportar datos o fotos, escríbenos desde la sección «Proponer un lugar». Para visitarlo con orientación, contacta al guía local: WhatsApp +57 321 273 7469.",
-        "en": "Entry pending update. If you know this place and want to contribute details or photos, write to us from the “Suggest a place” section. To visit it with guidance, contact the local guide: WhatsApp +57 321 273 7469."
+        "es": "No es un sitio para visitar, y está en la guía por lo que significa: un municipio de este tamaño con sala de integración sensorial, gimnasio y terapia infantil propia no es lo común. Si estás de visita y te hace falta fisioterapia, aquí la hay; lleva la autorización de tu EPS, y si no estás afiliado a Sanitas, pregunta igual.",
+        "en": "It is not a sightseeing stop, and it is in this guide for what it means: a town this size with its own sensory-integration room, gym and children's therapy is not the norm. If you are visiting and need physiotherapy, it is here; bring your insurer's authorisation, and if you are not with Sanitas, ask anyway."
       },
-      "fotos": [],
-      "fotosCap": []
+      "fotos": [
+        "labateca/rehabilitacion-01",
+        "labateca/rehabilitacion-02",
+        "labateca/rehabilitacion-03",
+        "labateca/rehabilitacion-04",
+        "labateca/rehabilitacion-05",
+        "labateca/rehabilitacion-06",
+        "labateca/rehabilitacion-07",
+        "labateca/rehabilitacion-08",
+        "labateca/rehabilitacion-09",
+        "labateca/rehabilitacion-10"
+      ],
+      "fotosCap": [
+        {
+          "es": "La fachada, con el nombre en letras sobre el muro blanco.",
+          "en": "The frontage, with the name lettered across the white wall."
+        },
+        {
+          "es": "La sala de espera, bajo el techo de vigas de madera, con el ratón que recibe a los niños.",
+          "en": "The waiting room under the timber-beamed roof, with the mouse that greets the children."
+        },
+        {
+          "es": "El pasillo de consultorios, con las puertas de vidrio esmerilado.",
+          "en": "The corridor of consulting rooms, with frosted-glass doors."
+        },
+        {
+          "es": "Sala de terapia física, con dos camillas y el carro de insumos.",
+          "en": "Physical-therapy room, with two couches and the supplies trolley."
+        },
+        {
+          "es": "El consultorio, con computador e impresora.",
+          "en": "The consulting room, with computer and printer."
+        },
+        {
+          "es": "Terapia ocupacional: los estantes de juegos didácticos y la silla adaptada.",
+          "en": "Occupational therapy: the shelves of learning toys and the adapted chair."
+        },
+        {
+          "es": "Balones terapéuticos, aros y conos, con la escalera de entrenamiento a un lado.",
+          "en": "Therapy balls, hoops and cones, with the training staircase to one side."
+        },
+        {
+          "es": "El gimnasio: caminadora, elíptica, escaladora y multifuerza.",
+          "en": "The gym: treadmill, cross-trainer, stepper and multi-station weight machine."
+        },
+        {
+          "es": "Barras paralelas de marcha frente al espejo, con el columpio terapéutico y el minitrampolín.",
+          "en": "Parallel walking bars facing the mirror, with the therapy swing and the mini-trampoline."
+        },
+        {
+          "es": "El cuarto de psicomotricidad, forrado en módulos de espuma.",
+          "en": "The psychomotor room, padded with foam blocks."
+        }
+      ]
     },
     {
       "id": "excii",
@@ -7584,8 +7634,8 @@
         "en": "EXCII · Boutique & Accessories"
       },
       "desc": {
-        "es": "Boutique de ropa y accesorios en el casco urbano, de Eddy Lisbeth Parada. Es un local grande, de piso claro y luz blanca, con la ropa repartida por secciones: un aro dorado en la mitad del salón con lo que va llegando, una pared entera de camisas y camisetas, otra de chaquetas y buzos, un mueble de jeans doblados por tallas y un rincón de ropa interior y medias. Hay para mujer, hombre y niño. En el mostrador, en vitrina, están los accesorios: gorras, aretes, moños, bisutería y perfumería. Y hay una segunda cosa que no se adivina desde afuera: EXCII también hace documentos —impresiones, fotocopias, certificados de contraloría, procuraduría y de libertad y tradición, copias de escrituras, contratos de arrendamiento y de compraventa, trámites de tránsito, cambio de propietario de vehículo venezolano y trámites ante el IGAC—.",
-        "en": "A clothing and accessories boutique in the town centre, run by Eddy Lisbeth Parada. It is a large room with a pale floor and white light, the stock laid out by section: a gold hoop rack in the middle of the floor with whatever has just come in, one whole wall of shirts and tees, another of jackets and hoodies, a unit of jeans folded by size, and a corner for underwear and socks. There is womenswear, menswear and children's. On the counter, under glass, are the accessories: caps, earrings, hair ties, costume jewellery and perfume. And there is a second business you would not guess from the street: EXCII also handles paperwork — printing, photocopying, comptroller, inspector-general and land-registry certificates, copies of deeds, rental and sale contracts, vehicle paperwork, transfer of ownership for Venezuelan-plated vehicles, and IGAC land-registry procedures."
+        "es": "Boutique de ropa y accesorios en el casco urbano, de Eddy Lisbeth Parada. Moda femenina y masculina, con opciones para cada ocasión y para todos los estilos: camisas y camisetas, chaquetas y buzos, jeans por tallas, ropa interior, y un mostrador de accesorios con gorras, aretes, moños, bisutería y perfumería. Las novedades van rotando en el aro dorado del centro del salón. Y hay una segunda cosa que no se adivina desde afuera: EXCII también hace documentos —impresiones, fotocopias, certificados de contraloría, procuraduría y de libertad y tradición, copias de escrituras, contratos de arrendamiento y de compraventa, trámites de tránsito, cambio de propietario de vehículo venezolano y trámites ante el IGAC—.",
+        "en": "A clothing and accessories boutique in the town centre, run by Eddy Lisbeth Parada. Womenswear and menswear, with options for every occasion and every style: shirts and tees, jackets and hoodies, jeans sorted by size, underwear, and a counter of accessories with caps, earrings, hair ties, costume jewellery and perfume. New arrivals rotate on the gold hoop rack in the middle of the floor. And there is a second business you would not guess from the street: EXCII also handles paperwork — printing, photocopying, comptroller, inspector-general and land-registry certificates, copies of deeds, rental and sale contracts, vehicle paperwork, transfer of ownership for Venezuelan-plated vehicles, and IGAC land-registry procedures."
       },
       "comoLlegar": {
         "es": "En el casco urbano de Labateca, a unos 130 m del Parque Principal, en la misma esquina del Ateca Bar Café Restaurante. Sigue el pin del mapa.",
