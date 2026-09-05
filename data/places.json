@@ -1,5 +1,5 @@
 {
-  "version": "1.17",
+  "version": "1.18",
   "lugares": [
     {
       "id": "templo",
@@ -3434,8 +3434,8 @@
         "en": "Ateca — Bar, Café & Restaurant"
       },
       "desc": {
-        "es": "Restaurante de comida de autor a una cuadra del Parque Principal, con ambiente de bar-café londinense: luz cálida, tonos tierra y piso de gres. La carta pasa de los setenta platos, entre hamburguesas, emparedados, submarinos, parrillas, ensaladas y platos servidos con papas o con pan árabe, y tiene además menú infantil, bebidas y coctelería. Los domingos hay almuerzo, y atiende también almuerzos a la carta y empresariales. Recibe reservas de cualquier tipo, en el local o llevando el servicio a donde se necesite. Atención de Nurymar Medina.",
-        "en": "Signature-cuisine restaurant one block from the Main Square, styled like a London bar-café: warm light, earth tones and a stoneware floor. The menu runs to more than seventy dishes — burgers, sandwiches, submarine rolls, grills, salads, and plates served with fries or with Arabic flatbread — plus a children's menu, drinks and cocktails. Lunch is served on Sundays, and it also does à la carte and corporate lunches. It takes reservations of any kind, at the restaurant or catering wherever needed. Run by Nurymar Medina."
+        "es": "Restaurante de comida de autor a una cuadra del Parque Principal, con ambiente de bar-café londinense: luz cálida, tonos tierra y piso de gres. La carta pasa de los setenta platos, entre hamburguesas, emparedados, submarinos, parrillas, ensaladas y platos servidos con papas o con pan árabe, y tiene además menú infantil, bebidas y coctelería. Abre todos los días de 6:00 a 10:00 p. m.; los domingos hay almuerzo, y atiende también almuerzos a la carta y empresariales. Recibe reservas de cualquier tipo, en el local o llevando el servicio a donde se necesite. Atención de Nurymar Medina.",
+        "en": "Signature-cuisine restaurant one block from the Main Square, styled like a London bar-café: warm light, earth tones and a stoneware floor. The menu runs to more than seventy dishes — burgers, sandwiches, submarine rolls, grills, salads, and plates served with fries or with Arabic flatbread — plus a children's menu, drinks and cocktails. It opens every day from 6:00 to 10:00 p.m.; lunch is served on Sundays, and it also does à la carte and corporate lunches. It takes reservations of any kind, at the restaurant or catering wherever needed. Run by Nurymar Medina."
       },
       "comoLlegar": {
         "es": "En el casco urbano de Labateca, a una cuadra del Parque Principal. Sigue el pin del mapa.",
@@ -3446,8 +3446,8 @@
         "en": "One block from the square"
       },
       "tiempo": {
-        "es": "Todos los días a partir de las 6:00 p. m. · Domingos, servicio de almuerzo",
-        "en": "Every day from 6:00 p.m. · Sunday lunch service"
+        "es": "Todos los días, 6:00 – 10:00 p. m. · Domingos, servicio de almuerzo",
+        "en": "Every day, 6:00 – 10:00 p.m. · Sunday lunch service"
       },
       "dificultad": {
         "es": "Acceso fácil",
@@ -7541,28 +7541,28 @@
         "en": "Labateca Rehabilitation Centre"
       },
       "desc": {
-        "es": "El centro de rehabilitación del municipio, en un edificio nuevo de ladrillo a la vista y techo de vigas de madera, con el nombre en letras grandes sobre el muro blanco. Adentro hay sala de espera, un pasillo de consultorios y varias salas de terapia, cada una montada para lo suyo: camillas para terapia física; un consultorio con computador; una sala de terapia ocupacional con estantes de juegos didácticos, encajables y ensartables; un gimnasio con caminadora, elíptica, escaladora y multifuerza; barras paralelas de marcha frente a un espejo, con columpio terapéutico y minitrampolín al lado; y un cuarto de psicomotricidad forrado en módulos de espuma de colores. Hay además balones terapéuticos, aros, conos y una escalera de entrenamiento. El área infantil tiene su propia mascota, un ratón recortado de tamaño natural que recibe junto a la sala de espera.\n\nLa Alcaldía informa que en el Centro de Atención Integral del municipio la EPS Sanitas mantiene tres profesionales de manera permanente —fisioterapia, terapia ocupacional y fonoaudiología—, que para ser atendido por ellas hay que llevar la autorización de la EPS, y que quien no está afiliado a Sanitas también recibe atención.",
-        "en": "The municipality’s rehabilitation centre, in a new building of exposed brick with a timber-beamed roof and the name in large letters across the white wall. Inside there is a waiting room, a corridor of consulting rooms and several therapy rooms, each fitted for its purpose: couches for physical therapy; a consulting room with a computer; an occupational-therapy room lined with shelves of learning toys, shape sorters and stacking games; a gym with treadmill, cross-trainer, stepper and multi-station weight machine; parallel walking bars facing a mirror, with a therapy swing and a mini-trampoline beside them; and a psychomotor room padded with coloured foam blocks. There are also therapy balls, hoops, cones and a training staircase. The children's area has its own mascot, a life-size cut-out mouse that greets you by the waiting room.\n\nThe Mayor's Office reports that at the municipality's Centro de Atención Integral the health insurer EPS Sanitas keeps three professionals on permanent duty — physiotherapy, occupational therapy and speech therapy — that to be seen by them you must bring the insurer's authorisation, and that people not affiliated with Sanitas are attended too."
+        "es": "El centro de rehabilitación del municipio, en un edificio nuevo de ladrillo a la vista y techo de vigas de madera, con el nombre en letras grandes sobre el muro blanco. Adentro hay sala de espera, un pasillo de consultorios y varias salas de terapia, cada una montada para lo suyo: camillas para terapia física; un consultorio con computador; una sala de terapia ocupacional con estantes de juegos didácticos, encajables y ensartables; un gimnasio con caminadora, elíptica, escaladora y multifuerza; barras paralelas de marcha frente a un espejo, con columpio terapéutico y minitrampolín al lado; y un cuarto de psicomotricidad forrado en módulos de espuma de colores. Hay además balones terapéuticos, aros, conos y una escalera de entrenamiento. El área infantil tiene su propia mascota, un ratón recortado de tamaño natural que recibe junto a la sala de espera.\n\nLa Alcaldía lo nombra también «Centro de Atención Integral»: es el mismo sitio. Allí la EPS Sanitas mantiene tres profesionales de manera permanente —fisioterapia, terapia ocupacional y fonoaudiología—. Para ser atendido por ellas hay que llevar la autorización de la EPS; quien no está afiliado a Sanitas también recibe atención.",
+        "en": "The municipality’s rehabilitation centre, in a new building of exposed brick with a timber-beamed roof and the name in large letters across the white wall. Inside there is a waiting room, a corridor of consulting rooms and several therapy rooms, each fitted for its purpose: couches for physical therapy; a consulting room with a computer; an occupational-therapy room lined with shelves of learning toys, shape sorters and stacking games; a gym with treadmill, cross-trainer, stepper and multi-station weight machine; parallel walking bars facing a mirror, with a therapy swing and a mini-trampoline beside them; and a psychomotor room padded with coloured foam blocks. There are also therapy balls, hoops, cones and a training staircase. The children's area has its own mascot, a life-size cut-out mouse that greets you by the waiting room.\n\nThe Mayor's Office also calls it the «Centro de Atención Integral»: it is the same place. There the health insurer EPS Sanitas keeps three professionals on permanent duty — physiotherapy, occupational therapy and speech therapy. To be seen by them you must bring the insurer's authorisation; people not affiliated with Sanitas are attended too."
       },
       "comoLlegar": {
-        "es": "En el casco urbano de Labateca. Todavía no tiene punto en el mapa: falta tomar la ubicación en la puerta. Cualquiera en el pueblo indica cómo llegar, y en la Alcaldía dan razón.",
-        "en": "In Labateca's town centre. It has no map pin yet — the location still has to be taken at the door. Anyone in town can point you there, and the Mayor's Office will know."
+        "es": "En el casco urbano de Labateca, en la manzana del Parque Principal: a unos 40 m del templo y a 150 m de la Alcaldía. Sigue el pin del mapa.",
+        "en": "In Labateca's town centre, on the Main Square block: about 40 m from the church and 150 m from the Town Hall. Follow the map pin."
       },
       "dist": {
-        "es": "En el casco urbano",
-        "en": "In the town centre"
+        "es": "A 40 m del templo",
+        "en": "40 m from the church"
       },
       "tiempo": {
-        "es": "Horario por confirmar",
-        "en": "Opening hours to be confirmed"
+        "es": "Lunes a viernes, en horario de oficina",
+        "en": "Monday to Friday, office hours"
       },
       "dificultad": {
         "es": "Acceso fácil, entrada a nivel",
         "en": "Easy access, step-free entrance"
       },
       "recomendacion": {
-        "es": "No es un sitio para visitar, y está en la guía por lo que significa: un municipio de este tamaño con sala de integración sensorial, gimnasio y terapia infantil propia no es lo común. Si estás de visita y te hace falta fisioterapia, aquí la hay; lleva la autorización de tu EPS, y si no estás afiliado a Sanitas, pregunta igual.",
-        "en": "It is not a sightseeing stop, and it is in this guide for what it means: a town this size with its own sensory-integration room, gym and children's therapy is not the norm. If you are visiting and need physiotherapy, it is here; bring your insurer's authorisation, and if you are not with Sanitas, ask anyway."
+        "es": "No es un sitio para visitar, y está en la guía por lo que significa: un municipio de este tamaño con sala de integración sensorial, gimnasio y terapia infantil propia no es lo común. Si estás de visita y te hace falta fisioterapia, aquí la hay, de lunes a viernes; lleva la autorización de tu EPS, y si no estás afiliado a Sanitas, pregunta igual.",
+        "en": "It is not a sightseeing stop, and it is in this guide for what it means: a town this size with its own sensory-integration room, gym and children's therapy is not the norm. If you are visiting and need physiotherapy, it is here, Monday to Friday; bring your insurer's authorisation, and if you are not with Sanitas, ask anyway."
       },
       "fotos": [
         "labateca/rehabilitacion-01",
@@ -7617,7 +7617,12 @@
           "es": "El cuarto de psicomotricidad, forrado en módulos de espuma.",
           "en": "The psychomotor room, padded with foam blocks."
         }
-      ]
+      ],
+      "lat": 7.299937,
+      "lng": -72.493739,
+      "coordsApprox": false,
+      "mapaX": 761.3,
+      "mapaY": 349.5
     },
     {
       "id": "excii",

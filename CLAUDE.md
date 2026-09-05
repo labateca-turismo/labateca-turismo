@@ -8,7 +8,7 @@ Bilingüe español/inglés. Sin frameworks, sin bundler, sin paso de compilació
 > corregirlo**. Estuvo desactualizado desde junio hasta el 2 de septiembre de
 > 2026 y en ese lapso hizo más daño que bien.
 
-**Estado al 5 de septiembre de 2026 (v201):** 116 lugares · 610 fotos ·
+**Estado al 5 de septiembre de 2026 (v202):** 116 lugares · 610 fotos ·
 6 rutas temáticas · 12 conductores · 2 videos · 292 páginas HTML · 286 URLs
 en el sitemap. **8 fichas pendientes**, todas de naturaleza.
 
@@ -461,10 +461,11 @@ no llega solo por hacer push.
 
 ### Una ficha puede estar completa y no tener punto en el mapa (v201)
 
-El **Centro de Rehabilitación** dejó de ser ficha pendiente: tiene diez fotos,
-descripción larga y datos oficiales. Lo que **no** tiene es coordenada, porque
-nadie ha ido a la puerta a tomarla. Esas dos cosas son independientes y el
-código ya lo sabía:
+El **Centro de Rehabilitación** entró completo —diez fotos, descripción larga,
+datos oficiales— y **sin coordenada**, porque nadie había ido a la puerta a
+tomarla. Estuvo así un día: José la levantó y en la v202 ya tiene su pin
+(7.299937 / −72.493739, a 41 m del templo). La regla se queda escrita porque
+volverá a pasar, y porque el código ya la soportaba:
 
 - `pendiente: true` significa **no hay contenido**. Pinta el aviso «ficha
   pendiente», esconde el bloque de reseñas y `check_rutas.js` prohíbe usarla
@@ -476,7 +477,14 @@ código ya lo sabía:
   el mapa, así que no depende de la coordenada.
 
 No inventes una coordenada «aproximada» para que no quede el hueco. Eso es
-justo lo que se corrigió en la v198 y en la v200.
+justo lo que se corrigió en la v198 y en la v200. **Esperar un día a que
+alguien camine hasta la puerta cuesta menos que un pin equivocado.**
+
+Lo mismo con las horas. El Centro abre «lunes a viernes, en horario de
+oficina» y así quedó escrito, sin inventar el 8:00–12:00 y 2:00–5:00 que uno
+supondría: es lo que se confirmó y no más. Y a Ateca se le había caído la hora
+de cierre en la v201 justamente por eso; volvió en la v202 cuando el negocio
+la confirmó.
 
 ### Fotos de pacientes en la puerta de un centro de salud (v201)
 
