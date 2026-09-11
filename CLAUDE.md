@@ -55,8 +55,8 @@ labateca proyect/
 ├─ files/              ← ESTO es el repo git y lo que se publica
 │  ├─ index.html, lugares.html, pueblo.html, viva.html, libro.html…
 │  ├─ historia/        ← 17 páginas de fuentes históricas (a mano)
-│  ├─ lugar/           ← 111 fichas ES   ┐
-│  ├─ en/place/        ← 111 fichas EN   │ GENERADAS: no editar a mano,
+│  ├─ lugar/           ← 116 fichas ES   ┐
+│  ├─ en/place/        ← 116 fichas EN   │ GENERADAS: no editar a mano,
 │  ├─ categoria/       ← 6 categorías ES │ se reescriben en cada corrida
 │  ├─ en/category/     ← 6 categorías EN ┘
 │  ├─ ruta/            ← 6 páginas de ruta ES  ┐ GENERADAS
@@ -66,8 +66,26 @@ labateca proyect/
 │  ├─ media/           ← el MP3 del himno y los dos videos (35 MB)
 │  ├─ app.js, styles.css, sw.js
 │  └─ worker-*.js      ← no se publican (.assetsignore)
-└─ *.js, *.py          ← generadores y scripts de lote (fuera del repo)
+├─ fuentes/           ← 100 carpetas, UNA POR NEGOCIO O LUGAR: los
+│                       originales de camara y el consentimiento firmado
+├─ horneado/          ← las 14 carpetas out_*: fotos ya redimensionadas.
+│                       Todo esto YA ESTA EN CLOUDINARY; es recreable
+├─ entregables/       ← videos maestros, afiches, audio: piezas terminadas
+├─ LIBRO LABATECA/    ← 3,7 GB de escaneos originales. SIN RESPALDO
+├─ HISTORIADOR SILVANO PABON VILLAMIZAR/  ← las fuentes del historiador
+├─ clasificar/        ← fotos de campo todavia sin ficha
+├─ notas_rest/        ← publicar.txt y retenidas.txt de las fotos antiguas
+└─ *.js, *.py         ← generadores y scripts de lote (fuera del repo)
 ```
+
+**Ordenado el 10 de septiembre de 2026.** Antes habia 120 carpetas sueltas
+en la raiz; ahora hay 15. Al mover se reescribieron las rutas absolutas de
+22 scripts de lote. `files/` **no se movio** y no se puede mover: son las
+rutas de `subir_version.py` y `gen_seo.js`, la tuberia viva.
+
+Los duplicados comprobados estan apartados en
+`C:/rafa/_duplicados-verificados/` con su `LEEME.txt`. Cada cosa de ahi es
+identica byte a byte a una copia que se quedo en su sitio.
 
 **Generadores** (se corren desde la carpeta del proyecto, no desde `files/`):
 
