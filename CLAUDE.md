@@ -230,12 +230,13 @@ Los textos de interfaz llevan `data-i18n` (o `-ph` / `-aria`) y viven en
 
 - **Sí:** `index.html` (159 claves) y `lugares.html` (60). Con `?lang=en`
   salen enteras en inglés. Las 111 fichas, las 6 categorías y las 6 rutas
-  tienen su gemela en `/en/`. **Cuatro páginas de prosa tienen gemela
-  traducida a mano**: `/transporte` → `/en/transport` (v191), y en la **v204**
+  tienen su gemela en `/en/`. **Cinco páginas de prosa tienen gemela
+  traducida a mano**: `/transporte` → `/en/transport` (v191); en la **v204**
   `/viva` → `/en/living`, `/privacidad` → `/en/privacy` y `/terminos` →
-  `/en/terms`. Es prosa, no interfaz, así que no se resuelve con `data-i18n`
-  sino con una página aparte, igual que las fichas.
-- **No:** `pueblo`, `libro`, `biblioteca`, `proponer`, `autorizacion` y
+  `/en/terms`; y en la **v205** `/pueblo` → `/en/town`. Es prosa, no interfaz,
+  así que no se resuelve con `data-i18n` sino con una página aparte, igual que
+  las fichas.
+- **No:** `libro`, `biblioteca`, `proponer`, `autorizacion` y
   16 de las 17 de historia. Tienen el armazón traducido y **el cuerpo en
   español**. Se enlazan igual, pero marcados con la etiqueta `ES` y
   `hreflang="es"` (`marcarSoloES()` en `app.js`, `marcaES()` en `gen_seo.js`).
@@ -608,6 +609,38 @@ y ahi si corresponde.
 Cuando sobra un juego, **el que se queda se elige por los pies, no por el
 numero**: gana el que describe lo que de verdad se ve en la foto.
 
+### `/en/town` NO es un espejo de `/pueblo`, y es a propósito (v205)
+
+`/pueblo` son 1.551 líneas y **la mitad la escribe `gen_pueblo.js`**: el
+resumen, los quince asientos, las fichas de documentos, el crédito y —lo
+importante— la **cronología de 40 hitos**, que no es un dato suelto sino algo
+que el generador **calcula** emparejando cada hito con el apartado del
+manuscrito que lo cuenta (ver `libro/cronologia.js`).
+
+Espejarla en inglés obligaba a una de dos cosas, las dos malas:
+
+1. **Copiarla a mano.** La copia se queda vieja en silencio la próxima vez que
+   alguien corra `gen_pueblo.js`, y nadie se entera hasta que un dato no
+   coincide entre los dos idiomas.
+2. **Traducir el manuscrito.** Son 20.795 palabras del libro más las fuentes.
+   Es un proyecto, no una página.
+
+Así que `/en/town` es **la historia de Labateca para un visitante**, escrita
+entera: los chitareros, la entrada de Ursúa en 1550, el auto de 1623, los
+quince asientos con su explicación de por qué unos dicen doce y otros
+veintiuno, la Virgen y el pleito de 1778, la serie de video y las 155 láminas.
+Lo que queda detrás —el libro, la cronología, la biblioteca, el acta hoja por
+hoja— **se enlaza y se dice que está en español**, con una sección propia al
+final que lo declara sin rodeos en vez de dejar al lector descubrirlo a base
+de clics.
+
+Los dos `hreflang` se declaran igual: son la misma página en propósito, no en
+extensión, y eso Google lo admite.
+
+**Consecuencia práctica:** `/en/town` es un archivo **a mano**. Ningún
+generador lo pisa, y por lo mismo ningún generador lo actualiza. Si cambia la
+historia en `/pueblo`, hay que tocar las dos.
+
 ## 5. Principios del proyecto
 
 1. **Datos de campo y de la comunidad, no de internet.** Lo que hay en línea
@@ -642,11 +675,17 @@ numero**: gana el que describe lo que de verdad se ve en la foto.
   oficial»**, arriba del todo. No dice que la historia sea dudosa —las fuentes
   están enlazadas— sino que **ninguna entidad la ha revisado ni certificado**,
   que es distinto. Si algún día la Alcaldía o una academia lo revisa, se quita.
-- **Traducir el cuerpo** de `pueblo` (6.460 palabras), `libro` (20.795),
-  `biblioteca` (1.545), `proponer` (983) y 16 de las 17 de historia —entre
-  ellas `valle-de-las-angustias`, que sola tiene 45.494—. En la v204 se
-  tradujeron `viva`, `privacidad` y `terminos`; el molde y los cinco pasos
-  del cableado están arriba, en «Qué es bilingüe de verdad y qué no».
+- **Traducir el cuerpo** de `libro` (20.795 palabras), `biblioteca` (1.545),
+  `proponer` (983) y 16 de las 17 de historia —entre ellas
+  `valle-de-las-angustias`, que sola tiene 45.494—. En la v204 se tradujeron
+  `viva`, `privacidad` y `terminos`, y en la v205 entró `/en/town`; el molde y
+  los cinco pasos del cableado están arriba, en «Qué es bilingüe de verdad y
+  qué no».
+  **`biblioteca` no es una plantilla, es un dato:** su texto vive en
+  `libro/fuentes.js` (901 palabras) y en `libro/cruces.js` (669), que también
+  alimentan a `gen_anexos.js`, `gen_libro.js` y `gen_pueblo.js`. Traducirla
+  es añadir una capa `en` a esos módulos compartidos, con respaldo al español
+  para que nada se rompa mientras esté a medias.
   `proponer` es la más cara de su tamaño: son 270 líneas de JavaScript con
   sus cadenas dentro, así que la gemela **duplica lógica** y las dos copias
   se van a separar con el tiempo. Conviene sacar los textos a un objeto

@@ -3398,10 +3398,9 @@ function bsTeclas(e){
    reescribe al idioma que toca (ver enrutarGemelas). */
 /* Paginas cuyo CUERPO sigue en español: se enlazan igual, pero marcadas
    con la etiqueta ES y hreflang="es". Privacidad y Terminos salieron de
-   aqui en la v204, junto con /viva: ya tienen gemela de verdad en
-   /en/privacy, /en/terms y /en/living. */
-const SOLO_ES = ['/pueblo', '/libro',
-                 '/biblioteca', '/proponer'];
+   aqui en la v204, junto con /viva y /pueblo: ya tienen gemela de verdad
+   en /en/privacy, /en/terms, /en/living y /en/town. */
+const SOLO_ES = ['/libro', '/biblioteca', '/proponer'];
 
 /* Paginas que SI tienen gemela traducida de verdad. El enlace se manda a la
    version del idioma activo. Se llama junto a marcarSoloES() -despues de
@@ -3413,6 +3412,7 @@ const SOLO_ES = ['/pueblo', '/libro',
    las fichas sin el. */
 const GEMELAS = [
   ['/transporte', '/en/transport'],
+  ['/pueblo',     '/en/town'],
   ['/viva',       '/en/living'],
   ['/privacidad', '/en/privacy'],
   ['/terminos',   '/en/terms']
