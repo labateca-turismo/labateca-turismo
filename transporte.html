@@ -35,7 +35,7 @@
 <noscript><link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700;800&display=swap" /></noscript>
 
-<link rel="stylesheet" href="/styles.css?v=205">
+<link rel="stylesheet" href="/styles.css?v=206">
 
 <script type="application/ld+json">
 {
@@ -101,6 +101,10 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v11"/><path d="M4 11h16"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/><path d="M4 17h16"/></svg>
         <span>Transporte</span>
       </a>
+      <!-- Esta pagina no carga app.js, asi que no tiene el par ES/EN del
+           resto del sitio. Hasta la v205 tampoco tenia NADA: /en/transport
+           existe desde la v191 y desde aqui no habia forma de llegar. -->
+      <a class="nav-lang" href="/en/transport" hreflang="en" aria-label="Read this page in English">English</a>
       <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menú" aria-expanded="false" aria-controls="navLinks">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>

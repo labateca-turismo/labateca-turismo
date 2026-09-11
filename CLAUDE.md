@@ -253,6 +253,12 @@ Los textos de interfaz llevan `data-i18n` (o `-ph` / `-aria`) y viven en
    transporte.
 5. El pie y el menú que escribe `gen_seo.js`: en inglés el enlace va a la
    gemela y **sin** la etiqueta `ES`.
+6. **Que se pueda ir y volver.** `setLang()` mira `GEMELAS` antes de traducir:
+   si la página actual tiene hermana en el idioma pedido, **navega** en vez de
+   traducir en sitio. Hasta la v206 el botón EN de `/pueblo` dejaba al lector
+   en la misma página española con el armazón en inglés. Y las páginas que no
+   cargan `app.js` necesitan su enlace escrito a mano: `/transporte` estuvo
+   desde la v191 **sin ninguna forma de llegar a `/en/transport`**.
 
 **`/autorizacion` se deja en español a propósito.** Es el formato que la gente
 imprime y firma, y es un documento legal colombiano: una versión en inglés

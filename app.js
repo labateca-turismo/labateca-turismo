@@ -1259,6 +1259,20 @@ function applyI18n(){
   });
 }
 function setLang(l){
+  /* Si ESTA pagina tiene gemela en el idioma que se pide, el boton no
+     traduce: lleva. Hasta la v205 el boton EN de /pueblo dejaba al lector
+     en la misma pagina española con el armazon en ingles, teniendo
+     /en/town publicada. GEMELAS se declara mas abajo; cuando esto corre,
+     el archivo ya termino de evaluarse. */
+  try {
+    const aqui = (location.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/');
+    for (const par of GEMELAS) {
+      const destino = (l === 'en' && aqui === par[0]) ? par[1]
+                    : (l === 'es' && aqui === par[1]) ? par[0] : null;
+      if (destino) { store.set("lab_lang", l); location.href = destino; return; }
+    }
+  } catch(e) { /* si algo falla aqui, que al menos traduzca en sitio */ }
+
   lang=l; store.set("lab_lang",l);
   const es=document.getElementById("langEs"), en=document.getElementById("langEn");
   es.classList.toggle("active",l==="es"); en.classList.toggle("active",l==="en");
