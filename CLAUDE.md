@@ -71,6 +71,12 @@ labateca proyect/
 ├─ horneado/          ← las 14 carpetas out_*: fotos ya redimensionadas.
 │                       Todo esto YA ESTA EN CLOUDINARY; es recreable
 ├─ entregables/       ← videos maestros, afiches, audio: piezas terminadas
+├─ scripts-hechos/    ← los add_*, bake_*, fix_* y patch_* que ya corrieron.
+│                       Traen la ruta absoluta, asi que siguen sirviendo
+│                       desde ahi. Son el registro de como entro cada lote
+├─ documentos/        ← PDF, Word, Excel y las dos presentaciones. Aqui
+│                       esta el portafolio de ASATECA (Asociacion Agro
+│                       Turistica y Ambiental de Labateca), 21 paginas
 ├─ LIBRO LABATECA/    ← 3,7 GB de escaneos originales. SIN RESPALDO
 ├─ HISTORIADOR SILVANO PABON VILLAMIZAR/  ← las fuentes del historiador
 ├─ clasificar/        ← fotos de campo todavia sin ficha
@@ -78,8 +84,10 @@ labateca proyect/
 └─ *.js, *.py         ← generadores y scripts de lote (fuera del repo)
 ```
 
-**Ordenado el 10 de septiembre de 2026.** Antes habia 120 carpetas sueltas
-en la raiz; ahora hay 15. Al mover se reescribieron las rutas absolutas de
+**Ordenado el 10 de septiembre de 2026.** Antes habia 120 carpetas y 102
+archivos sueltos en la raiz; quedaron 17 carpetas y 33 archivos.
+**No se borro ningun script:** los 85 juntos pesan 0,82 MB y son la memoria
+de como se construyo cada cosa. Al mover se reescribieron las rutas absolutas de
 22 scripts de lote. `files/` **no se movio** y no se puede mover: son las
 rutas de `subir_version.py` y `gen_seo.js`, la tuberia viva.
 
@@ -222,15 +230,34 @@ Los textos de interfaz llevan `data-i18n` (o `-ph` / `-aria`) y viven en
 
 - **Sí:** `index.html` (159 claves) y `lugares.html` (60). Con `?lang=en`
   salen enteras en inglés. Las 111 fichas, las 6 categorías y las 6 rutas
-  tienen su gemela en `/en/`. **`/transporte` tiene gemela traducida a mano
-  en `/en/transport`** (v191): es prosa, no interfaz, así que no se resolvió
-  con `data-i18n` sino con una página aparte, igual que las fichas. Las dos se
-  declaran mutuamente con `hreflang` y `enrutarTransporte()` en `app.js`
-  reescribe los enlaces al idioma activo.
-- **No:** `pueblo`, `viva`, `libro`, `biblioteca`, las legales y
+  tienen su gemela en `/en/`. **Cuatro páginas de prosa tienen gemela
+  traducida a mano**: `/transporte` → `/en/transport` (v191), y en la **v204**
+  `/viva` → `/en/living`, `/privacidad` → `/en/privacy` y `/terminos` →
+  `/en/terms`. Es prosa, no interfaz, así que no se resuelve con `data-i18n`
+  sino con una página aparte, igual que las fichas.
+- **No:** `pueblo`, `libro`, `biblioteca`, `proponer`, `autorizacion` y
   16 de las 17 de historia. Tienen el armazón traducido y **el cuerpo en
   español**. Se enlazan igual, pero marcados con la etiqueta `ES` y
   `hreflang="es"` (`marcarSoloES()` en `app.js`, `marcaES()` en `gen_seo.js`).
+
+**Cada pareja se cablea en cinco sitios, y si falta uno se nota:**
+
+1. La página gemela bajo `/en/`.
+2. `hreflang` **en las dos**, más `x-default` apuntando a la española.
+3. Su entrada en la lista del sitemap de `gen_seo.js` **y** en el mapa de
+   `fechaDe()`, que es de donde sale el `lastmod`.
+4. Salir de `SOLO_ES` y entrar en **`GEMELAS`** (`app.js`), que es la tabla
+   que `enrutarGemelas()` usa para mandar cada enlace al idioma activo. Se
+   llamaba `enrutarTransporte()` hasta la v204, cuando dejó de ser solo
+   transporte.
+5. El pie y el menú que escribe `gen_seo.js`: en inglés el enlace va a la
+   gemela y **sin** la etiqueta `ES`.
+
+**`/autorizacion` se deja en español a propósito.** Es el formato que la gente
+imprime y firma, y es un documento legal colombiano: una versión en inglés
+invitaría a firmar un papel que no es el que vale. Igual con el cuerpo legal
+de `/en/privacy` y `/en/terms`, que dicen arriba, y enlazado, que **la versión
+española es la que prevalece**.
 
 ### Otros
 
@@ -538,6 +565,49 @@ Los emojis y el formato de pieza publicitaria no entran en `desc`: esa cadena
 va literal al `<meta name="description">`, al `og:description` y al prompt del
 asistente.
 
+### Tres generadores no se pueden volver a correr a ciegas (v203)
+
+Al ordenar la carpeta se corrieron los once generadores para comprobar que
+ninguno se habia roto. Ninguno se rompio —pero tres **cambian el sitio al
+volver a correr**, y eso no se sabia:
+
+1. **`gen_pueblo.js` duplicaba los enlaces del indice** — ARREGLADO en la
+   v204. Eran dos fallos encadenados: los `<a>` de «El libro completo» y «La
+   biblioteca» se **añadian** en vez de reemplazarse, y al borrar la seccion
+   vieja del libro quedaba huerfano el salto de linea que la seguia, que el
+   paso 5 volvia a poner. Sumaba dos lineas por corrida. Ahora `reemplaza()`
+   se lleva el hueco al borrar, y los dos enlaces se limpian antes de
+   insertarlos. **Comprobado corriendo el generador cuatro veces: el archivo
+   sale identico byte a byte las cuatro.**
+2. **`gen_antiguas.js` borraba el beacon de analitica** — ARREGLADO en la
+   v204. La linea de Cloudflare Web Analytics la ponia `poner_beacon.py`
+   **despues**, y el generador reescribia la pagina entera sin ella: cada
+   corrida dejaba `/historia/fotos-antiguas` sin medir, en silencio. Ahora el
+   beacon va dentro de la plantilla del generador, igual que en `gen_seo.js`.
+3. **`gen_mapa.js` y `pines_mapa.js` solo tocan la fecha y el numero de
+   version.** Esto es lo *bueno*: se volvieron a calcular los 97 pines desde
+   cero y salieron en el mismo pixel. La proyeccion es estable.
+
+Y un cuarto, que no es fallo: **`verificar_libro.js` reporta el MP3 del himno
+como «pagina ausente»**. Es un comprobador de enlaces que no distingue una
+pagina de un archivo de medios. El MP3 esta y responde 200. No lo persigas.
+
+### Una ficha puede publicar la misma foto dos veces (v203)
+
+**Tienda Alex** mostraba diez fotos que eran cinco repetidas: la ficha se
+lleno dos veces con el mismo material y hasta con pies distintos para la
+misma imagen —uno decia «Fachada» y el otro «Fachada nocturna», sobre una
+foto de dia—. Se vio ordenando la carpeta, no mirando el sitio.
+
+**Como se comprueba:** cotejar por tamaño y luego byte a byte todo lo que
+hay en `horneado/`, y cruzar cada `public_id` con la ficha que lo usa. Dos
+identicos en **la misma** ficha es un fallo; en **dos** fichas puede estar
+bien —`estadero-mirador-06` y `hospedaje-mirador-01` son el mismo edificio
+y ahi si corresponde.
+
+Cuando sobra un juego, **el que se queda se elige por los pies, no por el
+numero**: gana el que describe lo que de verdad se ve en la foto.
+
 ## 5. Principios del proyecto
 
 1. **Datos de campo y de la comunidad, no de internet.** Lo que hay en línea
@@ -572,10 +642,15 @@ asistente.
   oficial»**, arriba del todo. No dice que la historia sea dudosa —las fuentes
   están enlazadas— sino que **ninguna entidad la ha revisado ni certificado**,
   que es distinto. Si algún día la Alcaldía o una academia lo revisa, se quita.
-- **Traducir el cuerpo** de `pueblo`, `viva`, `libro`, `biblioteca` e
-  historia. Es traducción real, no enrutado. `/transporte` ya está hecha
-  (v191) y sirve de molde: página gemela bajo `/en/`, `hreflang` en las dos,
-  su entrada en el sitemap de `gen_seo.js`, y salir de `SOLO_ES`.
+- **Traducir el cuerpo** de `pueblo` (6.460 palabras), `libro` (20.795),
+  `biblioteca` (1.545), `proponer` (983) y 16 de las 17 de historia —entre
+  ellas `valle-de-las-angustias`, que sola tiene 45.494—. En la v204 se
+  tradujeron `viva`, `privacidad` y `terminos`; el molde y los cinco pasos
+  del cableado están arriba, en «Qué es bilingüe de verdad y qué no».
+  `proponer` es la más cara de su tamaño: son 270 líneas de JavaScript con
+  sus cadenas dentro, así que la gemela **duplica lógica** y las dos copias
+  se van a separar con el tiempo. Conviene sacar los textos a un objeto
+  antes de traducirla.
 - **`guias.json` sigue vacío.** La sección existe y se enciende sola cuando el
   archivo tenga entradas. Falta el **nombre** del guía local —en el proyecto
   solo está el teléfono— y su consentimiento.

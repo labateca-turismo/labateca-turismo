@@ -1265,7 +1265,7 @@ function setLang(l){
   es.setAttribute("aria-pressed",l==="es"?"true":"false");
   en.setAttribute("aria-pressed",l==="en"?"true":"false");
   applyI18n(); renderFilters(); renderPlaces(); renderGallery(); renderDrawer(); renderRutas();
-  marcarSoloES(); enrutarTransporte();   // la marca «ES» se repinta: applyI18n la borra
+  marcarSoloES(); enrutarGemelas();      // la marca «ES» se repinta: applyI18n la borra
   wireGuia();   // el mensaje que va precargado en WhatsApp cambia de idioma
 }
 
@@ -3022,7 +3022,7 @@ function init(){
   try { updateBadges();  } catch(e) { console.warn('updateBadges',e);  }
   try { wireLinks();     } catch(e) { console.warn('wireLinks',e);     }
   try { initBuscador(); } catch(e) { console.warn('initBuscador',e); }
-  try { marcarSoloES(); enrutarTransporte();  } catch(e) { console.warn('marcarSoloES',e);  }
+  try { marcarSoloES(); enrutarGemelas();     } catch(e) { console.warn('marcarSoloES',e);  }
   try { initVideos();    } catch(e) { console.warn('initVideos',e);    }
   try { initYouTube();   } catch(e) { console.warn('initYouTube',e);   }
   try { loadVisitCounter(); } catch(e) { console.warn('loadVisitCounter',e); }
@@ -3395,18 +3395,38 @@ function bsTeclas(e){
    ============================================================ */
 /* /transporte YA NO va aqui: desde la v191 tiene gemela en ingles en
    /en/transport, asi que en vez de marcarse con la etiqueta ES se
-   reescribe al idioma que toca (ver enrutarTransporte). */
-const SOLO_ES = ['/pueblo', '/viva', '/libro',
-                 '/biblioteca', '/privacidad', '/terminos', '/proponer'];
+   reescribe al idioma que toca (ver enrutarGemelas). */
+/* Paginas cuyo CUERPO sigue en español: se enlazan igual, pero marcadas
+   con la etiqueta ES y hreflang="es". Privacidad y Terminos salieron de
+   aqui en la v204, junto con /viva: ya tienen gemela de verdad en
+   /en/privacy, /en/terms y /en/living. */
+const SOLO_ES = ['/pueblo', '/libro',
+                 '/biblioteca', '/proponer'];
 
-/* Manda los enlaces de transporte a la version del idioma activo. Se llama
-   junto a marcarSoloES() -despues de applyI18n(), que reescribe innerHTML-,
-   porque el enlace del menu movil lleva data-i18n y se repinta. */
-function enrutarTransporte(){
-  const destino = (lang === 'en') ? '/en/transport' : '/transporte';
-  document.querySelectorAll('a[href="/transporte"], a[href="/en/transport"]').forEach(a => {
-    a.setAttribute('href', destino);
-    if (lang === 'en') a.setAttribute('hreflang', 'en'); else a.removeAttribute('hreflang');
+/* Paginas que SI tienen gemela traducida de verdad. El enlace se manda a la
+   version del idioma activo. Se llama junto a marcarSoloES() -despues de
+   applyI18n(), que reescribe innerHTML-, porque varios de estos enlaces
+   llevan data-i18n y se repintan.
+
+   Ojo: se aceptan las dos formas, «/privacidad» y «/privacidad.html». En el
+   sitio conviven: index.html y lugares.html enlazan con .html, el sitemap y
+   las fichas sin el. */
+const GEMELAS = [
+  ['/transporte', '/en/transport'],
+  ['/viva',       '/en/living'],
+  ['/privacidad', '/en/privacy'],
+  ['/terminos',   '/en/terms']
+];
+function enrutarGemelas(){
+  GEMELAS.forEach(par => {
+    const rutaEs = par[0], rutaEn = par[1];
+    const destino = (lang === 'en') ? rutaEn : rutaEs;
+    const sel = 'a[href="' + rutaEs + '"], a[href="' + rutaEs + '.html"], ' +
+                'a[href="' + rutaEn + '"]';
+    document.querySelectorAll(sel).forEach(a => {
+      a.setAttribute('href', destino);
+      if (lang === 'en') a.setAttribute('hreflang', 'en'); else a.removeAttribute('hreflang');
+    });
   });
 }
 
