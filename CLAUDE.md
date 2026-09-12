@@ -766,10 +766,15 @@ Lo único manual es enlazarla desde `/en/town`.
   que es distinto. Si algún día la Alcaldía o una academia lo revisa, se quita.
 - **Traducir el cuerpo** de `libro` (18.710 palabras), `biblioteca` (1.545)
   y `proponer` (983).
-- **De historia queda UNA.** En las v207 a v210 se tradujeron ocho fichas:
-  las cuatro que firma José, la *Peregrinación de Alpha* de Ancízar y tres
-  de las cuatro de Pabón. **Falta `region-de-occidente`** (2.899 palabras).
-  Lo demás no se traduce nunca: ver «Qué se puede traducir, y qué no». En la v204 se tradujeron
+- **De historia NO QUEDA NADA por traducir.** En las v207 a v211 entraron las
+  nueve fichas que se pueden traducir: las cuatro que firma José, la
+  *Peregrinación de Alpha* de Ancízar y las cuatro de Pabón. **Lo que falta
+  no se traduce nunca** —las tres bajo derecho de cita, el acta de 1623 y el
+  PDF externo—: ver «Qué se puede traducir, y qué no». La única que
+  quedaría es `valle-de-las-angustias` (45.494 palabras, Pbro. Samuel
+  Ramírez, 1922), y antes de tocarla hay que **averiguar cuándo murió el
+  autor**: Colombia protege hasta 80 años después de la muerte, no de la
+  publicación. En la v204 se tradujeron
   `viva`, `privacidad` y `terminos`, y en la v205 entró `/en/town`; el molde y
   los cinco pasos del cableado están arriba, en «Qué es bilingüe de verdad y
   qué no».
