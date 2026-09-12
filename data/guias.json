@@ -1,4 +1,14 @@
 {
-  "version": "1.0",
-  "guias": []
+  "version": "1.1",
+  "guias": [
+    {
+      "id": "ciro-montanez",
+      "nombre": "Ciro Montañez",
+      "especialidad": {
+        "es": "Guía local de Labateca. Acompaña a las cascadas, los senderos y el páramo — los sitios que esta guía todavía no tiene levantados y a los que no conviene ir solo.",
+        "en": "Local guide in Labateca. He takes visitors to the waterfalls, the trails and the páramo — the places this guide has not yet mapped, and where you should not go alone."
+      },
+      "whatsapp": "573212737469"
+    }
+  ]
 }

@@ -771,6 +771,73 @@ obra. La pregunta destapó algo mayor —que ya se estaba publicando entera bajo
 una afirmación que no se podía sostener—. Vale la pena revisar los derechos
 **antes** de publicar, no cuando a alguien se le ocurre traducir.
 
+### El archivo fotográfico tiene autor, y no es anónimo (v213)
+
+Durante meses los pies de `/historia/fotos-antiguas` dijeron **solo lo que se
+veía** —«un puente colgante», «la foto más enigmática del lote»— porque las
+copias llegaron sin una sola anotación. El aviso de la página lo decía así:
+*«Poner los nombres es el trabajo que sigue, y ese no lo hace nadie sentado
+frente a una pantalla.»*
+
+Ese trabajo se hizo. El grueso del archivo lo fotografió **Juan de la Cruz
+Peñaloza Orozco, «Juan Pullas»**, con una **Rolleiflex de 120 mm**, y su hijo
+**Francisco Javier Peñaloza Jaimes, «Guatoso»**, reconoció copia por copia qué
+muestra cada una. En la v213 entraron **43 pies nuevos**: el puente resultó ser
+el de la Caulla con Blanca Jaimes de Peñaloza en 1956, y la foto enigmática
+resultó ser una **ternera a la llanera en homenaje a monseñor Luis García**.
+
+**Cómo se escribieron:** no se borró la descripción visual, se le antepuso la
+identificación. Si alguien duda del nombre, la descripción sigue sirviendo para
+reconocer la foto.
+
+**El crédito va acotado, no en bloque.** Decir «todo el archivo es de él» sería
+cómodo y falso: la vista aérea en color (052) lleva en el margen la firma de un
+estudio —**«Foto Sácaregui»**— y las copias en color con fecha de cámara de
+**2003** son de cuarenta años después.
+
+### La autorización del FOTÓGRAFO no desbloquea a los RETRATADOS (v213)
+
+Esto hay que tenerlo claro porque es fácil confundirlo, y se confundió.
+
+Que la familia del autor autorice **resuelve el derecho de autor** sobre las
+fotografías —y el derecho de imagen **de él**, que aparece en dos—. **No
+resuelve el derecho de imagen de las demás personas retratadas**, que es de
+cada una y no del fotógrafo.
+
+Las **71 fotografías retenidas** no están fuera por autoría: están fuera
+porque **una persona identificable es el asunto de la foto y puede estar
+viva** —y 22 de ellas son **menores**—. Ver `notas_rest/retenidas.txt`, donde
+cada una lleva su motivo. Esas siguen retenidas.
+
+Lo que sí cambia, y conviene mirarlo una por una: hay diferencia entre un
+**retrato de estudio de un niño identificable** y una **multitud en una
+procesión pública**. Lo segundo se puede revisar caso por caso; lo primero no.
+
+### La copia que estaba al revés se gira en la URL (v213)
+
+Dos copias se publicaron años al revés: la **035** y la **052**. No se vuelven
+a subir dadas la vuelta —el original de Cloudinary queda intacto—: se marcan
+con `giro:180` en el catálogo y `gen_antiguas.js` le añade **`a_180`** a la
+transformación. Una línea.
+
+**Cómo se comprobó la 052, que es una vista aérea y no se ve a simple vista:**
+recortando la firma manuscrita del margen y girándola. Al derecho se lee «Foto
+Sácaregui»; como estaba, era garabato. **Una foto sin arriba evidente se
+orienta por lo escrito, no por la intuición.**
+
+### 1961 contra 1964: la placa gana (v213)
+
+La familia recuerda la construcción del Palacio Municipal **en 1964**. Pero la
+ficha de la Alcaldía **ya publica la fotografía de la placa de bronce** de la
+entrada, que dice **«agosto 7 de 1961»**, y una placa así marca la entrega de
+la obra —con lo cual una foto del edificio **en obra** sería *anterior* a esa
+fecha, no posterior.
+
+El pie no afirma ninguna de las dos: dice que la familia la recuerda en los
+sesenta, da el dato de la placa y remite a ella. **Cuando la memoria y un
+documento fotografiado no coinciden, se publican los dos y se dice cuál es
+cuál.**
+
 ## 5. Principios del proyecto
 
 1. **Datos de campo y de la comunidad, no de internet.** Lo que hay en línea
@@ -827,9 +894,10 @@ una afirmación que no se podía sostener—. Vale la pena revisar los derechos
   sus cadenas dentro, así que la gemela **duplica lógica** y las dos copias
   se van a separar con el tiempo. Conviene sacar los textos a un objeto
   antes de traducirla.
-- **`guias.json` sigue vacío.** La sección existe y se enciende sola cuando el
-  archivo tenga entradas. Falta el **nombre** del guía local —en el proyecto
-  solo está el teléfono— y su consentimiento.
+- **`guias.json` ya no está vacío:** el guía local es **Ciro Montañez** (v213),
+  con el mismo número que ya se publicaba. La sección se enciende sola. **Falta
+  su formato de autorización firmado**, como el de cualquier colaborador: si no
+  aparece, se quita la entrada y el teléfono vuelve a ir solo.
 - **Falta la firma de los siete intermunicipales** de `conductores.json`
   (hoja 2 del registro). José decidió publicarlos igual: son empresas y rutas
   cuyos teléfonos y horarios ellas mismas hacen circular en avisos. Conviene
