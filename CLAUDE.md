@@ -730,6 +730,47 @@ Lo único manual es enlazarla desde `/en/town`.
   nombra el archivo y el bloque y muestra las cuarenta letras de alrededor.
   Probado a propósito metiendo un U+4E00: aborta con salida 1.
 
+### «Dominio público por su antigüedad» no existe (v212)
+
+`/historia/valle-de-las-angustias` publica **el libro entero** —45.494
+palabras— y lo hacía bajo un aviso que decía «Obra en **dominio público** por
+su antigüedad». **Eso no es como funciona la ley.** Colombia protege hasta
+**80 años después de la MUERTE del autor** (Ley 23 de 1982, art. 21, como
+quedó con la Ley 1915 de 2018), no después de la impresión. La fecha de
+impresión no dice nada por sí sola.
+
+**Lo que se sabe del Pbro. Samuel Ramírez R.:**
+
+- Fue **párroco de Labateca**. Consta en **1916** —mandó enmarcar el lienzo,
+  y así lo cuentan tres transcripciones distintas del proyecto— y en **1924**,
+  cuando fue a Toledo a comprar el sitio de la aparición.
+- Publicó «Valle de las Angustias» en **1922**, Imprenta Diocesana de
+  Pamplona, con prólogo del **padre H. Rochereau**, o sea que eran
+  contemporáneos en la diócesis.
+- **No se ha podido establecer cuándo murió.** Se buscó el 12 de septiembre
+  de 2026 en la web, en catálogos de biblioteca y en las propias
+  transcripciones del proyecto. Nada.
+- Para que la obra estuviera libre hoy, tendría que haber muerto **en 1945 o
+  antes**. Un hombre que ya era párroco en 1916 nació hacia 1885 o antes;
+  morir en 1945 le habría dado unos sesenta años. **Posible, pero no
+  comprobado, y lo no comprobado no se afirma.**
+
+**Lo que se hizo:** el motivo del dominio público se escribe ahora en el campo
+`dominioPublico` de `libro/fuentes.js`. Sin motivo, `gen_anexos.js` **no lo
+afirma**: pinta `AVISO_SIN_FECHA`, que dice qué se sabe, reconoce que falta el
+dato y pide ayuda para conseguirlo. Ancízar lo tiene escrito —murió en 1882—
+y su página sigue diciendo dominio público, que ahí sí se sostiene.
+
+**Dónde está el dato, si alguien va a buscarlo:** en el **archivo parroquial de
+Labateca**, que el proyecto ya usa para el Libro de Cofradías 001, y en la
+**necrología del clero de la diócesis de Pamplona**. La muerte de un párroco
+queda registrada. Es un dato de archivo, no de internet.
+
+**Y una nota de método:** esto se encontró buscando si se podía *traducir* la
+obra. La pregunta destapó algo mayor —que ya se estaba publicando entera bajo
+una afirmación que no se podía sostener—. Vale la pena revisar los derechos
+**antes** de publicar, no cuando a alguien se le ocurre traducir.
+
 ## 5. Principios del proyecto
 
 1. **Datos de campo y de la comunidad, no de internet.** Lo que hay en línea
@@ -771,10 +812,9 @@ Lo único manual es enlazarla desde `/en/town`.
   *Peregrinación de Alpha* de Ancízar y las cuatro de Pabón. **Lo que falta
   no se traduce nunca** —las tres bajo derecho de cita, el acta de 1623 y el
   PDF externo—: ver «Qué se puede traducir, y qué no». La única que
-  quedaría es `valle-de-las-angustias` (45.494 palabras, Pbro. Samuel
-  Ramírez, 1922), y antes de tocarla hay que **averiguar cuándo murió el
-  autor**: Colombia protege hasta 80 años después de la muerte, no de la
-  publicación. En la v204 se tradujeron
+  quedaría es `valle-de-las-angustias`. **Se buscó la fecha de muerte del
+  autor el 12 de septiembre de 2026 y NO APARECE** —ni en la web, ni en
+  catálogos, ni en las transcripciones del propio proyecto—. Ver abajo. En la v204 se tradujeron
   `viva`, `privacidad` y `terminos`, y en la v205 entró `/en/town`; el molde y
   los cinco pasos del cableado están arriba, en «Qué es bilingüe de verdad y
   qué no».
