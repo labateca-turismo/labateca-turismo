@@ -838,6 +838,42 @@ sesenta, da el dato de la placa y remite a ella. **Cuando la memoria y un
 documento fotografiado no coinciden, se publican los dos y se dice cuál es
 cuál.**
 
+### El preset sin firma de Cloudinary NO sobrescribe (v214)
+
+Se rehornearon las fotos de El Pedregal desde los originales de 12,2 MP y se
+subieron con el mismo `public_id`. **Cloudinary las aceptó, respondió OK y no
+cambió nada**: con el preset sin firma `overwrite` no está permitido, así que
+devuelve el asset que ya existía. Si no se mira, uno cree que subió.
+
+**Cómo se detecta:** el script imprime el tamaño que **Cloudinary reporta**,
+no el del archivo local. Si dice 1600x900 y acabas de hornear 2400x1800, no
+sobrescribió. Comprobarlo siempre con `fl_getinfo`:
+
+```
+https://res.cloudinary.com/dwotodtoa/image/upload/fl_getinfo/labateca/<id>
+```
+
+**Qué hacer:** subir con **id nuevo** y apuntar la ficha ahí. En El Pedregal
+las seis que cambiaban de contenido entraron como `pedregal-16` a `-21`. Las
+viejas quedan huérfanas en Cloudinary, que no cuesta nada y no se puede
+borrar desde aquí —no hay API Secret—.
+
+### Cómo salen las fotos en mejor calidad (v214)
+
+Tres cosas, en orden de impacto:
+
+1. **WhatsApp es el cuello de botella, no Cloudinary.** Mandada «como foto»,
+   una toma de 4032x3024 llega a **1600x900**. Mandada **como documento**,
+   llega entera. De las seis fotos que tenía El Pedregal, cuatro eran copias
+   comprimidas teniendo el original de 12,2 MP en la misma carpeta.
+2. **El sitio nunca pide más de 1.200 px** —`cldUrl(foto,'w_1200,f_auto,q_auto')`
+   en el visor—. Un maestro de **2.400 px** cubre eso con el doble de margen
+   para pantallas de alta densidad. Más no aporta y pesa.
+3. **Cuidado con las verticales.** El visor pide `w_1200` **sin `c_limit`**,
+   así que una foto de 900 px de ancho **la estira**. Las verticales de comida
+   y de retrato son las que peor se ven, y ahí no hay arreglo posible en el
+   horneado: hay que volver a pedir el original.
+
 ## 5. Principios del proyecto
 
 1. **Datos de campo y de la comunidad, no de internet.** Lo que hay en línea

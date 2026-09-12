@@ -779,66 +779,111 @@
       "telefono": "573112327066",
       "nombre": {
         "es": "Mirador El Pedregal",
-        "en": "El Pedregal Viewpoint"
+        "en": "Mirador El Pedregal"
       },
       "desc": {
-        "es": "Finca turística a las afueras de Labateca que combina mirador, gastronomía y fe. Desde su terraza se contemplan las montañas y el vecino pueblo de Toledo; cuenta con zona de descanso con billar y un Santo Sepulcro con cruces que la hace única. La atiende don Óscar Rozo.",
-        "en": "A tourist farm just outside Labateca blending viewpoint, food and faith. From its terrace you can see the mountains and the neighboring town of Toledo; it offers a rest area with billiards and a Holy Sepulchre with crosses that makes it unique. Hosted by Mr. Óscar Rozo."
+        "es": "Un mirador con cocina de leña al filo de la montaña, a kilómetro y medio del parque de Labateca. La terraza está construida sobre el borde mismo: desde las mesas de piedra el valle se abre entero, y al caer la tarde el sol se queda un rato largo sobre la cordillera de enfrente.\n\nSe come bien y se come abundante. Las fuentes salen cargadas —costilla, chicharrón, morcilla, papa criolla, plátano y una arepa tostada encima, con su guacamole al lado— y la casa tiene sus dos nombres propios: el cabrito y lo que allá llaman «al barril». El fogón es de leña y se ve encendido desde el corredor. Cuando llega grupo, los platos salen de a seis a la vez.\n\nBajo el techo de zinc hay una sala larga de mesas y sillas de madera maciza, muros de piedra y adobe, una mesa de billar y una cornamenta clavada en la viga. No es un restaurante con vista: es una finca donde se come mirando.\n\nY tiene algo que no tiene ningún otro mirador del municipio: al anochecer se ven prenderse las luces de los caseríos, abajo en el valle. A cinco minutos monte arriba está el Santo Sepulcro, una gruta de piedra con su Vía Crucis de cruces blancas sembradas en la ladera.\n\nLa atiende don Óscar Rozo.",
+        "en": "A lookout with a wood-fired kitchen on the edge of the mountain, a kilometre and a half from Labateca's main square. The terrace is built right on the rim: from the stone tables the whole valley opens up, and late in the afternoon the sun lingers a long while on the range opposite.\n\nThe food is good and there is plenty of it. The bowls come loaded — ribs, crackling, blood sausage, small yellow potatoes, plantain and a toasted arepa on top, with guacamole on the side — and the house has two dishes of its own: the kid goat and what they call «al barril». The stove is wood-fired and you can see it burning from the passageway. When a group arrives, the plates come out six at a time.\n\nUnder the zinc roof there is a long room of solid timber tables and chairs, walls of stone and adobe, a pool table and a set of horns fixed to the beam. This is not a restaurant with a view: it is a farm where you eat looking out.\n\nAnd it has something no other lookout in the municipality has: at dusk you watch the lights of the hamlets come on, down in the valley. Five minutes further up the hill is the Santo Sepulcro, a stone grotto with its Way of the Cross — white crosses planted across the slope.\n\nIt is run by don Óscar Rozo."
       },
       "comoLlegar": {
-        "es": "Desde la parroquia Nuestra Señora de las Angustias, ~1,5 km hacia el occidente. La ruta GPS aparece dibujada en el mapa; síguela.",
-        "en": "From Our Lady of Sorrows parish, ~1.5 km to the west. The GPS route is drawn on the map; follow it."
+        "es": "Desde la parroquia Nuestra Señora de las Angustias, kilómetro y medio hacia el occidente por la vía destapada. Se llega en carro o en moto, y a pie son unos veinte minutos largos. La finca está a 1.550 m, casi a la misma altura del pueblo: lo que da la vista no es subir, es que el valle se cae de un lado. El recorrido está dibujado en el mapa y el track completo está en Wikiloc.",
+        "en": "From the church of Our Lady of Sorrows, a kilometre and a half west along the unpaved road. You can drive or ride; on foot it is a good twenty minutes. The farm sits at 1,550 m, almost the same height as the town: the view does not come from climbing, but from the valley dropping away on one side. The route is drawn on the map and the full track is on Wikiloc."
       },
       "dist": {
-        "es": "~1,5 km del pueblo",
-        "en": "~1.5 km from town"
+        "es": "1,5 km del parque",
+        "en": "1.5 km from the main square"
       },
       "tiempo": {
-        "es": "Fines de semana",
-        "en": "Weekends"
+        "es": "Fines de semana · para comer, avisar antes",
+        "en": "Weekends · call ahead to eat"
       },
       "dificultad": {
-        "es": "Acceso fácil",
-        "en": "Easy access"
+        "es": "Acceso fácil, vía destapada",
+        "en": "Easy access, unpaved road"
       },
       "recomendacion": {
-        "es": "Abre los fines de semana. Para comer, reserva con anticipación por WhatsApp con don Óscar. Ve al atardecer por la vista a las montañas y al pueblo de Toledo.",
-        "en": "Open on weekends. For meals, reserve in advance via WhatsApp with Mr. Óscar. Go at sunset for the view of the mountains and the town of Toledo."
+        "es": "Ve al atardecer: es cuando la luz cae sobre la cordillera de enfrente y cuando empiezan a prenderse las luces del valle. Abre fines de semana, y para comer conviene avisar antes por WhatsApp a don Óscar —la comida se hace en fogón de leña y no es de un momento a otro—. Si vas en grupo, avísale con más tiempo. Y si quieres ver el Santo Sepulcro, dile: queda cinco minutos monte arriba.",
+        "en": "Go at sunset: that is when the light falls on the range opposite and when the valley lights start coming on. It opens at weekends, and if you want to eat it is best to message don Óscar on WhatsApp beforehand — the food is cooked on a wood fire and does not come out in a minute. For a group, give him more notice. And if you want to see the Santo Sepulcro, say so: it is five minutes further up the hill."
       },
       "track": "data/tracks/pedregal.gpx",
       "wikiloc": "https://loc.wiki/t/269295597?h=2m4va5w5om&wa=sd&la=es",
       "fotos": [
         "labateca/pedregal-02",
-        "labateca/pedregal-04",
+        "labateca/pedregal-17",
+        "labateca/pedregal-16",
+        "labateca/pedregal-18",
+        "labateca/pedregal-19",
+        "labateca/pedregal-20",
+        "labateca/pedregal-01",
+        "labateca/pedregal-21",
         "labateca/pedregal-06",
-        "labateca/pedregal-07",
-        "labateca/pedregal-05",
-        "labateca/pedregal-08"
+        "labateca/pedregal-10",
+        "labateca/pedregal-11",
+        "labateca/pedregal-12",
+        "labateca/pedregal-13",
+        "labateca/pedregal-14",
+        "labateca/pedregal-15"
       ],
       "fotosCap": [
         {
-          "es": "La terraza del mirador al atardecer, con el valle y el pueblo al fondo.",
-          "en": "The lookout terrace at dusk, with the valley and the town below."
+          "es": "La mesa de piedra en el filo de la terraza, con el valle abierto y la cordillera encendida por el sol de la tarde.",
+          "en": "The stone table on the edge of the terrace, the valley wide open and the range lit by the afternoon sun."
         },
         {
-          "es": "Vista aérea de la finca sobre la ladera, rodeada de montaña.",
-          "en": "Aerial view of the farm on the hillside, surrounded by mountains."
+          "es": "El plato de la casa contra el paisaje: costilla, chicharrón, morcilla, papa criolla y la arepa encima, con el pueblo al fondo.",
+          "en": "The house plate against the landscape: ribs, crackling, blood sausage, yellow potatoes and the arepa on top, with the town behind."
         },
         {
-          "es": "La casa principal en piedra con su techo rojo, vista desde el aire.",
-          "en": "The main stone house with its red roof, seen from above."
+          "es": "La vista limpia desde la terraza: el valle, los caseríos regados por la ladera y la montaña de enfrente a contraluz.",
+          "en": "The clear view from the terrace: the valley, the hamlets scattered across the slope and the mountain opposite against the light."
         },
         {
-          "es": "Zona techada con mesa de billar, barra y muros en adobe y madera.",
-          "en": "Covered area with a pool table, bar, and adobe-and-wood walls."
+          "es": "Lo que allá llaman «al barril»: carne, plátano maduro, arepa y guacamole, servido en fuente de barro.",
+          "en": "What they call «al barril»: meat, sweet plantain, arepa and guacamole, served in a clay bowl."
         },
         {
-          "es": "La gruta de piedra y el Vía Crucis, con el valle abriéndose al fondo.",
-          "en": "The stone grotto and Stations of the Cross, with the valley opening up behind."
+          "es": "Día de grupo: seis fuentes servidas al tiempo y los jarros de jugo esperando en la mesa de afuera.",
+          "en": "A busy day: six bowls served at once and the jugs of juice waiting on the outside table."
         },
         {
-          "es": "Otra vista de la gruta y la cruz blanca, en el filo del mirador.",
-          "en": "Another view of the grotto and the white cross, on the edge of the lookout."
+          "es": "El fogón de leña encendido, con la olla puesta. Toda la comida de la casa sale de aquí.",
+          "en": "The wood fire burning with the pot on. All the food in the house comes out of here."
+        },
+        {
+          "es": "La casa principal, levantada en piedra del lugar y techo de teja, al borde mismo de la ladera.",
+          "en": "The main house, built of local stone with a tiled roof, right on the edge of the slope."
+        },
+        {
+          "es": "La terraza techada: mesas y sillas de madera maciza, columnas de piedra y el valle asomándose entre ellas.",
+          "en": "The covered terrace: solid timber tables and chairs, stone columns, and the valley showing through between them."
+        },
+        {
+          "es": "La sala del billar, con los muros en piedra y adobe y la vista abriéndose al fondo del corredor.",
+          "en": "The pool room, walls of stone and adobe, with the view opening at the end of the passage."
+        },
+        {
+          "es": "La terraza de arriba, pintada de amarillo, con mesas de troza mirando al valle.",
+          "en": "The upper terrace, painted yellow, with log tables facing the valley."
+        },
+        {
+          "es": "El letrero tallado en madera sobre la entrada del corredor.",
+          "en": "The sign carved in wood over the entrance to the passage."
+        },
+        {
+          "es": "La cornamenta clavada en la viga, sobre las mesas del corredor.",
+          "en": "The set of horns fixed to the beam, above the tables in the passage."
+        },
+        {
+          "es": "El valle de noche, con las luces de los caseríos prendidas abajo. Es la razón para quedarse hasta tarde.",
+          "en": "The valley at night, with the hamlet lights on below. It is the reason to stay late."
+        },
+        {
+          "es": "El Santo Sepulcro, a cinco minutos monte arriba: la gruta de piedra y las cruces blancas del Vía Crucis sembradas en la ladera.",
+          "en": "The Santo Sepulcro, five minutes further up the hill: the stone grotto and the white crosses of the Way of the Cross planted across the slope."
+        },
+        {
+          "es": "El panorama completo hacia el valle, con Toledo al otro lado.",
+          "en": "The full panorama across the valley, with Toledo on the other side."
         }
       ],
       "mapaFuera": true
