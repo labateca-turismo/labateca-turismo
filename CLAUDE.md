@@ -746,14 +746,16 @@ Lo único manual es enlazarla desde `/en/town`.
   están enlazadas— sino que **ninguna entidad la ha revisado ni certificado**,
   que es distinto. Si algún día la Alcaldía o una academia lo revisa, se quita.
 - **Traducir el cuerpo** de `libro` (18.710 palabras), `biblioteca` (1.545)
-  y `proponer` (983). De historia queda **mucho menos de lo que parecía**: al
-  medir el texto real de `libro/anexos/*.json` —y no el HTML, que repite el
-  menú en 17 páginas— y quitar lo que no se puede traducir por derechos,
-  quedan **8.833 palabras**: `informe-de-investigacion-bibliografica` (769),
-  `america-dolor-inedito` (918), `regimen-del-resguardo` (2.040) y
-  `peregrinacion-de-alpha` (2.176, dominio público), más las cuatro de Pabón
-  (11.090) **si él autoriza la traducción**. `haciendas-cafeteras` ya está
-  hecha en la v207. En la v204 se tradujeron
+  y `proponer` (983).
+- **De historia ya no queda casi nada por hacer sin pedir permiso.** Las
+  **cuatro fichas que firma José** están traducidas (v207 y v208):
+  `haciendas-cafeteras` → `coffee-estates`, `america-dolor-inedito`,
+  `bibliografia` → `bibliographic-survey` y `regimen-del-resguardo` →
+  `indigenous-reserve-system`. Queda **`peregrinacion-de-alpha`** (2.176
+  palabras, Ancízar 1853, dominio público), que se puede hacer cuando se
+  quiera, y **las cuatro de Pabón** (11.090) **en cuanto él autorice la
+  traducción** — es el permiso que más contenido desbloquea de todo el
+  proyecto. Lo demás no se traduce: ver «Qué se puede traducir, y qué no». En la v204 se tradujeron
   `viva`, `privacidad` y `terminos`, y en la v205 entró `/en/town`; el molde y
   los cinco pasos del cableado están arriba, en «Qué es bilingüe de verdad y
   qué no».
