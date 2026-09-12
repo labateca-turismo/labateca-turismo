@@ -647,6 +647,70 @@ extensión, y eso Google lo admite.
 generador lo pisa, y por lo mismo ningún generador lo actualiza. Si cambia la
 historia en `/pueblo`, hay que tocar las dos.
 
+### Qué se puede traducir, y qué no (v207)
+
+Antes de traducir una página de historia hay que mirar **con qué derecho
+está publicada**. Está en el campo `alcance` de `libro/fuentes.js`:
+
+| `alcance` | Qué es | ¿Se puede traducir? |
+|---|---|---|
+| `completo` · compilación de José | Ficha escrita por él sobre otra obra | **Sí.** Es suya |
+| `completo` · Pabón | Obra de Silvano, aquí con su permiso | **Hay que pedírselo aparte** |
+| `completo` · anterior a 1930 | Ancízar 1853, por ejemplo | **Sí**, dominio público |
+| `citas` | **Pasajes citados, no la obra** | **NO** |
+| `existente` | El acta de 1623 y su transcripción | Ver abajo |
+| `externo` | PDF de acceso abierto de un tercero | **No es nuestro** |
+
+**Citar está permitido; traducir una cita y publicar la traducción crea una
+obra derivada**, que es otro derecho y no lo tenemos. Las tres bajo `citas`
+—`corazon-de-mis-recuerdos`, `vivencias-en-mi-pueblo` y `redactando-14`— no
+se traducen, y son 46.288 palabras de las que parecían pendientes.
+
+Y una que parece fácil y no lo es: **el acta de 1623**. El documento es de
+dominio público, pero la **transcripción paleográfica es obra de Silvano**, y
+además el valor de esa página es que *conserva la grafía de su época*.
+Traducirla destruye justo lo que la hace útil. Si algún día se hace, se hace
+como una edición académica: el acta en su español de 1623 y el aparato —qué
+dice cada folio— en inglés.
+
+**Dentro de una ficha que sí se traduce, las citas textuales de terceros se
+quedan en español.** Es lo normal en un texto académico y evita convertir la
+cita en obra derivada. En el JSON se marcan con `"original": true`.
+
+### `gen_anexos_en.js`: por qué es un generador aparte (v207)
+
+`gen_anexos.js` comparte `libro/render.js`, `libro/plantilla.js` y
+`libro/escanear.js` con `gen_libro.js`, `gen_biblioteca.js` y `gen_pueblo.js`.
+Meterle un idioma a esos módulos toca **cuatro generadores de golpe**, y tres
+escriben páginas ya publicadas y correctas.
+
+Así que el inglés va en un archivo aparte y **aditivo**: si no hay traducción,
+no escribe nada, y el lado español no puede romperse por nada que pase allí.
+Lo único que reutiliza es `cuerpo()` de `render.js`, que convierte los bloques
+`{t,x}` en HTML y no asume idioma.
+
+```
+libro/anexos/<obra>.json        ← el texto en español (ya existía)
+libro/anexos-en/<slug>.json     ← la traducción; un archivo por página
+node gen_anexos_en.js           → files/en/history/<slug>.html
+```
+
+El JSON inglés lleva `slug` (la URL), `slugEs` (su hermana), los datos de
+cabecera y `bloques`. **El generador aborta** si falta un campo o si la
+hermana española no existe: un `hreflang` que apunta a una página que no está
+es peor que no tenerlo.
+
+**Lo que entra solo, sin tocar nada más:**
+
+- El `hreflang` de la página **española**: `gen_anexos.js` lee
+  `libro/anexos-en/` y pasa `alternos` a `cabeza()`. Ese parámetro es
+  **opcional**: sin él la salida es idéntica a la de siempre, por eso se pudo
+  añadir a `plantilla.js` aunque dependan de él cuatro generadores.
+- Su entrada en el **sitemap**: `gen_seo.js` también lee ese directorio. No
+  hay lista a mano, que es justo lo que se desincroniza.
+
+Lo único manual es enlazarla desde `/en/town`.
+
 ## 5. Principios del proyecto
 
 1. **Datos de campo y de la comunidad, no de internet.** Lo que hay en línea
@@ -681,9 +745,15 @@ historia en `/pueblo`, hay que tocar las dos.
   oficial»**, arriba del todo. No dice que la historia sea dudosa —las fuentes
   están enlazadas— sino que **ninguna entidad la ha revisado ni certificado**,
   que es distinto. Si algún día la Alcaldía o una academia lo revisa, se quita.
-- **Traducir el cuerpo** de `libro` (20.795 palabras), `biblioteca` (1.545),
-  `proponer` (983) y 16 de las 17 de historia —entre ellas
-  `valle-de-las-angustias`, que sola tiene 45.494—. En la v204 se tradujeron
+- **Traducir el cuerpo** de `libro` (18.710 palabras), `biblioteca` (1.545)
+  y `proponer` (983). De historia queda **mucho menos de lo que parecía**: al
+  medir el texto real de `libro/anexos/*.json` —y no el HTML, que repite el
+  menú en 17 páginas— y quitar lo que no se puede traducir por derechos,
+  quedan **8.833 palabras**: `informe-de-investigacion-bibliografica` (769),
+  `america-dolor-inedito` (918), `regimen-del-resguardo` (2.040) y
+  `peregrinacion-de-alpha` (2.176, dominio público), más las cuatro de Pabón
+  (11.090) **si él autoriza la traducción**. `haciendas-cafeteras` ya está
+  hecha en la v207. En la v204 se tradujeron
   `viva`, `privacidad` y `terminos`, y en la v205 entró `/en/town`; el molde y
   los cinco pasos del cableado están arriba, en «Qué es bilingüe de verdad y
   qué no».
