@@ -655,11 +655,16 @@ está publicada**. Está en el campo `alcance` de `libro/fuentes.js`:
 | `alcance` | Qué es | ¿Se puede traducir? |
 |---|---|---|
 | `completo` · compilación de José | Ficha escrita por él sobre otra obra | **Sí.** Es suya |
-| `completo` · Pabón | Obra de Silvano, aquí con su permiso | **Hay que pedírselo aparte** |
+| `completo` · Pabón | Obra de Silvano, aquí con su permiso | **Sí, desde el 11 sep 2026** |
 | `completo` · anterior a 1930 | Ancízar 1853, por ejemplo | **Sí**, dominio público |
 | `citas` | **Pasajes citados, no la obra** | **NO** |
 | `existente` | El acta de 1623 y su transcripción | Ver abajo |
 | `externo` | PDF de acceso abierto de un tercero | **No es nuestro** |
+
+**Silvano Pabón autorizó la traducción de sus textos el 11 de septiembre de
+2026** (confirmado por José). Antes de esa fecha su permiso cubría solo la
+publicación en español, que es un derecho distinto. Sus cuatro obras son la
+investigación seria del municipio y suman 11.090 palabras.
 
 **Citar está permitido; traducir una cita y publicar la traducción crea una
 obra derivada**, que es otro derecho y no lo tenemos. Las tres bajo `citas`
