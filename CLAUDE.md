@@ -781,7 +781,7 @@ copias llegaron sin una sola anotación. El aviso de la página lo decía así:
 frente a una pantalla.»*
 
 Ese trabajo se hizo. El grueso del archivo lo fotografió **Juan de la Cruz
-Peñaloza Orozco, «Juan Pullas»**, con una **Rolleiflex de 120 mm**, y su hijo
+Peñaloza Orozco, «Juan Puyas»**, con una **Rolleiflex de 120 mm**, y su hijo
 **Francisco Javier Peñaloza Jaimes, «Guatoso»**, reconoció copia por copia qué
 muestra cada una. En la v213 entraron **43 pies nuevos**: el puente resultó ser
 el de la Caulla con Blanca Jaimes de Peñaloza en 1956, y la foto enigmática
@@ -801,13 +801,13 @@ estudio —**«Foto Sácaregui»**— y las copias en color con fecha de cámara
 Esto hay que tenerlo claro porque es fácil confundirlo, y se confundió.
 
 Que la familia del autor autorice **resuelve el derecho de autor** sobre las
-fotografías —y el derecho de imagen **de él**, que aparece en dos—. **No
+fotografías —y el derecho de imagen **de él**, que aparece en cinco—. **No
 resuelve el derecho de imagen de las demás personas retratadas**, que es de
 cada una y no del fotógrafo.
 
-Las **71 fotografías retenidas** no están fuera por autoría: están fuera
+Las **73 fotografías retenidas** no están fuera por autoría: están fuera
 porque **una persona identificable es el asunto de la foto y puede estar
-viva** —y 22 de ellas son **menores**—. Ver `notas_rest/retenidas.txt`, donde
+viva** —y 24 de ellas son **menores**—. Ver `notas_rest/retenidas.txt`, donde
 cada una lleva su motivo. Esas siguen retenidas.
 
 Lo que sí cambia, y conviene mirarlo una por una: hay diferencia entre un
@@ -911,6 +911,63 @@ hay ampliación. Los píxeles reales se sacan cargando `img.currentSrc` en un
 `new Image()` sin `srcset`. Medido así, en móvil de 375 px a densidad 2 las
 15 fotos del Pedregal llegan a 0,75–0,84x: siempre reducidas, nunca estiradas.
 
+### Segunda tanda de Guatoso: identificar también es corregir (v216)
+
+Llegaron **~125 identificaciones más**, casi todas del segundo lote. Viven en
+`notas_rest/notas.js` y `partidas.js` —la fuente— y salen a la página con
+`node gen_catalogo2.js`; **nunca se editan en `catalogo_lote2.js`**, que se
+regenera. El script que las metió es `pies_guatoso_2.js`, en la raíz.
+
+**La identificación desmintió varias descripciones hechas a ojo**, y ahí se
+corrigió en vez de sumar: la «religiosa» de la 2122d es **una niña vestida de
+monja**; el «laboratorio» de la 2108d es el secretario de la Alcaldía
+**sirviendo aguardiente**; el «monumento del Jueves Santo» (2073a-b) es **al
+Sagrado Corazón**; y nueve fotos **no son de Labateca** —Pamplona (2068a,
+2078a, 2111a, 2116d), Toledo (2059, 2068b, 2076b, 2113d) y Chitagá (2114b)—.
+
+**Los cruces con el libro también se habían equivocado.** El de la 2121b le
+ponía al «obispo» el nombre de uno de los dos prelados del libro; es **el
+arzobispo de Nueva Pamplona** y el cruce se quitó. El de la 2036 decía que la
+bóveda blanca era la cúpula caída y que la foto era anterior al derrumbe; es la
+bóveda de la nave, vista desde la torre en obra, y ahora cruza con **don
+Jacinto Amaya**, el único arquitecto que nombran *Valle de las Angustias* y
+*Vivencias en mi Pueblo*. **Un cruce es una lectura, no una prueba.**
+
+**Se escribe «Juan Puyas»**, no «Pullas»: lo corrigió la familia.
+
+**Dos campos nuevos en las notas:**
+- `voltear` — giro **en la URL** (`a_180`, `a_-90`) sobre la foto ya subida.
+  `gen_catalogo2.js` lo pasa al catálogo como `giro`. **El `giro` que ya había
+  en las notas es el del horneado y no se toca**: aplicarlo otra vez daría la
+  vuelta dos veces. Los seis giros se comprobaron mirando la foto ya girada.
+  «Girar a la izquierda» es `a_-90`.
+- `fuera` — no se publica porque es **repetida**; el texto dice de cuál. No
+  cuenta como retenida ni sale en `retenidas.txt`.
+
+**De las repetidas se queda la mejor copia, aunque la familia señale otra.**
+De la primera comunión en la puerta del templo llegaron tres copias (2053,
+2074b, 2111c); se pidió quitar la 2074b, pero es la más limpia —la 2053 tiene
+la emulsión saltada encima de las niñas—, así que salieron las otras dos y la
+2074b lleva el pie. dHash confirmó solo 3 de las 12: con copias dañadas o
+recortadas distinto no alcanza. **2045, 2069a y 2104b salieron sin pareja
+encontrada**, por indicación de la familia.
+
+**Ponerle nombre a un retrato lo vuelve el retrato de alguien.** La 2075a y la
+2083c son retratos posados de niños de primera comunión que la pasada de agosto
+dejó publicados por descuido —son de la misma clase que la 2107c2 y la 2110c2,
+que sí se retuvieron—. Al llegar con nombre y apellido quedaron **retenidas**
+(`ret:"menor"`) con el pie ya escrito. Los nombres en fotos de **grupo,
+procesión o fiesta** sí entran.
+
+**Dos datos que no salieron del libro, y se verificaron antes de publicarlos:**
+Cecilia Caballero de López **nació en Bogotá** según sus biografías —la familia
+la recuerda de Silos: se publican las dos cosas, como con 1961 contra 1964—, y
+Pamplona es **arquidiócesis desde el 29 de mayo de 1956**, lo que deja las
+fotos del arzobispo en ese año o después.
+
+**Cifras:** 237 publicadas (54 + 183), 73 retenidas (11 + 62) y 12 fuera por
+repetidas. La cifra también está escrita a mano en `gen_biblioteca.js`.
+
 ## 5. Principios del proyecto
 
 1. **Datos de campo y de la comunidad, no de internet.** Lo que hay en línea
@@ -990,9 +1047,9 @@ hay ampliación. Los píxeles reales se sacan cargando `img.currentSrc` en un
   por si hay enviadas y sin aprobar.
 - **Hospedaje: solo 3**, y el hotel principal dijo que no. Es el hueco de
   producto más grande de la guía.
-- **71 fotos antiguas retenidas** esperando firmas de Ley 1581 —11 del primer
-  lote y 60 del segundo—. Las 60 del segundo están listadas una por una en
-  `notas_rest/retenidas.txt`: 22 con menores y 38 con adultos identificables.
+- **73 fotos antiguas retenidas** esperando firmas de Ley 1581 —11 del primer
+  lote y 62 del segundo—. Las 62 del segundo están listadas una por una en
+  `notas_rest/retenidas.txt`: 24 con menores y 38 con adultos identificables.
   (Aquí decía 69, que eran las líneas del archivo, no las fotos.)
 
 
