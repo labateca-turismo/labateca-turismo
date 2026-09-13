@@ -67,7 +67,7 @@ main{padding:26px 0 56px}
 .lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
 /* Ficha sin fotos todavia: marco sobrio en vez de imagen rota. */
 .lista .sinfoto{width:100%;aspect-ratio:16/10;display:flex;align-items:center;
  justify-content:center;background:var(--cream);border-bottom:1px solid var(--line);
@@ -98,9 +98,9 @@ dl.datos dd{margin:0}
  border-left:5px solid var(--gold);border-radius:0 var(--r) var(--r) 0}
 .tip b{color:var(--gold-text)}
 h2{font:700 26px/1.2 Fraunces,Georgia,serif;color:var(--forest);margin:44px 0 18px}
-.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;align-items:start}
 figure{margin:0}
-figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);
+figure img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;border-radius:var(--r);
  background:var(--cream);display:block}
 figcaption{font-size:14.5px;color:var(--ink-mut);margin-top:8px}
 .tapada summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;
@@ -278,58 +278,65 @@ ol.paradas h3 a:hover{text-decoration:underline}
     <h2>Photos</h2>
     <div class="fotos">
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-07"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-07 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/siscatagua-07"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/siscatagua-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/siscatagua-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/siscatagua-07 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Siscatagua A.P.C. office in Labateca&#39;s town center (Carrera 2 No. 4-07): &#39;Public Cooperative Administration — Life in every drop of water&#39;."
+         style="aspect-ratio:800/1022"
+         width="800" height="1022" alt="Siscatagua A.P.C. office in Labateca&#39;s town center (Carrera 2 No. 4-07): &#39;Public Cooperative Administration — Life in every drop of water&#39;."
          fetchpriority="high" decoding="async">
     <figcaption>Siscatagua A.P.C. office in Labateca&#39;s town center (Carrera 2 No. 4-07): &#39;Public Cooperative Administration — Life in every drop of water&#39;.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-01b"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-01b 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-01b 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-01b 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/siscatagua-01b"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/siscatagua-01b 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/siscatagua-01b 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/siscatagua-01b 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Labateca&#39;s Water Treatment Plant (PTAP), with the mural &#39;Life in every drop of water&#39;."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Labateca&#39;s Water Treatment Plant (PTAP), with the mural &#39;Life in every drop of water&#39;."
          loading="lazy" decoding="async">
     <figcaption>Labateca&#39;s Water Treatment Plant (PTAP), with the mural &#39;Life in every drop of water&#39;.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-02"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-02 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/siscatagua-02"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/siscatagua-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/siscatagua-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/siscatagua-02 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The plant&#39;s filters and settling tanks on the mountainside, with the Labateca valley in the background."
+         style="aspect-ratio:800/500"
+         width="800" height="500" alt="The plant&#39;s filters and settling tanks on the mountainside, with the Labateca valley in the background."
          loading="lazy" decoding="async">
     <figcaption>The plant&#39;s filters and settling tanks on the mountainside, with the Labateca valley in the background.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-03b"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-03b 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-03b 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-03b 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/siscatagua-03b"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/siscatagua-03b 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/siscatagua-03b 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/siscatagua-03b 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Flocculators and aeration tower: part of the process that cleans the water before it is distributed."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Flocculators and aeration tower: part of the process that cleans the water before it is distributed."
          loading="lazy" decoding="async">
     <figcaption>Flocculators and aeration tower: part of the process that cleans the water before it is distributed.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-04b"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-04b 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-04b 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-04b 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/siscatagua-04b"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/siscatagua-04b 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/siscatagua-04b 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/siscatagua-04b 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Valves of the clarifier settling tanks, with a view of the Santander mountains."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Valves of the clarifier settling tanks, with a view of the Santander mountains."
          loading="lazy" decoding="async">
     <figcaption>Valves of the clarifier settling tanks, with a view of the Santander mountains.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-05"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-05 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/siscatagua-05"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/siscatagua-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/siscatagua-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/siscatagua-05 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="In-house quality-control lab, where the water is tested to ensure it is safe to drink."
+         style="aspect-ratio:800/500"
+         width="800" height="500" alt="In-house quality-control lab, where the water is tested to ensure it is safe to drink."
          loading="lazy" decoding="async">
     <figcaption>In-house quality-control lab, where the water is tested to ensure it is safe to drink.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-06b"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-06b 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-06b 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/siscatagua-06b 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/siscatagua-06b"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/siscatagua-06b 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/siscatagua-06b 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/siscatagua-06b 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The plant&#39;s tank and hut on the hillside, surrounded by Labateca&#39;s mountain landscape."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="The plant&#39;s tank and hut on the hillside, surrounded by Labateca&#39;s mountain landscape."
          loading="lazy" decoding="async">
     <figcaption>The plant&#39;s tank and hut on the hillside, surrounded by Labateca&#39;s mountain landscape.</figcaption>
   </figure>

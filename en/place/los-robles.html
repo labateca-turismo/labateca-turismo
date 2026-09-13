@@ -67,7 +67,7 @@ main{padding:26px 0 56px}
 .lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
 /* Ficha sin fotos todavia: marco sobrio en vez de imagen rota. */
 .lista .sinfoto{width:100%;aspect-ratio:16/10;display:flex;align-items:center;
  justify-content:center;background:var(--cream);border-bottom:1px solid var(--line);
@@ -98,9 +98,9 @@ dl.datos dd{margin:0}
  border-left:5px solid var(--gold);border-radius:0 var(--r) var(--r) 0}
 .tip b{color:var(--gold-text)}
 h2{font:700 26px/1.2 Fraunces,Georgia,serif;color:var(--forest);margin:44px 0 18px}
-.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;align-items:start}
 figure{margin:0}
-figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);
+figure img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;border-radius:var(--r);
  background:var(--cream);display:block}
 figcaption{font-size:14.5px;color:var(--ink-mut);margin-top:8px}
 .tapada summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;
@@ -278,90 +278,101 @@ ol.paradas h3 a:hover{text-decoration:underline}
     <h2>Photos</h2>
     <div class="fotos">
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-01"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-01 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-01"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/los-robles-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/los-robles-01 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The two-story front, white with red pilasters, on the sidewalk of the Main Square."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="The two-story front, white with red pilasters, on the sidewalk of the Main Square."
          fetchpriority="high" decoding="async">
     <figcaption>The two-story front, white with red pilasters, on the sidewalk of the Main Square.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-02"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-02 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-02"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/los-robles-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/los-robles-02 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The central courtyard with its wooden gallery above and the dining tables below."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="The central courtyard with its wooden gallery above and the dining tables below."
          loading="lazy" decoding="async">
     <figcaption>The central courtyard with its wooden gallery above and the dining tables below.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-03"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-03 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-03 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-03 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-03"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/los-robles-03 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-03 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/los-robles-03 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The reception, with the wooden staircase, a tube television and a ceramic donkey wearing a hat."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="The reception, with the wooden staircase, a tube television and a ceramic donkey wearing a hat."
          loading="lazy" decoding="async">
     <figcaption>The reception, with the wooden staircase, a tube television and a ceramic donkey wearing a hat.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-04"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-04 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-04 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-04 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-04"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/los-robles-04 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-04 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/los-robles-04 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="One of the rooms: a single bed, wooden bedside table and tiled floor."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="One of the rooms: a single bed, wooden bedside table and tiled floor."
          loading="lazy" decoding="async">
     <figcaption>One of the rooms: a single bed, wooden bedside table and tiled floor.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-05"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-05 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-05"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/los-robles-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/los-robles-05 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The front door open onto the Main Square and its palm tree."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="The front door open onto the Main Square and its palm tree."
          loading="lazy" decoding="async">
     <figcaption>The front door open onto the Main Square and its palm tree.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-06"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-06 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-06"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/los-robles-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/los-robles-06 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="An oil portrait titled &#39;Lucía&#39;, beside a sewing machine and an old suitcase."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="An oil portrait titled &#39;Lucía&#39;, beside a sewing machine and an old suitcase."
          loading="lazy" decoding="async">
     <figcaption>An oil portrait titled &#39;Lucía&#39;, beside a sewing machine and an old suitcase.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-07"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-07 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-07"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/los-robles-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/los-robles-07 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="A portrait titled &#39;Elí&#39; above three stacked valve radios."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="A portrait titled &#39;Elí&#39; above three stacked valve radios."
          loading="lazy" decoding="async">
     <figcaption>A portrait titled &#39;Elí&#39; above three stacked valve radios.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-08"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-08 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-08 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-08 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-08"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/los-robles-08 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-08 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/los-robles-08 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="A portrait of a man with a moustache above a boombox, a VCR and a Motorola record player."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="A portrait of a man with a moustache above a boombox, a VCR and a Motorola record player."
          loading="lazy" decoding="async">
     <figcaption>A portrait of a man with a moustache above a boombox, a VCR and a Motorola record player.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-09"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-09 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-09 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-09 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-09"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/los-robles-09 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-09 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/los-robles-09 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="A portrait of a woman in a black hat, with a typewriter and a stack of vinyl records below."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="A portrait of a woman in a black hat, with a typewriter and a stack of vinyl records below."
          loading="lazy" decoding="async">
     <figcaption>A portrait of a woman in a black hat, with a typewriter and a stack of vinyl records below.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-10"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-10 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-10 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-10 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-10"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/los-robles-10 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-10 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/los-robles-10 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="A portrait titled &#39;Jaimito&#39; above an iron scale."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="A portrait titled &#39;Jaimito&#39; above an iron scale."
          loading="lazy" decoding="async">
     <figcaption>A portrait titled &#39;Jaimito&#39; above an iron scale.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-11"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-11 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-11 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/los-robles-11 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-11"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/los-robles-11 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/los-robles-11 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/los-robles-11 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="A framed relief of the Last Supper and, below it, a portrait of a farmer with his cow."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="A framed relief of the Last Supper and, below it, a portrait of a farmer with his cow."
          loading="lazy" decoding="async">
     <figcaption>A framed relief of the Last Supper and, below it, a portrait of a farmer with his cow.</figcaption>
   </figure>

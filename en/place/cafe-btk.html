@@ -67,7 +67,7 @@ main{padding:26px 0 56px}
 .lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
 /* Ficha sin fotos todavia: marco sobrio en vez de imagen rota. */
 .lista .sinfoto{width:100%;aspect-ratio:16/10;display:flex;align-items:center;
  justify-content:center;background:var(--cream);border-bottom:1px solid var(--line);
@@ -98,9 +98,9 @@ dl.datos dd{margin:0}
  border-left:5px solid var(--gold);border-radius:0 var(--r) var(--r) 0}
 .tip b{color:var(--gold-text)}
 h2{font:700 26px/1.2 Fraunces,Georgia,serif;color:var(--forest);margin:44px 0 18px}
-.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;align-items:start}
 figure{margin:0}
-figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);
+figure img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;border-radius:var(--r);
  background:var(--cream);display:block}
 figcaption{font-size:14.5px;color:var(--ink-mut);margin-top:8px}
 .tapada summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;
@@ -278,58 +278,65 @@ ol.paradas h3 a:hover{text-decoration:underline}
     <h2>Photos</h2>
     <div class="fotos">
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-01"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-01 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cafe-btk-01"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cafe-btk-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cafe-btk-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cafe-btk-01 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The shop front: window and door clad in stone, and above them the round yellow sign — Café BTK, Tierra pródiga y bendita, specialty export-grade coffee."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="The shop front: window and door clad in stone, and above them the round yellow sign — Café BTK, Tierra pródiga y bendita, specialty export-grade coffee."
          fetchpriority="high" decoding="async">
     <figcaption>The shop front: window and door clad in stone, and above them the round yellow sign — Café BTK, Tierra pródiga y bendita, specialty export-grade coffee.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-02"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-02 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cafe-btk-02"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cafe-btk-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cafe-btk-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cafe-btk-02 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The shelves inside, with the mural of coffee branches behind, bags lined up, boxes of drip sachets, the moka pot and the pour-over jug."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="The shelves inside, with the mural of coffee branches behind, bags lined up, boxes of drip sachets, the moka pot and the pour-over jug."
          loading="lazy" decoding="async">
     <figcaption>The shelves inside, with the mural of coffee branches behind, bags lined up, boxes of drip sachets, the moka pot and the pour-over jug.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-03"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-03 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-03 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-03 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cafe-btk-03"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cafe-btk-03 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cafe-btk-03 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cafe-btk-03 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The boxes of 15 specialty drip sachets, one cup each, under the Café BTK Colombia mural."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="The boxes of 15 specialty drip sachets, one cup each, under the Café BTK Colombia mural."
          loading="lazy" decoding="async">
     <figcaption>The boxes of 15 specialty drip sachets, one cup each, under the Café BTK Colombia mural.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-04"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-04 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-04 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-04 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cafe-btk-04"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cafe-btk-04 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cafe-btk-04 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cafe-btk-04 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The shelf of ground-coffee bags and the gooseneck kettle they brew with."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="The shelf of ground-coffee bags and the gooseneck kettle they brew with."
          loading="lazy" decoding="async">
     <figcaption>The shelf of ground-coffee bags and the gooseneck kettle they brew with.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-05"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-05 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cafe-btk-05"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cafe-btk-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cafe-btk-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cafe-btk-05 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="A 250-gram bag up close: grown in Labateca, 1,676 meters above sea level, Castillo variety, medium-high roast."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="A 250-gram bag up close: grown in Labateca, 1,676 meters above sea level, Castillo variety, medium-high roast."
          loading="lazy" decoding="async">
     <figcaption>A 250-gram bag up close: grown in Labateca, 1,676 meters above sea level, Castillo variety, medium-high roast.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-06"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-06 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cafe-btk-06"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cafe-btk-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cafe-btk-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cafe-btk-06 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The entrance from the road: the roofed gateway and the painted Ferretería · Vivero El Tulipán sign, with the yellow building at the end."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="The entrance from the road: the roofed gateway and the painted Ferretería · Vivero El Tulipán sign, with the yellow building at the end."
          loading="lazy" decoding="async">
     <figcaption>The entrance from the road: the roofed gateway and the painted Ferretería · Vivero El Tulipán sign, with the yellow building at the end.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-07"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cafe-btk-07 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cafe-btk-07"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cafe-btk-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cafe-btk-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cafe-btk-07 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The view from the yard: Labateca down in the valley, the church tower among the roofs and the mountain closing the horizon."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="The view from the yard: Labateca down in the valley, the church tower among the roofs and the mountain closing the horizon."
          loading="lazy" decoding="async">
     <figcaption>The view from the yard: Labateca down in the valley, the church tower among the roofs and the mountain closing the horizon.</figcaption>
   </figure>

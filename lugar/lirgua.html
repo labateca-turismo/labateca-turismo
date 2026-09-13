@@ -67,7 +67,7 @@ main{padding:26px 0 56px}
 .lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
 /* Ficha sin fotos todavia: marco sobrio en vez de imagen rota. */
 .lista .sinfoto{width:100%;aspect-ratio:16/10;display:flex;align-items:center;
  justify-content:center;background:var(--cream);border-bottom:1px solid var(--line);
@@ -98,9 +98,9 @@ dl.datos dd{margin:0}
  border-left:5px solid var(--gold);border-radius:0 var(--r) var(--r) 0}
 .tip b{color:var(--gold-text)}
 h2{font:700 26px/1.2 Fraunces,Georgia,serif;color:var(--forest);margin:44px 0 18px}
-.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;align-items:start}
 figure{margin:0}
-figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);
+figure img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;border-radius:var(--r);
  background:var(--cream);display:block}
 figcaption{font-size:14.5px;color:var(--ink-mut);margin-top:8px}
 .tapada summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;
@@ -287,106 +287,119 @@ ol.paradas h3 a:hover{text-decoration:underline}
     <h2>Fotos</h2>
     <div class="fotos">
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-01"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-01 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-01"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cascada-lirgua-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cascada-lirgua-01 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La Cascada de Lirgua vista de frente desde el final del sendero, con el salto principal cayendo entre paredes de roca y monte."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="La Cascada de Lirgua vista de frente desde el final del sendero, con el salto principal cayendo entre paredes de roca y monte."
          fetchpriority="high" decoding="async">
     <figcaption>La Cascada de Lirgua vista de frente desde el final del sendero, con el salto principal cayendo entre paredes de roca y monte.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-02"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-02 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-02"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cascada-lirgua-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cascada-lirgua-02 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="El torrente bajando entre piedras justo debajo del salto; arriba, al fondo, se alcanza a ver la caída principal."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="El torrente bajando entre piedras justo debajo del salto; arriba, al fondo, se alcanza a ver la caída principal."
          loading="lazy" decoding="async">
     <figcaption>El torrente bajando entre piedras justo debajo del salto; arriba, al fondo, se alcanza a ver la caída principal.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-03"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-03 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-03 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-03 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-03"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cascada-lirgua-03 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-03 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cascada-lirgua-03 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La cascada vista desde lejos, encajada en la ladera y enmarcada por platanales y monte alto."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="La cascada vista desde lejos, encajada en la ladera y enmarcada por platanales y monte alto."
          loading="lazy" decoding="async">
     <figcaption>La cascada vista desde lejos, encajada en la ladera y enmarcada por platanales y monte alto.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-04"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-04 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-04 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-04 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-04"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cascada-lirgua-04 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-04 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cascada-lirgua-04 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Portada de entrada: la roca pintada a mano con el saludo «Bienvenidos Cascadas Lirgua». Las llaves se piden en la casa junto al puente."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Portada de entrada: la roca pintada a mano con el saludo «Bienvenidos Cascadas Lirgua». Las llaves se piden en la casa junto al puente."
          loading="lazy" decoding="async">
     <figcaption>Portada de entrada: la roca pintada a mano con el saludo «Bienvenidos Cascadas Lirgua». Las llaves se piden en la casa junto al puente.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-05"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-05 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-05"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cascada-lirgua-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cascada-lirgua-05 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Escalones de piedra del sendero y los letreros de madera pintados por la familia que cuida el predio."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Escalones de piedra del sendero y los letreros de madera pintados por la familia que cuida el predio."
          loading="lazy" decoding="async">
     <figcaption>Escalones de piedra del sendero y los letreros de madera pintados por la familia que cuida el predio.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-06"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-06 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-06"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cascada-lirgua-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cascada-lirgua-06 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Otro tramo del sendero, con jardines sembrados al borde del camino y la cascada asomando entre los árboles."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Otro tramo del sendero, con jardines sembrados al borde del camino y la cascada asomando entre los árboles."
          loading="lazy" decoding="async">
     <figcaption>Otro tramo del sendero, con jardines sembrados al borde del camino y la cascada asomando entre los árboles.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-07"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-07 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-07"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cascada-lirgua-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cascada-lirgua-07 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Letreros de madera entre los árboles del sendero, una de las señas de la casa que cuida el lugar."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Letreros de madera entre los árboles del sendero, una de las señas de la casa que cuida el lugar."
          loading="lazy" decoding="async">
     <figcaption>Letreros de madera entre los árboles del sendero, una de las señas de la casa que cuida el lugar.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-08"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-08 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-08 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-08 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-08"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cascada-lirgua-08 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-08 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cascada-lirgua-08 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La Cascada de Dos Brazos vista desde abajo: el agua se parte en dos chorros paralelos antes de caer a la poza."
+         style="aspect-ratio:800/500"
+         width="800" height="500" alt="La Cascada de Dos Brazos vista desde abajo: el agua se parte en dos chorros paralelos antes de caer a la poza."
          loading="lazy" decoding="async">
     <figcaption>La Cascada de Dos Brazos vista desde abajo: el agua se parte en dos chorros paralelos antes de caer a la poza.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-09"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-09 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-09 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-09 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-09"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cascada-lirgua-09 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-09 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cascada-lirgua-09 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Los dos brazos de la cascada de cerca, abriéndose en abanico sobre la pared de roca cubierta de musgo."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Los dos brazos de la cascada de cerca, abriéndose en abanico sobre la pared de roca cubierta de musgo."
          loading="lazy" decoding="async">
     <figcaption>Los dos brazos de la cascada de cerca, abriéndose en abanico sobre la pared de roca cubierta de musgo.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-10"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-10 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-10 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-10 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-10"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cascada-lirgua-10 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-10 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cascada-lirgua-10 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="El agua deslizándose sobre la roca lisa en el tramo alto de la Cascada de Dos Brazos."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="El agua deslizándose sobre la roca lisa en el tramo alto de la Cascada de Dos Brazos."
          loading="lazy" decoding="async">
     <figcaption>El agua deslizándose sobre la roca lisa en el tramo alto de la Cascada de Dos Brazos.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-11"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-11 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-11 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-11 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-11"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cascada-lirgua-11 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-11 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cascada-lirgua-11 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Parte baja de la Cascada de Dos Brazos, donde el agua se estrella contra la piedra y sigue quebrada abajo."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Parte baja de la Cascada de Dos Brazos, donde el agua se estrella contra la piedra y sigue quebrada abajo."
          loading="lazy" decoding="async">
     <figcaption>Parte baja de la Cascada de Dos Brazos, donde el agua se estrella contra la piedra y sigue quebrada abajo.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-12"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-12 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-12 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-12 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-12"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cascada-lirgua-12 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-12 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cascada-lirgua-12 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La poza donde termina la Cascada de Dos Brazos y empieza el tramo que baja hacia la Cascada de Lirgua."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="La poza donde termina la Cascada de Dos Brazos y empieza el tramo que baja hacia la Cascada de Lirgua."
          loading="lazy" decoding="async">
     <figcaption>La poza donde termina la Cascada de Dos Brazos y empieza el tramo que baja hacia la Cascada de Lirgua.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-13"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-13 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-13 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/cascada-lirgua-13 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-13"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/cascada-lirgua-13 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/cascada-lirgua-13 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/cascada-lirgua-13 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La quebrada a lo largo del recorrido entre las dos cascadas, entre roca, musgo y monte húmedo."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="La quebrada a lo largo del recorrido entre las dos cascadas, entre roca, musgo y monte húmedo."
          loading="lazy" decoding="async">
     <figcaption>La quebrada a lo largo del recorrido entre las dos cascadas, entre roca, musgo y monte húmedo.</figcaption>
   </figure>

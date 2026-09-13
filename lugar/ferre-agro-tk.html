@@ -67,7 +67,7 @@ main{padding:26px 0 56px}
 .lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
 /* Ficha sin fotos todavia: marco sobrio en vez de imagen rota. */
 .lista .sinfoto{width:100%;aspect-ratio:16/10;display:flex;align-items:center;
  justify-content:center;background:var(--cream);border-bottom:1px solid var(--line);
@@ -98,9 +98,9 @@ dl.datos dd{margin:0}
  border-left:5px solid var(--gold);border-radius:0 var(--r) var(--r) 0}
 .tip b{color:var(--gold-text)}
 h2{font:700 26px/1.2 Fraunces,Georgia,serif;color:var(--forest);margin:44px 0 18px}
-.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;align-items:start}
 figure{margin:0}
-figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);
+figure img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;border-radius:var(--r);
  background:var(--cream);display:block}
 figcaption{font-size:14.5px;color:var(--ink-mut);margin-top:8px}
 .tapada summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;
@@ -278,58 +278,65 @@ ol.paradas h3 a:hover{text-decoration:underline}
     <h2>Fotos</h2>
     <div class="fotos">
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-01"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-01 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-01"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-01 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La fachada amarilla con el aviso de «FERREAGRO T.K» en letras rosadas, las cortinas metálicas levantadas y el perro de la casa echado en el piso de baldosa."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="La fachada amarilla con el aviso de «FERREAGRO T.K» en letras rosadas, las cortinas metálicas levantadas y el perro de la casa echado en el piso de baldosa."
          fetchpriority="high" decoding="async">
     <figcaption>La fachada amarilla con el aviso de «FERREAGRO T.K» en letras rosadas, las cortinas metálicas levantadas y el perro de la casa echado en el piso de baldosa.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-02"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-02 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-02"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-02 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="El primer mostrador: la vitrina de material eléctrico — bombillos, tomas, interruptores — y, encima, el estante de accesorios amarillos de PVC."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="El primer mostrador: la vitrina de material eléctrico — bombillos, tomas, interruptores — y, encima, el estante de accesorios amarillos de PVC."
          loading="lazy" decoding="async">
     <figcaption>El primer mostrador: la vitrina de material eléctrico — bombillos, tomas, interruptores — y, encima, el estante de accesorios amarillos de PVC.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-03"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-03 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-03 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-03 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-03"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-03 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-03 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-03 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="El pasillo hacia adentro, con las canastillas de tornillería, la herramienta colgada de la reja y la vitrina de pinturas y pegantes."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="El pasillo hacia adentro, con las canastillas de tornillería, la herramienta colgada de la reja y la vitrina de pinturas y pegantes."
          loading="lazy" decoding="async">
     <figcaption>El pasillo hacia adentro, con las canastillas de tornillería, la herramienta colgada de la reja y la vitrina de pinturas y pegantes.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-04"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-04 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-04 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-04 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-04"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-04 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-04 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-04 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La pared de sanitarios: inodoros, lavamanos, grifería y accesorios de baño colgados de la reja."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="La pared de sanitarios: inodoros, lavamanos, grifería y accesorios de baño colgados de la reja."
          loading="lazy" decoding="async">
     <figcaption>La pared de sanitarios: inodoros, lavamanos, grifería y accesorios de baño colgados de la reja.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-05"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-05 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-05"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-05 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="El fondo del local, con los bultos, la manguera enrollada, los baldes y los aceites; al frente, el mostrador con la caja."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="El fondo del local, con los bultos, la manguera enrollada, los baldes y los aceites; al frente, el mostrador con la caja."
          loading="lazy" decoding="async">
     <figcaption>El fondo del local, con los bultos, la manguera enrollada, los baldes y los aceites; al frente, el mostrador con la caja.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-06"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-06 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-06"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-06 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Bajo el cobertizo, el estante de tejas de zinc y de fibrocemento y los rollos de tubería de PVC por diámetros."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Bajo el cobertizo, el estante de tejas de zinc y de fibrocemento y los rollos de tubería de PVC por diámetros."
          loading="lazy" decoding="async">
     <figcaption>Bajo el cobertizo, el estante de tejas de zinc y de fibrocemento y los rollos de tubería de PVC por diámetros.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-07"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/ferre-agro-tk-07 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-07"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/ferre-agro-tk-07 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="El estante de tubo y perfilería metálica contra la pared de ladrillo, con la varilla y el tubo cuadrado por medidas."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="El estante de tubo y perfilería metálica contra la pared de ladrillo, con la varilla y el tubo cuadrado por medidas."
          loading="lazy" decoding="async">
     <figcaption>El estante de tubo y perfilería metálica contra la pared de ladrillo, con la varilla y el tubo cuadrado por medidas.</figcaption>
   </figure>

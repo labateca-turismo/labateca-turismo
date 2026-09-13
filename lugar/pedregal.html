@@ -67,7 +67,7 @@ main{padding:26px 0 56px}
 .lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
 /* Ficha sin fotos todavia: marco sobrio en vez de imagen rota. */
 .lista .sinfoto{width:100%;aspect-ratio:16/10;display:flex;align-items:center;
  justify-content:center;background:var(--cream);border-bottom:1px solid var(--line);
@@ -98,9 +98,9 @@ dl.datos dd{margin:0}
  border-left:5px solid var(--gold);border-radius:0 var(--r) var(--r) 0}
 .tip b{color:var(--gold-text)}
 h2{font:700 26px/1.2 Fraunces,Georgia,serif;color:var(--forest);margin:44px 0 18px}
-.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;align-items:start}
 figure{margin:0}
-figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);
+figure img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;border-radius:var(--r);
  background:var(--cream);display:block}
 figcaption{font-size:14.5px;color:var(--ink-mut);margin-top:8px}
 .tapada summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;
@@ -292,122 +292,137 @@ ol.paradas h3 a:hover{text-decoration:underline}
     <h2>Fotos</h2>
     <div class="fotos">
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-02"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-02 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-02"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/pedregal-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/pedregal-02 1200w"
          sizes="(max-width:820px) 92vw, 390px"
+         style="aspect-ratio:800/600"
          width="800" height="600" alt="La mesa de piedra en el filo de la terraza, con el valle abierto y la cordillera encendida por el sol de la tarde."
          fetchpriority="high" decoding="async">
     <figcaption>La mesa de piedra en el filo de la terraza, con el valle abierto y la cordillera encendida por el sol de la tarde.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-17"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-17 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-17 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-17 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-17"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/pedregal-17 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-17 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/pedregal-17 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="El plato de la casa contra el paisaje: costilla, chicharrón, morcilla, papa criolla y la arepa encima, con el pueblo al fondo."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="El plato de la casa contra el paisaje: costilla, chicharrón, morcilla, papa criolla y la arepa encima, con el pueblo al fondo."
          loading="lazy" decoding="async">
     <figcaption>El plato de la casa contra el paisaje: costilla, chicharrón, morcilla, papa criolla y la arepa encima, con el pueblo al fondo.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-16"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-16 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-16 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-16 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-16"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/pedregal-16 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-16 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/pedregal-16 1200w"
          sizes="(max-width:820px) 92vw, 390px"
+         style="aspect-ratio:800/600"
          width="800" height="600" alt="La vista limpia desde la terraza: el valle, los caseríos regados por la ladera y la montaña de enfrente a contraluz."
          loading="lazy" decoding="async">
     <figcaption>La vista limpia desde la terraza: el valle, los caseríos regados por la ladera y la montaña de enfrente a contraluz.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-18"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-18 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-18 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-18 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-18"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/pedregal-18 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-18 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/pedregal-18 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Lo que allá llaman «al barril»: carne, plátano maduro, arepa y guacamole, servido en fuente de barro."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Lo que allá llaman «al barril»: carne, plátano maduro, arepa y guacamole, servido en fuente de barro."
          loading="lazy" decoding="async">
     <figcaption>Lo que allá llaman «al barril»: carne, plátano maduro, arepa y guacamole, servido en fuente de barro.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-19"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-19 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-19 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-19 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-19"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/pedregal-19 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-19 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/pedregal-19 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Día de grupo: seis fuentes servidas al tiempo y los jarros de jugo esperando en la mesa de afuera."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Día de grupo: seis fuentes servidas al tiempo y los jarros de jugo esperando en la mesa de afuera."
          loading="lazy" decoding="async">
     <figcaption>Día de grupo: seis fuentes servidas al tiempo y los jarros de jugo esperando en la mesa de afuera.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-20"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-20 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-20 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-20 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-20"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/pedregal-20 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-20 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/pedregal-20 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="El fogón de leña encendido, con la olla puesta. Toda la comida de la casa sale de aquí."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="El fogón de leña encendido, con la olla puesta. Toda la comida de la casa sale de aquí."
          loading="lazy" decoding="async">
     <figcaption>El fogón de leña encendido, con la olla puesta. Toda la comida de la casa sale de aquí.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-01"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-01 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-01"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/pedregal-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/pedregal-01 1200w"
          sizes="(max-width:820px) 92vw, 390px"
+         style="aspect-ratio:800/600"
          width="800" height="600" alt="La casa principal, levantada en piedra del lugar y techo de teja, al borde mismo de la ladera."
          loading="lazy" decoding="async">
     <figcaption>La casa principal, levantada en piedra del lugar y techo de teja, al borde mismo de la ladera.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-21"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-21 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-21 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-21 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-21"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/pedregal-21 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-21 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/pedregal-21 1200w"
          sizes="(max-width:820px) 92vw, 390px"
+         style="aspect-ratio:800/600"
          width="800" height="600" alt="La terraza techada: mesas y sillas de madera maciza, columnas de piedra y el valle asomándose entre ellas."
          loading="lazy" decoding="async">
     <figcaption>La terraza techada: mesas y sillas de madera maciza, columnas de piedra y el valle asomándose entre ellas.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-06"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-06 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-06"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/pedregal-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/pedregal-06 1200w"
          sizes="(max-width:820px) 92vw, 390px"
+         style="aspect-ratio:800/600"
          width="800" height="600" alt="La sala del billar, con los muros en piedra y adobe y la vista abriéndose al fondo del corredor."
          loading="lazy" decoding="async">
     <figcaption>La sala del billar, con los muros en piedra y adobe y la vista abriéndose al fondo del corredor.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-10"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-10 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-10 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-10 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-10"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/pedregal-10 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-10 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/pedregal-10 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La terraza de arriba, pintada de amarillo, con mesas de troza mirando al valle."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="La terraza de arriba, pintada de amarillo, con mesas de troza mirando al valle."
          loading="lazy" decoding="async">
     <figcaption>La terraza de arriba, pintada de amarillo, con mesas de troza mirando al valle.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-11"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-11 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-11 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-11 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-11"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/pedregal-11 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-11 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/pedregal-11 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="El letrero tallado en madera sobre la entrada del corredor."
+         style="aspect-ratio:800/500"
+         width="800" height="500" alt="El letrero tallado en madera sobre la entrada del corredor."
          loading="lazy" decoding="async">
     <figcaption>El letrero tallado en madera sobre la entrada del corredor.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-12"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-12 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-12 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-12 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-12"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/pedregal-12 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-12 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/pedregal-12 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La cornamenta clavada en la viga, sobre las mesas del corredor."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="La cornamenta clavada en la viga, sobre las mesas del corredor."
          loading="lazy" decoding="async">
     <figcaption>La cornamenta clavada en la viga, sobre las mesas del corredor.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-13"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-13 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-13 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-13 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-13"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/pedregal-13 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-13 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/pedregal-13 1200w"
          sizes="(max-width:820px) 92vw, 390px"
+         style="aspect-ratio:800/600"
          width="800" height="600" alt="El valle de noche, con las luces de los caseríos prendidas abajo. Es la razón para quedarse hasta tarde."
          loading="lazy" decoding="async">
     <figcaption>El valle de noche, con las luces de los caseríos prendidas abajo. Es la razón para quedarse hasta tarde.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-14"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-14 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-14 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-14 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-14"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/pedregal-14 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-14 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/pedregal-14 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="El Santo Sepulcro, a cinco minutos monte arriba: la gruta de piedra y las cruces blancas del Vía Crucis sembradas en la ladera."
+         style="aspect-ratio:800/500"
+         width="800" height="500" alt="El Santo Sepulcro, a cinco minutos monte arriba: la gruta de piedra y las cruces blancas del Vía Crucis sembradas en la ladera."
          loading="lazy" decoding="async">
     <figcaption>El Santo Sepulcro, a cinco minutos monte arriba: la gruta de piedra y las cruces blancas del Vía Crucis sembradas en la ladera.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-15"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-15 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-15 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/pedregal-15 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-15"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/pedregal-15 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/pedregal-15 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/pedregal-15 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="El panorama completo hacia el valle, con Toledo al otro lado."
+         style="aspect-ratio:800/500"
+         width="800" height="500" alt="El panorama completo hacia el valle, con Toledo al otro lado."
          loading="lazy" decoding="async">
     <figcaption>El panorama completo hacia el valle, con Toledo al otro lado.</figcaption>
   </figure>

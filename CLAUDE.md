@@ -24,6 +24,7 @@ minutos; si no aparece, esperar, no re-empujar.
 
 ```bash
 python subir_version.py NNN     # desde la carpeta del proyecto, no desde files/
+node medir_fotos.js             # solo le pregunta a Cloudinary por las fotos nuevas
 node gen_seo.js
 cd files && git add -A && git commit -m "vNNN: ..." && git push origin main
 ```
@@ -858,21 +859,57 @@ las seis que cambiaban de contenido entraron como `pedregal-16` a `-21`. Las
 viejas quedan huérfanas en Cloudinary, que no cuesta nada y no se puede
 borrar desde aquí —no hay API Secret—.
 
-### Cómo salen las fotos en mejor calidad (v214)
+### Cómo salen las fotos en mejor calidad (v214, corregido en v215)
 
 Tres cosas, en orden de impacto:
 
-1. **WhatsApp es el cuello de botella, no Cloudinary.** Mandada «como foto»,
+1. **WhatsApp es el cuello de botella en el origen.** Mandada «como foto»,
    una toma de 4032x3024 llega a **1600x900**. Mandada **como documento**,
    llega entera. De las seis fotos que tenía El Pedregal, cuatro eran copias
    comprimidas teniendo el original de 12,2 MP en la misma carpeta.
-2. **El sitio nunca pide más de 1.200 px** —`cldUrl(foto,'w_1200,f_auto,q_auto')`
-   en el visor—. Un maestro de **2.400 px** cubre eso con el doble de margen
-   para pantallas de alta densidad. Más no aporta y pesa.
-3. **Cuidado con las verticales.** El visor pide `w_1200` **sin `c_limit`**,
-   así que una foto de 900 px de ancho **la estira**. Las verticales de comida
-   y de retrato son las que peor se ven, y ahí no hay arreglo posible en el
-   horneado: hay que volver a pedir el original.
+2. **El sitio nunca pide más de 1.600 px** —el visor grande, en `app.js`—. Un
+   maestro de **2.400 px** cubre eso con margen. Más no aporta y pesa.
+3. **`c_limit` siempre que se pida solo un ancho.** Un `w_1600` a secas es
+   `c_scale`, que **amplía**: de los 614 originales del sitio, 355 miden menos
+   de 1.600 px de ancho, y la-pena-03 (540 px) salía inflada casi al triple.
+   Hasta la v214 el visor lo hacía así; en la v215 lleva `c_limit`.
+
+### Las fotos de las fichas salían recortadas y borrosas (v215)
+
+José lo vio así: *«las fotos se ven desenfocadas, y no se ven completas»*.
+Eran tres fallos apilados, y el peor no era de Cloudinary sino del CSS.
+
+1. **El atributo `height` le gana a `aspect-ratio`.** La etiqueta llevaba
+   `width="800" height="600"` y el CSS `width:100%;aspect-ratio:4/3` **sin
+   `height:auto`**. El navegador convierte `height="600"` en `height:600px`, y
+   `aspect-ratio` solo actúa si una de las dos medidas es `auto`: cada foto
+   salía en una celda de **390x600** con `object-fit:cover`, que le cortaba
+   los lados **y** la ampliaba. Las tarjetas `.lista` igual (380x400 en vez de
+   16:10). **Toda regla `img{width:100%;aspect-ratio:…}` necesita `height:auto`
+   si la etiqueta trae `width`/`height`** —y los tiene que traer, por el CLS—.
+2. **Una sola caja para fotos de todas las formas.** El **81 %** de las 614
+   fotos son verticales, y la caja 4:3 con `c_fill` cortaba el **48 %** de la
+   foto promedio. Una caja vertical fija tampoco sirve: deja las horizontales
+   con 40 % de relleno. Ahora **cada foto lleva su caja** (`caja()` en
+   `gen_seo.js`, acotada entre 5:8 y 8:5) y se pide con `c_limit`. Relleno
+   medio: **8 %**, y solo en las más alargadas.
+3. **El visor estiraba**, ver el punto 3 de arriba.
+
+**Las medidas viven en `data/fotos_dim.json`** y las llena
+**`node medir_fotos.js`**, que solo consulta las que faltan. Si una foto nueva
+no está medida no se rompe nada: sale en caja 4:5 y `gen_seo.js` avisa con
+`OJO: N foto(s) sin medir`.
+
+**Qué NO cambió, a propósito:** las tarjetas `.lista` y las de la app siguen
+con `c_fill` 16:10 —son portadas, y ahí recortar es lo correcto—, igual que
+la `og:image` de 1200x630 y el logo.
+
+**Trampa al comprobarlo en el navegador.** Con `srcset` y descriptores `w`,
+`img.naturalWidth` **no** es el ancho del archivo: es el corregido por
+densidad, más o menos lo que dice `sizes`. Eso da «ampliada x1,94» donde no
+hay ampliación. Los píxeles reales se sacan cargando `img.currentSrc` en un
+`new Image()` sin `srcset`. Medido así, en móvil de 375 px a densidad 2 las
+15 fotos del Pedregal llegan a 0,75–0,84x: siempre reducidas, nunca estiradas.
 
 ## 5. Principios del proyecto
 

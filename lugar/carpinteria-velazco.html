@@ -67,7 +67,7 @@ main{padding:26px 0 56px}
 .lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
 /* Ficha sin fotos todavia: marco sobrio en vez de imagen rota. */
 .lista .sinfoto{width:100%;aspect-ratio:16/10;display:flex;align-items:center;
  justify-content:center;background:var(--cream);border-bottom:1px solid var(--line);
@@ -98,9 +98,9 @@ dl.datos dd{margin:0}
  border-left:5px solid var(--gold);border-radius:0 var(--r) var(--r) 0}
 .tip b{color:var(--gold-text)}
 h2{font:700 26px/1.2 Fraunces,Georgia,serif;color:var(--forest);margin:44px 0 18px}
-.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;align-items:start}
 figure{margin:0}
-figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);
+figure img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;border-radius:var(--r);
  background:var(--cream);display:block}
 figcaption{font-size:14.5px;color:var(--ink-mut);margin-top:8px}
 .tapada summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;
@@ -278,90 +278,101 @@ ol.paradas h3 a:hover{text-decoration:underline}
     <h2>Fotos</h2>
     <div class="fotos">
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-01"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-01 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-01"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-01 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Mueble esquinero de escritorio y biblioteca, armado en el taller, con la montaña detrás."
+         style="aspect-ratio:800/599"
+         width="800" height="599" alt="Mueble esquinero de escritorio y biblioteca, armado en el taller, con la montaña detrás."
          fetchpriority="high" decoding="async">
     <figcaption>Mueble esquinero de escritorio y biblioteca, armado en el taller, con la montaña detrás.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-02"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-02 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-02"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-02 1200w"
          sizes="(max-width:820px) 92vw, 390px"
+         style="aspect-ratio:800/600"
          width="800" height="600" alt="Centro de entretenimiento en madera oscura, con puertas de panel y cajones."
          loading="lazy" decoding="async">
     <figcaption>Centro de entretenimiento en madera oscura, con puertas de panel y cajones.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-03"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-03 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-03 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-03 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-03"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-03 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-03 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-03 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Biblioteca y mueble de televisor en tono grafito, ya instalado."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Biblioteca y mueble de televisor en tono grafito, ya instalado."
          loading="lazy" decoding="async">
     <figcaption>Biblioteca y mueble de televisor en tono grafito, ya instalado.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-04"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-04 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-04 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-04 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-04"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-04 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-04 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-04 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Escritorio de tres cajones con cerradura, terminado y esperando entrega."
+         style="aspect-ratio:800/821"
+         width="800" height="821" alt="Escritorio de tres cajones con cerradura, terminado y esperando entrega."
          loading="lazy" decoding="async">
     <figcaption>Escritorio de tres cajones con cerradura, terminado y esperando entrega.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-05"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-05 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-05"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-05 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Mecedora en madera maciza, con el brazo y el respaldo torneados a mano."
+         style="aspect-ratio:800/953"
+         width="800" height="953" alt="Mecedora en madera maciza, con el brazo y el respaldo torneados a mano."
          loading="lazy" decoding="async">
     <figcaption>Mecedora en madera maciza, con el brazo y el respaldo torneados a mano.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-06"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-06 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-06"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-06 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Cama pintada con espaldar de paneles, sacada a la calle para la foto."
+         style="aspect-ratio:800/599"
+         width="800" height="599" alt="Cama pintada con espaldar de paneles, sacada a la calle para la foto."
          loading="lazy" decoding="async">
     <figcaption>Cama pintada con espaldar de paneles, sacada a la calle para la foto.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-07"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-07 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-07"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-07 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La sierra de mesa del taller, entre listones y aserrín."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="La sierra de mesa del taller, entre listones y aserrín."
          loading="lazy" decoding="async">
     <figcaption>La sierra de mesa del taller, entre listones y aserrín.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-08"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-08 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-08 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-08 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-08"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-08 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-08 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-08 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La canteadora, con su motor y la correa a la vista."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="La canteadora, con su motor y la correa a la vista."
          loading="lazy" decoding="async">
     <figcaption>La canteadora, con su motor y la correa a la vista.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-09"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-09 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-09 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-09 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-09"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-09 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-09 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-09 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La sierra circular del patio, montada sobre su banco de hierro."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="La sierra circular del patio, montada sobre su banco de hierro."
          loading="lazy" decoding="async">
     <figcaption>La sierra circular del patio, montada sobre su banco de hierro.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-10"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-10 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-10 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-10 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-10"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-10 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-10 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-10 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La sierra sinfín, armada en el propio taller."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="La sierra sinfín, armada en el propio taller."
          loading="lazy" decoding="async">
     <figcaption>La sierra sinfín, armada en el propio taller.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-11"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-11 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-11 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/carpinteria-velazco-11 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-11"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-11 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-11 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/carpinteria-velazco-11 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="El armario de herramientas: discos, formones, cepillos y llaves en la puerta."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="El armario de herramientas: discos, formones, cepillos y llaves en la puerta."
          loading="lazy" decoding="async">
     <figcaption>El armario de herramientas: discos, formones, cepillos y llaves en la puerta.</figcaption>
   </figure>

@@ -67,7 +67,7 @@ main{padding:26px 0 56px}
 .lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
 /* Ficha sin fotos todavia: marco sobrio en vez de imagen rota. */
 .lista .sinfoto{width:100%;aspect-ratio:16/10;display:flex;align-items:center;
  justify-content:center;background:var(--cream);border-bottom:1px solid var(--line);
@@ -98,9 +98,9 @@ dl.datos dd{margin:0}
  border-left:5px solid var(--gold);border-radius:0 var(--r) var(--r) 0}
 .tip b{color:var(--gold-text)}
 h2{font:700 26px/1.2 Fraunces,Georgia,serif;color:var(--forest);margin:44px 0 18px}
-.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;align-items:start}
 figure{margin:0}
-figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);
+figure img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;border-radius:var(--r);
  background:var(--cream);display:block}
 figcaption{font-size:14.5px;color:var(--ink-mut);margin-top:8px}
 .tapada summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;
@@ -288,98 +288,110 @@ ol.paradas h3 a:hover{text-decoration:underline}
     <h2>Photos</h2>
     <div class="fotos">
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-01"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-01 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-01"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-01 1200w"
          sizes="(max-width:820px) 92vw, 390px"
+         style="aspect-ratio:800/600"
          width="800" height="600" alt="The site seen from above: red roofs, umbrellas on the lawn, the stony river and the mountains of San Bernardo."
          fetchpriority="high" decoding="async">
     <figcaption>The site seen from above: red roofs, umbrellas on the lawn, the stony river and the mountains of San Bernardo.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-02"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-02 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-02"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-02 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The entrance, with the metal arch and the SOMA sign over the unpaved road."
+         style="aspect-ratio:800/1067"
+         width="800" height="1067" alt="The entrance, with the metal arch and the SOMA sign over the unpaved road."
          loading="lazy" decoding="async">
     <figcaption>The entrance, with the metal arch and the SOMA sign over the unpaved road.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-03"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-03 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-03 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-03 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-03"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-03 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-03 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-03 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The hot-water pool: a green pool among huge boulders polished smooth by the river."
+         style="aspect-ratio:800/1067"
+         width="800" height="1067" alt="The hot-water pool: a green pool among huge boulders polished smooth by the river."
          loading="lazy" decoding="async">
     <figcaption>The hot-water pool: a green pool among huge boulders polished smooth by the river.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-04"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-04 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-04 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-04 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-04"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-04 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-04 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-04 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The path to the pool, cut into the hillside with a bamboo handrail, under a large tree."
+         style="aspect-ratio:800/1067"
+         width="800" height="1067" alt="The path to the pool, cut into the hillside with a bamboo handrail, under a large tree."
          loading="lazy" decoding="async">
     <figcaption>The path to the pool, cut into the hillside with a bamboo handrail, under a large tree.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-05"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-05 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-05"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-05 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The covered lookout, with beanbags on turf and a plank table, open to the mountainside."
+         style="aspect-ratio:800/1067"
+         width="800" height="1067" alt="The covered lookout, with beanbags on turf and a plank table, open to the mountainside."
          loading="lazy" decoding="async">
     <figcaption>The covered lookout, with beanbags on turf and a plank table, open to the mountainside.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-06"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-06 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-06"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-06 1200w"
          sizes="(max-width:820px) 92vw, 390px"
+         style="aspect-ratio:800/600"
          width="800" height="600" alt="Frosted cocktails with berries, strawberries and lemon slices, served in the garden."
          loading="lazy" decoding="async">
     <figcaption>Frosted cocktails with berries, strawberries and lemon slices, served in the garden.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-07"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-07 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-07"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-07 1200w"
          sizes="(max-width:820px) 92vw, 390px"
+         style="aspect-ratio:800/600"
          width="800" height="600" alt="A burger served on a plantain leaf, with criolla potatoes and sauces in a clay dish."
          loading="lazy" decoding="async">
     <figcaption>A burger served on a plantain leaf, with criolla potatoes and sauces in a clay dish.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-08"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-08 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-08 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-08 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-08"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-08 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-08 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-08 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Ribs and meat hanging over the grill, with sweet plantains on the rack."
+         style="aspect-ratio:800/1067"
+         width="800" height="1067" alt="Ribs and meat hanging over the grill, with sweet plantains on the rack."
          loading="lazy" decoding="async">
     <figcaption>Ribs and meat hanging over the grill, with sweet plantains on the rack.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-09"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-09 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-09 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-09 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-09"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-09 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-09 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-09 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The lit fire pit and, on the table, hot chocolate with cheese, marshmallows and arepa."
+         style="aspect-ratio:800/1067"
+         width="800" height="1067" alt="The lit fire pit and, on the table, hot chocolate with cheese, marshmallows and arepa."
          loading="lazy" decoding="async">
     <figcaption>The lit fire pit and, on the table, hot chocolate with cheese, marshmallows and arepa.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-10"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-10 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-10 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-10 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-10"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-10 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-10 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-10 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="A birthday setup: a balloon arch on the plank wall and lit letters."
+         style="aspect-ratio:800/663"
+         width="800" height="663" alt="A birthday setup: a balloon arch on the plank wall and lit letters."
          loading="lazy" decoding="async">
     <figcaption>A birthday setup: a balloon arch on the plank wall and lit letters.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-11"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-11 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-11 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-11 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-11"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-11 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-11 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-11 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The washbasin: a metal bucket with a tap mounted on a log, with the river behind."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="The washbasin: a metal bucket with a tap mounted on a log, with the river behind."
          loading="lazy" decoding="async">
     <figcaption>The washbasin: a metal bucket with a tap mounted on a log, with the river behind.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-12"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-12 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-12 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/soma-aguascalientes-12 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-12"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-12 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-12 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/soma-aguascalientes-12 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="The site&#39;s signpost, with distances to Labateca, Toledo, Pamplona and Chinácota."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="The site&#39;s signpost, with distances to Labateca, Toledo, Pamplona and Chinácota."
          loading="lazy" decoding="async">
     <figcaption>The site&#39;s signpost, with distances to Labateca, Toledo, Pamplona and Chinácota.</figcaption>
   </figure>

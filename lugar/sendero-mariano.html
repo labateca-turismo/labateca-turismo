@@ -67,7 +67,7 @@ main{padding:26px 0 56px}
 .lista{list-style:none;padding:0;margin:34px 0 0;display:grid;
  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .lista li{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.lista img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
+.lista img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--cream)}
 /* Ficha sin fotos todavia: marco sobrio en vez de imagen rota. */
 .lista .sinfoto{width:100%;aspect-ratio:16/10;display:flex;align-items:center;
  justify-content:center;background:var(--cream);border-bottom:1px solid var(--line);
@@ -98,9 +98,9 @@ dl.datos dd{margin:0}
  border-left:5px solid var(--gold);border-radius:0 var(--r) var(--r) 0}
 .tip b{color:var(--gold-text)}
 h2{font:700 26px/1.2 Fraunces,Georgia,serif;color:var(--forest);margin:44px 0 18px}
-.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;align-items:start}
 figure{margin:0}
-figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);
+figure img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;border-radius:var(--r);
  background:var(--cream);display:block}
 figcaption{font-size:14.5px;color:var(--ink-mut);margin-top:8px}
 .tapada summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;
@@ -287,106 +287,119 @@ ol.paradas h3 a:hover{text-decoration:underline}
     <h2>Fotos</h2>
     <div class="fotos">
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-01"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-01 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-01"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/sendero-mariano-01 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-01 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/sendero-mariano-01 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La cruz de madera plantada entre las piedras de la cima, con el valle y las nubes bajas al fondo."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="La cruz de madera plantada entre las piedras de la cima, con el valle y las nubes bajas al fondo."
          fetchpriority="high" decoding="async">
     <figcaption>La cruz de madera plantada entre las piedras de la cima, con el valle y las nubes bajas al fondo.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-02"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-02 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-02"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/sendero-mariano-02 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-02 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/sendero-mariano-02 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="El punto de partida: la placa de concreto que sube entre eucaliptos desde el borde del pueblo."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="El punto de partida: la placa de concreto que sube entre eucaliptos desde el borde del pueblo."
          loading="lazy" decoding="async">
     <figcaption>El punto de partida: la placa de concreto que sube entre eucaliptos desde el borde del pueblo.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-03"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-03 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-03 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-03 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-03"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/sendero-mariano-03 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-03 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/sendero-mariano-03 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Primer Dolor: la profecía de Simeón, entre las buganvillas."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Primer Dolor: la profecía de Simeón, entre las buganvillas."
          loading="lazy" decoding="async">
     <figcaption>Primer Dolor: la profecía de Simeón, entre las buganvillas.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-04"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-04 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-04 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-04 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-04"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/sendero-mariano-04 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-04 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/sendero-mariano-04 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Segundo Dolor: la huida a Egipto, con San José llevando el burro."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Segundo Dolor: la huida a Egipto, con San José llevando el burro."
          loading="lazy" decoding="async">
     <figcaption>Segundo Dolor: la huida a Egipto, con San José llevando el burro.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-05"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-05 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-05"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/sendero-mariano-05 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-05 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/sendero-mariano-05 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Tercer Dolor: la pérdida de Jesús en el templo de Jerusalén, bajo el arco de piedra."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Tercer Dolor: la pérdida de Jesús en el templo de Jerusalén, bajo el arco de piedra."
          loading="lazy" decoding="async">
     <figcaption>Tercer Dolor: la pérdida de Jesús en el templo de Jerusalén, bajo el arco de piedra.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-06"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-06 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-06"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/sendero-mariano-06 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-06 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/sendero-mariano-06 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Cuarto Dolor: el encuentro con Jesús cargando la cruz."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Cuarto Dolor: el encuentro con Jesús cargando la cruz."
          loading="lazy" decoding="async">
     <figcaption>Cuarto Dolor: el encuentro con Jesús cargando la cruz.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-07"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-07 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-07"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/sendero-mariano-07 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-07 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/sendero-mariano-07 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Quinto Dolor: la crucifixión, tallada en el horcón y cubierta de buganvillas."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Quinto Dolor: la crucifixión, tallada en el horcón y cubierta de buganvillas."
          loading="lazy" decoding="async">
     <figcaption>Quinto Dolor: la crucifixión, tallada en el horcón y cubierta de buganvillas.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-08"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-08 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-08 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-08 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-08"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/sendero-mariano-08 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-08 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/sendero-mariano-08 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Sexto Dolor: María recibe el cuerpo de Jesús, enmarcada por los helechos."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Sexto Dolor: María recibe el cuerpo de Jesús, enmarcada por los helechos."
          loading="lazy" decoding="async">
     <figcaption>Sexto Dolor: María recibe el cuerpo de Jesús, enmarcada por los helechos.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-09"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-09 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-09 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-09 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-09"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/sendero-mariano-09 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-09 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/sendero-mariano-09 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Séptimo Dolor: el entierro de Jesús y la soledad de María, con el valle detrás."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Séptimo Dolor: el entierro de Jesús y la soledad de María, con el valle detrás."
          loading="lazy" decoding="async">
     <figcaption>Séptimo Dolor: el entierro de Jesús y la soledad de María, con el valle detrás.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-10"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-10 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-10 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-10 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-10"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/sendero-mariano-10 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-10 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/sendero-mariano-10 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="Una de las placas: el título del Dolor, la cita bíblica y la oración de la estación."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="Una de las placas: el título del Dolor, la cita bíblica y la oración de la estación."
          loading="lazy" decoding="async">
     <figcaption>Una de las placas: el título del Dolor, la cita bíblica y la oración de la estación.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-11"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-11 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-11 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-11 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-11"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/sendero-mariano-11 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-11 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/sendero-mariano-11 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La cima: la cruz de hierro sobre el montículo de piedras y la imagen de la Virgen al pie."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="La cima: la cruz de hierro sobre el montículo de piedras y la imagen de la Virgen al pie."
          loading="lazy" decoding="async">
     <figcaption>La cima: la cruz de hierro sobre el montículo de piedras y la imagen de la Virgen al pie.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-12"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-12 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-12 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-12 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-12"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/sendero-mariano-12 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-12 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/sendero-mariano-12 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="El final del camino: el sepulcro de piedra con su bóveda, la banca y la piedra rodante al lado."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="El final del camino: el sepulcro de piedra con su bóveda, la banca y la piedra rodante al lado."
          loading="lazy" decoding="async">
     <figcaption>El final del camino: el sepulcro de piedra con su bóveda, la banca y la piedra rodante al lado.</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-13"
-         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,h_420,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-13 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,h_600,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-13 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,h_900,c_fill,g_auto,f_auto,q_auto/labateca/sendero-mariano-13 1200w"
+    <img src="https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-13"
+         srcset="https://res.cloudinary.com/dwotodtoa/image/upload/w_560,c_limit,f_auto,q_auto/labateca/sendero-mariano-13 560w, https://res.cloudinary.com/dwotodtoa/image/upload/w_800,c_limit,f_auto,q_auto/labateca/sendero-mariano-13 800w, https://res.cloudinary.com/dwotodtoa/image/upload/w_1200,c_limit,f_auto,q_auto/labateca/sendero-mariano-13 1200w"
          sizes="(max-width:820px) 92vw, 390px"
-         width="800" height="600" alt="La piedra pintada junto al sepulcro: «No está aquí, porque ha resucitado, tal como dijo» (Mateo 28,6)."
+         style="aspect-ratio:800/1280"
+         width="800" height="1280" alt="La piedra pintada junto al sepulcro: «No está aquí, porque ha resucitado, tal como dijo» (Mateo 28,6)."
          loading="lazy" decoding="async">
     <figcaption>La piedra pintada junto al sepulcro: «No está aquí, porque ha resucitado, tal como dijo» (Mateo 28,6).</figcaption>
   </figure>

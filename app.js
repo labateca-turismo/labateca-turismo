@@ -2174,9 +2174,14 @@ function paintLightbox() {
     const tapada  = !!aviso && !_lbDestapadas.has(_lbIdx);
     // Con aviso sin destapar se pide la versión difuminada por Cloudinary:
     // así la imagen nítida ni siquiera se descarga.
-    const tr      = tapada ? 'w_900,e_blur:2000,f_auto,q_auto' : 'w_1600,f_auto,q_auto';
+    // `c_limit` NO ES OPCIONAL. Un `w_1600` a secas es `c_scale`, que ESTIRA:
+    // de los 614 originales del sitio, 355 miden menos de 1.600 px de ancho
+    // (las de WhatsApp «como foto» son 720x1280), y el peor caso —la-pena-03,
+    // de 540 px— salía inflado casi al triple. Eso es lo que se veía borroso.
+    // Con `c_limit` Cloudinary devuelve el original cuando ya es más chico.
+    const tr      = tapada ? 'w_900,c_limit,e_blur:2000,f_auto,q_auto' : 'w_1600,c_limit,f_auto,q_auto';
     const url = cldUrl(fotos[_lbIdx], tr)
-             || cldUrl(fotos[_lbIdx], 'w_1200,f_auto,q_auto');
+             || cldUrl(fotos[_lbIdx], 'w_1200,c_limit,f_auto,q_auto');
     if (url) {
       const img = new Image();
       img.id      = 'lbImg';
