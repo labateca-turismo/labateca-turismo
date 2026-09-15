@@ -361,6 +361,9 @@
         "es": "Martes a domingo, 8:00 a. m. – 3:00 p. m.",
         "en": "Tuesday to Sunday, 8:00 a.m. – 3:00 p.m."
       },
+      "horas": [
+        "ma-do 08:00-15:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -430,6 +433,10 @@
         "es": "Martes a sábado, 8:00 a. m. – 2:00 p. m. (jornada continua)",
         "en": "Tuesday to Saturday, 8:00 a.m. – 2:00 p.m. (continuous hours)"
       },
+      "horas": [
+        "ma-sa 08:00-14:00",
+        "fe cierra"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -483,6 +490,10 @@
         "es": "Lunes a viernes, 8:00 a. m. – 12:00 m y 2:00 – 6:00 p. m.",
         "en": "Monday to Friday, 8:00 a.m. – 12:00 p.m. and 2:00 – 6:00 p.m."
       },
+      "horas": [
+        "lu-vi 08:00-12:00",
+        "lu-vi 14:00-18:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -561,6 +572,10 @@
         "es": "Lunes a sábado, 9:00 a. m. – 12:00 m y 2:00 – 7:00 p. m.",
         "en": "Monday to Saturday, 9:00 a.m. – 12:00 p.m. and 2:00 – 7:00 p.m."
       },
+      "horas": [
+        "lu-sa 09:00-12:00",
+        "lu-sa 14:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -612,6 +627,9 @@
         "es": "Todos los días, 6:00 a. m. – 5:00 p. m.",
         "en": "Every day, 6:00 a.m. – 5:00 p.m."
       },
+      "horas": [
+        "todos 06:00-17:00"
+      ],
       "dificultad": {
         "es": "Dificultad media",
         "en": "Moderate"
@@ -794,16 +812,19 @@
         "en": "1.5 km from the main square"
       },
       "tiempo": {
-        "es": "Fines de semana · para comer, avisar antes",
-        "en": "Weekends · call ahead to eat"
+        "es": "Normalmente abierto todos los días · avisar antes a don Óscar",
+        "en": "Usually open every day · let don Óscar know before you go"
       },
+      "horas": [
+        "aviso"
+      ],
       "dificultad": {
         "es": "Acceso fácil, vía destapada",
         "en": "Easy access, unpaved road"
       },
       "recomendacion": {
-        "es": "Ve al atardecer: es cuando la luz cae sobre la cordillera de enfrente y cuando empiezan a prenderse las luces del valle. Abre fines de semana, y para comer conviene avisar antes por WhatsApp a don Óscar —la comida se hace en fogón de leña y no es de un momento a otro—. Si vas en grupo, avísale con más tiempo. Y si quieres ver el Santo Sepulcro, dile: queda cinco minutos monte arriba.",
-        "en": "Go at sunset: that is when the light falls on the range opposite and when the valley lights start coming on. It opens at weekends, and if you want to eat it is best to message don Óscar on WhatsApp beforehand — the food is cooked on a wood fire and does not come out in a minute. For a group, give him more notice. And if you want to see the Santo Sepulcro, say so: it is five minutes further up the hill."
+        "es": "Ve al atardecer: es cuando la luz cae sobre la cordillera de enfrente y cuando empiezan a prenderse las luces del valle. Normalmente está abierto todos los días, pero conviene avisar antes por WhatsApp a don Óscar, y más si vas a comer —la comida se hace en fogón de leña y no es de un momento a otro—. Si vas en grupo, avísale con más tiempo. Y si quieres ver el Santo Sepulcro, dile: queda cinco minutos monte arriba.",
+        "en": "Go at sunset: that is when the light falls on the range opposite and when the valley lights start coming on. It is usually open every day, but it is best to message don Óscar on WhatsApp beforehand, especially if you want to eat — the food is cooked on a wood fire and does not come out in a minute. For a group, give him more notice. And if you want to see the Santo Sepulcro, say so: it is five minutes further up the hill."
       },
       "track": "data/tracks/pedregal.gpx",
       "wikiloc": "https://loc.wiki/t/269295597?h=2m4va5w5om&wa=sd&la=es",
@@ -915,9 +936,13 @@
         "en": "In town center"
       },
       "tiempo": {
-        "es": "7:30 am–1 pm y 3–7 pm",
-        "en": "7:30 am–1 pm & 3–7 pm"
+        "es": "Todos los días 7:30 am–1 pm y 3–7 pm",
+        "en": "Every day 7:30 am–1 pm & 3–7 pm"
       },
+      "horas": [
+        "todos 07:30-13:00",
+        "todos 15:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -973,9 +998,13 @@
         "en": "In town center"
       },
       "tiempo": {
-        "es": "8 am–1 pm y 2–8 pm",
-        "en": "8 am–1 pm & 2–8 pm"
+        "es": "Todos los días 8 am–1 pm y 2–8 pm",
+        "en": "Every day 8 am–1 pm & 2–8 pm"
       },
+      "horas": [
+        "todos 08:00-13:00",
+        "todos 14:00-20:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -1044,6 +1073,10 @@
         "es": "Lun–vie 3–9 pm · Sáb y dom 9 am–9 pm",
         "en": "Mon–Fri 3–9 pm · Sat & Sun 9 am–9 pm"
       },
+      "horas": [
+        "lu-vi 15:00-21:00",
+        "sa-do 09:00-21:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -1102,6 +1135,10 @@
         "es": "Lun–sáb 7 am–1 pm y 2–7 pm",
         "en": "Mon–Sat 7 am–1 pm & 2–7 pm"
       },
+      "horas": [
+        "lu-sa 07:00-13:00",
+        "lu-sa 14:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -1167,9 +1204,12 @@
         "en": "In town center"
       },
       "tiempo": {
-        "es": "2–9 pm",
-        "en": "2–9 pm"
+        "es": "Todos los días, 2–9 pm",
+        "en": "Every day, 2–9 pm"
       },
+      "horas": [
+        "todos 14:00-21:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -1298,16 +1338,20 @@
         "en": "In town center"
       },
       "tiempo": {
-        "es": "Lun–Vie 10 am–11 pm · fines de semana hasta 2 am",
-        "en": "Mon–Fri 10 am–11 pm · weekends until 2 am"
+        "es": "Lun–jue 10 am–11 pm · vie, sáb y dom hasta 2 am",
+        "en": "Mon–Thu 10 am–11 pm · Fri, Sat & Sun until 2 am"
       },
+      "horas": [
+        "lu-ju 10:00-23:00",
+        "vi-do 10:00-02:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
       },
       "recomendacion": {
-        "es": "Pásate por una cerveza, una partida de billar o a ver el partido. Los fines de semana el ambiente se extiende hasta las 2 de la mañana. Escribe por WhatsApp para preguntar o reservar. Ojo con el nombre: en Labateca hay dos bares que se llaman «La Barra». Este es el Teca Bar La Barra, el del mural y las mesas de billar; el otro es el Disco Bar La Barra, sobre el Parque Principal.",
-        "en": "Drop by for a beer, a game of pool or to catch the match. On weekends the vibe runs until 2 a.m. Message on WhatsApp to ask or book. Careful with the name: Labateca has two bars called 'La Barra'. This is Teca Bar La Barra, the one with the mural and the pool tables; the other is Disco Bar La Barra, on the Main Square."
+        "es": "Pásate por una cerveza, una partida de billar o a ver el partido. De viernes a domingo el ambiente se extiende hasta las 2 de la mañana. Escribe por WhatsApp para preguntar o reservar. Ojo con el nombre: en Labateca hay dos bares que se llaman «La Barra». Este es el Teca Bar La Barra, el del mural y las mesas de billar; el otro es el Disco Bar La Barra, sobre el Parque Principal.",
+        "en": "Drop by for a beer, a game of pool or to catch the match. Friday to Sunday the vibe runs until 2 a.m. Message on WhatsApp to ask or book. Careful with the name: Labateca has two bars called 'La Barra'. This is Teca Bar La Barra, the one with the mural and the pool tables; the other is Disco Bar La Barra, on the Main Square."
       },
       "fotos": [
         "labateca/teca-bar-01",
@@ -1374,6 +1418,9 @@
         "es": "Todos los días 6 am–6 pm",
         "en": "Daily 6 am–6 pm"
       },
+      "horas": [
+        "todos 06:00-18:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -1437,6 +1484,10 @@
         "es": "Todos los días 8 am–1 pm y 2:30–6:30 pm",
         "en": "Daily 8 am–1 pm & 2:30–6:30 pm"
       },
+      "horas": [
+        "todos 08:00-13:00",
+        "todos 14:30-18:30"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -1490,8 +1541,8 @@
         "en": "Galactic Bar"
       },
       "desc": {
-        "es": "Bar de ambiente temático espacial en el casco urbano de Labateca, en la esquina del Parque Principal. Un espacio amplio y colorido para compartir con amigos: cervezas, gaseosas, snacks, música y buen ambiente. Solo para mayores de edad. Los fines de semana es punto de encuentro del pueblo; entre semana atienden reservas para grupos. La atiende su propietaria, Yuleysy Mariño.",
-        "en": "A space-themed bar in Labateca's town center, on the corner of the main square. A roomy, colorful spot to hang out with friends: beers, sodas, snacks, music and good vibes. Adults only. On weekends it's the town's go-to meeting point; on weekdays they take group reservations. Run by its owner, Yuleysy Mariño."
+        "es": "Bar de ambiente temático espacial en el casco urbano de Labateca, en la esquina del Parque Principal. Un espacio amplio y colorido para compartir con amigos: cervezas, gaseosas, snacks, música y buen ambiente. Solo para mayores de edad. Los fines de semana es punto de encuentro del pueblo. La atiende su propietaria, Yuleysy Mariño.",
+        "en": "A space-themed bar in Labateca's town center, on the corner of the main square. A roomy, colorful spot to hang out with friends: beers, sodas, snacks, music and good vibes. Adults only. On weekends it's the town's go-to meeting point. Run by its owner, Yuleysy Mariño."
       },
       "comoLlegar": {
         "es": "En el casco urbano de Labateca, en la esquina del Parque Principal. La ubicación exacta aparece en el mapa; sigue el pin.",
@@ -1502,16 +1553,20 @@
         "en": "In town center"
       },
       "tiempo": {
-        "es": "Fines de semana 8 am–8 pm (o más tarde según el flujo). Entre semana, reservas para grupos.",
-        "en": "Weekends 8 am–8 pm (or later depending on the crowd). Weekdays by group reservation."
+        "es": "Lun–jue 10 am–11 pm · vie, sáb y dom hasta 2 am",
+        "en": "Mon–Thu 10 am–11 pm · Fri, Sat & Sun until 2 am"
       },
+      "horas": [
+        "lu-ju 10:00-23:00",
+        "vi-do 10:00-02:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil · solo mayores de edad",
         "en": "Easy access · adults only"
       },
       "recomendacion": {
-        "es": "El plan de fin de semana en Labateca. ¿Vienen en grupo entre semana? Escribe por WhatsApp para reservar.",
-        "en": "The weekend plan in Labateca. Coming as a group on a weekday? Message on WhatsApp to book."
+        "es": "El plan de fin de semana en Labateca: de viernes a domingo abre hasta las 2 de la mañana. ¿Vienen en grupo? Escribe por WhatsApp para reservar.",
+        "en": "The weekend plan in Labateca: Friday to Sunday it stays open until 2 a.m. Coming as a group? Message on WhatsApp to book."
       },
       "fotos": [
         "labateca/galactic-01b",
@@ -1568,6 +1623,10 @@
         "es": "Lun a Vie 8 am–4 pm · jornada continua, sin cita",
         "en": "Mon–Fri 8 am–4 pm · continuous hours, no appointment"
       },
+      "horas": [
+        "lu-vi 08:00-16:00",
+        "fe cierra"
+      ],
       "dificultad": {
         "es": "Entidad pública · acceso fácil",
         "en": "Public office · easy access"
@@ -1621,6 +1680,9 @@
         "es": "Todos los días 6 pm–10 pm",
         "en": "Daily 6 pm–10 pm"
       },
+      "horas": [
+        "todos 18:00-22:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -1689,6 +1751,9 @@
         "es": "Todos los días 8 am–7 pm",
         "en": "Daily 8 am–7 pm"
       },
+      "horas": [
+        "todos 08:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -1809,6 +1874,10 @@
         "es": "Lunes a viernes, 8:00 a. m. – 5:00 p. m. · Sábado y domingo, 8:00 a. m. – 1:00 p. m.",
         "en": "Monday to Friday, 8:00 a.m. – 5:00 p.m. · Saturday and Sunday, 8:00 a.m. – 1:00 p.m."
       },
+      "horas": [
+        "lu-vi 08:00-17:00",
+        "sa-do 08:00-13:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -1872,6 +1941,9 @@
         "es": "Todos los días, 7:00 a. m. – 7:00 p. m.",
         "en": "Every day, 7:00 a.m. – 7:00 p.m."
       },
+      "horas": [
+        "todos 07:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -1945,6 +2017,10 @@
         "es": "Todos los días, 8:00 a. m. – 1:00 p. m. y 2:00 – 7:00 p. m.",
         "en": "Every day, 8:00 a.m. – 1:00 p.m. and 2:00 – 7:00 p.m."
       },
+      "horas": [
+        "todos 08:00-13:00",
+        "todos 14:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -2008,6 +2084,10 @@
         "es": "Todos los días, 9:00 a. m. – 1:00 p. m. y 2:30 – 6:30 p. m.",
         "en": "Every day, 9:00 a.m. – 1:00 p.m. and 2:30 – 6:30 p.m."
       },
+      "horas": [
+        "todos 09:00-13:00",
+        "todos 14:30-18:30"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -2081,6 +2161,9 @@
         "es": "Lunes a domingo, 9:00 a. m. – 7:00 p. m.",
         "en": "Monday to Sunday, 9:00 a.m. – 7:00 p.m."
       },
+      "horas": [
+        "todos 09:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -2153,6 +2236,10 @@
         "es": "Lunes a viernes, en días hábiles (horario de atención judicial)",
         "en": "Monday to Friday, on business days (court service hours)"
       },
+      "horas": [
+        "lu-vi ?",
+        "fe cierra"
+      ],
       "dificultad": {
         "es": "Acceso fácil (con rampa)",
         "en": "Easy access (with ramp)"
@@ -2206,6 +2293,9 @@
         "es": "Todos los días, 8:00 a. m. – 7:00 p. m.",
         "en": "Every day, 8:00 a.m. – 7:00 p.m."
       },
+      "horas": [
+        "todos 08:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -2274,6 +2364,9 @@
         "es": "Todos los días, 6:00 a. m. – 6:00 p. m.",
         "en": "Every day, 6:00 a.m. – 6:00 p.m."
       },
+      "horas": [
+        "todos 06:00-18:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -2347,6 +2440,10 @@
         "es": "Todos los días, 8:00 a. m. – 12:00 m. y 2:00 – 6:00 p. m.",
         "en": "Every day, 8:00 a.m. – 12:00 p.m. and 2:00 – 6:00 p.m."
       },
+      "horas": [
+        "todos 08:00-12:00",
+        "todos 14:00-18:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -2410,6 +2507,10 @@
         "es": "Todos los días (excepto festivos), 7:00 a. m. – 6:30 p. m.",
         "en": "Every day (except holidays), 7:00 a.m. – 6:30 p.m."
       },
+      "horas": [
+        "todos 07:00-18:30",
+        "fe cierra"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -2473,6 +2574,9 @@
         "es": "Todos los días, 7:00 a. m. – 7:00 p. m.",
         "en": "Every day, 7:00 a.m. – 7:00 p.m."
       },
+      "horas": [
+        "todos 07:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -2540,6 +2644,9 @@
         "es": "Todos los días, 7:00 a. m. – 7:00 p. m.",
         "en": "Every day, 7:00 a.m. – 7:00 p.m."
       },
+      "horas": [
+        "todos 07:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -2593,6 +2700,9 @@
         "es": "Todos los días, 8:30 a. m. – 12:00 m.",
         "en": "Every day, 8:30 a.m. – 12:00 noon"
       },
+      "horas": [
+        "todos 08:30-12:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -2666,6 +2776,10 @@
         "es": "Lunes a sábado, 8:00 a. m. – 12:00 m. y 2:00 – 6:00 p. m.",
         "en": "Monday to Saturday, 8:00 a.m. – 12:00 noon and 2:00 – 6:00 p.m."
       },
+      "horas": [
+        "lu-sa 08:00-12:00",
+        "lu-sa 14:00-18:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -2749,6 +2863,9 @@
         "es": "Todos los días, 6:00 a. m. – 8:00 p. m.",
         "en": "Every day, 6:00 a.m. – 8:00 p.m."
       },
+      "horas": [
+        "todos 06:00-20:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -2817,6 +2934,9 @@
         "es": "Todos los días, 6:00 a. m. – 7:00 p. m.",
         "en": "Every day, 6:00 a.m. – 7:00 p.m."
       },
+      "horas": [
+        "todos 06:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -2890,6 +3010,9 @@
         "es": "Atención 24 horas — coordinar con el administrador.",
         "en": "Available 24 hours — coordinate with the manager."
       },
+      "horas": [
+        "24h"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -2998,6 +3121,10 @@
         "es": "Viernes 2:00 p. m. – 12:00 a. m.; sábados y domingos 2:00 p. m. – 1:00 a. m. Entre semana con reserva.",
         "en": "Friday 2:00 p.m. – 12:00 a.m.; Saturday and Sunday 2:00 p.m. – 1:00 a.m. Weekdays by reservation."
       },
+      "horas": [
+        "vi 14:00-00:00",
+        "sa-do 14:00-01:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -3071,6 +3198,10 @@
         "es": "Todos los días, 7:00 a. m. – 12:00 m. y 2:00 – 8:00 p. m.",
         "en": "Every day, 7:00 a.m. – 12:00 noon and 2:00 – 8:00 p.m."
       },
+      "horas": [
+        "todos 07:00-12:00",
+        "todos 14:00-20:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -3149,6 +3280,10 @@
         "es": "Todos los días, 7:00 a. m. – 12:00 m. y 1:00 – 8:00 p. m.",
         "en": "Every day, 7:00 a.m. – 12:00 noon and 1:00 – 8:00 p.m."
       },
+      "horas": [
+        "todos 07:00-12:00",
+        "todos 13:00-20:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -3212,6 +3347,9 @@
         "es": "Todos los días, 7:00 a. m. – 7:00 p. m.",
         "en": "Every day, 7:00 a.m. – 7:00 p.m."
       },
+      "horas": [
+        "todos 07:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -3275,6 +3413,10 @@
         "es": "Todos los días, 8:00 a. m. – 12:00 m. y 2:00 – 6:00 p. m.",
         "en": "Every day, 8:00 a.m. – 12:00 noon and 2:00 – 6:00 p.m."
       },
+      "horas": [
+        "todos 08:00-12:00",
+        "todos 14:00-18:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -3343,6 +3485,9 @@
         "es": "Todos los días, 6:00 a. m. – 7:00 p. m.",
         "en": "Every day, 6:00 a.m. – 7:00 p.m."
       },
+      "horas": [
+        "todos 06:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -3406,6 +3551,10 @@
         "es": "Todos los días, 8:00 a. m. – 12:00 m. y 2:00 – 7:00 p. m.",
         "en": "Every day, 8:00 a.m. – 12:00 noon and 2:00 – 7:00 p.m."
       },
+      "horas": [
+        "todos 08:00-12:00",
+        "todos 14:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -3469,6 +3618,10 @@
         "es": "Todos los días, 6:00 – 10:00 p. m. · Domingos, servicio de almuerzo",
         "en": "Every day, 6:00 – 10:00 p.m. · Sunday lunch service"
       },
+      "horas": [
+        "todos 18:00-22:00",
+        "do ?"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -3582,6 +3735,9 @@
         "es": "Todos los días, 8:00 a. m. – 8:00 p. m.",
         "en": "Every day, 8:00 a.m. – 8:00 p.m."
       },
+      "horas": [
+        "todos 08:00-20:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -3655,6 +3811,9 @@
         "es": "Todos los días, 7:30 a. m. – 9:00 p. m.",
         "en": "Every day, 7:30 a.m. – 9:00 p.m."
       },
+      "horas": [
+        "todos 07:30-21:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -3733,6 +3892,9 @@
         "es": "Todos los días, 8:00 a. m. – 7:00 p. m.",
         "en": "Every day, 8:00 a.m. – 7:00 p.m."
       },
+      "horas": [
+        "todos 08:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -3786,6 +3948,10 @@
         "es": "Todos los días, 7:00 a. m. – 12:00 m. y 2:00 – 8:00 p. m.",
         "en": "Every day, 7:00 a.m. – 12:00 noon and 2:00 – 8:00 p.m."
       },
+      "horas": [
+        "todos 07:00-12:00",
+        "todos 14:00-20:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -4045,6 +4211,9 @@
         "es": "Todos los días, 6:00 a. m. – 6:00 p. m.",
         "en": "Every day, 6:00 a.m. – 6:00 p.m."
       },
+      "horas": [
+        "todos 06:00-18:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -4109,6 +4278,9 @@
         "es": "Todos los días, 8:00 a. m. – 5:30 p. m.",
         "en": "Every day, 8:00 a.m. – 5:30 p.m."
       },
+      "horas": [
+        "todos 08:00-17:30"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -4172,6 +4344,9 @@
         "es": "Todos los días, 6:30 a. m. – 4:00 p. m.",
         "en": "Every day, 6:30 a.m. – 4:00 p.m."
       },
+      "horas": [
+        "todos 06:30-16:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -4240,6 +4415,9 @@
         "es": "Fines de semana y festivos, 7:00 a. m. – 6:00 p. m.",
         "en": "Weekends and public holidays, 7:00 a.m. – 6:00 p.m."
       },
+      "horas": [
+        "sa,do,fe 07:00-18:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -4303,6 +4481,9 @@
         "es": "Todos los días, 7:00 a. m. – 8:00 p. m.",
         "en": "Every day, 7:00 a.m. – 8:00 p.m."
       },
+      "horas": [
+        "todos 07:00-20:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -4376,6 +4557,10 @@
         "es": "Martes a domingo, 8:00 a. m. – 12:30 p. m. y 2:00 – 7:00 p. m.",
         "en": "Tuesday to Sunday, 8:00 a.m. – 12:30 p.m. and 2:00 – 7:00 p.m."
       },
+      "horas": [
+        "ma-do 08:00-12:30",
+        "ma-do 14:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -4444,6 +4629,9 @@
         "es": "Viernes, sábados, domingos y festivos, 9:00 a. m. – 1:30 a. m.",
         "en": "Fridays, Saturdays, Sundays and public holidays, 9:00 a.m. – 1:30 a.m."
       },
+      "horas": [
+        "vi,sa,do,fe 09:00-01:30"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -4512,6 +4700,10 @@
         "es": "Todos los días, 8:00 a. m. – 12:00 m. y 2:00 – 5:00 p. m.",
         "en": "Every day, 8:00 a.m. – 12:00 noon and 2:00 – 5:00 p.m."
       },
+      "horas": [
+        "todos 08:00-12:00",
+        "todos 14:00-17:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -4585,6 +4777,10 @@
         "es": "Todos los días, 8:00 a. m. – 12:00 m. y 2:00 – 5:00 p. m.",
         "en": "Every day, 8:00 a.m. – 12:00 noon and 2:00 – 5:00 p.m."
       },
+      "horas": [
+        "todos 08:00-12:00",
+        "todos 14:00-17:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -4648,6 +4844,13 @@
         "es": "Lunes a viernes 9:00 a. m. – 12:30 p. m. y 2:30 – 7:30 p. m. · Sábados 8:00 a. m. – 1:00 p. m. y 2:00 – 8:00 p. m. · Domingos 8:00 a. m. – 1:00 p. m.",
         "en": "Mon–Fri 9:00 a.m. – 12:30 p.m. and 2:30 – 7:30 p.m. · Saturdays 8:00 a.m. – 1:00 p.m. and 2:00 – 8:00 p.m. · Sundays 8:00 a.m. – 1:00 p.m."
       },
+      "horas": [
+        "lu-vi 09:00-12:30",
+        "lu-vi 14:30-19:30",
+        "sa 08:00-13:00",
+        "sa 14:00-20:00",
+        "do 08:00-13:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -4706,6 +4909,9 @@
         "es": "Todos los días, 6:00 a. m. – 5:00 p. m.",
         "en": "Every day, 6:00 a.m. – 5:00 p.m."
       },
+      "horas": [
+        "todos 06:00-17:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil, entrada destapada",
         "en": "Easy access, unpaved entrance"
@@ -4784,6 +4990,9 @@
         "es": "Lunes a sábado, 8:00 a. m. – 5:00 p. m.",
         "en": "Monday to Saturday, 8:00 a.m. – 5:00 p.m."
       },
+      "horas": [
+        "lu-sa 08:00-17:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil, entrada destapada",
         "en": "Easy access, unpaved entrance"
@@ -4862,6 +5071,9 @@
         "es": "Todos los días, 7:00 a. m. – 7:00 p. m.",
         "en": "Every day, 7:00 a.m. – 7:00 p.m."
       },
+      "horas": [
+        "todos 07:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -4930,6 +5142,10 @@
         "es": "Martes a domingo, 8:00 a. m. – 12:30 p. m. y 2:30 – 6:30 p. m.",
         "en": "Tuesday to Sunday, 8:00 a.m. – 12:30 p.m. and 2:30 – 6:30 p.m."
       },
+      "horas": [
+        "ma-do 08:00-12:30",
+        "ma-do 14:30-18:30"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -5013,6 +5229,9 @@
         "es": "Todos los días, 6:30 a. m. – 3:00 p. m.",
         "en": "Every day, 6:30 a.m. – 3:00 p.m."
       },
+      "horas": [
+        "todos 06:30-15:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -5086,6 +5305,10 @@
         "es": "Todos los días, 7:00 a. m. – 12:30 p. m. y 1:30 – 7:00 p. m.",
         "en": "Every day, 7:00 a.m. – 12:30 p.m. and 1:30 – 7:00 p.m."
       },
+      "horas": [
+        "todos 07:00-12:30",
+        "todos 13:30-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -5159,6 +5382,9 @@
         "es": "Todos los días, 6:30 a. m. – 8:30 p. m.",
         "en": "Every day, 6:30 a.m. – 8:30 p.m."
       },
+      "horas": [
+        "todos 06:30-20:30"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -5242,6 +5468,9 @@
         "es": "Todos los días, 6:00 a. m. – 8:00 p. m.",
         "en": "Every day, 6:00 a.m. – 8:00 p.m."
       },
+      "horas": [
+        "todos 06:00-20:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -5325,6 +5554,10 @@
         "es": "Martes a sábado, 7:00 a. m. – 12:00 m. y 1:35 – 5:00 p. m.",
         "en": "Tuesday to Saturday, 7:00 a.m. – 12:00 noon and 1:35 – 5:00 p.m."
       },
+      "horas": [
+        "ma-sa 07:00-12:00",
+        "ma-sa 13:35-17:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -5398,6 +5631,9 @@
         "es": "Sábados 7:00 a. m. – 1:00 p. m. en la oficina · Martes a viernes 7:00 a. m. – 6:00 p. m. en el campo",
         "en": "Saturdays 7:00 a.m. – 1:00 p.m. at the office · Tuesday to Friday 7:00 a.m. – 6:00 p.m. in the field"
       },
+      "horas": [
+        "sa 07:00-13:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -5456,6 +5692,9 @@
         "es": "Urgencias 24 horas, todos los días · Citas: odontología lunes a viernes 9:00 – 10:00 a. m.; medicina general lunes a viernes 10:00 – 11:00 a. m.",
         "en": "24-hour emergency care, every day · Appointments: dentistry Monday to Friday 9:00 – 10:00 a.m.; general medicine Monday to Friday 10:00 – 11:00 a.m."
       },
+      "horas": [
+        "24h"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -5514,6 +5753,9 @@
         "es": "Martes a domingo, 8:00 a. m. – 2:00 p. m.",
         "en": "Tuesday to Sunday, 8:00 a.m. – 2:00 p.m."
       },
+      "horas": [
+        "ma-do 08:00-14:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -5572,6 +5814,9 @@
         "es": "Viernes a domingo, 3:00 p. m. – 12:00 a. m.",
         "en": "Friday to Sunday, 3:00 p.m. – 12:00 a.m."
       },
+      "horas": [
+        "vi-do 15:00-00:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -5634,6 +5879,10 @@
         "es": "Lun–vie 7:00 a. m. – 5:00 p. m. · Fines de semana y festivos 9:00 a. m. – 8:00 p. m.",
         "en": "Mon–Fri 7:00 a.m. – 5:00 p.m. · Weekends and holidays 9:00 a.m. – 8:00 p.m."
       },
+      "horas": [
+        "lu-vi 07:00-17:00",
+        "sa,do,fe 09:00-20:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -5707,6 +5956,9 @@
         "es": "Atención 24 horas",
         "en": "Open 24 hours"
       },
+      "horas": [
+        "24h"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -5805,6 +6057,10 @@
         "es": "Todos los días, 7:30 a. m. – 12:00 m. y 2:00 – 5:00 p. m.",
         "en": "Daily, 7:30 a.m. – 12:00 noon and 2:00 – 5:00 p.m."
       },
+      "horas": [
+        "todos 07:30-12:00",
+        "todos 14:00-17:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -5863,6 +6119,9 @@
         "es": "Viernes a domingo, 2:00 p. m. – 11:00 p. m.",
         "en": "Friday to Sunday, 2:00 p.m. – 11:00 p.m."
       },
+      "horas": [
+        "vi-do 14:00-23:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -5930,6 +6189,9 @@
         "es": "Sábados y domingos, 8:00 a. m. – 9:00 p. m.",
         "en": "Saturdays and Sundays, 8:00 a.m. – 9:00 p.m."
       },
+      "horas": [
+        "sa-do 08:00-21:00"
+      ],
       "dificultad": {
         "es": "Fácil · el sendero al pozo es corto y con baranda",
         "en": "Easy · the path to the pool is short and has a handrail"
@@ -6240,6 +6502,10 @@
         "es": "Lunes a viernes en horario de oficina · conmutador 314 479 8925",
         "en": "Monday to Friday, office hours · switchboard +57 314 479 8925"
       },
+      "horas": [
+        "lu-vi ?",
+        "fe cierra"
+      ],
       "dificultad": {
         "es": "Entidad pública · acceso fácil",
         "en": "Public institution · easy access"
@@ -6429,9 +6695,13 @@
         "en": "South-western edge of town"
       },
       "tiempo": {
-        "es": "Visitas de 9:00 a 11:00 a. m. y de 2:00 a 4:00 p. m. · celular 320 234 7720",
-        "en": "Visiting hours 9:00–11:00 a.m. and 2:00–4:00 p.m. · mobile +57 320 234 7720"
+        "es": "Visitas de lunes a viernes, de 9:00 a 11:00 a. m. y de 2:00 a 4:00 p. m. · celular 320 234 7720",
+        "en": "Visiting hours Monday to Friday, 9:00–11:00 a.m. and 2:00–4:00 p.m. · mobile +57 320 234 7720"
       },
+      "horas": [
+        "lu-vi 09:00-11:00",
+        "lu-vi 14:00-16:00"
+      ],
       "dificultad": {
         "es": "Institución municipal · visitas con registro previo",
         "en": "Municipal institution · visitors must sign in"
@@ -6592,6 +6862,9 @@
         "es": "Servicio permanente · cuadrante 318 630 4751 · emergencias 123",
         "en": "Always staffed · quadrant line +57 318 630 4751 · emergencies 123"
       },
+      "horas": [
+        "24h"
+      ],
       "dificultad": {
         "es": "Entidad pública · acceso fácil",
         "en": "Public institution · easy access"
@@ -6718,6 +6991,11 @@
         "es": "Lunes a viernes 7:00–11:30 a. m. y 1:00–4:00 p. m. · sábados 8:00 a. m.–12:00 m.",
         "en": "Monday to Friday 7:00–11:30 a.m. and 1:00–4:00 p.m. · Saturdays 8:00 a.m.–12:00 noon"
       },
+      "horas": [
+        "lu-vi 07:00-11:30",
+        "lu-vi 13:00-16:00",
+        "sa 08:00-12:00"
+      ],
       "dificultad": {
         "es": "Oficina de servicio público · acceso fácil",
         "en": "Public utility office · easy access"
@@ -6771,6 +7049,9 @@
         "es": "Atiende 24 horas · WhatsApp 312 307 9138",
         "en": "Open 24 hours · WhatsApp +57 312 307 9138"
       },
+      "horas": [
+        "24h"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -6834,8 +7115,8 @@
         "en": "Miami Bar"
       },
       "desc": {
-        "es": "Bar de barra larga en madera rústica, hecha con troncos y tablón, en un local pintado de rojo y verde con luces de colores y un mural de acordeón en la pared. Tiene neveras de cerveza y gaseosa, mecato, sonido y pantalla, y una ventana grande por la que entra la vista del pueblo. Lo administra María Segura. Es sitio de tarde y de noche: entre semana cierra a las once, y los fines de semana la cosa se estira hasta las dos de la mañana.",
-        "en": "A bar with a long rustic counter built from tree trunks and planks, in a room painted red and green with coloured lights and an accordion mural on the wall. It has beer and soft-drink coolers, snacks, sound system and a screen, plus a big window that lets the view of the town in. It is run by María Segura. This is an afternoon and evening place: on weekdays it closes at eleven, and at weekends it runs until two in the morning."
+        "es": "Bar de barra larga en madera rústica, hecha con troncos y tablón, en un local pintado de rojo y verde con luces de colores y un mural de acordeón en la pared. Tiene neveras de cerveza y gaseosa, mecato, sonido y pantalla, y una ventana grande por la que entra la vista del pueblo. Lo administra María Segura. Es sitio de tarde y de noche: de lunes a jueves cierra a las once, y de viernes a domingo la cosa se estira hasta las dos de la mañana.",
+        "en": "A bar with a long rustic counter built from tree trunks and planks, in a room painted red and green with coloured lights and an accordion mural on the wall. It has beer and soft-drink coolers, snacks, sound system and a screen, plus a big window that lets the view of the town in. It is run by María Segura. This is an afternoon and evening place: Monday to Thursday it closes at eleven, and from Friday to Sunday it runs until two in the morning."
       },
       "comoLlegar": {
         "es": "En el casco urbano, muy cerca del Parque Principal. Se reconoce por el letrero luminoso «Miami Bar» detrás de la barra.",
@@ -6846,9 +7127,13 @@
         "en": "A block from the Main Square"
       },
       "tiempo": {
-        "es": "Lunes a viernes 2:00 p. m.–11:00 p. m. · fines de semana 2:00 p. m.–2:00 a. m.",
-        "en": "Monday to Friday 2:00 p.m.–11:00 p.m. · weekends 2:00 p.m.–2:00 a.m."
+        "es": "Lunes a jueves 2:00 p. m.–11:00 p. m. · viernes, sábado y domingo 2:00 p. m.–2:00 a. m.",
+        "en": "Monday to Thursday 2:00 p.m.–11:00 p.m. · Friday, Saturday and Sunday 2:00 p.m.–2:00 a.m."
       },
+      "horas": [
+        "lu-ju 14:00-23:00",
+        "vi-do 14:00-02:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -6917,6 +7202,10 @@
         "es": "Todos los días 9:00 a. m.–1:00 p. m. y 2:30–7:00 p. m.",
         "en": "Every day 9:00 a.m.–1:00 p.m. and 2:30–7:00 p.m."
       },
+      "horas": [
+        "todos 09:00-13:00",
+        "todos 14:30-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -6980,6 +7269,9 @@
         "es": "Todos los días 8:00 a. m.–7:00 p. m.",
         "en": "Every day 8:00 a.m.–7:00 p.m."
       },
+      "horas": [
+        "todos 08:00-19:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -7063,6 +7355,9 @@
         "es": "Pedidos a toda hora por WhatsApp 315 926 5334",
         "en": "Orders at any hour via WhatsApp +57 315 926 5334"
       },
+      "horas": [
+        "24h"
+      ],
       "dificultad": {
         "es": "Por encargo · entrega a domicilio",
         "en": "To order · home delivery"
@@ -7136,6 +7431,10 @@
         "es": "Todos los días 6:00 a. m.–2:00 p. m. y 4:00–8:00 p. m.",
         "en": "Every day 6:00 a.m.–2:00 p.m. and 4:00–8:00 p.m."
       },
+      "horas": [
+        "todos 06:00-14:00",
+        "todos 16:00-20:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -7196,9 +7495,12 @@
         "en": "In the town centre"
       },
       "tiempo": {
-        "es": "Restaurante y hospedaje todos los días · arepas, morcillas y tamales los fines de semana",
-        "en": "Restaurant and lodging every day · arepas, blood sausage and tamales at weekends"
+        "es": "Restaurante y hospedaje todos los días, avisando antes · arepas, morcillas y tamales los fines de semana",
+        "en": "Restaurant and lodging every day, with notice · arepas, blood sausage and tamales at weekends"
       },
+      "horas": [
+        "aviso"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -7576,6 +7878,9 @@
         "es": "Lunes a viernes, en horario de oficina",
         "en": "Monday to Friday, office hours"
       },
+      "horas": [
+        "lu-vi ?"
+      ],
       "dificultad": {
         "es": "Acceso fácil, entrada a nivel",
         "en": "Easy access, step-free entrance"
@@ -7671,9 +7976,13 @@
         "en": "In the town centre"
       },
       "tiempo": {
-        "es": "9:00 a. m.–12:00 m. y 3:00–6:30 p. m.",
-        "en": "9:00 a.m.–12:00 noon and 3:00–6:30 p.m."
+        "es": "Todos los días, 9:00 a. m.–12:00 m. y 3:00–6:30 p. m.",
+        "en": "Every day, 9:00 a.m.–12:00 noon and 3:00–6:30 p.m."
       },
+      "horas": [
+        "todos 09:00-12:00",
+        "todos 15:00-18:30"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -7769,16 +8078,20 @@
         "en": "In the town centre"
       },
       "tiempo": {
-        "es": "Entre semana 11:00 a. m.–11:00 p. m. · fines de semana 11:00 a. m.–2:00 a. m.",
-        "en": "Weekdays 11:00 a.m.–11:00 p.m. · weekends 11:00 a.m.–2:00 a.m."
+        "es": "Lunes a jueves 11:00 a. m.–11:00 p. m. · viernes, sábado y domingo 11:00 a. m.–2:00 a. m.",
+        "en": "Monday to Thursday 11:00 a.m.–11:00 p.m. · Friday, Saturday and Sunday 11:00 a.m.–2:00 a.m."
       },
+      "horas": [
+        "lu-ju 11:00-23:00",
+        "vi-do 11:00-02:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
       },
       "recomendacion": {
-        "es": "Es el bar del parque: se llega caminando desde cualquier punto del casco urbano y el fin de semana la noche se alarga hasta las dos de la mañana. Ojo con el nombre: en Labateca hay dos bares que se llaman «La Barra» y no tienen nada que ver. Este es el Disco Bar La Barra, de María Segura, en el parque; el otro es el Teca Bar La Barra, el del mural y las mesas de billar, a unas tres cuadras. Escríbele por WhatsApp al 310 228 9043.",
-        "en": "This is the bar on the square: you can walk to it from anywhere in town, and at weekends the night runs until two in the morning. Careful with the name: Labateca has two bars called 'La Barra' and they are unrelated. This is Disco Bar La Barra, María Segura's, on the square; the other is Teca Bar La Barra, the one with the mural and the pool tables, about three blocks away. Message on WhatsApp at +57 310 228 9043."
+        "es": "Es el bar del parque: se llega caminando desde cualquier punto del casco urbano y de viernes a domingo la noche se alarga hasta las dos de la mañana. Ojo con el nombre: en Labateca hay dos bares que se llaman «La Barra» y no tienen nada que ver. Este es el Disco Bar La Barra, de María Segura, en el parque; el otro es el Teca Bar La Barra, el del mural y las mesas de billar, a unas tres cuadras. Escríbele por WhatsApp al 310 228 9043.",
+        "en": "This is the bar on the square: you can walk to it from anywhere in town, and from Friday to Sunday the night runs until two in the morning. Careful with the name: Labateca has two bars called 'La Barra' and they are unrelated. This is Disco Bar La Barra, María Segura's, on the square; the other is Teca Bar La Barra, the one with the mural and the pool tables, about three blocks away. Message on WhatsApp at +57 310 228 9043."
       },
       "fotos": [
         "labateca/disco-barra-01",
@@ -7835,6 +8148,10 @@
         "es": "Lunes a viernes 8:00 a. m.–12:00 m. y 2:00–6:00 p. m.",
         "en": "Monday to Friday 8:00 a.m.–12:00 noon and 2:00–6:00 p.m."
       },
+      "horas": [
+        "lu-vi 08:00-12:00",
+        "lu-vi 14:00-18:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -7929,9 +8246,14 @@
         "en": "In the town centre"
       },
       "tiempo": {
-        "es": "8:00 a. m.–12:00 m. y 2:00–6:00 p. m.",
-        "en": "8:00 a.m.–12:00 noon and 2:00–6:00 p.m."
+        "es": "Lunes a viernes, 8:00 a. m.–12:00 m. y 2:00–6:00 p. m.",
+        "en": "Monday to Friday, 8:00 a.m.–12:00 noon and 2:00–6:00 p.m."
       },
+      "horas": [
+        "lu-vi 08:00-12:00",
+        "lu-vi 14:00-18:00",
+        "fe cierra"
+      ],
       "dificultad": {
         "es": "Acceso fácil · en la planta alta, se sube por escalera",
         "en": "Easy access · on the upper floor, reached by stairs"
@@ -7981,9 +8303,13 @@
         "en": "~2.6 km from the town centre"
       },
       "tiempo": {
-        "es": "8:00 a. m.–12:00 m. y 2:00–6:00 p. m.",
-        "en": "8:00 a.m.–12:00 noon and 2:00–6:00 p.m."
+        "es": "Todos los días, 8:00 a. m.–12:00 m. y 2:00–6:00 p. m.",
+        "en": "Every day, 8:00 a.m.–12:00 noon and 2:00–6:00 p.m."
       },
+      "horas": [
+        "todos 08:00-12:00",
+        "todos 14:00-18:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil · a la orilla de la vía",
         "en": "Easy access · right at the roadside"

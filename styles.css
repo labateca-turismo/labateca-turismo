@@ -338,6 +338,23 @@ section{padding:clamp(70px,11vw,130px) 0;position:relative}
 .chip.active{background:var(--forest);color:var(--cream);border-color:var(--forest)}
 .chip .ct{font-size:.74rem;opacity:.7;font-weight:800}
 
+/* Segunda fila: por horario (v217). Se suma a la de categorías, así que va
+   pegada a ella y más liviana, con el activo en arcilla para distinguirla. */
+.filters-when{margin:-26px 0 34px;gap:8px}
+.filters-when .chip{padding:8px 15px;font-size:.84rem;background:transparent}
+.filters-when .chip svg{width:16px;height:16px;flex:none}
+.filters-when .chip.active{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+/* Estado en la tarjeta: verde abierto, ámbar «cierra pronto» o «con aviso», crema cerrado */
+.pc-hora{align-self:flex-start;display:inline-flex;align-items:center;gap:7px;font-size:.76rem;font-weight:800;
+  line-height:1.25;padding:5px 12px 5px 10px;border-radius:99px;margin:0 0 10px}
+.pc-hora::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;flex:none}
+.pc-hora.ab{background:#e1efe4;color:#1b5e33}
+.pc-hora.pr,.pc-hora.av{background:#f8ebcf;color:#7a4e08}
+.pc-hora.ce{background:var(--cream-2);color:var(--ink-mut)}
+.hr-nota{grid-column:1/-1;margin:0;font-size:.9rem;color:var(--ink-mut);background:var(--cream);
+  border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+.hr-nota.fest{background:#f8ebcf;border-color:#e9d09a;color:#5a3a05}
+
 .places-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:26px}
 .place-card{
   background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;

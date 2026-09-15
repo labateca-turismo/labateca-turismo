@@ -309,7 +309,7 @@ const I18N = {
     about_video_cap:"«Labateca es calidad de vida» · Alcaldía de Labateca",
     about_video_nota:"Video del canal de YouTube de la Alcaldía de Labateca. No se copia aquí: al tocar play se abre el reproductor de YouTube y la reproducción se le cuenta al municipio.",
     places_eyebrow:"Qué visitar", places_title:"Lugares para descubrir",
-    places_sub:"Filtra por categoría, guarda tus favoritos ♥ y arma tu ruta. Toca \"Cómo llegar\" para abrir Google Maps.",
+    places_sub:"Filtra por categoría o por horario, guarda tus favoritos ♥ y arma tu ruta. Toca \"Cómo llegar\" para abrir Google Maps.",
     rutas_eyebrow:"Planes listos", rutas_title:"Rutas sugeridas",
     rutas_sub:"Elige una ruta y sus paradas se te guardan solas. Después quitas las que no te interesen o añades otras.",
     rutas_btn:"Usar esta ruta", rutas_btn_active:"✓ Ruta cargada",
@@ -417,6 +417,11 @@ const I18N = {
     back_home:"Volver al inicio",
     visits_label:"visitas", visits_aria:"Personas que han visitado el sitio",
     fil_all:"Todos", fil_naturaleza:"Naturaleza", fil_cultura:"Cultura", fil_gastronomia:"Gastronomía", fil_hospedaje:"Hospedaje", fil_comercio:"Comercio", fil_servicios:"Servicios", fil_fav:"♥ Favoritos",
+    when_todos:"A cualquier hora", when_ahora:"Abierto ahora", when_dia:"De día", when_noche:"De noche", when_finde:"Solo fines de semana",
+    when_aria:"Filtrar lugares por horario", when_empty:"Ningún lugar de esta categoría atiende en ese horario.",
+    when_sin:"{n} lugares de esta categoría no tienen horario confirmado y no salen en este filtro.",
+    when_sin1:"1 lugar de esta categoría no tiene horario confirmado y no sale en este filtro.",
+    when_festivo:"Hoy es festivo en Colombia y algunos lugares cambian el horario. Antes de salir, confírmalo por WhatsApp.",
     verify_badge:"Por verificar", approx_note:"Ubicación aproximada — por confirmar en campo",
     route_empty:"Tu ruta está vacía. Toca “Agregar” en los lugares que quieras visitar.",
     fav_empty:"Aún no tienes favoritos. Toca el ♥ en un lugar para guardarlo.",
@@ -485,7 +490,7 @@ const I18N = {
     about_video_cap:"“Labateca is quality of life” · Municipality of Labateca",
     about_video_nota:"Video from the YouTube channel of the Municipality of Labateca. It is not copied here: pressing play opens the YouTube player and the view is counted for the municipality.",
     places_eyebrow:"What to see", places_title:"Places to discover",
-    places_sub:"Filter by category, save your favorites ♥ and build your route. Tap \"Directions\" to open Google Maps.",
+    places_sub:"Filter by category or by opening hours, save your favorites ♥ and build your route. Tap \"Directions\" to open Google Maps.",
     rutas_eyebrow:"Ready-made plans", rutas_title:"Suggested routes",
     rutas_sub:"Pick a route and its stops are saved for you. Then drop the ones you don't want, or add others.",
     rutas_btn:"Use this route", rutas_btn_active:"✓ Route loaded",
@@ -593,6 +598,11 @@ const I18N = {
     back_home:"Back to home",
     visits_label:"visits", visits_aria:"People who have visited the site",
     fil_all:"All", fil_naturaleza:"Nature", fil_cultura:"Culture", fil_gastronomia:"Food", fil_hospedaje:"Lodging", fil_comercio:"Shops", fil_servicios:"Services", fil_fav:"♥ Favorites",
+    when_todos:"Any time", when_ahora:"Open now", when_dia:"Daytime", when_noche:"At night", when_finde:"Weekends only",
+    when_aria:"Filter places by opening hours", when_empty:"No place in this category is open at those times.",
+    when_sin:"{n} places in this category have no confirmed hours and don't show up in this filter.",
+    when_sin1:"1 place in this category has no confirmed hours and doesn't show up in this filter.",
+    when_festivo:"Today is a public holiday in Colombia and some places change their hours. Check on WhatsApp before you go.",
     verify_badge:"To verify", approx_note:"Approximate location — confirm on site",
     route_empty:"Your route is empty. Tap “Add” on the places you'd like to visit.",
     fav_empty:"No favorites yet. Tap the ♥ on a place to save it.",
@@ -639,6 +649,7 @@ const GALLERY = [
    ============================================================ */
 let lang = "es";
 let activeFilter = "all";
+let activeWhen = "todos";   // segunda fila de filtros: por horario (v217)
 const memStore = {};
 const store = {
   get(k){ try{ const v=localStorage.getItem(k); return v?JSON.parse(v):memStore[k]??null; }catch(e){ return memStore[k]??null; } },
@@ -656,6 +667,9 @@ const placeName = (p)=> (p.nombre || p.name || {})[lang] || '';
 const IC = {
   pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>',
   clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  sun:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
+  moon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>',
+  cal:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>',
   hill:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M3 20l6-9 4 5 3-4 5 8"/></svg>',
   cam:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>',
   heart:'<svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>',
@@ -667,6 +681,267 @@ const IC = {
   phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>'
 };
 const CATS = ["all","naturaleza","cultura","gastronomia","hospedaje","comercio","servicios","fav"];
+
+/* HORAS:INICIO ─────────────────────────────────────────────────────
+   ¿Está abierto? Lee el campo `horas` de places.json (v217). La gramática
+   está en CLAUDE.md y en poner_horas.js. check_horas.js EJECUTA este
+   bloque tal cual para probarlo: por eso aquí adentro no se toca el DOM
+   ni ninguna variable de fuera (el idioma llega por parámetro).
+
+   Todo se calcula en hora de Colombia (UTC-5, sin horario de verano),
+   aunque el visitante traiga el celular en hora de Venezuela o de España:
+   la «hora de pared» de Colombia se guarda en los campos UTC de un Date. */
+const HR_DIAS  = ["do","lu","ma","mi","ju","vi","sa"];   // índice = getUTCDay()
+const HR_NOCHE = 18 * 60;   // «de noche» empieza a las 6 p. m. (José, 15 sep 2026)
+const HR_MIN   = 60;        // y cuenta si atiende por lo menos una hora en esa franja
+const HR_DN = {
+  es: ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'],
+  en: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'] };
+const _hrCache = new WeakMap();
+
+function hrAhora(){ return new Date(Date.now() - 5 * 3600e3); }
+
+/* ["lu-ju 14:00-23:00","vi-do 14:00-02:00","fe cierra"] →
+   { siempre, aviso, cierraFestivo, franjas:[{ dias:Set, fe, a, c } | { dias, fe, sinHora }] }
+   a y c en minutos desde las 00:00; si cierra pasada la medianoche, c > 1440.
+   Cualquier renglón que no entienda anula todo: mejor callar que adivinar. */
+function hrParse(horas){
+  if(!Array.isArray(horas) || !horas.length) return null;
+  if(_hrCache.has(horas)) return _hrCache.get(horas);
+  const r = { siempre:false, aviso:false, cierraFestivo:false, franjas:[] };
+  let ok = true;
+  for(const it of horas){
+    if(it === '24h'){ r.siempre = true; continue; }
+    if(it === 'aviso'){ r.aviso = true; continue; }
+    if(it === 'fe cierra'){ r.cierraFestivo = true; continue; }
+    const m = /^(\S+) (?:\?|(\d\d):(\d\d)-(\d\d):(\d\d))$/.exec(String(it));
+    if(!m){ ok = false; break; }
+    const f = { dias:new Set(), fe:false };
+    for(const tok of m[1].split(',')){
+      if(tok === 'todos'){ for(let i = 0; i < 7; i++) f.dias.add(i); continue; }
+      if(tok === 'fe'){ f.fe = true; continue; }
+      const par = tok.split('-');
+      const x = HR_DIAS.indexOf(par[0]), y = par.length > 1 ? HR_DIAS.indexOf(par[1]) : x;
+      if(x < 0 || y < 0 || par.length > 2){ ok = false; break; }
+      // los rangos corren de lunes a domingo: «vi-do» es viernes, sábado y domingo
+      for(let k = (x + 6) % 7; ; k = (k + 1) % 7){ f.dias.add((k + 1) % 7); if(k === (y + 6) % 7) break; }
+    }
+    if(!ok) break;
+    if(m[2] === undefined) f.sinHora = true;
+    else {
+      f.a = +m[2] * 60 + +m[3];
+      f.c = +m[4] * 60 + +m[5];
+      if(f.c <= f.a) f.c += 1440;
+    }
+    r.franjas.push(f);
+  }
+  const out = ok ? r : null;
+  _hrCache.set(horas, out);
+  return out;
+}
+
+/* Festivos de Colombia: los de fecha fija, los que la Ley Emiliani (Ley 51
+   de 1983) corre al lunes siguiente y los que dependen de la Pascua. */
+const _hrFest = {};
+function hrFestivos(y){
+  if(_hrFest[y]) return _hrFest[y];
+  const fecha = (mes, d) => new Date(Date.UTC(y, mes - 1, d));
+  const mas = (t, n) => new Date(t.getTime() + n * 864e5);
+  const aLunes = t => mas(t, (8 - t.getUTCDay()) % 7);
+  // Pascua: algoritmo de Meeus/Jones/Butcher
+  const qa = y % 19, qb = Math.floor(y / 100), qc = y % 100, qd = Math.floor(qb / 4), qe = qb % 4,
+        qf = Math.floor((qb + 8) / 25), qg = Math.floor((qb - qf + 1) / 3),
+        qh = (19 * qa + qb - qd - qg + 15) % 30, qi = Math.floor(qc / 4), qk = qc % 4,
+        ql = (32 + 2 * qe + 2 * qi - qh - qk) % 7, qm = Math.floor((qa + 11 * qh + 22 * ql) / 451);
+  const pascua = fecha(Math.floor((qh + ql - 7 * qm + 114) / 31), ((qh + ql - 7 * qm + 114) % 31) + 1);
+  const dias = [
+    ...[[1,1],[5,1],[7,20],[8,7],[12,8],[12,25]].map(([mes, d]) => fecha(mes, d)),
+    ...[[1,6],[3,19],[6,29],[8,15],[10,12],[11,1],[11,11]].map(([mes, d]) => aLunes(fecha(mes, d))),
+    // 9 de julio, Virgen de Chiquinquirá: Ley 2578 de 2026, que también se corre al lunes
+    ...(y >= 2026 ? [aLunes(fecha(7, 9))] : []),
+    // Jueves y Viernes Santo; Ascensión, Corpus Christi y Sagrado Corazón, ya corridos al lunes
+    ...[-3, -2, 43, 64, 71].map(n => mas(pascua, n)),
+  ];
+  return (_hrFest[y] = new Set(dias.map(t => t.toISOString().slice(0, 10))));
+}
+function hrEsFestivo(t){ return hrFestivos(t.getUTCFullYear()).has(t.toISOString().slice(0, 10)); }
+
+/* Las franjas que rigen en una fecha. Si el lugar dice «fe cierra», el
+   festivo no abre; si alguna franja dice «fe», el festivo rigen solo esas;
+   si no dice nada, el festivo cuenta como el día de la semana que es (y
+   la página avisa que ese día el horario puede cambiar). */
+function hrDelDia(h, t){
+  const fest = hrEsFestivo(t);
+  if(fest && h.cierraFestivo) return [];
+  if(fest && h.franjas.some(f => f.fe)) return h.franjas.filter(f => f.fe);
+  const w = t.getUTCDay();
+  return h.franjas.filter(f => f.dias.has(w));
+}
+
+/* Estado en un momento (por defecto, ahora en Colombia):
+     { k:'siempre' } · { k:'aviso' } · { k:'sinhora' }       (atiende hoy, hora sin confirmar)
+     { k:'abierto', cierra, pronto }                         cierra: minutos desde las 00:00 de hoy
+     { k:'cerrado', dias, dia, abre, porFestivo }            dias: cuántos faltan para abrir */
+function hrEstado(horas, ahora){
+  const h = hrParse(horas);
+  if(!h) return null;
+  if(h.siempre) return { k:'siempre', abierto:true };
+  if(h.aviso)   return { k:'aviso' };
+  ahora = ahora || hrAhora();
+  const min = ahora.getUTCHours() * 60 + ahora.getUTCMinutes();
+  const hoy = new Date(Date.UTC(ahora.getUTCFullYear(), ahora.getUTCMonth(), ahora.getUTCDate()));
+  const deHoy = hrDelDia(h, hoy);
+  const cierres = deHoy.filter(f => !f.sinHora && min >= f.a && min < f.c).map(f => f.c)
+    .concat(hrDelDia(h, new Date(hoy.getTime() - 864e5))          // lo de anoche que pasó la medianoche
+      .filter(f => !f.sinHora && f.c > 1440 && min < f.c - 1440).map(f => f.c - 1440));
+  if(cierres.length){
+    let cierra = Math.max(...cierres), sigue;
+    while((sigue = deHoy.find(f => !f.sinHora && f.a === cierra && f.c > cierra))) cierra = sigue.c;
+    return { k:'abierto', abierto:true, cierra, pronto: cierra - min <= 60 };
+  }
+  if(deHoy.some(f => f.sinHora)) return { k:'sinhora' };
+  const porFestivo = h.cierraFestivo && hrEsFestivo(hoy);
+  for(let n = 0; n <= 14; n++){
+    const t = new Date(hoy.getTime() + n * 864e5);
+    const fr = hrDelDia(h, t);
+    const aperturas = fr.filter(f => !f.sinHora && (n > 0 || f.a > min)).map(f => f.a);
+    if(aperturas.length) return { k:'cerrado', dias:n, dia:t.getUTCDay(), abre:Math.min(...aperturas), porFestivo };
+    if(n > 0 && fr.some(f => f.sinHora)) return { k:'cerrado', dias:n, dia:t.getUTCDay(), abre:null, porFestivo };
+  }
+  return { k:'cerrado', dias:null, porFestivo };
+}
+
+function _hrPisa(h, desde, hasta){
+  let mx = 0;
+  for(const f of h.franjas) if(!f.sinHora) mx = Math.max(mx, Math.min(f.c, hasta) - Math.max(f.a, desde));
+  return mx;
+}
+/* «De día»: atiende por lo menos una hora entre las 6 a. m. y las 6 p. m.
+   «De noche»: por lo menos una hora entre las 6 p. m. y las 6 a. m. */
+function hrDeDia(horas){
+  const h = hrParse(horas);
+  return !!h && (h.siempre || h.aviso || _hrPisa(h, 6 * 60, HR_NOCHE) >= HR_MIN);
+}
+function hrDeNoche(horas){
+  const h = hrParse(horas);
+  return !!h && (h.siempre || h.aviso || Math.max(_hrPisa(h, HR_NOCHE, 30 * 60), _hrPisa(h, 0, 6 * 60)) >= HR_MIN);
+}
+/* «Solo fines de semana»: todas sus franjas caen en viernes, sábado o
+   domingo (para José, el fin de semana del pueblo empieza el viernes). */
+function hrSoloFinde(horas){
+  const h = hrParse(horas);
+  if(!h || h.siempre || h.aviso) return false;
+  const fr = h.franjas.filter(f => f.dias.size);
+  return fr.length > 0 && fr.every(f => [...f.dias].every(d => d === 5 || d === 6 || d === 0));
+}
+/* Para ordenar «De noche»: la hora de cierre más tarde de la semana. */
+function hrCierreNoche(horas){
+  const h = hrParse(horas);
+  if(!h) return -2;
+  if(h.aviso) return -1;
+  if(h.siempre) return 0;
+  return Math.max(0, ...h.franjas.filter(f => !f.sinHora).map(f => f.c));
+}
+
+function hrHora(m, lg){
+  m = ((m % 1440) + 1440) % 1440;
+  const h = Math.floor(m / 60), mi = m % 60, mm = mi ? ':' + String(mi).padStart(2, '0') : '';
+  if(lg === 'en') return m === 0 ? 'midnight' : m === 720 ? 'noon' : (h % 12 || 12) + mm + (h < 12 ? ' am' : ' pm');
+  return m === 720 ? '12 m.' : (h % 12 || 12) + mm + (h < 12 ? ' a. m.' : ' p. m.');
+}
+/* → { c, txt }.  c: 'ab' abierto · 'pr' cierra pronto · 'av' con aviso o sin hora · 'ce' cerrado */
+function hrEtiqueta(e, lg){
+  const en = lg === 'en';
+  if(e.k === 'siempre') return { c:'ab', txt: en ? 'Open 24 hours' : 'Abierto 24 horas' };
+  if(e.k === 'aviso')   return { c:'av', txt: en ? 'Call ahead before you go' : 'Abre con aviso previo' };
+  if(e.k === 'sinhora') return { c:'av', txt: en ? 'Open today · hours not confirmed' : 'Atiende hoy · hora sin confirmar' };
+  if(e.k === 'abierto') return e.pronto
+    ? { c:'pr', txt: (en ? 'Closing soon · ' : 'Cierra pronto · ') + hrHora(e.cierra, lg) }
+    : { c:'ab', txt: (en ? 'Open · closes ' : 'Abierto · cierra ') + hrHora(e.cierra, lg) };
+  let txt = e.porFestivo ? (en ? 'Closed for the holiday' : 'Cerrado por festivo') : (en ? 'Closed' : 'Cerrado');
+  if(e.dias != null){
+    const cuando = e.dias === 0 ? (en ? 'opens today' : 'abre hoy')
+                 : e.dias === 1 ? (en ? 'opens tomorrow' : 'abre mañana')
+                 : (en ? 'opens ' : 'abre el ') + HR_DN[en ? 'en' : 'es'][e.dia];
+    txt += ' · ' + cuando + (e.abre != null ? (en ? ' at ' : ' ') + hrHora(e.abre, lg) : '');
+  }
+  return { c:'ce', txt };
+}
+/* HORAS:FIN */
+
+/* ── La segunda fila de filtros: por horario (v217) ─────────────────
+   Se suma a la de categorías: «Gastronomía» + «De noche». */
+const WHEN = ["todos","ahora","dia","noche","finde"];
+let _hrUltimaClave = '';
+let _hrReloj = null;
+
+function _pasaCategoria(p){
+  if(activeFilter==="fav") return favorites.includes(p.id);
+  return activeFilter==="all" || (p.categoria||p.cat)===activeFilter;
+}
+function _pasaCuando(p, w){
+  if(w==='ahora'){ const e = hrEstado(p.horas); return !!e && (!!e.abierto || e.k==='aviso'); }
+  if(w==='dia')   return hrDeDia(p.horas);
+  if(w==='noche') return hrDeNoche(p.horas);
+  if(w==='finde') return hrSoloFinde(p.horas);
+  return true;
+}
+/* Con un filtro de horario va primero lo que está abierto. «De noche»,
+   además, ordena por la hora de cierre más tarde: los bares arriba y las
+   tiendas que cierran a las siete abajo. */
+function _listaLugares(){
+  const list = PLACES.filter(p=>_pasaCategoria(p) && _pasaCuando(p, activeWhen));
+  if(activeWhen==='todos') return list;
+  const peso = p=>{ const e = hrEstado(p.horas); return !e ? 3 : e.abierto ? 0 : (e.k==='aviso'||e.k==='sinhora') ? 1 : 2; };
+  const pos = new Map(list.map((p,i)=>[p.id,i]));
+  return list.sort((a,b)=>
+    (activeWhen==='noche' ? hrCierreNoche(b.horas) - hrCierreNoche(a.horas) : 0)
+    || (peso(a) - peso(b)) || (pos.get(a.id) - pos.get(b.id)));
+}
+/* Arriba, si hoy es festivo; abajo, cuántos lugares de la categoría se
+   quedaron por fuera por no tener horario confirmado. */
+function _hrNotas(){
+  if(activeWhen==='todos') return { antes:'', despues:'' };
+  const antes = hrEsFestivo(hrAhora()) ? `<p class="hr-nota fest">${t('when_festivo')}</p>` : '';
+  const sin = PLACES.filter(p=>_pasaCategoria(p) && !hrParse(p.horas)).length;
+  const despues = sin ? `<p class="hr-nota">${t(sin===1?'when_sin1':'when_sin').replace('{n}', sin)}</p>` : '';
+  return { antes, despues };
+}
+function pintarFiltroHorario(){
+  const wrap = document.getElementById("filtersWhen");
+  if (!wrap) return;
+  const ic = { todos:'', ahora:IC.clock, dia:IC.sun, noche:IC.moon, finde:IC.cal };
+  wrap.innerHTML = WHEN.map(w=>{
+    const n = PLACES.filter(p=>_pasaCategoria(p) && _pasaCuando(p, w)).length;
+    return `<button class="chip ${activeWhen===w?'active':''}" aria-pressed="${activeWhen===w}" onclick="setWhen('${w}')">${ic[w]}${t('when_'+w)} <span class="ct">${n}</span></button>`;
+  }).join("");
+}
+function setWhen(w){ activeWhen = WHEN.includes(w) ? w : 'todos'; renderFilters(); renderPlaces(); }
+
+/* Cada minuto se refrescan los números de la fila y las etiquetas de las
+   tarjetas. La grilla solo se vuelve a pintar si cambió QUIÉN sale (con
+   «Abierto ahora», a las 6 p. m. entran Sofi Burger y Ateca): repintarla
+   cada minuto recargaría las fotos. Al volver a la pestaña se refresca de
+   una vez, porque el celular pudo quedar horas en el bolsillo. */
+function _hrArrancar(){
+  if(_hrReloj || !document.getElementById('placesGrid')) return;
+  _hrReloj = setInterval(_hrTick, 60000);
+  document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) _hrTick(); });
+}
+function _hrTick(){
+  if(document.hidden || !PLACES.length) return;
+  if(activeWhen!=='todos' && _listaLugares().map(p=>p.id).join() !== _hrUltimaClave){ renderFilters(); renderPlaces(); return; }
+  const cts = document.querySelectorAll('#filtersWhen .ct');
+  WHEN.forEach((w,i)=>{ if(cts[i]) cts[i].textContent = PLACES.filter(p=>_pasaCategoria(p) && _pasaCuando(p, w)).length; });
+  document.querySelectorAll('.pc-hora[data-hora]').forEach(el=>{
+    const p = PLACES.find(x=>x.id===el.dataset.hora);
+    const e = p && hrEstado(p.horas);
+    if(!e) return;
+    const eti = hrEtiqueta(e, lang);
+    el.className = 'pc-hora ' + eti.c;
+    el.textContent = eti.txt;
+  });
+}
 
 /* ============================================================
    RENDER FILTROS
@@ -682,6 +957,7 @@ function renderFilters(){
     return `<button class="chip ${activeFilter===c?'active':''}" onclick="setFilter('${c}')">
       ${t('fil_'+c)} <span class="ct">${count}</span></button>`;
   }).join("");
+  pintarFiltroHorario();
 }
 function setFilter(c){ activeFilter=c; renderFilters(); renderPlaces(); }
 
@@ -691,16 +967,17 @@ function setFilter(c){ activeFilter=c; renderFilters(); renderPlaces(); }
 function renderPlaces(){
   const grid = document.getElementById("placesGrid");
   if (!grid) return;   // esta página no tiene la sección de lugares
-  let list = PLACES.slice();
-  if(activeFilter==="fav") list = list.filter(p=>favorites.includes(p.id));
-  else if(activeFilter!=="all") list = list.filter(p=>(p.categoria||p.cat)===activeFilter);
+  const list  = _listaLugares();
+  const notas = _hrNotas();
+  _hrUltimaClave = list.map(p=>p.id).join();
 
   if(!list.length){
-    grid.innerHTML = `<div class="empty-state">${activeFilter==='fav'?t('fav_empty'):'—'}</div>`;
+    const vacio = activeWhen!=='todos' ? t('when_empty') : (activeFilter==='fav'?t('fav_empty'):'—');
+    grid.innerHTML = notas.antes + `<div class="empty-state">${vacio}</div>` + notas.despues;
     return;
   }
 
-  grid.innerHTML = list.map(p=>{
+  grid.innerHTML = notas.antes + list.map(p=>{
     const isFav   = favorites.includes(p.id);
     const inRoute = route.includes(p.id);
     const cat     = p.categoria || p.cat;
@@ -744,6 +1021,11 @@ function renderPlaces(){
     const dist     = escHtml((p.dist||{})[lang] || '');
     const tiempo   = escHtml((p.tiempo||p.time||{})[lang] || '');
     const dific    = escHtml((p.dificultad||p.diff||{})[lang] || '');
+    // Estado de ahora mismo (v217). Sin `horas` no se pinta nada: mejor
+    // callar que decir «abierto» sin saberlo.
+    const hrEst    = hrEstado(p.horas);
+    const hrEti    = hrEst ? hrEtiqueta(hrEst, lang) : null;
+    const pill     = hrEti ? `<div class="pc-hora ${hrEti.c}" data-hora="${escHtml(p.id)}">${escHtml(hrEti.txt)}</div>` : '';
 
     return `
     <article class="place-card">
@@ -757,6 +1039,7 @@ function renderPlaces(){
       </div>
       <div class="pc-body">
         <div class="pc-cat">${t('fil_'+cat)}</div>
+        ${pill}
         <h3 class="pc-title">${nomEsc}</h3>
         <p class="pc-desc">${desc}</p>
         <div class="pc-stats">
@@ -782,7 +1065,7 @@ function renderPlaces(){
         ${note}
       </div>
     </article>`;
-  }).join("");
+  }).join("") + notas.despues;
 }
 
 /* ============================================================
@@ -3082,6 +3365,7 @@ function init(){
       try { paintMapMarkers(); } catch(e) { console.warn('paintMapMarkers', e); }
       // Después de cargar los lugares, verificar si hay ?lugar= en la URL
       _checkLugarParam();
+      _hrArrancar();   // «abierto / cerrado» se refresca solo cada minuto
     })
     .catch(e => console.warn('[Labateca] places.json:', e.message));
 

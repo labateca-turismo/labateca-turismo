@@ -38,7 +38,7 @@
 <noscript><link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700;800&display=swap" /></noscript>
 
-<link rel="stylesheet" href="/styles.css?v=216">
+<link rel="stylesheet" href="/styles.css?v=217">
 </head>
 <body data-title-key="head_lugares">
 
@@ -103,7 +103,7 @@
       <a class="back-home" href="/"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg><span data-i18n="back_home">Volver al inicio</span></a>
       <span class="eyebrow" data-i18n="places_eyebrow">Qué visitar</span>
       <h1 data-i18n="places_title">Lugares para descubrir</h1>
-      <p data-i18n="places_sub">Filtra por categoría, guarda tus favoritos ♥ y arma tu ruta. Toca "Cómo llegar" para abrir Google Maps.</p>
+      <p data-i18n="places_sub">Filtra por categoría o por horario, guarda tus favoritos ♥ y arma tu ruta. Toca "Cómo llegar" para abrir Google Maps.</p>
     </div>
 
     <!-- Guía local. Va arriba, antes de los filtros: quien abre esta página
@@ -133,6 +133,7 @@
     </aside>
 
     <div class="filters reveal d1" id="filters" role="group" aria-label="Filtrar lugares por categoría"></div>
+    <div class="filters filters-when reveal d1" id="filtersWhen" role="group" aria-label="Filtrar lugares por horario" data-i18n-aria="when_aria"></div>
     <div class="places-grid" id="placesGrid"></div>
   </div>
 </section>

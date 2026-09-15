@@ -25,6 +25,7 @@ minutos; si no aparece, esperar, no re-empujar.
 ```bash
 python subir_version.py NNN     # desde la carpeta del proyecto, no desde files/
 node medir_fotos.js             # solo le pregunta a Cloudinary por las fotos nuevas
+node check_horas.js             # valida el horario que lee la pestaña Lugares
 node gen_seo.js
 cd files && git add -A && git commit -m "vNNN: ..." && git push origin main
 ```
@@ -126,7 +127,7 @@ identica byte a byte a una copia que se quedo en su sitio.
 
 Categorías: `naturaleza · cultura · gastronomia · hospedaje · comercio · servicios`.
 Opcionales: `telFijo`, `correo`, `track`, `trailhead`, `wikiloc`, `fotosAviso`,
-`mapaFuera`.
+`mapaFuera`, `horas`.
 
 - **`pendiente: true`** = ficha reportada pero **sin levantar en campo**. Entra
   **sin `lat`/`lng`, sin `mapaX`/`mapaY` y con `fotos: []` a propósito**: poner
@@ -148,6 +149,21 @@ Opcionales: `telFijo`, `correo`, `track`, `trailhead`, `wikiloc`, `fotosAviso`,
   `gen_seo.js` los parte (`parrafos()`); el primero lleva `class="lead"`. Se
   usa cuando después de la descripción va texto que no es nuestro —la misión
   de la Personería, por ejemplo—. El resto de los campos es un solo párrafo.
+- **`horas` es el horario que lee la página; `tiempo`, el que lee la
+  persona. Van los dos**, y si se cambia uno se cambia el otro en la misma
+  pasada. Es una lista de renglones:
+  - `"lu-vi 08:00-12:00"` — días y franja. Días: `lu ma mi ju vi sa do`;
+    rangos con guion que corren de lunes a domingo (`vi-do` = viernes,
+    sábado y domingo), listas con coma, `todos`, y `fe` = festivo.
+  - `"vi-do 14:00-02:00"` — si cierra a una hora menor que la de abrir,
+    cierra al día siguiente.
+  - `"do ?"` — ese día atiende, pero la hora no está confirmada.
+  - `"fe cierra"` · `"24h"` · `"aviso"` (normalmente abierto, avisando
+    antes). `24h` y `aviso` van solos.
+
+  **Sin `horas` la tarjeta no dice ni abierto ni cerrado**, y eso es lo
+  correcto mientras el horario no esté confirmado. Después de tocarlo:
+  `node check_horas.js`.
 
 ### `data/conductores.json`
 
@@ -967,6 +983,58 @@ fotos del arzobispo en ese año o después.
 
 **Cifras:** 237 publicadas (54 + 183), 73 retenidas (11 + 62) y 12 fuera por
 repetidas. La cifra también está escrita a mano en `gen_biblioteca.js`.
+
+### La pestaña Lugares sabe qué está abierto (v217)
+
+José lo pidió así: *«hay lugares que no están abiertos en el día y hay otros
+que están abiertos en la noche»*. Sofi Burger y Ateca abren a las 6 p. m. e
+Intrínseco cierra a las 3: quien los veía al mediodía no tenía cómo saberlo,
+porque el horario era solo texto.
+
+- **Una segunda fila de filtros** que se suma a la de categorías: *A
+  cualquier hora · Abierto ahora · De día · De noche · Solo fines de
+  semana*. Y cada tarjeta con `horas` lleva su estado: «Abierto · cierra 10
+  p. m.», «Cierra pronto», «Cerrado · abre el viernes 3 p. m.», «Abre con
+  aviso previo». Se refresca sola cada minuto, sin repintar las fotos.
+- **Las definiciones son de José** (15 sep 2026): **de noche es desde las 6
+  p. m.** —cuenta si atiende por lo menos una hora después—; **el fin de
+  semana del pueblo es viernes, sábado y domingo**, y eso es lo que quiere
+  decir «fines de semana hasta las 2 a. m.» en los bares; y **los festivos
+  cuentan**. «De noche» ordena por la hora de cierre: los bares arriba.
+- **Todo en hora de Colombia**, no en la del celular del visitante.
+- **Festivos:** los calcula `hrFestivos()` —fijos, Ley Emiliani, Pascua— y,
+  desde 2026, el **9 de julio, Virgen de Chiquinquirá (Ley 2578 de 2026)**,
+  que también se corre al lunes (en 2026 fue el 13 de julio). Un festivo
+  usa las franjas que dicen `fe`; si el lugar dice `fe cierra`, no abre; si
+  no dice nada, cuenta como el día de la semana que es, y la página avisa
+  arriba que ese día el horario puede cambiar. **`fe cierra` se puso solo
+  donde es seguro:** Maxipan, que lo dice su horario, y Alcaldía,
+  Registraduría, Juzgado, Personería y Banco Agrario, porque un festivo no es
+  día hábil.
+- **El código vive en un solo bloque de `app.js`**, entre `HORAS:INICIO` y
+  `HORAS:FIN`, sin DOM ni variables de fuera. **`check_horas.js` ejecuta ese
+  bloque tal cual** y le corre pruebas con momentos fijos: Miami Bar un
+  sábado a la 1:30 a. m., Tercer Tiempo y Maxipan un lunes festivo, la lista
+  de festivos de 2026. Con `--a "2026-09-19 21:30"` lista qué saldría
+  abierto a esa hora.
+- **Lo que no tiene `horas`, a propósito:** cultura y casi toda naturaleza
+  —«visita durante el día» o «abierto siempre» no son horarios de atención—,
+  el despacho parroquial («consultar horario») y el Concejo (sesiones). En
+  los filtros de horario no salen, y la página dice cuántos quedaron fuera.
+- **Lo que José confirmó y cambió textos:** Antaño, Fama El Corral,
+  Automercado Karen, EXCII y Supermercado La Y abren todos los días; Casa del
+  Anciano y Personería, de lunes a viernes. **Galactic Bar tiene el horario
+  de Teca Bar La Barra**: su ficha decía «fines de semana 8 a 8, entre semana
+  reservas para grupos», y se corrigió también en `desc` y `recomendacion`.
+  **El Pedregal y Donde Conchita están normalmente abiertos, avisando
+  antes**; el Pedregal decía «fines de semana». Los scripts, en la raíz:
+  `poner_horas.js` (los datos) y `parche_horario_v217.js` con su `.txt`
+  (el código).
+- **Pendiente:** la hora del almuerzo de los domingos en Ateca (va como
+  `"do ?"`) y las horas de Alcaldía, Juzgado y Centro de Rehabilitación, que
+  dicen «horario de oficina». **El panel del CMS (`admin/config.yml`) no
+  conoce `horas`**, como tampoco conoce `pendiente`, `mapaFuera` ni
+  `trailhead`.
 
 ## 5. Principios del proyecto
 
