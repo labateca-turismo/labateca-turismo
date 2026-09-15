@@ -242,9 +242,13 @@
         "en": "In town center"
       },
       "tiempo": {
-        "es": "Atención en el despacho parroquial (consultar horario)",
-        "en": "At the parish office (ask for hours)"
+        "es": "Despacho parroquial: lunes a viernes, 8:00 a. m.–12:00 m. y 2:00–6:00 p. m.",
+        "en": "Parish office: Monday to Friday, 8:00 a.m.–12:00 noon and 2:00–6:00 p.m."
       },
+      "horas": [
+        "lu-vi 08:00-12:00",
+        "lu-vi 14:00-18:00"
+      ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
@@ -1813,9 +1817,14 @@
         "en": "In town center"
       },
       "tiempo": {
-        "es": "Sesiones del Concejo abiertas al público",
-        "en": "Council sessions open to the public"
+        "es": "Lunes a viernes, 8:00 a. m.–12:00 m. y 2:00–6:00 p. m. · sesiones abiertas al público",
+        "en": "Monday to Friday, 8:00 a.m.–12:00 noon and 2:00–6:00 p.m. · sessions open to the public"
       },
+      "horas": [
+        "lu-vi 08:00-12:00",
+        "lu-vi 14:00-18:00",
+        "fe cierra"
+      ],
       "dificultad": {
         "es": "Entidad pública · acceso fácil",
         "en": "Public institution · easy access"
@@ -3603,8 +3612,8 @@
         "en": "Ateca — Bar, Café & Restaurant"
       },
       "desc": {
-        "es": "Restaurante de comida de autor a una cuadra del Parque Principal, con ambiente de bar-café londinense: luz cálida, tonos tierra y piso de gres. La carta pasa de los setenta platos, entre hamburguesas, emparedados, submarinos, parrillas, ensaladas y platos servidos con papas o con pan árabe, y tiene además menú infantil, bebidas y coctelería. Abre todos los días de 6:00 a 10:00 p. m.; los domingos hay almuerzo, y atiende también almuerzos a la carta y empresariales. Recibe reservas de cualquier tipo, en el local o llevando el servicio a donde se necesite. Atención de Nurymar Medina.",
-        "en": "Signature-cuisine restaurant one block from the Main Square, styled like a London bar-café: warm light, earth tones and a stoneware floor. The menu runs to more than seventy dishes — burgers, sandwiches, submarine rolls, grills, salads, and plates served with fries or with Arabic flatbread — plus a children's menu, drinks and cocktails. It opens every day from 6:00 to 10:00 p.m.; lunch is served on Sundays, and it also does à la carte and corporate lunches. It takes reservations of any kind, at the restaurant or catering wherever needed. Run by Nurymar Medina."
+        "es": "Restaurante de comida de autor a una cuadra del Parque Principal, con ambiente de bar-café londinense: luz cálida, tonos tierra y piso de gres. La carta pasa de los setenta platos, entre hamburguesas, emparedados, submarinos, parrillas, ensaladas y platos servidos con papas o con pan árabe, y tiene además menú infantil, bebidas y coctelería. Abre todos los días de 6:00 a 10:00 p. m.; los domingos abre desde las 11:00 a. m., con almuerzo, y atiende también almuerzos a la carta y empresariales. Recibe reservas de cualquier tipo, en el local o llevando el servicio a donde se necesite. Atención de Nurymar Medina.",
+        "en": "Signature-cuisine restaurant one block from the Main Square, styled like a London bar-café: warm light, earth tones and a stoneware floor. The menu runs to more than seventy dishes — burgers, sandwiches, submarine rolls, grills, salads, and plates served with fries or with Arabic flatbread — plus a children's menu, drinks and cocktails. It opens every day from 6:00 to 10:00 p.m.; on Sundays it opens from 11:00 a.m. with lunch, and it also does à la carte and corporate lunches. It takes reservations of any kind, at the restaurant or catering wherever needed. Run by Nurymar Medina."
       },
       "comoLlegar": {
         "es": "En el casco urbano de Labateca, a una cuadra del Parque Principal. Sigue el pin del mapa.",
@@ -3615,20 +3624,20 @@
         "en": "One block from the square"
       },
       "tiempo": {
-        "es": "Todos los días, 6:00 – 10:00 p. m. · Domingos, servicio de almuerzo",
-        "en": "Every day, 6:00 – 10:00 p.m. · Sunday lunch service"
+        "es": "Todos los días, 6:00 – 10:00 p. m. · Domingos desde las 11:00 a. m., con servicio de almuerzo",
+        "en": "Every day, 6:00 – 10:00 p.m. · Sundays from 11:00 a.m., with lunch service"
       },
       "horas": [
-        "todos 18:00-22:00",
-        "do ?"
+        "lu-sa 18:00-22:00",
+        "do 11:00-22:00"
       ],
       "dificultad": {
         "es": "Acceso fácil",
         "en": "Easy access"
       },
       "recomendacion": {
-        "es": "Abre de noche: si vas de paso y quieres almorzar, el día es el domingo. Reserva por WhatsApp al 318 561 9179 —también atienden reuniones y almuerzos de empresa, y llevan el servicio fuera del local si se acuerda antes—.",
-        "en": "It opens in the evening, so if you are passing through and want lunch, Sunday is the day. Book on WhatsApp at +57 318 561 9179 — they also handle group and corporate lunches, and will cater off-site if arranged in advance."
+        "es": "Abre de noche: si vas de paso y quieres almorzar, el día es el domingo, desde las 11 de la mañana. Reserva por WhatsApp al 318 561 9179 —también atienden reuniones y almuerzos de empresa, y llevan el servicio fuera del local si se acuerda antes—.",
+        "en": "It opens in the evening, so if you are passing through and want lunch, Sunday is the day, from 11 in the morning. Book on WhatsApp at +57 318 561 9179 — they also handle group and corporate lunches, and will cater off-site if arranged in advance."
       },
       "fotos": [
         "labateca/ateca-01",
@@ -6499,11 +6508,12 @@
         "en": "On the Main Square"
       },
       "tiempo": {
-        "es": "Lunes a viernes en horario de oficina · conmutador 314 479 8925",
-        "en": "Monday to Friday, office hours · switchboard +57 314 479 8925"
+        "es": "Lunes a viernes, 8:00 a. m.–12:00 m. y 2:00–6:00 p. m. · conmutador 314 479 8925",
+        "en": "Monday to Friday, 8:00 a.m.–12:00 noon and 2:00–6:00 p.m. · switchboard +57 314 479 8925"
       },
       "horas": [
-        "lu-vi ?",
+        "lu-vi 08:00-12:00",
+        "lu-vi 14:00-18:00",
         "fe cierra"
       ],
       "dificultad": {

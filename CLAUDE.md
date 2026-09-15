@@ -1009,8 +1009,8 @@ porque el horario era solo texto.
   no dice nada, cuenta como el día de la semana que es, y la página avisa
   arriba que ese día el horario puede cambiar. **`fe cierra` se puso solo
   donde es seguro:** Maxipan, que lo dice su horario, y Alcaldía,
-  Registraduría, Juzgado, Personería y Banco Agrario, porque un festivo no es
-  día hábil.
+  Concejo, Registraduría, Juzgado, Personería y Banco Agrario, porque un
+  festivo no es día hábil.
 - **El código vive en un solo bloque de `app.js`**, entre `HORAS:INICIO` y
   `HORAS:FIN`, sin DOM ni variables de fuera. **`check_horas.js` ejecuta ese
   bloque tal cual** y le corre pruebas con momentos fijos: Miami Bar un
@@ -1018,9 +1018,8 @@ porque el horario era solo texto.
   de festivos de 2026. Con `--a "2026-09-19 21:30"` lista qué saldría
   abierto a esa hora.
 - **Lo que no tiene `horas`, a propósito:** cultura y casi toda naturaleza
-  —«visita durante el día» o «abierto siempre» no son horarios de atención—,
-  el despacho parroquial («consultar horario») y el Concejo (sesiones). En
-  los filtros de horario no salen, y la página dice cuántos quedaron fuera.
+  —«visita durante el día» o «abierto siempre» no son horarios de atención—.
+  En los filtros de horario no salen, y la página dice cuántos quedaron fuera.
 - **Lo que José confirmó y cambió textos:** Antaño, Fama El Corral,
   Automercado Karen, EXCII y Supermercado La Y abren todos los días; Casa del
   Anciano y Personería, de lunes a viernes. **Galactic Bar tiene el horario
@@ -1030,11 +1029,15 @@ porque el horario era solo texto.
   antes**; el Pedregal decía «fines de semana». Los scripts, en la raíz:
   `poner_horas.js` (los datos) y `parche_horario_v217.js` con su `.txt`
   (el código).
-- **Pendiente:** la hora del almuerzo de los domingos en Ateca (va como
-  `"do ?"`) y las horas de Alcaldía, Juzgado y Centro de Rehabilitación, que
-  dicen «horario de oficina». **El panel del CMS (`admin/config.yml`) no
-  conoce `horas`**, como tampoco conoce `pendiente`, `mapaFuera` ni
-  `trailhead`.
+- **Lo que José completó en la v218:** Alcaldía, Servicios Parroquiales y
+  Concejo atienden de 8:00 a. m. a 12:00 m. y de 2:00 a 6:00 p. m. **Los días
+  de los dos últimos se tomaron de la Alcaldía —lunes a viernes— y falta
+  confirmarlos.** Ateca abre los domingos desde las 11:00 a. m.; se puso
+  corrido hasta las 10 p. m. (`horas_v218.js`).
+- **Pendiente:** las horas del Juzgado y del Centro de Rehabilitación, que
+  dicen «horario de oficina» y van como `"lu-vi ?"`. **El panel del CMS
+  (`admin/config.yml`) no conoce `horas`**, como tampoco conoce `pendiente`,
+  `mapaFuera` ni `trailhead`.
 
 ## 5. Principios del proyecto
 
